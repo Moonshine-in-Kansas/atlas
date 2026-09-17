@@ -11,8 +11,7 @@ and does not claim constructions of the Monster or all remaining groups.
 See [the catalogue](CATALOGUE.md) for actual models and theorem names, and
 [the audit instructions](AUDIT.md) for verification scope and limitations.
 The stable entry point is `import Atlas`; namespaces and source paths are preserved.
-The small Ree family starts at q=27. Split G2 is simple for q>2; its binary normal
-subgroup is separately constructed, with no unproved PSU3(3) identification asserted.
+The small Ree family starts at q=27.
 
 ## Build
 
