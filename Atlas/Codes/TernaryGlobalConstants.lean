@@ -1,0 +1,27 @@
+import Atlas.Codes.TernaryGolayQuotient
+import Mathlib.LinearAlgebra.Dimension.Finite
+
+namespace Atlas.Codes
+
+theorem ternaryConstants_mem_iff (t : ternaryGolay) :
+    t ∈ ternaryConstants ↔ ∃ b : ZMod 3,∀ i,t.val i=b := by
+  rw [ternaryConstants,Submodule.mem_span_singleton]
+  constructor
+  · rintro ⟨b,hb⟩
+    refine ⟨b,?_⟩
+    intro i
+    have h := congrArg (fun w : ternaryGolay => w.val i) hb
+    change b*1=t.val i at h
+    simpa using h.symm
+  · rintro ⟨b,hb⟩
+    refine ⟨b,Subtype.ext (funext fun i => ?_)⟩
+    change b*1=t.val i
+    simpa using (hb i).symm
+
+theorem ternaryConstants_card : Nat.card ternaryConstants=3 := by
+  classical
+  letI := Fintype.ofFinite ternaryConstants
+  rw [Nat.card_eq_fintype_card,Module.card_eq_pow_finrank (K := ZMod 3),ternaryConstants_finrank]
+  norm_num
+
+end Atlas.Codes

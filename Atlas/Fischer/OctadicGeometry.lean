@@ -1,0 +1,42 @@
+import Atlas.Algebra.BinaryWalsh
+import Atlas.Algebra.BinaryWalshQuadratic
+import Atlas.Algebra.BinaryWalshSquare
+import Atlas.Algebra.BinaryWalshTranslation
+import Atlas.Algebra.BinaryWalshRank
+import Atlas.Fischer.RootMapSymmetry
+import Atlas.Fischer.CoordinateHermitianSums
+import Atlas.Fischer.OctadicRootCoordinates
+import Atlas.Fischer.OctadicOrthogonality
+import Atlas.Fischer.OctadicNormCalculation
+import Atlas.Fischer.OctadicAxisProducts
+import Atlas.Fischer.OctadicMixedAxisProducts
+import Atlas.Fischer.OctadicComplementProducts
+import Atlas.Fischer.OctadicDiagonalSum
+import Atlas.Fischer.OctadicHyperplaneSquare
+import Atlas.Fischer.OctadicCocodeAction
+import Atlas.Fischer.OctadicRootEquations
+import Atlas.Fischer.OctadicRootFibres
+import Atlas.Fischer.OctadicCalibrationTransport
+import Atlas.Fischer.OctadicRootTransport
+import Atlas.Fischer.OctadicRootOrbit
+import Atlas.Fischer.OctadicRootMapAxes
+import Atlas.Fischer.OctadicRootMapOctad
+import Atlas.Fischer.RootMapSubspaces
+import Atlas.Fischer.OctadicNineBlock
+import Atlas.Fischer.OctadicLocalProduct
+import Atlas.Fischer.OctadicRootMapHyperplane
+import Atlas.Fischer.OctadicCharacterPairings
+import Atlas.Fischer.OctadAffineCode
+import Atlas.Fischer.OctadParkerSections
+import Atlas.Fischer.OctadCocode
+import Atlas.Fischer.OctadCharacterTranslations
+import Atlas.Fischer.OctadHyperplaneLocalConvolution
+import Atlas.Fischer.OctadRationalDecomposition
+import Atlas.Fischer.RealCoordinateSpace
+import Atlas.Fischer.OctadRealGrading
+import Atlas.Fischer.OctadAnnihilatorReflection
+import Atlas.Fischer.OctadLabelCharacters
+import Atlas.Fischer.MathieuTranslationGeneration
+
+/-! Verified octadic-root and local-geometry ingredients.
+Full octadic antiunitarity and multiplicativity remain subsequent obligations. -/
