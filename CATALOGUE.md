@@ -4,6 +4,40 @@ Entries describe explicit models, not a classification or recognition from order
 All source paths and declarations below are part of the default root import.
 Full machine-readable interfaces, auxiliary groups and comparison maps: [catalogue.json](docs/catalogue.json).
 
+## Summary
+
+Here $q$ is the field size and $n$ is Lie rank for the Lie-type families; in particular, $A_n(q)=\mathrm{PSL}_{n+1}(q)$. All listed orders are proved. Simplicity is nonabelian except where indicated.
+
+| Group or family | Order | Proven simplicity | Order lines | Simplicity lines | Combined lines |
+|---|---|---|---:|---:|---:|
+| [Cₚ](#family-cyclic) | $p$ | Yes, $p$ prime (abelian) | 5 | 12 | 12 |
+| [Aₙ](#family-alternating) | $n!/2$ | Yes, $n\ge5$; also cyclic simple at $n=3$ | 4 | 4 | 7 |
+| [Aₙ(q)](#family-psl) | $\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-1)}{\gcd(n+1,q-1)}$ | Yes, $n\ge1$, except $(n,q)=(1,2),(1,3)$ | 168 | 322 | 379 |
+| [Bₙ(q)](#family-b) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | 4,121 | 7,898 | 8,009 |
+| [Cₙ(q)](#family-c) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | 708 | 2,203 | 2,203 |
+| [Dₙ(q)](#family-d) | $\displaystyle \frac{q^{n(n-1)}(q^n-1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n-1)}$ | Yes, $n\ge4$ (split form) | 4,290 | 2,466 | 5,408 |
+| [G₂(q)](#family-g2) | $q^6(q^6-1)(q^2-1)$ | Yes, $q>2$ | 1,237 | 3,287 | 3,568 |
+| [²G₂(q)](#family-reeg2) | $q^3(q^3+1)(q-1)$ | Yes, $q=3^{2m+1}$, $m\ge1$ | 1,570 | 2,225 | 2,250 |
+| [M₁₁](#sporadic-m11) | 7,920 | Yes | 5,479 | 5,866 | 5,868 |
+| [M₁₂](#sporadic-m12) | 95,040 | Yes | 4,924 | 5,959 | 5,961 |
+| [M₂₂](#sporadic-m22) | 443,520 | Yes | 4,183 | 5,348 | 5,351 |
+| [M₂₃](#sporadic-m23) | 10,200,960 | Yes | 4,119 | 4,492 | 4,495 |
+| [M₂₄](#sporadic-m24) | 244,823,040 | Yes | 3,477 | 4,582 | 4,585 |
+| [Co₁](#sporadic-co1) | 4,157,776,806,543,360,000 | Yes | 10,826 | 12,334 | 12,346 |
+| [Co₂](#sporadic-co2) | 42,305,421,312,000 | Yes | 10,825 | 14,070 | 14,072 |
+| [Co₃](#sporadic-co3) | 495,766,656,000 | Yes | 12,137 | 16,423 | 16,423 |
+| [McL](#sporadic-mcl) | 898,128,000 | Yes | 13,704 | 16,375 | 16,377 |
+| [HS](#sporadic-hs) | 44,352,000 | Yes | 13,447 | 14,771 | 14,776 |
+| [Suz](#sporadic-suz) | 448,345,497,600 | Yes | 19,727 | 21,320 | 21,374 |
+| [J₂](#sporadic-j2) | 604,800 | Yes | 6,989 | 7,954 | 8,184 |
+| [Fi₂₂](#sporadic-fi22) | 64,561,751,654,400 | Yes | 31,955 | 34,248 | 34,250 |
+| [Fi₂₃](#sporadic-fi23) | 4,089,470,473,293,004,800 | Yes | 31,950 | 34,247 | 34,249 |
+| [Fi₂₄′](#sporadic-fi24prime) | 1,255,205,709,190,661,721,292,800 | Yes | 31,813 | 33,396 | 33,397 |
+
+**Line-count convention (17 September 2026 source measurement):** distinct ATLAS source lines reached through the compiled order/simplicity declarations and their transitive dependencies, including definitions, shared prerequisites, comments and blank lines inside declaration ranges. These are not proof-body-only counts or entire-file sizes. Mathlib/Lean library lines are excluded. Combined counts deduplicate order/simplicity overlap; rows share prerequisites and must not be added. The deduplicated union across all rows is **88,856 ATLAS lines**. Small cyclic/alternating counts reflect reuse of mathlib proofs. Exact measured roots and counts are in [proof-line-counts.csv](docs/proof-line-counts.csv); these measurements apply to the unchanged release mathematical sources.
+
+<a id="family-cyclic"></a>
+
 ## Cₚ
 
 Multiplicative (ZMod p)
@@ -22,6 +56,8 @@ Order: p
 
 No general recognition theorem claimed by this entry
 
+<a id="family-alternating"></a>
+
 ## Aₙ
 
 alternatingGroup (Fin n)
@@ -39,6 +75,8 @@ Parameters: n>=5 for nonabelian simplicity; A3 cyclic simple; A4 not simple; n<=
 Order: n!/2
 
 No general recognition theorem claimed by this entry
+
+<a id="family-psl"></a>
 
 ## Aₙ(q)
 
@@ -62,6 +100,8 @@ Order: q^(n(n-1)/2)*product(i=2..n,q^i-1)/gcd(n,q-1)
 
 No general recognition theorem claimed by this entry
 
+<a id="family-b"></a>
+
 ## Bₙ(q)
 
 Actual scalar quotient of the Siegel-generated subgroup of the quadratic form Q(x,y,z)=sum x_i*y_i+z^2; identified with the determinant/spinor kernel in odd characteristic and the full orthogonal group in characteristic two
@@ -79,6 +119,8 @@ Parameters: n is Lie rank, natural dimension 2*n+1; F arbitrary finite field, q=
 Order: q^(n*n) * product_(i=1)^n (q^(2*i)-1) / gcd(2,q-1)
 
 No general recognition theorem or classification of family coincidences is claimed
+
+<a id="family-c"></a>
 
 ## Cₙ(q)
 
@@ -98,6 +140,8 @@ Order: q^(n^2) * product_(i=1)^n (q^(2*i)-1) / gcd(2,q-1) (n>=1); order 1 at n=0
 
 Constructed symplectic family with its natural alternating form and actions; no CFSG or external recognition theorem assumed
 
+<a id="family-d"></a>
+
 ## Dₙ(q)
 
 Actual scalar quotient of the Siegel-generated subgroup of the split quadratic form Q(x,y)=sum x_i*y_i; identified with the determinant/spinor kernel in odd characteristic and Dickson kernel in characteristic two
@@ -115,6 +159,8 @@ Parameters: n is Lie rank, natural dimension 2*n; F arbitrary finite field, q=|F
 Order: q^(n*(n-1)) * (q^n-1) * product_(i=1)^(n-1) (q^(2*i)-1) / gcd(4,q^n-1)
 
 No general recognition theorem or classification of family coincidences is claimed
+
+<a id="family-g2"></a>
 
 ## G₂(q)
 
@@ -134,6 +180,8 @@ Order: q^6 * (q^6-1) * (q^2-1)
 
 Concrete Dickson/Wilson octonion construction; no general Chevalley, CFSG, order-recognition or PSU3(3) comparison theorem assumed
 
+<a id="family-reeg2"></a>
+
 ## ²G₂(q)
 
 Actual subgroup of GL7(F) generated by the explicit Tits-twisted alpha, beta, gamma, torus and Weyl matrices
@@ -151,6 +199,8 @@ Parameters: F finite of characteristic 3, q=|F|=3^(2m+1), m>=1; the public famil
 Order: q^3 * (q^3+1) * (q-1)
 
 Direct standard Ree matrix construction and explicit injective map into the existing split-octonion G2 model; no CFSG, abstract Chevalley/Ree theorem or order recognition
+
+<a id="sporadic-m11"></a>
 
 ## M₁₁
 
@@ -170,6 +220,8 @@ Order: 7920
 
 No general recognition theorem claimed by this entry
 
+<a id="sporadic-m12"></a>
+
 ## M₁₂
 
 full Golay dodecad stabilizer
@@ -187,6 +239,8 @@ Parameters: any constructed Golay dodecad D; canonical standard choice provided.
 Order: 95040
 
 No general recognition theorem claimed by this entry
+
+<a id="sporadic-m22"></a>
 
 ## M₂₂
 
@@ -206,6 +260,8 @@ Order: 443520
 
 No general recognition theorem claimed by this entry
 
+<a id="sporadic-m23"></a>
+
 ## M₂₃
 
 coordinate stabilizer in full Golay automorphism group
@@ -223,6 +279,8 @@ Parameters: any coordinate a. Exceptions: None stated beyond the parameter domai
 Order: 10200960
 
 No general recognition theorem claimed by this entry
+
+<a id="sporadic-m24"></a>
 
 ## M₂₄
 
@@ -242,6 +300,8 @@ Order: 244823040
 
 No general recognition theorem claimed by this entry
 
+<a id="sporadic-co1"></a>
+
 ## Co₁
 
 full Golay Leech isometry group modulo its center {±1}
@@ -259,6 +319,8 @@ Parameters: fixed constructed carrier; no supplied order or simplicity certifica
 Order: 4157776806543360000
 
 No general recognition theorem claimed by this entry
+
+<a id="sporadic-co2"></a>
 
 ## Co₂
 
@@ -278,6 +340,8 @@ Order: 42305421312000
 
 No general recognition theorem claimed by this entry
 
+<a id="sporadic-co3"></a>
+
 ## Co₃
 
 actual norm-six vector stabilizer in full Leech isometry group
@@ -295,6 +359,8 @@ Parameters: fixed constructed carrier; no supplied order or simplicity certifica
 Order: 495766656000
 
 No general recognition theorem claimed by this entry
+
+<a id="sporadic-mcl"></a>
 
 ## McL
 
@@ -314,6 +380,8 @@ Order: 898128000
 
 No general recognition theorem claimed by this entry
 
+<a id="sporadic-hs"></a>
+
 ## HS
 
 actual pointwise Leech 2-3-3 triangle stabilizer
@@ -331,6 +399,8 @@ Parameters: fixed constructed carrier; no supplied order or simplicity certifica
 Order: 44352000
 
 No general recognition theorem claimed by this entry
+
+<a id="sporadic-suz"></a>
 
 ## Suz
 
@@ -350,6 +420,8 @@ Order: 448345497600
 
 No general recognition theorem claimed by this entry
 
+<a id="sporadic-j2"></a>
+
 ## J₂
 
 actual icosian linear group modulo its center of order two
@@ -367,6 +439,8 @@ Parameters: fixed constructed carrier; no supplied order or simplicity certifica
 Order: 604800
 
 No general recognition theorem claimed by this entry
+
+<a id="sporadic-fi22"></a>
 
 ## Fi₂₂
 
@@ -386,6 +460,8 @@ Order: 64561751654400
 
 No general recognition theorem claimed by this entry
 
+<a id="sporadic-fi23"></a>
+
 ## Fi₂₃
 
 singleton centralizer quotient in actual full ray group
@@ -403,6 +479,8 @@ Parameters: fixed constructed carrier; no supplied order or simplicity certifica
 Order: 4089470473293004800
 
 No general recognition theorem claimed by this entry
+
+<a id="sporadic-fi24prime"></a>
 
 ## Fi₂₄′
 
