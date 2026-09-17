@@ -1,5 +1,7 @@
 # Constructive ATLAS
 
+[**Read the research note (PDF)**](atlas_research_note.pdf) — mathematical background, constructions and project overview.
+
 A Lean library constructing explicit finite simple groups and proving their orders,
 simplicity and structural properties. The selected scope comprises eight families
 and fifteen sporadic entries; parameter restrictions and small exceptions are part
