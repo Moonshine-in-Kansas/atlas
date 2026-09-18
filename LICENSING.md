@@ -14,10 +14,9 @@ including tag `v0.1.0`, retain that licensing history. Valid permissions previou
 granted are not revoked; substantially the same material may remain obtainable
 under the earlier license. The new default does not eliminate that alternative.
 
-The ATLAS-owned source notices now identify the new license. Existing copyright
-and authorship attributions are preserved. The former Apache text is retained at
-[LICENSES/Apache-2.0.txt](LICENSES/Apache-2.0.txt) for historical licensing and
-applicable third-party notices; it is not the current default license.
+The ATLAS-owned source notices identify the current license. Existing copyright
+and authorship attributions are preserved. Historical license texts remain in the
+corresponding Git revisions.
 
 Lean, mathlib and other dependencies retain their respective licenses. Third-party
 material, including any incorporated portions, is not relicensed by this change.
