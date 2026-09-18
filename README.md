@@ -37,5 +37,4 @@ Author: Gerald Höhn. See [CITATION.cff](CITATION.cff) and the existing
 [ATLAS Research and Attribution License 1.0](LICENSE). Commercial use and AI training
 require written permission; scholarly use requires attribution and citation.
 Distributed derivative works must include the license and preserve its conditions.
-See [licensing scope](LICENSING.md) for earlier permissions and third-party exceptions.
 No arXiv identifier has yet been assigned here.
