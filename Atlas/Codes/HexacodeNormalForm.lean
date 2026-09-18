@@ -1,6 +1,6 @@
 /-
 Copyright (c) 2026 ATLAS contributors. All rights reserved.
-Released under Apache 2.0 license as described in the file LICENSE.
+Released under the ATLAS Research and Attribution License 1.0; see LICENSE.
 Authors: ATLAS contributors
 -/
 import Atlas.Codes.HexacodeMinors
