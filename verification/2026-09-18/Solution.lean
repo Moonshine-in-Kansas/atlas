@@ -1,0 +1,45 @@
+import Atlas
+
+-- Frozen release definition comparisons; no definition holes or new axioms.
+theorem AtlasReleaseDefinitionCheck0 : @Atlas.Comparisons.Classical.b1EquivA1 = @Atlas.Comparisons.Classical.b1EquivA1 := rfl
+theorem AtlasReleaseDefinitionCheck1 : @Atlas.Comparisons.Classical.b2EquivC2 = @Atlas.Comparisons.Classical.b2EquivC2 := rfl
+theorem AtlasReleaseDefinitionCheck2 : @Atlas.Comparisons.Classical.bFieldEquiv = @Atlas.Comparisons.Classical.bFieldEquiv := rfl
+theorem AtlasReleaseDefinitionCheck3 : @Atlas.Comparisons.Classical.d2EquivProduct = @Atlas.Comparisons.Classical.d2EquivProduct := rfl
+theorem AtlasReleaseDefinitionCheck4 : @Atlas.Comparisons.Classical.d3EquivA3 = @Atlas.Comparisons.Classical.d3EquivA3 := rfl
+theorem AtlasReleaseDefinitionCheck5 : @Atlas.Comparisons.Classical.dFieldEquiv = @Atlas.Comparisons.Classical.dFieldEquiv := rfl
+theorem AtlasReleaseDefinitionCheck6 : @Atlas.Comparisons.Classical.evenBEquivC = @Atlas.Comparisons.Classical.evenBEquivC := rfl
+theorem AtlasReleaseDefinitionCheck9 : @Atlas.Comparisons.Exceptional.alt8EquivD3Two = @Atlas.Comparisons.Exceptional.alt8EquivD3Two := rfl
+theorem AtlasReleaseDefinitionCheck12 : @Atlas.Comparisons.Exceptional.b2BinaryDerivedEquivC2Derived = @Atlas.Comparisons.Exceptional.b2BinaryDerivedEquivC2Derived := rfl
+theorem AtlasReleaseDefinitionCheck13 : @Atlas.Comparisons.Exceptional.c2BinaryDerivedEquivAlt6 = @Atlas.Comparisons.Exceptional.c2BinaryDerivedEquivAlt6 := rfl
+theorem AtlasReleaseDefinitionCheck14 : @Atlas.Comparisons.Exceptional.psl2Card4EquivAlt5 = @Atlas.Comparisons.Exceptional.psl2Card4EquivAlt5 := rfl
+theorem AtlasReleaseDefinitionCheck15 : @Atlas.Comparisons.Exceptional.psl2Card4EquivPsl2Five = @Atlas.Comparisons.Exceptional.psl2Card4EquivPsl2Five := rfl
+theorem AtlasReleaseDefinitionCheck16 : @Atlas.Comparisons.Exceptional.psl2Card5EquivAlt5 = @Atlas.Comparisons.Exceptional.psl2Card5EquivAlt5 := rfl
+theorem AtlasReleaseDefinitionCheck17 : @Atlas.Comparisons.Exceptional.psl2Card9EquivAlt6 = @Atlas.Comparisons.Exceptional.psl2Card9EquivAlt6 := rfl
+theorem AtlasReleaseDefinitionCheck18 : @Atlas.Comparisons.Exceptional.psl2Card9EquivB2BinaryDerived = @Atlas.Comparisons.Exceptional.psl2Card9EquivB2BinaryDerived := rfl
+theorem AtlasReleaseDefinitionCheck19 : @Atlas.Comparisons.Exceptional.psl2Card9EquivC2BinaryDerived = @Atlas.Comparisons.Exceptional.psl2Card9EquivC2BinaryDerived := rfl
+theorem AtlasReleaseDefinitionCheck20 : @Atlas.Comparisons.Exceptional.psl2NineEquivAlt6 = @Atlas.Comparisons.Exceptional.psl2NineEquivAlt6 := rfl
+theorem AtlasReleaseDefinitionCheck21 : @Atlas.Comparisons.Exceptional.psl2SevenEquivPsl3Two = @Atlas.Comparisons.Exceptional.psl2SevenEquivPsl3Two := rfl
+theorem AtlasReleaseDefinitionCheck22 : @Atlas.Comparisons.Exceptional.psl4TwoEquivAlt8 = @Atlas.Comparisons.Exceptional.psl4TwoEquivAlt8 := rfl
+theorem AtlasReleaseDefinitionCheck25 : @Atlas.Families.Alternating.Model = @Atlas.Families.Alternating.Model := rfl
+theorem AtlasReleaseDefinitionCheck59 : @Atlas.Families.Cyclic.Model = @Atlas.Families.Cyclic.Model := rfl
+theorem AtlasReleaseDefinitionCheck81 : @Atlas.G2.Model = @Atlas.G2.Model := rfl
+theorem AtlasReleaseDefinitionCheck106 : @Atlas.Orthogonal.B = @Atlas.Orthogonal.B := rfl
+theorem AtlasReleaseDefinitionCheck180 : @Atlas.Orthogonal.DPlus = @Atlas.Orthogonal.DPlus := rfl
+theorem AtlasReleaseDefinitionCheck296 : @Atlas.ReeG2.Model = @Atlas.ReeG2.Model := rfl
+theorem AtlasReleaseDefinitionCheck310 : @Atlas.Sporadic.Conway1.Model = @Atlas.Sporadic.Conway1.Model := rfl
+theorem AtlasReleaseDefinitionCheck331 : @Atlas.Sporadic.Conway2.Model = @Atlas.Sporadic.Conway2.Model := rfl
+theorem AtlasReleaseDefinitionCheck373 : @Atlas.Sporadic.Conway3.Model = @Atlas.Sporadic.Conway3.Model := rfl
+theorem AtlasReleaseDefinitionCheck418 : @Atlas.Sporadic.Fischer22.Model = @Atlas.Sporadic.Fischer22.Model := rfl
+theorem AtlasReleaseDefinitionCheck442 : @Atlas.Sporadic.Fischer23.Model = @Atlas.Sporadic.Fischer23.Model := rfl
+theorem AtlasReleaseDefinitionCheck469 : @Atlas.Sporadic.Fischer24Prime.Model = @Atlas.Sporadic.Fischer24Prime.Model := rfl
+theorem AtlasReleaseDefinitionCheck487 : @Atlas.Sporadic.HigmanSims.Model = @Atlas.Sporadic.HigmanSims.Model := rfl
+theorem AtlasReleaseDefinitionCheck554 : @Atlas.Sporadic.Janko2.Model = @Atlas.Sporadic.Janko2.Model := rfl
+theorem AtlasReleaseDefinitionCheck629 : @Atlas.Sporadic.Mathieu11.Model = @Atlas.Sporadic.Mathieu11.Model := rfl
+theorem AtlasReleaseDefinitionCheck646 : @Atlas.Sporadic.Mathieu12.Model = @Atlas.Sporadic.Mathieu12.Model := rfl
+theorem AtlasReleaseDefinitionCheck662 : @Atlas.Sporadic.Mathieu22.Model = @Atlas.Sporadic.Mathieu22.Model := rfl
+theorem AtlasReleaseDefinitionCheck681 : @Atlas.Sporadic.Mathieu23.Model = @Atlas.Sporadic.Mathieu23.Model := rfl
+theorem AtlasReleaseDefinitionCheck698 : @Atlas.Sporadic.Mathieu24.Model = @Atlas.Sporadic.Mathieu24.Model := rfl
+theorem AtlasReleaseDefinitionCheck719 : @Atlas.Sporadic.McLaughlin.Model = @Atlas.Sporadic.McLaughlin.Model := rfl
+theorem AtlasReleaseDefinitionCheck776 : @Atlas.Sporadic.Suzuki.Model = @Atlas.Sporadic.Suzuki.Model := rfl
+theorem AtlasReleaseDefinitionCheck839 : @Atlas.Symplectic.PSp = @Atlas.Symplectic.PSp := rfl
+theorem AtlasReleaseDefinitionCheck910 : @Matrix.ProjectiveSpecialLinearGroup = @Matrix.ProjectiveSpecialLinearGroup := rfl

@@ -29,7 +29,7 @@ ATLAS source is compiled locally. The default targets are `Atlas` and `Atlas.Aud
 Use one build/audit driver at a time. A fresh project build can take substantial time
 and memory on a laptop; no full mathlib source rebuild is required.
 
-No CI, scheduled verification or website is configured. Verified source release: `v0.1.0`. See [AUDIT.md](AUDIT.md) for the recorded checks.
+No CI, scheduled verification or website is configured. See [AUDIT.md](AUDIT.md) for the current source-bound checks and [release maintenance](verification/MAINTENANCE.md) for the automatic metadata gate.
 
 ## Citation and license
 

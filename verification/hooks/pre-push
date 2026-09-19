@@ -1,0 +1,9 @@
+#!/bin/sh
+# Install once with: git config core.hooksPath verification/hooks
+set -eu
+cd "$(git rev-parse --show-toplevel)"
+ruby verification/release_metadata.rb check
+if test -n "$(git status --porcelain --untracked-files=normal)"; then
+  echo 'Release push refused: commit the reviewed release changes first.' >&2
+  exit 1
+fi

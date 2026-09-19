@@ -2,7 +2,7 @@
 
 Entries describe explicit models, not a classification or recognition from order.
 All source paths and declarations below are part of the default root import.
-Full machine-readable interfaces, auxiliary groups and comparison maps: [catalogue.json](docs/catalogue.json).
+Full machine-readable interfaces, auxiliary groups and comparison maps: [catalogue.json](catalogue/catalogue.json).
 
 ## Summary
 
@@ -34,7 +34,7 @@ Here $q$ is the field size and $n$ is Lie rank for the Lie-type families; in par
 | [Fi₂₃](#sporadic-fi23) | 4,089,470,473,293,004,800 | Yes | 31,950 | 34,247 | 34,249 |
 | [Fi₂₄′](#sporadic-fi24prime) | 1,255,205,709,190,661,721,292,800 | Yes | 31,813 | 33,396 | 33,397 |
 
-**Line-count convention (17 September 2026 source measurement):** distinct ATLAS source lines reached through the compiled order/simplicity declarations and their transitive dependencies, including definitions, shared prerequisites, comments and blank lines inside declaration ranges. These are not proof-body-only counts or entire-file sizes. Mathlib/Lean library lines are excluded. Combined counts deduplicate order/simplicity overlap; rows share prerequisites and must not be added. The deduplicated union across all rows is **88,856 ATLAS lines**. Small cyclic/alternating counts reflect reuse of mathlib proofs. Exact measured roots and counts are in [proof-line-counts.csv](docs/proof-line-counts.csv); these measurements apply to the unchanged release mathematical sources.
+**Line-count convention (17 September 2026 source measurement):** distinct ATLAS source lines reached through the compiled order/simplicity declarations and their transitive dependencies, including definitions, shared prerequisites, comments and blank lines inside declaration ranges. These are not proof-body-only counts or entire-file sizes. Mathlib/Lean library lines are excluded. Combined counts deduplicate order/simplicity overlap; rows share prerequisites and must not be added. The deduplicated union across all rows is **88,856 ATLAS lines**. Small cyclic/alternating counts reflect reuse of mathlib proofs. Exact measured roots and counts are in [proof-line-counts.csv](catalogue/proof-line-counts.csv); these measurements apply to the unchanged release mathematical sources.
 
 <a id="family-cyclic"></a>
 
