@@ -1117,4 +1117,3 @@ Atlas.Sporadic.Fischer24Prime.simple : @IsSimpleGroup.{0} (↥Atlas.Sporadic.Fis
       Atlas.Fischer.rootGeneratedRayGroup)
     Atlas.Sporadic.Fischer24Prime.Model)
 ```
-

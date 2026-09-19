@@ -20,6 +20,7 @@ entries.each do |entry|
   text+="### #{role=='order' ? 'Order' : 'Simplicity'}\n\n`#{name}` — [source](#{ref.fetch('source')}).\n\n```lean\n#{sig}\n```\n\n"
  end
 end
+text = text.rstrip + "\n"
 case ARGV.fetch(0,'check')
 when 'refresh' then File.write('THEOREM_STATEMENTS.md',text)
 when 'check' then raise 'Stale theorem statements' unless File.read('THEOREM_STATEMENTS.md')==text
