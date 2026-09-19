@@ -13,7 +13,29 @@ See [the catalogue](CATALOGUE.md) for actual models and theorem names, and
 The stable entry point is `import Atlas`; namespaces and source paths are preserved.
 The small Ree family starts at q=27.
 
+## Finding the mathematics
+
+The [principal theorem statements](THEOREM_STATEMENTS.md) show the compiled order
+and simplicity signatures, including implicit parameters and assumptions, without proofs.
+
+| Directory | Contents |
+|---|---|
+| `Atlas/Families/` | Cyclic and alternating family interfaces |
+| `Atlas/LinearGroups/` | Classical families, split G₂ and small Ree constructions |
+| `Atlas/Sporadic/` | Public sporadic models and construction interfaces |
+| `Atlas/Codes/`, `Atlas/Mathieu/` | Golay/hexacode infrastructure and Mathieu groups |
+| `Atlas/Lattices/`, `Atlas/Conway/` | Lattice constructions and the Conway-related developments |
+| `Atlas/Fischer/` | Fischer constructions and proofs |
+| `Atlas/Comparisons/` | Proved isomorphisms and nonisomorphisms |
+| Other `Atlas/` subject directories | Shared algebra, geometry and group-theoretic infrastructure |
+| `catalogue/` | Machine-readable interfaces and measured proof-line counts |
+| `verification/` | Checking tools and recorded verification evidence |
+
+[Independent-checker reproduction](verification/INDEPENDENT_CHECKERS.md) explains
+how to repeat the Nanoda and Comparator checks separately from the ordinary Lean build.
+
 ## Build
+
 
 Install Lean's elan toolchain manager, Git and (for audit scripts) Ruby. Then:
 

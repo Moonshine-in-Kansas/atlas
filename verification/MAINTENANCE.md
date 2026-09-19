@@ -17,7 +17,10 @@ ruby verification/release_metadata.rb refresh
 ruby verification/release_metadata.rb check
 ```
 
-The refresh regenerates AUDIT.md and both manifests. The check is read-only.
+The refresh regenerates AUDIT.md, THEOREM_STATEMENTS.md and both manifests.
+The statement document is rendered from the hashed compiled-statement log in the
+current evidence snapshot. New snapshots must include that log and its hash.
+The check is read-only.
 The pre-push hook requires a passing check and a clean committed checkout.
 Git hooks are local safeguards, not a server policy; clones must install them,
 and a user can deliberately bypass them. No push or visibility change is automated.
