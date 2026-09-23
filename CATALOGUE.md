@@ -1,4 +1,4 @@
-# Constructive ATLAS catalogue
+# A constructive ATLAS of finite simple groups in Lean — catalogue
 
 Entries describe explicit models, not a classification or recognition from order.
 All source paths and declarations below are part of the default root import.

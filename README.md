@@ -1,4 +1,4 @@
-# Constructive ATLAS
+# A constructive ATLAS of finite simple groups in Lean
 
 Read the [**research note (PDF)**](atlas_research_note.pdf) — mathematical background, constructions and project overview.
 
