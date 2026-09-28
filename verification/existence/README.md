@@ -25,9 +25,13 @@ must be built as separate modules; importing both would duplicate target names.
 The labels M24, Fi22, and so on are navigation labels for existential statements
 with explicit numeric orders. These contracts **do not claim identification or
 uniqueness of an isomorphism type**. In particular B and C have equal displayed
-order formulas, so their existence statements cannot distinguish them. No
-construction fidelity, action, exceptional isomorphism or nonisomorphism is
-certified by this narrower check. Those remain separate ATLAS results.
+order formulas, so the original existence statements alone cannot distinguish them.
+The [strengthened invariant contracts](discriminators/README.md) additionally
+attach involution-class counts for B/C and Sylow-center orders for the order-20,160
+pair to the same group witnesses; their [results](discriminators/RESULTS.md) are
+recorded separately. The original contracts do not specify group constructions
+or actions. The supplementary invariants distinguish the stated same-order pairs;
+full construction and comparison theorems remain separate ATLAS results.
 
 Excluded family parameters are omitted from the positive existence claims.
 This does not assert that no other simple group can have an excluded order.

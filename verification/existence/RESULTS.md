@@ -6,6 +6,7 @@ They do not establish recognition or uniqueness of isomorphism types.
 
 - [Reference statements](Challenge.lean): what must be proved, using only mathlib.
 - [Solution file](Solution.lean): the ATLAS imports, chosen groups and existing proofs supplying the witnesses.
+- [Strengthened same-order invariants](discriminators/RESULTS.md): involution-class counts for B/C and Sylow-center orders for A₈ and PSL₃(4), attached to the same witnesses.
 - [How to reproduce the checks](README.md#running-the-sequential-queue): setup, scripts and sandbox command.
 
 For each passed entry, the last column links its actual individual reference and
@@ -14,7 +15,7 @@ Each passed entry records a real sandboxed Comparator run, statement comparison,
 permitted-axiom checking and standard Lean kernel replay. This is not a new Nanoda
 run. All runs use the pinned tools in [the reproduction guide](../INDEPENDENT_CHECKERS.md).
 
-Updated 2026-09-28T22:39:22Z. **23 / 23 passed.**
+Updated 2026-09-28T23:09:12Z. **23 / 23 passed.**
 
 | Entry | Result | Elapsed | Peak combined worker RSS | Lean files |
 |---|---|---:|---:|---|
