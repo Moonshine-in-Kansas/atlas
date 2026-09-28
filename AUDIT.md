@@ -29,6 +29,10 @@ The current evidence summaries, target mapping and source hashes are under
 [verification/release](verification/release/); it is historical and has not been overwritten.
 Large raw proof exports and host-specific operational logs are not distributed here.
 
+The newer [existence-contract checks](verification/existence/RESULTS.md) have
+separate per-entry evidence and a mathlib-only reference. They certify the
+specified existence claims, not recognition or all structural audit targets.
+
 ## Reproduce the Lean build and dependency audit
 
 ```sh

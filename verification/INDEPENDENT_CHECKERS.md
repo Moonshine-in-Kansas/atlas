@@ -46,6 +46,11 @@ measurements, not performance guarantees. GNU `/usr/bin/time` is required.
 
 ## Comparator
 
+For the new mathlib-only existence specifications and per-group checks, see
+[existence contracts and results](existence/README.md). The instructions below
+reproduce the older same-reference run and should not be confused with those checks.
+
+
 Prepare the same-reference comparison harness:
 
 ```sh

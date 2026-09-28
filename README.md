@@ -13,6 +13,10 @@ See [the catalogue](CATALOGUE.md) for actual models and theorem names, and
 The stable entry point is `import Atlas`; namespaces and source paths are preserved.
 The small Ree family starts at q=27.
 
+The [independent existence checks](verification/existence/README.md) provide clean
+reference statements, solution wrappers, reproducible Comparator scripts and
+[per-entry results](verification/existence/RESULTS.md).
+
 ## Finding the mathematics
 
 The [principal theorem statements](THEOREM_STATEMENTS.md) show the compiled order
