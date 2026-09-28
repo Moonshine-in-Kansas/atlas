@@ -14,7 +14,7 @@ Each passed entry records a real sandboxed Comparator run, statement comparison,
 permitted-axiom checking and standard Lean kernel replay. This is not a new Nanoda
 run. All runs use the pinned tools in [the reproduction guide](../INDEPENDENT_CHECKERS.md).
 
-Updated 2026-09-28T17:13:00Z. **18 / 23 passed.**
+Updated 2026-09-28T22:35:54Z. **23 / 23 passed.**
 
 | Entry | Result | Elapsed | Peak combined worker RSS | Lean files |
 |---|---|---:|---:|---|
@@ -36,11 +36,11 @@ Updated 2026-09-28T17:13:00Z. **18 / 23 passed.**
 | [Co3](2026-09-29/Co3/RESULT.json) | Passed | 139 s | 5.27 GiB | [Reference](2026-09-29/Co3/Challenge.lean) · [Solution](2026-09-29/Co3/Solution.lean) |
 | [McL](2026-09-29/McL/RESULT.json) | Passed | 139 s | 5.36 GiB | [Reference](2026-09-29/McL/Challenge.lean) · [Solution](2026-09-29/McL/Solution.lean) |
 | [HS](2026-09-29/HS/RESULT.json) | Passed | 131 s | 4.98 GiB | [Reference](2026-09-29/HS/Challenge.lean) · [Solution](2026-09-29/HS/Solution.lean) |
-| Suz | Pending | — | — | [Reference](Challenge.lean) · [Solution](Solution.lean) |
-| J2 | Pending | — | — | [Reference](Challenge.lean) · [Solution](Solution.lean) |
-| Fi22 | Pending | — | — | [Reference](Challenge.lean) · [Solution](Solution.lean) |
-| Fi23 | Pending | — | — | [Reference](Challenge.lean) · [Solution](Solution.lean) |
-| Fi24Prime | Pending | — | — | [Reference](Challenge.lean) · [Solution](Solution.lean) |
+| [Suz](2026-09-29/Suz/RESULT.json) | Passed | 680 s | 6.28 GiB | [Reference](2026-09-29/Suz/Challenge.lean) · [Solution](2026-09-29/Suz/Solution.lean) |
+| [J2](2026-09-29/J2/RESULT.json) | Passed | 785 s | 6.25 GiB | [Reference](2026-09-29/J2/Challenge.lean) · [Solution](2026-09-29/J2/Solution.lean) |
+| [Fi22](2026-09-29/Fi22/RESULT.json) | Passed | 199 s | 6.17 GiB | [Reference](2026-09-29/Fi22/Challenge.lean) · [Solution](2026-09-29/Fi22/Solution.lean) |
+| [Fi23](2026-09-29/Fi23/RESULT.json) | Passed | 201 s | 6.23 GiB | [Reference](2026-09-29/Fi23/Challenge.lean) · [Solution](2026-09-29/Fi23/Solution.lean) |
+| [Fi24Prime](2026-09-29/Fi24Prime/RESULT.json) | Passed | 198 s | 6.15 GiB | [Reference](2026-09-29/Fi24Prime/Challenge.lean) · [Solution](2026-09-29/Fi24Prime/Solution.lean) |
 
 Passed entries include their actual Challenge and Solution modules, configuration,
 unaltered result record, GNU time output and complete compressed Comparator log.
