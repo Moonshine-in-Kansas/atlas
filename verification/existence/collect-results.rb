@@ -9,11 +9,17 @@ queue=JSON.parse(File.read(ARGV.fetch(0)+'/QUEUE.json'))
 dest=__dir__+'/2026-09-29'
 FileUtils.mkdir_p(dest)
 sha=->(p){Digest::SHA256.file(p).hexdigest}
+# Use the same display names as the public catalogue; keep evidence paths stable.
+catalogue_names=File.read(root+'/CATALOGUE.md').scan(/^\| \[([^\]]+)\]\(#([^)]+)\) \|/).to_h { |display,anchor| [anchor,display] }
+family_anchors={'cyclic'=>'cyclic','alternating'=>'alternating','typeA'=>'psl',
+  'typeB'=>'b','typeC'=>'c','typeD'=>'d','G2'=>'g2','ReeG2'=>'reeg2'}
 rows=[]
 queue.each do |row|
  name=row.fetch('target'); label=name.split('.').last
+ anchor=family_anchors.key?(label) ? 'family-'+family_anchors.fetch(label) : 'sporadic-'+label.downcase
+ display=catalogue_names.fetch(anchor)
  unless row['status']=='passed'
-   rows << "| #{label} | Pending | — | — | [Reference](Challenge.lean) · [Solution](Solution.lean) |"
+   rows << "| #{display} | Pending | — | — | [Reference](Challenge.lean) · [Solution](Solution.lean) |"
    next
  end
  src=row.fetch('harness'); r=JSON.parse(File.read(src+'/RESULT.json'))
@@ -34,7 +40,7 @@ queue.each do |row|
  FileUtils.cp(src+'/SOURCE_HASHES.json',dest+'/SOURCE_HASHES.json') unless File.exist?(dest+'/SOURCE_HASHES.json')
  raise 'Inconsistent source snapshots' unless sha.call(src+'/SOURCE_HASHES.json')==sha.call(dest+'/SOURCE_HASHES.json')
  seconds=Time.parse(r['finished_utc'])-Time.parse(r['started_utc'])
- rows << "| [#{label}](2026-09-29/#{label}/RESULT.json) | Passed | #{seconds.to_i} s | #{format('%.2f',r['peak_combined_rss'].to_f/1024**3)} GiB | [Reference](2026-09-29/#{label}/Challenge.lean) · [Solution](2026-09-29/#{label}/Solution.lean) |"
+ rows << "| [#{display}](2026-09-29/#{label}/RESULT.json) | Passed | #{seconds.to_i} s | #{format('%.2f',r['peak_combined_rss'].to_f/1024**3)} GiB | [Reference](2026-09-29/#{label}/Challenge.lean) · [Solution](2026-09-29/#{label}/Solution.lean) |"
 end
 summary=<<~MD
 # Per-entry Comparator results
