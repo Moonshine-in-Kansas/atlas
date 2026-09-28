@@ -48,7 +48,3 @@ The shared source snapshot covers the release mathematics and pins. Per-run hash
 of runtime Lake setup files are retained in RESULT.json; those machine-local setup
 files are recreated by the preparation script and are not bundled. The result
 records are execution evidence, not cryptographically signed attestations.
-
-The earlier combined attempt stopped at a memory reserve and is not counted as a
-pass. A successful single-target check covers that target and its required proof
-dependencies; it does not replace every older structural/catalogue audit target.
