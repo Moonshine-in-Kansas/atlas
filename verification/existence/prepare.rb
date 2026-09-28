@@ -1,10 +1,11 @@
 # Prepares the new existence contract; does not run a checker or change old evidence.
+require_relative 'contracts'
 require 'json'
 require 'fileutils'
 require 'digest'
 require 'time'
 root = File.expand_path('../..', __dir__)
-config = JSON.parse(File.read(File.join(__dir__, 'comparator.json')))
+config = AtlasContracts.config(AtlasContracts.entries.select { |r| r['scope']=='existence' }.map { |r| r.fetch('declaration') })
 challenge = File.read(File.join(__dir__, 'Challenge.lean'))
 solution = File.read(File.join(__dir__, 'Solution.lean'))
 raise 'ATLAS import in reference' if challenge.lines.grep(/^import /).any? { |l| !l.start_with?('import Mathlib.') }
@@ -24,7 +25,8 @@ raise 'Usage: prepare.rb [--check]' unless ARGV.empty?
 out = File.join(root, 'verification/results/existence-contract-'+Time.now.utc.strftime('%Y%m%dT%H%M%SZ'))
 raise 'Existing output directory' if File.exist?(out)
 FileUtils.mkdir_p(out)
-%w[Challenge.lean Solution.lean comparator.json].each { |p| FileUtils.cp(File.join(__dir__, p), out) }
+%w[Challenge.lean Solution.lean].each { |p| FileUtils.cp(File.join(__dir__, p), out) }
+File.write(File.join(out, 'comparator.json'), JSON.pretty_generate(config)+"\n")
 FileUtils.cp(File.join(root, 'lean-toolchain'), out)
 File.write(File.join(out, 'lakefile.toml'), <<~TOML)
 name = "AtlasExistenceContracts"

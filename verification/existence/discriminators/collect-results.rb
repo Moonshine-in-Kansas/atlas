@@ -1,4 +1,5 @@
 # Copy only completed successful evidence; never run, promote or fabricate a check.
+require_relative '../contracts'
 require 'json'
 require 'digest'
 require 'fileutils'
@@ -6,19 +7,26 @@ require 'zlib'
 require 'time'
 root=File.expand_path('../../..',__dir__)
 queue=JSON.parse(File.read(ARGV.fetch(0)+'/QUEUE.json'))
-dest=__dir__+'/2026-09-29'
+date=ARGV.fetch(1) { Time.now.utc.strftime('%Y-%m-%d') }
+raise 'Invalid evidence date' unless date.match?(/\A\d{4}-\d{2}-\d{2}\z/)
+dest=__dir__+'/'+date
 FileUtils.mkdir_p(dest)
 sha=->(p){Digest::SHA256.file(p).hexdigest}
 displays={'typeB'=>'Bₙ(q)','typeC'=>'Cₙ(q)','alternating8'=>'A₈ ≅ A₃(2)','psl3Four'=>'A₂(4) = PSL₃(4)'}
+registry_path=root+'/verification/existence/registry.json'
+registry=JSON.parse(File.read(registry_path))
 rows=[]
 queue.each do |row|
  name=row.fetch('target'); label=name.split('.').last
+ registered=registry.fetch('entries').find{|e|e['declaration']==name}
+ raise "Unregistered target: #{name}" unless registered
  display=displays.fetch(label)
  unless row['status']=='passed'
    rows << "| #{display} | Pending | — | — | [Reference](Challenge.lean) · [Solution](Solution.lean) |"
    next
  end
  src=row.fetch('harness'); r=JSON.parse(File.read(src+'/RESULT.json'))
+ AtlasContracts.render(registered).each{|p,bytes|raise "Stale queued contract: #{name}" unless File.binread(src+'/'+p)==bytes.b}
  raise 'Not a successful check' unless r['status']=='passed' && r['exit_code']==0 && r['inputs_unchanged'] && !r['memory_guard_stop']
  raise 'Log hash mismatch' unless sha.call(src+'/comparator.log')==r['log_sha256']
  %w[Challenge.lean Solution.lean comparator.json].each{|p|raise 'Changed input' unless sha.call(src+'/'+p)==r.fetch('files').fetch(p)}
@@ -35,8 +43,9 @@ queue.each do |row|
  end
  FileUtils.cp(src+'/SOURCE_HASHES.json',dest+'/SOURCE_HASHES.json') unless File.exist?(dest+'/SOURCE_HASHES.json')
  raise 'Inconsistent source snapshots' unless sha.call(src+'/SOURCE_HASHES.json')==sha.call(dest+'/SOURCE_HASHES.json')
+ registered['evidence']=target.delete_prefix(root+'/')
  seconds=Time.parse(r['finished_utc'])-Time.parse(r['started_utc'])
- rows << "| [#{display}](2026-09-29/#{label}/RESULT.json) | Passed | #{seconds.to_i} s | #{format('%.2f',r['peak_combined_rss'].to_f/1024**3)} GiB | [Reference](2026-09-29/#{label}/Challenge.lean) · [Solution](2026-09-29/#{label}/Solution.lean) |"
+ rows << "| [#{display}](#{date}/#{label}/RESULT.json) | Passed | #{seconds.to_i} s | #{format('%.2f',r['peak_combined_rss'].to_f/1024**3)} GiB | [Reference](#{date}/#{label}/Challenge.lean) · [Solution](#{date}/#{label}/Solution.lean) |"
 end
 summary=<<~MD
 # Same-order groups: strengthened existence checks
@@ -82,3 +91,6 @@ File.write(__dir__+'/RESULTS.md',summary)
 hashes=Dir.glob(dest+'/**/*').select{|p|File.file?(p)&&File.basename(p)!='SHA256SUMS'}.sort.map{|p|"#{sha.call(p)}  #{p.delete_prefix(dest+'/')}\n"}.join
 File.write(dest+'/SHA256SUMS',hashes)
 puts "Collected #{queue.count{|r|r['status']=='passed'}} passes"
+
+File.write(registry_path,JSON.pretty_generate(registry)+"\n")
+puts 'Evidence index updated; run ruby verification/release_metadata.rb refresh after collecting all required scopes.'

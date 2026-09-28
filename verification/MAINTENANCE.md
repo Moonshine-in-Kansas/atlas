@@ -40,3 +40,47 @@ checks actually ran. A later independent rerun remains possible.
 
 The mathematical review of new catalogue descriptions, changes to licensing,
 and explicit permission before public visibility remain human decisions.
+
+## Formalization metadata and Comparator contracts
+
+The single root `formalization.yaml` holds the project-wide description. Its
+`status.main_results` and verification report counts are generated from
+`verification/existence/registry.json`. Each registry entry supplies the display
+name, declaration, scope, solution imports and immutable successful evidence path.
+Every family/sporadic catalogue entry must have an existence-contract entry;
+an uncovered new group blocks publication.
+
+The reviewed mathematical specifications remain in
+`verification/existence/{Challenge,Solution}.lean` and
+`verification/existence/discriminators/{Challenge,Solution}.lean`.
+Edit these deliberately when adding or changing results. The tooling does not
+invent a mathematical specification from an implementation theorem.
+The shared renderer generates each individual Challenge, Solution and Comparator
+configuration when preparing a queue. The same renderer checks that the recorded
+successful inputs match the current contracts exactly.
+
+For a new release:
+
+1. Update the reviewed contracts and registry for new or changed results. Preserve
+   the project-wide YAML description; update its prose when the scope changes.
+2. Use the existing preparation and sequential runner instructions to check both
+   required scopes. Run one checker at a time with the documented memory limits.
+3. Collect successful evidence with
+   `ruby verification/existence/collect-results.rb QUEUE_DIRECTORY YYYY-MM-DD`
+   and the corresponding `discriminators/collect-results.rb` command. A date is
+   optional and defaults to the current UTC date. Collectors refuse to overwrite
+   different historical records and update registry evidence pointers only for
+   validated passes. Use a new evidence directory for changed runs.
+4. Run `ruby verification/release_metadata.rb refresh`, then `check`.
+   This automatically synchronizes and validates the root YAML, combined Comparator
+   configurations and target index, as well as release checksums. The pre-push
+   hook repeats the check. Changed contracts, changed source snapshots, missing
+   results, corrupted logs or incomplete catalogue coverage block publication.
+
+No historical proof result is promoted to cover changed sources. A metadata
+refresh runs no Lean proofs and grants no new verification status. Project-wide
+YAML prose and mathematical specifications still require deliberate maintenance.
+The private release-preparation script uses this same gate; uploads remain explicit.
+
+Run `ruby verification/existence/test-sync.rb` for lightweight regression checks
+of these safeguards, without launching Lean or accessing the network.

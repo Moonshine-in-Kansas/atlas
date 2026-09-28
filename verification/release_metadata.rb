@@ -12,6 +12,7 @@ def require_equal(actual, expected, message)
   raise message unless actual == expected
 end
 begin
+  raise "Contract metadata check failed" unless system("ruby", "verification/existence/sync.rb", mode)
   raise 'Obsolete docs directory; use catalogue/' if Dir.exist?('docs')
   index = read_json('verification/current.json')
   snapshot = index.fetch('snapshot')
