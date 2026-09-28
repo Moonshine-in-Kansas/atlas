@@ -13,7 +13,7 @@ rows=[]
 queue.each do |row|
  name=row.fetch('target'); label=name.split('.').last
  unless row['status']=='passed'
-   rows << "| #{label} | Pending | — | — |"
+   rows << "| #{label} | Pending | — | — | [Reference](Challenge.lean) · [Solution](Solution.lean) |"
    next
  end
  src=row.fetch('harness'); r=JSON.parse(File.read(src+'/RESULT.json'))
@@ -34,7 +34,7 @@ queue.each do |row|
  FileUtils.cp(src+'/SOURCE_HASHES.json',dest+'/SOURCE_HASHES.json') unless File.exist?(dest+'/SOURCE_HASHES.json')
  raise 'Inconsistent source snapshots' unless sha.call(src+'/SOURCE_HASHES.json')==sha.call(dest+'/SOURCE_HASHES.json')
  seconds=Time.parse(r['finished_utc'])-Time.parse(r['started_utc'])
- rows << "| [#{label}](2026-09-29/#{label}/RESULT.json) | Passed | #{seconds.to_i} s | #{format('%.2f',r['peak_combined_rss'].to_f/1024**3)} GiB |"
+ rows << "| [#{label}](2026-09-29/#{label}/RESULT.json) | Passed | #{seconds.to_i} s | #{format('%.2f',r['peak_combined_rss'].to_f/1024**3)} GiB | [Reference](2026-09-29/#{label}/Challenge.lean) · [Solution](2026-09-29/#{label}/Solution.lean) |"
 end
 summary=<<~MD
 # Per-entry Comparator results
@@ -42,14 +42,21 @@ summary=<<~MD
 These checks concern the [existence contracts](Challenge.lean): a single finite
 group witness with the stated order, simplicity and commutativity/noncommutativity.
 They do not establish recognition or uniqueness of isomorphism types.
+
+- [Reference statements](Challenge.lean): what must be proved, using only mathlib.
+- [Solution file](Solution.lean): the ATLAS imports, chosen groups and existing proofs supplying the witnesses.
+- [How to reproduce the checks](README.md#running-the-sequential-queue): setup, scripts and sandbox command.
+
+For each passed entry, the last column links its actual individual reference and
+solution files. Those solution files use only the imports needed for that entry.
 Each passed entry records a real sandboxed Comparator run, statement comparison,
 permitted-axiom checking and standard Lean kernel replay. This is not a new Nanoda
 run. All runs use the pinned tools in [the reproduction guide](../INDEPENDENT_CHECKERS.md).
 
 Updated #{Time.now.utc.iso8601}. **#{queue.count{|r|r['status']=='passed'}} / #{queue.size} passed.**
 
-| Entry | Result | Elapsed | Peak combined worker RSS |
-|---|---|---:|---:|
+| Entry | Result | Elapsed | Peak combined worker RSS | Lean files |
+|---|---|---:|---:|---|
 #{rows.join("\n")}
 
 Passed entries include their actual Challenge and Solution modules, configuration,

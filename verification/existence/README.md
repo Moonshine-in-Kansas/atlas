@@ -1,6 +1,6 @@
 # Existence contracts for the published ATLAS
 
-`Challenge.lean` is the fixed mathematical specification. It imports only
+[Challenge.lean](Challenge.lean) is the fixed mathematical specification. It imports only
 mathlib: no ATLAS definitions, theorem aliases, or construction assumptions.
 There are 23 targets: eight families and fifteen sporadic entries in the current
 release. Each existential quantifier binds **one** group, with finiteness, order,
@@ -8,7 +8,7 @@ simplicity and noncommutativity asserted for that same group. The cyclic target
 asserts commutativity instead. Family formulas and admissibility conditions are
 written out explicitly; q means the cardinality of the quantified finite field.
 
-`Solution.lean` proves these statements by supplying the existing ATLAS groups.
+[Solution.lean](Solution.lean) proves these statements by supplying the existing ATLAS groups.
 It does not import Challenge. The comparator configuration permits only
 `propext`, `Quot.sound`, and `Classical.choice`, and has no definition holes.
 
