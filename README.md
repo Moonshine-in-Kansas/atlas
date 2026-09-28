@@ -17,6 +17,9 @@ The [independent existence checks](verification/existence/README.md) provide cle
 reference statements, solution wrappers, reproducible Comparator scripts and
 [per-entry results](verification/existence/RESULTS.md).
 
+[Formalization metadata](formalization.yaml): project description, main results,
+and links to their Comparator configurations.
+
 ## Finding the mathematics
 
 The [principal theorem statements](THEOREM_STATEMENTS.md) show the compiled order
