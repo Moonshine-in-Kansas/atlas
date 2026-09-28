@@ -14,7 +14,7 @@ Each passed entry records a real sandboxed Comparator run, statement comparison,
 permitted-axiom checking and standard Lean kernel replay. This is not a new Nanoda
 run. All runs use the pinned tools in [the reproduction guide](../INDEPENDENT_CHECKERS.md).
 
-Updated 2026-09-28T16:57:40Z. **16 / 23 passed.**
+Updated 2026-09-28T17:13:00Z. **18 / 23 passed.**
 
 | Entry | Result | Elapsed | Peak combined worker RSS | Lean files |
 |---|---|---:|---:|---|
@@ -34,8 +34,8 @@ Updated 2026-09-28T16:57:40Z. **16 / 23 passed.**
 | [Co1](2026-09-29/Co1/RESULT.json) | Passed | 129 s | 4.65 GiB | [Reference](2026-09-29/Co1/Challenge.lean) · [Solution](2026-09-29/Co1/Solution.lean) |
 | [Co2](2026-09-29/Co2/RESULT.json) | Passed | 147 s | 5.02 GiB | [Reference](2026-09-29/Co2/Challenge.lean) · [Solution](2026-09-29/Co2/Solution.lean) |
 | [Co3](2026-09-29/Co3/RESULT.json) | Passed | 139 s | 5.27 GiB | [Reference](2026-09-29/Co3/Challenge.lean) · [Solution](2026-09-29/Co3/Solution.lean) |
-| McL | Pending | — | — | [Reference](Challenge.lean) · [Solution](Solution.lean) |
-| HS | Pending | — | — | [Reference](Challenge.lean) · [Solution](Solution.lean) |
+| [McL](2026-09-29/McL/RESULT.json) | Passed | 139 s | 5.36 GiB | [Reference](2026-09-29/McL/Challenge.lean) · [Solution](2026-09-29/McL/Solution.lean) |
+| [HS](2026-09-29/HS/RESULT.json) | Passed | 131 s | 4.98 GiB | [Reference](2026-09-29/HS/Challenge.lean) · [Solution](2026-09-29/HS/Solution.lean) |
 | Suz | Pending | — | — | [Reference](Challenge.lean) · [Solution](Solution.lean) |
 | J2 | Pending | — | — | [Reference](Challenge.lean) · [Solution](Solution.lean) |
 | Fi22 | Pending | — | — | [Reference](Challenge.lean) · [Solution](Solution.lean) |
