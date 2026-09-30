@@ -2,6 +2,8 @@
 
 Read the [**research note (PDF)**](atlas_research_note.pdf) — mathematical background, constructions and project overview.
 
+If you use ATLAS in your research, please cite Gerald Höhn, *A constructive ATLAS of finite simple groups in Lean* ([arXiv:2609.35847](https://arxiv.org/abs/2609.35847)).
+
 A Lean library constructing explicit finite simple groups and proving their orders,
 simplicity and structural properties. The selected scope comprises eight families
 and fifteen sporadic entries; parameter restrictions and small exceptions are part
@@ -66,4 +68,3 @@ Author: Gerald Höhn. See [CITATION.cff](CITATION.cff) and the existing
 [ATLAS Research and Attribution License 1.0](LICENSE). Commercial use and AI training
 require written permission; scholarly use requires attribution and citation.
 Distributed derivative works must include the license and preserve its conditions.
-No arXiv identifier has yet been assigned here.
