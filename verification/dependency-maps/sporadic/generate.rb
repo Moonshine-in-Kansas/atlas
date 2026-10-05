@@ -7,19 +7,20 @@ require 'erb'
 require 'open3'
 require 'fileutils'
 require 'zlib'
+require 'csv'
 ROOT=File.expand_path('../../..',__dir__)
 Dir.chdir(ROOT)
 PUBLIC=File.file?('catalogue/catalogue.json')
 AUDIT=PUBLIC ? 'verification/release' : 'verification/runs/principal-constructions/20260928T100308-655895'
 CATALOGUE=JSON.parse(File.read(PUBLIC ? 'catalogue/catalogue.json' : 'release/catalogue/catalogue.json'))
-ENTRIES=CATALOGUE.fetch('entries').select{|e|e['kind']=='sporadic'}.to_h{|e|[e.fetch('id').delete_prefix('sporadic.'),e]}
-GROUPS=%w[M24 M23 M22 M12 M11]+(ENTRIES.keys-%w[M24 M23 M22 M12 M11])
+ENTRIES=CATALOGUE.fetch('entries').select{|e|PUBLIC || e['kind']=='sporadic'}.to_h{|e|[e.fetch('id').split('.').last,e]}
+GROUPS=ENTRIES.keys
 LABELS=ENTRIES.transform_values{|e|e.dig('presentation','label')||e.fetch('label')}
 nodes={}
 reader=File.file?(AUDIT+'/dependencies.jsonl') ? File.open(AUDIT+'/dependencies.jsonl') : Zlib::GzipReader.open(AUDIT+'/dependencies.jsonl.gz')
 reader.each_line do |line|
  j=JSON.parse(line)
- nodes[j['name']]=j if j['module']&.start_with?('Atlas.') || j['source_module']&.start_with?('Atlas.')
+ nodes[j['name']]=j if (j['source_module']||j['module'])&.start_with?('Atlas.')
 end
 reader.close
 snapshot=PUBLIC ? {'source_hashes'=>JSON.parse(File.read(AUDIT+'/SOURCE_HASHES.json')),'commit'=>nil} : JSON.parse(File.read(AUDIT+'/SNAPSHOT.json'))
@@ -29,6 +30,13 @@ current_hashes=PUBLIC ? JSON.parse(File.read(JSON.parse(File.read('verification/
 raise 'Audit is not a pass' unless JSON.parse(File.read(AUDIT+'/RESULT.json'))['status']=='passed'
 source=->(n){(nodes.fetch(n)['source_module']||nodes[n]['module']).tr('.','/')+'.lean'}
 roots=GROUPS.to_h{|g|[g,{'order'=>ENTRIES[g].dig('roles','order','declaration'),'simplicity'=>ENTRIES[g].dig('roles','simple','declaration')}]}
+measurement_csv=PUBLIC ? 'catalogue/proof-line-counts.csv' : 'release/catalogue/proof-line-counts.csv'
+measurements=CSV.read(measurement_csv,headers:true)
+roots.each do |g,rs|
+ allowed=[rs['simplicity']]+ENTRIES[g].fetch('properties',[]).map{|p|p['declaration']}
+ row=measurements.find{|r|r['order_root']==rs['order']&&allowed.include?(r['simplicity_root'])} or raise "No measurement for #{g}"
+ rs['simplicity']=row['simplicity_root']
+end
 full={}
 GROUPS.each do |g|
  full[g]=roots[g].transform_values do |root|
@@ -52,7 +60,21 @@ public_names={'Mathieu11'=>'M11','Mathieu12'=>'M12','Mathieu22'=>'M22','Mathieu2
 owner=->(n) do
  p=source.call(n);base=File.basename(p,'.lean')
  public_name=public_names.keys.find{|prefix|base.start_with?(prefix)} if p.start_with?('Atlas/Sporadic/')
- if public_name
+if p.start_with?('Atlas/Families/Cyclic/')
+ 'Cyclic'
+elsif p.start_with?('Atlas/Families/Alternating/')
+ 'Alternating'
+elsif p.match?(%r{Atlas/LinearGroups/(ReeG2/|TypeReeG2)})
+ 'ReeG2'
+elsif p.match?(%r{Atlas/LinearGroups/(G2/|TypeG2)})
+ 'G2'
+elsif p.match?(%r{Atlas/LinearGroups/(Symplectic/|TypeC)})
+ 'C'
+elsif p.match?(%r{Atlas/LinearGroups/Orthogonal/B(?:[12]|Family|AllRanks)[^/]*\.lean$})
+ 'B'
+elsif p.match?(%r{Atlas/LinearGroups/(PSL|ProjectiveSpecialLinear|ProjectiveGeneralLinear|Elementary\.lean)})
+ 'PSL'
+elsif public_name
   public_names[public_name]
  elsif p.match(%r{/(?:Mathieu|TernaryMathieu)(11|12|22|23|24)[^/]*\.lean$})
   "M#{$1}"
@@ -198,7 +220,7 @@ GROUPS.each do |g|
  summaries<<summary;puts summary.to_json
 end
 readme=<<~MD
-# Sporadic proof dependency diagrams
+# Proof dependency diagrams
 
 Each self-contained HTML file offers **Graph**, **Tree**, and **Files** views, with order/simplicity filters, a declaration inspector, theorem counts, search, and embedded downloadable data. No network or companion HTML files are needed to display it. Repository source and cross-group links require the adjacent checkout/pages.
 
@@ -218,7 +240,7 @@ The public catalogue links open rendered diagrams on GitHub Pages. The HTML file
 
 Named source theorem counts cover all named `theorem`/`lemma` commands in the file, including private ones, after removing comments and strings. “Used compiled” counts include generated proof helpers; definitions and instances are traversed but not counted as theorems. Whole-file totals may include unused or other-group statements in mixed files. Counts overlap between groups and are not additive. Boundary files/theorems are excluded from local totals; exact consumed declarations remain visible in the inspector.
 
-Presentation boundaries are explicit in the generator. Named public sporadic modules, Mathieu/Co2/Co3/McL/HS modules, norm-six geometry, and Eisenstein/icosian models identify their respective constructions. Dodecad modules belong to M12. M24 expands its Golay/hexacode foundation; Co1 expands the Leech lattice and Co0 isometries; Fi24Prime expands the shared Fischer tensor/ray construction. Other pages collapse these packages and show their exact consumed declarations. Co0 is kept distinct from its simple quotient Co1; shared Fischer construction is not labeled as Fi24Prime simplicity. Fi22/Fi23 keep their common parameterized residue proofs visible. Generic lemmas and target-specific support stay expanded. These are presentation boundaries, not mathematical assumptions or a claim that every statement in a mixed source file concerns just one group.
+Presentation boundaries are explicit in the generator. Family-specific cyclic, alternating, PSL, symplectic, G2 and ReeG2 modules are collapsed when reused by another family. B-specific comparison modules are likewise separated; shared quadratic-form infrastructure remains expanded for B and D. Family simplicity roots use the measured exact-exception theorem when the catalogue lists it among its properties, so graph and line-count scopes agree. Named public sporadic modules, Mathieu/Co2/Co3/McL/HS modules, norm-six geometry, and Eisenstein/icosian models identify their respective constructions. Dodecad modules belong to M12. M24 expands its Golay/hexacode foundation; Co1 expands the Leech lattice and Co0 isometries; Fi24Prime expands the shared Fischer tensor/ray construction. Other pages collapse these packages and show their exact consumed declarations. Co0 is kept distinct from its simple quotient Co1; shared Fischer construction is not labeled as Fi24Prime simplicity. Fi22/Fi23 keep their common parameterized residue proofs visible. Generic lemmas and target-specific support stay expanded. These are presentation boundaries, not mathematical assumptions or a claim that every statement in a mixed source file concerns just one group.
 
 The default graph removes transitive shortcut arrows while preserving reachability (checked separately for order, simplicity, and both). “All arrows” restores every recorded file edge. Shared tree branches link to their existing node.
 
@@ -230,6 +252,6 @@ From the repository root:
 ruby verification/dependency-maps/sporadic/generate.rb
 ```
 
-The maintained inputs are `sporadic/generate.rb`, `sporadic/viewer.html.erb`, the repository sources, and the existing immutable audit. The fifteen HTML pages and this README are generated outputs. Redundant former standalone tree/graph files, intermediate JSON/CSV/DOT/Mermaid exports, and superseded M24-only generators have been removed. CSV/JSON can instead be downloaded from each page.
+The maintained inputs are `sporadic/generate.rb`, `sporadic/viewer.html.erb`, the repository sources, and the existing immutable audit. The twenty-three HTML pages and this README are generated outputs. Redundant former standalone tree/graph files, intermediate JSON/CSV/DOT/Mermaid exports, and superseded M24-only generators have been removed. CSV/JSON can instead be downloaded from each page.
 MD
 File.write('verification/dependency-maps/README.md',readme)

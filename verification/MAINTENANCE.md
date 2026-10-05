@@ -89,8 +89,8 @@ of these safeguards, without launching Lean or accessing the network.
 
 Catalogue entries optionally carry a `proof_dependencies` HTML path.
 The metadata gate generates/checks the single Lean files / theorems column and
-checks each diagram’s theorem roots and source hashes. Regenerate the fifteen
-published sporadic pages with `ruby verification/dependency-maps/sporadic/generate.rb`
+checks each diagram’s theorem roots and source hashes. Regenerate all twenty-three
+published group/family pages with `ruby verification/dependency-maps/sporadic/generate.rb`
 after changes to the diagram generator or template, then run the usual metadata
 refresh/check. Changed mathematical sources require new verification evidence;
 the generator accepts only the recorded release licence-header substitution

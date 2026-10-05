@@ -38,7 +38,7 @@ end
         html=File.read(path);payload=html[/<script id="data" type="application\/json">(.*?)<\/script>/m,1] or raise "Missing data: #{path}"
         diagram=JSON.parse(payload)
         raise 'Wrong order root' unless diagram.dig('roots','order')==entry.dig('roles','order','declaration')
-        raise 'Wrong simplicity root' unless diagram.dig('roots','simplicity')==entry.dig('roles','simple','declaration')
+        raise 'Wrong simplicity root' unless ([entry.dig('roles','simple','declaration')]+entry.fetch('properties',[]).map{|p|p['declaration']}).include?(diagram.dig('roots','simplicity'))
         diagram.fetch('source_hashes').each{|p,h|raise "Stale diagram source #{p}" unless Digest::SHA256.file(p).hexdigest==h}
         files=diagram.fetch('nodes').select{|n|n['kind']=='file'}
         count=files.sum{|n|n.fetch('source_theorems')}

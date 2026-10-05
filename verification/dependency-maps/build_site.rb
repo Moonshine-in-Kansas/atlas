@@ -17,7 +17,7 @@ entries.each do |entry|
  text=File.read(path)
  data=JSON.parse(text[/<script id="data" type="application\/json">(.*?)<\/script>/m,1])
  raise 'Wrong order root' unless data.dig('roots','order')==entry.dig('roles','order','declaration')
- raise 'Wrong simplicity root' unless data.dig('roots','simplicity')==entry.dig('roles','simple','declaration')
+ raise 'Wrong simplicity root' unless ([entry.dig('roles','simple','declaration')]+entry.fetch('properties',[]).map{|p|p['declaration']}).include?(data.dig('roots','simplicity'))
  data.fetch('source_hashes').each{|p,h|raise "Stale source #{p}" unless Digest::SHA256.file(p).hexdigest==h}
  # Keep cross-group links relative; source/audit links should open GitHub, not missing website files.
  text=text.gsub("'../../../'", "'https://github.com/Moonshine-in-Kansas/atlas/blob/main/'")

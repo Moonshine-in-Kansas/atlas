@@ -10,14 +10,14 @@ Here $q$ is the field size and $n$ is Lie rank for the Lie-type families; in par
 
 | Group or family | Order | Proven simplicity | Lean files / theorems | Intrinsic lines | Total dependency lines |
 |---|---|---|---|---:|---:|
-| [Cₚ](#family-cyclic) | $p$ | Yes, $p$ prime (abelian) | — | 12 | 12 |
-| [Aₙ](#family-alternating) | $n!/2$ | Yes, $n\ge5$; also cyclic simple at $n=3$ | — | 7 | 7 |
-| [Aₙ(q)](#family-psl) | $\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-1)}{\gcd(n+1,q-1)}$ | Yes, $n\ge1$, except $(n,q)=(1,2),(1,3)$ | — | 379 | 379 |
-| [Bₙ(q)](#family-b) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | — | 5,962 | 8,009 |
-| [Cₙ(q)](#family-c) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | — | 2,004 | 2,203 |
-| [Dₙ(q)](#family-d) | $\displaystyle \frac{q^{n(n-1)}(q^n-1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n-1)}$ | Yes, $n\ge4$ (split form) | — | 5,408 | 5,408 |
-| [G₂(q)](#family-g2) | $q^6(q^6-1)(q^2-1)$ | Yes, $q>2$ | — | 3,440 | 3,568 |
-| [²G₂(q)](#family-reeg2) | $q^3(q^3+1)(q-1)$ | Yes, $q=3^{2m+1}$, $m\ge1$ | — | 2,239 | 2,250 |
+| [Cₚ](#family-cyclic) | $p$ | Yes, $p$ prime (abelian) | [1 / 18](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/cyclic/Cyclic.html) | 12 | 12 |
+| [Aₙ](#family-alternating) | $n!/2$ | Yes, $n\ge5$; also cyclic simple at $n=3$ | [1 / 20](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/alternating/Alternating.html) | 7 | 7 |
+| [Aₙ(q)](#family-psl) | $\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-1)}{\gcd(n+1,q-1)}$ | Yes, $n\ge1$, except $(n,q)=(1,2),(1,3)$ | [8 / 82](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/psl/PSL.html) | 379 | 379 |
+| [Bₙ(q)](#family-b) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | [139 / 549](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/b/B.html) | 5,649 | 8,009 |
+| [Cₙ(q)](#family-c) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | [47 / 211](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/c/C.html) | 2,004 | 2,203 |
+| [Dₙ(q)](#family-d) | $\displaystyle \frac{q^{n(n-1)}(q^n-1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n-1)}$ | Yes, $n\ge4$ (split form) | [130 / 538](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/d/D.html) | 5,408 | 5,408 |
+| [G₂(q)](#family-g2) | $q^6(q^6-1)(q^2-1)$ | Yes, $q>2$ | [51 / 424](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/g2/G2.html) | 3,440 | 3,568 |
+| [²G₂(q)](#family-reeg2) | $q^3(q^3+1)(q-1)$ | Yes, $q=3^{2m+1}$, $m\ge1$ | [46 / 178](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/reeg2/ReeG2.html) | 2,239 | 2,250 |
 | [M₁₁](#sporadic-m11) | 7,920 | Yes | [5 / 40](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/m11/M11.html) | 393 | 5,868 |
 | [M₁₂](#sporadic-m12) | 95,040 | Yes | [18 / 89](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/m12/M12.html) | 866 | 5,961 |
 | [M₂₂](#sporadic-m22) | 443,520 | Yes | [20 / 67](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/m22/M22.html) | 780 | 5,351 |
@@ -29,10 +29,10 @@ Here $q$ is the field size and $n$ is Lie rank for the Lie-type families; in par
 | [McL](#sporadic-mcl) | 898,128,000 | Yes | [50 / 173](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/mcl/McL.html) | 2,224 | 16,377 |
 | [HS](#sporadic-hs) | 44,352,000 | Yes | [31 / 146](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/hs/HS.html) | 1,427 | 14,776 |
 | [Suz](#sporadic-suz) | 448,345,497,600 | Yes | [212 / 963](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/suz/Suz.html) | 11,390 | 21,374 |
-| [J₂](#sporadic-j2) | 604,800 | Yes | [187 / 837](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/j2/J2.html) | 8,182 | 8,184 |
-| [Fi₂₂](#sporadic-fi22) | 64,561,751,654,400 | Yes | [37 / 124](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/fi22/Fi22.html) | 1,451 | 34,250 |
-| [Fi₂₃](#sporadic-fi23) | 4,089,470,473,293,004,800 | Yes | [37 / 124](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/fi23/Fi23.html) | 1,450 | 34,249 |
-| [Fi₂₄′](#sporadic-fi24prime) | 1,255,205,709,190,661,721,292,800 | Yes | [642 / 2532](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/fi24prime/Fi24Prime.html) | 28,367 | 33,397 |
+| [J₂](#sporadic-j2) | 604,800 | Yes | [185 / 803](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/j2/J2.html) | 8,034 | 8,184 |
+| [Fi₂₂](#sporadic-fi22) | 64,561,751,654,400 | Yes | [36 / 115](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/fi22/Fi22.html) | 1,429 | 34,250 |
+| [Fi₂₃](#sporadic-fi23) | 4,089,470,473,293,004,800 | Yes | [36 / 115](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/fi23/Fi23.html) | 1,428 | 34,249 |
+| [Fi₂₄′](#sporadic-fi24prime) | 1,255,205,709,190,661,721,292,800 | Yes | [640 / 2509](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/fi24prime/Fi24Prime.html) | 28,319 | 33,397 |
 
 **Line-count convention:** both columns combine order and simplicity, counting each required ATLAS declaration source line once. **Intrinsic lines** restrict this union to the diagram’s expanded files: collapsed groups and shared construction packages are excluded. Families exclude identifiable reused family modules; generic supporting lemmas remain included. This is a documented source-module convention, not a claim that every line is unique to one group. **Total dependency lines** include all transitive ATLAS prerequisites, including reused groups and shared constructions. Both exclude Lean/mathlib and include comments/blank lines within declaration ranges; neither counts whole files. File/theorem counts describe expanded files, whereas line counts include only required declaration ranges. Rows overlap and must not be added. The [original measurements](catalogue/proof-line-counts.csv) and [source ranges](catalogue/line-ranges.json.gz) retain the separate audit data from 17 September 2026; the mathematical sources are unchanged.
 
