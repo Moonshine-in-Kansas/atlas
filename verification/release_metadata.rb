@@ -145,7 +145,7 @@ begin
       raise "Broken local link #{p}: #{target}" unless target && File.exist?(target)
     end
   end
-  paths = (%w[.gitignore README.md formalization.yaml CATALOGUE.md THEOREM_STATEMENTS.md AUDIT.md CITATION.cff LICENSE LICENSING.md Atlas.lean lean-toolchain lakefile.toml lake-manifest.json atlas_research_note.pdf] + Dir.glob('Atlas/**/*.lean') + Dir.glob('catalogue/*') + Dir.glob('verification/**/*').select { |p| File.file?(p) && !p.start_with?('verification/results/') }).sort
+  paths = (%w[.gitignore README.md formalization.yaml CATALOGUE.md THEOREM_STATEMENTS.md AUDIT.md CITATION.cff LICENSE LICENSING.md Atlas.lean lean-toolchain lakefile.toml lake-manifest.json atlas_research_note.pdf] + Dir.glob('Atlas/**/*.lean') + Dir.glob('catalogue/*') + Dir.glob('.github/workflows/*.yml') + Dir.glob('verification/**/*').select { |p| File.file?(p) && !p.start_with?('verification/results/') }).sort
   paths.each { |p| raise "Symlink #{p}" if File.symlink?(p) }
   hashes = paths.to_h { |p| [p, sha(p)] }
   manifest = {'format'=>1, 'toolchain'=>File.read('lean-toolchain').strip, 'dependencies'=>read_json('lake-manifest.json'), 'roots'=>'verification/roots.json', 'verification'=>'verification/current.json', 'files'=>hashes}

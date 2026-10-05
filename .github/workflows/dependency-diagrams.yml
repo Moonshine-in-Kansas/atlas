@@ -1,0 +1,41 @@
+name: Publish proof dependency diagrams
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'verification/dependency-maps/**'
+      - 'catalogue/catalogue.json'
+      - '.github/workflows/dependency-diagrams.yml'
+permissions:
+  contents: read
+  pages: read
+concurrency:
+  group: atlas-diagram-pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check release evidence and metadata
+        run: ruby verification/release_metadata.rb check
+      - uses: actions/configure-pages@v5
+      - name: Validate and stage the existing public diagrams
+        run: ruby verification/dependency-maps/build_site.rb "$RUNNER_TEMP/atlas-diagram-site"
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ runner.temp }}/atlas-diagram-site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy rendered diagrams
+        id: deployment
+        uses: actions/deploy-pages@v4
