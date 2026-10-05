@@ -9,9 +9,9 @@ module AtlasDependencyLinks
     header=lines.index{|l|l.start_with?('| Group or family |')}
     raise 'Missing release summary table' unless header
     old=lines[header].split('|').map(&:strip)[1...-1]
-    old_index=old.index('Proof dependencies')
-    wanted=old.reject{|v|v=='Proof dependencies'}; insert=wanted.index('Order lines') or raise 'Missing line-count column'
-    wanted.insert(insert,'Proof dependencies')
+    old_index=old.index('Proof dependencies')||old.index('Lean files / theorems')
+    wanted=old.reject{|v|['Proof dependencies','Lean files / theorems'].include?(v)}; insert=wanted.index('Order lines') or raise 'Missing line-count column'
+    wanted.insert(insert,'Lean files / theorems')
     lines[header]='| '+wanted.join(' | ')+" |\n"
     separators=lines[header+1].split('|').map(&:strip)[1...-1]
     separators.delete_at(old_index) if old_index
@@ -27,7 +27,12 @@ module AtlasDependencyLinks
         raise 'Wrong order root' unless diagram.dig('roots','order')==entry.dig('roles','order','declaration')
         raise 'Wrong simplicity root' unless diagram.dig('roots','simplicity')==entry.dig('roles','simple','declaration')
         diagram.fetch('source_hashes').each{|p,h|raise "Stale diagram source #{p}" unless Digest::SHA256.file(p).hexdigest==h}
-        link="[Graph / tree](#{path})"
+        files=diagram.fetch('nodes').select{|n|n['kind']=='file'}
+        count=files.sum{|n|n.fetch('source_theorems')}
+        site=data['proof_dependencies_site']
+        raise 'Unexpected diagram website' if site && site!='https://moonshine-in-kansas.github.io/atlas/'
+        url=site ? site+path : path
+        link="[#{files.size} / #{count}](#{url})"
       end
       cells=lines[idx].split('|').map(&:strip)[1...-1];cells.delete_at(old_index) if old_index;cells.insert(insert,link)
       lines[idx]='| '+cells.join(' | ')+" |\n"

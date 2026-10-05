@@ -88,7 +88,7 @@ of these safeguards, without launching Lean or accessing the network.
 ## Proof dependency diagrams
 
 Catalogue entries optionally carry a `proof_dependencies` HTML path.
-The metadata gate generates/checks the single Proof dependencies column and
+The metadata gate generates/checks the single Lean files / theorems column and
 checks each diagram’s theorem roots and source hashes. Regenerate the five
 Mathieu pages with `ruby verification/dependency-maps/mathieu/generate.rb`
 after changes to the diagram generator or template, then run the usual metadata
