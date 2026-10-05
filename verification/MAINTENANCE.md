@@ -96,4 +96,9 @@ refresh/check. Changed mathematical sources require new verification evidence;
 the generator accepts only the recorded release licence-header substitution
 against the historical dependency graph. The private release-preparation script
 copies the maintained viewer tools and regenerates against release sources.
-GitHub displays HTML source: download a diagram and open it locally to interact.
+GitHub Pages was enabled with owner authorization on 5 October 2026.
+The catalogue’s `proof_dependencies_site` selects the rendered website URL.
+The Pages workflow checks metadata and source bindings, then publishes only the
+linked diagrams and an index. Repository source/audit links stay on github.com.
+Changes to diagrams, catalogue data or the workflow redeploy automatically.
+Local release preparation never enables Pages or pushes without authorization.

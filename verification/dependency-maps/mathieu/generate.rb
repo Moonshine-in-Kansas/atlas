@@ -177,7 +177,7 @@ Arrows point from a dependent file to a prerequisite. Cross-group nodes list the
 
 The data comes from the actual compiled type/value dependency graph in [the passed #{audit_date} audit](../../#{audit_link}), not imports. Every ATLAS source file in each complete closure is checked against the current evidence hashes. #{PUBLIC ? 'The historical dependency extraction predates the release licence-header update: exact comparison after that one header substitution verifies the correspondence; mathematical source is unchanged.' : 'Current hashes also match the dependency-audit snapshot exactly.'} Generation is a report, **not a new Lean proof recheck**. Lean/mathlib dependencies are omitted.
 
-GitHub displays HTML source rather than running it. Download a linked HTML file and open it in a browser to use the interactive diagram. GitHub Pages is not required.
+The public catalogue links open rendered diagrams on GitHub Pages. The HTML files can also be downloaded and opened locally; GitHub’s repository file viewer itself displays their source.
 
 Named source theorem counts cover all named `theorem`/`lemma` commands in the file, including private ones, after removing comments and strings. “Used compiled” counts include generated proof helpers; definitions and instances are traversed but not counted as theorems. Whole-file totals may include unused or other-group statements in mixed files. Counts overlap between groups and are not additive. Boundary files/theorems are excluded from local totals; exact consumed declarations remain visible in the inspector.
 
