@@ -8,33 +8,33 @@ Full machine-readable interfaces, auxiliary groups and comparison maps: [catalog
 
 Here $q$ is the field size and $n$ is Lie rank for the Lie-type families; in particular, $A_n(q)=\mathrm{PSL}_{n+1}(q)$. All listed orders are proved. Simplicity is nonabelian except where indicated.
 
-| Group or family | Order | Proven simplicity | Lean files / theorems | Order lines | Simplicity lines | Combined lines |
-|---|---|---|---|---:|---:|---:|
-| [Cₚ](#family-cyclic) | $p$ | Yes, $p$ prime (abelian) | — | 5 | 12 | 12 |
-| [Aₙ](#family-alternating) | $n!/2$ | Yes, $n\ge5$; also cyclic simple at $n=3$ | — | 4 | 4 | 7 |
-| [Aₙ(q)](#family-psl) | $\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-1)}{\gcd(n+1,q-1)}$ | Yes, $n\ge1$, except $(n,q)=(1,2),(1,3)$ | — | 168 | 322 | 379 |
-| [Bₙ(q)](#family-b) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | — | 4,121 | 7,898 | 8,009 |
-| [Cₙ(q)](#family-c) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | — | 708 | 2,203 | 2,203 |
-| [Dₙ(q)](#family-d) | $\displaystyle \frac{q^{n(n-1)}(q^n-1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n-1)}$ | Yes, $n\ge4$ (split form) | — | 4,290 | 2,466 | 5,408 |
-| [G₂(q)](#family-g2) | $q^6(q^6-1)(q^2-1)$ | Yes, $q>2$ | — | 1,237 | 3,287 | 3,568 |
-| [²G₂(q)](#family-reeg2) | $q^3(q^3+1)(q-1)$ | Yes, $q=3^{2m+1}$, $m\ge1$ | — | 1,570 | 2,225 | 2,250 |
-| [M₁₁](#sporadic-m11) | 7,920 | Yes | [5 / 40](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/m11/M11.html) | 5,479 | 5,866 | 5,868 |
-| [M₁₂](#sporadic-m12) | 95,040 | Yes | [18 / 89](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/m12/M12.html) | 4,924 | 5,959 | 5,961 |
-| [M₂₂](#sporadic-m22) | 443,520 | Yes | [20 / 67](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/m22/M22.html) | 4,183 | 5,348 | 5,351 |
-| [M₂₃](#sporadic-m23) | 10,200,960 | Yes | [5 / 34](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/m23/M23.html) | 4,119 | 4,492 | 4,495 |
-| [M₂₄](#sporadic-m24) | 244,823,040 | Yes | [77 / 581](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/m24/M24.html) | 3,477 | 4,582 | 4,585 |
-| [Co₁](#sporadic-co1) | 4,157,776,806,543,360,000 | Yes | [148 / 766](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/co1/Co1.html) | 10,826 | 12,334 | 12,346 |
-| [Co₂](#sporadic-co2) | 42,305,421,312,000 | Yes | [40 / 167](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/co2/Co2.html) | 10,825 | 14,070 | 14,072 |
-| [Co₃](#sporadic-co3) | 495,766,656,000 | Yes | [85 / 341](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/co3/Co3.html) | 12,137 | 16,423 | 16,423 |
-| [McL](#sporadic-mcl) | 898,128,000 | Yes | [50 / 173](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/mcl/McL.html) | 13,704 | 16,375 | 16,377 |
-| [HS](#sporadic-hs) | 44,352,000 | Yes | [31 / 146](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/hs/HS.html) | 13,447 | 14,771 | 14,776 |
-| [Suz](#sporadic-suz) | 448,345,497,600 | Yes | [212 / 963](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/suz/Suz.html) | 19,727 | 21,320 | 21,374 |
-| [J₂](#sporadic-j2) | 604,800 | Yes | [187 / 837](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/j2/J2.html) | 6,989 | 7,954 | 8,184 |
-| [Fi₂₂](#sporadic-fi22) | 64,561,751,654,400 | Yes | [37 / 124](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/fi22/Fi22.html) | 31,955 | 34,248 | 34,250 |
-| [Fi₂₃](#sporadic-fi23) | 4,089,470,473,293,004,800 | Yes | [37 / 124](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/fi23/Fi23.html) | 31,950 | 34,247 | 34,249 |
-| [Fi₂₄′](#sporadic-fi24prime) | 1,255,205,709,190,661,721,292,800 | Yes | [642 / 2532](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/fi24prime/Fi24Prime.html) | 31,813 | 33,396 | 33,397 |
+| Group or family | Order | Proven simplicity | Lean files / theorems | Intrinsic lines | Total dependency lines |
+|---|---|---|---|---:|---:|
+| [Cₚ](#family-cyclic) | $p$ | Yes, $p$ prime (abelian) | — | 12 | 12 |
+| [Aₙ](#family-alternating) | $n!/2$ | Yes, $n\ge5$; also cyclic simple at $n=3$ | — | 7 | 7 |
+| [Aₙ(q)](#family-psl) | $\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-1)}{\gcd(n+1,q-1)}$ | Yes, $n\ge1$, except $(n,q)=(1,2),(1,3)$ | — | 379 | 379 |
+| [Bₙ(q)](#family-b) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | — | 5,962 | 8,009 |
+| [Cₙ(q)](#family-c) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | — | 2,004 | 2,203 |
+| [Dₙ(q)](#family-d) | $\displaystyle \frac{q^{n(n-1)}(q^n-1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n-1)}$ | Yes, $n\ge4$ (split form) | — | 5,408 | 5,408 |
+| [G₂(q)](#family-g2) | $q^6(q^6-1)(q^2-1)$ | Yes, $q>2$ | — | 3,440 | 3,568 |
+| [²G₂(q)](#family-reeg2) | $q^3(q^3+1)(q-1)$ | Yes, $q=3^{2m+1}$, $m\ge1$ | — | 2,239 | 2,250 |
+| [M₁₁](#sporadic-m11) | 7,920 | Yes | [5 / 40](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/m11/M11.html) | 393 | 5,868 |
+| [M₁₂](#sporadic-m12) | 95,040 | Yes | [18 / 89](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/m12/M12.html) | 866 | 5,961 |
+| [M₂₂](#sporadic-m22) | 443,520 | Yes | [20 / 67](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/m22/M22.html) | 780 | 5,351 |
+| [M₂₃](#sporadic-m23) | 10,200,960 | Yes | [5 / 34](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/m23/M23.html) | 397 | 4,495 |
+| [M₂₄](#sporadic-m24) | 244,823,040 | Yes | [77 / 581](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/m24/M24.html) | 4,194 | 4,585 |
+| [Co₁](#sporadic-co1) | 4,157,776,806,543,360,000 | Yes | [148 / 766](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/co1/Co1.html) | 7,532 | 12,346 |
+| [Co₂](#sporadic-co2) | 42,305,421,312,000 | Yes | [40 / 167](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/co2/Co2.html) | 1,953 | 14,072 |
+| [Co₃](#sporadic-co3) | 495,766,656,000 | Yes | [85 / 341](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/co3/Co3.html) | 3,958 | 16,423 |
+| [McL](#sporadic-mcl) | 898,128,000 | Yes | [50 / 173](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/mcl/McL.html) | 2,224 | 16,377 |
+| [HS](#sporadic-hs) | 44,352,000 | Yes | [31 / 146](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/hs/HS.html) | 1,427 | 14,776 |
+| [Suz](#sporadic-suz) | 448,345,497,600 | Yes | [212 / 963](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/suz/Suz.html) | 11,390 | 21,374 |
+| [J₂](#sporadic-j2) | 604,800 | Yes | [187 / 837](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/j2/J2.html) | 8,182 | 8,184 |
+| [Fi₂₂](#sporadic-fi22) | 64,561,751,654,400 | Yes | [37 / 124](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/fi22/Fi22.html) | 1,451 | 34,250 |
+| [Fi₂₃](#sporadic-fi23) | 4,089,470,473,293,004,800 | Yes | [37 / 124](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/fi23/Fi23.html) | 1,450 | 34,249 |
+| [Fi₂₄′](#sporadic-fi24prime) | 1,255,205,709,190,661,721,292,800 | Yes | [642 / 2532](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/fi24prime/Fi24Prime.html) | 28,367 | 33,397 |
 
-**Line-count convention (17 September 2026 source measurement):** distinct ATLAS source lines reached through the compiled order/simplicity declarations and their transitive dependencies, including definitions, shared prerequisites, comments and blank lines inside declaration ranges. These are not proof-body-only counts or entire-file sizes. Mathlib/Lean library lines are excluded. Combined counts deduplicate order/simplicity overlap; rows share prerequisites and must not be added. The deduplicated union across all rows is **88,856 ATLAS lines**. Small cyclic/alternating counts reflect reuse of mathlib proofs. Exact measured roots and counts are in [proof-line-counts.csv](catalogue/proof-line-counts.csv); these measurements apply to the unchanged release mathematical sources.
+**Line-count convention:** both columns combine order and simplicity, counting each required ATLAS declaration source line once. **Intrinsic lines** restrict this union to the diagram’s expanded files: collapsed groups and shared construction packages are excluded. Families exclude identifiable reused family modules; generic supporting lemmas remain included. This is a documented source-module convention, not a claim that every line is unique to one group. **Total dependency lines** include all transitive ATLAS prerequisites, including reused groups and shared constructions. Both exclude Lean/mathlib and include comments/blank lines within declaration ranges; neither counts whole files. File/theorem counts describe expanded files, whereas line counts include only required declaration ranges. Rows overlap and must not be added. The [original measurements](catalogue/proof-line-counts.csv) and [source ranges](catalogue/line-ranges.json.gz) retain the separate audit data from 17 September 2026; the mathematical sources are unchanged.
 
 <a id="family-cyclic"></a>
 

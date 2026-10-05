@@ -63,8 +63,8 @@ begin
     anchor = e.fetch('id').downcase.tr('.', '-')
     line = File.readlines('CATALOGUE.md').find { |l| l.start_with?('| [') && l.include?("](##{anchor})") }
     raise "Missing catalogue summary row: #{e['id']}" unless line
-    displayed = line.strip.split('|').last(3).map { |v| v.delete(',').strip }
-    expected = %w[atlas_order_lines atlas_simplicity_lines atlas_union_lines].map { |k| row.fetch(k) }
+    displayed = line.strip.split('|').last(1).map { |v| v.delete(',').strip }
+    expected = %w[atlas_union_lines].map { |k| row.fetch(k) }
     require_equal(displayed, expected, "Stale summary counts: #{e['id']}")
   end
   raise 'Missing PDF' unless File.binread('atlas_research_note.pdf', 5) == '%PDF-'
