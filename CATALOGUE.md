@@ -23,16 +23,16 @@ Here $q$ is the field size and $n$ is Lie rank for the Lie-type families; in par
 | [M₂₂](#sporadic-m22) | 443,520 | Yes | [20 / 67](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/m22/M22.html) | 4,183 | 5,348 | 5,351 |
 | [M₂₃](#sporadic-m23) | 10,200,960 | Yes | [5 / 34](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/m23/M23.html) | 4,119 | 4,492 | 4,495 |
 | [M₂₄](#sporadic-m24) | 244,823,040 | Yes | [77 / 581](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/m24/M24.html) | 3,477 | 4,582 | 4,585 |
-| [Co₁](#sporadic-co1) | 4,157,776,806,543,360,000 | Yes | — | 10,826 | 12,334 | 12,346 |
-| [Co₂](#sporadic-co2) | 42,305,421,312,000 | Yes | — | 10,825 | 14,070 | 14,072 |
-| [Co₃](#sporadic-co3) | 495,766,656,000 | Yes | — | 12,137 | 16,423 | 16,423 |
-| [McL](#sporadic-mcl) | 898,128,000 | Yes | — | 13,704 | 16,375 | 16,377 |
-| [HS](#sporadic-hs) | 44,352,000 | Yes | — | 13,447 | 14,771 | 14,776 |
-| [Suz](#sporadic-suz) | 448,345,497,600 | Yes | — | 19,727 | 21,320 | 21,374 |
-| [J₂](#sporadic-j2) | 604,800 | Yes | — | 6,989 | 7,954 | 8,184 |
-| [Fi₂₂](#sporadic-fi22) | 64,561,751,654,400 | Yes | — | 31,955 | 34,248 | 34,250 |
-| [Fi₂₃](#sporadic-fi23) | 4,089,470,473,293,004,800 | Yes | — | 31,950 | 34,247 | 34,249 |
-| [Fi₂₄′](#sporadic-fi24prime) | 1,255,205,709,190,661,721,292,800 | Yes | — | 31,813 | 33,396 | 33,397 |
+| [Co₁](#sporadic-co1) | 4,157,776,806,543,360,000 | Yes | [148 / 766](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/co1/Co1.html) | 10,826 | 12,334 | 12,346 |
+| [Co₂](#sporadic-co2) | 42,305,421,312,000 | Yes | [40 / 167](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/co2/Co2.html) | 10,825 | 14,070 | 14,072 |
+| [Co₃](#sporadic-co3) | 495,766,656,000 | Yes | [85 / 341](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/co3/Co3.html) | 12,137 | 16,423 | 16,423 |
+| [McL](#sporadic-mcl) | 898,128,000 | Yes | [50 / 173](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/mcl/McL.html) | 13,704 | 16,375 | 16,377 |
+| [HS](#sporadic-hs) | 44,352,000 | Yes | [31 / 146](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/hs/HS.html) | 13,447 | 14,771 | 14,776 |
+| [Suz](#sporadic-suz) | 448,345,497,600 | Yes | [212 / 963](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/suz/Suz.html) | 19,727 | 21,320 | 21,374 |
+| [J₂](#sporadic-j2) | 604,800 | Yes | [187 / 837](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/j2/J2.html) | 6,989 | 7,954 | 8,184 |
+| [Fi₂₂](#sporadic-fi22) | 64,561,751,654,400 | Yes | [37 / 124](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/fi22/Fi22.html) | 31,955 | 34,248 | 34,250 |
+| [Fi₂₃](#sporadic-fi23) | 4,089,470,473,293,004,800 | Yes | [37 / 124](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/fi23/Fi23.html) | 31,950 | 34,247 | 34,249 |
+| [Fi₂₄′](#sporadic-fi24prime) | 1,255,205,709,190,661,721,292,800 | Yes | [642 / 2532](https://moonshine-in-kansas.github.io/atlas/verification/dependency-maps/fi24prime/Fi24Prime.html) | 31,813 | 33,396 | 33,397 |
 
 **Line-count convention (17 September 2026 source measurement):** distinct ATLAS source lines reached through the compiled order/simplicity declarations and their transitive dependencies, including definitions, shared prerequisites, comments and blank lines inside declaration ranges. These are not proof-body-only counts or entire-file sizes. Mathlib/Lean library lines are excluded. Combined counts deduplicate order/simplicity overlap; rows share prerequisites and must not be added. The deduplicated union across all rows is **88,856 ATLAS lines**. Small cyclic/alternating counts reflect reuse of mathlib proofs. Exact measured roots and counts are in [proof-line-counts.csv](catalogue/proof-line-counts.csv); these measurements apply to the unchanged release mathematical sources.
 

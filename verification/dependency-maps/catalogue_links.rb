@@ -21,7 +21,7 @@ module AtlasDependencyLinks
       idx=lines.index{|l|l.start_with?('| [')&&l.include?("](##{anchor})")};raise "Missing #{anchor}" unless idx
       path=entry['proof_dependencies'];link='—'
       if path
-        raise 'Unsafe diagram path' unless path.match?(%r{\Averification/dependency-maps/m\d+/M\d+\.html\z})
+        raise 'Unsafe diagram path' unless path.match?(%r{\Averification/dependency-maps/[a-z][a-z0-9]*/[A-Z][A-Za-z0-9]*\.html\z})
         html=File.read(path);payload=html[/<script id="data" type="application\/json">(.*?)<\/script>/m,1] or raise "Missing data: #{path}"
         diagram=JSON.parse(payload)
         raise 'Wrong order root' unless diagram.dig('roots','order')==entry.dig('roles','order','declaration')

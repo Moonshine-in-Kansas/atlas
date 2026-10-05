@@ -11,7 +11,10 @@ ROOT=File.expand_path('../../..',__dir__)
 Dir.chdir(ROOT)
 PUBLIC=File.file?('catalogue/catalogue.json')
 AUDIT=PUBLIC ? 'verification/release' : 'verification/runs/principal-constructions/20260928T100308-655895'
-GROUPS=[24,23,22,12,11]
+CATALOGUE=JSON.parse(File.read(PUBLIC ? 'catalogue/catalogue.json' : 'release/catalogue/catalogue.json'))
+ENTRIES=CATALOGUE.fetch('entries').select{|e|e['kind']=='sporadic'}.to_h{|e|[e.fetch('id').delete_prefix('sporadic.'),e]}
+GROUPS=%w[M24 M23 M22 M12 M11]+(ENTRIES.keys-%w[M24 M23 M22 M12 M11])
+LABELS=ENTRIES.transform_values{|e|e.dig('presentation','label')||e.fetch('label')}
 nodes={}
 reader=File.file?(AUDIT+'/dependencies.jsonl') ? File.open(AUDIT+'/dependencies.jsonl') : Zlib::GzipReader.open(AUDIT+'/dependencies.jsonl.gz')
 reader.each_line do |line|
@@ -25,7 +28,7 @@ audit_date=JSON.parse(File.read(AUDIT+'/RESULT.json')).fetch(PUBLIC ? 'started_u
 current_hashes=PUBLIC ? JSON.parse(File.read(JSON.parse(File.read('verification/current.json')).fetch('snapshot')+'/SOURCE_HASHES.json')) : snapshot['source_hashes']
 raise 'Audit is not a pass' unless JSON.parse(File.read(AUDIT+'/RESULT.json'))['status']=='passed'
 source=->(n){(nodes.fetch(n)['source_module']||nodes[n]['module']).tr('.','/')+'.lean'}
-roots=GROUPS.to_h{|g|[g,{'order'=>"Atlas.Sporadic.Mathieu#{g}.card",'simplicity'=>"Atlas.Sporadic.Mathieu#{g}.isSimpleGroup"}]}
+roots=GROUPS.to_h{|g|[g,{'order'=>ENTRIES[g].dig('roles','order','declaration'),'simplicity'=>ENTRIES[g].dig('roles','simple','declaration')}]}
 full={}
 GROUPS.each do |g|
  full[g]=roots[g].transform_values do |root|
@@ -40,13 +43,43 @@ GROUPS.each do |g|
 end
 # Explicit presentation boundaries: no claim that a whole other group package is needed.
 # Its exact reached declarations are recorded below; traversal stops at each boundary.
-m24base=full[24].values.reduce(:|).map{|n|source.call(n)}.to_set
+m24base=full['M24'].values.reduce(:|).map{|n|source.call(n)}.to_set
+co1base=full['Co1'].values.reduce(:|).map{|n|source.call(n)}.to_set
+fischerbase=full['Fi24Prime'].values.reduce(:|).map{|n|source.call(n)}.to_set
+public_names={'Mathieu11'=>'M11','Mathieu12'=>'M12','Mathieu22'=>'M22','Mathieu23'=>'M23','Mathieu24'=>'M24',
+ 'Conway1'=>'Co1','Conway2'=>'Co2','Conway3'=>'Co3','McLaughlin'=>'McL','HigmanSims'=>'HS',
+ 'Suzuki'=>'Suz','Janko2'=>'J2','Fischer22'=>'Fi22','Fischer23'=>'Fi23','Fischer24Prime'=>'Fi24Prime'}
 owner=->(n) do
- p=source.call(n)
- if p.match(%r{/(?:Mathieu|TernaryMathieu)(11|12|22|23|24)[^/]*\.lean$})
+ p=source.call(n);base=File.basename(p,'.lean')
+ public_name=public_names.keys.find{|prefix|base.start_with?(prefix)} if p.start_with?('Atlas/Sporadic/')
+ if public_name
+  public_names[public_name]
+ elsif p.match(%r{/(?:Mathieu|TernaryMathieu)(11|12|22|23|24)[^/]*\.lean$})
   "M#{$1}"
- elsif p.match(%r{/(?:Dodecad)[^/]*\.lean$})
+ elsif base.start_with?('Dodecad')
   'M12'
+ elsif base.start_with?('Co2')
+  'Co2'
+ elsif base.start_with?('Co3','NormSix')
+  'Co3'
+ elsif base.start_with?('McL')
+  'McL'
+ elsif base.start_with?('HS')
+  'HS'
+ elsif base.start_with?('Eisenstein')
+  'Suz'
+ elsif base.start_with?('Icosian')
+  'J2'
+ elsif p.start_with?('Atlas/Conway/') && (base.start_with?('Quotient','DerivedCross','LeechCentralQuotient','LeechQuotient','LeechCrossKernel','MonomialCentralQuotient')||base=='ConwaySimplicity')
+  'Co1'
+ elsif p.start_with?('Atlas/Conway/') && (base.start_with?('OrthogonalLine','OrthogonalMinimumLines','Antipodal','ShortenedGolay','Co2')||base=='MinimumVectorStabilizer'||base=='GolayPairSetSemidirect')
+  'Co2'
+ elsif p.start_with?('Atlas/Fischer/') && fischerbase.include?(p)
+  'Shared Fischer tensor / ray construction'
+ elsif p.start_with?('Atlas/Lattices/Leech')
+  'Shared Leech lattice'
+ elsif p.start_with?('Atlas/Conway/') && co1base.include?(p)
+  'Co0 / Leech isometries'
  elsif p.start_with?('Atlas/Codes/')
   'Shared Golay / hexacode'
  elsif m24base.include?(p)&&!p.start_with?('Atlas/GroupTheory/')&&!p.start_with?('Atlas/Families/')
@@ -93,7 +126,10 @@ GROUPS.each do |g|
  boundary=->(n) do
   own=owner.call(n)
   # M24 expands the original construction; descendants reuse it as a boundary.
-  own && own!="M#{g}" && !(g==24&&own.start_with?('Shared')) ? own : nil
+  expanded=(g=='M24'&&own&.start_with?('Shared')) ||
+   (g=='Co1'&&['Shared Leech lattice','Co0 / Leech isometries'].include?(own)) ||
+   (g=='Fi24Prime'&&own=='Shared Fischer tensor / ray construction')
+  own && own!=g && !expanded ? own : nil
  end
  local={}; external={}
  roots[g].each do |role,root|
@@ -117,10 +153,11 @@ GROUPS.each do |g|
  end
  ends.group_by{|n|boundary.call(n)}.sort.each do |b,ns|
   vertices<<{'id'=>'boundary:'+b,'kind'=>'boundary','label'=>b,'folder'=>'Reused prerequisites · proofs not expanded',
+   'explore_group'=>(GROUPS.include?(b) ? b : {'Co0 / Leech isometries'=>'Co1','Shared Leech lattice'=>'Co1','Shared Fischer tensor / ray construction'=>'Fi24Prime'}[b]),
    'order'=>ns.any?{|n|external['order'].include?(n)},'simplicity'=>ns.any?{|n|external['simplicity'].include?(n)},
    'declarations'=>ns.sort.map{|n|{'name'=>n,'kind'=>nodes[n]['kind'],'file'=>source.call(n),'order'=>external['order'].include?(n),'simplicity'=>external['simplicity'].include?(n)}}}
  end
- roots[g].each{|role,n|vertices<<{'id'=>'root:'+role,'kind'=>'root','label'=>role=='order' ? "M#{g} — exact order" : "M#{g} — simplicity",'folder'=>n,'order'=>role=='order','simplicity'=>role=='simplicity','declarations'=>[{'name'=>n,'file'=>source.call(n),'kind'=>'theorem','order'=>role=='order','simplicity'=>role=='simplicity'}]}}
+ roots[g].each{|role,n|vertices<<{'id'=>'root:'+role,'kind'=>'root','label'=>role=='order' ? "#{LABELS[g]} — exact order" : "#{LABELS[g]} — simplicity",'folder'=>n,'order'=>role=='order','simplicity'=>role=='simplicity','declarations'=>[{'name'=>n,'file'=>source.call(n),'kind'=>'theorem','order'=>role=='order','simplicity'=>role=='simplicity'}]}}
  edge_roles=Hash.new{|h,k|h[k]=Set.new}
  roots[g].each{|role,n|edge_roles[['root:'+role,source.call(n)]].add(role)}
  local.each do |role,ns|
@@ -147,21 +184,21 @@ GROUPS.each do |g|
   index.each_key{|n|raise 'Reduction changed reachability' unless red.call(n)==reach[n]}
   keep.each{|e|e['reduced_'+role]=true}
  end
- data={'group'=>"M#{g}",'date'=>Time.now.utc.strftime('%Y-%m-%d'),'commit'=>commit,'audit'=>AUDIT,'audit_link'=>audit_link,'audit_date'=>audit_date,'release_header_binding'=>PUBLIC,'audited_commit'=>snapshot['commit'],
+ data={'group'=>g,'display_label'=>LABELS[g],'groups'=>GROUPS.map{|key|{'key'=>key,'label'=>LABELS[key]}},'date'=>Time.now.utc.strftime('%Y-%m-%d'),'commit'=>commit,'audit'=>AUDIT,'audit_link'=>audit_link,'audit_date'=>audit_date,'release_header_binding'=>PUBLIC,'audited_commit'=>snapshot['commit'],
   'source_hashes_match'=>true,'full_closure_files'=>full[g].values.reduce(:|).map{|n|source.call(n)}.uniq.size,
   'nodes'=>vertices,'edges'=>edges,'roots'=>roots[g],
   'source_hashes'=>full[g].values.reduce(:|).map{|n|source.call(n)}.uniq.sort.to_h{|p|[p,cache[p]['sha256']]}}
  payload=JSON.generate(data).gsub('<','\\u003c')
  html=ERB.new(File.read(File.join(__dir__,'viewer.html.erb'))).result(binding)
- dest="verification/dependency-maps/m#{g}";FileUtils.mkdir_p(dest);File.write(dest+"/M#{g}.html",html)
+ dest="verification/dependency-maps/#{g.downcase}";FileUtils.mkdir_p(dest);File.write(dest+"/#{g}.html",html)
  # Round-trip verifies self-contained data encoding.
  recovered=JSON.parse(html[/<script id="data" type="application\/json">(.*?)<\/script>/m,1])
  raise 'Embedded data mismatch' unless recovered==data
- summary={'group'=>"M#{g}",'files'=>fs.size,'source_theorems'=>vertices.select{|v|v['kind']=='file'}.sum{|v|v['source_theorems']},'boundaries'=>ends.group_by{|n|boundary.call(n)}.keys.sort,'edges'=>edges.size}
+ summary={'group'=>g,'files'=>fs.size,'source_theorems'=>vertices.select{|v|v['kind']=='file'}.sum{|v|v['source_theorems']},'boundaries'=>ends.group_by{|n|boundary.call(n)}.keys.sort,'edges'=>edges.size}
  summaries<<summary;puts summary.to_json
 end
 readme=<<~MD
-# Mathieu proof dependency diagrams
+# Sporadic proof dependency diagrams
 
 Each self-contained HTML file offers **Graph**, **Tree**, and **Files** views, with order/simplicity filters, a declaration inspector, theorem counts, search, and embedded downloadable data. No network or companion HTML files are needed to display it. Repository source and cross-group links require the adjacent checkout/pages.
 
@@ -181,7 +218,7 @@ The public catalogue links open rendered diagrams on GitHub Pages. The HTML file
 
 Named source theorem counts cover all named `theorem`/`lemma` commands in the file, including private ones, after removing comments and strings. “Used compiled” counts include generated proof helpers; definitions and instances are traversed but not counted as theorems. Whole-file totals may include unused or other-group statements in mixed files. Counts overlap between groups and are not additive. Boundary files/theorems are excluded from local totals; exact consumed declarations remain visible in the inspector.
 
-Presentation boundaries are explicit: named Mathieu11/12/22/23/24 modules belong to that group; Dodecad modules belong to M12. Codes modules are shared Golay/hexacode foundations; other construction geometry reused from M24's closure is shared Golay/M24 geometry. M24 expands its shared construction; descendants collapse it. Generic group-theory lemmas and target-specific supporting files stay expanded. These are diagram organization rules, not new mathematical assumptions. M21 auxiliary lemmas within the M22 argument stay expanded.
+Presentation boundaries are explicit in the generator. Named public sporadic modules, Mathieu/Co2/Co3/McL/HS modules, norm-six geometry, and Eisenstein/icosian models identify their respective constructions. Dodecad modules belong to M12. M24 expands its Golay/hexacode foundation; Co1 expands the Leech lattice and Co0 isometries; Fi24Prime expands the shared Fischer tensor/ray construction. Other pages collapse these packages and show their exact consumed declarations. Co0 is kept distinct from its simple quotient Co1; shared Fischer construction is not labeled as Fi24Prime simplicity. Fi22/Fi23 keep their common parameterized residue proofs visible. Generic lemmas and target-specific support stay expanded. These are presentation boundaries, not mathematical assumptions or a claim that every statement in a mixed source file concerns just one group.
 
 The default graph removes transitive shortcut arrows while preserving reachability (checked separately for order, simplicity, and both). “All arrows” restores every recorded file edge. Shared tree branches link to their existing node.
 
@@ -190,9 +227,9 @@ The default graph removes transitive shortcut arrows while preserving reachabili
 From the repository root:
 
 ```sh
-ruby verification/dependency-maps/mathieu/generate.rb
+ruby verification/dependency-maps/sporadic/generate.rb
 ```
 
-The maintained inputs are `mathieu/generate.rb`, `mathieu/viewer.html.erb`, the repository sources, and the existing immutable audit. The five HTML pages and this README are generated outputs. Redundant former standalone tree/graph files, intermediate JSON/CSV/DOT/Mermaid exports, and superseded M24-only generators have been removed. CSV/JSON can instead be downloaded from each page.
+The maintained inputs are `sporadic/generate.rb`, `sporadic/viewer.html.erb`, the repository sources, and the existing immutable audit. The fifteen HTML pages and this README are generated outputs. Redundant former standalone tree/graph files, intermediate JSON/CSV/DOT/Mermaid exports, and superseded M24-only generators have been removed. CSV/JSON can instead be downloaded from each page.
 MD
 File.write('verification/dependency-maps/README.md',readme)

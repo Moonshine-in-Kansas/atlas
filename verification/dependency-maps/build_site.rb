@@ -13,7 +13,7 @@ abort 'No diagrams in catalogue' if entries.empty?
 links=[]
 entries.each do |entry|
  path=entry.fetch('proof_dependencies')
- raise 'Unsafe path' unless path.match?(%r{\Averification/dependency-maps/m\d+/M\d+\.html\z})
+ raise 'Unsafe path' unless path.match?(%r{\Averification/dependency-maps/[a-z][a-z0-9]*/[A-Z][A-Za-z0-9]*\.html\z})
  text=File.read(path)
  data=JSON.parse(text[/<script id="data" type="application\/json">(.*?)<\/script>/m,1])
  raise 'Wrong order root' unless data.dig('roots','order')==entry.dig('roles','order','declaration')
