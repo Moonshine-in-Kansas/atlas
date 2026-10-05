@@ -8,31 +8,31 @@ Full machine-readable interfaces, auxiliary groups and comparison maps: [catalog
 
 Here $q$ is the field size and $n$ is Lie rank for the Lie-type families; in particular, $A_n(q)=\mathrm{PSL}_{n+1}(q)$. All listed orders are proved. Simplicity is nonabelian except where indicated.
 
-| Group or family | Order | Proven simplicity | Order lines | Simplicity lines | Combined lines |
-|---|---|---|---:|---:|---:|
-| [Cₚ](#family-cyclic) | $p$ | Yes, $p$ prime (abelian) | 5 | 12 | 12 |
-| [Aₙ](#family-alternating) | $n!/2$ | Yes, $n\ge5$; also cyclic simple at $n=3$ | 4 | 4 | 7 |
-| [Aₙ(q)](#family-psl) | $\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-1)}{\gcd(n+1,q-1)}$ | Yes, $n\ge1$, except $(n,q)=(1,2),(1,3)$ | 168 | 322 | 379 |
-| [Bₙ(q)](#family-b) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | 4,121 | 7,898 | 8,009 |
-| [Cₙ(q)](#family-c) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | 708 | 2,203 | 2,203 |
-| [Dₙ(q)](#family-d) | $\displaystyle \frac{q^{n(n-1)}(q^n-1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n-1)}$ | Yes, $n\ge4$ (split form) | 4,290 | 2,466 | 5,408 |
-| [G₂(q)](#family-g2) | $q^6(q^6-1)(q^2-1)$ | Yes, $q>2$ | 1,237 | 3,287 | 3,568 |
-| [²G₂(q)](#family-reeg2) | $q^3(q^3+1)(q-1)$ | Yes, $q=3^{2m+1}$, $m\ge1$ | 1,570 | 2,225 | 2,250 |
-| [M₁₁](#sporadic-m11) | 7,920 | Yes | 5,479 | 5,866 | 5,868 |
-| [M₁₂](#sporadic-m12) | 95,040 | Yes | 4,924 | 5,959 | 5,961 |
-| [M₂₂](#sporadic-m22) | 443,520 | Yes | 4,183 | 5,348 | 5,351 |
-| [M₂₃](#sporadic-m23) | 10,200,960 | Yes | 4,119 | 4,492 | 4,495 |
-| [M₂₄](#sporadic-m24) | 244,823,040 | Yes | 3,477 | 4,582 | 4,585 |
-| [Co₁](#sporadic-co1) | 4,157,776,806,543,360,000 | Yes | 10,826 | 12,334 | 12,346 |
-| [Co₂](#sporadic-co2) | 42,305,421,312,000 | Yes | 10,825 | 14,070 | 14,072 |
-| [Co₃](#sporadic-co3) | 495,766,656,000 | Yes | 12,137 | 16,423 | 16,423 |
-| [McL](#sporadic-mcl) | 898,128,000 | Yes | 13,704 | 16,375 | 16,377 |
-| [HS](#sporadic-hs) | 44,352,000 | Yes | 13,447 | 14,771 | 14,776 |
-| [Suz](#sporadic-suz) | 448,345,497,600 | Yes | 19,727 | 21,320 | 21,374 |
-| [J₂](#sporadic-j2) | 604,800 | Yes | 6,989 | 7,954 | 8,184 |
-| [Fi₂₂](#sporadic-fi22) | 64,561,751,654,400 | Yes | 31,955 | 34,248 | 34,250 |
-| [Fi₂₃](#sporadic-fi23) | 4,089,470,473,293,004,800 | Yes | 31,950 | 34,247 | 34,249 |
-| [Fi₂₄′](#sporadic-fi24prime) | 1,255,205,709,190,661,721,292,800 | Yes | 31,813 | 33,396 | 33,397 |
+| Group or family | Order | Proven simplicity | Proof dependencies | Order lines | Simplicity lines | Combined lines |
+|---|---|---|---|---:|---:|---:|
+| [Cₚ](#family-cyclic) | $p$ | Yes, $p$ prime (abelian) | — | 5 | 12 | 12 |
+| [Aₙ](#family-alternating) | $n!/2$ | Yes, $n\ge5$; also cyclic simple at $n=3$ | — | 4 | 4 | 7 |
+| [Aₙ(q)](#family-psl) | $\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-1)}{\gcd(n+1,q-1)}$ | Yes, $n\ge1$, except $(n,q)=(1,2),(1,3)$ | — | 168 | 322 | 379 |
+| [Bₙ(q)](#family-b) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | — | 4,121 | 7,898 | 8,009 |
+| [Cₙ(q)](#family-c) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | — | 708 | 2,203 | 2,203 |
+| [Dₙ(q)](#family-d) | $\displaystyle \frac{q^{n(n-1)}(q^n-1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n-1)}$ | Yes, $n\ge4$ (split form) | — | 4,290 | 2,466 | 5,408 |
+| [G₂(q)](#family-g2) | $q^6(q^6-1)(q^2-1)$ | Yes, $q>2$ | — | 1,237 | 3,287 | 3,568 |
+| [²G₂(q)](#family-reeg2) | $q^3(q^3+1)(q-1)$ | Yes, $q=3^{2m+1}$, $m\ge1$ | — | 1,570 | 2,225 | 2,250 |
+| [M₁₁](#sporadic-m11) | 7,920 | Yes | [Graph / tree](verification/dependency-maps/m11/M11.html) | 5,479 | 5,866 | 5,868 |
+| [M₁₂](#sporadic-m12) | 95,040 | Yes | [Graph / tree](verification/dependency-maps/m12/M12.html) | 4,924 | 5,959 | 5,961 |
+| [M₂₂](#sporadic-m22) | 443,520 | Yes | [Graph / tree](verification/dependency-maps/m22/M22.html) | 4,183 | 5,348 | 5,351 |
+| [M₂₃](#sporadic-m23) | 10,200,960 | Yes | [Graph / tree](verification/dependency-maps/m23/M23.html) | 4,119 | 4,492 | 4,495 |
+| [M₂₄](#sporadic-m24) | 244,823,040 | Yes | [Graph / tree](verification/dependency-maps/m24/M24.html) | 3,477 | 4,582 | 4,585 |
+| [Co₁](#sporadic-co1) | 4,157,776,806,543,360,000 | Yes | — | 10,826 | 12,334 | 12,346 |
+| [Co₂](#sporadic-co2) | 42,305,421,312,000 | Yes | — | 10,825 | 14,070 | 14,072 |
+| [Co₃](#sporadic-co3) | 495,766,656,000 | Yes | — | 12,137 | 16,423 | 16,423 |
+| [McL](#sporadic-mcl) | 898,128,000 | Yes | — | 13,704 | 16,375 | 16,377 |
+| [HS](#sporadic-hs) | 44,352,000 | Yes | — | 13,447 | 14,771 | 14,776 |
+| [Suz](#sporadic-suz) | 448,345,497,600 | Yes | — | 19,727 | 21,320 | 21,374 |
+| [J₂](#sporadic-j2) | 604,800 | Yes | — | 6,989 | 7,954 | 8,184 |
+| [Fi₂₂](#sporadic-fi22) | 64,561,751,654,400 | Yes | — | 31,955 | 34,248 | 34,250 |
+| [Fi₂₃](#sporadic-fi23) | 4,089,470,473,293,004,800 | Yes | — | 31,950 | 34,247 | 34,249 |
+| [Fi₂₄′](#sporadic-fi24prime) | 1,255,205,709,190,661,721,292,800 | Yes | — | 31,813 | 33,396 | 33,397 |
 
 **Line-count convention (17 September 2026 source measurement):** distinct ATLAS source lines reached through the compiled order/simplicity declarations and their transitive dependencies, including definitions, shared prerequisites, comments and blank lines inside declaration ranges. These are not proof-body-only counts or entire-file sizes. Mathlib/Lean library lines are excluded. Combined counts deduplicate order/simplicity overlap; rows share prerequisites and must not be added. The deduplicated union across all rows is **88,856 ATLAS lines**. Small cyclic/alternating counts reflect reuse of mathlib proofs. Exact measured roots and counts are in [proof-line-counts.csv](catalogue/proof-line-counts.csv); these measurements apply to the unchanged release mathematical sources.
 

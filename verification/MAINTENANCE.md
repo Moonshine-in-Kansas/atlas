@@ -84,3 +84,16 @@ The private release-preparation script uses this same gate; uploads remain expli
 
 Run `ruby verification/existence/test-sync.rb` for lightweight regression checks
 of these safeguards, without launching Lean or accessing the network.
+
+## Proof dependency diagrams
+
+Catalogue entries optionally carry a `proof_dependencies` HTML path.
+The metadata gate generates/checks the single Proof dependencies column and
+checks each diagram’s theorem roots and source hashes. Regenerate the five
+Mathieu pages with `ruby verification/dependency-maps/mathieu/generate.rb`
+after changes to the diagram generator or template, then run the usual metadata
+refresh/check. Changed mathematical sources require new verification evidence;
+the generator accepts only the recorded release licence-header substitution
+against the historical dependency graph. The private release-preparation script
+copies the maintained viewer tools and regenerates against release sources.
+GitHub displays HTML source: download a diagram and open it locally to interact.

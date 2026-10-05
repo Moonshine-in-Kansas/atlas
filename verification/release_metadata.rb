@@ -13,6 +13,8 @@ def require_equal(actual, expected, message)
 end
 begin
   raise "Contract metadata check failed" unless system("ruby", "verification/existence/sync.rb", mode)
+  require_relative 'dependency-maps/catalogue_links'
+  AtlasDependencyLinks.run(mode)
   raise 'Obsolete docs directory; use catalogue/' if Dir.exist?('docs')
   index = read_json('verification/current.json')
   snapshot = index.fetch('snapshot')
