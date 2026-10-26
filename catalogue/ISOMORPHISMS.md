@@ -6,6 +6,8 @@ Lean definitions contain the proofs; the separate full audits retain type, insta
 and proof dependencies. A certificate applies on its stated domain, including
 nonsimple parameters when specified. Order equality alone is not an identification.
 
+This is the technical appendix for the four included construction-identification maps. The [comparison guide](REALIZATIONS.md) also covers [isomorphisms between families](REALIZATIONS.md#between-families), [nonisomorphism by orders and invariants](REALIZATIONS.md#remaining-pairs), and [remaining gaps](REALIZATIONS.md#comparison-scope).
+
 <a id="chevalley-a-to-legacy-v1"></a>
 
 ## family.PSL/chevalley ≃ family.PSL/matrix

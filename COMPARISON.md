@@ -1,17 +1,29 @@
 # Comparison of the constructed ATLAS groups
 
+The [construction and identification guide](catalogue/REALIZATIONS.md) presents
+[models of the same group](catalogue/REALIZATIONS.md#same-group),
+[isomorphisms between families](catalogue/REALIZATIONS.md#between-families), and
+[the order and invariant certificates for the remaining pairs](catalogue/REALIZATIONS.md#remaining-pairs).
+This page states the aggregate theorem, its exact scope and verification evidence.
+
 The main interface is [Atlas/Comparisons.lean](Atlas/Comparisons.lean), included
 by the normal `import Atlas` entry point. It proves:
 
 **Two groups in the typed comparison registry are isomorphic if and only if
 their normalized labels agree.** Consequently, different normalized labels give nonisomorphic
-groups, including the cases where their orders agree.
+groups, including the cases where their orders agree. All remaining pairs in
+this scope have different orders, except for odd-q Bᵣ/Cᵣ at r≥3 and
+A₈/PSL₃(4); those pairs are separated by involution-class counts and Sylow-2
+center sizes, respectively. The statement covers all 16 completed sporadic groups
+and Tits, but does not include E₆/E₇/E₈.
 
 The declaration is
 `Atlas.Comparisons.Catalogue.isomorphic_iff_normalized_label_eq`.
 Its arguments are two values of `Atlas.Comparisons.Catalogue.Entry`. It has no assumed order
 formula, recognition theorem or comparison certificate. The corollary is
 `Atlas.Comparisons.Catalogue.not_isomorphic_of_normalized_label_ne`.
+
+<a id="scope-and-definitions"></a>
 
 ## Scope and definitions
 

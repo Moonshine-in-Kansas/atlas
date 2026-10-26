@@ -1,13 +1,182 @@
-# Construction models and explicit identifications
+# Constructions and identification certificates
 
-Different constructions remain distinct until an actual multiplicative
-equivalence is proved. Order and simplicity alone do not identify them.
-The 33 catalogue entries below retain all 39 displayed models, including six
-additional Chevalley constructions. A/B/C/D have explicit registered
-[Lean isomorphism certificates](ISOMORPHISMS.md); G₂/F₄ retain their distinct
-comparison scopes. Multiple constructions do not add families to the catalogue.
+This page distinguishes three questions and links the Lean proofs answering
+them. Every identification is an actual group isomorphism between the stated
+models. The full construction inventory follows the comparison guide.
 
-Open an entry name for its construction details and isomorphism certificates.
+| Question | Where to look |
+|---|---|
+| Do two constructions of the same group agree? | [Models of the same group](#same-group) |
+| Which different family labels describe isomorphic groups? | [Isomorphisms between families](#between-families) |
+| How are all remaining pairs distinguished? | [One general certificate, orders and invariants](#remaining-pairs) |
+
+**Coverage:** the general comparison theorem covers 13 families, all 16
+completed sporadic groups and Tits, on its exact simple parameter ranges.
+The catalogue also contains E₆/E₇/E₈ and additional construction models;
+the [scope section](#comparison-scope) records which are outside that theorem.
+
+<a id="same-group"></a>
+
+## 1. Different models of the same group
+
+| Group or family | Models | Domain | Identification certificate |
+|---|---|---|---|
+| [Aₙ(q)](#family-psl) | Matrix · Chevalley | rank n ≥ 1; every finite field | [Lean certificate](ISOMORPHISMS.md#chevalley-a-to-legacy-v1) |
+| [Bₙ(q)](#family-b) | Quadratic · Chevalley | rank n ≥ 2; every finite field | [Lean certificate](ISOMORPHISMS.md#chevalley-b-to-legacy-v1) |
+| [Cₙ(q)](#family-c) | Symplectic · Chevalley | rank n ≥ 2; every finite field | [Lean certificate](ISOMORPHISMS.md#chevalley-c-to-legacy-v1) |
+| [Dₙ(q)](#family-d) | Quadratic · Chevalley | rank n ≥ 4; every finite field | [Lean certificate](ISOMORPHISMS.md#chevalley-d-to-legacy-v1) |
+| [G₂(q)](#family-g2) | Octonion · Chevalley | Comparison scope recorded separately | [Local proof / export boundary](#comparison-scope) |
+| [F₄(q)](#family-f4) | Albert · Chevalley | Comparison unfinished | [Open comparison](#comparison-scope) |
+
+The four included A/B/C/D certificates apply even at nonsimple parameters
+in their domains. They allow results about the original models to be
+transported to the Chevalley models by composing the actual maps.
+
+Different finite fields of the same size, and different presentations of
+the required field extensions, are identified by
+[a uniform field-transport certificate](../Atlas/Comparisons/CatalogueSameLabel.lean#L14)
+for the models in the comparison registry. The
+[individual transport interfaces](COMPARISONS.md#field-transport) retain
+their precise field and extension hypotheses.
+
+Each of the 16 sporadic entries currently advertises one construction in
+this catalogue. The aggregate comparison theorem uses the specified Mathieu
+coordinate markings. It does not assert a comparison with an additional
+independently constructed permutation, lattice or other sporadic model.
+
+<a id="between-families"></a>
+
+## 2. Isomorphisms between different families
+
+Here q is the base-field size, Bₙ/Cₙ/Dₙ use Lie rank, and the subscript in
+PSL_d or PSU_d is the vector-space dimension. A_m without a field parameter
+denotes an alternating group. The classical families use their actual
+projective models.
+These maps have the stated domains even when an endpoint is not simple;
+they do not silently replace a full group by its derived subgroup.
+
+### Uniform and low-rank identifications
+
+| Identification | Parameters | Lean certificates |
+|---|---|---|
+| B₁(q) ≃ C₁(q) ≃ PSU₂(q) ≃ PSL₂(q) | Every finite q; the unitary scalar field has size q² | [B₁](../Atlas/Comparisons/Classical/Orthogonal.lean#L20) · [C₁](../Atlas/Comparisons/LowRank/Symplectic.lean#L9) · [PSU₂](../Atlas/Comparisons/LowRank/Unitary.lean#L10) |
+| B₂(q) ≃ C₂(q) | Every finite q | [certificate](../Atlas/Comparisons/Classical/Orthogonal.lean#L29) |
+| Bₙ(q) ≃ Cₙ(q) | Even q, n ≥ 1 | [certificate](../Atlas/Comparisons/Classical/Orthogonal.lean#L24) |
+| D₂⁺(q) ≃ PSL₂(q) × PSL₂(q) | Every finite q; a product, outside the simple D-family range | [certificate](../Atlas/Comparisons/Classical/Orthogonal.lean#L37) |
+| D₃⁺(q) ≃ PSL₄(q) | Every finite q | [certificate](../Atlas/Comparisons/Classical/Orthogonal.lean#L43) |
+| ²D₂(q) ≃ PSL₂(q²) | Every finite q; PSL is over the quadratic extension | [certificate](../Atlas/Comparisons/LowRank/MinusOrthogonal.lean#L8) |
+| ²D₃(q) ≃ PSU₄(q) | Every finite q; common quadratic extension | [certificate](../Atlas/Comparisons/LowRank/MinusOrthogonal.lean#L13) |
+
+### Exceptional identifications at small parameters
+
+| Order | Isomorphic groups | Lean certificates |
+|---:|---|---|
+| 60 | PSL₂(4) ≃ PSL₂(5) ≃ A₅ | [q = 4](../Atlas/Comparisons/Exceptional/Order60Four.lean#L21) · [q = 5](../Atlas/Comparisons/Exceptional/Order60Five.lean#L15) |
+| 168 | PSL₃(2) ≃ PSL₂(7) | [certificate](../Atlas/Comparisons/Exceptional/Order168.lean#L38) |
+| 360 | PSL₂(9) ≃ A₆ ≃ C₂(2)′ ≃ B₂(2)′ | [PSL₂/A₆](../Atlas/Comparisons/Exceptional/Order360.lean#L47) · [derived C₂](../Atlas/Comparisons/Exceptional/BinaryDerived.lean#L21) · [derived B₂](../Atlas/Comparisons/Exceptional/BinaryDerived.lean#L15) |
+| 20,160 | PSL₄(2) ≃ D₃⁺(2) ≃ A₈ | [PSL₄/A₈](../Atlas/Comparisons/Exceptional/Order20160A8.lean#L88) · [D₃/A₈](../Atlas/Comparisons/Exceptional/Order20160A8.lean#L81) |
+| 25,920 | PSU₄(2) ≃ ²D₃(2) ≃ C₂(3) ≃ B₂(3) | [PSU₄/C₂](../Atlas/Comparisons/Exceptional/Order25920.lean#L29) · [²D₃/C₂](../Atlas/Comparisons/Exceptional/Order25920.lean#L38) · [PSU₄/B₂](../Atlas/Comparisons/Exceptional/Order25920.lean#L45) |
+
+At the excluded binary parameter the **full** groups B₂(2) and C₂(2)
+are isomorphic to S₆, of order 720
+([B₂ certificate](../Atlas/Comparisons/Small/BinarySymplectic.lean#L37),
+[C₂ certificate](../Atlas/Comparisons/Small/BinarySymplectic.lean#L33)). Their derived subgroups
+are the order-360 groups above. PSL₃(4), although also of order 20,160,
+is separated from A₈ below.
+
+The [complete interface index](COMPARISONS.md#between-families) includes
+the compositions, arbitrary-field versions and canonical-field wrappers.
+
+<a id="remaining-pairs"></a>
+
+## 3. All remaining pairs: one certificate, orders and invariants
+
+**Within the comparison theorem's stated scope, different normalized labels
+imply nonisomorphic groups.** A normalized label records the family and
+parameters after the proved identifications above have been applied.
+The single certificate covering all such pairs is
+[not_isomorphic_of_normalized_label_ne](../Atlas/Comparisons.lean#L59).
+Its parent theorem,
+[isomorphic_iff_normalized_label_eq](../Atlas/Comparisons.lean#L52),
+proves both directions: isomorphism holds exactly when normalized labels agree.
+
+The certificate combines the following two ways of separating groups.
+
+### Different orders
+
+The group-order bridge
+[card](../Atlas/Comparisons/CatalogueCardinality.lean#L29)
+proves the exact order of every model in the comparison registry. The
+arithmetic theorem
+[catalogue_orders_distinct](../Atlas/OrderArithmetic/Classification.lean#L55)
+proves unequal orders whenever normalized labels differ and the pair is
+outside the two exceptional patterns below. This is uniform in the
+admissible ranks and field sizes, not a bounded numerical search.
+
+[not_isomorphic_of_card_ne](../Atlas/Comparisons/Cardinality.lean#L9)
+converts unequal orders into nonisomorphism; the combined registry-level
+certificate is
+[not_isomorphic_of_not_collision](../Atlas/Comparisons/CatalogueCardinality.lean#L50).
+The [complete order-collision theorem](../Atlas/OrderArithmetic/Classification.lean)
+proves that no further equal-order patterns occur in this scope.
+
+In particular, the 16 completed sporadic groups and Tits have pairwise
+different orders, and their orders differ from all admissible values of
+the 13 families in this comparison registry. They are therefore covered
+by the same order and nonisomorphism certificates.
+
+### Equal orders, separated by one invariant
+
+| Nonisomorphic groups | Domain and common order | Separating invariant | Lean certificates |
+|---|---|---|---|
+| Bₙ(q), Cₙ(q) | Odd q, n ≥ 3; their proved order formulas agree | Number of conjugacy classes of involutions: n versus ⌊n/2⌋ + 1 | [equal order](../Atlas/Comparisons/Classical/OrthogonalOrder.lean#L10) · [counts](../Atlas/Comparisons/Classical/OrthogonalInvolutions.lean#L15) · [nonisomorphism](../Atlas/Comparisons/Classical/OrthogonalInvolutions.lean#L21) |
+| A₈ ≃ PSL₄(2), PSL₃(4) | Both order 20,160 | Center of a Sylow-2 subgroup: order 2 versus order 4 | [equal order](../Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean#L31) · [PSL certificate](../Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean#L13) · [A₈ certificate](../Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean#L22) |
+
+The invariants are themselves preserved by isomorphism:
+[involution-class invariance](../Atlas/GroupTheory/InvolutionClasses.lean#L45)
+and [Sylow-center invariance](../Atlas/GroupTheory/SylowCenterInvariant.lean#L19).
+[One combined obstruction certificate](../Atlas/Comparisons/CatalogueObstructions.lean#L60)
+handles both exceptional patterns, including field transport and reversal
+of the two endpoints. Rank two and even-characteristic B/C pairs belong
+to the isomorphism table, not this obstruction table.
+
+<a id="comparison-scope"></a>
+
+## Scope, remaining gaps and verification
+
+The aggregate theorem covers Cₚ, A_m, PSL, PSU, B, C, D⁺, D⁻, G₂, F₄,
+³D₄, ²B₂ and ²G₂, together with all 16 completed sporadic groups and Tits.
+Its [exact simple parameter ranges and model definitions](../COMPARISON.md#scope-and-definitions)
+remain part of the statement. The low-rank and derived-group maps above
+are additional interfaces; they are not additional registry constructors.
+
+| Outside the aggregate theorem or exported comparison certificates | Present status |
+|---|---|
+| E₆, E₇, E₈ | Their actual models have separate Lean order and simplicity proofs, but the comparison registry and its exhaustive order-collision theorem do not include them. No blanket nonisomorphism result involving these families is asserted here. |
+| Chevalley G₂ versus Octonion G₂ | A marked equivalence has ten passed local audit scopes; its final preservation/registration and source export are outside this review snapshot. The exported comparison theorem uses the Octonion model. |
+| Chevalley F₄ versus Albert F₄ | The identification is unfinished. The exported comparison theorem uses the Albert model. |
+| G₂(2)′ versus PSU₃(3), order 6,048 | The derived-group bridge is unfinished; equality of orders is not a certificate of isomorphism. |
+| ²G₂(3)′ versus PSL₂(8), order 504 | The derived-group bridge is unfinished; the full small-parameter group must remain distinct from its derived subgroup. |
+
+E₆/E₇/E₈ order formulas can be used with the general unequal-cardinality
+lemma once a particular inequality has been proved. Having the formulas
+alone does not extend the exhaustive comparison theorem to these families.
+
+The aggregate theorem has a passed
+[full dependency audit](../verification/runs/comparison-catalogue-isomorphism/20261012T065332-1260019/RESULT.json)
+and [verbatim compiled statements](../verification/comparisons/THEOREM_STATEMENTS.txt).
+Its two independent Comparator replays remain memory-stopped, as recorded
+in the [dated receipt](../verification/existence/2026-10-25-draft/Catalogue-isomorphism/RESULT.json).
+The [four invariant contracts](../verification/existence/RESULTS.md) passed
+separately. Their success does not turn the aggregate replay into a pass.
+
+<a id="construction-inventory"></a>
+
+## Construction inventory
+
+The 33 completed entries retain all 39 displayed models, including the six
+additional Chevalley constructions. Open a group name for its model definitions,
+orders, simplicity domains and construction-identification certificates.
 
 | Entry | Models |
 |---|---|

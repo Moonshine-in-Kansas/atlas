@@ -13,10 +13,12 @@ structural properties. This candidate contains **16 completed families,
 16 sporadic constructions and the Tits group**, with their full parameter ranges
 and exceptions. The stable entry point is `import Atlas`.
 
-Read the [catalogue](CATALOGUE.md), [proved comparisons](COMPARISON.md),
-[all construction models](catalogue/REALIZATIONS.md),
-[Lean isomorphism certificates](catalogue/ISOMORPHISMS.md), and
+Read the [catalogue](CATALOGUE.md), the
+[construction and identification guide](catalogue/REALIZATIONS.md), and the
 [research note (PDF)](atlas_research_note.pdf) ([TeX](atlas_research_note.tex)).
+The guide distinguishes models of the same group, isomorphisms between families,
+and the order or invariant certificates separating all other pairs in the
+[comparison theorem's scope](COMPARISON.md#scope-and-definitions).
 The research note is the unchanged, dated 25 October development account:
 its broader local source inventory is distinguished from this filtered export.
 It is not a claim that every local draft module is included or release-accepted.
