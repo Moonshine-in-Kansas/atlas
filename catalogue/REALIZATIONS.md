@@ -7,41 +7,43 @@ additional Chevalley constructions. A/B/C/D have explicit registered
 [Lean isomorphism certificates](ISOMORPHISMS.md); G₂/F₄ retain their distinct
 comparison scopes. Multiple constructions do not add families to the catalogue.
 
-| Entry | Constructions and certificates |
+Open an entry name for its construction details and isomorphism certificates.
+
+| Entry | Models |
 |---|---|
-| [Cₚ](#family-cyclic) | [Original concrete model](../CATALOGUE.md#family-cyclic-legacy) |
-| [Aₙ](#family-alternating) | [Original concrete model](../CATALOGUE.md#family-alternating-legacy) |
-| [Aₙ(q)](#family-psl) | [Projective special-linear matrix model](../CATALOGUE.md#family-psl-matrix)<br>[Chevalley root-operator model](../CATALOGUE.md#family-psl-chevalley)<br>[Lean isomorphism certificate](../catalogue/ISOMORPHISMS.md#chevalley-a-to-legacy-v1) |
-| [²Aₙ(q)](#family-psu) | [Original concrete model](../CATALOGUE.md#family-psu-legacy) |
-| [Bₙ(q)](#family-b) | [Quadratic-form model](../CATALOGUE.md#family-b-quadratic)<br>[Chevalley root-operator model](../CATALOGUE.md#family-b-chevalley)<br>[Lean isomorphism certificate](../catalogue/ISOMORPHISMS.md#chevalley-b-to-legacy-v1) |
-| [²B₂(q)](#family-suzuki) | [Original concrete model](../CATALOGUE.md#family-suzuki-legacy) |
-| [Cₙ(q)](#family-c) | [Symplectic matrix model](../CATALOGUE.md#family-c-symplectic)<br>[Chevalley root-operator model](../CATALOGUE.md#family-c-chevalley)<br>[Lean isomorphism certificate](../catalogue/ISOMORPHISMS.md#chevalley-c-to-legacy-v1) |
-| [Dₙ(q)](#family-d) | [Quadratic-form model](../CATALOGUE.md#family-d-quadratic)<br>[Chevalley root-operator model](../CATALOGUE.md#family-d-chevalley)<br>[Lean isomorphism certificate](../catalogue/ISOMORPHISMS.md#chevalley-d-to-legacy-v1) |
-| [²Dₙ(q)](#family-2d) | [Original concrete model](../CATALOGUE.md#family-2d-legacy) |
-| [³D₄(q)](#family-3d4) | [Original concrete model](../CATALOGUE.md#family-3d4-legacy) |
-| [E₆(q)](#family-e6) | [Chevalley root-operator model](../CATALOGUE.md#family-e6-chevalley) |
-| [E₇(q)](#family-e7) | [Chevalley root-operator model](../CATALOGUE.md#family-e7-chevalley) |
-| [E₈(q)](#family-e8) | [Chevalley root-operator model](../CATALOGUE.md#family-e8-chevalley) |
-| [F₄(q)](#family-f4) | [Split-Albert model](../CATALOGUE.md#family-f4-albert)<br>[Chevalley root-operator model](../CATALOGUE.md#family-f4-chevalley) |
-| [²F₄(2)′ (Tits)](#exceptional-tits) | [Original concrete model](../CATALOGUE.md#exceptional-tits-legacy) |
-| [G₂(q)](#family-g2) | [Split-octonion model](../CATALOGUE.md#family-g2-octonion)<br>[Chevalley root-operator model](../CATALOGUE.md#family-g2-chevalley) |
-| [²G₂(q)](#family-reeg2) | [Original concrete model](../CATALOGUE.md#family-reeg2-legacy) |
-| [M₁₁](#sporadic-m11) | [Original concrete model](../CATALOGUE.md#sporadic-m11-legacy) |
-| [M₁₂](#sporadic-m12) | [Original concrete model](../CATALOGUE.md#sporadic-m12-legacy) |
-| [M₂₂](#sporadic-m22) | [Original concrete model](../CATALOGUE.md#sporadic-m22-legacy) |
-| [M₂₃](#sporadic-m23) | [Original concrete model](../CATALOGUE.md#sporadic-m23-legacy) |
-| [M₂₄](#sporadic-m24) | [Original concrete model](../CATALOGUE.md#sporadic-m24-legacy) |
-| [Co₁](#sporadic-co1) | [Original concrete model](../CATALOGUE.md#sporadic-co1-legacy) |
-| [Co₂](#sporadic-co2) | [Original concrete model](../CATALOGUE.md#sporadic-co2-legacy) |
-| [Co₃](#sporadic-co3) | [Original concrete model](../CATALOGUE.md#sporadic-co3-legacy) |
-| [McL](#sporadic-mcl) | [Original concrete model](../CATALOGUE.md#sporadic-mcl-legacy) |
-| [HS](#sporadic-hs) | [Original concrete model](../CATALOGUE.md#sporadic-hs-legacy) |
-| [Suz](#sporadic-suz) | [Original concrete model](../CATALOGUE.md#sporadic-suz-legacy) |
-| [J₂](#sporadic-j2) | [Original concrete model](../CATALOGUE.md#sporadic-j2-legacy) |
-| [Fi₂₂](#sporadic-fi22) | [Original concrete model](../CATALOGUE.md#sporadic-fi22-legacy) |
-| [Fi₂₃](#sporadic-fi23) | [Original concrete model](../CATALOGUE.md#sporadic-fi23-legacy) |
-| [Fi₂₄′](#sporadic-fi24prime) | [Original concrete model](../CATALOGUE.md#sporadic-fi24prime-legacy) |
-| [Ru](#sporadic-ru) | [Original concrete model](../CATALOGUE.md#sporadic-ru-legacy) |
+| [Cₚ](#family-cyclic) | [Residues](../CATALOGUE.md#family-cyclic-legacy) |
+| [Aₙ](#family-alternating) | [Permutation](../CATALOGUE.md#family-alternating-legacy) |
+| [Aₙ(q)](#family-psl) | [Matrix](../CATALOGUE.md#family-psl-matrix) · [Chevalley](../CATALOGUE.md#family-psl-chevalley) |
+| [²Aₙ(q)](#family-psu) | [Hermitian](../CATALOGUE.md#family-psu-legacy) |
+| [Bₙ(q)](#family-b) | [Quadratic](../CATALOGUE.md#family-b-quadratic) · [Chevalley](../CATALOGUE.md#family-b-chevalley) |
+| [²B₂(q)](#family-suzuki) | [Matrix](../CATALOGUE.md#family-suzuki-legacy) |
+| [Cₙ(q)](#family-c) | [Symplectic](../CATALOGUE.md#family-c-symplectic) · [Chevalley](../CATALOGUE.md#family-c-chevalley) |
+| [Dₙ(q)](#family-d) | [Quadratic](../CATALOGUE.md#family-d-quadratic) · [Chevalley](../CATALOGUE.md#family-d-chevalley) |
+| [²Dₙ(q)](#family-2d) | [Quadratic](../CATALOGUE.md#family-2d-legacy) |
+| [³D₄(q)](#family-3d4) | [Triality](../CATALOGUE.md#family-3d4-legacy) |
+| [E₆(q)](#family-e6) | [Chevalley](../CATALOGUE.md#family-e6-chevalley) |
+| [E₇(q)](#family-e7) | [Chevalley](../CATALOGUE.md#family-e7-chevalley) |
+| [E₈(q)](#family-e8) | [Chevalley](../CATALOGUE.md#family-e8-chevalley) |
+| [F₄(q)](#family-f4) | [Albert](../CATALOGUE.md#family-f4-albert) · [Chevalley](../CATALOGUE.md#family-f4-chevalley) |
+| [²F₄(2)′ (Tits)](#exceptional-tits) | [Lattice](../CATALOGUE.md#exceptional-tits-legacy) |
+| [G₂(q)](#family-g2) | [Octonion](../CATALOGUE.md#family-g2-octonion) · [Chevalley](../CATALOGUE.md#family-g2-chevalley) |
+| [²G₂(q)](#family-reeg2) | [Matrix](../CATALOGUE.md#family-reeg2-legacy) |
+| [M₁₁](#sporadic-m11) | [Golay](../CATALOGUE.md#sporadic-m11-legacy) |
+| [M₁₂](#sporadic-m12) | [Golay](../CATALOGUE.md#sporadic-m12-legacy) |
+| [M₂₂](#sporadic-m22) | [Golay](../CATALOGUE.md#sporadic-m22-legacy) |
+| [M₂₃](#sporadic-m23) | [Golay](../CATALOGUE.md#sporadic-m23-legacy) |
+| [M₂₄](#sporadic-m24) | [Golay](../CATALOGUE.md#sporadic-m24-legacy) |
+| [Co₁](#sporadic-co1) | [Leech](../CATALOGUE.md#sporadic-co1-legacy) |
+| [Co₂](#sporadic-co2) | [Leech](../CATALOGUE.md#sporadic-co2-legacy) |
+| [Co₃](#sporadic-co3) | [Leech](../CATALOGUE.md#sporadic-co3-legacy) |
+| [McL](#sporadic-mcl) | [Leech](../CATALOGUE.md#sporadic-mcl-legacy) |
+| [HS](#sporadic-hs) | [Leech](../CATALOGUE.md#sporadic-hs-legacy) |
+| [Suz](#sporadic-suz) | [Eisenstein](../CATALOGUE.md#sporadic-suz-legacy) |
+| [J₂](#sporadic-j2) | [Icosian](../CATALOGUE.md#sporadic-j2-legacy) |
+| [Fi₂₂](#sporadic-fi22) | [Rays](../CATALOGUE.md#sporadic-fi22-legacy) |
+| [Fi₂₃](#sporadic-fi23) | [Rays](../CATALOGUE.md#sporadic-fi23-legacy) |
+| [Fi₂₄′](#sporadic-fi24prime) | [Rays](../CATALOGUE.md#sporadic-fi24prime-legacy) |
+| [Ru](#sporadic-ru) | [Lattice](../CATALOGUE.md#sporadic-ru-legacy) |
 
 <a id="family-cyclic"></a>
 

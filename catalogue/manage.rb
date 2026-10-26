@@ -57,8 +57,9 @@ text=<<~MD
 
   Here q is the base-field size and n is Lie rank: Aₙ(q)=PSLₙ₊₁(q),
   ²Aₙ(q)=PSUₙ₊₁(q). Exact dimension conventions are retained below.
+  Open a group name for its construction details and available isomorphism certificates.
 
-  | Group or family | Constructions and identification certificates | Order | Proven simplicity | Lean files / theorems | Intrinsic lines | Total dependency lines |
+  | Group or family | Models | Order | Proven simplicity | Lean files / theorems | Intrinsic lines | Total dependency lines |
   |---|---|---|---|---|---:|---:|
 MD
 entries.each do |e|
@@ -97,7 +98,7 @@ text<<"## Auxiliary groups and covers\n\nThese are separate from the simple-grou
 registry['auxiliary'].each { |e|text<<"| #{cell(e['label'])} | #{cell(e['order'])} | #{cell(e['construction'])}; #{cell(e['evidence_scope'])} |\n" }
 text<<"\n## Isomorphisms and nonisomorphisms\n\nSee [the comparison theorem and its exact scope](COMPARISON.md) and the\n[explicit comparison interfaces](catalogue/COMPARISONS.md), including the order-25,920\nbridge. E₆/E₇/E₈ are outside the aggregate normalized-label theorem.\n"
 out['CATALOGUE.md']=text
-out['catalogue/GROUPS.csv']=CSV.generate { |csv|csv<<%w[id label kind constructions identification_certificates parameters order simplicity];entries.each { |e|csv<<[e['id'],label(e),e['kind'],model_views.models.fetch(e['id']).map { |m|m['label'] }.join('; '),model_views.edges(e['id']).map { |c|c.dig('witness','declaration') }.join('; '),e['parameters'],e.dig('presentation','summary_order'),e.dig('presentation','summary_simplicity')] } }
+out['catalogue/GROUPS.csv']=CSV.generate { |csv|csv<<%w[id label kind models identification_certificates parameters order simplicity];entries.each { |e|csv<<[e['id'],label(e),e['kind'],model_views.models.fetch(e['id']).map { |m|model_views.short_label(m) }.join('; '),model_views.edges(e['id']).map { |c|c.dig('witness','declaration') }.join('; '),e['parameters'],e.dig('presentation','summary_order'),e.dig('presentation','summary_simplicity')] } }
 
 real=<<~MD
   # Construction models and explicit identifications
@@ -110,7 +111,7 @@ real=<<~MD
   comparison scopes. Multiple constructions do not add families to the catalogue.
 
 MD
-real<<"| Entry | Constructions and certificates |\n|---|---|\n"
+real<<"Open an entry name for its construction details and isomorphism certificates.\n\n| Entry | Models |\n|---|---|\n"
 entries.each { |e|real<<"| [#{label(e)}](##{anchor(e)}) | #{model_views.summary(e['id'],'../')} |\n" }
 entries.each do |e|
   real<<"\n<a id=\"#{anchor(e)}\"></a>\n\n## #{label(e)}\n\n"

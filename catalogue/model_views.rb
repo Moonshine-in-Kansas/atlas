@@ -47,6 +47,18 @@ module AtlasModelViews
        'symplectic'=>'Symplectic matrix model','albert'=>'Split-Albert model','octonion'=>'Split-octonion model',
        'chevalley'=>'Chevalley root-operator model','legacy'=>'Original concrete model'}.fetch(id,id)
     end
+    def short_label(model)
+      labels={'matrix'=>'Matrix','quadratic'=>'Quadratic','symplectic'=>'Symplectic',
+        'albert'=>'Albert','octonion'=>'Octonion','chevalley'=>'Chevalley'}
+      return labels.fetch(model['id']) if labels.key?(model['id'])
+      {'family.Cyclic'=>'Residues','family.Alternating'=>'Permutation','family.PSU'=>'Hermitian',
+       'family.Suzuki'=>'Matrix','family.2D'=>'Quadratic','family.3D4'=>'Triality','family.ReeG2'=>'Matrix',
+       'exceptional.Tits'=>'Lattice','sporadic.M11'=>'Golay','sporadic.M12'=>'Golay','sporadic.M22'=>'Golay',
+       'sporadic.M23'=>'Golay','sporadic.M24'=>'Golay','sporadic.Co1'=>'Leech','sporadic.Co2'=>'Leech',
+       'sporadic.Co3'=>'Leech','sporadic.McL'=>'Leech','sporadic.HS'=>'Leech','sporadic.Suz'=>'Eisenstein',
+       'sporadic.J2'=>'Icosian','sporadic.Fi22'=>'Rays','sporadic.Fi23'=>'Rays','sporadic.Fi24Prime'=>'Rays',
+       'sporadic.Ru'=>'Lattice'}.fetch(model.fetch('entry'))
+    end
     def anchor(id)=id.downcase.tr('.','-')
     def model_anchor(m)=anchor(m['entry'])+'-'+m['id']
     def edges(id)=comparisons.select { |c|c.dig('source','qualified_id').split('/').first==id || c.dig('target','qualified_id').split('/').first==id }
@@ -72,9 +84,7 @@ module AtlasModelViews
     end
     def certificate(c,prefix='')="[Lean isomorphism certificate](#{prefix}catalogue/ISOMORPHISMS.md##{c.fetch('id')})"
     def summary(id,prefix='')
-      text=models.fetch(id).map { |m|"[#{m['label']}](#{prefix}CATALOGUE.md##{model_anchor(m)})" }.join('<br>')
-      edges(id).each { |c|text+='<br>'+certificate(c,prefix) }
-      text
+      models.fetch(id).map { |m|"[#{short_label(m)}](#{prefix}CATALOGUE.md##{model_anchor(m)})" }.join(' · ')
     end
     def detailed(e,prefix='')
       ms=models.fetch(e['id']);text=""

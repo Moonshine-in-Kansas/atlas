@@ -8,42 +8,43 @@ and [proved comparisons](COMPARISON.md). Release acceptance remains pending.
 
 Here q is the base-field size and n is Lie rank: Aₙ(q)=PSLₙ₊₁(q),
 ²Aₙ(q)=PSUₙ₊₁(q). Exact dimension conventions are retained below.
+Open a group name for its construction details and available isomorphism certificates.
 
-| Group or family | Constructions and identification certificates | Order | Proven simplicity | Lean files / theorems | Intrinsic lines | Total dependency lines |
+| Group or family | Models | Order | Proven simplicity | Lean files / theorems | Intrinsic lines | Total dependency lines |
 |---|---|---|---|---|---:|---:|
-| [Cₚ](#family-cyclic) | [Original concrete model](CATALOGUE.md#family-cyclic-legacy) | $p$ | Yes, $p$ prime (abelian) | [1 / 18](verification/dependency-maps/cyclic/Cyclic.html) | 12 | 12 |
-| [Aₙ](#family-alternating) | [Original concrete model](CATALOGUE.md#family-alternating-legacy) | $n!/2$ | Yes, $n\ge5$; also cyclic simple at $n=3$ | [1 / 20](verification/dependency-maps/alternating/Alternating.html) | 7 | 7 |
-| [Aₙ(q)](#family-psl) | [Projective special-linear matrix model](CATALOGUE.md#family-psl-matrix)<br>[Chevalley root-operator model](CATALOGUE.md#family-psl-chevalley)<br>[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-a-to-legacy-v1) | $\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-1)}{\gcd(n+1,q-1)}$ | Yes, $n\ge1$, except $(n,q)=(1,2),(1,3)$ | [8 / 82](verification/dependency-maps/psl/PSL.html) | 379 | 379 |
-| [²Aₙ(q)](#family-psu) | [Original concrete model](CATALOGUE.md#family-psu-legacy) | $\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-(-1)^i)}{\gcd(n+1,q+1)}$ | Yes, $n\ge1$, except $(n,q)=(1,2),(1,3),(2,2)$ | [82 / 382](verification/dependency-maps/psu/PSU.html) | 4,313 | 4,658 |
-| [Bₙ(q)](#family-b) | [Quadratic-form model](CATALOGUE.md#family-b-quadratic)<br>[Chevalley root-operator model](CATALOGUE.md#family-b-chevalley)<br>[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-b-to-legacy-v1) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | [139 / 549](verification/dependency-maps/b/B.html) | 5,653 | 8,013 |
-| [²B₂(q)](#family-suzuki) | [Original concrete model](CATALOGUE.md#family-suzuki-legacy) | $q^2(q^2+1)(q-1)$ | Yes, $q=2^{2m+1}$, $m\ge1$ | [33 / 139](verification/dependency-maps/suzukifamily/SuzukiFamily.html) | 1,136 | 1,137 |
-| [Cₙ(q)](#family-c) | [Symplectic matrix model](CATALOGUE.md#family-c-symplectic)<br>[Chevalley root-operator model](CATALOGUE.md#family-c-chevalley)<br>[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-c-to-legacy-v1) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | [39 / 177](verification/dependency-maps/c/C.html) | 1,747 | 1,747 |
-| [Dₙ(q)](#family-d) | [Quadratic-form model](CATALOGUE.md#family-d-quadratic)<br>[Chevalley root-operator model](CATALOGUE.md#family-d-chevalley)<br>[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-d-to-legacy-v1) | $\displaystyle \frac{q^{n(n-1)}(q^n-1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n-1)}$ | Yes, $n\ge4$ (split form) | [130 / 538](verification/dependency-maps/d/D.html) | 5,408 | 5,408 |
-| [²Dₙ(q)](#family-2d) | [Original concrete model](CATALOGUE.md#family-2d-legacy) | $\displaystyle \frac{q^{n(n-1)}(q^n+1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n+1)}$ | Yes, $n\ge4$; ranks $2,3$ separately proved | [133 / 556](verification/dependency-maps/minusd/MinusD.html) | 5,966 | 5,966 |
-| [³D₄(q)](#family-3d4) | [Original concrete model](CATALOGUE.md#family-3d4-legacy) | $q^{12}(q^8+q^4+1)(q^6-1)(q^2-1)$ | Yes, every $q\ge2$ | [83 / 445](verification/dependency-maps/triality/Triality.html) | 3,471 | 3,494 |
-| [E₆(q)](#family-e6) | [Chevalley root-operator model](CATALOGUE.md#family-e6-chevalley) | $\displaystyle \frac{q^{36}\prod_{d\in\{2,5,6,8,9,12\}}(q^d-1)}{\gcd(3,q-1)}$ | Yes, every q≥2 | [499 / 5962](verification/dependency-maps/e6/E6.html) | 37,707 | 37,768 |
-| [E₇(q)](#family-e7) | [Chevalley root-operator model](CATALOGUE.md#family-e7-chevalley) | $\displaystyle \frac{q^{63}\prod_{d\in\{2,6,8,10,12,14,18\}}(q^d-1)}{\gcd(2,q-1)}$ | Yes, every q≥2 | [511 / 6236](verification/dependency-maps/e7/E7.html) | 38,713 | 38,774 |
-| [E₈(q)](#family-e8) | [Chevalley root-operator model](CATALOGUE.md#family-e8-chevalley) | $q^{120}\prod_{d\in\{2,8,12,14,18,20,24,30\}}(q^d-1)$ | Yes, every q≥2 | [518 / 6321](verification/dependency-maps/e8/E8.html) | 39,417 | 39,478 |
-| [F₄(q)](#family-f4) | [Split-Albert model](CATALOGUE.md#family-f4-albert)<br>[Chevalley root-operator model](CATALOGUE.md#family-f4-chevalley) | $q^{24}(q^{12}-1)(q^8-1)(q^6-1)(q^2-1)$ | Yes, every $q\ge2$ | [257 / 1185](verification/dependency-maps/f4/F4.html) | 11,416 | 12,312 |
-| [²F₄(2)′ (Tits)](#exceptional-tits) | [Original concrete model](CATALOGUE.md#exceptional-tits-legacy) | 17,971,200 | Yes | [60 / 392](verification/dependency-maps/tits/Tits.html) | 3,080 | 19,591 |
-| [G₂(q)](#family-g2) | [Split-octonion model](CATALOGUE.md#family-g2-octonion)<br>[Chevalley root-operator model](CATALOGUE.md#family-g2-chevalley) | $q^6(q^6-1)(q^2-1)$ | Yes, $q>2$ | [44 / 290](verification/dependency-maps/g2/G2.html) | 2,708 | 2,836 |
-| [²G₂(q)](#family-reeg2) | [Original concrete model](CATALOGUE.md#family-reeg2-legacy) | $q^3(q^3+1)(q-1)$ | Yes, $q=3^{2m+1}$, $m\ge1$ | [46 / 178](verification/dependency-maps/reeg2/ReeG2.html) | 2,239 | 2,250 |
-| [M₁₁](#sporadic-m11) | [Original concrete model](CATALOGUE.md#sporadic-m11-legacy) | 7,920 | Yes | [5 / 40](verification/dependency-maps/m11/M11.html) | 393 | 5,868 |
-| [M₁₂](#sporadic-m12) | [Original concrete model](CATALOGUE.md#sporadic-m12-legacy) | 95,040 | Yes | [18 / 89](verification/dependency-maps/m12/M12.html) | 855 | 5,961 |
-| [M₂₂](#sporadic-m22) | [Original concrete model](CATALOGUE.md#sporadic-m22-legacy) | 443,520 | Yes | [20 / 67](verification/dependency-maps/m22/M22.html) | 780 | 5,351 |
-| [M₂₃](#sporadic-m23) | [Original concrete model](CATALOGUE.md#sporadic-m23-legacy) | 10,200,960 | Yes | [5 / 34](verification/dependency-maps/m23/M23.html) | 397 | 4,495 |
-| [M₂₄](#sporadic-m24) | [Original concrete model](CATALOGUE.md#sporadic-m24-legacy) | 244,823,040 | Yes | [77 / 581](verification/dependency-maps/m24/M24.html) | 4,183 | 4,585 |
-| [Co₁](#sporadic-co1) | [Original concrete model](CATALOGUE.md#sporadic-co1-legacy) | 4,157,776,806,543,360,000 | Yes | [148 / 766](verification/dependency-maps/co1/Co1.html) | 7,488 | 12,346 |
-| [Co₂](#sporadic-co2) | [Original concrete model](CATALOGUE.md#sporadic-co2-legacy) | 42,305,421,312,000 | Yes | [40 / 167](verification/dependency-maps/co2/Co2.html) | 1,809 | 14,072 |
-| [Co₃](#sporadic-co3) | [Original concrete model](CATALOGUE.md#sporadic-co3-legacy) | 495,766,656,000 | Yes | [85 / 341](verification/dependency-maps/co3/Co3.html) | 3,827 | 16,423 |
-| [McL](#sporadic-mcl) | [Original concrete model](CATALOGUE.md#sporadic-mcl-legacy) | 898,128,000 | Yes | [50 / 173](verification/dependency-maps/mcl/McL.html) | 2,083 | 16,377 |
-| [HS](#sporadic-hs) | [Original concrete model](CATALOGUE.md#sporadic-hs-legacy) | 44,352,000 | Yes | [31 / 146](verification/dependency-maps/hs/HS.html) | 1,213 | 14,776 |
-| [Suz](#sporadic-suz) | [Original concrete model](CATALOGUE.md#sporadic-suz-legacy) | 448,345,497,600 | Yes | [212 / 963](verification/dependency-maps/suz/Suz.html) | 11,283 | 21,374 |
-| [J₂](#sporadic-j2) | [Original concrete model](CATALOGUE.md#sporadic-j2-legacy) | 604,800 | Yes | [185 / 803](verification/dependency-maps/j2/J2.html) | 8,034 | 8,184 |
-| [Fi₂₂](#sporadic-fi22) | [Original concrete model](CATALOGUE.md#sporadic-fi22-legacy) | 64,561,751,654,400 | Yes | [36 / 115](verification/dependency-maps/fi22/Fi22.html) | 1,328 | 34,250 |
-| [Fi₂₃](#sporadic-fi23) | [Original concrete model](CATALOGUE.md#sporadic-fi23-legacy) | 4,089,470,473,293,004,800 | Yes | [36 / 115](verification/dependency-maps/fi23/Fi23.html) | 1,327 | 34,249 |
-| [Fi₂₄′](#sporadic-fi24prime) | [Original concrete model](CATALOGUE.md#sporadic-fi24prime-legacy) | 1,255,205,709,190,661,721,292,800 | Yes | [640 / 2509](verification/dependency-maps/fi24prime/Fi24Prime.html) | 28,275 | 33,397 |
-| [Ru](#sporadic-ru) | [Original concrete model](CATALOGUE.md#sporadic-ru-legacy) | 145,926,144,000 | Yes | [306 / 1777](verification/dependency-maps/ru/Ru.html) | 16,069 | 16,631 |
+| [Cₚ](#family-cyclic) | [Residues](CATALOGUE.md#family-cyclic-legacy) | $p$ | Yes, $p$ prime (abelian) | [1 / 18](verification/dependency-maps/cyclic/Cyclic.html) | 12 | 12 |
+| [Aₙ](#family-alternating) | [Permutation](CATALOGUE.md#family-alternating-legacy) | $n!/2$ | Yes, $n\ge5$; also cyclic simple at $n=3$ | [1 / 20](verification/dependency-maps/alternating/Alternating.html) | 7 | 7 |
+| [Aₙ(q)](#family-psl) | [Matrix](CATALOGUE.md#family-psl-matrix) · [Chevalley](CATALOGUE.md#family-psl-chevalley) | $\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-1)}{\gcd(n+1,q-1)}$ | Yes, $n\ge1$, except $(n,q)=(1,2),(1,3)$ | [8 / 82](verification/dependency-maps/psl/PSL.html) | 379 | 379 |
+| [²Aₙ(q)](#family-psu) | [Hermitian](CATALOGUE.md#family-psu-legacy) | $\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-(-1)^i)}{\gcd(n+1,q+1)}$ | Yes, $n\ge1$, except $(n,q)=(1,2),(1,3),(2,2)$ | [82 / 382](verification/dependency-maps/psu/PSU.html) | 4,313 | 4,658 |
+| [Bₙ(q)](#family-b) | [Quadratic](CATALOGUE.md#family-b-quadratic) · [Chevalley](CATALOGUE.md#family-b-chevalley) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | [139 / 549](verification/dependency-maps/b/B.html) | 5,653 | 8,013 |
+| [²B₂(q)](#family-suzuki) | [Matrix](CATALOGUE.md#family-suzuki-legacy) | $q^2(q^2+1)(q-1)$ | Yes, $q=2^{2m+1}$, $m\ge1$ | [33 / 139](verification/dependency-maps/suzukifamily/SuzukiFamily.html) | 1,136 | 1,137 |
+| [Cₙ(q)](#family-c) | [Symplectic](CATALOGUE.md#family-c-symplectic) · [Chevalley](CATALOGUE.md#family-c-chevalley) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | [39 / 177](verification/dependency-maps/c/C.html) | 1,747 | 1,747 |
+| [Dₙ(q)](#family-d) | [Quadratic](CATALOGUE.md#family-d-quadratic) · [Chevalley](CATALOGUE.md#family-d-chevalley) | $\displaystyle \frac{q^{n(n-1)}(q^n-1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n-1)}$ | Yes, $n\ge4$ (split form) | [130 / 538](verification/dependency-maps/d/D.html) | 5,408 | 5,408 |
+| [²Dₙ(q)](#family-2d) | [Quadratic](CATALOGUE.md#family-2d-legacy) | $\displaystyle \frac{q^{n(n-1)}(q^n+1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n+1)}$ | Yes, $n\ge4$; ranks $2,3$ separately proved | [133 / 556](verification/dependency-maps/minusd/MinusD.html) | 5,966 | 5,966 |
+| [³D₄(q)](#family-3d4) | [Triality](CATALOGUE.md#family-3d4-legacy) | $q^{12}(q^8+q^4+1)(q^6-1)(q^2-1)$ | Yes, every $q\ge2$ | [83 / 445](verification/dependency-maps/triality/Triality.html) | 3,471 | 3,494 |
+| [E₆(q)](#family-e6) | [Chevalley](CATALOGUE.md#family-e6-chevalley) | $\displaystyle \frac{q^{36}\prod_{d\in\{2,5,6,8,9,12\}}(q^d-1)}{\gcd(3,q-1)}$ | Yes, every q≥2 | [499 / 5962](verification/dependency-maps/e6/E6.html) | 37,707 | 37,768 |
+| [E₇(q)](#family-e7) | [Chevalley](CATALOGUE.md#family-e7-chevalley) | $\displaystyle \frac{q^{63}\prod_{d\in\{2,6,8,10,12,14,18\}}(q^d-1)}{\gcd(2,q-1)}$ | Yes, every q≥2 | [511 / 6236](verification/dependency-maps/e7/E7.html) | 38,713 | 38,774 |
+| [E₈(q)](#family-e8) | [Chevalley](CATALOGUE.md#family-e8-chevalley) | $q^{120}\prod_{d\in\{2,8,12,14,18,20,24,30\}}(q^d-1)$ | Yes, every q≥2 | [518 / 6321](verification/dependency-maps/e8/E8.html) | 39,417 | 39,478 |
+| [F₄(q)](#family-f4) | [Albert](CATALOGUE.md#family-f4-albert) · [Chevalley](CATALOGUE.md#family-f4-chevalley) | $q^{24}(q^{12}-1)(q^8-1)(q^6-1)(q^2-1)$ | Yes, every $q\ge2$ | [257 / 1185](verification/dependency-maps/f4/F4.html) | 11,416 | 12,312 |
+| [²F₄(2)′ (Tits)](#exceptional-tits) | [Lattice](CATALOGUE.md#exceptional-tits-legacy) | 17,971,200 | Yes | [60 / 392](verification/dependency-maps/tits/Tits.html) | 3,080 | 19,591 |
+| [G₂(q)](#family-g2) | [Octonion](CATALOGUE.md#family-g2-octonion) · [Chevalley](CATALOGUE.md#family-g2-chevalley) | $q^6(q^6-1)(q^2-1)$ | Yes, $q>2$ | [44 / 290](verification/dependency-maps/g2/G2.html) | 2,708 | 2,836 |
+| [²G₂(q)](#family-reeg2) | [Matrix](CATALOGUE.md#family-reeg2-legacy) | $q^3(q^3+1)(q-1)$ | Yes, $q=3^{2m+1}$, $m\ge1$ | [46 / 178](verification/dependency-maps/reeg2/ReeG2.html) | 2,239 | 2,250 |
+| [M₁₁](#sporadic-m11) | [Golay](CATALOGUE.md#sporadic-m11-legacy) | 7,920 | Yes | [5 / 40](verification/dependency-maps/m11/M11.html) | 393 | 5,868 |
+| [M₁₂](#sporadic-m12) | [Golay](CATALOGUE.md#sporadic-m12-legacy) | 95,040 | Yes | [18 / 89](verification/dependency-maps/m12/M12.html) | 855 | 5,961 |
+| [M₂₂](#sporadic-m22) | [Golay](CATALOGUE.md#sporadic-m22-legacy) | 443,520 | Yes | [20 / 67](verification/dependency-maps/m22/M22.html) | 780 | 5,351 |
+| [M₂₃](#sporadic-m23) | [Golay](CATALOGUE.md#sporadic-m23-legacy) | 10,200,960 | Yes | [5 / 34](verification/dependency-maps/m23/M23.html) | 397 | 4,495 |
+| [M₂₄](#sporadic-m24) | [Golay](CATALOGUE.md#sporadic-m24-legacy) | 244,823,040 | Yes | [77 / 581](verification/dependency-maps/m24/M24.html) | 4,183 | 4,585 |
+| [Co₁](#sporadic-co1) | [Leech](CATALOGUE.md#sporadic-co1-legacy) | 4,157,776,806,543,360,000 | Yes | [148 / 766](verification/dependency-maps/co1/Co1.html) | 7,488 | 12,346 |
+| [Co₂](#sporadic-co2) | [Leech](CATALOGUE.md#sporadic-co2-legacy) | 42,305,421,312,000 | Yes | [40 / 167](verification/dependency-maps/co2/Co2.html) | 1,809 | 14,072 |
+| [Co₃](#sporadic-co3) | [Leech](CATALOGUE.md#sporadic-co3-legacy) | 495,766,656,000 | Yes | [85 / 341](verification/dependency-maps/co3/Co3.html) | 3,827 | 16,423 |
+| [McL](#sporadic-mcl) | [Leech](CATALOGUE.md#sporadic-mcl-legacy) | 898,128,000 | Yes | [50 / 173](verification/dependency-maps/mcl/McL.html) | 2,083 | 16,377 |
+| [HS](#sporadic-hs) | [Leech](CATALOGUE.md#sporadic-hs-legacy) | 44,352,000 | Yes | [31 / 146](verification/dependency-maps/hs/HS.html) | 1,213 | 14,776 |
+| [Suz](#sporadic-suz) | [Eisenstein](CATALOGUE.md#sporadic-suz-legacy) | 448,345,497,600 | Yes | [212 / 963](verification/dependency-maps/suz/Suz.html) | 11,283 | 21,374 |
+| [J₂](#sporadic-j2) | [Icosian](CATALOGUE.md#sporadic-j2-legacy) | 604,800 | Yes | [185 / 803](verification/dependency-maps/j2/J2.html) | 8,034 | 8,184 |
+| [Fi₂₂](#sporadic-fi22) | [Rays](CATALOGUE.md#sporadic-fi22-legacy) | 64,561,751,654,400 | Yes | [36 / 115](verification/dependency-maps/fi22/Fi22.html) | 1,328 | 34,250 |
+| [Fi₂₃](#sporadic-fi23) | [Rays](CATALOGUE.md#sporadic-fi23-legacy) | 4,089,470,473,293,004,800 | Yes | [36 / 115](verification/dependency-maps/fi23/Fi23.html) | 1,327 | 34,249 |
+| [Fi₂₄′](#sporadic-fi24prime) | [Rays](CATALOGUE.md#sporadic-fi24prime-legacy) | 1,255,205,709,190,661,721,292,800 | Yes | [640 / 2509](verification/dependency-maps/fi24prime/Fi24Prime.html) | 28,275 | 33,397 |
+| [Ru](#sporadic-ru) | [Lattice](CATALOGUE.md#sporadic-ru-legacy) | 145,926,144,000 | Yes | [306 / 1777](verification/dependency-maps/ru/Ru.html) | 16,069 | 16,631 |
 
 Both line columns count required ATLAS declaration spans for order and simplicity
 together. Intrinsic counts stop at the documented reused-group boundaries; total

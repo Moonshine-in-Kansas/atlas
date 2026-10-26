@@ -1,34 +1,34 @@
-id,label,kind,constructions,identification_certificates,parameters,order,simplicity
-family.Cyclic,Cₚ,family,Original concrete model,"",p prime; card theorem m>0; simple iff m prime,$p$,"Yes, $p$ prime (abelian)"
-family.Alternating,Aₙ,family,Original concrete model,"",n>=5 for nonabelian simplicity; A3 cyclic simple; A4 not simple; n<=2 trivial,$n!/2$,"Yes, $n\ge5$; also cyclic simple at $n=3$"
-family.PSL,Aₙ(q),family,Projective special-linear matrix model; Chevalley root-operator model,Atlas.Chevalley.Catalogue.A_identification,"F arbitrary finite field; n>=2; simple iff (n,|F|) not (2,2),(2,3); prime-power existence p prime f>=1","$\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-1)}{\gcd(n+1,q-1)}$","Yes, $n\ge1$, except $(n,q)=(1,2),(1,3)$"
-family.PSU,²Aₙ(q),family,Original concrete model,"","F finite with q=|F|, K/F an actual quadratic extension; n is matrix dimension; stable catalogue: n>=3 and (n,q)!=(3,2)","$\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-(-1)^i)}{\gcd(n+1,q+1)}$","Yes, $n\ge1$, except $(n,q)=(1,2),(1,3),(2,2)$"
-family.B,Bₙ(q),family,Quadratic-form model; Chevalley root-operator model,Atlas.Chevalley.Catalogue.B_identification,"n is Lie rank, natural dimension 2*n+1; F arbitrary finite field, q=|F|; n>=1, every characteristic","$\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$","Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$"
-family.Suzuki,²B₂(q),family,Original concrete model,"","F finite of characteristic 2, q=|F|=2^(2m+1); simple family m>=1, hence q>=8",$q^2(q^2+1)(q-1)$,"Yes, $q=2^{2m+1}$, $m\ge1$"
-family.C,Cₙ(q),family,Symplectic matrix model; Chevalley root-operator model,Atlas.Chevalley.Catalogue.C_identification,"n is symplectic rank, dimension 2*n; F arbitrary finite field, q=|F|; simple exactly when (n=1 and q>3) or (n>=2 and (n,q)!=(2,2))","$\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$","Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$"
-family.D,Dₙ(q),family,Quadratic-form model; Chevalley root-operator model,Atlas.Chevalley.Catalogue.D_identification,"n is Lie rank, natural dimension 2*n; F arbitrary finite field, q=|F|; n>=4, every characteristic","$\displaystyle \frac{q^{n(n-1)}(q^n-1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n-1)}$","Yes, $n\ge4$ (split form)"
-family.2D,²Dₙ(q),family,Original concrete model,"","F arbitrary finite field, q=|F|; K/F actual quadratic extension; n is half-dimension/Lie rank; stable simple family n>=4, every characteristic","$\displaystyle \frac{q^{n(n-1)}(q^n+1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n+1)}$","Yes, $n\ge4$; ranks $2,3$ separately proved"
-family.3D4,³D₄(q),family,Original concrete model,"","F and K finite fields, Algebra F K, [K:F]=3; q=|F|, |K|=q^3; every prime power q>=2",$q^{12}(q^8+q^4+1)(q^6-1)(q^2-1)$,"Yes, every $q\ge2$"
-family.E6,E₆(q),family,Chevalley root-operator model,"",K an arbitrary finite field; q = Nat.card K; rank = 6; every finite characteristic,"$\displaystyle \frac{q^{36}\prod_{d\in\{2,5,6,8,9,12\}}(q^d-1)}{\gcd(3,q-1)}$","Yes, every q≥2"
-family.E7,E₇(q),family,Chevalley root-operator model,"",K an arbitrary finite field; q = Nat.card K; rank = 7; every finite characteristic,"$\displaystyle \frac{q^{63}\prod_{d\in\{2,6,8,10,12,14,18\}}(q^d-1)}{\gcd(2,q-1)}$","Yes, every q≥2"
-family.E8,E₈(q),family,Chevalley root-operator model,"",K an arbitrary finite field; q = Nat.card K; rank = 8; every finite characteristic,"$q^{120}\prod_{d\in\{2,8,12,14,18,20,24,30\}}(q^d-1)$","Yes, every q≥2"
-family.F4,F₄(q),family,Split-Albert model; Chevalley root-operator model,"","F is an arbitrary finite field, q=|F|; every prime power q>=2, including characteristics 2 and 3",$q^{24}(q^{12}-1)(q^8-1)(q^6-1)(q^2-1)$,"Yes, every $q\ge2$"
-exceptional.Tits,²F₄(2)′ (Tits),exceptional,Original concrete model,"","Fixed exceptional derived-Ree/Tits group ²F₄(2)′, constructed as the commutator subgroup of the inherited cross stabilizer","17,971,200",Yes
-family.G2,G₂(q),family,Split-octonion model; Chevalley root-operator model,"","F is an arbitrary finite field, q=|F|, including characteristics 2 and 3; simple exactly when q>2",$q^6(q^6-1)(q^2-1)$,"Yes, $q>2$"
-family.ReeG2,²G₂(q),family,Original concrete model,"","F finite of characteristic 3, q=|F|=3^(2m+1), m>=1; the public family starts at q=27",$q^3(q^3+1)(q-1)$,"Yes, $q=3^{2m+1}$, $m\ge1$"
-sporadic.M11,M₁₁,sporadic,Original concrete model,"",any constructed Golay dodecad D and a point of D; canonical standard choices also provided,"7,920",Yes
-sporadic.M12,M₁₂,sporadic,Original concrete model,"",any constructed Golay dodecad D; canonical standard choice provided,"95,040",Yes
-sporadic.M22,M₂₂,sporadic,Original concrete model,"",any coordinate a and distinct coordinate b,"443,520",Yes
-sporadic.M23,M₂₃,sporadic,Original concrete model,"",any coordinate a,"10,200,960",Yes
-sporadic.M24,M₂₄,sporadic,Original concrete model,"",fixed constructed carrier; no supplied order or simplicity certificate,"244,823,040",Yes
-sporadic.Co1,Co₁,sporadic,Original concrete model,"",fixed constructed carrier; no supplied order or simplicity certificate,"4,157,776,806,543,360,000",Yes
-sporadic.Co2,Co₂,sporadic,Original concrete model,"",fixed constructed carrier; no supplied order or simplicity certificate,"42,305,421,312,000",Yes
-sporadic.Co3,Co₃,sporadic,Original concrete model,"",fixed constructed carrier; no supplied order or simplicity certificate,"495,766,656,000",Yes
-sporadic.McL,McL,sporadic,Original concrete model,"",fixed constructed carrier; no supplied order or simplicity certificate,"898,128,000",Yes
-sporadic.HS,HS,sporadic,Original concrete model,"",fixed constructed carrier; no supplied order or simplicity certificate,"44,352,000",Yes
-sporadic.Suz,Suz,sporadic,Original concrete model,"",fixed constructed carrier; no supplied order or simplicity certificate,"448,345,497,600",Yes
-sporadic.J2,J₂,sporadic,Original concrete model,"",fixed constructed carrier; no supplied order or simplicity certificate,"604,800",Yes
-sporadic.Fi22,Fi₂₂,sporadic,Original concrete model,"",fixed constructed carrier; no supplied order or simplicity certificate,"64,561,751,654,400",Yes
-sporadic.Fi23,Fi₂₃,sporadic,Original concrete model,"",fixed constructed carrier; no supplied order or simplicity certificate,"4,089,470,473,293,004,800",Yes
-sporadic.Fi24Prime,Fi₂₄′,sporadic,Original concrete model,"",fixed constructed carrier; no supplied order or simplicity certificate,"1,255,205,709,190,661,721,292,800",Yes
-sporadic.Ru,Ru,sporadic,Original concrete model,"",fixed constructed lattice stabilizer quotient; no supplied order or simplicity certificate,"145,926,144,000",Yes
+id,label,kind,models,identification_certificates,parameters,order,simplicity
+family.Cyclic,Cₚ,family,Residues,"",p prime; card theorem m>0; simple iff m prime,$p$,"Yes, $p$ prime (abelian)"
+family.Alternating,Aₙ,family,Permutation,"",n>=5 for nonabelian simplicity; A3 cyclic simple; A4 not simple; n<=2 trivial,$n!/2$,"Yes, $n\ge5$; also cyclic simple at $n=3$"
+family.PSL,Aₙ(q),family,Matrix; Chevalley,Atlas.Chevalley.Catalogue.A_identification,"F arbitrary finite field; n>=2; simple iff (n,|F|) not (2,2),(2,3); prime-power existence p prime f>=1","$\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-1)}{\gcd(n+1,q-1)}$","Yes, $n\ge1$, except $(n,q)=(1,2),(1,3)$"
+family.PSU,²Aₙ(q),family,Hermitian,"","F finite with q=|F|, K/F an actual quadratic extension; n is matrix dimension; stable catalogue: n>=3 and (n,q)!=(3,2)","$\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-(-1)^i)}{\gcd(n+1,q+1)}$","Yes, $n\ge1$, except $(n,q)=(1,2),(1,3),(2,2)$"
+family.B,Bₙ(q),family,Quadratic; Chevalley,Atlas.Chevalley.Catalogue.B_identification,"n is Lie rank, natural dimension 2*n+1; F arbitrary finite field, q=|F|; n>=1, every characteristic","$\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$","Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$"
+family.Suzuki,²B₂(q),family,Matrix,"","F finite of characteristic 2, q=|F|=2^(2m+1); simple family m>=1, hence q>=8",$q^2(q^2+1)(q-1)$,"Yes, $q=2^{2m+1}$, $m\ge1$"
+family.C,Cₙ(q),family,Symplectic; Chevalley,Atlas.Chevalley.Catalogue.C_identification,"n is symplectic rank, dimension 2*n; F arbitrary finite field, q=|F|; simple exactly when (n=1 and q>3) or (n>=2 and (n,q)!=(2,2))","$\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$","Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$"
+family.D,Dₙ(q),family,Quadratic; Chevalley,Atlas.Chevalley.Catalogue.D_identification,"n is Lie rank, natural dimension 2*n; F arbitrary finite field, q=|F|; n>=4, every characteristic","$\displaystyle \frac{q^{n(n-1)}(q^n-1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n-1)}$","Yes, $n\ge4$ (split form)"
+family.2D,²Dₙ(q),family,Quadratic,"","F arbitrary finite field, q=|F|; K/F actual quadratic extension; n is half-dimension/Lie rank; stable simple family n>=4, every characteristic","$\displaystyle \frac{q^{n(n-1)}(q^n+1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n+1)}$","Yes, $n\ge4$; ranks $2,3$ separately proved"
+family.3D4,³D₄(q),family,Triality,"","F and K finite fields, Algebra F K, [K:F]=3; q=|F|, |K|=q^3; every prime power q>=2",$q^{12}(q^8+q^4+1)(q^6-1)(q^2-1)$,"Yes, every $q\ge2$"
+family.E6,E₆(q),family,Chevalley,"",K an arbitrary finite field; q = Nat.card K; rank = 6; every finite characteristic,"$\displaystyle \frac{q^{36}\prod_{d\in\{2,5,6,8,9,12\}}(q^d-1)}{\gcd(3,q-1)}$","Yes, every q≥2"
+family.E7,E₇(q),family,Chevalley,"",K an arbitrary finite field; q = Nat.card K; rank = 7; every finite characteristic,"$\displaystyle \frac{q^{63}\prod_{d\in\{2,6,8,10,12,14,18\}}(q^d-1)}{\gcd(2,q-1)}$","Yes, every q≥2"
+family.E8,E₈(q),family,Chevalley,"",K an arbitrary finite field; q = Nat.card K; rank = 8; every finite characteristic,"$q^{120}\prod_{d\in\{2,8,12,14,18,20,24,30\}}(q^d-1)$","Yes, every q≥2"
+family.F4,F₄(q),family,Albert; Chevalley,"","F is an arbitrary finite field, q=|F|; every prime power q>=2, including characteristics 2 and 3",$q^{24}(q^{12}-1)(q^8-1)(q^6-1)(q^2-1)$,"Yes, every $q\ge2$"
+exceptional.Tits,²F₄(2)′ (Tits),exceptional,Lattice,"","Fixed exceptional derived-Ree/Tits group ²F₄(2)′, constructed as the commutator subgroup of the inherited cross stabilizer","17,971,200",Yes
+family.G2,G₂(q),family,Octonion; Chevalley,"","F is an arbitrary finite field, q=|F|, including characteristics 2 and 3; simple exactly when q>2",$q^6(q^6-1)(q^2-1)$,"Yes, $q>2$"
+family.ReeG2,²G₂(q),family,Matrix,"","F finite of characteristic 3, q=|F|=3^(2m+1), m>=1; the public family starts at q=27",$q^3(q^3+1)(q-1)$,"Yes, $q=3^{2m+1}$, $m\ge1$"
+sporadic.M11,M₁₁,sporadic,Golay,"",any constructed Golay dodecad D and a point of D; canonical standard choices also provided,"7,920",Yes
+sporadic.M12,M₁₂,sporadic,Golay,"",any constructed Golay dodecad D; canonical standard choice provided,"95,040",Yes
+sporadic.M22,M₂₂,sporadic,Golay,"",any coordinate a and distinct coordinate b,"443,520",Yes
+sporadic.M23,M₂₃,sporadic,Golay,"",any coordinate a,"10,200,960",Yes
+sporadic.M24,M₂₄,sporadic,Golay,"",fixed constructed carrier; no supplied order or simplicity certificate,"244,823,040",Yes
+sporadic.Co1,Co₁,sporadic,Leech,"",fixed constructed carrier; no supplied order or simplicity certificate,"4,157,776,806,543,360,000",Yes
+sporadic.Co2,Co₂,sporadic,Leech,"",fixed constructed carrier; no supplied order or simplicity certificate,"42,305,421,312,000",Yes
+sporadic.Co3,Co₃,sporadic,Leech,"",fixed constructed carrier; no supplied order or simplicity certificate,"495,766,656,000",Yes
+sporadic.McL,McL,sporadic,Leech,"",fixed constructed carrier; no supplied order or simplicity certificate,"898,128,000",Yes
+sporadic.HS,HS,sporadic,Leech,"",fixed constructed carrier; no supplied order or simplicity certificate,"44,352,000",Yes
+sporadic.Suz,Suz,sporadic,Eisenstein,"",fixed constructed carrier; no supplied order or simplicity certificate,"448,345,497,600",Yes
+sporadic.J2,J₂,sporadic,Icosian,"",fixed constructed carrier; no supplied order or simplicity certificate,"604,800",Yes
+sporadic.Fi22,Fi₂₂,sporadic,Rays,"",fixed constructed carrier; no supplied order or simplicity certificate,"64,561,751,654,400",Yes
+sporadic.Fi23,Fi₂₃,sporadic,Rays,"",fixed constructed carrier; no supplied order or simplicity certificate,"4,089,470,473,293,004,800",Yes
+sporadic.Fi24Prime,Fi₂₄′,sporadic,Rays,"",fixed constructed carrier; no supplied order or simplicity certificate,"1,255,205,709,190,661,721,292,800",Yes
+sporadic.Ru,Ru,sporadic,Lattice,"",fixed constructed lattice stabilizer quotient; no supplied order or simplicity certificate,"145,926,144,000",Yes
