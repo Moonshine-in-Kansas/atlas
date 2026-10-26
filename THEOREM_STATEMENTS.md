@@ -8,6 +8,8 @@ for the distinction between this cached-artifact audit and a fresh proof rebuild
 
 ## Cₚ
 
+Primary construction: Original concrete model.
+
 ### Order
 
 [Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
@@ -34,6 +36,8 @@ Atlas.Families.Cyclic.isSimpleGroup : ∀ (p : Nat),
 <a id="family-alternating"></a>
 
 ## Aₙ
+
+Primary construction: Original concrete model.
 
 ### Order
 
@@ -62,6 +66,8 @@ Atlas.Families.Alternating.isSimpleGroup : ∀ (n : Nat),
 <a id="family-psl"></a>
 
 ## Aₙ(q)
+
+Primary construction: Projective special-linear matrix model.
 
 ### Order
 
@@ -128,9 +134,57 @@ Atlas.Families.Alternating.isSimpleGroup : ∀ (n : Nat),
             (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))))
 ```
 
+### Chevalley root-operator model
+
+Order: [compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.A_order.{u_1} : ∀ (r : Nat)
+  (hr : @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) r) (K : Type u_1)
+  [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.AFieldDomain.{u_1} r hr K inst →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.Chevalley.Catalogue.A.{u_1} r hr K inst))
+      (@HDiv.hDiv.{0, 0, 0} Nat Nat Nat (@instHDiv.{0} Nat Nat.instDiv)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+            (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) (Nat.card.{u_1} K)
+            (@HDiv.hDiv.{0, 0, 0} Nat Nat Nat (@instHDiv.{0} Nat Nat.instDiv)
+              (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat) r
+                (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) r
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (∏ d ∈ Finset.range r,
+            @HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+              (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                (Nat.card.{u_1} K)
+                (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) d
+                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        ((@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) r
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))).gcd
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) (Nat.card.{u_1} K)
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+```
+
+Simple: [compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.A_simple.{u_1} : ∀ (r : Nat)
+  (hr : @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) r) (K : Type u_1)
+  [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.AGoodDomain.{u_1} r hr K inst →
+    @IsSimpleGroup.{u_1} (@Atlas.Chevalley.Catalogue.A.{u_1} r hr K inst)
+      (@Atlas.Chevalley.Catalogue.AGroup.{u_1} r hr K inst)
+```
+
+[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-a-to-legacy-v1) · [`Atlas.Chevalley.Catalogue.A_identification`](Atlas/LinearGroups/Chevalley/Catalogue/ACIdentification.lean#L24).
+
 <a id="family-psu"></a>
 
 ## ²Aₙ(q)
+
+Primary construction: Original concrete model.
 
 ### Order
 
@@ -216,6 +270,8 @@ Atlas.Families.Alternating.isSimpleGroup : ∀ (n : Nat),
 
 ## Bₙ(q)
 
+Primary construction: Quadratic-form model.
+
 ### Order
 
 [Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
@@ -257,9 +313,68 @@ Atlas.Families.Alternating.isSimpleGroup : ∀ (n : Nat),
         (@Atlas.Orthogonal.formB.{u_1} n F (@Field.toCommRing.{u_1} F inst)))
 ```
 
+### Chevalley root-operator model
+
+Order: [compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.B_order.{u_1} : ∀ (n : Nat)
+  (hn :
+    @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+      (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+  (K : Type u_1) [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.BFieldDomain.{u_1} n hn K inst →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.Chevalley.Catalogue.B.{u_1} n hn K inst))
+      (@HDiv.hDiv.{0, 0, 0} Nat Nat Nat (@instHDiv.{0} Nat Nat.instDiv)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+            (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) (Nat.card.{u_1} K)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (∏
+            d ∈
+              Finset.range
+                (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))),
+            @HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+              (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                (Nat.card.{u_1} K)
+                (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+                  (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) d
+                    (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (Nat.gcd (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) (Nat.card.{u_1} K)
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+```
+
+Simple: [compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.B_simple.{u_1} : ∀ (n : Nat)
+  (hn :
+    @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+      (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+  (K : Type u_1) [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.BGoodDomain.{u_1} n hn K inst →
+    @IsSimpleGroup.{u_1} (@Atlas.Chevalley.Catalogue.B.{u_1} n hn K inst)
+      (@Atlas.Chevalley.Catalogue.BGroup.{u_1} n hn K inst)
+```
+
+[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-b-to-legacy-v1) · [`Atlas.Chevalley.Catalogue.B_identification`](Atlas/LinearGroups/Chevalley/Catalogue/BIdentification.lean#L16).
+
 <a id="family-suzuki"></a>
 
 ## ²B₂(q)
+
+Primary construction: Original concrete model.
 
 ### Order
 
@@ -333,6 +448,8 @@ Atlas.Families.Alternating.isSimpleGroup : ∀ (n : Nat),
 
 ## Cₙ(q)
 
+Primary construction: Symplectic matrix model.
+
 ### Order
 
 [Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
@@ -365,9 +482,68 @@ Atlas.Families.Alternating.isSimpleGroup : ∀ (n : Nat),
         ⋯)
 ```
 
+### Chevalley root-operator model
+
+Order: [compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.C_order.{u_1} : ∀ (n : Nat)
+  (hn :
+    @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+      (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+  (K : Type u_1) [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.CFieldDomain.{u_1} n hn K inst →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.Chevalley.Catalogue.C.{u_1} n hn K inst))
+      (@HDiv.hDiv.{0, 0, 0} Nat Nat Nat (@instHDiv.{0} Nat Nat.instDiv)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+            (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) (Nat.card.{u_1} K)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (∏
+            d ∈
+              Finset.range
+                (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))),
+            @HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+              (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                (Nat.card.{u_1} K)
+                (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+                  (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) d
+                    (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (Nat.gcd (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) (Nat.card.{u_1} K)
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+```
+
+Simple: [compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.C_simple.{u_1} : ∀ (n : Nat)
+  (hn :
+    @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+      (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+  (K : Type u_1) [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.CGoodDomain.{u_1} n hn K inst →
+    @IsSimpleGroup.{u_1} (@Atlas.Chevalley.Catalogue.C.{u_1} n hn K inst)
+      (@Atlas.Chevalley.Catalogue.CGroup.{u_1} n hn K inst)
+```
+
+[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-c-to-legacy-v1) · [`Atlas.Chevalley.Catalogue.C_identification`](Atlas/LinearGroups/Chevalley/Catalogue/ACIdentification.lean#L31).
+
 <a id="family-d"></a>
 
 ## Dₙ(q)
+
+Primary construction: Quadratic-form model.
 
 ### Order
 
@@ -400,9 +576,70 @@ Atlas.Families.Alternating.isSimpleGroup : ∀ (n : Nat),
         (@Atlas.Orthogonal.formD.{u_1} n F (@Field.toCommRing.{u_1} F inst)))
 ```
 
+### Chevalley root-operator model
+
+Order: [compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.D_order.{u_1} : ∀ (r : Nat)
+  (hr : @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) r) (K : Type u_1)
+  [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.DFieldDomain.{u_1} r hr K inst →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.Chevalley.Catalogue.D.{u_1} r hr K inst))
+      (@HDiv.hDiv.{0, 0, 0} Nat Nat Nat (@instHDiv.{0} Nat Nat.instDiv)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (Nat.card.{u_1} K)
+              (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat) r
+                (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) r
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+            (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+              (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                (Nat.card.{u_1} K) r)
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+          (∏
+            d ∈
+              Finset.range
+                (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) r
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))),
+            @HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+              (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                (Nat.card.{u_1} K)
+                (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+                  (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) d
+                    (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (Nat.gcd (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (Nat.card.{u_1} K) r)
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+```
+
+Simple: [compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.D_simple.{u_1} : ∀ (r : Nat)
+  (hr : @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) r) (K : Type u_1)
+  [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.DGoodDomain.{u_1} r hr K inst →
+    @IsSimpleGroup.{u_1} (@Atlas.Chevalley.Catalogue.D.{u_1} r hr K inst)
+      (@Atlas.Chevalley.Catalogue.DGroup.{u_1} r hr K inst)
+```
+
+[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-d-to-legacy-v1) · [`Atlas.Chevalley.Catalogue.D_identification`](Atlas/LinearGroups/Chevalley/Catalogue/DIdentification.lean#L16).
+
 <a id="family-2d"></a>
 
 ## ²Dₙ(q)
+
+Primary construction: Original concrete model.
 
 ### Order
 
@@ -527,6 +764,8 @@ Atlas.Families.Alternating.isSimpleGroup : ∀ (n : Nat),
 <a id="family-3d4"></a>
 
 ## ³D₄(q)
+
+Primary construction: Original concrete model.
 
 ### Order
 
@@ -688,6 +927,8 @@ Atlas.Triality.simple.{u_1,
 
 ## E₆(q)
 
+Primary construction: Chevalley root-operator model.
+
 ### Order
 
 [Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
@@ -754,6 +995,8 @@ Atlas.Chevalley.Catalogue.E6_simple.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_
 <a id="family-e7"></a>
 
 ## E₇(q)
+
+Primary construction: Chevalley root-operator model.
 
 ### Order
 
@@ -827,6 +1070,8 @@ Atlas.Chevalley.Catalogue.E7_simple.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_
 <a id="family-e8"></a>
 
 ## E₈(q)
+
+Primary construction: Chevalley root-operator model.
 
 ### Order
 
@@ -902,6 +1147,8 @@ Atlas.Chevalley.Catalogue.E8_simple.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_
 <a id="family-f4"></a>
 
 ## F₄(q)
+
+Primary construction: Split-Albert model.
 
 ### Order
 
@@ -1097,9 +1344,15 @@ Atlas.Chevalley.Catalogue.E8_simple.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_
       (@Atlas.F4.Model.{u_1} F inst))
 ```
 
+### Chevalley root-operator model
+
+[Concrete-model Lean certificate](verification/existence/2026-10-25-draft/Chevalley-F4/Solution.lean) · [exact mathematical specification](verification/existence/2026-10-25-draft/Chevalley-F4/Challenge.lean). The separate catalogue registration is pending.
+
 <a id="exceptional-tits"></a>
 
 ## ²F₄(2)′ (Tits)
+
+Primary construction: Original concrete model.
 
 ### Order
 
@@ -1143,6 +1396,8 @@ Atlas.Tits.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Tits.Model
 <a id="family-g2"></a>
 
 ## G₂(q)
+
+Primary construction: Split-octonion model.
 
 ### Order
 
@@ -1239,9 +1494,15 @@ Atlas.Tits.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Tits.Model
         (@Atlas.G2.Model.{u_1} K inst))
 ```
 
+### Chevalley root-operator model
+
+[Concrete-model Lean certificate](verification/existence/2026-10-25-draft/Chevalley-G2/Solution.lean) · [exact mathematical specification](verification/existence/2026-10-25-draft/Chevalley-G2/Challenge.lean). The separate catalogue registration is pending.
+
 <a id="family-reeg2"></a>
 
 ## ²G₂(q)
+
+Primary construction: Original concrete model.
 
 ### Order
 
@@ -1311,6 +1572,8 @@ Atlas.Tits.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Tits.Model
 
 ## M₁₁
 
+Primary construction: Original concrete model.
+
 ### Order
 
 [Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
@@ -1339,6 +1602,8 @@ Atlas.Sporadic.Mathieu11.isSimpleGroup : ∀ (D : Atlas.Codes.Dodecad) (a : Atla
 
 ## M₁₂
 
+Primary construction: Original concrete model.
+
 ### Order
 
 [Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
@@ -1364,6 +1629,8 @@ Atlas.Sporadic.Mathieu12.isSimpleGroup : ∀ (D : Atlas.Codes.Dodecad),
 <a id="sporadic-m22"></a>
 
 ## M₂₂
+
+Primary construction: Original concrete model.
 
 ### Order
 
@@ -1393,6 +1660,8 @@ Atlas.Sporadic.Mathieu22.isSimpleGroup : ∀ (a : Atlas.Codes.Omega) (b : ↥(At
 
 ## M₂₃
 
+Primary construction: Original concrete model.
+
 ### Order
 
 [Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
@@ -1419,6 +1688,8 @@ Atlas.Sporadic.Mathieu23.isSimpleGroup : ∀ (a : Atlas.Codes.Omega),
 
 ## M₂₄
 
+Primary construction: Original concrete model.
+
 ### Order
 
 [Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
@@ -1441,6 +1712,8 @@ Atlas.Sporadic.Mathieu24.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Mathi
 <a id="sporadic-co1"></a>
 
 ## Co₁
+
+Primary construction: Original concrete model.
 
 ### Order
 
@@ -1504,6 +1777,8 @@ Atlas.Sporadic.Conway1.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Conway1
 
 ## Co₂
 
+Primary construction: Original concrete model.
+
 ### Order
 
 [Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
@@ -1566,6 +1841,8 @@ Atlas.Sporadic.Conway2.isSimpleGroup : @IsSimpleGroup.{0} (↥Atlas.Sporadic.Con
 
 ## Co₃
 
+Primary construction: Original concrete model.
+
 ### Order
 
 [Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
@@ -1627,6 +1904,8 @@ Atlas.Sporadic.Conway3.isSimpleGroup : @IsSimpleGroup.{0} (↥Atlas.Sporadic.Con
 <a id="sporadic-mcl"></a>
 
 ## McL
+
+Primary construction: Original concrete model.
 
 ### Order
 
@@ -1692,6 +1971,8 @@ Atlas.Sporadic.McLaughlin.isSimpleGroup : @IsSimpleGroup.{0} (↥Atlas.Sporadic.
 <a id="sporadic-hs"></a>
 
 ## HS
+
+Primary construction: Original concrete model.
 
 ### Order
 
@@ -1759,6 +2040,8 @@ Atlas.Sporadic.HigmanSims.isSimpleGroup : @IsSimpleGroup.{0} (↥Atlas.Sporadic.
 
 ## Suz
 
+Primary construction: Original concrete model.
+
 ### Order
 
 [Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
@@ -1823,6 +2106,8 @@ Atlas.Sporadic.Suzuki.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Suzuki.M
 <a id="sporadic-j2"></a>
 
 ## J₂
+
+Primary construction: Original concrete model.
 
 ### Order
 
@@ -1923,6 +2208,8 @@ Atlas.Sporadic.Janko2.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Janko2.M
 
 ## Fi₂₂
 
+Primary construction: Original concrete model.
+
 ### Order
 
 [Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
@@ -1952,6 +2239,8 @@ Atlas.Sporadic.Fischer22.simple : @IsSimpleGroup.{0} Atlas.Sporadic.Fischer22.Mo
 <a id="sporadic-fi23"></a>
 
 ## Fi₂₃
+
+Primary construction: Original concrete model.
 
 ### Order
 
@@ -1983,6 +2272,8 @@ Atlas.Sporadic.Fischer23.simple : @IsSimpleGroup.{0} Atlas.Sporadic.Fischer23.Mo
 
 ## Fi₂₄′
 
+Primary construction: Original concrete model.
+
 ### Order
 
 [Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
@@ -2010,6 +2301,8 @@ Atlas.Sporadic.Fischer24Prime.simple : @IsSimpleGroup.{0} (↥Atlas.Sporadic.Fis
 <a id="sporadic-ru"></a>
 
 ## Ru
+
+Primary construction: Original concrete model.
 
 ### Order
 

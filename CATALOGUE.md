@@ -9,41 +9,41 @@ and [proved comparisons](COMPARISON.md). Release acceptance remains pending.
 Here q is the base-field size and n is Lie rank: Aₙ(q)=PSLₙ₊₁(q),
 ²Aₙ(q)=PSUₙ₊₁(q). Exact dimension conventions are retained below.
 
-| Group or family | Order | Proven simplicity | Lean files / theorems | Intrinsic lines | Total dependency lines |
-|---|---|---|---|---:|---:|
-| [Cₚ](#family-cyclic) | $p$ | Yes, $p$ prime (abelian) | [1 / 18](verification/dependency-maps/cyclic/Cyclic.html) | 12 | 12 |
-| [Aₙ](#family-alternating) | $n!/2$ | Yes, $n\ge5$; also cyclic simple at $n=3$ | [1 / 20](verification/dependency-maps/alternating/Alternating.html) | 7 | 7 |
-| [Aₙ(q)](#family-psl) | $\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-1)}{\gcd(n+1,q-1)}$ | Yes, $n\ge1$, except $(n,q)=(1,2),(1,3)$ | [8 / 82](verification/dependency-maps/psl/PSL.html) | 379 | 379 |
-| [²Aₙ(q)](#family-psu) | $\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-(-1)^i)}{\gcd(n+1,q+1)}$ | Yes, $n\ge1$, except $(n,q)=(1,2),(1,3),(2,2)$ | [82 / 382](verification/dependency-maps/psu/PSU.html) | 4,313 | 4,658 |
-| [Bₙ(q)](#family-b) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | [139 / 549](verification/dependency-maps/b/B.html) | 5,653 | 8,013 |
-| [²B₂(q)](#family-suzuki) | $q^2(q^2+1)(q-1)$ | Yes, $q=2^{2m+1}$, $m\ge1$ | [33 / 139](verification/dependency-maps/suzukifamily/SuzukiFamily.html) | 1,136 | 1,137 |
-| [Cₙ(q)](#family-c) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | [39 / 177](verification/dependency-maps/c/C.html) | 1,747 | 1,747 |
-| [Dₙ(q)](#family-d) | $\displaystyle \frac{q^{n(n-1)}(q^n-1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n-1)}$ | Yes, $n\ge4$ (split form) | [130 / 538](verification/dependency-maps/d/D.html) | 5,408 | 5,408 |
-| [²Dₙ(q)](#family-2d) | $\displaystyle \frac{q^{n(n-1)}(q^n+1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n+1)}$ | Yes, $n\ge4$; ranks $2,3$ separately proved | [133 / 556](verification/dependency-maps/minusd/MinusD.html) | 5,966 | 5,966 |
-| [³D₄(q)](#family-3d4) | $q^{12}(q^8+q^4+1)(q^6-1)(q^2-1)$ | Yes, every $q\ge2$ | [83 / 445](verification/dependency-maps/triality/Triality.html) | 3,471 | 3,494 |
-| [E₆(q)](#family-e6) | $\displaystyle \frac{q^{36}\prod_{d\in\{2,5,6,8,9,12\}}(q^d-1)}{\gcd(3,q-1)}$ | Yes, every q≥2 | [499 / 5962](verification/dependency-maps/e6/E6.html) | 37,707 | 37,768 |
-| [E₇(q)](#family-e7) | $\displaystyle \frac{q^{63}\prod_{d\in\{2,6,8,10,12,14,18\}}(q^d-1)}{\gcd(2,q-1)}$ | Yes, every q≥2 | [511 / 6236](verification/dependency-maps/e7/E7.html) | 38,713 | 38,774 |
-| [E₈(q)](#family-e8) | $q^{120}\prod_{d\in\{2,8,12,14,18,20,24,30\}}(q^d-1)$ | Yes, every q≥2 | [518 / 6321](verification/dependency-maps/e8/E8.html) | 39,417 | 39,478 |
-| [F₄(q)](#family-f4) | $q^{24}(q^{12}-1)(q^8-1)(q^6-1)(q^2-1)$ | Yes, every $q\ge2$ | [257 / 1185](verification/dependency-maps/f4/F4.html) | 11,416 | 12,312 |
-| [²F₄(2)′ (Tits)](#exceptional-tits) | 17,971,200 | Yes | [60 / 392](verification/dependency-maps/tits/Tits.html) | 3,080 | 19,591 |
-| [G₂(q)](#family-g2) | $q^6(q^6-1)(q^2-1)$ | Yes, $q>2$ | [44 / 290](verification/dependency-maps/g2/G2.html) | 2,708 | 2,836 |
-| [²G₂(q)](#family-reeg2) | $q^3(q^3+1)(q-1)$ | Yes, $q=3^{2m+1}$, $m\ge1$ | [46 / 178](verification/dependency-maps/reeg2/ReeG2.html) | 2,239 | 2,250 |
-| [M₁₁](#sporadic-m11) | 7,920 | Yes | [5 / 40](verification/dependency-maps/m11/M11.html) | 393 | 5,868 |
-| [M₁₂](#sporadic-m12) | 95,040 | Yes | [18 / 89](verification/dependency-maps/m12/M12.html) | 855 | 5,961 |
-| [M₂₂](#sporadic-m22) | 443,520 | Yes | [20 / 67](verification/dependency-maps/m22/M22.html) | 780 | 5,351 |
-| [M₂₃](#sporadic-m23) | 10,200,960 | Yes | [5 / 34](verification/dependency-maps/m23/M23.html) | 397 | 4,495 |
-| [M₂₄](#sporadic-m24) | 244,823,040 | Yes | [77 / 581](verification/dependency-maps/m24/M24.html) | 4,183 | 4,585 |
-| [Co₁](#sporadic-co1) | 4,157,776,806,543,360,000 | Yes | [148 / 766](verification/dependency-maps/co1/Co1.html) | 7,488 | 12,346 |
-| [Co₂](#sporadic-co2) | 42,305,421,312,000 | Yes | [40 / 167](verification/dependency-maps/co2/Co2.html) | 1,809 | 14,072 |
-| [Co₃](#sporadic-co3) | 495,766,656,000 | Yes | [85 / 341](verification/dependency-maps/co3/Co3.html) | 3,827 | 16,423 |
-| [McL](#sporadic-mcl) | 898,128,000 | Yes | [50 / 173](verification/dependency-maps/mcl/McL.html) | 2,083 | 16,377 |
-| [HS](#sporadic-hs) | 44,352,000 | Yes | [31 / 146](verification/dependency-maps/hs/HS.html) | 1,213 | 14,776 |
-| [Suz](#sporadic-suz) | 448,345,497,600 | Yes | [212 / 963](verification/dependency-maps/suz/Suz.html) | 11,283 | 21,374 |
-| [J₂](#sporadic-j2) | 604,800 | Yes | [185 / 803](verification/dependency-maps/j2/J2.html) | 8,034 | 8,184 |
-| [Fi₂₂](#sporadic-fi22) | 64,561,751,654,400 | Yes | [36 / 115](verification/dependency-maps/fi22/Fi22.html) | 1,328 | 34,250 |
-| [Fi₂₃](#sporadic-fi23) | 4,089,470,473,293,004,800 | Yes | [36 / 115](verification/dependency-maps/fi23/Fi23.html) | 1,327 | 34,249 |
-| [Fi₂₄′](#sporadic-fi24prime) | 1,255,205,709,190,661,721,292,800 | Yes | [640 / 2509](verification/dependency-maps/fi24prime/Fi24Prime.html) | 28,275 | 33,397 |
-| [Ru](#sporadic-ru) | 145,926,144,000 | Yes | [306 / 1777](verification/dependency-maps/ru/Ru.html) | 16,069 | 16,631 |
+| Group or family | Constructions and identification certificates | Order | Proven simplicity | Lean files / theorems | Intrinsic lines | Total dependency lines |
+|---|---|---|---|---|---:|---:|
+| [Cₚ](#family-cyclic) | [Original concrete model](CATALOGUE.md#family-cyclic-legacy) | $p$ | Yes, $p$ prime (abelian) | [1 / 18](verification/dependency-maps/cyclic/Cyclic.html) | 12 | 12 |
+| [Aₙ](#family-alternating) | [Original concrete model](CATALOGUE.md#family-alternating-legacy) | $n!/2$ | Yes, $n\ge5$; also cyclic simple at $n=3$ | [1 / 20](verification/dependency-maps/alternating/Alternating.html) | 7 | 7 |
+| [Aₙ(q)](#family-psl) | [Projective special-linear matrix model](CATALOGUE.md#family-psl-matrix)<br>[Chevalley root-operator model](CATALOGUE.md#family-psl-chevalley)<br>[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-a-to-legacy-v1) | $\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-1)}{\gcd(n+1,q-1)}$ | Yes, $n\ge1$, except $(n,q)=(1,2),(1,3)$ | [8 / 82](verification/dependency-maps/psl/PSL.html) | 379 | 379 |
+| [²Aₙ(q)](#family-psu) | [Original concrete model](CATALOGUE.md#family-psu-legacy) | $\displaystyle \frac{q^{n(n+1)/2}\prod_{i=2}^{n+1}(q^i-(-1)^i)}{\gcd(n+1,q+1)}$ | Yes, $n\ge1$, except $(n,q)=(1,2),(1,3),(2,2)$ | [82 / 382](verification/dependency-maps/psu/PSU.html) | 4,313 | 4,658 |
+| [Bₙ(q)](#family-b) | [Quadratic-form model](CATALOGUE.md#family-b-quadratic)<br>[Chevalley root-operator model](CATALOGUE.md#family-b-chevalley)<br>[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-b-to-legacy-v1) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | [139 / 549](verification/dependency-maps/b/B.html) | 5,653 | 8,013 |
+| [²B₂(q)](#family-suzuki) | [Original concrete model](CATALOGUE.md#family-suzuki-legacy) | $q^2(q^2+1)(q-1)$ | Yes, $q=2^{2m+1}$, $m\ge1$ | [33 / 139](verification/dependency-maps/suzukifamily/SuzukiFamily.html) | 1,136 | 1,137 |
+| [Cₙ(q)](#family-c) | [Symplectic matrix model](CATALOGUE.md#family-c-symplectic)<br>[Chevalley root-operator model](CATALOGUE.md#family-c-chevalley)<br>[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-c-to-legacy-v1) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | [39 / 177](verification/dependency-maps/c/C.html) | 1,747 | 1,747 |
+| [Dₙ(q)](#family-d) | [Quadratic-form model](CATALOGUE.md#family-d-quadratic)<br>[Chevalley root-operator model](CATALOGUE.md#family-d-chevalley)<br>[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-d-to-legacy-v1) | $\displaystyle \frac{q^{n(n-1)}(q^n-1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n-1)}$ | Yes, $n\ge4$ (split form) | [130 / 538](verification/dependency-maps/d/D.html) | 5,408 | 5,408 |
+| [²Dₙ(q)](#family-2d) | [Original concrete model](CATALOGUE.md#family-2d-legacy) | $\displaystyle \frac{q^{n(n-1)}(q^n+1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n+1)}$ | Yes, $n\ge4$; ranks $2,3$ separately proved | [133 / 556](verification/dependency-maps/minusd/MinusD.html) | 5,966 | 5,966 |
+| [³D₄(q)](#family-3d4) | [Original concrete model](CATALOGUE.md#family-3d4-legacy) | $q^{12}(q^8+q^4+1)(q^6-1)(q^2-1)$ | Yes, every $q\ge2$ | [83 / 445](verification/dependency-maps/triality/Triality.html) | 3,471 | 3,494 |
+| [E₆(q)](#family-e6) | [Chevalley root-operator model](CATALOGUE.md#family-e6-chevalley) | $\displaystyle \frac{q^{36}\prod_{d\in\{2,5,6,8,9,12\}}(q^d-1)}{\gcd(3,q-1)}$ | Yes, every q≥2 | [499 / 5962](verification/dependency-maps/e6/E6.html) | 37,707 | 37,768 |
+| [E₇(q)](#family-e7) | [Chevalley root-operator model](CATALOGUE.md#family-e7-chevalley) | $\displaystyle \frac{q^{63}\prod_{d\in\{2,6,8,10,12,14,18\}}(q^d-1)}{\gcd(2,q-1)}$ | Yes, every q≥2 | [511 / 6236](verification/dependency-maps/e7/E7.html) | 38,713 | 38,774 |
+| [E₈(q)](#family-e8) | [Chevalley root-operator model](CATALOGUE.md#family-e8-chevalley) | $q^{120}\prod_{d\in\{2,8,12,14,18,20,24,30\}}(q^d-1)$ | Yes, every q≥2 | [518 / 6321](verification/dependency-maps/e8/E8.html) | 39,417 | 39,478 |
+| [F₄(q)](#family-f4) | [Split-Albert model](CATALOGUE.md#family-f4-albert)<br>[Chevalley root-operator model](CATALOGUE.md#family-f4-chevalley) | $q^{24}(q^{12}-1)(q^8-1)(q^6-1)(q^2-1)$ | Yes, every $q\ge2$ | [257 / 1185](verification/dependency-maps/f4/F4.html) | 11,416 | 12,312 |
+| [²F₄(2)′ (Tits)](#exceptional-tits) | [Original concrete model](CATALOGUE.md#exceptional-tits-legacy) | 17,971,200 | Yes | [60 / 392](verification/dependency-maps/tits/Tits.html) | 3,080 | 19,591 |
+| [G₂(q)](#family-g2) | [Split-octonion model](CATALOGUE.md#family-g2-octonion)<br>[Chevalley root-operator model](CATALOGUE.md#family-g2-chevalley) | $q^6(q^6-1)(q^2-1)$ | Yes, $q>2$ | [44 / 290](verification/dependency-maps/g2/G2.html) | 2,708 | 2,836 |
+| [²G₂(q)](#family-reeg2) | [Original concrete model](CATALOGUE.md#family-reeg2-legacy) | $q^3(q^3+1)(q-1)$ | Yes, $q=3^{2m+1}$, $m\ge1$ | [46 / 178](verification/dependency-maps/reeg2/ReeG2.html) | 2,239 | 2,250 |
+| [M₁₁](#sporadic-m11) | [Original concrete model](CATALOGUE.md#sporadic-m11-legacy) | 7,920 | Yes | [5 / 40](verification/dependency-maps/m11/M11.html) | 393 | 5,868 |
+| [M₁₂](#sporadic-m12) | [Original concrete model](CATALOGUE.md#sporadic-m12-legacy) | 95,040 | Yes | [18 / 89](verification/dependency-maps/m12/M12.html) | 855 | 5,961 |
+| [M₂₂](#sporadic-m22) | [Original concrete model](CATALOGUE.md#sporadic-m22-legacy) | 443,520 | Yes | [20 / 67](verification/dependency-maps/m22/M22.html) | 780 | 5,351 |
+| [M₂₃](#sporadic-m23) | [Original concrete model](CATALOGUE.md#sporadic-m23-legacy) | 10,200,960 | Yes | [5 / 34](verification/dependency-maps/m23/M23.html) | 397 | 4,495 |
+| [M₂₄](#sporadic-m24) | [Original concrete model](CATALOGUE.md#sporadic-m24-legacy) | 244,823,040 | Yes | [77 / 581](verification/dependency-maps/m24/M24.html) | 4,183 | 4,585 |
+| [Co₁](#sporadic-co1) | [Original concrete model](CATALOGUE.md#sporadic-co1-legacy) | 4,157,776,806,543,360,000 | Yes | [148 / 766](verification/dependency-maps/co1/Co1.html) | 7,488 | 12,346 |
+| [Co₂](#sporadic-co2) | [Original concrete model](CATALOGUE.md#sporadic-co2-legacy) | 42,305,421,312,000 | Yes | [40 / 167](verification/dependency-maps/co2/Co2.html) | 1,809 | 14,072 |
+| [Co₃](#sporadic-co3) | [Original concrete model](CATALOGUE.md#sporadic-co3-legacy) | 495,766,656,000 | Yes | [85 / 341](verification/dependency-maps/co3/Co3.html) | 3,827 | 16,423 |
+| [McL](#sporadic-mcl) | [Original concrete model](CATALOGUE.md#sporadic-mcl-legacy) | 898,128,000 | Yes | [50 / 173](verification/dependency-maps/mcl/McL.html) | 2,083 | 16,377 |
+| [HS](#sporadic-hs) | [Original concrete model](CATALOGUE.md#sporadic-hs-legacy) | 44,352,000 | Yes | [31 / 146](verification/dependency-maps/hs/HS.html) | 1,213 | 14,776 |
+| [Suz](#sporadic-suz) | [Original concrete model](CATALOGUE.md#sporadic-suz-legacy) | 448,345,497,600 | Yes | [212 / 963](verification/dependency-maps/suz/Suz.html) | 11,283 | 21,374 |
+| [J₂](#sporadic-j2) | [Original concrete model](CATALOGUE.md#sporadic-j2-legacy) | 604,800 | Yes | [185 / 803](verification/dependency-maps/j2/J2.html) | 8,034 | 8,184 |
+| [Fi₂₂](#sporadic-fi22) | [Original concrete model](CATALOGUE.md#sporadic-fi22-legacy) | 64,561,751,654,400 | Yes | [36 / 115](verification/dependency-maps/fi22/Fi22.html) | 1,328 | 34,250 |
+| [Fi₂₃](#sporadic-fi23) | [Original concrete model](CATALOGUE.md#sporadic-fi23-legacy) | 4,089,470,473,293,004,800 | Yes | [36 / 115](verification/dependency-maps/fi23/Fi23.html) | 1,327 | 34,249 |
+| [Fi₂₄′](#sporadic-fi24prime) | [Original concrete model](CATALOGUE.md#sporadic-fi24prime-legacy) | 1,255,205,709,190,661,721,292,800 | Yes | [640 / 2509](verification/dependency-maps/fi24prime/Fi24Prime.html) | 28,275 | 33,397 |
+| [Ru](#sporadic-ru) | [Original concrete model](CATALOGUE.md#sporadic-ru-legacy) | 145,926,144,000 | Yes | [306 / 1777](verification/dependency-maps/ru/Ru.html) | 16,069 | 16,631 |
 
 Both line columns count required ATLAS declaration spans for order and simplicity
 together. Intrinsic counts stop at the documented reused-group boundaries; total
@@ -52,668 +52,1016 @@ must not be added. The [dated measurements](catalogue/dependency-counts.json) an
 [source binding](verification/release-candidate/DIAGRAM_BINDING.json) are preserved;
 packaging the diagrams is not a new proof check. Download an HTML file to view it.
 
-The additional A/B/C/D Chevalley realizations have actual identification maps.
-The table counts and diagrams describe the original default models.
+All six additional Chevalley constructions are displayed alongside the original
+A/B/C/D/F₄/G₂ models. [Explicit Lean certificates](catalogue/ISOMORPHISMS.md)
+identify the registered A/B/C/D pairs. The G₂ and F₄ comparison scopes are stated
+separately. The table counts and diagrams describe the original default models;
+multiple constructions do not increase the number of families.
 
 <a id="family-cyclic"></a>
 
 ## Cₚ
 
+<a id="family-cyclic-legacy"></a>
+
+### Original concrete model
+
 Multiplicative (ZMod p)
 
 Parameters: p prime; card theorem m>0; simple iff m prime
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Families.Cyclic.Model` | [source](Atlas/Families/Cyclic/Basic.lean) |
-| finite | `Atlas.Families.Cyclic.finite` | [source](Atlas/Families/Cyclic/Basic.lean) |
-| order | `Atlas.Families.Cyclic.card` | [source](Atlas/Families/Cyclic/Basic.lean) |
-| simple | `Atlas.Families.Cyclic.isSimpleGroup` | [source](Atlas/Families/Cyclic/Basic.lean) |
-| commutative | `Atlas.Families.Cyclic.commutative` | [source](Atlas/Families/Cyclic/Basic.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Families.Cyclic.Model`](Atlas/Families/Cyclic/Basic.lean#L7) |
+| finite | [`Atlas.Families.Cyclic.finite`](Atlas/Families/Cyclic/Basic.lean#L12) |
+| order | [`Atlas.Families.Cyclic.card`](Atlas/Families/Cyclic/Basic.lean#L16) |
+| simple | [`Atlas.Families.Cyclic.isSimpleGroup`](Atlas/Families/Cyclic/Basic.lean#L40) |
+| commutative | [`Atlas.Families.Cyclic.commutative`](Atlas/Families/Cyclic/Basic.lean#L20) |
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#family-cyclic) · [Proof dependencies](verification/dependency-maps/cyclic/Cyclic.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#family-cyclic) · [Proof dependencies](verification/dependency-maps/cyclic/Cyclic.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#family-cyclic)
 
 <a id="family-alternating"></a>
 
 ## Aₙ
 
+Exceptions: A3 is cyclic simple; A4 is not simple; degrees <=2 are trivial
+
+<a id="family-alternating-legacy"></a>
+
+### Original concrete model
+
 alternatingGroup (Fin n)
 
 Parameters: n>=5 for nonabelian simplicity; A3 cyclic simple; A4 not simple; n<=2 trivial
 
-Exceptions: A3 is cyclic simple; A4 is not simple; degrees <=2 are trivial
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Families.Alternating.Model`](Atlas/Families/Alternating/Basic.lean#L7) |
+| finite | [`Atlas.Families.Alternating.finite`](Atlas/Families/Alternating/Basic.lean#L11) |
+| order | [`Atlas.Families.Alternating.card_factorial`](Atlas/Families/Alternating/Basic.lean#L23) |
+| simple | [`Atlas.Families.Alternating.isSimpleGroup`](Atlas/Families/Alternating/Basic.lean#L39) |
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Families.Alternating.Model` | [source](Atlas/Families/Alternating/Basic.lean) |
-| finite | `Atlas.Families.Alternating.finite` | [source](Atlas/Families/Alternating/Basic.lean) |
-| order | `Atlas.Families.Alternating.card_factorial` | [source](Atlas/Families/Alternating/Basic.lean) |
-| simple | `Atlas.Families.Alternating.isSimpleGroup` | [source](Atlas/Families/Alternating/Basic.lean) |
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#family-alternating) · [Proof dependencies](verification/dependency-maps/alternating/Alternating.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#family-alternating) · [Proof dependencies](verification/dependency-maps/alternating/Alternating.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#family-alternating)
 
 <a id="family-psl"></a>
 
 ## Aₙ(q)
 
-SL_n(F)/center(SL_n(F))
-
-Parameters: F arbitrary finite field; n>=2; simple iff (n,|F|) not (2,2),(2,3); prime-power existence p prime f>=1
-
 Exceptions: (n,q)=(2,2),(2,3) are excluded from simplicity for n>=2
 
 The catalogue uses Lie rank n: Aₙ(q) = PSL_(n+1)(q). The audited PSL parameters and order formula below instead use n for the matrix dimension; no compiled declaration is renamed or reparameterized.
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Matrix.ProjectiveSpecialLinearGroup` | [source](https://github.com/leanprover-community/mathlib4/blob/85e3a25e006c35636f0e53b0e9296caca2685bc0/Mathlib/LinearAlgebra/Matrix/ProjectiveSpecialLinearGroup.lean) |
-| finite | `Atlas.finite_psl` | [source](Atlas/LinearGroups/ProjectiveSpecialLinear.lean) |
-| order | `Atlas.card_psl_factor` | [source](Atlas/LinearGroups/ProjectiveSpecialLinear.lean) |
-| simple | `Atlas.psl_simple_iff` | [source](Atlas/LinearGroups/PSLFamily.lean) |
+<a id="family-psl-matrix"></a>
+
+### Projective special-linear matrix model
+
+SL_n(F)/center(SL_n(F))
+
+Parameters: F arbitrary finite field; n>=2; simple iff (n,|F|) not (2,2),(2,3); prime-power existence p prime f>=1
+
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Matrix.ProjectiveSpecialLinearGroup`](https://github.com/leanprover-community/mathlib4/blob/85e3a25e006c35636f0e53b0e9296caca2685bc0/Mathlib/LinearAlgebra/Matrix/ProjectiveSpecialLinearGroup.lean) |
+| finite | [`Atlas.finite_psl`](Atlas/LinearGroups/ProjectiveSpecialLinear.lean#L143) |
+| order | [`Atlas.card_psl_factor`](Atlas/LinearGroups/ProjectiveSpecialLinear.lean#L190) |
+| simple | [`Atlas.psl_simple_iff`](Atlas/LinearGroups/PSLFamily.lean#L27) |
+
+<a id="family-psl-chevalley"></a>
+
+### Chevalley root-operator model
+
+The actual root-generated elementary adjoint group, with inherited operations and faithful adjoint action. The selected simply connected companion is a distinct cover; no replacement occurs at nonsimple parameters.
+
+Parameters: K an arbitrary finite field; q = Nat.card K; r >= 1; every finite characteristic
+
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Chevalley.Catalogue.A`](Atlas/LinearGroups/Chevalley/Catalogue/ACConstruction.lean#L13) |
+| finite | [`Atlas.Chevalley.Catalogue.A_finite`](Atlas/LinearGroups/Chevalley/Catalogue/ACFinite.lean#L7) |
+| order | [`Atlas.Chevalley.Catalogue.A_order`](Atlas/LinearGroups/Chevalley/Catalogue/ACOrder.lean#L9) |
+| center | [`Atlas.Chevalley.Catalogue.A_center`](Atlas/LinearGroups/Chevalley/Catalogue/ACCenter.lean#L8) |
+| simple | [`Atlas.Chevalley.Catalogue.A_simple`](Atlas/LinearGroups/Chevalley/Catalogue/ACSimple.lean#L14) |
+| exceptions | [`Atlas.Chevalley.Catalogue.A_exceptions`](Atlas/LinearGroups/Chevalley/Catalogue/ACExceptions.lean#L9) |
+
+Simplicity range: K an arbitrary finite field; q = Nat.card K; r >= 1; every finite characteristic; excluding (r,q)=(1,2),(1,3) for simplicity.
+
+Separate property audits: [finite](verification/runs/chevalley-catalogue-a-finite/20261018T160128-105) · [order](verification/runs/chevalley-catalogue-a-order/20261018T160235-105) · [center](verification/runs/chevalley-catalogue-a-center/20261018T160348-105) · [simple](verification/runs/chevalley-catalogue-a-simple/20261018T160458-105) · [exceptions](verification/runs/chevalley-catalogue-a-exceptions/20261018T160714-105).
+
+Dated concrete-model contract: [AtlasExistenceChevalley.A](verification/existence/2026-10-25-draft/Chevalley-A/Solution.lean) · [exact specification](verification/existence/2026-10-25-draft/Chevalley-A/Challenge.lean) · [checker receipt](verification/existence/2026-10-25-draft/Chevalley-A/RESULT.json).
+
+### Isomorphism between these constructions
+
+[`Atlas.Chevalley.Catalogue.A_identification`](Atlas/LinearGroups/Chevalley/Catalogue/ACIdentification.lean#L24) is the actual multiplicative equivalence.
+
+Domain: K an arbitrary finite field; q = Nat.card K; r >= 1; every finite characteristic.
+
+[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-a-to-legacy-v1) gives the verbatim compiled type, both carriers, the parameter map and [full dependency audit](verification/runs/chevalley-a-to-legacy-v1/20261018T160827-105).
+
+The existing order/simplicity dependency diagram and line counts describe the projective special-linear matrix model. They are not counts for both constructions combined.
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#family-psl) · [Proof dependencies](verification/dependency-maps/psl/PSL.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [Chevalley realization and evidence](catalogue/REALIZATIONS.md#family-psl-chevalley)
+[Compiled principal statements](THEOREM_STATEMENTS.md#family-psl) · [Proof dependencies](verification/dependency-maps/psl/PSL.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#family-psl)
 
 <a id="family-psu"></a>
 
 ## ²Aₙ(q)
 
-Actual standard Hermitian SU_n(K/F), quotiented by its proved full norm-one scalar center
-
-Parameters: F finite with q=|F|, K/F an actual quadratic extension; n is matrix dimension; stable catalogue: n>=3 and (n,q)!=(3,2)
-
 Exceptions: The full theorem covers n>=2 and has exactly (2,2), (2,3), (3,2) as nonsimple cases. Dimension two is retained through the actual PSU2(F)≃PSL2(F) comparison.
 
 The catalogue table uses Lie rank n. Lean declarations use matrix dimension d=n+1 and q=|F|, not |K|=q^2. The complete dimension-d theorem begins at d=2 and has exactly three exceptions. The stable catalogue starts at d=3; dimension two has the actual PSL comparison. Field and fixed-subgroup equivalences are included verbatim in the public theorem extract.
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Unitary.PSU` | [source](Atlas/LinearGroups/Unitary/Basic.lean) |
-| finite | `Atlas.Unitary.finite_psu` | [source](Atlas/LinearGroups/Unitary/Basic.lean) |
-| order | `Atlas.Unitary.card_psu_factor` | [source](Atlas/LinearGroups/Unitary/ProjectiveOrder.lean) |
-| simple | `Atlas.Unitary.simple_of_good` | [source](Atlas/LinearGroups/Unitary/Family.lean) |
+<a id="family-psu-legacy"></a>
+
+### Original concrete model
+
+Actual standard Hermitian SU_n(K/F), quotiented by its proved full norm-one scalar center
+
+Parameters: F finite with q=|F|, K/F an actual quadratic extension; n is matrix dimension; stable catalogue: n>=3 and (n,q)!=(3,2)
+
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Unitary.PSU`](Atlas/LinearGroups/Unitary/Basic.lean#L41) |
+| finite | [`Atlas.Unitary.finite_psu`](Atlas/LinearGroups/Unitary/Basic.lean#L48) |
+| order | [`Atlas.Unitary.card_psu_factor`](Atlas/LinearGroups/Unitary/ProjectiveOrder.lean#L40) |
+| simple | [`Atlas.Unitary.simple_of_good`](Atlas/LinearGroups/Unitary/Family.lean#L13) |
+
 
 Direct finite Hermitian matrix construction, with actual field transport and SL graph-field fixed-subgroup identification; no order recognition, CFSG or projective fixed-point assertion
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#family-psu) · [Proof dependencies](verification/dependency-maps/psu/PSU.html) · [Dated construction evidence](verification/unitary/construction)
+[Compiled principal statements](THEOREM_STATEMENTS.md#family-psu) · [Proof dependencies](verification/dependency-maps/psu/PSU.html) · [Dated construction evidence](verification/unitary/construction) · [All construction models](catalogue/REALIZATIONS.md#family-psu)
 
 <a id="family-b"></a>
 
 ## Bₙ(q)
 
+Exceptions: Nonsimple exactly (n,q)=(1,2),(1,3),(2,2); these actual groups remain constructed
+
+<a id="family-b-quadratic"></a>
+
+### Quadratic-form model
+
 Actual scalar quotient of the Siegel-generated subgroup of the quadratic form Q(x,y,z)=sum x_i*y_i+z^2; identified with the determinant/spinor kernel in odd characteristic and the full orthogonal group in characteristic two
 
 Parameters: n is Lie rank, natural dimension 2*n+1; F arbitrary finite field, q=|F|; n>=1, every characteristic
 
-Exceptions: Nonsimple exactly (n,q)=(1,2),(1,3),(2,2); these actual groups remain constructed
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Orthogonal.B`](Atlas/LinearGroups/Orthogonal/BFamily.lean#L9) |
+| finite | [`Atlas.Orthogonal.B_finite`](Atlas/LinearGroups/Orthogonal/BFamily.lean#L27) |
+| order | [`Atlas.Orthogonal.B_card_all_rank`](Atlas/LinearGroups/Orthogonal/BAllRanks.lean#L28) |
+| simple | [`Atlas.Orthogonal.B_simple_all_rank`](Atlas/LinearGroups/Orthogonal/BAllRanksConstruction.lean#L34) |
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Orthogonal.B` | [source](Atlas/LinearGroups/Orthogonal/BFamily.lean) |
-| finite | `Atlas.Orthogonal.B_finite` | [source](Atlas/LinearGroups/Orthogonal/BFamily.lean) |
-| order | `Atlas.Orthogonal.B_card_all_rank` | [source](Atlas/LinearGroups/Orthogonal/BAllRanks.lean) |
-| simple | `Atlas.Orthogonal.B_simple_all_rank` | [source](Atlas/LinearGroups/Orthogonal/BAllRanksConstruction.lean) |
+<a id="family-b-chevalley"></a>
+
+### Chevalley root-operator model
+
+The actual root-generated elementary adjoint group, with inherited operations and faithful adjoint action; the carrier is unchanged at B2(F2). The selected simply connected companion is a distinct cover.
+
+Parameters: K an arbitrary finite field; q = Nat.card K; n : Nat, rank r = n+1 >= 2; every finite characteristic, including B2(F2)
+
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Chevalley.Catalogue.B`](Atlas/LinearGroups/Chevalley/Catalogue/BConstruction.lean#L10) |
+| finite | [`Atlas.Chevalley.Catalogue.B_finite`](Atlas/LinearGroups/Chevalley/Catalogue/BFinite.lean#L7) |
+| order | [`Atlas.Chevalley.Catalogue.B_order`](Atlas/LinearGroups/Chevalley/Catalogue/BOrder.lean#L8) |
+| center | [`Atlas.Chevalley.Catalogue.B_center`](Atlas/LinearGroups/Chevalley/Catalogue/BCenter.lean#L8) |
+| simple | [`Atlas.Chevalley.Catalogue.B_simple`](Atlas/LinearGroups/Chevalley/Catalogue/BSimple.lean#L12) |
+| exceptions | [`Atlas.Chevalley.Catalogue.B_exceptions`](Atlas/LinearGroups/Chevalley/Catalogue/BExceptions.lean#L8) |
+
+Simplicity range: K an arbitrary finite field; q = Nat.card K; n : Nat, rank r = n+1 >= 2; every finite characteristic; excluding (r,q)=(2,2) for simplicity (RootType.Good).
+
+Separate property audits: [finite](verification/runs/chevalley-catalogue-b-finite/20261018T164023-105) · [order](verification/runs/chevalley-catalogue-b-order/20261018T164216-105) · [center](verification/runs/chevalley-catalogue-b-center/20261018T164427-105) · [simple](verification/runs/chevalley-catalogue-b-simple/20261018T164645-105) · [exceptions](verification/runs/chevalley-catalogue-b-exceptions/20261018T165018-105).
+
+Dated concrete-model contract: [AtlasExistenceChevalley.B](verification/existence/2026-10-25-draft/Chevalley-B/Solution.lean) · [exact specification](verification/existence/2026-10-25-draft/Chevalley-B/Challenge.lean) · [checker receipt](verification/existence/2026-10-25-draft/Chevalley-B/RESULT.json).
+
+### Isomorphism between these constructions
+
+[`Atlas.Chevalley.Catalogue.B_identification`](Atlas/LinearGroups/Chevalley/Catalogue/BIdentification.lean#L16) is the actual multiplicative equivalence.
+
+Domain: K an arbitrary finite field; q = Nat.card K; n : Nat, rank r = n+1 >= 2; every finite characteristic, including B2(F2).
+
+[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-b-to-legacy-v1) gives the verbatim compiled type, both carriers, the parameter map and [full dependency audit](verification/runs/chevalley-b-to-legacy-v1/20261018T165216-105).
+
+The existing order/simplicity dependency diagram and line counts describe the quadratic-form model. They are not counts for both constructions combined.
+
 
 No general recognition theorem or classification of family coincidences is claimed
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#family-b) · [Proof dependencies](verification/dependency-maps/b/B.html) · [Dated construction evidence](verification/orthogonal/b-family/20260915T065338-1051) · [Chevalley realization and evidence](catalogue/REALIZATIONS.md#family-b-chevalley)
+[Compiled principal statements](THEOREM_STATEMENTS.md#family-b) · [Proof dependencies](verification/dependency-maps/b/B.html) · [Dated construction evidence](verification/orthogonal/b-family/20260915T065338-1051) · [All construction models](catalogue/REALIZATIONS.md#family-b)
 
 <a id="family-suzuki"></a>
 
 ## ²B₂(q)
 
+Exceptions: The same model at m=0 (q=2) has order20 and is nonsimple; simple_iff proves the exact range
+
+<a id="family-suzuki-legacy"></a>
+
+### Original concrete model
+
 Actual subgroup of Sp4(F) generated by the explicit Tits-twisted root, torus and Weyl matrices
 
 Parameters: F finite of characteristic 2, q=|F|=2^(2m+1); simple family m>=1, hence q>=8
 
-Exceptions: The same model at m=0 (q=2) has order20 and is nonsimple; simple_iff proves the exact range
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.SuzukiFamily.Group`](Atlas/LinearGroups/SuzukiFamily/Model.lean#L35) |
+| finite | [`Atlas.SuzukiFamily.finite_group`](Atlas/LinearGroups/SuzukiFamily/Model.lean#L50) |
+| order | [`Atlas.SuzukiFamily.card_group`](Atlas/LinearGroups/SuzukiFamily/Order.lean#L9) |
+| simple | [`Atlas.SuzukiFamily.simple_of_large`](Atlas/LinearGroups/SuzukiFamily/Simplicity.lean#L19) |
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.SuzukiFamily.Group` | [source](Atlas/LinearGroups/SuzukiFamily/Model.lean) |
-| finite | `Atlas.SuzukiFamily.finite_group` | [source](Atlas/LinearGroups/SuzukiFamily/Model.lean) |
-| order | `Atlas.SuzukiFamily.card_group` | [source](Atlas/LinearGroups/SuzukiFamily/Order.lean) |
-| simple | `Atlas.SuzukiFamily.simple_of_large` | [source](Atlas/LinearGroups/SuzukiFamily/Simplicity.lean) |
 
 Direct standard Suzuki matrix construction and faithful ovoid action; no abstract Chevalley theorem, CFSG or order recognition. Exceptional graph-field fixed-point characterization is not asserted
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#family-suzuki) · [Proof dependencies](verification/dependency-maps/suzukifamily/SuzukiFamily.html) · [Dated construction evidence](verification/suzuki-family/construction)
+[Compiled principal statements](THEOREM_STATEMENTS.md#family-suzuki) · [Proof dependencies](verification/dependency-maps/suzukifamily/SuzukiFamily.html) · [Dated construction evidence](verification/suzuki-family/construction) · [All construction models](catalogue/REALIZATIONS.md#family-suzuki)
 
 <a id="family-c"></a>
 
 ## Cₙ(q)
 
+Exceptions: Rank zero is trivial; nonsimple positive-rank pairs (n,q)=(1,2),(1,3),(2,2)
+
+<a id="family-c-symplectic"></a>
+
+### Symplectic matrix model
+
 Carrier of Matrix.symplecticGroup (Fin n) F, quotiented by its actual center
 
 Parameters: n is symplectic rank, dimension 2*n; F arbitrary finite field, q=|F|; simple exactly when (n=1 and q>3) or (n>=2 and (n,q)!=(2,2))
 
-Exceptions: Rank zero is trivial; nonsimple positive-rank pairs (n,q)=(1,2),(1,3),(2,2)
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Symplectic.PSp`](Atlas/LinearGroups/Symplectic/Basic.lean#L16) |
+| finite | [`Atlas.Symplectic.finite_psp`](Atlas/LinearGroups/Symplectic/Basic.lean#L26) |
+| order | [`Atlas.Symplectic.card_psp`](Atlas/LinearGroups/Symplectic/ProjectiveOrder.lean#L19) |
+| simple | [`Atlas.Symplectic.simple_of_good`](Atlas/LinearGroups/Symplectic/Simplicity.lean#L14) |
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Symplectic.PSp` | [source](Atlas/LinearGroups/Symplectic/Basic.lean) |
-| finite | `Atlas.Symplectic.finite_psp` | [source](Atlas/LinearGroups/Symplectic/Basic.lean) |
-| order | `Atlas.Symplectic.card_psp` | [source](Atlas/LinearGroups/Symplectic/ProjectiveOrder.lean) |
-| simple | `Atlas.Symplectic.simple_of_good` | [source](Atlas/LinearGroups/Symplectic/Simplicity.lean) |
+<a id="family-c-chevalley"></a>
+
+### Chevalley root-operator model
+
+The actual root-generated elementary adjoint group, with inherited operations and faithful adjoint action. The selected simply connected companion is a distinct cover; no replacement occurs at nonsimple parameters.
+
+Parameters: K an arbitrary finite field; q = Nat.card K; r >= 2; every finite characteristic
+
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Chevalley.Catalogue.C`](Atlas/LinearGroups/Chevalley/Catalogue/ACConstruction.lean#L18) |
+| finite | [`Atlas.Chevalley.Catalogue.C_finite`](Atlas/LinearGroups/Chevalley/Catalogue/ACFinite.lean#L12) |
+| order | [`Atlas.Chevalley.Catalogue.C_order`](Atlas/LinearGroups/Chevalley/Catalogue/ACOrder.lean#L18) |
+| center | [`Atlas.Chevalley.Catalogue.C_center`](Atlas/LinearGroups/Chevalley/Catalogue/ACCenter.lean#L13) |
+| simple | [`Atlas.Chevalley.Catalogue.C_simple`](Atlas/LinearGroups/Chevalley/Catalogue/ACSimple.lean#L21) |
+| exceptions | [`Atlas.Chevalley.Catalogue.C_exceptions`](Atlas/LinearGroups/Chevalley/Catalogue/ACExceptions.lean#L15) |
+
+Simplicity range: K an arbitrary finite field; q = Nat.card K; r >= 2; every finite characteristic; excluding (r,q)=(2,2) for simplicity.
+
+Separate property audits: [finite](verification/runs/chevalley-catalogue-c-finite/20261018T161215-105) · [order](verification/runs/chevalley-catalogue-c-order/20261018T161342-105) · [center](verification/runs/chevalley-catalogue-c-center/20261018T161519-105) · [simple](verification/runs/chevalley-catalogue-c-simple/20261018T161656-105) · [exceptions](verification/runs/chevalley-catalogue-c-exceptions/20261018T162002-105).
+
+Dated concrete-model contract: [AtlasExistenceChevalley.C](verification/existence/2026-10-25-draft/Chevalley-C/Solution.lean) · [exact specification](verification/existence/2026-10-25-draft/Chevalley-C/Challenge.lean) · [checker receipt](verification/existence/2026-10-25-draft/Chevalley-C/RESULT.json).
+
+### Isomorphism between these constructions
+
+[`Atlas.Chevalley.Catalogue.C_identification`](Atlas/LinearGroups/Chevalley/Catalogue/ACIdentification.lean#L31) is the actual multiplicative equivalence.
+
+Domain: K an arbitrary finite field; q = Nat.card K; r >= 2; every finite characteristic.
+
+[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-c-to-legacy-v1) gives the verbatim compiled type, both carriers, the parameter map and [full dependency audit](verification/runs/chevalley-c-to-legacy-v1/20261018T162154-105).
+
+The existing order/simplicity dependency diagram and line counts describe the symplectic matrix model. They are not counts for both constructions combined.
+
 
 Constructed symplectic family with its natural alternating form and actions; no CFSG or external recognition theorem assumed
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#family-c) · [Proof dependencies](verification/dependency-maps/c/C.html) · [Dated construction evidence](verification/symplectic/construction) · [Chevalley realization and evidence](catalogue/REALIZATIONS.md#family-c-chevalley)
+[Compiled principal statements](THEOREM_STATEMENTS.md#family-c) · [Proof dependencies](verification/dependency-maps/c/C.html) · [Dated construction evidence](verification/symplectic/construction) · [All construction models](catalogue/REALIZATIONS.md#family-c)
 
 <a id="family-d"></a>
 
 ## Dₙ(q)
 
+Exceptions: No exceptions for n>=4; lower-rank comparisons are separate obligations
+
+<a id="family-d-quadratic"></a>
+
+### Quadratic-form model
+
 Actual scalar quotient of the Siegel-generated subgroup of the split quadratic form Q(x,y)=sum x_i*y_i; identified with the determinant/spinor kernel in odd characteristic and Dickson kernel in characteristic two
 
 Parameters: n is Lie rank, natural dimension 2*n; F arbitrary finite field, q=|F|; n>=4, every characteristic
 
-Exceptions: No exceptions for n>=4; lower-rank comparisons are separate obligations
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Orthogonal.DPlus`](Atlas/LinearGroups/Orthogonal/DFamily.lean#L13) |
+| finite | [`Atlas.Orthogonal.DPlus_finite`](Atlas/LinearGroups/Orthogonal/DFamily.lean#L42) |
+| order | [`Atlas.Orthogonal.DPlus_card`](Atlas/LinearGroups/Orthogonal/DFamily.lean#L56) |
+| simple | [`Atlas.Orthogonal.DPlus_simple`](Atlas/LinearGroups/Orthogonal/DConstruction.lean#L17) |
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Orthogonal.DPlus` | [source](Atlas/LinearGroups/Orthogonal/DFamily.lean) |
-| finite | `Atlas.Orthogonal.DPlus_finite` | [source](Atlas/LinearGroups/Orthogonal/DFamily.lean) |
-| order | `Atlas.Orthogonal.DPlus_card` | [source](Atlas/LinearGroups/Orthogonal/DFamily.lean) |
-| simple | `Atlas.Orthogonal.DPlus_simple` | [source](Atlas/LinearGroups/Orthogonal/DConstruction.lean) |
+<a id="family-d-chevalley"></a>
+
+### Chevalley root-operator model
+
+The actual root-generated elementary adjoint group, with inherited operations and faithful adjoint action. The selected simply connected companion is a distinct cover, not this registered realization.
+
+Parameters: K an arbitrary finite field; q = Nat.card K; r >= 4; every finite characteristic
+
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Chevalley.Catalogue.D`](Atlas/LinearGroups/Chevalley/Catalogue/DConstruction.lean#L10) |
+| finite | [`Atlas.Chevalley.Catalogue.D_finite`](Atlas/LinearGroups/Chevalley/Catalogue/DFinite.lean#L7) |
+| order | [`Atlas.Chevalley.Catalogue.D_order`](Atlas/LinearGroups/Chevalley/Catalogue/DOrder.lean#L8) |
+| center | [`Atlas.Chevalley.Catalogue.D_center`](Atlas/LinearGroups/Chevalley/Catalogue/DCenter.lean#L8) |
+| simple | [`Atlas.Chevalley.Catalogue.D_simple`](Atlas/LinearGroups/Chevalley/Catalogue/DSimple.lean#L12) |
+| exceptions | [`Atlas.Chevalley.Catalogue.D_exceptions`](Atlas/LinearGroups/Chevalley/Catalogue/DExceptions.lean#L8) |
+
+Simplicity range: K an arbitrary finite field; q = Nat.card K; r >= 4; every finite characteristic; RootType.Good holds (automatic for D over a finite field).
+
+Separate property audits: [finite](verification/runs/chevalley-catalogue-d-finite/20261018T162701-105) · [order](verification/runs/chevalley-catalogue-d-order/20261018T162810-105) · [center](verification/runs/chevalley-catalogue-d-center/20261018T162944-105) · [simple](verification/runs/chevalley-catalogue-d-simple/20261018T163112-105) · [exceptions](verification/runs/chevalley-catalogue-d-exceptions/20261018T163340-105).
+
+Dated concrete-model contract: [AtlasExistenceChevalley.D](verification/existence/2026-10-25-draft/Chevalley-D/Solution.lean) · [exact specification](verification/existence/2026-10-25-draft/Chevalley-D/Challenge.lean) · [checker receipt](verification/existence/2026-10-25-draft/Chevalley-D/RESULT.json).
+
+### Isomorphism between these constructions
+
+[`Atlas.Chevalley.Catalogue.D_identification`](Atlas/LinearGroups/Chevalley/Catalogue/DIdentification.lean#L16) is the actual multiplicative equivalence.
+
+Domain: K an arbitrary finite field; q = Nat.card K; r >= 4; every finite characteristic.
+
+[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-d-to-legacy-v1) gives the verbatim compiled type, both carriers, the parameter map and [full dependency audit](verification/runs/chevalley-d-to-legacy-v1/20261018T163507-105).
+
+The existing order/simplicity dependency diagram and line counts describe the quadratic-form model. They are not counts for both constructions combined.
+
 
 No general recognition theorem or classification of family coincidences is claimed
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#family-d) · [Proof dependencies](verification/dependency-maps/d/D.html) · [Dated construction evidence](verification/orthogonal/d-family/20260915T032826) · [Chevalley realization and evidence](catalogue/REALIZATIONS.md#family-d-chevalley)
+[Compiled principal statements](THEOREM_STATEMENTS.md#family-d) · [Proof dependencies](verification/dependency-maps/d/D.html) · [Dated construction evidence](verification/orthogonal/d-family/20260915T032826) · [All construction models](catalogue/REALIZATIONS.md#family-d)
 
 <a id="family-2d"></a>
 
 ## ²Dₙ(q)
 
-Actual hyperbolic planes plus quadratic-extension norm plane; intrinsic Omega equals Siegel-generated isometries, quotiented by its full scalar center
-
-Parameters: F arbitrary finite field, q=|F|; K/F actual quadratic extension; n is half-dimension/Lie rank; stable simple family n>=4, every characteristic
-
 Exceptions: No simplicity exceptions for n>=2 over finite fields. Rank2 is structurally PSL2(K); rank3 is structurally PSU4(q). Stable principal roles retain n>=4; separately audited uniform order and simplicity supplements cover every n>=2.
 
 Order and nonabelian simplicity proved uniformly for n≥2. Concrete low-rank comparisons: PSL₂(q²) and PSU₄(q). Stable principal roles and their independent evidence retain n≥4.
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Orthogonal.DMinus` | [source](Atlas/LinearGroups/Orthogonal/Minus/Family.lean) |
-| finite | `Atlas.Orthogonal.Minus.family_finite` | [source](Atlas/LinearGroups/Orthogonal/Minus/Family.lean) |
-| order | `Atlas.Orthogonal.Minus.family_order` | [source](Atlas/LinearGroups/Orthogonal/Minus/Family.lean) |
-| simple | `Atlas.Orthogonal.Minus.family_simple` | [source](Atlas/LinearGroups/Orthogonal/Minus/Family.lean) |
+<a id="family-2d-legacy"></a>
+
+### Original concrete model
+
+Actual hyperbolic planes plus quadratic-extension norm plane; intrinsic Omega equals Siegel-generated isometries, quotiented by its full scalar center
+
+Parameters: F arbitrary finite field, q=|F|; K/F actual quadratic extension; n is half-dimension/Lie rank; stable simple family n>=4, every characteristic
+
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Orthogonal.DMinus`](Atlas/LinearGroups/Orthogonal/Minus/Family.lean#L11) |
+| finite | [`Atlas.Orthogonal.Minus.family_finite`](Atlas/LinearGroups/Orthogonal/Minus/Family.lean#L15) |
+| order | [`Atlas.Orthogonal.Minus.family_order`](Atlas/LinearGroups/Orthogonal/Minus/Family.lean#L35) |
+| simple | [`Atlas.Orthogonal.Minus.family_simple`](Atlas/LinearGroups/Orthogonal/Minus/Family.lean#L21) |
+
 
 Concrete quadratic-form model and kernel identification; no order recognition or graph-field fixed-point assertion
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#family-2d) · [Proof dependencies](verification/dependency-maps/minusd/MinusD.html) · [Dated construction evidence](verification/minus-orthogonal/rank-three)
+[Compiled principal statements](THEOREM_STATEMENTS.md#family-2d) · [Proof dependencies](verification/dependency-maps/minusd/MinusD.html) · [Dated construction evidence](verification/minus-orthogonal/rank-three) · [All construction models](catalogue/REALIZATIONS.md#family-2d)
 
 <a id="family-3d4"></a>
 
 ## ³D₄(q)
 
+Exceptions: None: the same matrix model is nonabelian simple also at q=2 and in characteristic three
+
+<a id="family-3d4-legacy"></a>
+
+### Original concrete model
+
 Actual subgroup of the split eight-dimensional orthogonal group over a cubic extension K/F, generated by four literal triality-folded root families
 
 Parameters: F and K finite fields, Algebra F K, [K:F]=3; q=|F|, |K|=q^3; every prime power q>=2
 
-Exceptions: None: the same matrix model is nonabelian simple also at q=2 and in characteristic three
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Triality.Group`](Atlas/LinearGroups/Triality/FoldedGenerators.lean#L31) |
+| finite | [`Atlas.Triality.finite_group`](Atlas/LinearGroups/Triality/FoldedGenerators.lean#L58) |
+| order | [`Atlas.Triality.card_group`](Atlas/LinearGroups/Triality/Order.lean#L15) |
+| simple | [`Atlas.Triality.simple`](Atlas/LinearGroups/Triality/Simplicity.lean#L37) |
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Triality.Group` | [source](Atlas/LinearGroups/Triality/FoldedGenerators.lean) |
-| finite | `Atlas.Triality.finite_group` | [source](Atlas/LinearGroups/Triality/FoldedGenerators.lean) |
-| order | `Atlas.Triality.card_group` | [source](Atlas/LinearGroups/Triality/Order.lean) |
-| simple | `Atlas.Triality.simple` | [source](Atlas/LinearGroups/Triality/Simplicity.lean) |
 
 Direct pinned triality-folded matrix construction; no recognition from order. Full related-triple graph-field fixed-point comparison and generalized-hexagon axioms are not claimed
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#family-3d4) · [Proof dependencies](verification/dependency-maps/triality/Triality.html) · [Dated construction evidence](verification/triality/construction)
+[Compiled principal statements](THEOREM_STATEMENTS.md#family-3d4) · [Proof dependencies](verification/dependency-maps/triality/Triality.html) · [Dated construction evidence](verification/triality/construction) · [All construction models](catalogue/REALIZATIONS.md#family-3d4)
 
 <a id="family-e6"></a>
 
 ## E₆(q)
 
+<a id="family-e6-chevalley"></a>
+
+### Chevalley root-operator model
+
 The root-generated elementary adjoint subgroup of matrix units from the integral Geck root operators, with its inherited group operations and faithful adjoint action. The simply connected group is a separate cover, not this carrier.
 
 Parameters: K an arbitrary finite field; q = Nat.card K; rank = 6; every finite characteristic
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Chevalley.Catalogue.E6` | [source](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesConstruction.lean) |
-| finite | `Atlas.Chevalley.Catalogue.E6_finite` | [source](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesFinite.lean) |
-| order | `Atlas.Chevalley.Catalogue.E6_order` | [source](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesOrder.lean) |
-| simple | `Atlas.Chevalley.Catalogue.E6_simple` | [source](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesSimple.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Chevalley.Catalogue.E6`](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesConstruction.lean#L14) |
+| finite | [`Atlas.Chevalley.Catalogue.E6_finite`](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesFinite.lean#L7) |
+| order | [`Atlas.Chevalley.Catalogue.E6_order`](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesOrder.lean#L10) |
+| simple | [`Atlas.Chevalley.Catalogue.E6_simple`](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesSimple.lean#L8) |
+
 
 First completed anchor of this family; the historical intrinsic realization remains planned and no identification with it is asserted
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#family-e6) · [Proof dependencies](verification/dependency-maps/e6/E6.html) · [Chevalley realization and evidence](catalogue/REALIZATIONS.md#family-e6-chevalley)
+[Compiled principal statements](THEOREM_STATEMENTS.md#family-e6) · [Proof dependencies](verification/dependency-maps/e6/E6.html) · [All construction models](catalogue/REALIZATIONS.md#family-e6)
 
 <a id="family-e7"></a>
 
 ## E₇(q)
 
+<a id="family-e7-chevalley"></a>
+
+### Chevalley root-operator model
+
 The root-generated elementary adjoint subgroup of matrix units from the integral Geck root operators, with its inherited group operations and faithful adjoint action. The simply connected group is a separate cover, not this carrier.
 
 Parameters: K an arbitrary finite field; q = Nat.card K; rank = 7; every finite characteristic
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Chevalley.Catalogue.E7` | [source](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesConstruction.lean) |
-| finite | `Atlas.Chevalley.Catalogue.E7_finite` | [source](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesFinite.lean) |
-| order | `Atlas.Chevalley.Catalogue.E7_order` | [source](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesOrder.lean) |
-| simple | `Atlas.Chevalley.Catalogue.E7_simple` | [source](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesSimple.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Chevalley.Catalogue.E7`](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesConstruction.lean#L29) |
+| finite | [`Atlas.Chevalley.Catalogue.E7_finite`](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesFinite.lean#L12) |
+| order | [`Atlas.Chevalley.Catalogue.E7_order`](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesOrder.lean#L18) |
+| simple | [`Atlas.Chevalley.Catalogue.E7_simple`](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesSimple.lean#L14) |
+
 
 First completed anchor of this family; the historical intrinsic realization remains planned and no identification with it is asserted
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#family-e7) · [Proof dependencies](verification/dependency-maps/e7/E7.html) · [Chevalley realization and evidence](catalogue/REALIZATIONS.md#family-e7-chevalley)
+[Compiled principal statements](THEOREM_STATEMENTS.md#family-e7) · [Proof dependencies](verification/dependency-maps/e7/E7.html) · [All construction models](catalogue/REALIZATIONS.md#family-e7)
 
 <a id="family-e8"></a>
 
 ## E₈(q)
 
+<a id="family-e8-chevalley"></a>
+
+### Chevalley root-operator model
+
 The root-generated elementary adjoint subgroup of matrix units from the integral Geck root operators, with its inherited group operations and faithful adjoint action. The simply connected group is a separate cover, not this carrier.
 
 Parameters: K an arbitrary finite field; q = Nat.card K; rank = 8; every finite characteristic
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Chevalley.Catalogue.E8` | [source](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesConstruction.lean) |
-| finite | `Atlas.Chevalley.Catalogue.E8_finite` | [source](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesFinite.lean) |
-| order | `Atlas.Chevalley.Catalogue.E8_order` | [source](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesOrder.lean) |
-| simple | `Atlas.Chevalley.Catalogue.E8_simple` | [source](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesSimple.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Chevalley.Catalogue.E8`](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesConstruction.lean#L44) |
+| finite | [`Atlas.Chevalley.Catalogue.E8_finite`](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesFinite.lean#L17) |
+| order | [`Atlas.Chevalley.Catalogue.E8_order`](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesOrder.lean#L26) |
+| simple | [`Atlas.Chevalley.Catalogue.E8_simple`](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesSimple.lean#L20) |
+
 
 First completed anchor of this family; the historical intrinsic realization remains planned and no identification with it is asserted
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#family-e8) · [Proof dependencies](verification/dependency-maps/e8/E8.html) · [Chevalley realization and evidence](catalogue/REALIZATIONS.md#family-e8-chevalley)
+[Compiled principal statements](THEOREM_STATEMENTS.md#family-e8) · [Proof dependencies](verification/dependency-maps/e8/E8.html) · [All construction models](catalogue/REALIZATIONS.md#family-e8)
 
 <a id="family-f4"></a>
 
 ## F₄(q)
 
+Exceptions: None: the full group is nonabelian simple for every finite field, including q=2 and q=3
+
+<a id="family-f4-albert"></a>
+
+### Split-Albert model
+
 Full stabilizer of the integral cubic polynomial and distinguished unit in the marked 27-dimensional split Albert space
 
 Parameters: F is an arbitrary finite field, q=|F|; every prime power q>=2, including characteristics 2 and 3
 
-Exceptions: None: the full group is nonabelian simple for every finite field, including q=2 and q=3
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.F4.Model`](Atlas/LinearGroups/F4/Basic.lean#L8) |
+| finite | [`Atlas.F4.finite_model`](Atlas/LinearGroups/F4/Basic.lean#L19) |
+| order | [`Atlas.F4.card_Model`](Atlas/LinearGroups/F4/Order.lean#L25) |
+| simple | [`Atlas.F4.isSimple`](Atlas/LinearGroups/F4/Simplicity.lean#L12) |
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.F4.Model` | [source](Atlas/LinearGroups/F4/Basic.lean) |
-| finite | `Atlas.F4.finite_model` | [source](Atlas/LinearGroups/F4/Basic.lean) |
-| order | `Atlas.F4.card_Model` | [source](Atlas/LinearGroups/F4/Order.lean) |
-| simple | `Atlas.F4.isSimple` | [source](Atlas/LinearGroups/F4/Simplicity.lean) |
+<a id="family-f4-chevalley"></a>
+
+### Chevalley root-operator model
+
+Root-generated adjoint operator group; same carrier at nonsimple parameters. The simply connected group is a separate related cover, not this realization.
+
+Parameters: K an arbitrary finite field; q = Nat.card K; rank = 4; every finite characteristic
+
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Chevalley.Model .F4`](Atlas/LinearGroups/Chevalley/Models.lean) |
+| order | [`Atlas.Chevalley.model_F4_card`](Atlas/LinearGroups/Chevalley/ModelF4Order.lean#L24) |
+| simple | [`Atlas.Chevalley.model_isSimpleGroup_of_good`](Atlas/LinearGroups/Chevalley/ModelSimplicityGood.lean#L47) |
+
+Dated concrete-model contract: [AtlasExistenceChevalley.F4](verification/existence/2026-10-25-draft/Chevalley-F4/Solution.lean) · [exact specification](verification/existence/2026-10-25-draft/Chevalley-F4/Challenge.lean) · [checker receipt](verification/existence/2026-10-25-draft/Chevalley-F4/RESULT.json).
+
+This contract proves order and simplicity of this explicit witness for every finite field, q ≥ 2. The realization registry still records its separate catalogue registration as pending.
+
+### Isomorphism between these constructions
+
+The isomorphism between the Chevalley and full split-Albert models remains unfinished. No certificate identifying them is claimed.
+
+The existing order/simplicity dependency diagram and line counts describe the split-albert model. They are not counts for both constructions combined.
+
 
 Concrete split-Albert/Dickson–Wilson construction; no abstract Chevalley theorem, CFSG, target-order recognition or assumed BN-pair
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#family-f4) · [Proof dependencies](verification/dependency-maps/f4/F4.html) · [Dated construction evidence](verification/f4/construction)
+[Compiled principal statements](THEOREM_STATEMENTS.md#family-f4) · [Proof dependencies](verification/dependency-maps/f4/F4.html) · [Dated construction evidence](verification/f4/construction) · [All construction models](catalogue/REALIZATIONS.md#family-f4)
 
 <a id="exceptional-tits"></a>
 
 ## ²F₄(2)′ (Tits)
 
+Exceptional derived-Ree/Tits entry, not a sporadic group. No independent Ree-model comparison is claimed.
+
+<a id="exceptional-tits-legacy"></a>
+
+### Original concrete model
+
 Actual derived subgroup of the distinguished-cross stabilizer in the constructed projective Conway–Wales lattice group
 
 Parameters: Fixed exceptional derived-Ree/Tits group ²F₄(2)′, constructed as the commutator subgroup of the inherited cross stabilizer
 
-Exceptional derived-Ree/Tits entry, not a sporadic group. No independent Ree-model comparison is claimed.
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Tits.Model`](Atlas/Tits/LocalGroups.lean#L92) |
+| finite | [`Atlas.Tits.finite`](Atlas/Tits/Construction.lean#L11) |
+| order | [`Atlas.Tits.card`](Atlas/Tits/Order.lean#L20) |
+| simple | [`Atlas.Tits.isSimpleGroup`](Atlas/Tits/Simplicity.lean#L12) |
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Tits.Model` | [source](Atlas/Tits/LocalGroups.lean) |
-| finite | `Atlas.Tits.finite` | [source](Atlas/Tits/Construction.lean) |
-| order | `Atlas.Tits.card` | [source](Atlas/Tits/Order.lean) |
-| simple | `Atlas.Tits.isSimpleGroup` | [source](Atlas/Tits/Simplicity.lean) |
 
 Direct inherited lattice-stabilizer construction; no comparison with an independently constructed Ree matrix group or recognition from order is asserted
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#exceptional-tits) · [Proof dependencies](verification/dependency-maps/tits/Tits.html) · [Dated construction evidence](verification/tits/construction)
+[Compiled principal statements](THEOREM_STATEMENTS.md#exceptional-tits) · [Proof dependencies](verification/dependency-maps/tits/Tits.html) · [Dated construction evidence](verification/tits/construction) · [All construction models](catalogue/REALIZATIONS.md#exceptional-tits)
 
 <a id="family-g2"></a>
 
 ## G₂(q)
 
+Exceptions: q=2: actual long-root normal closure has order6048 and index2 in G2(2), whose order is12096
+
+<a id="family-g2-octonion"></a>
+
+### Split-octonion model
+
 Full group of linear multiplication-preserving automorphisms of the uniform eight-coordinate split octonion algebra
 
 Parameters: F is an arbitrary finite field, q=|F|, including characteristics 2 and 3; simple exactly when q>2
 
-Exceptions: q=2: actual long-root normal closure has order6048 and index2 in G2(2), whose order is12096
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.G2.Model`](Atlas/LinearGroups/G2/Basic.lean#L8) |
+| finite | [`Atlas.G2.finite_model`](Atlas/LinearGroups/G2/Basic.lean#L24) |
+| order | [`Atlas.G2.card_Model`](Atlas/LinearGroups/G2/Order.lean#L18) |
+| simple | [`Atlas.G2.isSimple`](Atlas/LinearGroups/G2/Simplicity.lean#L9) |
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.G2.Model` | [source](Atlas/LinearGroups/G2/Basic.lean) |
-| finite | `Atlas.G2.finite_model` | [source](Atlas/LinearGroups/G2/Basic.lean) |
-| order | `Atlas.G2.card_Model` | [source](Atlas/LinearGroups/G2/Order.lean) |
-| simple | `Atlas.G2.isSimple` | [source](Atlas/LinearGroups/G2/Simplicity.lean) |
+<a id="family-g2-chevalley"></a>
+
+### Chevalley root-operator model
+
+Root-generated adjoint operator group; same carrier at nonsimple parameters. The simply connected group is a separate related cover, not this realization.
+
+Parameters: K an arbitrary finite field; q = Nat.card K; rank = 2; every finite characteristic
+
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Chevalley.Model .G2`](Atlas/LinearGroups/Chevalley/Models.lean) |
+| order | [`Atlas.Chevalley.model_G2_card`](Atlas/LinearGroups/Chevalley/ModelG2Order.lean#L22) |
+| simple | [`Atlas.Chevalley.model_isSimpleGroup_of_good`](Atlas/LinearGroups/Chevalley/ModelSimplicityGood.lean#L47) |
+
+Dated concrete-model contract: [AtlasExistenceChevalley.G2](verification/existence/2026-10-25-draft/Chevalley-G2/Solution.lean) · [exact specification](verification/existence/2026-10-25-draft/Chevalley-G2/Challenge.lean) · [checker receipt](verification/existence/2026-10-25-draft/Chevalley-G2/RESULT.json).
+
+This contract proves order and simplicity of this explicit witness for q > 2 for simplicity (the same model exists at q = 2). The realization registry still records its separate catalogue registration as pending.
+
+### Isomorphism between these constructions
+
+The research note records a marked Chevalley–octonion equivalence with ten passed local audit scopes, but its final preservation/registration and source export are outside this review snapshot. This review therefore supplies both model contracts, without claiming that their isomorphism certificate is included.
+
+The existing order/simplicity dependency diagram and line counts describe the split-octonion model. They are not counts for both constructions combined.
+
 
 Concrete Dickson/Wilson octonion construction; no general Chevalley, CFSG, order-recognition or PSU3(3) comparison theorem assumed
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#family-g2) · [Proof dependencies](verification/dependency-maps/g2/G2.html) · [Dated construction evidence](verification/g2/construction)
+[Compiled principal statements](THEOREM_STATEMENTS.md#family-g2) · [Proof dependencies](verification/dependency-maps/g2/G2.html) · [Dated construction evidence](verification/g2/construction) · [All construction models](catalogue/REALIZATIONS.md#family-g2)
 
 <a id="family-reeg2"></a>
 
 ## ²G₂(q)
 
+Exceptions: m=0 (q=3) is excluded from the public simple family; no low-parameter extension or PSL2(8) identification is certified here
+
+<a id="family-reeg2-legacy"></a>
+
+### Original concrete model
+
 Actual subgroup of GL7(F) generated by the explicit Tits-twisted alpha, beta, gamma, torus and Weyl matrices
 
 Parameters: F finite of characteristic 3, q=|F|=3^(2m+1), m>=1; the public family starts at q=27
 
-Exceptions: m=0 (q=3) is excluded from the public simple family; no low-parameter extension or PSL2(8) identification is certified here
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.ReeG2.Model`](Atlas/LinearGroups/ReeG2/Generators.lean#L134) |
+| finite | [`Atlas.ReeG2.finite_model`](Atlas/LinearGroups/TypeReeG2.lean#L27) |
+| order | [`Atlas.ReeG2.order`](Atlas/LinearGroups/ReeG2/Order.lean#L25) |
+| simple | [`Atlas.ReeG2.simple`](Atlas/LinearGroups/ReeG2/Simplicity.lean#L13) |
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.ReeG2.Model` | [source](Atlas/LinearGroups/ReeG2/Generators.lean) |
-| finite | `Atlas.ReeG2.finite_model` | [source](Atlas/LinearGroups/TypeReeG2.lean) |
-| order | `Atlas.ReeG2.order` | [source](Atlas/LinearGroups/ReeG2/Order.lean) |
-| simple | `Atlas.ReeG2.simple` | [source](Atlas/LinearGroups/ReeG2/Simplicity.lean) |
 
 Direct standard Ree matrix construction and explicit injective map into the existing split-octonion G2 model; no CFSG, abstract Chevalley/Ree theorem or order recognition
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#family-reeg2) · [Proof dependencies](verification/dependency-maps/reeg2/ReeG2.html) · [Dated construction evidence](verification/ree-g2/construction)
+[Compiled principal statements](THEOREM_STATEMENTS.md#family-reeg2) · [Proof dependencies](verification/dependency-maps/reeg2/ReeG2.html) · [Dated construction evidence](verification/ree-g2/construction) · [All construction models](catalogue/REALIZATIONS.md#family-reeg2)
 
 <a id="sporadic-m11"></a>
 
 ## M₁₁
 
+<a id="sporadic-m11-legacy"></a>
+
+### Original concrete model
+
 point stabilizer in full Golay dodecad stabilizer
 
 Parameters: any constructed Golay dodecad D and a point of D; canonical standard choices also provided
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Sporadic.Mathieu11.Model` | [source](Atlas/Sporadic/Mathieu11.lean) |
-| finite | `Atlas.Sporadic.Mathieu11.finite` | [source](Atlas/Sporadic/Mathieu11.lean) |
-| order | `Atlas.Sporadic.Mathieu11.card` | [source](Atlas/Sporadic/Mathieu11.lean) |
-| simple | `Atlas.Sporadic.Mathieu11.isSimpleGroup` | [source](Atlas/Sporadic/Mathieu11.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Sporadic.Mathieu11.Model`](Atlas/Sporadic/Mathieu11.lean#L10) |
+| finite | [`Atlas.Sporadic.Mathieu11.finite`](Atlas/Sporadic/Mathieu11.lean#L15) |
+| order | [`Atlas.Sporadic.Mathieu11.card`](Atlas/Sporadic/Mathieu11.lean#L16) |
+| simple | [`Atlas.Sporadic.Mathieu11.isSimpleGroup`](Atlas/Sporadic/Mathieu11.lean#L19) |
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-m11) · [Proof dependencies](verification/dependency-maps/m11/M11.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-m11) · [Proof dependencies](verification/dependency-maps/m11/M11.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#sporadic-m11)
 
 <a id="sporadic-m12"></a>
 
 ## M₁₂
 
+<a id="sporadic-m12-legacy"></a>
+
+### Original concrete model
+
 full Golay dodecad stabilizer
 
 Parameters: any constructed Golay dodecad D; canonical standard choice provided
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Sporadic.Mathieu12.Model` | [source](Atlas/Sporadic/Mathieu12.lean) |
-| finite | `Atlas.Sporadic.Mathieu12.finite` | [source](Atlas/Sporadic/Mathieu12.lean) |
-| order | `Atlas.Sporadic.Mathieu12.card` | [source](Atlas/Sporadic/Mathieu12.lean) |
-| simple | `Atlas.Sporadic.Mathieu12.isSimpleGroup` | [source](Atlas/Sporadic/Mathieu12.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Sporadic.Mathieu12.Model`](Atlas/Sporadic/Mathieu12.lean#L10) |
+| finite | [`Atlas.Sporadic.Mathieu12.finite`](Atlas/Sporadic/Mathieu12.lean#L16) |
+| order | [`Atlas.Sporadic.Mathieu12.card`](Atlas/Sporadic/Mathieu12.lean#L17) |
+| simple | [`Atlas.Sporadic.Mathieu12.isSimpleGroup`](Atlas/Sporadic/Mathieu12.lean#L20) |
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-m12) · [Proof dependencies](verification/dependency-maps/m12/M12.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-m12) · [Proof dependencies](verification/dependency-maps/m12/M12.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#sporadic-m12)
 
 <a id="sporadic-m22"></a>
 
 ## M₂₂
 
+<a id="sporadic-m22-legacy"></a>
+
+### Original concrete model
+
 two coordinate pointwise stabilizer in full Golay automorphism group
 
 Parameters: any coordinate a and distinct coordinate b
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Sporadic.Mathieu22.Model` | [source](Atlas/Sporadic/Mathieu22.lean) |
-| finite | `Atlas.Sporadic.Mathieu22.finite` | [source](Atlas/Sporadic/Mathieu22.lean) |
-| order | `Atlas.Sporadic.Mathieu22.card` | [source](Atlas/Sporadic/Mathieu22.lean) |
-| simple | `Atlas.Sporadic.Mathieu22.isSimpleGroup` | [source](Atlas/Sporadic/Mathieu22Simple.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Sporadic.Mathieu22.Model`](Atlas/Sporadic/Mathieu22.lean#L6) |
+| finite | [`Atlas.Sporadic.Mathieu22.finite`](Atlas/Sporadic/Mathieu22.lean#L15) |
+| order | [`Atlas.Sporadic.Mathieu22.card`](Atlas/Sporadic/Mathieu22.lean#L18) |
+| simple | [`Atlas.Sporadic.Mathieu22.isSimpleGroup`](Atlas/Sporadic/Mathieu22Simple.lean#L6) |
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-m22) · [Proof dependencies](verification/dependency-maps/m22/M22.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-m22) · [Proof dependencies](verification/dependency-maps/m22/M22.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#sporadic-m22)
 
 <a id="sporadic-m23"></a>
 
 ## M₂₃
 
+<a id="sporadic-m23-legacy"></a>
+
+### Original concrete model
+
 coordinate stabilizer in full Golay automorphism group
 
 Parameters: any coordinate a
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Sporadic.Mathieu23.Model` | [source](Atlas/Sporadic/Mathieu23.lean) |
-| finite | `Atlas.Sporadic.Mathieu23.finite` | [source](Atlas/Sporadic/Mathieu23.lean) |
-| order | `Atlas.Sporadic.Mathieu23.card` | [source](Atlas/Sporadic/Mathieu23.lean) |
-| simple | `Atlas.Sporadic.Mathieu23.isSimpleGroup` | [source](Atlas/Sporadic/Mathieu23.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Sporadic.Mathieu23.Model`](Atlas/Sporadic/Mathieu23.lean#L12) |
+| finite | [`Atlas.Sporadic.Mathieu23.finite`](Atlas/Sporadic/Mathieu23.lean#L23) |
+| order | [`Atlas.Sporadic.Mathieu23.card`](Atlas/Sporadic/Mathieu23.lean#L25) |
+| simple | [`Atlas.Sporadic.Mathieu23.isSimpleGroup`](Atlas/Sporadic/Mathieu23.lean#L38) |
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-m23) · [Proof dependencies](verification/dependency-maps/m23/M23.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-m23) · [Proof dependencies](verification/dependency-maps/m23/M23.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#sporadic-m23)
 
 <a id="sporadic-m24"></a>
 
 ## M₂₄
 
+<a id="sporadic-m24-legacy"></a>
+
+### Original concrete model
+
 full permutation automorphism group of constructed binary Golay code
 
 Parameters: fixed constructed carrier; no supplied order or simplicity certificate
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Sporadic.Mathieu24.Model` | [source](Atlas/Sporadic/Mathieu24.lean) |
-| finite | `Atlas.Sporadic.Mathieu24.finite` | [source](Atlas/Sporadic/Mathieu24.lean) |
-| order | `Atlas.Sporadic.Mathieu24.card` | [source](Atlas/Sporadic/Mathieu24Construction.lean) |
-| simple | `Atlas.Sporadic.Mathieu24.isSimpleGroup` | [source](Atlas/Sporadic/Mathieu24Construction.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Sporadic.Mathieu24.Model`](Atlas/Sporadic/Mathieu24.lean#L13) |
+| finite | [`Atlas.Sporadic.Mathieu24.finite`](Atlas/Sporadic/Mathieu24.lean#L16) |
+| order | [`Atlas.Sporadic.Mathieu24.card`](Atlas/Sporadic/Mathieu24Construction.lean#L17) |
+| simple | [`Atlas.Sporadic.Mathieu24.isSimpleGroup`](Atlas/Sporadic/Mathieu24Construction.lean#L19) |
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-m24) · [Proof dependencies](verification/dependency-maps/m24/M24.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-m24) · [Proof dependencies](verification/dependency-maps/m24/M24.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#sporadic-m24)
 
 <a id="sporadic-co1"></a>
 
 ## Co₁
 
+<a id="sporadic-co1-legacy"></a>
+
+### Original concrete model
+
 full Golay Leech isometry group modulo its center {±1}
 
 Parameters: fixed constructed carrier; no supplied order or simplicity certificate
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Sporadic.Conway1.Model` | [source](Atlas/Sporadic/Conway1.lean) |
-| finite | `Atlas.Sporadic.Conway1.finite` | [source](Atlas/Sporadic/Conway1.lean) |
-| order | `Atlas.Sporadic.Conway1.card` | [source](Atlas/Sporadic/Conway1.lean) |
-| simple | `Atlas.Sporadic.Conway1.isSimpleGroup` | [source](Atlas/Sporadic/Conway1.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Sporadic.Conway1.Model`](Atlas/Sporadic/Conway1.lean#L9) |
+| finite | [`Atlas.Sporadic.Conway1.finite`](Atlas/Sporadic/Conway1.lean#L22) |
+| order | [`Atlas.Sporadic.Conway1.card`](Atlas/Sporadic/Conway1.lean#L24) |
+| simple | [`Atlas.Sporadic.Conway1.isSimpleGroup`](Atlas/Sporadic/Conway1.lean#L30) |
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-co1) · [Proof dependencies](verification/dependency-maps/co1/Co1.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-co1) · [Proof dependencies](verification/dependency-maps/co1/Co1.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#sporadic-co1)
 
 <a id="sporadic-co2"></a>
 
 ## Co₂
 
+<a id="sporadic-co2-legacy"></a>
+
+### Original concrete model
+
 actual norm-four vector stabilizer in full Leech isometry group
 
 Parameters: fixed constructed carrier; no supplied order or simplicity certificate
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Sporadic.Conway2.Model` | [source](Atlas/Sporadic/Conway2.lean) |
-| finite | `Atlas.Sporadic.Conway2.finite` | [source](Atlas/Sporadic/Conway2.lean) |
-| order | `Atlas.Sporadic.Conway2.card` | [source](Atlas/Sporadic/Conway2.lean) |
-| simple | `Atlas.Sporadic.Conway2.isSimpleGroup` | [source](Atlas/Sporadic/Conway2Simplicity.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Sporadic.Conway2.Model`](Atlas/Sporadic/Conway2.lean#L12) |
+| finite | [`Atlas.Sporadic.Conway2.finite`](Atlas/Sporadic/Conway2.lean#L16) |
+| order | [`Atlas.Sporadic.Conway2.card`](Atlas/Sporadic/Conway2.lean#L18) |
+| simple | [`Atlas.Sporadic.Conway2.isSimpleGroup`](Atlas/Sporadic/Conway2Simplicity.lean#L7) |
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-co2) · [Proof dependencies](verification/dependency-maps/co2/Co2.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-co2) · [Proof dependencies](verification/dependency-maps/co2/Co2.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#sporadic-co2)
 
 <a id="sporadic-co3"></a>
 
 ## Co₃
 
+<a id="sporadic-co3-legacy"></a>
+
+### Original concrete model
+
 actual norm-six vector stabilizer in full Leech isometry group
 
 Parameters: fixed constructed carrier; no supplied order or simplicity certificate
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Sporadic.Conway3.Model` | [source](Atlas/Sporadic/Conway3.lean) |
-| finite | `Atlas.Sporadic.Conway3.finite` | [source](Atlas/Sporadic/Conway3.lean) |
-| order | `Atlas.Sporadic.Conway3.card` | [source](Atlas/Sporadic/Conway3.lean) |
-| simple | `Atlas.Sporadic.Conway3.isSimpleGroup` | [source](Atlas/Sporadic/Conway3Simplicity.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Sporadic.Conway3.Model`](Atlas/Sporadic/Conway3.lean#L13) |
+| finite | [`Atlas.Sporadic.Conway3.finite`](Atlas/Sporadic/Conway3.lean#L15) |
+| order | [`Atlas.Sporadic.Conway3.card`](Atlas/Sporadic/Conway3.lean#L57) |
+| simple | [`Atlas.Sporadic.Conway3.isSimpleGroup`](Atlas/Sporadic/Conway3Simplicity.lean#L5) |
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-co3) · [Proof dependencies](verification/dependency-maps/co3/Co3.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-co3) · [Proof dependencies](verification/dependency-maps/co3/Co3.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#sporadic-co3)
 
 <a id="sporadic-mcl"></a>
 
 ## McL
 
+<a id="sporadic-mcl-legacy"></a>
+
+### Original concrete model
+
 actual pointwise Leech 2-2-3 triangle stabilizer
 
 Parameters: fixed constructed carrier; no supplied order or simplicity certificate
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Sporadic.McLaughlin.Model` | [source](Atlas/Sporadic/McLaughlin.lean) |
-| finite | `Atlas.Sporadic.McLaughlin.finite` | [source](Atlas/Sporadic/McLaughlin.lean) |
-| order | `Atlas.Sporadic.McLaughlin.card` | [source](Atlas/Sporadic/McLaughlin.lean) |
-| simple | `Atlas.Sporadic.McLaughlin.isSimpleGroup` | [source](Atlas/Sporadic/McLaughlinSimplicity.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Sporadic.McLaughlin.Model`](Atlas/Sporadic/McLaughlin.lean#L8) |
+| finite | [`Atlas.Sporadic.McLaughlin.finite`](Atlas/Sporadic/McLaughlin.lean#L18) |
+| order | [`Atlas.Sporadic.McLaughlin.card`](Atlas/Sporadic/McLaughlin.lean#L20) |
+| simple | [`Atlas.Sporadic.McLaughlin.isSimpleGroup`](Atlas/Sporadic/McLaughlinSimplicity.lean#L10) |
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-mcl) · [Proof dependencies](verification/dependency-maps/mcl/McL.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-mcl) · [Proof dependencies](verification/dependency-maps/mcl/McL.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#sporadic-mcl)
 
 <a id="sporadic-hs"></a>
 
 ## HS
 
+<a id="sporadic-hs-legacy"></a>
+
+### Original concrete model
+
 actual pointwise Leech 2-3-3 triangle stabilizer
 
 Parameters: fixed constructed carrier; no supplied order or simplicity certificate
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Sporadic.HigmanSims.Model` | [source](Atlas/Sporadic/HigmanSimsConfiguration.lean) |
-| finite | `Atlas.Sporadic.HigmanSims.finite` | [source](Atlas/Sporadic/HigmanSimsLattice.lean) |
-| order | `Atlas.Sporadic.HigmanSims.card` | [source](Atlas/Sporadic/HigmanSims.lean) |
-| simple | `Atlas.Sporadic.HigmanSims.isSimpleGroup` | [source](Atlas/Sporadic/HigmanSimsSimplicity.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Sporadic.HigmanSims.Model`](Atlas/Sporadic/HigmanSimsConfiguration.lean#L9) |
+| finite | [`Atlas.Sporadic.HigmanSims.finite`](Atlas/Sporadic/HigmanSimsLattice.lean#L16) |
+| order | [`Atlas.Sporadic.HigmanSims.card`](Atlas/Sporadic/HigmanSims.lean#L12) |
+| simple | [`Atlas.Sporadic.HigmanSims.isSimpleGroup`](Atlas/Sporadic/HigmanSimsSimplicity.lean#L16) |
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-hs) · [Proof dependencies](verification/dependency-maps/hs/HS.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-hs) · [Proof dependencies](verification/dependency-maps/hs/HS.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#sporadic-hs)
 
 <a id="sporadic-suz"></a>
 
 ## Suz
 
+<a id="sporadic-suz-legacy"></a>
+
+### Original concrete model
+
 actual Eisenstein Leech centralizer modulo six scalar isometries
 
 Parameters: fixed constructed carrier; no supplied order or simplicity certificate
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Sporadic.Suzuki.Model` | [source](Atlas/Sporadic/Suzuki.lean) |
-| finite | `Atlas.Sporadic.Suzuki.finite` | [source](Atlas/Sporadic/Suzuki.lean) |
-| order | `Atlas.Sporadic.Suzuki.card` | [source](Atlas/Sporadic/Suzuki.lean) |
-| simple | `Atlas.Sporadic.Suzuki.isSimpleGroup` | [source](Atlas/Sporadic/Suzuki.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Sporadic.Suzuki.Model`](Atlas/Sporadic/Suzuki.lean#L12) |
+| finite | [`Atlas.Sporadic.Suzuki.finite`](Atlas/Sporadic/Suzuki.lean#L31) |
+| order | [`Atlas.Sporadic.Suzuki.card`](Atlas/Sporadic/Suzuki.lean#L33) |
+| simple | [`Atlas.Sporadic.Suzuki.isSimpleGroup`](Atlas/Sporadic/Suzuki.lean#L39) |
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-suz) · [Proof dependencies](verification/dependency-maps/suz/Suz.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-suz) · [Proof dependencies](verification/dependency-maps/suz/Suz.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#sporadic-suz)
 
 <a id="sporadic-j2"></a>
 
 ## J₂
 
+<a id="sporadic-j2-legacy"></a>
+
+### Original concrete model
+
 actual icosian linear group modulo its center of order two
 
 Parameters: fixed constructed carrier; no supplied order or simplicity certificate
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Sporadic.Janko2.Model` | [source](Atlas/Sporadic/Janko2.lean) |
-| finite | `Atlas.Sporadic.Janko2.finite` | [source](Atlas/Sporadic/Janko2.lean) |
-| order | `Atlas.Sporadic.Janko2.card` | [source](Atlas/Sporadic/Janko2.lean) |
-| simple | `Atlas.Sporadic.Janko2.isSimpleGroup` | [source](Atlas/Sporadic/Janko2.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Sporadic.Janko2.Model`](Atlas/Sporadic/Janko2.lean#L11) |
+| finite | [`Atlas.Sporadic.Janko2.finite`](Atlas/Sporadic/Janko2.lean#L35) |
+| order | [`Atlas.Sporadic.Janko2.card`](Atlas/Sporadic/Janko2.lean#L37) |
+| simple | [`Atlas.Sporadic.Janko2.isSimpleGroup`](Atlas/Sporadic/Janko2.lean#L43) |
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-j2) · [Proof dependencies](verification/dependency-maps/j2/J2.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-j2) · [Proof dependencies](verification/dependency-maps/j2/J2.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#sporadic-j2)
 
 <a id="sporadic-fi22"></a>
 
 ## Fi₂₂
 
+<a id="sporadic-fi22-legacy"></a>
+
+### Original concrete model
+
 commuting-pair centralizer quotient in actual full ray group
 
 Parameters: fixed constructed carrier; no supplied order or simplicity certificate
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Sporadic.Fischer22.Model` | [source](Atlas/Sporadic/Fischer22.lean) |
-| finite | `Atlas.Sporadic.Fischer22.finite` | [source](Atlas/Sporadic/Fischer22.lean) |
-| order | `Atlas.Sporadic.Fischer22.card` | [source](Atlas/Sporadic/Fischer22.lean) |
-| simple | `Atlas.Sporadic.Fischer22.simple` | [source](Atlas/Sporadic/Fischer22.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Sporadic.Fischer22.Model`](Atlas/Sporadic/Fischer22.lean#L11) |
+| finite | [`Atlas.Sporadic.Fischer22.finite`](Atlas/Sporadic/Fischer22.lean#L19) |
+| order | [`Atlas.Sporadic.Fischer22.card`](Atlas/Sporadic/Fischer22.lean#L20) |
+| simple | [`Atlas.Sporadic.Fischer22.simple`](Atlas/Sporadic/Fischer22.lean#L23) |
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-fi22) · [Proof dependencies](verification/dependency-maps/fi22/Fi22.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-fi22) · [Proof dependencies](verification/dependency-maps/fi22/Fi22.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#sporadic-fi22)
 
 <a id="sporadic-fi23"></a>
 
 ## Fi₂₃
 
+<a id="sporadic-fi23-legacy"></a>
+
+### Original concrete model
+
 singleton centralizer quotient in actual full ray group
 
 Parameters: fixed constructed carrier; no supplied order or simplicity certificate
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Sporadic.Fischer23.Model` | [source](Atlas/Sporadic/Fischer23.lean) |
-| finite | `Atlas.Sporadic.Fischer23.finite` | [source](Atlas/Sporadic/Fischer23.lean) |
-| order | `Atlas.Sporadic.Fischer23.card` | [source](Atlas/Sporadic/Fischer23.lean) |
-| simple | `Atlas.Sporadic.Fischer23.simple` | [source](Atlas/Sporadic/Fischer23.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Sporadic.Fischer23.Model`](Atlas/Sporadic/Fischer23.lean#L11) |
+| finite | [`Atlas.Sporadic.Fischer23.finite`](Atlas/Sporadic/Fischer23.lean#L19) |
+| order | [`Atlas.Sporadic.Fischer23.card`](Atlas/Sporadic/Fischer23.lean#L20) |
+| simple | [`Atlas.Sporadic.Fischer23.simple`](Atlas/Sporadic/Fischer23.lean#L23) |
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-fi23) · [Proof dependencies](verification/dependency-maps/fi23/Fi23.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-fi23) · [Proof dependencies](verification/dependency-maps/fi23/Fi23.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#sporadic-fi23)
 
 <a id="sporadic-fi24prime"></a>
 
 ## Fi₂₄′
 
+<a id="sporadic-fi24prime-legacy"></a>
+
+### Original concrete model
+
 positive subgroup of actual Conway-Parker root-generated ray group
 
 Parameters: fixed constructed carrier; no supplied order or simplicity certificate
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Sporadic.Fischer24Prime.Model` | [source](Atlas/Sporadic/Fischer24Prime.lean) |
-| finite | `Atlas.Sporadic.Fischer24Prime.finite` | [source](Atlas/Sporadic/Fischer24Prime.lean) |
-| order | `Atlas.Sporadic.Fischer24Prime.card` | [source](Atlas/Sporadic/Fischer24Prime.lean) |
-| simple | `Atlas.Sporadic.Fischer24Prime.simple` | [source](Atlas/Sporadic/Fischer24Prime.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Sporadic.Fischer24Prime.Model`](Atlas/Sporadic/Fischer24Prime.lean#L9) |
+| finite | [`Atlas.Sporadic.Fischer24Prime.finite`](Atlas/Sporadic/Fischer24Prime.lean#L15) |
+| order | [`Atlas.Sporadic.Fischer24Prime.card`](Atlas/Sporadic/Fischer24Prime.lean#L16) |
+| simple | [`Atlas.Sporadic.Fischer24Prime.simple`](Atlas/Sporadic/Fischer24Prime.lean#L18) |
+
 
 No general recognition theorem claimed by this entry
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-fi24prime) · [Proof dependencies](verification/dependency-maps/fi24prime/Fi24Prime.html) · [Dated construction evidence](verification/status-audit/2026-09-14)
+[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-fi24prime) · [Proof dependencies](verification/dependency-maps/fi24prime/Fi24Prime.html) · [Dated construction evidence](verification/status-audit/2026-09-14) · [All construction models](catalogue/REALIZATIONS.md#sporadic-fi24prime)
 
 <a id="sporadic-ru"></a>
 
 ## Ru
 
+<a id="sporadic-ru-legacy"></a>
+
+### Original concrete model
+
 full Gaussian automorphism group of the explicit Conway–Wales lattice, modulo its scalar units
 
 Parameters: fixed constructed lattice stabilizer quotient; no supplied order or simplicity certificate
 
-| Interface | Declaration | Source |
-|---|---|---|
-| model | `Atlas.Sporadic.Rudvalis.Model` | [source](Atlas/Sporadic/Rudvalis.lean) |
-| finite | `Atlas.Sporadic.Rudvalis.finite` | [source](Atlas/Sporadic/Rudvalis.lean) |
-| order | `Atlas.Sporadic.Rudvalis.card` | [source](Atlas/Sporadic/Rudvalis.lean) |
-| simple | `Atlas.Sporadic.Rudvalis.isSimpleGroup` | [source](Atlas/Sporadic/Rudvalis.lean) |
+| Interface | Lean declaration and source |
+|---|---|
+| model | [`Atlas.Sporadic.Rudvalis.Model`](Atlas/Sporadic/Rudvalis.lean#L10) |
+| finite | [`Atlas.Sporadic.Rudvalis.finite`](Atlas/Sporadic/Rudvalis.lean#L20) |
+| order | [`Atlas.Sporadic.Rudvalis.card`](Atlas/Sporadic/Rudvalis.lean#L22) |
+| simple | [`Atlas.Sporadic.Rudvalis.isSimpleGroup`](Atlas/Sporadic/Rudvalis.lean#L28) |
+
 
 Direct Conway–Wales lattice construction; no general recognition or classification uniqueness theorem claimed
 
-[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-ru) · [Proof dependencies](verification/dependency-maps/ru/Ru.html) · [Dated construction evidence](verification/rudvalis/v33/construction)
+[Compiled principal statements](THEOREM_STATEMENTS.md#sporadic-ru) · [Proof dependencies](verification/dependency-maps/ru/Ru.html) · [Dated construction evidence](verification/rudvalis/v33/construction) · [All construction models](catalogue/REALIZATIONS.md#sporadic-ru)
 
 ## Auxiliary groups and covers
 

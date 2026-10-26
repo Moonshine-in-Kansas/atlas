@@ -69,6 +69,18 @@ Every row below is restricted to the admissible simple parameters above.
 
 ## Comparisons between construction models
 
+Both constructions are displayed directly in the [catalogue](CATALOGUE.md) and
+[model inventory](catalogue/REALIZATIONS.md). The [Lean certificate page](catalogue/ISOMORPHISMS.md)
+contains the actual A/B/C/D proof definitions, complete compiled types, endpoint
+carriers, parameter maps and full dependency audits:
+
+| Family | Constructions | Actual Lean equivalence |
+|---|---|---|
+| A | Chevalley and projective special-linear matrices | [A_identification](catalogue/ISOMORPHISMS.md#chevalley-a-to-legacy-v1) |
+| B | Chevalley and odd quadratic forms | [B_identification](catalogue/ISOMORPHISMS.md#chevalley-b-to-legacy-v1) |
+| C | Chevalley and projective symplectic matrices | [C_identification](catalogue/ISOMORPHISMS.md#chevalley-c-to-legacy-v1) |
+| D | Chevalley and split even quadratic forms | [D_identification](catalogue/ISOMORPHISMS.md#chevalley-d-to-legacy-v1) |
+
 The root-operator Chevalley constructions coexist with the earlier matrix and
 algebra models. The marked type-A comparison identifies its selected companion
 with SL and its adjoint model with PSL. The
@@ -93,7 +105,11 @@ Neither old nor new simplicity is used.
 These are additional concrete equivalences; they do not replace the existing
 registry carriers or extend the normalized-label theorem. The four A/B/C/D
 realizations and their marked maps are now [registered and separately audited](catalogue/REALIZATIONS.md).
-G₂ and F₄ model comparisons remain outside this completed upload checkpoint.
+Both the Chevalley and octonion/Albert models of G₂/F₄ are displayed with their
+own proof references. The research note records ten passed local scopes for the
+marked G₂ equivalence, but its final preservation/registration and source export
+are outside this review snapshot. The F₄ equivalence remains unfinished.
+Their precise comparison scopes are retained in the [certificate inventory](catalogue/ISOMORPHISMS.md).
 
 ## Proof architecture
 

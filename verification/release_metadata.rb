@@ -162,7 +162,7 @@ module AtlasReleaseMetadata
       raise 'Missing PDF link' unless files.read('README.md').include?('](atlas_research_note.pdf)')
       raise 'Approved license changed' unless files.read('LICENSE').include?('ATLAS Research and Attribution License')
       pages=%w[README.md CATALOGUE.md COMPARISON.md THEOREM_STATEMENTS.md AUDIT.md LICENSING.md
-        catalogue/README.md catalogue/REALIZATIONS.md catalogue/COMPARISONS.md
+        catalogue/README.md catalogue/REALIZATIONS.md catalogue/COMPARISONS.md catalogue/ISOMORPHISMS.md
         verification/README.md verification/MAINTENANCE.md verification/INDEPENDENT_CHECKERS.md
         verification/existence/README.md verification/existence/RESULTS.md verification/comparisons/README.md]
       pages.each do |p|

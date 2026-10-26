@@ -5,6 +5,14 @@ public declarations, auxiliary groups and evidence bindings. `realizations.json`
 retains separate model records and explicit identification maps. `comparisons.json`
 retains the 40 exposed comparison interfaces with their mathematical hypotheses.
 
+The generated views display all 39 models of the 33 entries. Six entries retain
+both original and Chevalley constructions. [ISOMORPHISMS.md](ISOMORPHISMS.md)
+exposes the four registered A/B/C/D equivalences with exact source proofs,
+compiled types and dependency certificates. G₂/F₄ model contracts are displayed
+without silently promoting their pending realization registrations or comparison
+scope. The same model inventory supplies the catalogue, CSV, statement pages,
+comparison pages and navigation in every proof diagram.
+
 Run `ruby catalogue/manage.rb refresh` after a reviewed data edit, then
 `ruby catalogue/manage.rb check`. This deterministically produces the catalogue,
 realization and comparison pages, CSV inventory and principal compiled signatures.

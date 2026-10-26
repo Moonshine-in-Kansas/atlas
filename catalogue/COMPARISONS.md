@@ -1,5 +1,24 @@
 # Explicit comparison interfaces
 
+## Comparisons between construction models
+
+Both models are retained in the [construction inventory](REALIZATIONS.md).
+These witnesses are actual multiplicative equivalences, with complete compiled
+[Lean certificates](ISOMORPHISMS.md).
+
+| Models | Proved domain | Lean witness and certificate |
+|---|---|---|
+| family.PSL/chevalley / family.PSL/matrix | K an arbitrary finite field; q = Nat.card K; r >= 1; every finite characteristic | [`Atlas.Chevalley.Catalogue.A_identification`](../Atlas/LinearGroups/Chevalley/Catalogue/ACIdentification.lean#L24) · [Lean isomorphism certificate](../catalogue/ISOMORPHISMS.md#chevalley-a-to-legacy-v1) |
+| family.C/chevalley / family.C/symplectic | K an arbitrary finite field; q = Nat.card K; r >= 2; every finite characteristic | [`Atlas.Chevalley.Catalogue.C_identification`](../Atlas/LinearGroups/Chevalley/Catalogue/ACIdentification.lean#L31) · [Lean isomorphism certificate](../catalogue/ISOMORPHISMS.md#chevalley-c-to-legacy-v1) |
+| family.D/chevalley / family.D/quadratic | K an arbitrary finite field; q = Nat.card K; r >= 4; every finite characteristic | [`Atlas.Chevalley.Catalogue.D_identification`](../Atlas/LinearGroups/Chevalley/Catalogue/DIdentification.lean#L16) · [Lean isomorphism certificate](../catalogue/ISOMORPHISMS.md#chevalley-d-to-legacy-v1) |
+| family.B/chevalley / family.B/quadratic | K an arbitrary finite field; q = Nat.card K; n : Nat, rank r = n+1 >= 2; every finite characteristic, including B2(F2) | [`Atlas.Chevalley.Catalogue.B_identification`](../Atlas/LinearGroups/Chevalley/Catalogue/BIdentification.lean#L16) · [Lean isomorphism certificate](../catalogue/ISOMORPHISMS.md#chevalley-b-to-legacy-v1) |
+
+The research note records a marked Chevalley–octonion equivalence with ten passed local audit scopes, but its final preservation/registration and source export are outside this review snapshot. This review therefore supplies both model contracts, without claiming that their isomorphism certificate is included.
+
+The isomorphism between the Chevalley and full split-Albert models remains unfinished. No certificate identifying them is claimed.
+
+## Other explicit comparisons
+
 See [the aggregate theorem](../COMPARISON.md) for its 13-family scope and proof architecture.
 Every row below retains its full field and rank assumptions.
 

@@ -4,6 +4,7 @@ require 'csv'
 require 'digest'
 require 'zlib'
 require 'set'
+require_relative 'model_views'
 ROOT=File.expand_path('..',__dir__)
 Dir.chdir(ROOT)
 mode=ARGV.fetch(0,'check')
@@ -25,6 +26,8 @@ counts=load_json('catalogue/dependency-counts.json').to_h { |r|[r.fetch('id'),r]
 overlay=load_json('catalogue/realizations.json')
 comparison_data=load_json('catalogue/comparisons.json')
 comparison_rows=comparison_data.fetch('entries')+comparison_data.fetch('supplements').flat_map { |s|s.fetch('entries') }
+model_views=AtlasModelViews::View.new(ROOT)
+model_views.render_diagrams(mode)
 diagrams={}
 entries.each do |e|
   raise 'Incomplete entry in completed catalogue' unless e['proof_status']=='construction_complete'
@@ -55,12 +58,12 @@ text=<<~MD
   Here q is the base-field size and n is Lie rank: Aₙ(q)=PSLₙ₊₁(q),
   ²Aₙ(q)=PSUₙ₊₁(q). Exact dimension conventions are retained below.
 
-  | Group or family | Order | Proven simplicity | Lean files / theorems | Intrinsic lines | Total dependency lines |
-  |---|---|---|---|---:|---:|
+  | Group or family | Constructions and identification certificates | Order | Proven simplicity | Lean files / theorems | Intrinsic lines | Total dependency lines |
+  |---|---|---|---|---|---:|---:|
 MD
 entries.each do |e|
   r=counts.fetch(e['id'])
-  text<<"| [#{label(e)}](##{anchor(e)}) | #{cell(e.dig('presentation','summary_order'))} | #{cell(e.dig('presentation','summary_simplicity'))} | [#{r['files']} / #{r['source_theorems']}](#{e['proof_dependencies']}) | #{count(r['intrinsic_lines'])} | #{count(r['total_lines'])} |\n"
+  text<<"| [#{label(e)}](##{anchor(e)}) | #{model_views.summary(e['id'])} | #{cell(e.dig('presentation','summary_order'))} | #{cell(e.dig('presentation','summary_simplicity'))} | [#{r['files']} / #{r['source_theorems']}](#{e['proof_dependencies']}) | #{count(r['intrinsic_lines'])} | #{count(r['total_lines'])} |\n"
 end
 text<< <<~MD
 
@@ -71,67 +74,61 @@ text<< <<~MD
   [source binding](verification/release-candidate/DIAGRAM_BINDING.json) are preserved;
   packaging the diagrams is not a new proof check. Download an HTML file to view it.
 
-  The additional A/B/C/D Chevalley realizations have actual identification maps.
-  The table counts and diagrams describe the original default models.
+  All six additional Chevalley constructions are displayed alongside the original
+  A/B/C/D/F₄/G₂ models. [Explicit Lean certificates](catalogue/ISOMORPHISMS.md)
+  identify the registered A/B/C/D pairs. The G₂ and F₄ comparison scopes are stated
+  separately. The table counts and diagrams describe the original default models;
+  multiple constructions do not increase the number of families.
 
 MD
 entries.each do |e|
-  text<<"<a id=\"#{anchor(e)}\"></a>\n\n## #{label(e)}\n\n#{e['construction']}\n\nParameters: #{e['parameters']}\n\n"
+  text<<"<a id=\"#{anchor(e)}\"></a>\n\n## #{label(e)}\n\n"
   text<<"Exceptions: #{e['exceptions']}\n\n" unless e.fetch('exceptions','').empty? || e['exceptions']==e['parameters']
   text<<"#{e.dig('presentation','note')}\n\n" if e.dig('presentation','note')
-  text<<"| Interface | Declaration | Source |\n|---|---|---|\n"
-  e['roles'].each do |role,r|
-    next if role=='nonabelian'
-    text<<"| #{role} | `#{r['declaration']}` | [source](#{source_link(r['source'])}) |\n"
-  end
+  text<<model_views.detailed(e)
   text<<"\n#{e['recognition']}\n\n"
   text<<"[Compiled principal statements](THEOREM_STATEMENTS.md##{anchor(e)}) · [Proof dependencies](#{e['proof_dependencies']})"
   eid=e['evidence']
   text<<" · [Dated construction evidence](#{registry.fetch('evidence').fetch(eid).fetch('directory')})" if eid
-  model=overlay['candidates'].find { |r|r['entry']==e['id'] && r['proof_status']=='construction_complete' }
-  text<<" · [Chevalley realization and evidence](catalogue/REALIZATIONS.md##{anchor(e)}-chevalley)" if model
+  text<<" · [All construction models](catalogue/REALIZATIONS.md##{anchor(e)})"
   text<<"\n\n"
 end
 text<<"## Auxiliary groups and covers\n\nThese are separate from the simple-group count.\n\n| Group | Order | Mathematical scope |\n|---|---|---|\n"
 registry['auxiliary'].each { |e|text<<"| #{cell(e['label'])} | #{cell(e['order'])} | #{cell(e['construction'])}; #{cell(e['evidence_scope'])} |\n" }
 text<<"\n## Isomorphisms and nonisomorphisms\n\nSee [the comparison theorem and its exact scope](COMPARISON.md) and the\n[explicit comparison interfaces](catalogue/COMPARISONS.md), including the order-25,920\nbridge. E₆/E₇/E₈ are outside the aggregate normalized-label theorem.\n"
 out['CATALOGUE.md']=text
-out['catalogue/GROUPS.csv']=CSV.generate { |csv|csv<<%w[id label kind parameters order simplicity];entries.each { |e|csv<<[e['id'],label(e),e['kind'],e['parameters'],e.dig('presentation','summary_order'),e.dig('presentation','summary_simplicity')] } }
+out['catalogue/GROUPS.csv']=CSV.generate { |csv|csv<<%w[id label kind constructions identification_certificates parameters order simplicity];entries.each { |e|csv<<[e['id'],label(e),e['kind'],model_views.models.fetch(e['id']).map { |m|m['label'] }.join('; '),model_views.edges(e['id']).map { |c|c.dig('witness','declaration') }.join('; '),e['parameters'],e.dig('presentation','summary_order'),e.dig('presentation','summary_simplicity')] } }
 
 real=<<~MD
-  # Additional realizations and explicit identifications
+  # Construction models and explicit identifications
 
   Different constructions remain distinct until an actual multiplicative
   equivalence is proved. Order and simplicity alone do not identify them.
-  These records do not add families to the 33-entry catalogue.
+  The 33 catalogue entries below retain all 39 displayed models, including six
+  additional Chevalley constructions. A/B/C/D have explicit registered
+  [Lean isomorphism certificates](ISOMORPHISMS.md); G₂/F₄ retain their distinct
+  comparison scopes. Multiple constructions do not add families to the catalogue.
 
 MD
-overlay['candidates'].select { |c|c['proof_status']=='construction_complete' }.each do |c|
-  a=c['entry'].downcase.tr('.','-')+'-'+c['realization']
-  real<<"<a id=\"#{a}\"></a>\n\n## #{c['label']}\n\n#{c['construction_meaning']}\n\nParameters: #{c['parameter_domain']}\n\n"
-  real<<"Carrier: `#{c.dig('carrier','declaration')}` ([source](#{source_link(c.dig('carrier','source'),'../')})).\n\n"
-  real<<"| Property | Declaration | Full audit |\n|---|---|---|\n"
-  c['property_evidence'].each do |property,item|
-    next if property=='nonabelian'
-    real<<"| #{property} | `#{item.dig('theorem','declaration')}` | [evidence](../#{item.dig('binding','directory')}) |\n"
-  end
-  edge=overlay['comparisons'].find { |r|r.dig('source','qualified_id')==c['entry']+'/'+c['realization'] }
-  if edge
-    real<<"\nIdentification with `#{edge.dig('target','qualified_id')}`: `#{edge.dig('witness','declaration')}`\n([source](#{source_link(edge.dig('witness','source'),'../')}), [full audit](../#{edge.dig('evidence','directory')})).\n\nDomain: #{edge.dig('parameter_domain','description')}.\n\n"
-  else
-    real<<"\nThis is the first completed anchor for its family. No identification with a different model is asserted.\n\n"
-  end
+real<<"| Entry | Constructions and certificates |\n|---|---|\n"
+entries.each { |e|real<<"| [#{label(e)}](##{anchor(e)}) | #{model_views.summary(e['id'],'../')} |\n" }
+entries.each do |e|
+  real<<"\n<a id=\"#{anchor(e)}\"></a>\n\n## #{label(e)}\n\n"
+  real<<model_views.detailed(e,'../')
+  real<<"#{e['recognition']}\n\n"
 end
-real<<"## Chevalley G₂ and F₄\n\nTheir separate model-specific [Comparator contracts](../verification/existence/RESULTS.md) passed.\nThe G₂ and F₄ comparisons with the octonion and Albert models are not claimed here.\nThe preserved registry marks their dedicated catalogue registration separately.\n"
 out['catalogue/REALIZATIONS.md']=real
 
-cmp="# Explicit comparison interfaces\n\nSee [the aggregate theorem](../COMPARISON.md) for its 13-family scope and proof architecture.\nEvery row below retains its full field and rank assumptions.\n\n| Models | Relation | Parameters | Declaration |\n|---|---|---|---|\n"
+cmp="# Explicit comparison interfaces\n\n## Comparisons between construction models\n\nBoth models are retained in the [construction inventory](REALIZATIONS.md).\nThese witnesses are actual multiplicative equivalences, with complete compiled\n[Lean certificates](ISOMORPHISMS.md).\n\n| Models | Proved domain | Lean witness and certificate |\n|---|---|---|\n"
+model_views.comparisons.each { |c|cmp<<"| #{c.dig('source','qualified_id')} / #{c.dig('target','qualified_id')} | #{cell(c.dig('parameter_domain','description'))} | #{model_views.source(c['witness'],'../')} · #{model_views.certificate(c,'../')} |\n" }
+%w[family.G2 family.F4].each { |id|cmp<<"\n#{model_views.comparison_status(id)}\n" }
+cmp<<"\n## Other explicit comparisons\n\nSee [the aggregate theorem](../COMPARISON.md) for its 13-family scope and proof architecture.\nEvery row below retains its full field and rank assumptions.\n\n| Models | Relation | Parameters | Declaration |\n|---|---|---|---|\n"
 comparison_rows.each { |r|cmp<<"| #{cell(r['left'])} / #{cell(r['right'])} | #{cell(r['relation'])} | #{cell(r['parameters'])} | [`#{r['declaration']}`](#{source_link(r['source'],'../')}) |\n" }
 cmp<<"\n[Chevalley identifications](REALIZATIONS.md) are additional concrete maps.\nThe outstanding order-6,048 and order-504 derived-group bridges are not inferred from order equality.\n"
 out['catalogue/COMPARISONS.md']=cmp
 
 # Recover verbatim compiled principal signatures, never synthesize them from source.
-wanted=entries.flat_map { |e|%w[order simple].map { |r|e.dig('roles',r,'declaration') } }.to_set
+wanted=(entries.flat_map { |e|%w[order simple].map { |r|e.dig('roles',r,'declaration') } }+model_views.extra_statement_names).to_set
 statements={}
 current=load_json('verification/current.json')
 audit=current.fetch('supplemental_cache_audit')
@@ -160,12 +157,27 @@ raise "Missing compiled signatures: #{missing.to_a.join(', ')}" unless missing.e
 sig="# Principal compiled theorem statements\n\nThese signatures are copied verbatim from the source-bound 26 October compiled\naudit, with implicit parameters and instances visible. See [verification status](AUDIT.md)\nfor the distinction between this cached-artifact audit and a fresh proof rebuild.\n\n"
 entries.each do |e|
   sig<<"<a id=\"#{anchor(e)}\"></a>\n\n## #{label(e)}\n\n"
+  sig<<"Primary construction: #{model_views.models.fetch(e['id']).first['label']}.\n\n"
   %w[order simple].each do |role|
     n=e.dig('roles',role,'declaration');s=statements.fetch(n)
     sig<<"### #{role.capitalize}\n\n[Compiled evidence](#{s[:path]}).\n\n```lean\n#{s[:text].rstrip}\n```\n\n"
   end
+  model_views.models.fetch(e['id']).reject { |m|m['default'] }.each do |m|
+    sig<<"### #{m['label']}\n\n"
+    if m['status']=='construction_complete'
+      %w[order simple].each do |role|
+        s=statements.fetch(m.dig('roles',role,'declaration'))
+        sig<<"#{role.capitalize}: [compiled evidence](#{s[:path]}).\n\n```lean\n#{s[:text].rstrip}\n```\n\n"
+      end
+    else
+      c=m.fetch('contract')
+      sig<<"[Concrete-model Lean certificate](#{c['evidence']}/#{c['solution_file']}) · [exact mathematical specification](#{c['evidence']}/#{c['reference_file']}). The separate catalogue registration is pending.\n\n"
+    end
+  end
+  model_views.edges(e['id']).each { |c|sig<<model_views.certificate(c)+" · "+model_views.source(c['witness'])+".\n\n" }
 end
 out['THEOREM_STATEMENTS.md']=sig
+out['catalogue/ISOMORPHISMS.md']=model_views.isomorphism_page(statements)
 out['catalogue/current-verification.json']=JSON.pretty_generate({
   format:2,scope:'Current-source-bound compiled declaration audit; not a fresh full rebuild or independent replay',
   registry_sha256:Digest::SHA256.file('catalogue/catalogue.json').hexdigest,
@@ -174,6 +186,8 @@ out['catalogue/current-verification.json']=JSON.pretty_generate({
   roots_sha256:Digest::SHA256.file('verification/roots.json').hexdigest,
   source_hashes_sha256:Digest::SHA256.file(current.fetch('sources')).hexdigest,
   completed_families:16,completed_sporadics:16,completed_exceptional:1,
+  displayed_models:model_views.models.values.sum(&:size),multiple_model_entries:model_views.multiple.keys,
+  construction_isomorphism_certificates:model_views.comparisons.map { |c|c.dig('witness','declaration') },
   checked_references:load_json('verification/roots.json').size,compiled_audit:audit,
   prior_catalogue_check:'verification/catalogue/2026-10-19/original-current-verification.json',
   publication_acceptance:'pending; see verification/current.json and AUDIT.md'

@@ -14,11 +14,17 @@ structural properties. This candidate contains **16 completed families,
 and exceptions. The stable entry point is `import Atlas`.
 
 Read the [catalogue](CATALOGUE.md), [proved comparisons](COMPARISON.md),
-[additional realizations](catalogue/REALIZATIONS.md), and
+[all construction models](catalogue/REALIZATIONS.md),
+[Lean isomorphism certificates](catalogue/ISOMORPHISMS.md), and
 [research note (PDF)](atlas_research_note.pdf) ([TeX](atlas_research_note.tex)).
 The research note is the unchanged, dated 25 October development account:
 its broader local source inventory is distinguished from this filtered export.
 It is not a claim that every local draft module is included or release-accepted.
+
+A, B, C, D, F₄ and G₂ each retain both their original model and a Chevalley
+root-operator model. The catalogue displays both constructions. A/B/C/D have
+explicit audited equivalences with linked Lean proof definitions and compiled
+types. The G₂ and F₄ comparisons retain their separately stated scopes.
 
 This is a construction library, not a proof of classification exhaustiveness.
 Equality of orders is not used as a substitute for an isomorphism. The typed

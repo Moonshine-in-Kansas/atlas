@@ -12,7 +12,8 @@ ruby verification/release_metadata.rb refresh
 ruby verification/release_metadata.rb check-preparation
 ```
 
-Refresh generates the catalogue pages, 66 principal compiled statements,
+Refresh generates the catalogue pages, 66 primary and eight additional-model
+order/simplicity statements, four compiled construction-isomorphism certificates,
 Comparator result table and YAML result index, AUDIT.md and complete manifests.
 The read-only preparation check verifies exact source and pin hashes, all 1,207
 audit roots across the catalogue and realization/comparison registries,
