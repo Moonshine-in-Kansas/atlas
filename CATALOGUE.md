@@ -1088,5 +1088,7 @@ The [construction and identification guide](catalogue/REALIZATIONS.md) separates
 [exceptional isomorphisms](catalogue/REALIZATIONS.md#between-families), and
 [nonisomorphism by orders or invariants](catalogue/REALIZATIONS.md#remaining-pairs).
 One general certificate covers all distinct normalized labels within the
-[comparison theorem's scope](COMPARISON.md#scope-and-definitions). E₆/E₇/E₈ and
-unfinished model/derived-group bridges retain their [explicit limits](catalogue/REALIZATIONS.md#comparison-scope).
+[combined group-registry theorem's scope](COMPARISON.md#scope-and-definitions).
+The numerical order theorem also covers E₆/E₇/E₈; their [group-order proofs and
+comparison evidence](catalogue/REALIZATIONS.md#e-series-order) are linked separately.
+The [registry and order-proof scopes](catalogue/REALIZATIONS.md#comparison-scope) are distinguished explicitly.

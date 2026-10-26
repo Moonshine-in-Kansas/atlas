@@ -31,8 +31,10 @@ types. The G₂ and F₄ comparisons retain their separately stated scopes.
 
 This is a construction library, not a proof of classification exhaustiveness.
 Equality of orders is not used as a substitute for an isomorphism. The typed
-comparison theorem covers its stated 13 families and 17 individual groups;
-the three E-series families have separate construction and simplicity results.
+combined group-registry theorem covers 13 families and 17 individual groups.
+The numerical order-comparison theorem also covers E₆/E₇/E₈; their proved group
+orders supply the same separation argument, with [separate statement and audit
+links](catalogue/REALIZATIONS.md#e-series-order).
 
 ## Build and check
 

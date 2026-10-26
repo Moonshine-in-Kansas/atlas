@@ -15,7 +15,8 @@ groups, including the cases where their orders agree. All remaining pairs in
 this scope have different orders, except for odd-q Bᵣ/Cᵣ at r≥3 and
 A₈/PSL₃(4); those pairs are separated by involution-class counts and Sylow-2
 center sizes, respectively. The statement covers all 16 completed sporadic groups
-and Tits, but does not include E₆/E₇/E₈.
+and Tits. Its concrete group registry does not yet include E₆/E₇/E₈;
+the numerical order-comparison theorem already includes all three.
 
 The declaration is
 `Atlas.Comparisons.Catalogue.isomorphic_iff_normalized_label_eq`.
@@ -34,11 +35,23 @@ split D, minus D, G₂, F₄, triality ³D₄, Suzuki ²B₂ and small Ree ²G�
 It also covers M₁₁, M₁₂, M₂₂, M₂₃, M₂₄, Co₁, Co₂, Co₃, McL, HS, Suz, J₂,
 Fi₂₂, Fi₂₃, Fi₂₄′, Ru and Tits.
 
-This typed registry is unchanged by the [E₆, E₇ and E₈ catalogue
-integration](catalogue/REALIZATIONS.md). It has no constructors for those
-new root-operator carriers, so they are outside the comparison theorem above.
-Their separate construction, order and simplicity proofs do not assert an
-isomorphism with another realization.
+There are two distinct registries. The concrete group registry above has not yet
+been extended with E₆/E₇/E₈ carriers. The numerical
+[RawEntry and Admissible definitions](Atlas/OrderArithmetic/Parameters.lean)
+already include all three, for every prime-power q. Consequently the unrestricted
+[order-comparison theorem](Atlas/OrderArithmetic/Classification.lean) applies to
+their formulas. Normalization leaves E₆/E₇/E₈ unchanged, and neither exceptional
+equal-order pattern contains them.
+
+The actual [E₆/E₇/E₈ group-order theorems](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesOrder.lean)
+prove precisely those formulas (with the finite products expanded). Combining them
+with the numerical comparison and
+[unequal orders imply nonisomorphism](Atlas/Comparisons/Cardinality.lean)
+therefore separates their distinct family/field-size labels from one another
+and from the other admissible labels. The [guide links these statements and their
+passed audit certificates](catalogue/REALIZATIONS.md#e-series-order).
+The absence of E-series constructors from the older combined group theorem is
+an interface limitation, not a gap in the order-comparison proof.
 
 The family entries use the canonical simple parameter ranges and retain the
 actual finite fields and field extensions. Different presentations of fields

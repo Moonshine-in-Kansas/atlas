@@ -299,22 +299,32 @@ module AtlasModelViews
     
         ## 3. Non-isomorphisms of all other cases
     
-        **Scope:** the theorem covers the 13 families Cₚ, A_m, PSL, PSU, B, C, D⁺,
-        D⁻, G₂, F₄, ³D₄, ²B₂ and ²G₂, all 16 completed sporadic groups, and Tits,
-        on its [exact simple parameter ranges](../COMPARISON.md#scope-and-definitions).
-        After the proved exceptional identifications, every other pair in this scope
-        is nonisomorphic. One theorem covers all these pairs; its proof uses unequal
-        orders, except for the two invariant obstructions below.
+        **Order separation includes E₆, E₇ and E₈.** The numerical order-comparison
+        theorem covers their formulas as well as the earlier family and sporadic
+        formulas. Together with the proved orders of the constructed models, it
+        separates differently labelled groups by order, except for the exceptional
+        isomorphisms in Theme 2 and the two invariant obstructions below.
+        The older combined group-registry certificate has a narrower domain:
+        [13 families, 16 sporadic groups and Tits](../COMPARISON.md#scope-and-definitions).
+        The E-series order argument is given separately in the table.
     
         | Non-isomorphism result and reason | Lean statements | Verification certificates |
         |---|---|---|
       MD
       general='Atlas.Comparisons.Catalogue.not_isomorphic_of_normalized_label_ne'
       order='Atlas.OrderArithmetic.catalogue_order_eq_iff'
-      bridge='Atlas.Comparisons.Catalogue.card'
-      unequal='Atlas.Comparisons.Catalogue.not_isomorphic_of_not_collision'
-      text<<"| **One certificate for all remaining pairs:** distinct normalized labels give nonisomorphic groups | #{theorem_ref(general,'Atlas/Comparisons.lean','statement')} | #{audit_link(AGGREGATE_AUDIT,[general])} |\n"
-      text<<"| **By order:** outside the listed isomorphisms and the two patterns below, orders differ. The order classification is uniform, with no bound on rank or field size. | #{theorem_ref(bridge,'Atlas/Comparisons/CatalogueCardinality.lean','group orders')} · #{theorem_ref(order,'Atlas/OrderArithmetic/Classification.lean','order classification')} · #{theorem_ref(unequal,'Atlas/Comparisons/CatalogueCardinality.lean','nonisomorphism')} | #{audit_link(AGGREGATE_AUDIT,[bridge,order,unequal])} |\n"
+      generic='Atlas.Comparisons.not_isomorphic_of_card_ne'
+      text<<"| **Combined registry certificate:** distinct normalized labels give nonisomorphic groups; its current domain is the 13-family group registry | #{theorem_ref(general,'Atlas/Comparisons.lean','statement')} | #{audit_link(AGGREGATE_AUDIT,[general])} |\n"
+      text<<"| **By order, including E₆/E₇/E₈:** outside the listed isomorphisms and the two patterns below, orders differ. The numerical classification is uniform, with no bound on rank or field size. | #{theorem_ref(order,'Atlas/OrderArithmetic/Classification.lean','order classification')} · #{theorem_ref('Atlas.OrderArithmetic.catalogue_order_ne','Atlas/OrderArithmetic/Classification.lean','unequal orders')} · #{theorem_ref(generic,'Atlas/Comparisons/Cardinality.lean','unequal orders imply nonisomorphism')} | #{audit_link(AGGREGATE_AUDIT,[order,'Atlas.OrderArithmetic.catalogue_order_ne',generic])} |\n"
+      e_orders=[];e_audits=[]
+      %w[E6 E7 E8].each do |type|
+        record=overlay.fetch('candidates').find { |c|c['entry']=='family.'+type && c['realization']=='chevalley' }
+        property=record.fetch('property_evidence').fetch('order')
+        ref=property.fetch('theorem')
+        e_orders<<statement(ref,type+'_order')
+        e_audits<<audit_link(property.dig('binding','directory'),[ref.fetch('declaration')],type+' order audit')
+      end
+      text<<"| <a id=\"e-series-order\"></a> **Actual E₆/E₇/E₈ groups:** their proved cardinalities are the formulas in the preceding row. Distinct family/field-size labels therefore give unequal orders and nonisomorphism. | #{e_orders.join(' · ')} | #{e_audits.join(' · ')} |\n"
       counts='Atlas.Comparisons.Classical.oddB_C_involution_counts'
       bc_proofs,bc_audit=comparison_links(%w[odd-b-c-order odd-b-c-distinct])
       text<<"| **Equal order, different involution-class counts:** Bₙ(q) and Cₙ(q), odd q and n ≥ 3; counts n and ⌊n/2⌋ + 1 | #{bc_proofs} · #{theorem_ref(counts,'Atlas/Comparisons/Classical/OrthogonalInvolutions.lean','counts')} | #{bc_audit} · [B invariant replay](../verification/existence/2026-10-25-draft/AtlasDistinguished-typeB/RESULT.json) · [C invariant replay](../verification/existence/2026-10-25-draft/AtlasDistinguished-typeC/RESULT.json) |\n"
@@ -323,20 +333,26 @@ module AtlasModelViews
       text<< <<~MD
     
         A normalized label is the family and parameter label after the proved
-        exceptional identifications. The 16 sporadic groups and Tits are separated
-        from one another and from all admissible values of these 13 families by
-        order. The four invariant replays passed separately. The
+        exceptional identifications. The 16 completed sporadic groups and Tits are
+        separated from one another and from all admissible values of the 16 completed
+        families, including E₆/E₇/E₈, by order. The four invariant replays passed separately. The
         [two aggregate Comparator replays](../verification/existence/2026-10-25-draft/Catalogue-isomorphism/RESULT.json)
         remain memory-stopped; the passed full audits above do not assert a replay pass.
     
         <a id="comparison-scope"></a>
     
-        **Limits of “all other cases”:** E₆/E₇/E₈ are outside this comparison registry
-        and its exhaustive order theorem. Their separate order and simplicity proofs
-        do not yet give this global comparison result. For G₂/F₄ the registry uses
-        the Octonion/Albert models; their Chevalley comparisons have the status in
-        Theme 1. The unfinished derived-group bridges in Theme 2 are also outside
-        the theorem. [Exact theorem and compiled statements](../COMPARISON.md).
+        **Registry scope versus order-proof scope:** E₆/E₇/E₈ are present in the
+        numerical labels and their admissibility conditions. Their labels are unchanged
+        by normalization and occur in neither exceptional equal-order pattern.
+        Thus their order separation is already covered. The older concrete group
+        registry has no E-series constructors, so its single combined corollary does
+        not yet package this argument for them. The table links the existing E-series
+        order proofs, numerical comparison theorem and general nonisomorphism lemma;
+        the certificates for this argument are therefore linked separately.
+
+        For G₂/F₄ the registry uses the Octonion/Albert models; the comparisons to
+        their Chevalley models have the status in Theme 1. The unfinished derived-group
+        bridges in Theme 2 remain separate. [Exact theorem and compiled statements](../COMPARISON.md).
       MD
       text
     end
@@ -385,7 +401,7 @@ module AtlasModelViews
         end
         text<<"\n"
       end
-      text<<"All 40 comparison interfaces are retained. [Independent replay status and coverage limits](REALIZATIONS.md#remaining-pairs) remain explicit.\n"
+      text<<"All 40 comparison interfaces are retained. The numerical order theorem also includes E₆/E₇/E₈; their [actual group orders and verification certificates](REALIZATIONS.md#e-series-order) are linked separately because those carriers are not yet constructors of the older combined group registry. [Independent replay status](REALIZATIONS.md#remaining-pairs) remains explicit.\n"
       text
     end
     def isomorphism_page(statements)
