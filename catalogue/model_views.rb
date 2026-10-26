@@ -2,6 +2,7 @@
 require 'json'
 require 'cgi'
 require 'digest'
+require 'date'
 module AtlasModelViews
   class View
     attr_reader :registry,:overlay,:contracts,:models,:comparisons
@@ -145,249 +146,251 @@ module AtlasModelViews
       data=read_json('catalogue/comparisons.json')
       data.fetch('entries')+data.fetch('supplements').flat_map { |s|s.fetch('entries') }
     end
-    def comparison_ref(id,title='certificate')
-      row=comparison_rows.find { |r|r['id']==id } or raise "Unknown comparison #{id}"
-      "[#{title}](#{link(row,'../')})"
+    AGGREGATE_AUDIT='verification/runs/comparison-catalogue-isomorphism/20261012T065332-1260019'
+    def statement(ref,title='Lean statement')
+      "[#{title}](#{link(ref,'../')} \"#{ref.fetch('declaration')}\")"
     end
-    def theorem_ref(name,path,title=name.split('.').last)
-      "[#{title}](#{link({'declaration'=>name,'source'=>path},'../')})"
+    def theorem_ref(name,path,title='Lean statement')
+      statement({'declaration'=>name,'source'=>path},title)
+    end
+    def audit_link(directory,names,title=nil)
+      @audit_names||={}
+      @audit_dates||={}
+      unless @audit_names.key?(directory)
+        result=read_json(directory+'/RESULT.json')
+        raise "Audit not passed/full: #{directory}" unless result['status']=='passed' && result['mode']=='full'
+        @audit_dates[directory]=Date.parse(result.fetch('finished_utc')).strftime('%d %b')
+        @audit_names[directory]=read_json(directory+'/CHECKPOINT.json').fetch('targets').map { |t|t.fetch('declaration') }
+      end
+      missing=names-@audit_names.fetch(directory)
+      unless missing.empty?
+        # Supporting order-arithmetic lemmas can be transitive dependencies rather
+        # than audit roots. Require their actual presence in the complete graph.
+        require 'zlib'
+        Zlib::GzipReader.open(@root+'/'+directory+'/dependencies.jsonl.gz') do |io|
+          io.each_line do |line|
+            next unless missing.any? { |n|line.include?(n) }
+            name=JSON.parse(line).fetch('name')
+            if missing.delete(name)
+              @audit_names[directory]<<name
+              break if missing.empty?
+            end
+          end
+        end
+        raise "Certificate omits declarations: #{missing.join(', ')}" unless missing.empty?
+      end
+      "[#{title || "Passed audit (#{@audit_dates.fetch(directory)})"}](../#{directory}/CERTIFICATE.md)"
+    end
+    def comparison_evidence
+      data=read_json('catalogue/comparisons.json')
+      [data,*data.fetch('supplements')].flat_map do |part|
+        part.fetch('entries').map { |r|[r.fetch('id'),part.fetch('evidence').fetch('directory')] }
+      end.to_h
+    end
+    def comparison_links(ids)
+      rows=ids.map { |id|comparison_rows.find { |r|r['id']==id } || (raise "Unknown comparison #{id}") }
+      labels={'b1-a1'=>'B₁','c1-a1'=>'C₁','psu2-a1'=>'PSU₂',
+        'psl2-four-a5'=>'q = 4','psl2-five-a5'=>'q = 5','psl2-nine-a6'=>'PSL₂/A₆',
+        'c2-derived-a6'=>'C₂′/A₆','b2-derived-c2-derived'=>'B₂′/C₂′',
+        'b2-card2-s6'=>'B₂/S₆','c2-card2-s6'=>'C₂/S₆',
+        'psl4-two-a8'=>'PSL₄/A₈','a8-d3-two'=>'A₈/D₃',
+        'psu4-card2-c2-card3'=>'PSU₄/C₂','minus-d3-card2-c2-card3'=>'²D₃/C₂',
+        'psu4-card2-b2-card3'=>'PSU₄/B₂','odd-b-c-order'=>'equal order',
+        'odd-b-c-distinct'=>'nonisomorphism','a8-psl3-four-order'=>'equal order',
+        'a8-psl3-four-distinct'=>'A₈ nonisomorphism','psl4-two-psl3-four-distinct'=>'PSL₄ nonisomorphism'}
+      proofs=rows.map { |r|statement(r,rows.size==1 ? 'statement' : labels.fetch(r.fetch('id'))) }.join(' · ')
+      audits=rows.group_by { |r|comparison_evidence.fetch(r.fetch('id')) }.map do |directory,rs|
+        audit_link(directory,rs.map { |r|r.fetch('declaration') })
+      end.join(' · ')
+      [proofs,audits]
+    end
+    def compact_inventory
+      text="<a id=\"construction-inventory\"></a>\n\n<details>\n<summary>Reference: all 39 construction models (33 catalogue entries)</summary>\n\nDefinitions and full parameter ranges are retained in the [catalogue](../CATALOGUE.md).\n\n"
+      registry.fetch('entries').each do |entry|
+        id=entry.fetch('id');label=entry.dig('presentation','label') || entry.fetch('label')
+        text<<"<a id=\"#{anchor(id)}\"></a>\n\n**[#{label}](../CATALOGUE.md##{anchor(id)})**\n\n"
+        models.fetch(id).each do |m|
+          text<<"<a id=\"#{model_anchor(m)}\"></a>\n\n- #{short_label(m)}: #{source(m.fetch('carrier'),'../')}\n"
+        end
+        text<<"\n"
+      end
+      text<<"</details>\n\n"
+    end
+    def exceptional_groups
+      [
+        ['B₁(q) ≃ C₁(q) ≃ PSU₂(q) ≃ PSL₂(q); every finite q',%w[b1-a1 c1-a1 psu2-a1]],
+        ['B₂(q) ≃ C₂(q); every finite q',%w[b2-c2]],
+        ['Bₙ(q) ≃ Cₙ(q); even q, n ≥ 1',%w[even-b-c]],
+        ['D₂⁺(q) ≃ PSL₂(q) × PSL₂(q); every finite q (a product)',%w[d2-product]],
+        ['D₃⁺(q) ≃ PSL₄(q); every finite q',%w[d3-a3]],
+        ['²D₂(q) ≃ PSL₂(q²); every finite q',%w[minus-d2-a1]],
+        ['²D₃(q) ≃ PSU₄(q); every finite q',%w[minus-d3-unitary]],
+        ['PSL₂(4) ≃ PSL₂(5) ≃ A₅; order 60',%w[psl2-four-a5 psl2-five-a5]],
+        ['PSL₃(2) ≃ PSL₂(7); order 168',%w[psl2-seven-psl3-two]],
+        ['PSL₂(9) ≃ A₆ ≃ C₂(2)′ ≃ B₂(2)′; order 360',%w[psl2-nine-a6 c2-derived-a6 b2-derived-c2-derived]],
+        ['B₂(2) ≃ C₂(2) ≃ S₆; full groups, order 720',%w[b2-card2-s6 c2-card2-s6]],
+        ['PSL₄(2) ≃ D₃⁺(2) ≃ A₈; order 20,160',%w[psl4-two-a8 a8-d3-two]],
+        ['PSU₄(2) ≃ ²D₃(2) ≃ C₂(3) ≃ B₂(3); order 25,920',%w[psu4-card2-c2-card3 minus-d3-card2-c2-card3 psu4-card2-b2-card3]]
+      ]
     end
     def comparison_guide
-      main='Atlas/Comparisons.lean'
-      arithmetic='Atlas/OrderArithmetic/Classification.lean'
       text=<<~MD
         # Constructions and identification certificates
-
-        This page distinguishes three questions and links the Lean proofs answering
-        them. Every identification is an actual group isomorphism between the stated
-        models. The full construction inventory follows the comparison guide.
-
-        | Question | Where to look |
-        |---|---|
-        | Do two constructions of the same group agree? | [Models of the same group](#same-group) |
-        | Which different family labels describe isomorphic groups? | [Isomorphisms between families](#between-families) |
-        | How are all remaining pairs distinguished? | [One general certificate, orders and invariants](#remaining-pairs) |
-
-        **Coverage:** the general comparison theorem covers 13 families, all 16
-        completed sporadic groups and Tits, on its exact simple parameter ranges.
-        The catalogue also contains E₆/E₇/E₈ and additional construction models;
-        the [scope section](#comparison-scope) records which are outside that theorem.
-
+    
+        Each result below has a **Lean statement** and a separate **verification certificate**.
+        Certificates record passed full dependency audits; independent Comparator results
+        are identified separately. Here q is a finite-field size, B/C/D subscripts are
+        Lie ranks, and PSL/PSU subscripts are dimensions. A_m denotes an alternating group.
+    
         <a id="same-group"></a>
-
-        ## 1. Different models of the same group
-
-        | Group or family | Models | Domain | Identification certificate |
-        |---|---|---|---|
+    
+        ## 1. Isomorphisms between different models
+    
+        | Models and domain | Lean statement | Verification certificate |
+        |---|---|---|
       MD
       %w[family.PSL family.B family.C family.D].each do |id|
-        entry=registry.fetch('entries').find { |e|e['id']==id }
         c=edges(id).fetch(0)
-        domain={'family.PSL'=>'rank n ≥ 1','family.B'=>'rank n ≥ 2','family.C'=>'rank n ≥ 2','family.D'=>'rank n ≥ 4'}.fetch(id)
-        text<<"| [#{entry.dig('presentation','label') || entry['label']}](##{anchor(id)}) | #{models.fetch(id).map { |m|short_label(m) }.join(' · ')} | #{domain}; every finite field | [Lean certificate](ISOMORPHISMS.md##{c['id']}) |\n"
+        entry=registry.fetch('entries').find { |e|e['id']==id }
+        label=entry.dig('presentation','label') || entry.fetch('label')
+        domain={'family.PSL'=>'n ≥ 1','family.B'=>'n ≥ 2','family.C'=>'n ≥ 2','family.D'=>'n ≥ 4'}.fetch(id)
+        names=models.fetch(id).map { |m|short_label(m) }.join(' ≃ ')
+        proof="[#{c.dig('witness','declaration').split('.').last}](ISOMORPHISMS.md##{c['id']} \"#{c.dig('witness','declaration')}\")"
+        text<<"| #{label}: #{names}; #{domain}, every finite q | #{proof} | #{audit_link(c.dig('evidence','directory'),[c.dig('witness','declaration')])} |\n"
+      end
+      field_name='Atlas.Comparisons.Catalogue.same_label_equiv'
+      text<<"| Same family and parameters over different finite fields or extension presentations of the same sizes; within the comparison registry | #{theorem_ref(field_name,'Atlas/Comparisons/CatalogueSameLabel.lean','statement')} | #{audit_link(AGGREGATE_AUDIT,[field_name])} |\n\n"
+      text<< <<~MD
+        The A/B/C/D maps also cover nonsimple parameters in the stated domains.
+        **G₂:** the Chevalley–Octonion map has ten passed local audit scopes, but its
+        final preservation/registration and source export are outside this snapshot.
+        **F₄:** the Chevalley–Albert map remains unfinished. Neither is presented as
+        an included identification certificate. Each sporadic entry currently has
+        one advertised construction; the comparison registry fixes the Mathieu markings.
+    
+      MD
+      text<<compact_inventory
+      text<< <<~MD
+        <a id="between-families"></a>
+    
+        ## 2. Exceptional isomorphisms
+    
+        These identify different family labels: low-rank or characteristic-dependent
+        coincidences, and isolated small-parameter coincidences. A prime (′) denotes
+        the derived subgroup; full groups and derived subgroups are separate endpoints.
+        In unitary and minus-orthogonal notation q is the base-field size and the
+        scalar field has size q².
+    
+        | Isomorphism and domain | Lean statements | Verification certificates |
+        |---|---|---|
+      MD
+      exceptional_groups.each do |description,ids|
+        proofs,audits=comparison_links(ids)
+        text<<"| #{description} | #{proofs} | #{audits} |\n"
       end
       text<< <<~MD
-        | [G₂(q)](#family-g2) | Octonion · Chevalley | Comparison scope recorded separately | [Local proof / export boundary](#comparison-scope) |
-        | [F₄(q)](#family-f4) | Albert · Chevalley | Comparison unfinished | [Open comparison](#comparison-scope) |
-
-        The four included A/B/C/D certificates apply even at nonsimple parameters
-        in their domains. They allow results about the original models to be
-        transported to the Chevalley models by composing the actual maps.
-
-        Different finite fields of the same size, and different presentations of
-        the required field extensions, are identified by
-        #{theorem_ref('Atlas.Comparisons.Catalogue.same_label_equiv','Atlas/Comparisons/CatalogueSameLabel.lean','a uniform field-transport certificate')}
-        for the models in the comparison registry. The
-        [individual transport interfaces](COMPARISONS.md#field-transport) retain
-        their precise field and extension hypotheses.
-
-        Each of the 16 sporadic entries currently advertises one construction in
-        this catalogue. The aggregate comparison theorem uses the specified Mathieu
-        coordinate markings. It does not assert a comparison with an additional
-        independently constructed permutation, lattice or other sporadic model.
-
-        <a id="between-families"></a>
-
-        ## 2. Isomorphisms between different families
-
-        Here q is the base-field size, Bₙ/Cₙ/Dₙ use Lie rank, and the subscript in
-        PSL_d or PSU_d is the vector-space dimension. A_m without a field parameter
-        denotes an alternating group. The classical families use their actual
-        projective models.
-        These maps have the stated domains even when an endpoint is not simple;
-        they do not silently replace a full group by its derived subgroup.
-
-        ### Uniform and low-rank identifications
-
-        | Identification | Parameters | Lean certificates |
-        |---|---|---|
-        | B₁(q) ≃ C₁(q) ≃ PSU₂(q) ≃ PSL₂(q) | Every finite q; the unitary scalar field has size q² | #{comparison_ref('b1-a1','B₁')} · #{comparison_ref('c1-a1','C₁')} · #{comparison_ref('psu2-a1','PSU₂')} |
-        | B₂(q) ≃ C₂(q) | Every finite q | #{comparison_ref('b2-c2')} |
-        | Bₙ(q) ≃ Cₙ(q) | Even q, n ≥ 1 | #{comparison_ref('even-b-c')} |
-        | D₂⁺(q) ≃ PSL₂(q) × PSL₂(q) | Every finite q; a product, outside the simple D-family range | #{comparison_ref('d2-product')} |
-        | D₃⁺(q) ≃ PSL₄(q) | Every finite q | #{comparison_ref('d3-a3')} |
-        | ²D₂(q) ≃ PSL₂(q²) | Every finite q; PSL is over the quadratic extension | #{comparison_ref('minus-d2-a1')} |
-        | ²D₃(q) ≃ PSU₄(q) | Every finite q; common quadratic extension | #{comparison_ref('minus-d3-unitary')} |
-
-        ### Exceptional identifications at small parameters
-
-        | Order | Isomorphic groups | Lean certificates |
-        |---:|---|---|
-        | 60 | PSL₂(4) ≃ PSL₂(5) ≃ A₅ | #{comparison_ref('psl2-four-a5','q = 4')} · #{comparison_ref('psl2-five-a5','q = 5')} |
-        | 168 | PSL₃(2) ≃ PSL₂(7) | #{comparison_ref('psl2-seven-psl3-two')} |
-        | 360 | PSL₂(9) ≃ A₆ ≃ C₂(2)′ ≃ B₂(2)′ | #{comparison_ref('psl2-nine-a6','PSL₂/A₆')} · #{comparison_ref('c2-derived-a6','derived C₂')} · #{comparison_ref('b2-derived-c2-derived','derived B₂')} |
-        | 20,160 | PSL₄(2) ≃ D₃⁺(2) ≃ A₈ | #{comparison_ref('psl4-two-a8','PSL₄/A₈')} · #{comparison_ref('a8-d3-two','D₃/A₈')} |
-        | 25,920 | PSU₄(2) ≃ ²D₃(2) ≃ C₂(3) ≃ B₂(3) | #{comparison_ref('psu4-card2-c2-card3','PSU₄/C₂')} · #{comparison_ref('minus-d3-card2-c2-card3','²D₃/C₂')} · #{comparison_ref('psu4-card2-b2-card3','PSU₄/B₂')} |
-
-        At the excluded binary parameter the **full** groups B₂(2) and C₂(2)
-        are isomorphic to S₆, of order 720
-        (#{comparison_ref('b2-card2-s6','B₂ certificate')},
-        #{comparison_ref('c2-card2-s6','C₂ certificate')}). Their derived subgroups
-        are the order-360 groups above. PSL₃(4), although also of order 20,160,
-        is separated from A₈ below.
-
-        The [complete interface index](COMPARISONS.md#between-families) includes
-        the compositions, arbitrary-field versions and canonical-field wrappers.
-
+    
+        **Still open in this snapshot:** the bridges G₂(2)′ ≃ PSU₃(3) (order 6,048)
+        and ²G₂(3)′ ≃ PSL₂(8) (order 504). Their equal orders are not identification
+        certificates. The [complete statement index](COMPARISONS.md#between-families)
+        retains all compositions, canonical-field wrappers and full hypotheses.
+    
         <a id="remaining-pairs"></a>
-
-        ## 3. All remaining pairs: one certificate, orders and invariants
-
-        **Within the comparison theorem's stated scope, different normalized labels
-        imply nonisomorphic groups.** A normalized label records the family and
-        parameters after the proved identifications above have been applied.
-        The single certificate covering all such pairs is
-        #{theorem_ref('Atlas.Comparisons.Catalogue.not_isomorphic_of_normalized_label_ne',main)}.
-        Its parent theorem,
-        #{theorem_ref('Atlas.Comparisons.Catalogue.isomorphic_iff_normalized_label_eq',main)},
-        proves both directions: isomorphism holds exactly when normalized labels agree.
-
-        The certificate combines the following two ways of separating groups.
-
-        ### Different orders
-
-        The group-order bridge
-        #{theorem_ref('Atlas.Comparisons.Catalogue.card','Atlas/Comparisons/CatalogueCardinality.lean','card')}
-        proves the exact order of every model in the comparison registry. The
-        arithmetic theorem
-        #{theorem_ref('Atlas.OrderArithmetic.catalogue_orders_distinct',arithmetic)}
-        proves unequal orders whenever normalized labels differ and the pair is
-        outside the two exceptional patterns below. This is uniform in the
-        admissible ranks and field sizes, not a bounded numerical search.
-
-        #{theorem_ref('Atlas.Comparisons.not_isomorphic_of_card_ne','Atlas/Comparisons/Cardinality.lean')}
-        converts unequal orders into nonisomorphism; the combined registry-level
-        certificate is
-        #{theorem_ref('Atlas.Comparisons.Catalogue.not_isomorphic_of_not_collision','Atlas/Comparisons/CatalogueCardinality.lean')}.
-        The [complete order-collision theorem](../Atlas/OrderArithmetic/Classification.lean)
-        proves that no further equal-order patterns occur in this scope.
-
-        In particular, the 16 completed sporadic groups and Tits have pairwise
-        different orders, and their orders differ from all admissible values of
-        the 13 families in this comparison registry. They are therefore covered
-        by the same order and nonisomorphism certificates.
-
-        ### Equal orders, separated by one invariant
-
-        | Nonisomorphic groups | Domain and common order | Separating invariant | Lean certificates |
-        |---|---|---|---|
-        | Bₙ(q), Cₙ(q) | Odd q, n ≥ 3; their proved order formulas agree | Number of conjugacy classes of involutions: n versus ⌊n/2⌋ + 1 | #{comparison_ref('odd-b-c-order','equal order')} · #{theorem_ref('Atlas.Comparisons.Classical.oddB_C_involution_counts','Atlas/Comparisons/Classical/OrthogonalInvolutions.lean','counts')} · #{comparison_ref('odd-b-c-distinct','nonisomorphism')} |
-        | A₈ ≃ PSL₄(2), PSL₃(4) | Both order 20,160 | Center of a Sylow-2 subgroup: order 2 versus order 4 | #{comparison_ref('a8-psl3-four-order','equal order')} · #{comparison_ref('psl4-two-psl3-four-distinct','PSL certificate')} · #{comparison_ref('a8-psl3-four-distinct','A₈ certificate')} |
-
-        The invariants are themselves preserved by isomorphism:
-        #{theorem_ref('Atlas.k2_mulEquiv','Atlas/GroupTheory/InvolutionClasses.lean','involution-class invariance')}
-        and #{theorem_ref('Atlas.GroupTheory.sylow_center_card_eq_of_mulEquiv','Atlas/GroupTheory/SylowCenterInvariant.lean','Sylow-center invariance')}.
-        #{theorem_ref('Atlas.Comparisons.Catalogue.exceptional_not_isomorphic','Atlas/Comparisons/CatalogueObstructions.lean','One combined obstruction certificate')}
-        handles both exceptional patterns, including field transport and reversal
-        of the two endpoints. Rank two and even-characteristic B/C pairs belong
-        to the isomorphism table, not this obstruction table.
-
+    
+        ## 3. Non-isomorphisms of all other cases
+    
+        **Scope:** the theorem covers the 13 families Cₚ, A_m, PSL, PSU, B, C, D⁺,
+        D⁻, G₂, F₄, ³D₄, ²B₂ and ²G₂, all 16 completed sporadic groups, and Tits,
+        on its [exact simple parameter ranges](../COMPARISON.md#scope-and-definitions).
+        After the proved exceptional identifications, every other pair in this scope
+        is nonisomorphic. One theorem covers all these pairs; its proof uses unequal
+        orders, except for the two invariant obstructions below.
+    
+        | Non-isomorphism result and reason | Lean statements | Verification certificates |
+        |---|---|---|
+      MD
+      general='Atlas.Comparisons.Catalogue.not_isomorphic_of_normalized_label_ne'
+      order='Atlas.OrderArithmetic.catalogue_order_eq_iff'
+      bridge='Atlas.Comparisons.Catalogue.card'
+      unequal='Atlas.Comparisons.Catalogue.not_isomorphic_of_not_collision'
+      text<<"| **One certificate for all remaining pairs:** distinct normalized labels give nonisomorphic groups | #{theorem_ref(general,'Atlas/Comparisons.lean','statement')} | #{audit_link(AGGREGATE_AUDIT,[general])} |\n"
+      text<<"| **By order:** outside the listed isomorphisms and the two patterns below, orders differ. The order classification is uniform, with no bound on rank or field size. | #{theorem_ref(bridge,'Atlas/Comparisons/CatalogueCardinality.lean','group orders')} · #{theorem_ref(order,'Atlas/OrderArithmetic/Classification.lean','order classification')} · #{theorem_ref(unequal,'Atlas/Comparisons/CatalogueCardinality.lean','nonisomorphism')} | #{audit_link(AGGREGATE_AUDIT,[bridge,order,unequal])} |\n"
+      counts='Atlas.Comparisons.Classical.oddB_C_involution_counts'
+      bc_proofs,bc_audit=comparison_links(%w[odd-b-c-order odd-b-c-distinct])
+      text<<"| **Equal order, different involution-class counts:** Bₙ(q) and Cₙ(q), odd q and n ≥ 3; counts n and ⌊n/2⌋ + 1 | #{bc_proofs} · #{theorem_ref(counts,'Atlas/Comparisons/Classical/OrthogonalInvolutions.lean','counts')} | #{bc_audit} · [B invariant replay](../verification/existence/2026-10-25-draft/AtlasDistinguished-typeB/RESULT.json) · [C invariant replay](../verification/existence/2026-10-25-draft/AtlasDistinguished-typeC/RESULT.json) |\n"
+      a_proofs,a_audit=comparison_links(%w[a8-psl3-four-order a8-psl3-four-distinct psl4-two-psl3-four-distinct])
+      text<<"| **Equal order, different Sylow-2 centers:** A₈ ≃ PSL₄(2) versus PSL₃(4), both order 20,160; center sizes 2 and 4 | #{a_proofs} | #{a_audit} · [A₈ invariant replay](../verification/existence/2026-10-25-draft/AtlasDistinguished-alternating8/RESULT.json) · [PSL₃(4) invariant replay](../verification/existence/2026-10-25-draft/AtlasDistinguished-psl3Four/RESULT.json) |\n"
+      text<< <<~MD
+    
+        A normalized label is the family and parameter label after the proved
+        exceptional identifications. The 16 sporadic groups and Tits are separated
+        from one another and from all admissible values of these 13 families by
+        order. The four invariant replays passed separately. The
+        [two aggregate Comparator replays](../verification/existence/2026-10-25-draft/Catalogue-isomorphism/RESULT.json)
+        remain memory-stopped; the passed full audits above do not assert a replay pass.
+    
         <a id="comparison-scope"></a>
-
-        ## Scope, remaining gaps and verification
-
-        The aggregate theorem covers Cₚ, A_m, PSL, PSU, B, C, D⁺, D⁻, G₂, F₄,
-        ³D₄, ²B₂ and ²G₂, together with all 16 completed sporadic groups and Tits.
-        Its [exact simple parameter ranges and model definitions](../COMPARISON.md#scope-and-definitions)
-        remain part of the statement. The low-rank and derived-group maps above
-        are additional interfaces; they are not additional registry constructors.
-
-        | Outside the aggregate theorem or exported comparison certificates | Present status |
-        |---|---|
-        | E₆, E₇, E₈ | Their actual models have separate Lean order and simplicity proofs, but the comparison registry and its exhaustive order-collision theorem do not include them. No blanket nonisomorphism result involving these families is asserted here. |
-        | Chevalley G₂ versus Octonion G₂ | A marked equivalence has ten passed local audit scopes; its final preservation/registration and source export are outside this review snapshot. The exported comparison theorem uses the Octonion model. |
-        | Chevalley F₄ versus Albert F₄ | The identification is unfinished. The exported comparison theorem uses the Albert model. |
-        | G₂(2)′ versus PSU₃(3), order 6,048 | The derived-group bridge is unfinished; equality of orders is not a certificate of isomorphism. |
-        | ²G₂(3)′ versus PSL₂(8), order 504 | The derived-group bridge is unfinished; the full small-parameter group must remain distinct from its derived subgroup. |
-
-        E₆/E₇/E₈ order formulas can be used with the general unequal-cardinality
-        lemma once a particular inequality has been proved. Having the formulas
-        alone does not extend the exhaustive comparison theorem to these families.
-
-        The aggregate theorem has a passed
-        [full dependency audit](../verification/runs/comparison-catalogue-isomorphism/20261012T065332-1260019/RESULT.json)
-        and [verbatim compiled statements](../verification/comparisons/THEOREM_STATEMENTS.txt).
-        Its two independent Comparator replays remain memory-stopped, as recorded
-        in the [dated receipt](../verification/existence/2026-10-25-draft/Catalogue-isomorphism/RESULT.json).
-        The [four invariant contracts](../verification/existence/RESULTS.md) passed
-        separately. Their success does not turn the aggregate replay into a pass.
-
-        <a id="construction-inventory"></a>
-
-        ## Construction inventory
-
-        The 33 completed entries retain all 39 displayed models, including the six
-        additional Chevalley constructions. Open a group name for its model definitions,
-        orders, simplicity domains and construction-identification certificates.
-
+    
+        **Limits of “all other cases”:** E₆/E₇/E₈ are outside this comparison registry
+        and its exhaustive order theorem. Their separate order and simplicity proofs
+        do not yet give this global comparison result. For G₂/F₄ the registry uses
+        the Octonion/Albert models; their Chevalley comparisons have the status in
+        Theme 1. The unfinished derived-group bridges in Theme 2 are also outside
+        the theorem. [Exact theorem and compiled statements](../COMPARISON.md).
       MD
       text
     end
     def comparison_interfaces
       text=<<~MD
-        # Comparison certificates: complete interface index
-
-        The [construction and identification guide](REALIZATIONS.md) explains the
-        mathematical conclusions. This index retains every registered interface
-        and its exact parameter assumptions, grouped by the question it answers.
-        [One aggregate certificate](REALIZATIONS.md#remaining-pairs) covers all
-        nonisomorphic pairs in its [stated scope](REALIZATIONS.md#comparison-scope).
-
-        ## Different construction models
-
-        | Family | Models | Proved domain | Certificate |
+        # Lean statements and verification certificates
+    
+        This reference follows the same three themes as the [comparison guide](REALIZATIONS.md).
+        Every row links the exact Lean statement and the passed full dependency audit
+        containing it. Parameter hypotheses are retained verbatim from the registry.
+    
+        <a id="same-group"></a>
+    
+        ## 1. Isomorphisms between different models
+    
+        | Models | Domain | Lean statement | Verification certificate |
         |---|---|---|---|
       MD
       comparisons.each do |c|
         id=c.dig('source','qualified_id').split('/').first
         entry=registry.fetch('entries').find { |e|e['id']==id }
-        text<<"| #{entry.dig('presentation','label') || entry['label']} | #{models.fetch(id).map { |m|short_label(m) }.join(' · ')} | #{c.dig('parameter_domain','description')} | #{certificate(c,'../')} |\n"
+        text<<"| #{entry.dig('presentation','label') || entry['label']}: #{models.fetch(id).map { |m|short_label(m) }.join(' ≃ ')} | #{c.dig('parameter_domain','description')} | #{source(c.fetch('witness'),'../')} · #{certificate(c,'../')} | #{audit_link(c.dig('evidence','directory'),[c.dig('witness','declaration')])} |\n"
       end
-      text<<"\nG₂/F₄ comparisons retain their [separate scopes](REALIZATIONS.md#comparison-scope).\n\n"
+      text<<"\nG₂/F₄ and sporadic model scopes are stated in [Theme 1](REALIZATIONS.md#same-group).\n\n<a id=\"field-transport\"></a>\n\n"
       groups=[
-        ['field-transport','Field and extension transport',%w[b-field d-field unitary-field minus-d-field]],
-        ['between-families','Uniform and low-rank isomorphisms',%w[b1-a1 c1-a1 psu2-a1 psu2-c1 psu2-b1 even-b-c b2-c2 d2-product d3-a3 minus-d2-a1 minus-d3-unitary]],
-        ['small-parameters','Exceptional and small-parameter isomorphisms',%w[psl2-four-a5 psl2-five-a5 psl2-four-five psl2-seven-psl3-two psl2-nine-a6 psl2-nine-canonical-a6 b2-derived-c2-derived c2-derived-a6 psl2-nine-b2-derived psl2-nine-c2-derived a8-d3-two psl4-two-a8 psu4-binary-c2-ternary psu4-card2-c2-card3 minus-d3-card2-c2-card3 psu4-card2-b2-card3 c2-binary-s6 c2-card2-s6 b2-card2-s6]],
-        ['equal-order-separation','Equal-order and nonisomorphism certificates',%w[odd-b-c-order odd-b-c-distinct psl4-two-psl3-four-order a8-psl3-four-order psl4-two-psl3-four-distinct a8-psl3-four-distinct]]
+        ['field-transport',nil,%w[b-field d-field unitary-field minus-d-field]],
+        ['between-families','2. Exceptional isomorphisms',%w[b1-a1 c1-a1 psu2-a1 psu2-c1 psu2-b1 even-b-c b2-c2 d2-product d3-a3 minus-d2-a1 minus-d3-unitary psl2-four-a5 psl2-five-a5 psl2-four-five psl2-seven-psl3-two psl2-nine-a6 psl2-nine-canonical-a6 b2-derived-c2-derived c2-derived-a6 psl2-nine-b2-derived psl2-nine-c2-derived a8-d3-two psl4-two-a8 psu4-binary-c2-ternary psu4-card2-c2-card3 minus-d3-card2-c2-card3 psu4-card2-b2-card3 c2-binary-s6 c2-card2-s6 b2-card2-s6]],
+        ['remaining-pairs','3. Non-isomorphisms of all other cases',%w[odd-b-c-order odd-b-c-distinct psl4-two-psl3-four-order a8-psl3-four-order psl4-two-psl3-four-distinct a8-psl3-four-distinct]]
       ]
       by_id=comparison_rows.to_h { |r|[r['id'],r] }
-      raise 'Comparison index must partition every registered interface exactly once' unless groups.flat_map(&:last).sort==by_id.keys.sort
+      raise 'Comparison index must partition every interface exactly once' unless groups.flat_map(&:last).sort==by_id.keys.sort
       groups.each do |id,title,ids|
-        text<<"<a id=\"#{id}\"></a>\n\n## #{title}\n\n| Groups | Conclusion | Parameters | Lean certificate |\n|---|---|---|---|\n"
+        text<<"<a id=\"#{id}\"></a>\n\n## #{title}\n\n" if title
+        text<<"<a id=\"small-parameters\"></a>\n\n" if id=='between-families'
+        if id=='remaining-pairs'
+          name='Atlas.Comparisons.Catalogue.not_isomorphic_of_normalized_label_ne'
+          text<<"One statement covers all distinct normalized labels in the [exact scope](REALIZATIONS.md#comparison-scope): #{theorem_ref(name,'Atlas/Comparisons.lean',name)}; #{audit_link(AGGREGATE_AUDIT,[name])}. Its [order and invariant cases](REALIZATIONS.md#remaining-pairs) are explained in the guide.\n\n<a id=\"equal-order-separation\"></a>\n\n"
+        end
+        text<<"| Groups | Conclusion | Parameters | Lean statement | Verification certificate |\n|---|---|---|---|---|\n"
         ids.each do |rid|
           r=by_id.fetch(rid)
           relation={'isomorphism'=>'Isomorphic','same_order'=>'Equal order','nonisomorphism'=>'Nonisomorphic'}.fetch(r['relation'])
-          cells=[r['left']+' / '+r['right'],relation,r['parameters'],source(r,'../')].map { |v|v.gsub('|','\\|') }
+          evidence=audit_link(comparison_evidence.fetch(rid),[r.fetch('declaration')])
+          cells=[r['left']+' / '+r['right'],relation,r['parameters'],source(r,'../'),evidence].map { |v|v.gsub('|','\\|') }
           text<<"| #{cells.join(' | ')} |\n"
         end
         text<<"\n"
       end
-      text<<"These 40 registered interfaces supplement the [aggregate comparison and order certificates](REALIZATIONS.md#remaining-pairs). All current coverage limits and unfinished bridges are listed in [one scope section](REALIZATIONS.md#comparison-scope).\n"
+      text<<"All 40 comparison interfaces are retained. [Independent replay status and coverage limits](REALIZATIONS.md#remaining-pairs) remain explicit.\n"
       text
     end
     def isomorphism_page(statements)
       text="# Lean certificates identifying construction models\n\nThese are actual `MulEquiv` terms between the named concrete carriers. Their\nverbatim compiled types come from the source-bound 26 October audit. The linked\nLean definitions contain the proofs; the separate full audits retain type, instance\nand proof dependencies. A certificate applies on its stated domain, including\nnonsimple parameters when specified. Order equality alone is not an identification.\n\n"
-      text+="This is the technical appendix for the four included construction-identification maps. The [comparison guide](REALIZATIONS.md) also covers [isomorphisms between families](REALIZATIONS.md#between-families), [nonisomorphism by orders and invariants](REALIZATIONS.md#remaining-pairs), and [remaining gaps](REALIZATIONS.md#comparison-scope).\n\n"
+      text+="This is the technical appendix for the four included construction-identification maps. The [comparison guide](REALIZATIONS.md) also covers [exceptional isomorphisms](REALIZATIONS.md#between-families), [nonisomorphism by orders and invariants](REALIZATIONS.md#remaining-pairs), and [remaining gaps](REALIZATIONS.md#comparison-scope).\n\n"
       comparisons.each do |c|
         text+="<a id=\"#{c['id']}\"></a>\n\n## #{c.dig('source','qualified_id')} ≃ #{c.dig('target','qualified_id')}\n\n"
         text+="Domain: #{c.dig('parameter_domain','description')}.\n\n"

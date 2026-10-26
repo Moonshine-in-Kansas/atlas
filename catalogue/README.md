@@ -5,12 +5,14 @@ public declarations, auxiliary groups and evidence bindings. `realizations.json`
 retains separate model records and explicit identification maps. `comparisons.json`
 retains the 40 exposed comparison interfaces with their mathematical hypotheses.
 
-Start with [Constructions and identification certificates](REALIZATIONS.md):
-models of the same group, identifications between families, then the general
-nonisomorphism certificate with its order and invariant proofs. The
-[interface index](COMPARISONS.md) groups all 40 interfaces by purpose and retains
-every parameter hypothesis. The [scope section](REALIZATIONS.md#comparison-scope)
-collects the limits and unfinished comparisons.
+Start with [Constructions and identification certificates](REALIZATIONS.md).
+It has exactly three themes: isomorphisms between different models, exceptional
+isomorphisms, and non-isomorphisms of all other cases by order or a further invariant.
+Each result has separate Lean-statement and dated verification-certificate links.
+The [complete statement index](COMPARISONS.md) follows the same three themes and
+retains all 40 comparison interfaces with their full parameter hypotheses.
+The 39-model inventory is an expandable reference list within the first theme;
+full model descriptions, orders and simplicity domains remain in the catalogue.
 
 The generated views display all 39 models of the 33 entries. Six entries retain
 both original and Chevalley constructions. [ISOMORPHISMS.md](ISOMORPHISMS.md)

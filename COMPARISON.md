@@ -1,9 +1,9 @@
 # Comparison of the constructed ATLAS groups
 
 The [construction and identification guide](catalogue/REALIZATIONS.md) presents
-[models of the same group](catalogue/REALIZATIONS.md#same-group),
-[isomorphisms between families](catalogue/REALIZATIONS.md#between-families), and
-[the order and invariant certificates for the remaining pairs](catalogue/REALIZATIONS.md#remaining-pairs).
+[isomorphisms between different models](catalogue/REALIZATIONS.md#same-group),
+[exceptional isomorphisms](catalogue/REALIZATIONS.md#between-families), and
+[non-isomorphisms of all other cases](catalogue/REALIZATIONS.md#remaining-pairs).
 This page states the aggregate theorem, its exact scope and verification evidence.
 
 The main interface is [Atlas/Comparisons.lean](Atlas/Comparisons.lean), included

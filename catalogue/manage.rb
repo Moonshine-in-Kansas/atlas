@@ -96,18 +96,11 @@ entries.each do |e|
 end
 text<<"## Auxiliary groups and covers\n\nThese are separate from the simple-group count.\n\n| Group | Order | Mathematical scope |\n|---|---|---|\n"
 registry['auxiliary'].each { |e|text<<"| #{cell(e['label'])} | #{cell(e['order'])} | #{cell(e['construction'])}; #{cell(e['evidence_scope'])} |\n" }
-text<<"\n## Isomorphisms and nonisomorphisms\n\nThe [construction and identification guide](catalogue/REALIZATIONS.md) separates\n[comparisons between models](catalogue/REALIZATIONS.md#same-group),\n[isomorphisms between families](catalogue/REALIZATIONS.md#between-families), and\n[nonisomorphism by orders or invariants](catalogue/REALIZATIONS.md#remaining-pairs).\nOne general certificate covers all distinct normalized labels within the\n[comparison theorem's scope](COMPARISON.md#scope-and-definitions). E₆/E₇/E₈ and\nunfinished model/derived-group bridges retain their [explicit limits](catalogue/REALIZATIONS.md#comparison-scope).\n"
+text<<"\n## Isomorphisms and nonisomorphisms\n\nThe [construction and identification guide](catalogue/REALIZATIONS.md) separates\n[comparisons between models](catalogue/REALIZATIONS.md#same-group),\n[exceptional isomorphisms](catalogue/REALIZATIONS.md#between-families), and\n[nonisomorphism by orders or invariants](catalogue/REALIZATIONS.md#remaining-pairs).\nOne general certificate covers all distinct normalized labels within the\n[comparison theorem's scope](COMPARISON.md#scope-and-definitions). E₆/E₇/E₈ and\nunfinished model/derived-group bridges retain their [explicit limits](catalogue/REALIZATIONS.md#comparison-scope).\n"
 out['CATALOGUE.md']=text
 out['catalogue/GROUPS.csv']=CSV.generate { |csv|csv<<%w[id label kind models identification_certificates parameters order simplicity];entries.each { |e|csv<<[e['id'],label(e),e['kind'],model_views.models.fetch(e['id']).map { |m|model_views.short_label(m) }.join('; '),model_views.edges(e['id']).map { |c|c.dig('witness','declaration') }.join('; '),e['parameters'],e.dig('presentation','summary_order'),e.dig('presentation','summary_simplicity')] } }
 
 real=model_views.comparison_guide
-real<<"| Entry | Models |\n|---|---|\n"
-entries.each { |e|real<<"| [#{label(e)}](##{anchor(e)}) | #{model_views.summary(e['id'],'../')} |\n" }
-entries.each do |e|
-  real<<"\n<a id=\"#{anchor(e)}\"></a>\n\n## #{label(e)}\n\n"
-  real<<model_views.detailed(e,'../')
-  real<<"#{e['recognition']}\n\n"
-end
 out['catalogue/REALIZATIONS.md']=real
 
 cmp=model_views.comparison_interfaces
