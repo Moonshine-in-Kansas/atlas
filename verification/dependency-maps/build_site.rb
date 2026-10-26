@@ -66,6 +66,12 @@ versions.each do |version,registry,ref|
     write(out,p,html) if version=='v1.0'
   end
   write(out,version+'/index.html',index(entries,'',version,ref,version=='v1.2' ? model_views : nil))
+  # Diagram navigation links to its parent directory. Supply that index for
+  # both versioned views without changing any preserved diagram contents.
+  write(out,version+'/verification/dependency-maps/index.html',
+    index(entries,'../../',version,ref,version=='v1.2' ? model_views : nil))
+  write(out,'verification/dependency-maps/index.html',
+    index(entries,'../../',version,ref)) if version=='v1.0'
 end
 home=index(current.fetch('entries'),'v1.2/','v1.2',current_ref,model_views)
 home.sub!('</h1>', '</h1><p><a href="v1.0/">Preserved Version 1.0 diagrams</a> · <a href="https://github.com/Moonshine-in-Kansas/atlas/releases/tag/v1.0">Immutable Version 1.0 release</a></p>')
