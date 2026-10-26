@@ -761,6 +761,126 @@ Primary construction: Original concrete model.
             (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
 ```
 
+### Uniform order, n ≥ 2
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz) · [Passed audit (27 Sep)](verification/runs/minus-orthogonal-rank-three-all-ranks-order/20260927T013845-635/CERTIFICATE.md).
+
+```lean
+@Atlas.Orthogonal.Minus.family_order_all.{u_1,
+    u_2} : ∀ {F : Type u_1} {K : Type u_2} [inst : Field.{u_1} F] [inst_1 : Field.{u_2} K] [inst_2 : Finite.{u_1 + 1} F]
+  [inst_3 : Finite.{u_2 + 1} K]
+  [inst_4 :
+    @Algebra.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+      (@DivisionSemiring.toSemiring.{u_2} K
+        (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))]
+  (hdeg :
+    @Eq.{1} Nat
+      (@Module.finrank.{u_1, u_2} F K
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@Semiring.toAddCommMonoid.{u_2} K
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1))))
+        (@Algebra.toModule.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))
+          inst_4))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+  (n : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) n →
+    @Eq.{1} Nat
+      (Nat.card.{max u_2 u_1} (@Atlas.Orthogonal.Minus.DMinus.{u_1, u_2} n F K inst inst_1 inst_2 inst_3 inst_4 hdeg))
+      (@HDiv.hDiv.{0, 0, 0} Nat Nat Nat (@instHDiv.{0} Nat Nat.instDiv)
+        (Atlas.Orthogonal.Minus.orderNumerator (Nat.card.{u_1} F) n)
+        (Nat.gcd (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (Nat.card.{u_1} F) n)
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+```
+
+### Uniform simplicity, n ≥ 2
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz) · [Passed audit (27 Sep)](verification/runs/minus-orthogonal-rank-three-all-ranks-simplicity/20260927T013328-843/CERTIFICATE.md).
+
+```lean
+@Atlas.Orthogonal.Minus.family_simple_all.{u_1,
+    u_2} : ∀ {F : Type u_1} {K : Type u_2} [inst : Field.{u_1} F] [inst_1 : Field.{u_2} K] [inst_2 : Finite.{u_1 + 1} F]
+  [inst_3 : Finite.{u_2 + 1} K]
+  [inst_4 :
+    @Algebra.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+      (@DivisionSemiring.toSemiring.{u_2} K
+        (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))]
+  (hdeg :
+    @Eq.{1} Nat
+      (@Module.finrank.{u_1, u_2} F K
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@Semiring.toAddCommMonoid.{u_2} K
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1))))
+        (@Algebra.toModule.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))
+          inst_4))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+  (n : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) n →
+    @IsSimpleGroup.{max u_2 u_1} (@Atlas.Orthogonal.Minus.DMinus.{u_1, u_2} n F K inst inst_1 inst_2 inst_3 inst_4 hdeg)
+      (@Atlas.Orthogonal.projectiveElementaryGroup.{u_1, max u_1 u_2} F
+        (Atlas.Orthogonal.Minus.Vector.{u_1, u_2}
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) n
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+          F K)
+        inst
+        (@Prod.instAddCommGroup.{u_1, u_2}
+          (Atlas.Orthogonal.VectorD.{u_1}
+            (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) n
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+            F)
+          K
+          (@Pi.addCommGroup.{0, u_1}
+            (Atlas.Orthogonal.Index
+              (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) n
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+            (fun a ↦ F) fun i ↦
+            @Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
+          (@Ring.toAddCommGroup.{u_2} K (@DivisionRing.toRing.{u_2} K (@Field.toDivisionRing.{u_2} K inst_1))))
+        (@Prod.instModule.{u_1, u_1, u_2} F
+          (Atlas.Orthogonal.VectorD.{u_1}
+            (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) n
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+            F)
+          K (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+          (@Pi.addCommMonoid.{0, u_1}
+            (Atlas.Orthogonal.Index
+              (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) n
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+            (fun a ↦ F) fun i ↦
+            @Semiring.toAddCommMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+          (@Semiring.toAddCommMonoid.{u_2} K
+            (@DivisionSemiring.toSemiring.{u_2} K
+              (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1))))
+          (@Pi.Function.module.{0, u_1, u_1}
+            (Atlas.Orthogonal.Index
+              (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) n
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+            F F (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+            (@Semiring.toModule.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Algebra.toModule.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+            (@DivisionSemiring.toSemiring.{u_2} K
+              (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))
+            inst_4))
+        (@Atlas.Orthogonal.Minus.form.{u_1, u_2} F K inst inst_1 inst_2 inst_3 inst_4 hdeg
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) n
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+```
+
 <a id="family-3d4"></a>
 
 ## ³D₄(q)
@@ -1346,7 +1466,7 @@ Primary construction: Split-Albert model.
 
 ### Chevalley root-operator model
 
-[Concrete-model Lean certificate](verification/existence/2026-10-25-draft/Chevalley-F4/Solution.lean) · [exact mathematical specification](verification/existence/2026-10-25-draft/Chevalley-F4/Challenge.lean). The separate catalogue registration is pending.
+[Concrete-model Lean certificate](verification/existence/2026-10-25-draft/Chevalley-F4/Solution.lean) · [exact mathematical specification](verification/existence/2026-10-25-draft/Chevalley-F4/Challenge.lean).
 
 <a id="exceptional-tits"></a>
 
@@ -1496,7 +1616,7 @@ Primary construction: Split-octonion model.
 
 ### Chevalley root-operator model
 
-[Concrete-model Lean certificate](verification/existence/2026-10-25-draft/Chevalley-G2/Solution.lean) · [exact mathematical specification](verification/existence/2026-10-25-draft/Chevalley-G2/Challenge.lean). The separate catalogue registration is pending.
+[Concrete-model Lean certificate](verification/existence/2026-10-25-draft/Chevalley-G2/Solution.lean) · [exact mathematical specification](verification/existence/2026-10-25-draft/Chevalley-G2/Challenge.lean).
 
 <a id="family-reeg2"></a>
 

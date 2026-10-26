@@ -55,8 +55,9 @@ text=<<~MD
   See [verification status](AUDIT.md), [constructions and identification certificates](catalogue/REALIZATIONS.md)
   and [the comparison theorem](COMPARISON.md). Release acceptance remains pending.
 
-  Here q is the base-field size and n is Lie rank: Aₙ(q)=PSLₙ₊₁(q),
-  ²Aₙ(q)=PSUₙ₊₁(q). Exact dimension conventions are retained below.
+  In the Lie-type rows, q is the base-field size and n is Lie rank:
+  Aₙ(q)=PSLₙ₊₁(q), ²Aₙ(q)=PSUₙ₊₁(q). In Aₙ, n is the permutation degree.
+  For Cₚ, p is prime. Exact dimension conventions are retained below.
   Open a group name for its construction details and available isomorphism certificates.
 
   | Group or family | Models | Order | Proven simplicity | Lean files / theorems | Intrinsic lines | Total dependency lines |
@@ -71,7 +72,8 @@ text<< <<~MD
   Both line columns count required ATLAS declaration spans for order and simplicity
   together. Intrinsic counts stop at the documented reused-group boundaries; total
   counts include ATLAS prerequisites. Both exclude Lean/mathlib. Rows overlap and
-  must not be added. The [dated measurements](catalogue/dependency-counts.json) and
+  must not be added. Each diagram lists its exact counted roots; supplementary
+  statements below can cover a wider parameter range. The [dated measurements](catalogue/dependency-counts.json) and
   [source binding](verification/release-candidate/DIAGRAM_BINDING.json) are preserved;
   packaging the diagrams is not a new proof check. Download an HTML file to view it.
 
@@ -107,7 +109,7 @@ cmp=model_views.comparison_interfaces
 out['catalogue/COMPARISONS.md']=cmp
 
 # Recover verbatim compiled principal signatures, never synthesize them from source.
-wanted=(entries.flat_map { |e|%w[order simple].map { |r|e.dig('roles',r,'declaration') } }+model_views.extra_statement_names).to_set
+wanted=(entries.flat_map { |e|%w[order simple].map { |r|e.dig('roles',r,'declaration') } }+model_views.extra_statement_names+model_views.supplemental_statement_names).to_set
 statements={}
 current=load_json('verification/current.json')
 audit=current.fetch('supplemental_cache_audit')
@@ -141,6 +143,11 @@ entries.each do |e|
     n=e.dig('roles',role,'declaration');s=statements.fetch(n)
     sig<<"### #{role.capitalize}\n\n[Compiled evidence](#{s[:path]}).\n\n```lean\n#{s[:text].rstrip}\n```\n\n"
   end
+  e.dig('presentation','supplemental_statements').to_a.each do |ref|
+    s=statements.fetch(ref.fetch('declaration'))
+    audit=model_views.audit_link(ref.fetch('audit'),[ref.fetch('declaration')]).gsub('(../','(')
+    sig<<"### #{ref.fetch('label')}\n\n[Compiled evidence](#{s[:path]}) · #{audit}.\n\n```lean\n#{s[:text].rstrip}\n```\n\n"
+  end
   model_views.models.fetch(e['id']).reject { |m|m['default'] }.each do |m|
     sig<<"### #{m['label']}\n\n"
     if m['status']=='construction_complete'
@@ -150,7 +157,7 @@ entries.each do |e|
       end
     else
       c=m.fetch('contract')
-      sig<<"[Concrete-model Lean certificate](#{c['evidence']}/#{c['solution_file']}) · [exact mathematical specification](#{c['evidence']}/#{c['reference_file']}). The separate catalogue registration is pending.\n\n"
+      sig<<"[Concrete-model Lean certificate](#{c['evidence']}/#{c['solution_file']}) · [exact mathematical specification](#{c['evidence']}/#{c['reference_file']}).\n\n"
     end
   end
   model_views.edges(e['id']).each { |c|sig<<model_views.certificate(c)+" · "+model_views.source(c['witness'])+".\n\n" }

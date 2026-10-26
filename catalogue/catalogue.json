@@ -2020,8 +2020,8 @@
       "audit_entry": "2D",
       "proof_status": "construction_complete",
       "construction": "Actual hyperbolic planes plus quadratic-extension norm plane; intrinsic Omega equals Siegel-generated isometries, quotiented by its full scalar center",
-      "parameters": "F arbitrary finite field, q=|F|; K/F actual quadratic extension; n is half-dimension/Lie rank; stable simple family n>=4, every characteristic",
-      "exceptions": "No simplicity exceptions for n>=2 over finite fields. Rank2 is structurally PSL2(K); rank3 is structurally PSU4(q). Stable principal roles retain n>=4; separately audited uniform order and simplicity supplements cover every n>=2.",
+      "parameters": "F arbitrary finite field, q=|F|; K/F a quadratic extension; n is half-dimension/Lie rank; n>=2, every characteristic",
+      "exceptions": "None for n>=2 over finite fields. The rank-two and rank-three groups are identified with PSL2(q^2) and PSU4(q).",
       "recognition": "Concrete quadratic-form model and kernel identification; no order recognition or graph-field fixed-point assertion",
       "attribution": "ATLAS norm-plane, quadratic reflection/Siegel, spinor/Dickson, finite-field and Iwasawa proofs; pinned mathlib foundations",
       "roles": {
@@ -2192,11 +2192,25 @@
       "presentation": {
         "label": "²Dₙ(q)",
         "construction": "PΩ⁻_(2n)(q), actual norm-plane scalar quotient",
-        "parameters": "Stable family n≥4; separately proved low ranks n=2,3; every finite field",
+        "parameters": "n ≥ 2; simple over every finite field",
         "order": "q^(n*(n-1)) * (q^n+1) * product_{i=1..n-1}(q^(2*i)-1) / gcd(4,q^n+1)",
-        "note": "Order and nonabelian simplicity proved uniformly for n≥2. Concrete low-rank comparisons: PSL₂(q²) and PSU₄(q). Stable principal roles and their independent evidence retain n≥4.",
+        "note": "The uniform order and simplicity statements cover every n≥2. At ranks 2 and 3, the explicit identifications are PSL₂(q²) and PSU₄(q).",
         "summary_order": "$\\displaystyle \\frac{q^{n(n-1)}(q^n+1)\\prod_{i=1}^{n-1}(q^{2i}-1)}{\\gcd(4,q^n+1)}$",
-        "summary_simplicity": "Yes, $n\\ge4$; ranks $2,3$ separately proved"
+        "summary_simplicity": "Yes, $n\\ge2$, every finite field",
+        "supplemental_statements": [
+          {
+            "label": "Uniform order, n ≥ 2",
+            "declaration": "Atlas.Orthogonal.Minus.family_order_all",
+            "source": "Atlas/LinearGroups/Orthogonal/Minus/AllRanks.lean",
+            "audit": "verification/runs/minus-orthogonal-rank-three-all-ranks-order/20260927T013845-635"
+          },
+          {
+            "label": "Uniform simplicity, n ≥ 2",
+            "declaration": "Atlas.Orthogonal.Minus.family_simple_all",
+            "source": "Atlas/LinearGroups/Orthogonal/Minus/AllRanks.lean",
+            "audit": "verification/runs/minus-orthogonal-rank-three-all-ranks-simplicity/20260927T013328-843"
+          }
+        ]
       },
       "evidence": "minus-orthogonal-rank-three-supplement-v1",
       "proof_dependencies": "verification/dependency-maps/minusd/MinusD.html"

@@ -17,9 +17,8 @@ full model descriptions, orders and simplicity domains remain in the catalogue.
 The generated views display all 39 models of the 33 entries. Six entries retain
 both original and Chevalley constructions. [ISOMORPHISMS.md](ISOMORPHISMS.md)
 exposes the four registered A/B/C/D equivalences with exact source proofs,
-compiled types and dependency certificates. G₂/F₄ model contracts are displayed
-without silently promoting their pending realization registrations or comparison
-scope. The same model inventory supplies the catalogue, CSV, statement pages,
+compiled types and dependency certificates. G₂/F₄ retain their own model contracts
+and the stated scope of the comparisons between them. The same model inventory supplies the catalogue, CSV, statement pages,
 comparison pages and navigation in every proof diagram.
 
 Run `ruby catalogue/manage.rb refresh` after a reviewed data edit, then
@@ -29,8 +28,8 @@ It checks diagram sources and registered interfaces; it does not run Lean or gra
 new verification status. Use the [audit procedure](../AUDIT.md) for that.
 
 The independent existence specifications retain exact source-bound mathematical
-contracts. No separate nonabelian theorem rows are displayed in the catalogue;
-those declarations remain in Lean and in the full verification target data.
+contracts. The full internal theorem inventory remains available in Lean and the
+verification target data.
 
 `current-verification.json` binds these three registries to the 1,207-root
 26 October compiled audit. The prior 1,167-reference catalogue check is preserved

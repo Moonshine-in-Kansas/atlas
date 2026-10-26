@@ -20,9 +20,9 @@ The guide has three themes: isomorphisms between different models, exceptional i
 and non-isomorphisms of all other cases by order or a further invariant. Each result
 has separate links to its Lean statement and verification certificate, with the
 exact model and parameter hypotheses retained.
-The research note is the unchanged, dated 25 October development account:
-its broader local source inventory is distinguished from this filtered export.
-It is not a claim that every local draft module is included or release-accepted.
+The research note reports the 25 October development snapshot, with editorial
+clarifications dated 26 October. Its broader local source inventory and dated
+verification results are distinguished from this filtered export.
 
 A, B, C, D, F₄ and G₂ each retain both their original model and a Chevalley
 root-operator model. The catalogue displays both constructions. A/B/C/D have

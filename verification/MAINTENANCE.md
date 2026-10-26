@@ -13,7 +13,7 @@ ruby verification/release_metadata.rb check-preparation
 ```
 
 Refresh generates the catalogue pages, 66 primary and eight additional-model
-order/simplicity statements, four compiled construction-isomorphism certificates,
+order/simplicity statements, two uniform-range supplements, four compiled construction-isomorphism certificates,
 Comparator result table and YAML result index, AUDIT.md and complete manifests.
 The read-only preparation check verifies exact source and pin hashes, all 1,207
 audit roots across the catalogue and realization/comparison registries,
@@ -100,8 +100,8 @@ Do not hand-edit generated catalogue or theorem-statement pages. Measurements
 are dated declaration-span counts, with exact roots, sources and diagrams bound
 by `catalogue/measurement.json`; they are not a new recount or proof check.
 
-The research-note TeX/PDF remains the dated 25 October development account;
-README records its broader local scope. Construction jobs and internal progress
+The research-note TeX/PDF reports the dated 25 October development account,
+with editorial clarifications dated 26 October; README records its broader local scope. Construction jobs and internal progress
 notes are excluded. Version 1.0's immutable release and original public history
 must be rechecked before any promotion. The prepared Pages workflow preserves
 old unversioned URLs and separate `v1.0/` and `v1.2/` views; the root becomes the

@@ -19,3 +19,19 @@ The [registry](../catalogue/catalogue.json) and
 [realization data](../catalogue/realizations.json) link the relevant construction
 and property evidence. Large text artifacts are compressed according to
 [this index](compressed-evidence.json), with their original hashes preserved.
+
+## Reading the evidence archive
+
+The dated directories preserve the exact certificates, compiled statements,
+dependency graphs and reproduction inputs behind the results. Their historical
+counts describe their own snapshots; use the current catalogue and audit summary
+above for the present inventory. Two original links refer to omitted development
+documents: use the [symplectic catalogue entry](../CATALOGUE.md#family-c) for
+`SYMPLECTIC_COMPLETION.md`, and the [current checker guide](INDEPENDENT_CHECKERS.md)
+for the old `existence/chevalley/README.md` link. The sealed originals remain unchanged.
+
+Most of the repository's size is compressed dependency evidence. Repeated inputs
+keep individual checker bundles self-contained and preserve their recorded hashes;
+Git stores identical file contents once. Lean sources, verification evidence,
+proof diagrams, mathematical documentation and build/licensing metadata are retained.
+Construction-job notes, local build caches and temporary compilation files are excluded.

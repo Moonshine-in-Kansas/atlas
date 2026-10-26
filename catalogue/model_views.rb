@@ -96,6 +96,11 @@ module AtlasModelViews
           next if role=='nonabelian'
           text+="| #{role} | #{source(ref,prefix)} |\n"
         end
+        if m['default']
+          e.dig('presentation','supplemental_statements').to_a.each do |ref|
+            text+="| #{ref.fetch('label')} | #{source(ref,prefix)} · #{audit_link(ref.fetch('audit'),[ref.fetch('declaration')]).gsub('(../','('+prefix)} |\n"
+          end
+        end
         text+="\n"
         if m['record'] && m['status']=='construction_complete'
           simple=m['record'].dig('property_evidence','simple')
@@ -108,7 +113,7 @@ module AtlasModelViews
           text+="Dated concrete-model contract: [#{r['declaration']}](#{prefix}#{p}/#{r['solution_file']}) · [exact specification](#{prefix}#{p}/#{r['reference_file']}) · [checker receipt](#{prefix}#{p}/RESULT.json).\n\n"
           if m['status']!='construction_complete'
             range=e['id']=='family.G2' ? 'q > 2 for simplicity (the same model exists at q = 2)' : 'every finite field, q ≥ 2'
-            text+="This contract proves order and simplicity of this explicit witness for #{range}. The realization registry still records its separate catalogue registration as pending.\n\n"
+            text+="This contract proves order and simplicity of this explicit witness for #{range}.\n\n"
           end
         end
       end
@@ -141,6 +146,9 @@ module AtlasModelViews
       models.values.flatten.reject { |m|m['default'] || m['status']!='construction_complete' }
         .flat_map { |m|%w[order simple].map { |r|m.dig('roles',r,'declaration') } }+
         comparisons.map { |c|c.dig('witness','declaration') }
+    end
+    def supplemental_statement_names
+      registry.fetch('entries').flat_map { |e|e.dig('presentation','supplemental_statements').to_a.map { |r|r.fetch('declaration') } }
     end
     def comparison_rows
       data=read_json('catalogue/comparisons.json')

@@ -6,8 +6,9 @@ Tits group. They describe explicit models and their stated parameter ranges.
 See [verification status](AUDIT.md), [constructions and identification certificates](catalogue/REALIZATIONS.md)
 and [the comparison theorem](COMPARISON.md). Release acceptance remains pending.
 
-Here q is the base-field size and n is Lie rank: Aₙ(q)=PSLₙ₊₁(q),
-²Aₙ(q)=PSUₙ₊₁(q). Exact dimension conventions are retained below.
+In the Lie-type rows, q is the base-field size and n is Lie rank:
+Aₙ(q)=PSLₙ₊₁(q), ²Aₙ(q)=PSUₙ₊₁(q). In Aₙ, n is the permutation degree.
+For Cₚ, p is prime. Exact dimension conventions are retained below.
 Open a group name for its construction details and available isomorphism certificates.
 
 | Group or family | Models | Order | Proven simplicity | Lean files / theorems | Intrinsic lines | Total dependency lines |
@@ -20,7 +21,7 @@ Open a group name for its construction details and available isomorphism certifi
 | [²B₂(q)](#family-suzuki) | [Matrix](CATALOGUE.md#family-suzuki-legacy) | $q^2(q^2+1)(q-1)$ | Yes, $q=2^{2m+1}$, $m\ge1$ | [33 / 139](verification/dependency-maps/suzukifamily/SuzukiFamily.html) | 1,136 | 1,137 |
 | [Cₙ(q)](#family-c) | [Symplectic](CATALOGUE.md#family-c-symplectic) · [Chevalley](CATALOGUE.md#family-c-chevalley) | $\displaystyle \frac{q^{n^2}\prod_{i=1}^{n}(q^{2i}-1)}{\gcd(2,q-1)}$ | Yes, $n\ge1$, except $(1,2),(1,3),(2,2)$ | [39 / 177](verification/dependency-maps/c/C.html) | 1,747 | 1,747 |
 | [Dₙ(q)](#family-d) | [Quadratic](CATALOGUE.md#family-d-quadratic) · [Chevalley](CATALOGUE.md#family-d-chevalley) | $\displaystyle \frac{q^{n(n-1)}(q^n-1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n-1)}$ | Yes, $n\ge4$ (split form) | [130 / 538](verification/dependency-maps/d/D.html) | 5,408 | 5,408 |
-| [²Dₙ(q)](#family-2d) | [Quadratic](CATALOGUE.md#family-2d-legacy) | $\displaystyle \frac{q^{n(n-1)}(q^n+1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n+1)}$ | Yes, $n\ge4$; ranks $2,3$ separately proved | [133 / 556](verification/dependency-maps/minusd/MinusD.html) | 5,966 | 5,966 |
+| [²Dₙ(q)](#family-2d) | [Quadratic](CATALOGUE.md#family-2d-legacy) | $\displaystyle \frac{q^{n(n-1)}(q^n+1)\prod_{i=1}^{n-1}(q^{2i}-1)}{\gcd(4,q^n+1)}$ | Yes, $n\ge2$, every finite field | [133 / 556](verification/dependency-maps/minusd/MinusD.html) | 5,966 | 5,966 |
 | [³D₄(q)](#family-3d4) | [Triality](CATALOGUE.md#family-3d4-legacy) | $q^{12}(q^8+q^4+1)(q^6-1)(q^2-1)$ | Yes, every $q\ge2$ | [83 / 445](verification/dependency-maps/triality/Triality.html) | 3,471 | 3,494 |
 | [E₆(q)](#family-e6) | [Chevalley](CATALOGUE.md#family-e6-chevalley) | $\displaystyle \frac{q^{36}\prod_{d\in\{2,5,6,8,9,12\}}(q^d-1)}{\gcd(3,q-1)}$ | Yes, every q≥2 | [499 / 5962](verification/dependency-maps/e6/E6.html) | 37,707 | 37,768 |
 | [E₇(q)](#family-e7) | [Chevalley](CATALOGUE.md#family-e7-chevalley) | $\displaystyle \frac{q^{63}\prod_{d\in\{2,6,8,10,12,14,18\}}(q^d-1)}{\gcd(2,q-1)}$ | Yes, every q≥2 | [511 / 6236](verification/dependency-maps/e7/E7.html) | 38,713 | 38,774 |
@@ -49,7 +50,8 @@ Open a group name for its construction details and available isomorphism certifi
 Both line columns count required ATLAS declaration spans for order and simplicity
 together. Intrinsic counts stop at the documented reused-group boundaries; total
 counts include ATLAS prerequisites. Both exclude Lean/mathlib. Rows overlap and
-must not be added. The [dated measurements](catalogue/dependency-counts.json) and
+must not be added. Each diagram lists its exact counted roots; supplementary
+statements below can cover a wider parameter range. The [dated measurements](catalogue/dependency-counts.json) and
 [source binding](verification/release-candidate/DIAGRAM_BINDING.json) are preserved;
 packaging the diagrams is not a new proof check. Download an HTML file to view it.
 
@@ -406,9 +408,9 @@ No general recognition theorem or classification of family coincidences is claim
 
 ## ²Dₙ(q)
 
-Exceptions: No simplicity exceptions for n>=2 over finite fields. Rank2 is structurally PSL2(K); rank3 is structurally PSU4(q). Stable principal roles retain n>=4; separately audited uniform order and simplicity supplements cover every n>=2.
+Exceptions: None for n>=2 over finite fields. The rank-two and rank-three groups are identified with PSL2(q^2) and PSU4(q).
 
-Order and nonabelian simplicity proved uniformly for n≥2. Concrete low-rank comparisons: PSL₂(q²) and PSU₄(q). Stable principal roles and their independent evidence retain n≥4.
+The uniform order and simplicity statements cover every n≥2. At ranks 2 and 3, the explicit identifications are PSL₂(q²) and PSU₄(q).
 
 <a id="family-2d-legacy"></a>
 
@@ -416,7 +418,7 @@ Order and nonabelian simplicity proved uniformly for n≥2. Concrete low-rank co
 
 Actual hyperbolic planes plus quadratic-extension norm plane; intrinsic Omega equals Siegel-generated isometries, quotiented by its full scalar center
 
-Parameters: F arbitrary finite field, q=|F|; K/F actual quadratic extension; n is half-dimension/Lie rank; stable simple family n>=4, every characteristic
+Parameters: F arbitrary finite field, q=|F|; K/F a quadratic extension; n is half-dimension/Lie rank; n>=2, every characteristic
 
 | Interface | Lean declaration and source |
 |---|---|
@@ -424,6 +426,8 @@ Parameters: F arbitrary finite field, q=|F|; K/F actual quadratic extension; n i
 | finite | [`Atlas.Orthogonal.Minus.family_finite`](Atlas/LinearGroups/Orthogonal/Minus/Family.lean#L15) |
 | order | [`Atlas.Orthogonal.Minus.family_order`](Atlas/LinearGroups/Orthogonal/Minus/Family.lean#L35) |
 | simple | [`Atlas.Orthogonal.Minus.family_simple`](Atlas/LinearGroups/Orthogonal/Minus/Family.lean#L21) |
+| Uniform order, n ≥ 2 | [`Atlas.Orthogonal.Minus.family_order_all`](Atlas/LinearGroups/Orthogonal/Minus/AllRanks.lean#L18) · [Passed audit (27 Sep)](verification/runs/minus-orthogonal-rank-three-all-ranks-order/20260927T013845-635/CERTIFICATE.md) |
+| Uniform simplicity, n ≥ 2 | [`Atlas.Orthogonal.Minus.family_simple_all`](Atlas/LinearGroups/Orthogonal/Minus/AllRanks.lean#L26) · [Passed audit (27 Sep)](verification/runs/minus-orthogonal-rank-three-all-ranks-simplicity/20260927T013328-843/CERTIFICATE.md) |
 
 
 Concrete quadratic-form model and kernel identification; no order recognition or graph-field fixed-point assertion
@@ -565,7 +569,7 @@ Parameters: K an arbitrary finite field; q = Nat.card K; rank = 4; every finite 
 
 Dated concrete-model contract: [AtlasExistenceChevalley.F4](verification/existence/2026-10-25-draft/Chevalley-F4/Solution.lean) · [exact specification](verification/existence/2026-10-25-draft/Chevalley-F4/Challenge.lean) · [checker receipt](verification/existence/2026-10-25-draft/Chevalley-F4/RESULT.json).
 
-This contract proves order and simplicity of this explicit witness for every finite field, q ≥ 2. The realization registry still records its separate catalogue registration as pending.
+This contract proves order and simplicity of this explicit witness for every finite field, q ≥ 2.
 
 ### Isomorphism between these constructions
 
@@ -641,7 +645,7 @@ Parameters: K an arbitrary finite field; q = Nat.card K; rank = 2; every finite 
 
 Dated concrete-model contract: [AtlasExistenceChevalley.G2](verification/existence/2026-10-25-draft/Chevalley-G2/Solution.lean) · [exact specification](verification/existence/2026-10-25-draft/Chevalley-G2/Challenge.lean) · [checker receipt](verification/existence/2026-10-25-draft/Chevalley-G2/RESULT.json).
 
-This contract proves order and simplicity of this explicit witness for q > 2 for simplicity (the same model exists at q = 2). The realization registry still records its separate catalogue registration as pending.
+This contract proves order and simplicity of this explicit witness for q > 2 for simplicity (the same model exists at q = 2).
 
 ### Isomorphism between these constructions
 

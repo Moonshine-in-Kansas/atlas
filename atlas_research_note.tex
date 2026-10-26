@@ -57,7 +57,8 @@
 \hypersetup{pdfauthor={Gerald H\"ohn},
   pdfsubject={Constructions, orders, simplicity, and structural comparisons of finite simple groups},
   pdfkeywords={finite simple groups, sporadic groups, classical groups, octonions, Lean, formal verification}}
-\date{25 October 2026 --- version 1.2 development draft}
+\date{25 October 2026 --- version 1.2 development draft\\
+  \small Editorial revision: 26 October 2026}
 \begin{document}
 \maketitle
 
@@ -75,10 +76,11 @@ and $\mathrm{Ru}$. The Tits group ${}^2F_4(2)'$ is a separate exceptional
 entry. The models arise from codes, lattices, forms, algebras, finite
 geometries, and integral Chevalley root operators. They retain natural
 actions, stabilizers, central quotients, and comparison maps.
-For the thirty entries preceding the addition of $E_6,E_7,E_8$, a
-comparison theorem determines isomorphism precisely by normalized labels;
-involution classes and Sylow-subgroup centers separate the exceptional
-equal-order pairs. Further equivalences identify several Chevalley and
+Uniform order arithmetic separates the constructed groups outside the
+exceptional isomorphisms and two equal-order patterns. Involution classes
+and Sylow-subgroup centers separate those remaining pairs. A combined
+theorem determines isomorphism by normalized labels within its specified
+registry. Further equivalences identify several Chevalley and
 earlier geometric models. The construction and comparison proofs are
 formalized in Lean without assuming the exhaustiveness theorem of the
 classification. We state the completed results, the boundaries of the
@@ -122,14 +124,13 @@ models, with the Conway--Wales lattice also supplying Rudvalis and the
 derived Tits group. Both the defining objects and their structural maps
 are retained.
 
-The comparison layer has two complementary achievements. Explicit maps
-relate different geometric constructions and the exceptional small
-isomorphisms, including $\PSU_4(2)\cong\PSp_4(3)$. For the earlier
-thirty-entry registry, an unconditional theorem also decides isomorphism
-by normalized labels. Its converse uses a classification of the relevant
-order formula coincidences and group-theoretic obstructions when equal
-orders do not imply isomorphism. The three new $E$-series entries are
-outside that theorem's present domain.
+The comparison layer has three themes: isomorphisms between construction
+models, exceptional isomorphisms such as $\PSU_4(2)\cong\PSp_4(3)$,
+and nonisomorphism of the remaining distinct labels by orders or further
+invariants. The uniform classification of order coincidences applies to
+the proved cardinalities of the constructed groups. A combined theorem
+packages these arguments for the typed registry specified in
+Section~\ref{sec:catalogue-comparison}.
 
 
 Classification has two complementary components: constructing the
@@ -1091,12 +1092,13 @@ order arithmetic and explicit equivalences, they now support the
 registry comparison theorem below. The conditional recognition theorem
 for arbitrary finite simple groups from $(|G|,k_2(G))$ remains separate.
 
-\subsection{A complete comparison theorem for the earlier registry}
+\subsection{A complete comparison theorem for the typed registry}
 \label{sec:catalogue-comparison}
 
-Let $\mathcal E$ be the typed registry of the thirteen families preceding
-$E_6,E_7,E_8$, the sixteen sporadic constructions, and the derived Tits
-group. An entry retains the actual field or field extension and its
+Let $\mathcal E$ be the typed registry of cyclic and alternating groups,
+$A_r$, ${}^2A_r$, $B_r$, $C_r$, $D_r$, ${}^2D_r$, $G_2$, $F_4$,
+${}^3D_4$, ${}^2B_2$, ${}^2G_2$, the sixteen sporadic constructions,
+and the derived Tits group. An entry retains the actual field or field extension and its
 chosen concrete group, not just a numerical order. Its family ranges
 are: prime $p$ for $C_p$; $n\geq5$ for $\Alt_n$; $d\geq2$ for
 $\PSL_d$ excluding $(2,2),(2,3)$; $d\geq3$ for $\PSU_d$ excluding
@@ -1142,12 +1144,12 @@ maps and compatible field-transport maps give multiplicative equivalences
 whenever the normalized labels agree. No CFSG hypothesis or assumed
 recognition certificate occurs in this theorem.
 
-This is a result about the thirty specified construction entries, with
-their infinite parameter ranges. It does not assert recognition of an
-arbitrary group from its order. The new $E_6,E_7,E_8$ carriers and the
-additional Chevalley realizations are not constructors of $\mathcal E$.
-They retain their separate order, simplicity, and comparison results;
-the theorem does not silently extend to them.
+This is a result about the specified construction entries, with their
+infinite parameter ranges. It does not assert recognition of an arbitrary
+group from its order. More generally, the uniform numerical order
+classification combines with the proved model cardinalities to give
+nonisomorphism whenever the orders differ. Each model identification
+uses its actual multiplication-preserving equivalence.
 
 \subsection{Comparison maps and remaining targets}
 

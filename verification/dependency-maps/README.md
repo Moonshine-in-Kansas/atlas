@@ -15,6 +15,7 @@ original graph data, source hashes, roots and counts byte for byte.
 the website after the source repository has its preserved `v1.0` tag. It verifies
 that tag against the original public commit before reading the old diagrams.
 
-Existing unversioned diagram URLs continue to show Version 1.0. The new root
-index selects the Version 1.2 view, and both `v1.0/` and `v1.2/` remain available.
-The workflow runs the strict release gate before any deployment.
+The currently published website remains at Version 1.0. After Version 1.2 is
+approved and deployed, the root index will select its diagrams and both `v1.0/`
+and `v1.2/` will be available. Existing unversioned diagram URLs will continue
+to show Version 1.0. The workflow runs the strict release gate before deployment.
