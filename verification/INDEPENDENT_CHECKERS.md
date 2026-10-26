@@ -1,91 +1,77 @@
-# Reproducing the independent checks
+# Independent-checker reproduction
 
-Start in the release checkout, with its pinned Lean toolchain, dependency caches
-and ATLAS build available. Run one checker at a time. These instructions reproduce
-the recorded checks; they do not promote new results into the release evidence.
-They require Linux for the Comparator sandbox. Build tools outside the repository.
+[Nanoda on 24 October](nanoda/2026-10-24-draft/README.md) passed 139,617 declarations
+with zero typechecker errors and a pretty-printer warning. Its excluded draft
+modules and 45 generated partial implementations are explicit in the bundle.
+[Comparator on 25 October](existence/RESULTS.md) passed 42 of 45 targets; three
+stopped at the memory cap. Neither result is a fresh check of this filtered export.
 
-## Tool versions
+## Pinned tools
 
-Use the following source revisions from the recorded run:
+| Tool | Repository | Revision |
+|---|---|---|
+| Nanoda | https://github.com/ammkrn/nanoda_lib | `4c544ed4099c8227f07d5de77ad1e69fb0740a27` |
+| lean4export | https://github.com/leanprover/lean4export | `cacf989bd75f608700820f6afc595f32e7a99a4d` |
+| Comparator | https://github.com/leanprover/comparator | `2312244ac716564a61cc0bf4e107d9abf1757a61` |
+| Landrun | https://github.com/Zouuup/landrun | `811cfff51ceaf3d9843708aa6d22e9b84ccac8b4` |
 
-| Tool | Source | Revision | Build command in that checkout |
-|---|---|---|---|
-| Nanoda | https://github.com/ammkrn/nanoda_lib | `4c544ed4099c8227f07d5de77ad1e69fb0740a27` | `cargo build --release --locked -j 1` |
-| lean4export | https://github.com/leanprover/lean4export | `cacf989bd75f608700820f6afc595f32e7a99a4d` | `LEAN_NUM_THREADS=2 lake build lean4export` |
-| Comparator | https://github.com/leanprover/comparator | `2312244ac716564a61cc0bf4e107d9abf1757a61` | `LEAN_NUM_THREADS=2 lake build comparator` |
-| Landrun | https://github.com/Zouuup/landrun | `811cfff51ceaf3d9843708aa6d22e9b84ccac8b4` | `go build -o landrun ./cmd/landrun` |
-
-Clone each tool repository and check out the revision above. Build the Lean tools
-using the ATLAS `lean-toolchain` version. Tool compilation needs the corresponding
-Rust, Go or Lean development tools. Consult the README at each pinned revision for
-its platform requirements. No tool binaries or external proof exports are bundled.
-
-## Nanoda
-
-Set absolute paths to the binaries built above, then run from the ATLAS root:
-
-```sh
-export LEAN4EXPORT=/absolute/path/to/lean4export/.lake/build/bin/lean4export
-export NANODA=/absolute/path/to/nanoda_lib/target/release/nanoda_bin
-ruby verification/release_metadata.rb check
-ruby verification/run_nanoda.rb
-```
-
-The driver exports every selected root in `verification/roots.json` and its proof
-and type dependencies, then runs Nanoda with one thread and only `propext`,
-`Classical.choice` and `Quot.sound` permitted. It records binary hashes, source
-hashes, timings, output and a result under `verification/results/nanoda-TIMESTAMP/`.
-A successful result requires exit status zero, Nanoda's success marker and unchanged
-source hashes. Verify your tool checkout revisions: the driver records binary
-hashes but cannot infer their source revision from an arbitrary executable.
-
-The previous run exported about 936 MB, checked 70,891 declarations and took
-31 minutes in Nanoda, using about 5.1 GiB peak resident memory. These are historical
-measurements, not performance guarantees. GNU `/usr/bin/time` is required.
+Build these pinned revisions using the repository's Lean toolchain and the
+corresponding Rust/Go build tools. Only `propext`, `Classical.choice` and
+`Quot.sound` are permitted. Keep complete logs and original exit statuses.
 
 ## Comparator
 
-For the new mathlib-only existence specifications and per-group checks, see
-[existence contracts and results](existence/README.md). The instructions below
-reproduce the older same-reference run and should not be confused with those checks.
-
-
-Prepare the same-reference comparison harness:
+Start with a successful ordinary ATLAS build. Prepare a reviewed target using:
 
 ```sh
-ruby verification/prepare_comparator.rb
+ruby verification/existence/prepare-queue.rb /absolute/path/to/new-queue AtlasExistence.cyclic
 ```
 
-In the printed output directory, run `lake update` to resolve the local ATLAS
-package. Check that its dependency revisions still equal the release pins. Put
-the real Landrun and pinned lean4export binaries in `PATH`, alongside Comparator.
-Then run, from that harness directory:
+The preparer copies the exact reference, solution and Comparator configuration,
+and writes local Lake paths with the same toolchain. It performs no build or
+checker run. Without a target argument it prepares the 42 previously passed
+targets. It refuses existing output directories and the three owner-deferred
+targets. Keep a new source/configuration hash record and preserve all original
+artifacts. The archived original harnesses retain their historical absolute paths.
+
+Resolve the harness with `lake update`, verify the dependency revisions against
+ATLAS's manifest, and put the pinned real Landrun and lean4export binaries in
+`PATH`. From the harness directory, run:
 
 ```sh
-systemd-run --user --wait --pipe \
-  --property=RestrictAddressFamilies=~AF_UNIX \
-  --working-directory="$PWD" -E PATH="$PATH" -E LEAN_NUM_THREADS=2 \
-  -- lake env comparator config.json
+LEAN_NUM_THREADS=1 lake env /absolute/path/to/comparator comparator.json
 ```
 
-Use the real Landrun sandbox, not Comparator's development fake-landrun script.
-The address-family restriction follows the pinned Comparator's documented sandbox
-invocation. It requires a working user systemd manager and a supported Linux sandbox.
-Keep the complete output and exit status; look for successful statement comparison,
-axiom checking, standard Lean kernel replay and the final solution-accepted verdict.
-The earlier run took 41 minutes 36 seconds. Nanoda is a separate run above.
+Use Comparator's real Linux sandbox. Require successful statement comparison,
+permitted-axiom inspection, default Lean-kernel replay, quotient post-check and
+final solution acceptance. One driver runs at a time; retain the recorded
+9 GiB owned RSS-plus-swap ceiling and the host's memory reserve.
+The exact [recorded driver](existence/2026-10-25-draft/driver.rb) and
+[monitor](existence/2026-10-25-draft/monitor.rb) document the original invocation.
 
-The frozen harness compares 869 theorem targets and 42 definition equality wrappers,
-with no definition holes. Challenge and Solution both import the same ATLAS
-snapshot. This checks the frozen formal interfaces and their proofs; it is **not**
-a comparison against an independently authored mathematical specification.
+The separate frozen-interface comparison must cover all 1,207 current audit roots.
+Its new reference/solution wrappers and target map require review against a
+successful current-export build before replay. The old Version 1.0 harness covers
+an older selection and cannot serve as Version 1.2 acceptance. No new interface
+Comparator result is claimed by this package.
 
-## Evidence preservation
+## Nanoda
 
-Current results are under `2026-09-18/` and summarized in `../AUDIT.md`.
-Keep new output in ignored `results/`. Do not overwrite old successful records or
-edit their hashes to make them appear to cover changed mathematics. Reproduction
-also depends on the host, kernel, compiler and pinned dependency artifacts.
-The portable drivers are packaging adaptations of the recorded commands; adding
-these instructions did not itself repeat the full Nanoda or Comparator runs.
+The [scope and export inventory](nanoda/2026-10-24-draft/README.md) identify the
+declarations checked in the broader local snapshot. The original scripts,
+filtering rule, configuration and reviewed kernel receipt are retained there.
+Do not silently treat excluded modules or generated partial implementations as
+checked. A fresh clean-export run needs its own inventory and source hashes.
+
+The retained `run_nanoda.rb` exports the selected `verification/roots.json`
+interface closure, a smaller and different scope from that broad local replay:
+
+```sh
+export LEAN4EXPORT=/absolute/path/to/lean4export
+export NANODA=/absolute/path/to/nanoda_bin
+ruby verification/run_nanoda.rb
+```
+
+Preserve new results separately. Update release evidence only after all required
+checks pass and the [metadata gate](MAINTENANCE.md) accepts their exact sources,
+pins, roots and contracts. Reproduction can require substantial memory and disk.

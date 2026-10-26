@@ -1,0 +1,112 @@
+{
+  "groups": [
+    {
+      "entry": "Tits",
+      "kind": "exceptional",
+      "checking": "checked: separate full transfer, order, simplicity and public audits",
+      "parameters": "Fixed exceptional derived-Ree/Tits group ²F₄(2)′, constructed as the commutator subgroup of the inherited cross stabilizer",
+      "order": "17971200",
+      "model": "Atlas.Tits.Model",
+      "finiteness_theorem": "Atlas.Tits.finite",
+      "order_theorem": "Atlas.Tits.card",
+      "simplicity_theorem": "Atlas.Tits.isSimpleGroup",
+      "noncommutativity": "Atlas.Tits.noncommutative"
+    }
+  ],
+  "properties": [
+    {
+      "declaration": "Atlas.Tits.embeddingIntoRudvalis_injective",
+      "source": "Atlas/Tits/LocalGroups.lean",
+      "description": "Injective inclusion of the actual derived stabilizer into the constructed Rudvalis group",
+      "entry": "Atlas.Tits"
+    },
+    {
+      "declaration": "Atlas.Tits.derived_eq_transferKernel",
+      "source": "Atlas/Tits/Order.lean",
+      "description": "The actual derived subgroup equals the actual transfer kernel",
+      "entry": "Atlas.Tits"
+    },
+    {
+      "declaration": "Atlas.Tits.index_derived",
+      "source": "Atlas/Tits/Order.lean",
+      "description": "The derived subgroup has index two in the inherited cross stabilizer",
+      "entry": "Atlas.Tits"
+    },
+    {
+      "declaration": "Atlas.Tits.transfer_alpha",
+      "source": "Atlas/Tits/TransferEvaluation.lean",
+      "description": "The explicit geometric transfer witness has value minus one",
+      "entry": "Atlas.Tits"
+    },
+    {
+      "declaration": "Atlas.Tits.transfer_range_order",
+      "source": "Atlas/Tits/Order.lean",
+      "description": "The transfer image has order two, although the local multiplier has image order four",
+      "entry": "Atlas.Tits"
+    },
+    {
+      "declaration": "Atlas.Tits.normal_subgroups",
+      "source": "Atlas/Tits/Order.lean",
+      "description": "The ambient normal subgroups are precisely the identity, the derived subgroup and the whole stabilizer",
+      "entry": "Atlas.Tits"
+    },
+    {
+      "declaration": "Atlas.Tits.perfect",
+      "source": "Atlas/Tits/Simplicity.lean",
+      "description": "Perfectness of the same derived-subgroup model",
+      "entry": "Atlas.Tits"
+    },
+    {
+      "declaration": "Atlas.Tits.order",
+      "source": "Atlas/Tits/Construction.lean",
+      "description": "Prime factorization of the actual model order",
+      "entry": "Atlas.Tits"
+    },
+    {
+      "declaration": "Atlas.Tits.model_is_derived",
+      "source": "Atlas/Tits/Construction.lean",
+      "description": "The primary model is the literal commutator subgroup of the inherited cross stabilizer",
+      "entry": "Atlas.Tits"
+    },
+    {
+      "declaration": "Atlas.Tits.construction",
+      "source": "Atlas/Tits/Construction.lean",
+      "description": "Complete public package for the same concrete model",
+      "entry": "Atlas.Tits"
+    },
+    {
+      "declaration": "Atlas.Tits.model_neighbours_faithful",
+      "source": "Atlas/Tits/RetainedAction.lean",
+      "description": "The restricted action on 1755 orthogonal crosses is faithful",
+      "entry": "Atlas.Tits"
+    },
+    {
+      "declaration": "Atlas.Tits.model_neighbour_stabilizer_card",
+      "source": "Atlas/Tits/RetainedAction.lean",
+      "description": "Every point stabilizer in the transitive derived-group action has order10240",
+      "entry": "Atlas.Tits"
+    },
+    {
+      "declaration": "Atlas.Tits.embedding_range_card",
+      "source": "Atlas/Tits/RetainedAction.lean",
+      "description": "The actual subgroup image in Rudvalis has order17971200",
+      "entry": "Atlas.Tits"
+    },
+    {
+      "declaration": "Atlas.Tits.embedding_range_index",
+      "source": "Atlas/Tits/RetainedAction.lean",
+      "description": "The actual subgroup image in Rudvalis has index8120",
+      "entry": "Atlas.Tits"
+    }
+  ],
+  "catalogue_scope": {
+    "id": "exceptional.Tits",
+    "label": "Tits group",
+    "kind": "exceptional",
+    "audit_entry": "Tits",
+    "proof_status": "construction_complete",
+    "construction": "Actual derived subgroup of the distinguished-cross stabilizer in the constructed projective Conway–Wales lattice group",
+    "parameters": "Fixed exceptional derived-Ree/Tits group ²F₄(2)′, constructed as the commutator subgroup of the inherited cross stabilizer",
+    "exceptions": ""
+  }
+}

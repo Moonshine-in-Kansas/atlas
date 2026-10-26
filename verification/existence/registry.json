@@ -1,282 +1,774 @@
 {
-  "format": 1,
+  "format": 2,
+  "version": "1.2",
+  "bundle": "verification/existence/2026-10-25-draft",
+  "bundle_sha256": "3cadf9b29b3e1a38d616cea944cfb3ec7555cd60cf3739b20569b06ae8a7a303",
+  "scope": "Dated reviewed contracts and original outcomes; current-export acceptance is evaluated separately",
   "entries": [
     {
-      "scope": "existence",
-      "declaration": "AtlasExistence.cyclic",
-      "name": "C_p: existence, order and simplicity",
-      "imports": [
-        "Atlas.Families.Cyclic.Basic"
-      ],
-      "evidence": "verification/existence/2026-09-29/cyclic",
-      "catalogue_id": "family.Cyclic"
+      "declaration": "AtlasComparison.main",
+      "scope": "comparison",
+      "catalogue_id": null,
+      "primary_catalogue_contract": false,
+      "realization": null,
+      "reference_boundary": "Shared concrete model registry and normalization definitions; two isomorphism/nonisomorphism reference statements",
+      "evidence": "verification/existence/2026-10-25-draft/Catalogue-isomorphism",
+      "reference_file": "Reference.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Reference.lean": "501fb566e1e8359582fea04823c5df872939be6f1a7964abf91994e78a99f1d6",
+        "Solution.lean": "03d0e3861f9dea30b85194d23b5f5c8a0cebf4c3a0fd5bf40ffff060494c1793",
+        "comparator.json": "adbfa42be423c42a1b0a8090d5a6b55ea41f45d515b2e2030a43d77b60d08f86"
+      }
     },
     {
-      "scope": "existence",
-      "declaration": "AtlasExistence.alternating",
-      "name": "A_n: existence, order and simplicity",
-      "imports": [
-        "Atlas.Families.Alternating.Basic"
-      ],
-      "evidence": "verification/existence/2026-09-29/alternating",
-      "catalogue_id": "family.Alternating"
+      "declaration": "AtlasComparison.nonisomorphic",
+      "scope": "comparison",
+      "catalogue_id": null,
+      "primary_catalogue_contract": false,
+      "realization": null,
+      "reference_boundary": "Shared concrete model registry and normalization definitions; two isomorphism/nonisomorphism reference statements",
+      "evidence": "verification/existence/2026-10-25-draft/Catalogue-isomorphism",
+      "reference_file": "Reference.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Reference.lean": "501fb566e1e8359582fea04823c5df872939be6f1a7964abf91994e78a99f1d6",
+        "Solution.lean": "03d0e3861f9dea30b85194d23b5f5c8a0cebf4c3a0fd5bf40ffff060494c1793",
+        "comparator.json": "adbfa42be423c42a1b0a8090d5a6b55ea41f45d515b2e2030a43d77b60d08f86"
+      }
     },
     {
-      "scope": "existence",
-      "declaration": "AtlasExistence.typeA",
-      "name": "A_n(q): existence, order and simplicity",
-      "imports": [
-        "Atlas.LinearGroups.TypeA"
-      ],
-      "evidence": "verification/existence/2026-09-29/typeA",
-      "catalogue_id": "family.PSL"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.typeB",
-      "name": "B_n(q): existence, order and simplicity",
-      "imports": [
-        "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction"
-      ],
-      "evidence": "verification/existence/2026-09-29/typeB",
-      "catalogue_id": "family.B"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.typeC",
-      "name": "C_n(q): existence, order and simplicity",
-      "imports": [
-        "Atlas.LinearGroups.TypeC"
-      ],
-      "evidence": "verification/existence/2026-09-29/typeC",
-      "catalogue_id": "family.C"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.typeD",
-      "name": "D_n(q): existence, order and simplicity",
-      "imports": [
-        "Atlas.LinearGroups.Orthogonal.DConstruction"
-      ],
-      "evidence": "verification/existence/2026-09-29/typeD",
-      "catalogue_id": "family.D"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.G2",
-      "name": "G_2(q): existence, order and simplicity",
-      "imports": [
-        "Atlas.LinearGroups.TypeG2"
-      ],
-      "evidence": "verification/existence/2026-09-29/G2",
-      "catalogue_id": "family.G2"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.ReeG2",
-      "name": "^2G_2(q): existence, order and simplicity",
-      "imports": [
-        "Atlas.LinearGroups.TypeReeG2"
-      ],
-      "evidence": "verification/existence/2026-09-29/ReeG2",
-      "catalogue_id": "family.ReeG2"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.M11",
-      "name": "M_11: existence, order and simplicity",
-      "imports": [
-        "Atlas.Sporadic.Mathieu11"
-      ],
-      "evidence": "verification/existence/2026-09-29/M11",
-      "catalogue_id": "sporadic.M11"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.M12",
-      "name": "M_12: existence, order and simplicity",
-      "imports": [
-        "Atlas.Sporadic.Mathieu12"
-      ],
-      "evidence": "verification/existence/2026-09-29/M12",
-      "catalogue_id": "sporadic.M12"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.M22",
-      "name": "M_22: existence, order and simplicity",
-      "imports": [
-        "Atlas.Sporadic.Mathieu22Simple"
-      ],
-      "evidence": "verification/existence/2026-09-29/M22",
-      "catalogue_id": "sporadic.M22"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.M23",
-      "name": "M_23: existence, order and simplicity",
-      "imports": [
-        "Atlas.Sporadic.Mathieu23"
-      ],
-      "evidence": "verification/existence/2026-09-29/M23",
-      "catalogue_id": "sporadic.M23"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.M24",
-      "name": "M_24: existence, order and simplicity",
-      "imports": [
-        "Atlas.Sporadic.Mathieu24Construction"
-      ],
-      "evidence": "verification/existence/2026-09-29/M24",
-      "catalogue_id": "sporadic.M24"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.Co1",
-      "name": "Co_1: existence, order and simplicity",
-      "imports": [
-        "Atlas.Sporadic.Conway1"
-      ],
-      "evidence": "verification/existence/2026-09-29/Co1",
-      "catalogue_id": "sporadic.Co1"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.Co2",
-      "name": "Co_2: existence, order and simplicity",
-      "imports": [
-        "Atlas.Sporadic.Conway2Construction"
-      ],
-      "evidence": "verification/existence/2026-09-29/Co2",
-      "catalogue_id": "sporadic.Co2"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.Co3",
-      "name": "Co_3: existence, order and simplicity",
-      "imports": [
-        "Atlas.Sporadic.Conway3Construction"
-      ],
-      "evidence": "verification/existence/2026-09-29/Co3",
-      "catalogue_id": "sporadic.Co3"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.McL",
-      "name": "McL: existence, order and simplicity",
-      "imports": [
-        "Atlas.Sporadic.McLaughlinConstruction"
-      ],
-      "evidence": "verification/existence/2026-09-29/McL",
-      "catalogue_id": "sporadic.McL"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.HS",
-      "name": "HS: existence, order and simplicity",
-      "imports": [
-        "Atlas.Sporadic.HigmanSimsConstruction"
-      ],
-      "evidence": "verification/existence/2026-09-29/HS",
-      "catalogue_id": "sporadic.HS"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.Suz",
-      "name": "Suz: existence, order and simplicity",
-      "imports": [
-        "Atlas.Sporadic.SuzukiConstruction"
-      ],
-      "evidence": "verification/existence/2026-09-29/Suz",
-      "catalogue_id": "sporadic.Suz"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.J2",
-      "name": "J_2: existence, order and simplicity",
-      "imports": [
-        "Atlas.Sporadic.Janko2Construction"
-      ],
-      "evidence": "verification/existence/2026-09-29/J2",
-      "catalogue_id": "sporadic.J2"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.Fi22",
-      "name": "Fi_22: existence, order and simplicity",
-      "imports": [
-        "Atlas.Sporadic.Fischer22"
-      ],
-      "evidence": "verification/existence/2026-09-29/Fi22",
-      "catalogue_id": "sporadic.Fi22"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.Fi23",
-      "name": "Fi_23: existence, order and simplicity",
-      "imports": [
-        "Atlas.Sporadic.Fischer23"
-      ],
-      "evidence": "verification/existence/2026-09-29/Fi23",
-      "catalogue_id": "sporadic.Fi23"
-    },
-    {
-      "scope": "existence",
-      "declaration": "AtlasExistence.Fi24Prime",
-      "name": "Fi_24': existence, order and simplicity",
-      "imports": [
-        "Atlas.Sporadic.Fischer24Prime"
-      ],
-      "evidence": "verification/existence/2026-09-29/Fi24Prime",
-      "catalogue_id": "sporadic.Fi24Prime"
-    },
-    {
-      "scope": "discriminators",
-      "declaration": "AtlasDistinguished.typeB",
-      "name": "B_n(q): involution-class count",
-      "imports": [
-        "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
-        "Atlas.LinearGroups.Orthogonal.BInvolutionClasses"
-      ],
-      "evidence": "verification/existence/discriminators/2026-09-29/typeB",
-      "additional_statement": "For odd characteristic, the same group witness has k_2(G) = n."
-    },
-    {
-      "scope": "discriminators",
-      "declaration": "AtlasDistinguished.typeC",
-      "name": "C_n(q): involution-class count",
-      "imports": [
-        "Atlas.LinearGroups.TypeC",
-        "Atlas.LinearGroups.Symplectic.ProjectiveInvolutionCount"
-      ],
-      "evidence": "verification/existence/discriminators/2026-09-29/typeC",
-      "additional_statement": "For odd characteristic, the same group witness has k_2(G) = floor(n/2) + 1."
-    },
-    {
-      "scope": "discriminators",
       "declaration": "AtlasDistinguished.alternating8",
-      "name": "Order 20160: Sylow-2 centers of order 2",
-      "imports": [
-        "Atlas.Families.Alternating.Basic",
-        "Atlas.Comparisons.Exceptional.Order20160A8",
-        "Atlas.LinearGroups.UnitriangularFourProjective",
-        "Atlas.GroupTheory.SylowCenterInvariant"
-      ],
-      "evidence": "verification/existence/discriminators/2026-09-29/alternating8",
-      "additional_statement": "The same group witness has order 20160, and every Sylow-2 subgroup has center of order 2."
+      "scope": "discriminator",
+      "catalogue_id": null,
+      "primary_catalogue_contract": false,
+      "realization": null,
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasDistinguished-alternating8",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "2d3b1ac0a91af36b22b116bde10ee2a0b88d0dfd3b710f0d945576b9796318bb",
+        "Solution.lean": "b997a596e3f95fa76022b30180bdbbfaec41a139c900b06de3f2af320c2eefe1",
+        "comparator.json": "fb40890aad8f444f1ce2695629a6bd315d08b621ff639df1c752bcfb1747af29"
+      }
     },
     {
-      "scope": "discriminators",
       "declaration": "AtlasDistinguished.psl3Four",
-      "name": "Order 20160: Sylow-2 centers of order 4",
-      "imports": [
-        "Atlas.LinearGroups.TypeA",
-        "Atlas.LinearGroups.UnitriangularThreeProjective",
-        "Atlas.GroupTheory.SylowCenterInvariant"
-      ],
-      "evidence": "verification/existence/discriminators/2026-09-29/psl3Four",
-      "additional_statement": "The same group witness has order 20160, and every Sylow-2 subgroup has center of order 4."
+      "scope": "discriminator",
+      "catalogue_id": null,
+      "primary_catalogue_contract": false,
+      "realization": null,
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasDistinguished-psl3Four",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "e57e3d1c8505e652b22d23d24e5a537008b08043a9b5ddcb988252ac46389190",
+        "Solution.lean": "d34dbe5f8a01ae3e2125ad24abf7beedf0cad18395aed77f8c0c978cd52ba67c",
+        "comparator.json": "99377283e5d23fc9f67dbac2d2dfb45cf99c454acb20f2a993191a22d8354d6c"
+      }
+    },
+    {
+      "declaration": "AtlasDistinguished.typeB",
+      "scope": "discriminator",
+      "catalogue_id": null,
+      "primary_catalogue_contract": false,
+      "realization": null,
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasDistinguished-typeB",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "0204f76374fca3d4ed1fae2b3c53eceb312dedd807c5dcbc39d38db42f716b67",
+        "Solution.lean": "0faf61f8930cbb81356fbd6818efee83e4d8a6cfad06c5b8e91b286c4113aed7",
+        "comparator.json": "c2bea6427d0d4493ac1a23f9896ea0f6c8ab2ce7c1ba791ba020d0181f494722"
+      }
+    },
+    {
+      "declaration": "AtlasDistinguished.typeC",
+      "scope": "discriminator",
+      "catalogue_id": null,
+      "primary_catalogue_contract": false,
+      "realization": null,
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasDistinguished-typeC",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "98c676c68a0b9325ba6b02ad82fbeeaefe0569fadee6629fba3ec4a557d6c780",
+        "Solution.lean": "9a08227f122185b7bfc42ff7ed0c90224b616fe4bcb29de745d242a27cb58f01",
+        "comparator.json": "3393cc0b2c47966af7f1bff4f464df124f6008c86f4a13ad6ef1c76d7be7a25b"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.Co1",
+      "scope": "existence",
+      "catalogue_id": "sporadic.Co1",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-Co1",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "75dd702c6a9e78b1ca0c22bdad13c4bbb4e3ea3b9c2cf6afaf23f0aa03b907cf",
+        "Solution.lean": "65a161d4f804d15e40d1c5955a91afc0aec82b0110ead71c3f80522b165a74e4",
+        "comparator.json": "c0f05ef50a643ea0bcc6ade41a597a8b579f67e0f9a4d1ac2b17b68a03767ae6"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.Co2",
+      "scope": "existence",
+      "catalogue_id": "sporadic.Co2",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-Co2",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "fb4f8701a8bbeed3cf36e0f668eb479c9a5350ee87580291e4059c986070742c",
+        "Solution.lean": "818bbe6c04ad6567457732b0e1ed9ded7551592bae4855a223c49147b8fb6ea3",
+        "comparator.json": "f66a682d2390c58415be15cd54c82ff3245757fcfb48fb89be8cc53020e84046"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.Co3",
+      "scope": "existence",
+      "catalogue_id": "sporadic.Co3",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-Co3",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "8743ad2e8d46924643089a50745b48beae3589ac2f9fd03dc65f7393b05378e0",
+        "Solution.lean": "c28c9f6d92e6777b5612bf2a4fdada423b86876457400406f766e5a396a17dbc",
+        "comparator.json": "eb812e4c4b1a5dcead16ce1432c0a906c42ad7a7408c3b15704e4b045a1c8cae"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.F4",
+      "scope": "existence",
+      "catalogue_id": "family.F4",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-F4",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "a814850c83912e55a43b919bd87d5be43d891b387af9cf9f0bd3a82d76383e4e",
+        "Solution.lean": "3c8ec51948cd718276ca16535a3acf4ead696b2862b9fd2c2d46e08bb5d2177a",
+        "comparator.json": "a2e58db9f60bd5a1b23216ccd369be189a3120eef13365a683d3afdcf667c27e"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.Fi22",
+      "scope": "existence",
+      "catalogue_id": "sporadic.Fi22",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-Fi22",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "fb4b529173779c8826ac3e229f4de4fc9695c51ffe124f8d1977a562b5be8831",
+        "Solution.lean": "8e560b214024175f86a53ad3bc49a922d5fceec6308c40f9a408d0862d184792",
+        "comparator.json": "b4349d80c13f25432f211899a49221e6b4436f9f4924c239e10978e918332ea8"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.Fi23",
+      "scope": "existence",
+      "catalogue_id": "sporadic.Fi23",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-Fi23",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "a54b758f5ecc580af0e2003eed705222e52721c2d8922b5f2c0b5956eefdcf06",
+        "Solution.lean": "3dbf274dd3a584cad653c133a0808a0b4c40980f5584cf310e7dc5686662fde3",
+        "comparator.json": "65cbcdfdf540c18b91cf8751eff1774716b87825493739ca1047048eeadcae0c"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.Fi24Prime",
+      "scope": "existence",
+      "catalogue_id": "sporadic.Fi24Prime",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-Fi24Prime",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "615e64baf6764d42edf6186abee9448b34d8a6d1733f5aab779cb1096846a442",
+        "Solution.lean": "36def48702e987b61ec14bfaedc7ea2dbc210c1f4cdb452a7c9a5810866733c0",
+        "comparator.json": "5d40e6d875ef45159c08eaa11e8f62311e8cda0d75b41b48ce10da7caf884946"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.G2",
+      "scope": "existence",
+      "catalogue_id": "family.G2",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-G2",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "071e6ffca61336074756c923f54a477e49ff9f32225795efbd66804ef3b2b837",
+        "Solution.lean": "a48d25e254a5e478d0d0255469db7a5cd0a168882b5a0e557b75dca716efe00d",
+        "comparator.json": "57079d93f9126ee885294f5cd101dc15fc9d580af72ab78edb53b849d0c03a7f"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.HS",
+      "scope": "existence",
+      "catalogue_id": "sporadic.HS",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-HS",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "6f75c852154a41fbf0ade7918434c500788c2047bde794ae1c5d3c7f6e6ba719",
+        "Solution.lean": "0a4536208cf71b86c560b1080454ff4364e8bd779f2ff1549ff73d29b2cadb3f",
+        "comparator.json": "0e87626b0cf35e79dc1b7f86f16254f417b858863bd3fc7a9f3a4b3f84cac754"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.J2",
+      "scope": "existence",
+      "catalogue_id": "sporadic.J2",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-J2",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "b83f24d3936b145c25e5b2501d70bae8048ba7c511e02d67bb7c7ef1c8d6879f",
+        "Solution.lean": "ba6602efbeaa0fe9bbe08fed352a4c8c12fef73b55baaa3c6421253802cbc3dd",
+        "comparator.json": "5dc06fb9abf28dcc79fb276145a6742bc72fce430c0978705ce55a6dcf0bbb5a"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.M11",
+      "scope": "existence",
+      "catalogue_id": "sporadic.M11",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-M11",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "a7b8704194fcba904a70eceac3ece4dd8d09e44daf35a9cb78a0d66c16d9534b",
+        "Solution.lean": "c6a6be88565117723d8ffc9782bd568a832d1efe71cb5f72ba3881f399192929",
+        "comparator.json": "5a9b5f3476656685b61db54b60ffc1516c8aa5c10705ba72088f11cf11c01581"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.M12",
+      "scope": "existence",
+      "catalogue_id": "sporadic.M12",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-M12",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "92709453fb94f313b4e28b65f1c2b0fbe4b403de6d4e8079cb23a5ba69d747ee",
+        "Solution.lean": "c6f5177d8fced75b57aed86f105bae94aaea5a24a15e5160acf1e5375f03d5a1",
+        "comparator.json": "43df868c8806bfd65a424837704ea144e3985ed217b607686882cde0345ce9c7"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.M22",
+      "scope": "existence",
+      "catalogue_id": "sporadic.M22",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-M22",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "cc5c0372628a4239446ab5707fd35a9f88348b804de9cdfb00152cd9b18e283e",
+        "Solution.lean": "f61d05a321a717f1f305b9c080fa71dc49ad1fbee121bdc9451274c249d8552c",
+        "comparator.json": "356dd4044a752f410b3d72fdde26371591cbbc436f9da1a0be02ae3f0df0a783"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.M23",
+      "scope": "existence",
+      "catalogue_id": "sporadic.M23",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-M23",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "ab37745ce0112b2f1431e5d1d8582005146b250f4ddc88ec49339060c1193819",
+        "Solution.lean": "14ee13f4a19ba060cc0f4e50f2212b6ca617a557e6fe744e9d1a70a7e1100cbd",
+        "comparator.json": "1328179cfa3c2c1e3013a1e7667f3a7443ae97323ccc2e428b1dc49ab3993bba"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.M24",
+      "scope": "existence",
+      "catalogue_id": "sporadic.M24",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-M24",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "bc97cca56a09c02e37dad07ea02d9306f9dd892fe888afc72d1ee74894db8083",
+        "Solution.lean": "4af5999e2eb69012ec9be218fb362a6c6a30146503176179431cb7058ffa2cc6",
+        "comparator.json": "6da9aef2814cfd8a149de74c7f2b1533bc682e5c6a7d3847b7a7ff7df893542a"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.McL",
+      "scope": "existence",
+      "catalogue_id": "sporadic.McL",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-McL",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "96b30a229de4ef8ec146b66031916c52e18c7ebd46c44d6060926269353da051",
+        "Solution.lean": "c7652bc3dec7157624cbbebe3478691b15736d6583d2450aa789ce260d647df4",
+        "comparator.json": "3635871b38114664da90162caa04fa40dc0d39acef2d5cc959996e4b028d373c"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.ReeG2",
+      "scope": "existence",
+      "catalogue_id": "family.ReeG2",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-ReeG2",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "6be5c00362322e43b068082501906e545bd45669c52a63b6140bb0d7e088934d",
+        "Solution.lean": "df29174870cb10a5b835a3c1a93b93139d9a3c6e43b5ee517e0a2357b063a20d",
+        "comparator.json": "279187947a23c2cc91971bfa1ce07ad2b64001dab7f2900c61b7f1aa9b49c616"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.Ru",
+      "scope": "existence",
+      "catalogue_id": "sporadic.Ru",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-Ru",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "b004cfc1e240d4ef7dcd9799046210dd05fb8f8f0ac58526179228f755933b77",
+        "Solution.lean": "1ee7fe41dee24a00619a3f51d2d6fc523eab848ea6446ca4136767f74d8fcea1",
+        "comparator.json": "35f2aa8eb4bcdfa2200e3b574d6f0d8381ed61252f01d1d1d166babe2ee7180f"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.Suz",
+      "scope": "existence",
+      "catalogue_id": "sporadic.Suz",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-Suz",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "5d5a1fbb90417078dfbd594999b680d8a00ae2b2d9a728ff7dbf898413fe04a1",
+        "Solution.lean": "b401a460c6e264063c3d66d02fadf2d995293ca1cf0fde5846120d0476d0a750",
+        "comparator.json": "4b48b4fd32bc9e7fda7de1fc7269b42b69a8c35a6a5fc3413d786fe291f89555"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.SuzukiFamily",
+      "scope": "existence",
+      "catalogue_id": "family.Suzuki",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-SuzukiFamily",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "72c37205673d5e43e90d1f8ea9376c793f9575dfad0b2e6e8e750f8f04049f79",
+        "Solution.lean": "51b363c7576f9322bd64564e38ff5d40e91c89cb0bad5ae476d866c28bddfc77",
+        "comparator.json": "8b751bfb72f0bb0d8bb8f924422fe7b08542a12cbf5c33c3bf1f1d3820e6cfe9"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.Tits",
+      "scope": "existence",
+      "catalogue_id": "exceptional.Tits",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-Tits",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "6a0b7a044b957a1a10306152e88e2c6d3f7102a1d8eb219bbf0194ee756a326f",
+        "Solution.lean": "fe10eb00f0a1cf3d0698d07b0874d6b93be840c29bbdadb13be00420b289e5be",
+        "comparator.json": "7c6a470c7688b9631998a11b74a495a5f7f0ba5dd1ec2b1ca18d97ad0e3adbf8"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.Triality",
+      "scope": "existence",
+      "catalogue_id": "family.3D4",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-Triality",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "021b123e892ef26fadc08a5918e1ce66beb372bf08ffa0c0f8c964d8f7aa8b8d",
+        "Solution.lean": "8fc47aea055fe425c747ad902d84204d3ed3073e70085600d37b8fd023707c0d",
+        "comparator.json": "4f9f1d9a09bcb54d36d0eced114644454cfb2a032e6c368e9051d22cf6b585e8"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.alternating",
+      "scope": "existence",
+      "catalogue_id": "family.Alternating",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-alternating",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "e730dababee9b5d6ca1383218c9eda54f43f7e8eff553c914dafa6f8c4c56b7d",
+        "Solution.lean": "583c2687dc7a222b051b4dc279d664df30df618a4a6de2979af4a821f08fc436",
+        "comparator.json": "2b6a323da4c1a80ac7b0b663b6575b69dce419f9b625a45454586f4093218a18"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.cyclic",
+      "scope": "existence",
+      "catalogue_id": "family.Cyclic",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-cyclic",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "f82cdc664c28a0d22c06432471316242140b3c0a366116d52a3f19af9fc3af4d",
+        "Solution.lean": "85562dca95c377f2a1dbb44539f8ac88f68af5673289c0bf137909e98a3d851c",
+        "comparator.json": "911a04c6d8014872d53e66eb398c2ed5bfa6baeb8e07d612875683a8b711aa1a"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.type2A",
+      "scope": "existence",
+      "catalogue_id": "family.PSU",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-type2A",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "0401d06f107393044e7836adc116378099745f4c3af04667c73d4d3f6a9fea7a",
+        "Solution.lean": "58f23e3f749de8d72b0764c0d0b7fdf7a0d357620c919a0fbe6c11e56e53c609",
+        "comparator.json": "97b117b9815eb7e5ac997bc1502a5f235d4fed815b7bab6ddd3f3e0026884ef8"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.type2D",
+      "scope": "existence",
+      "catalogue_id": "family.2D",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-type2D",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "5bb14f8033a32d67629cbd23f44cb3e2205306575caa0df263769a7e981339a6",
+        "Solution.lean": "0da9cf2f278c5158e284c1df210de345f7554650e88a738823f951d8f9c94490",
+        "comparator.json": "36296ed0874b18f59cd1ff89fe4e9d7f2020e46064449c69aa95ca6e15107246"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.typeA",
+      "scope": "existence",
+      "catalogue_id": "family.PSL",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-typeA",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "daa886e54d5f9813643cca7718b6b0ee1d0dd1c32cfed9215858f7c29fad9b28",
+        "Solution.lean": "e05b926423a8d8a929944ab5df44352d9c4af45678d588f289f90159f6c5a215",
+        "comparator.json": "d4fcb27048bf982f14e98c00d0b7df9b719402a1c931764d155e9070321167b9"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.typeB",
+      "scope": "existence",
+      "catalogue_id": "family.B",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-typeB",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "93f85574aa9855217604084632bb3f57c178e53e7df8504c4fa437a588f09b4f",
+        "Solution.lean": "2cc1b28d112c364f58fb2ce3a56578474178bd3c84bc2495a69dd364e52a4014",
+        "comparator.json": "9f389161154c58a1424b2010e27ae7076f82c30e7ee76d49186abb89662f976d"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.typeC",
+      "scope": "existence",
+      "catalogue_id": "family.C",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-typeC",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "a7c939fcc633bd2f8a033cfef36eb8cc1cd200022da076cccbad5797291feaf6",
+        "Solution.lean": "d5a9b8343b9d6b7695ed4268c9224a17ac8a694635cf30746186c5e0d56ce725",
+        "comparator.json": "79f98945620d99862271553f53e63cac551df68087503be0942b4cbc7be47ee4"
+      }
+    },
+    {
+      "declaration": "AtlasExistence.typeD",
+      "scope": "existence",
+      "catalogue_id": "family.D",
+      "primary_catalogue_contract": true,
+      "realization": "catalogue-default",
+      "reference_boundary": "Mathlib-only imports; reviewed existence/discriminator contract",
+      "evidence": "verification/existence/2026-10-25-draft/AtlasExistence-typeD",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "93b2ac23b07257695f21a430946aae03fea37abdc633228b763715fef494aaf1",
+        "Solution.lean": "8688be713f3fc442fc212e929ed19d9b498bc2523fb4fdae1eb2135de081c5ef",
+        "comparator.json": "3125784865ff297e545a8cfbb416ea2557bba3e7a4ca20a448178fe51df2da7c"
+      }
+    },
+    {
+      "declaration": "AtlasExistenceChevalley.A",
+      "scope": "existence",
+      "catalogue_id": "family.PSL",
+      "primary_catalogue_contract": false,
+      "realization": "chevalley",
+      "reference_boundary": "Mathlib-only imports; explicit Chevalley-model witness in solution",
+      "evidence": "verification/existence/2026-10-25-draft/Chevalley-A",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "9aa0a26fe50bc17c1025d6ffcafadfa438154e906e10f4776ef7c7138a8afd3c",
+        "Solution.lean": "14da1c3fb09aacfcc2446bc9fa53d2a4bac0d8df302c4d34b01f651f739f6a15",
+        "comparator.json": "3feebbc53bd6a1c8d3b6137684cc6374d45d1c8b1b7c639550aa74b5e7e0b4ae"
+      }
+    },
+    {
+      "declaration": "AtlasExistenceChevalley.B",
+      "scope": "existence",
+      "catalogue_id": "family.B",
+      "primary_catalogue_contract": false,
+      "realization": "chevalley",
+      "reference_boundary": "Mathlib-only imports; explicit Chevalley-model witness in solution",
+      "evidence": "verification/existence/2026-10-25-draft/Chevalley-B",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "8508dbef4ab34ca736312d122fa705305c01844fc15891f5ddd96591aadd47d4",
+        "Solution.lean": "a7bd7cf4c41e07bf724a0d95759c8aefdca11f6647f8838799731f9c18b1425a",
+        "comparator.json": "7782894e98baa6b37d7d4a56e2461541d67352b2c5dd67a9d00f0816cde6841a"
+      }
+    },
+    {
+      "declaration": "AtlasExistenceChevalley.C",
+      "scope": "existence",
+      "catalogue_id": "family.C",
+      "primary_catalogue_contract": false,
+      "realization": "chevalley",
+      "reference_boundary": "Mathlib-only imports; explicit Chevalley-model witness in solution",
+      "evidence": "verification/existence/2026-10-25-draft/Chevalley-C",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "136e84bc299188cd1904503537dcca0f73fe16ff5812c36bdb5c151a8d35cad0",
+        "Solution.lean": "d799856d26e090071bfdd8dcd47d39de37b75949fd16e4ee1d15e12ce5eca2aa",
+        "comparator.json": "324ef2d035631321bd6ec543ed08924168c77a3ce5043dfee7f2d48e49623d9f"
+      }
+    },
+    {
+      "declaration": "AtlasExistenceChevalley.D",
+      "scope": "existence",
+      "catalogue_id": "family.D",
+      "primary_catalogue_contract": false,
+      "realization": "chevalley",
+      "reference_boundary": "Mathlib-only imports; explicit Chevalley-model witness in solution",
+      "evidence": "verification/existence/2026-10-25-draft/Chevalley-D",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "e38e09cafd461057d5912f0f1b43683d921a110a126c4cdba8802348b2370f44",
+        "Solution.lean": "0c9f12cd5df04666a080ef3a2252958e3a42e03977ff06bb29bb0222094244c2",
+        "comparator.json": "5c850dfa031d28a5cca01fa9557743abc9f559aa0bc13c0fab83ca6f08f83468"
+      }
+    },
+    {
+      "declaration": "AtlasExistenceChevalley.E6",
+      "scope": "existence",
+      "catalogue_id": "family.E6",
+      "primary_catalogue_contract": true,
+      "realization": "chevalley",
+      "reference_boundary": "Mathlib-only imports; explicit Chevalley-model witness in solution",
+      "evidence": "verification/existence/2026-10-25-draft/Chevalley-E6",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "ab02309789b4ab6f53b0a1db51e4ec5114dd8dbf7b958a2d50de85fbaf97c48d",
+        "Solution.lean": "7784d54c446464706e5bbd6078c093ab099d63e1b93f295a8ca31ee81660754b",
+        "comparator.json": "4f06a3612a6f2365bc8a5ecef8689f3db8aba73cdc5713c9e8923df72ef14359"
+      }
+    },
+    {
+      "declaration": "AtlasExistenceChevalley.E7",
+      "scope": "existence",
+      "catalogue_id": "family.E7",
+      "primary_catalogue_contract": true,
+      "realization": "chevalley",
+      "reference_boundary": "Mathlib-only imports; explicit Chevalley-model witness in solution",
+      "evidence": "verification/existence/2026-10-25-draft/Chevalley-E7",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "c08d98738555e468f7e6fb18bab16f719234068e2cdf5be3c09cae28d9e50b7b",
+        "Solution.lean": "39584aeb84cc4d97ca36d999cb171a96bc77263cd6239c083f7ba96145885c64",
+        "comparator.json": "364f64be9a27560743472c99de6d92b62b94f9c2c9cd44b372389edf24a63b82"
+      }
+    },
+    {
+      "declaration": "AtlasExistenceChevalley.E8",
+      "scope": "existence",
+      "catalogue_id": "family.E8",
+      "primary_catalogue_contract": true,
+      "realization": "chevalley",
+      "reference_boundary": "Mathlib-only imports; explicit Chevalley-model witness in solution",
+      "evidence": "verification/existence/2026-10-25-draft/Chevalley-E8",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "407214d7f8874ea2c225f6cc39aeaeacbb8d5eb0233b157176b323721f3c0b84",
+        "Solution.lean": "6e8e671b080e9d7565855138eed58830b0ab8871c7293a95e2a196d0705db383",
+        "comparator.json": "c1145be6ef2bb185389212761ee1a9abd9233ae03873e759cdb756d1a31c465b"
+      }
+    },
+    {
+      "declaration": "AtlasExistenceChevalley.F4",
+      "scope": "existence",
+      "catalogue_id": "family.F4",
+      "primary_catalogue_contract": false,
+      "realization": "chevalley",
+      "reference_boundary": "Mathlib-only imports; explicit Chevalley-model witness in solution",
+      "evidence": "verification/existence/2026-10-25-draft/Chevalley-F4",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "cb941c90a95dcf9343934321998b18d69658e587a6543f9f873d9ffe903b326f",
+        "Solution.lean": "d7c1340543e1ac2d6f7bbebcb4667cf95cfcce5edeae720151ef61c0c09da60f",
+        "comparator.json": "440924875c491a96211eb050dcad393a848990175ae3f21b774dd04c9a1d2bc0"
+      }
+    },
+    {
+      "declaration": "AtlasExistenceChevalley.G2",
+      "scope": "existence",
+      "catalogue_id": "family.G2",
+      "primary_catalogue_contract": false,
+      "realization": "chevalley",
+      "reference_boundary": "Mathlib-only imports; explicit Chevalley-model witness in solution",
+      "evidence": "verification/existence/2026-10-25-draft/Chevalley-G2",
+      "reference_file": "Challenge.lean",
+      "solution_file": "Solution.lean",
+      "configuration": "comparator.json",
+      "reviewed_inputs": {
+        "Challenge.lean": "1ed46a697039f9a60331a935f31b63d89c390acadfae5885686c12b4a0c710e6",
+        "Solution.lean": "58e740447d017b7faae1b8d10f1faf2144d9ae3265e0e52a795b796e73ce5766",
+        "comparator.json": "cffd54a88df8eca4ddd3f828929c235700abd151e54989f2e933a5549fbb5f5d"
+      }
     }
   ]
 }

@@ -1,0 +1,305 @@
+{
+  "id": "family.D",
+  "label": "D_n(q) / PΩ+(2n,q)",
+  "kind": "family",
+  "audit_entry": "D",
+  "proof_status": "construction_complete",
+  "construction": "Actual scalar quotient of the Siegel-generated subgroup of the split quadratic form Q(x,y)=sum x_i*y_i; identified with the determinant/spinor kernel in odd characteristic and Dickson kernel in characteristic two",
+  "parameters": "n is Lie rank, natural dimension 2*n; F arbitrary finite field, q=|F|; n>=4, every characteristic",
+  "exceptions": "No exceptions for n>=4; lower-rank comparisons are separate obligations",
+  "recognition": "No general recognition theorem or classification of family coincidences is claimed",
+  "attribution": "ATLAS quadratic-form, Siegel, Wall/Dickson and singular-line constructions; pinned mathlib finite-field and group infrastructure",
+  "owner": "Gerald Höhn",
+  "upstream_status": "No upstream acceptance claimed",
+  "roles": {
+    "model": {
+      "declaration": "Atlas.Orthogonal.DPlus",
+      "source": "Atlas/LinearGroups/Orthogonal/DFamily.lean"
+    },
+    "finite": {
+      "declaration": "Atlas.Orthogonal.DPlus_finite",
+      "source": "Atlas/LinearGroups/Orthogonal/DFamily.lean"
+    },
+    "order": {
+      "declaration": "Atlas.Orthogonal.DPlus_card",
+      "source": "Atlas/LinearGroups/Orthogonal/DFamily.lean",
+      "formula": "q^(n*(n-1)) * (q^n-1) * product_(i=1)^(n-1) (q^(2*i)-1) / gcd(4,q^n-1)"
+    },
+    "simple": {
+      "declaration": "Atlas.Orthogonal.DPlus_simple",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean"
+    },
+    "nonabelian": {
+      "declaration": "Atlas.Orthogonal.DPlus_noncommutative",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean"
+    }
+  },
+  "properties": [
+    {
+      "declaration": "Atlas.Orthogonal.Checks.d4_four_order",
+      "source": "Atlas/LinearGroups/Orthogonal/DOrderChecks.lean",
+      "description": "d4 four order"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Checks.d4_four_simple",
+      "source": "Atlas/LinearGroups/Orthogonal/DSimplicityChecks.lean",
+      "description": "d4 four simple"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Checks.d4_three_order",
+      "source": "Atlas/LinearGroups/Orthogonal/DOrderChecks.lean",
+      "description": "d4 three order"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Checks.d4_three_simple",
+      "source": "Atlas/LinearGroups/Orthogonal/DSimplicityChecks.lean",
+      "description": "d4 three simple"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_card_mul_denominator",
+      "source": "Atlas/LinearGroups/Orthogonal/DFamily.lean",
+      "description": "DPlus card mul denominator"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_center_order",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus center order"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_center_order_exact",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus center order exact"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_elementary_eq_derived",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus elementary eq derived"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_elementary_index",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus elementary index"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_elementary_order",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus elementary order"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_elementary_order_exact",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus elementary order exact"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_elementary_perfect",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus elementary perfect"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_equiv_of_card_eq",
+      "source": "Atlas/LinearGroups/Orthogonal/DFamilyTransport.lean",
+      "description": "DPlus equiv of card eq"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_even_intrinsic",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus even intrinsic"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_faithful",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus faithful"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_fieldEquiv_projection",
+      "source": "Atlas/LinearGroups/Orthogonal/DFamilyTransport.lean",
+      "description": "DPlus fieldEquiv projection"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_fieldEquiv_refl",
+      "source": "Atlas/LinearGroups/Orthogonal/DFamilyTransport.lean",
+      "description": "DPlus fieldEquiv refl"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_fieldEquiv_symm",
+      "source": "Atlas/LinearGroups/Orthogonal/DFamilyTransport.lean",
+      "description": "DPlus fieldEquiv symm"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_fieldEquiv_trans",
+      "source": "Atlas/LinearGroups/Orthogonal/DFamilyTransport.lean",
+      "description": "DPlus fieldEquiv trans"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_full_order",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus full order"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_odd_intrinsic",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus odd intrinsic"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_order_denominator_positive",
+      "source": "Atlas/LinearGroups/Orthogonal/DFamily.lean",
+      "description": "DPlus order denominator positive"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_order_divisibility",
+      "source": "Atlas/LinearGroups/Orthogonal/DFamily.lean",
+      "description": "DPlus order divisibility"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_order_numerator_positive",
+      "source": "Atlas/LinearGroups/Orthogonal/DFamily.lean",
+      "description": "DPlus order numerator positive"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_perfect",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus perfect"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_primitive",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus primitive"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_roots_normal_generate",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus roots normal generate"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_scalar_eq_center",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus scalar eq center"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_scalar_order_exact",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus scalar order exact"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_simple_iff",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus simple iff"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_transitive",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "DPlus transitive"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryD_all_char",
+      "source": "Atlas/LinearGroups/Orthogonal/DStructureAllChar.lean",
+      "description": "card elementaryD all char"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryD_all_char_mul_gcd_two",
+      "source": "Atlas/LinearGroups/Orthogonal/DStructureAllChar.lean",
+      "description": "card elementaryD all char mul gcd two"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryD_center_all_char",
+      "source": "Atlas/LinearGroups/Orthogonal/DStructureAllChar.lean",
+      "description": "card elementaryD center all char"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryD_center_all_char_mul_gcd_two",
+      "source": "Atlas/LinearGroups/Orthogonal/DStructureAllChar.lean",
+      "description": "card elementaryD center all char mul gcd two"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryD_scalar_all_char_mul_gcd_two",
+      "source": "Atlas/LinearGroups/Orthogonal/DStructureAllChar.lean",
+      "description": "card elementaryD scalar all char mul gcd two"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.dicksonValue_fieldEquivFullD",
+      "source": "Atlas/LinearGroups/Orthogonal/DicksonValueFieldTransport.lean",
+      "description": "dicksonValue fieldEquivFullD"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.dicksonValue_semilinear_transport",
+      "source": "Atlas/LinearGroups/Orthogonal/DicksonValueFieldTransport.lean",
+      "description": "dicksonValue semilinear transport"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryD_index_all_char",
+      "source": "Atlas/LinearGroups/Orthogonal/DStructureAllChar.lean",
+      "description": "elementaryD index all char"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryD_scalar_eq_center",
+      "source": "Atlas/LinearGroups/Orthogonal/DStructureAllChar.lean",
+      "description": "elementaryD scalar eq center"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fieldEquivDicksonKernelD_elementary",
+      "source": "Atlas/LinearGroups/Orthogonal/DicksonFieldTransport.lean",
+      "description": "fieldEquivDicksonKernelD elementary"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fieldEquivDicksonKernelD_full",
+      "source": "Atlas/LinearGroups/Orthogonal/DicksonFieldTransport.lean",
+      "description": "fieldEquivDicksonKernelD full"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fieldEquivDicksonKernelD_projective",
+      "source": "Atlas/LinearGroups/Orthogonal/DicksonFieldTransport.lean",
+      "description": "fieldEquivDicksonKernelD projective"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fieldEquivElementaryD_refl",
+      "source": "Atlas/LinearGroups/Orthogonal/DFamilyTransport.lean",
+      "description": "fieldEquivElementaryD refl"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fieldEquivElementaryD_trans",
+      "source": "Atlas/LinearGroups/Orthogonal/DFamilyTransport.lean",
+      "description": "fieldEquivElementaryD trans"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fullDicksonD_field_transport",
+      "source": "Atlas/LinearGroups/Orthogonal/DicksonValueFieldTransport.lean",
+      "description": "fullDicksonD field transport"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.orthogonal_gcd_two_even",
+      "source": "Atlas/LinearGroups/Orthogonal/DStructureAllChar.lean",
+      "description": "orthogonal gcd two even"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.orthogonal_gcd_two_odd",
+      "source": "Atlas/LinearGroups/Orthogonal/DStructureAllChar.lean",
+      "description": "orthogonal gcd two odd"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.residual_finrank_fieldEquivFullD",
+      "source": "Atlas/LinearGroups/Orthogonal/DicksonValueFieldTransport.lean",
+      "description": "residual finrank fieldEquivFullD"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.residual_finrank_semilinear_transport",
+      "source": "Atlas/LinearGroups/Orthogonal/DicksonValueFieldTransport.lean",
+      "description": "residual finrank semilinear transport"
+    },
+    {
+      "declaration": "Atlas.exists_typeD",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "exists typeD"
+    },
+    {
+      "declaration": "Atlas.typeD_construction",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "typeD construction"
+    },
+    {
+      "declaration": "Atlas.typeD_prime_power",
+      "source": "Atlas/LinearGroups/Orthogonal/DConstruction.lean",
+      "description": "typeD prime power"
+    }
+  ],
+  "evidence": "orthogonal-d-0cf54c3"
+}

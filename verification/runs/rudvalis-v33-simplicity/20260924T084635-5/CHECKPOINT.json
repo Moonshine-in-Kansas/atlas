@@ -1,0 +1,582 @@
+{
+  "schema_version": 1,
+  "id": "rudvalis-v33-simplicity",
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas.GroupTheory.InvariantOrbitDivisibility",
+    "Atlas.GroupTheory.OneSuborbitPrimitivity",
+    "Atlas.GroupTheory.PerfectSimpleQuotient",
+    "Atlas.GroupTheory.PrimitivePerfectFrameSimplicity",
+    "Atlas.Rudvalis.FourActiveLabelAction",
+    "Atlas.Rudvalis.FourSuborbitDivisibility",
+    "Atlas.Rudvalis.FrameLinearSimplicity",
+    "Atlas.Rudvalis.FrameTranslationCommutators",
+    "Atlas.Rudvalis.NonorthogonalSuborbits",
+    "Atlas.Rudvalis.ProjectiveFrameEmbedding",
+    "Atlas.Rudvalis.ProjectiveFrameFiltration",
+    "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+    "Atlas.Rudvalis.ProjectivePrimitivity",
+    "Atlas.Rudvalis.ProjectiveSignFiltration",
+    "Atlas.Rudvalis.ProjectiveSimplicity",
+    "Atlas.Rudvalis.ReferenceLinearLifts",
+    "Atlas.Sporadic.Rudvalis"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.GroupTheory.invariant_card_dvd_of_orbits",
+      "module": "Atlas.GroupTheory.InvariantOrbitDivisibility",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.normal_eq_top_of_odd_index_involution",
+      "module": "Atlas.GroupTheory.PrimitivePerfectFrameSimplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.normal_quotient_card_dvd_stabilizer",
+      "module": "Atlas.GroupTheory.PrimitivePerfectFrameSimplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.perfect_hom_trivial_of_simple_quotient",
+      "module": "Atlas.GroupTheory.PerfectSimpleQuotient",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.primitive_of_one_suborbit_divisible_rest",
+      "module": "Atlas.GroupTheory.OneSuborbitPrimitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.simple_of_primitive_perfect_frame",
+      "module": "Atlas.GroupTheory.PrimitivePerfectFrameSimplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.stabilizer_quotient_surjective_of_normal_transitive",
+      "module": "Atlas.GroupTheory.PrimitivePerfectFrameSimplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.ActiveFourLabels",
+      "module": "Atlas.Rudvalis.FourSuborbitDivisibility",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.ProjectiveTranslationModule",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.activeFormTransvection",
+      "module": "Atlas.Rudvalis.ReferenceLinearLifts",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.activeFormTransvection_dual",
+      "module": "Atlas.Rudvalis.ReferenceLinearLifts",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.activeFormTransvection_fixed",
+      "module": "Atlas.Rudvalis.ReferenceLinearLifts",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.activeFourLabels_card",
+      "module": "Atlas.Rudvalis.FourSuborbitDivisibility",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.binaryLinearGroup_simple",
+      "module": "Atlas.Rudvalis.FrameLinearSimplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.binaryLinearGroup_simple_order",
+      "module": "Atlas.Rudvalis.FrameLinearSimplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.binaryPSLLinearEquiv",
+      "module": "Atlas.Rudvalis.FrameLinearSimplicity",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.binarySLLinearEquiv",
+      "module": "Atlas.Rudvalis.FrameLinearSimplicity",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.binarySLToLinear_injective",
+      "module": "Atlas.Rudvalis.FrameLinearSimplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.binarySL_center_eq_bot",
+      "module": "Atlas.Rudvalis.FrameLinearSimplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.codeGroup_commutator_scalars_eq_top",
+      "module": "Atlas.Rudvalis.FrameTranslationCommutators",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.codeGroup_eq_top_of_commutator_and_I",
+      "module": "Atlas.Rudvalis.FrameTranslationCommutators",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.codeI_blockLinear",
+      "module": "Atlas.Rudvalis.ProjectiveFrameFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.codeI_translation_identity",
+      "module": "Atlas.Rudvalis.FrameTranslationCommutators",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.codeProjectiveHom",
+      "module": "Atlas.Rudvalis.ProjectiveFrameEmbedding",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.codeProjectiveHom_kernel",
+      "module": "Atlas.Rudvalis.ProjectiveFrameEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.codeReferenceStabilizer_active_forms",
+      "module": "Atlas.Rudvalis.FourActiveLabelAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.codeReferenceStabilizer_linear_lift",
+      "module": "Atlas.Rudvalis.ReferenceLinearLifts",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.codeReference_nonorthogonal_orbit_divisible",
+      "module": "Atlas.Rudvalis.NonorthogonalSuborbits",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.codeReference_orbit_nonorthogonal",
+      "module": "Atlas.Rudvalis.FourSuborbitDivisibility",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.codeRowMatrixHom_eq_one_iff",
+      "module": "Atlas.Rudvalis.ProjectiveSignFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.coordinateCross_stabilizer_linear_lift",
+      "module": "Atlas.Rudvalis.ReferenceLinearLifts",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.fourCrossHasLabel_active",
+      "module": "Atlas.Rudvalis.FourActiveLabelAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.fourCrossHasLabel_transport",
+      "module": "Atlas.Rudvalis.FourActiveLabelAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.fourCrossHasLabel_unique",
+      "module": "Atlas.Rudvalis.FourActiveLabelAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.fourCross_rowReference_orbit_divisible",
+      "module": "Atlas.Rudvalis.FourSuborbitDivisibility",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.fourReferenceOrbitLabelEquiv",
+      "module": "Atlas.Rudvalis.FourSuborbitDivisibility",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.fourReferenceOrbitLabelFibre",
+      "module": "Atlas.Rudvalis.FourSuborbitDivisibility",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.fourReferenceOrbitLabelFibre_divisible",
+      "module": "Atlas.Rudvalis.FourSuborbitDivisibility",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.four_reference_orbit_divisible",
+      "module": "Atlas.Rudvalis.FourSuborbitDivisibility",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.four_reference_orbit_range",
+      "module": "Atlas.Rudvalis.FourSuborbitDivisibility",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.full_gaussian_center_eq_scalars",
+      "module": "Atlas.Rudvalis.ProjectiveSimplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.gaussianUnits_le_codeRowKernel",
+      "module": "Atlas.Rudvalis.ProjectiveFrameFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.heavyCross_rowReference_orbit_divisible",
+      "module": "Atlas.Rudvalis.NonorthogonalSuborbits",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.heavy_reference_orbit_divisible",
+      "module": "Atlas.Rudvalis.NonorthogonalSuborbits",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.matrixScalarLine",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.matrixScalarLine_finrank",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveCodeBlockHom",
+      "module": "Atlas.Rudvalis.ProjectiveFrameFiltration",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveCodeBlockHom_kernel_order",
+      "module": "Atlas.Rudvalis.ProjectiveFrameFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveCodeBlockHom_kernel_solvable",
+      "module": "Atlas.Rudvalis.ProjectiveFrameFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveCodeBlockHom_mk",
+      "module": "Atlas.Rudvalis.ProjectiveFrameFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveCodeBlockHom_surjective",
+      "module": "Atlas.Rudvalis.ProjectiveFrameFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveCodeGroup_perfect",
+      "module": "Atlas.Rudvalis.FrameTranslationCommutators",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveCodeHom",
+      "module": "Atlas.Rudvalis.ProjectiveFrameEmbedding",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveCodeHom_injective",
+      "module": "Atlas.Rudvalis.ProjectiveFrameEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveFrameEquiv",
+      "module": "Atlas.Rudvalis.ProjectiveFrameEmbedding",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveFrameGroup",
+      "module": "Atlas.Rudvalis.ProjectiveFrameEmbedding",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveFrameGroup_index",
+      "module": "Atlas.Rudvalis.ProjectiveFrameEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveFrameGroup_index_odd",
+      "module": "Atlas.Rudvalis.ProjectiveFrameEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveFrameGroup_mem_iff",
+      "module": "Atlas.Rudvalis.ProjectiveFrameEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveFrameGroup_order",
+      "module": "Atlas.Rudvalis.ProjectiveFrameEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveFrameGroup_perfect",
+      "module": "Atlas.Rudvalis.ProjectiveSimplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveFrameGroup_reflection_generate",
+      "module": "Atlas.Rudvalis.ProjectiveFrameEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveReflection",
+      "module": "Atlas.Rudvalis.ProjectiveFrameEmbedding",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveReflection_square",
+      "module": "Atlas.Rudvalis.ProjectiveFrameEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveRowKernel",
+      "module": "Atlas.Rudvalis.ProjectiveFrameFiltration",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveRowMatrixHom",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveRowMatrixHom_kernel_eq_signs",
+      "module": "Atlas.Rudvalis.ProjectiveSignFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveRowMatrixHom_kernel_order",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveRowMatrixHom_projection",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveRowMatrixHom_surjective",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveRowProjection",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveRowProjection_kernel",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveRowProjection_scalar_case",
+      "module": "Atlas.Rudvalis.ProjectiveSignFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveRowProjection_surjective",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveSignHom",
+      "module": "Atlas.Rudvalis.ProjectiveSignFiltration",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveSignKernel",
+      "module": "Atlas.Rudvalis.ProjectiveSignFiltration",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveSignKernel_finrank",
+      "module": "Atlas.Rudvalis.ProjectiveSignFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveSignKernel_le_matrixKernel",
+      "module": "Atlas.Rudvalis.ProjectiveSignFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveSignKernel_order",
+      "module": "Atlas.Rudvalis.ProjectiveSignFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveSignKernel_square",
+      "module": "Atlas.Rudvalis.ProjectiveSignFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveTranslationModule_card",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.projectiveTranslationModule_finrank",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rowGaussianI",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rowGaussianI_matrix",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rowGaussianI_matrixQuotient",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rowMatrixQuotientHom",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rowMatrixQuotientHom_kills_scalars",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rowMatrixQuotientHom_surjective",
+      "module": "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rowReferenceToCodeReference",
+      "module": "Atlas.Rudvalis.FourSuborbitDivisibility",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rowSignKernelHom",
+      "module": "Atlas.Rudvalis.ProjectiveSignFiltration",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rudvalisGroup_nontrivial",
+      "module": "Atlas.Rudvalis.ProjectiveFrameEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rudvalis_block_arithmetic",
+      "module": "Atlas.Rudvalis.ProjectivePrimitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rudvalis_center_eq_bot",
+      "module": "Atlas.Rudvalis.ProjectiveSimplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rudvalis_cross_primitive",
+      "module": "Atlas.Rudvalis.ProjectivePrimitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rudvalis_nonabelian",
+      "module": "Atlas.Rudvalis.ProjectiveSimplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rudvalis_noncommutative",
+      "module": "Atlas.Rudvalis.ProjectiveSimplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rudvalis_simple",
+      "module": "Atlas.Rudvalis.ProjectiveSimplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rudvalis_simple_of_primitive_frame_quotient",
+      "module": "Atlas.Rudvalis.ProjectiveSimplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.translationPreimage",
+      "module": "Atlas.Rudvalis.FrameTranslationCommutators",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.translationPreimage_eq_top",
+      "module": "Atlas.Rudvalis.FrameTranslationCommutators",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.translations_le_commutator_scalars",
+      "module": "Atlas.Rudvalis.FrameTranslationCommutators",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Sporadic.Rudvalis.exists_mul_ne_mul",
+      "module": "Atlas.Sporadic.Rudvalis",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Sporadic.Rudvalis.isSimpleGroup",
+      "module": "Atlas.Sporadic.Rudvalis",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Sporadic.Rudvalis.nonabelian",
+      "module": "Atlas.Sporadic.Rudvalis",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "actual-conway-wales-simplicity",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.ConwayWales.",
+        "Atlas.Fischer.",
+        "Atlas.Mathieu."
+      ],
+      "forbid_modules": [
+        "Atlas.Rudvalis.FullIsometry",
+        "Atlas.Rudvalis.Simplicity"
+      ],
+      "module_allowlists": [
+        {
+          "prefix": "Atlas.Conway.",
+          "modules": [
+            "Atlas.Conway.RationalPrimeOrder"
+          ]
+        },
+        {
+          "prefix": "Atlas.Sporadic.",
+          "modules": [
+            "Atlas.Sporadic.Rudvalis"
+          ]
+        }
+      ]
+    }
+  ]
+}

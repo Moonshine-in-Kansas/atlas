@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "f4-local-radicals",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.GroupTheory.LocalSubgroupTransport",
+    "Atlas.LinearGroups.F4.LocalRadicals"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.F4.localRadical",
+      "module": "Atlas.LinearGroups.F4.LocalRadicals",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.localRadical_base",
+      "module": "Atlas.LinearGroups.F4.LocalRadicals",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.localRadical_card",
+      "module": "Atlas.LinearGroups.F4.LocalRadicals",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.localRadical_conj",
+      "module": "Atlas.LinearGroups.F4.LocalRadicals",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.localRadical_eq_of_transport",
+      "module": "Atlas.LinearGroups.F4.LocalRadicals",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.localRadical_iSup_eq_top",
+      "module": "Atlas.LinearGroups.F4.LocalRadicals",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.localRadical_le_stabilizer",
+      "module": "Atlas.LinearGroups.F4.LocalRadicals",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.localRadical_normal",
+      "module": "Atlas.LinearGroups.F4.LocalRadicals",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.localRadical_solvable",
+      "module": "Atlas.LinearGroups.F4.LocalRadicals",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.LocalTransport.card_localAt",
+      "module": "Atlas.GroupTheory.LocalSubgroupTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.LocalTransport.conjugate_eq",
+      "module": "Atlas.GroupTheory.LocalSubgroupTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.LocalTransport.localAt",
+      "module": "Atlas.GroupTheory.LocalSubgroupTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.LocalTransport.localAt_base",
+      "module": "Atlas.GroupTheory.LocalSubgroupTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.LocalTransport.localAt_conj",
+      "module": "Atlas.GroupTheory.LocalSubgroupTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.LocalTransport.localAt_eq_of_transport",
+      "module": "Atlas.GroupTheory.LocalSubgroupTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.LocalTransport.localAt_iSup_eq_normalClosure",
+      "module": "Atlas.GroupTheory.LocalSubgroupTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.LocalTransport.localAt_le_stabilizer",
+      "module": "Atlas.GroupTheory.LocalSubgroupTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.LocalTransport.localAt_normal",
+      "module": "Atlas.GroupTheory.LocalSubgroupTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.LocalTransport.localAt_solvable",
+      "module": "Atlas.GroupTheory.LocalSubgroupTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.LocalTransport.localEquiv",
+      "module": "Atlas.GroupTheory.LocalSubgroupTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.LocalTransport.transporter",
+      "module": "Atlas.GroupTheory.LocalSubgroupTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.LocalTransport.transporter_action",
+      "module": "Atlas.GroupTheory.LocalSubgroupTransport",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independent-f4-local-radicals",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.F4.card_Model",
+        "Atlas.F4.card_oppositePairStabilizer",
+        "Atlas.F4.OrderChecks.",
+        "Atlas.Fischer.",
+        "Atlas.ReeG2.",
+        "Atlas.F4.isSimple"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.OrderChecks"
+      ]
+    }
+  ]
+}

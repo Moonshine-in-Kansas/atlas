@@ -1,0 +1,404 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "id": "b1-a1",
+      "relation": "isomorphism",
+      "left": "B(1,F)",
+      "right": "PSL(2,F)",
+      "parameters": "F any field; natural quadratic dimension 3; PSL dimension 2; includes q=2,3",
+      "declaration": "Atlas.Comparisons.Classical.b1EquivA1",
+      "source": "Atlas/Comparisons/Classical/Orthogonal.lean"
+    },
+    {
+      "id": "even-b-c",
+      "relation": "isomorphism",
+      "left": "B(n,F)",
+      "right": "C(n,F)",
+      "parameters": "F finite, characteristic 2; n >= 1; natural dimensions 2n+1 and 2n",
+      "declaration": "Atlas.Comparisons.Classical.evenBEquivC",
+      "source": "Atlas/Comparisons/Classical/Orthogonal.lean"
+    },
+    {
+      "id": "b2-c2",
+      "relation": "isomorphism",
+      "left": "B(2,F)",
+      "right": "C(2,F)",
+      "parameters": "F finite, every characteristic; natural dimensions 5 and 4",
+      "declaration": "Atlas.Comparisons.Classical.b2EquivC2",
+      "source": "Atlas/Comparisons/Classical/Orthogonal.lean"
+    },
+    {
+      "id": "d2-product",
+      "relation": "isomorphism",
+      "left": "D+(2,F)",
+      "right": "PSL(2,F) x PSL(2,F)",
+      "parameters": "F any field; split quadratic dimension 4; PSL dimensions 2 and 2",
+      "declaration": "Atlas.Comparisons.Classical.d2EquivProduct",
+      "source": "Atlas/Comparisons/Classical/Orthogonal.lean"
+    },
+    {
+      "id": "d3-a3",
+      "relation": "isomorphism",
+      "left": "D+(3,F)",
+      "right": "PSL(4,F)",
+      "parameters": "F finite, every characteristic; split quadratic dimension 6; PSL dimension 4",
+      "declaration": "Atlas.Comparisons.Classical.d3EquivA3",
+      "source": "Atlas/Comparisons/Classical/Orthogonal.lean"
+    },
+    {
+      "id": "b-field",
+      "relation": "isomorphism",
+      "left": "B(n,F)",
+      "right": "B(n,K)",
+      "parameters": "F,K any fields; n any natural rank; explicit field isomorphism F ~= K",
+      "declaration": "Atlas.Comparisons.Classical.bFieldEquiv",
+      "source": "Atlas/Comparisons/Classical/Orthogonal.lean"
+    },
+    {
+      "id": "d-field",
+      "relation": "isomorphism",
+      "left": "D+(n,F)",
+      "right": "D+(n,K)",
+      "parameters": "F,K any fields; n any natural rank; explicit field isomorphism F ~= K",
+      "declaration": "Atlas.Comparisons.Classical.dFieldEquiv",
+      "source": "Atlas/Comparisons/Classical/Orthogonal.lean"
+    },
+    {
+      "id": "odd-b-c-order",
+      "relation": "same_order",
+      "left": "B(n,F)",
+      "right": "C(n,F)",
+      "parameters": "F finite, odd characteristic; n >= 2; no isomorphism asserted",
+      "declaration": "Atlas.Comparisons.Classical.oddB_card_eq_C",
+      "source": "Atlas/Comparisons/Classical/OrthogonalOrder.lean"
+    },
+    {
+      "id": "odd-b-c-distinct",
+      "relation": "nonisomorphism",
+      "left": "B(n,F)",
+      "right": "C(n,F)",
+      "parameters": "F finite, odd characteristic; n >= 3; distinguished by proved involution-class counts",
+      "declaration": "Atlas.Comparisons.Classical.oddB_not_equiv_C",
+      "source": "Atlas/Comparisons/Classical/OrthogonalInvolutions.lean"
+    },
+    {
+      "id": "psl2-nine-a6",
+      "relation": "isomorphism",
+      "left": "PSL(2,F)",
+      "right": "A6",
+      "parameters": "F any finite field of cardinality 9; common faithful ten-point actions",
+      "declaration": "Atlas.Comparisons.Exceptional.psl2Card9EquivAlt6",
+      "source": "Atlas/Comparisons/Exceptional/Order360.lean"
+    },
+    {
+      "id": "psl2-nine-canonical-a6",
+      "relation": "isomorphism",
+      "left": "PSL(2,GaloisField 3 2)",
+      "right": "A6",
+      "parameters": "Canonical pinned finite-field wrapper",
+      "declaration": "Atlas.Comparisons.Exceptional.psl2NineEquivAlt6",
+      "source": "Atlas/Comparisons/Exceptional/Order360.lean"
+    },
+    {
+      "id": "b2-derived-c2-derived",
+      "relation": "isomorphism",
+      "left": "B(2,ZMod 2)'",
+      "right": "C(2,ZMod 2)'",
+      "parameters": "Actual commutator subgroups; restriction of the full B2/C2 comparison",
+      "declaration": "Atlas.Comparisons.Exceptional.b2BinaryDerivedEquivC2Derived",
+      "source": "Atlas/Comparisons/Exceptional/BinaryDerived.lean"
+    },
+    {
+      "id": "c2-derived-a6",
+      "relation": "isomorphism",
+      "left": "C(2,ZMod 2)'",
+      "right": "A6",
+      "parameters": "Derived group of order 360; full C2(2) is not the endpoint",
+      "declaration": "Atlas.Comparisons.Exceptional.c2BinaryDerivedEquivAlt6",
+      "source": "Atlas/Comparisons/Exceptional/BinaryDerived.lean"
+    },
+    {
+      "id": "psl2-nine-b2-derived",
+      "relation": "isomorphism",
+      "left": "PSL(2,F)",
+      "right": "B(2,ZMod 2)'",
+      "parameters": "F finite of cardinality 9; composition through actual A6",
+      "declaration": "Atlas.Comparisons.Exceptional.psl2Card9EquivB2BinaryDerived",
+      "source": "Atlas/Comparisons/Exceptional/Order360.lean"
+    },
+    {
+      "id": "psl2-nine-c2-derived",
+      "relation": "isomorphism",
+      "left": "PSL(2,F)",
+      "right": "C(2,ZMod 2)'",
+      "parameters": "F finite of cardinality 9; composition through actual A6",
+      "declaration": "Atlas.Comparisons.Exceptional.psl2Card9EquivC2BinaryDerived",
+      "source": "Atlas/Comparisons/Exceptional/Order360.lean"
+    },
+    {
+      "id": "a8-d3-two",
+      "relation": "isomorphism",
+      "left": "A8",
+      "right": "D+(3,ZMod 2)",
+      "parameters": "Actual binary deleted permutation quotient with explicit split isometry",
+      "declaration": "Atlas.Comparisons.Exceptional.alt8EquivD3Two",
+      "source": "Atlas/Comparisons/Exceptional/Order20160A8.lean"
+    },
+    {
+      "id": "psl4-two-a8",
+      "relation": "isomorphism",
+      "left": "PSL(4,ZMod 2)",
+      "right": "A8",
+      "parameters": "Actual D3/A3 comparison composed with the faithful deleted-module action",
+      "declaration": "Atlas.Comparisons.Exceptional.psl4TwoEquivAlt8",
+      "source": "Atlas/Comparisons/Exceptional/Order20160A8.lean"
+    },
+    {
+      "id": "psl4-two-psl3-four-distinct",
+      "relation": "nonisomorphism",
+      "left": "PSL(4,ZMod 2)",
+      "right": "PSL(3,F)",
+      "parameters": "F finite of cardinality 4; Sylow-2 centers of cardinalities 2 and 4",
+      "declaration": "Atlas.Comparisons.Exceptional.psl4Two_not_equiv_psl3Card4",
+      "source": "Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean"
+    },
+    {
+      "id": "a8-psl3-four-distinct",
+      "relation": "nonisomorphism",
+      "left": "A8",
+      "right": "PSL(3,F)",
+      "parameters": "F finite of cardinality 4; transport of the proved Sylow-center obstruction",
+      "declaration": "Atlas.Comparisons.Exceptional.alt8_not_equiv_psl3Card4",
+      "source": "Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean"
+    },
+    {
+      "id": "psl4-two-psl3-four-order",
+      "relation": "same_order",
+      "left": "PSL(4,ZMod 2)",
+      "right": "PSL(3,F)",
+      "parameters": "F finite of cardinality 4; both orders 20160",
+      "declaration": "Atlas.Comparisons.Exceptional.psl4Two_card_eq_psl3Card4",
+      "source": "Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean"
+    },
+    {
+      "id": "a8-psl3-four-order",
+      "relation": "same_order",
+      "left": "A8",
+      "right": "PSL(3,F)",
+      "parameters": "F finite of cardinality 4; both orders 20160",
+      "declaration": "Atlas.Comparisons.Exceptional.alt8_card_eq_psl3Card4",
+      "source": "Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean"
+    },
+    {
+      "id": "psl2-four-a5",
+      "relation": "isomorphism",
+      "left": "PSL(2,F)",
+      "right": "A5",
+      "parameters": "F any finite field of cardinality 4; natural projective-line action",
+      "declaration": "Atlas.Comparisons.Exceptional.psl2Card4EquivAlt5",
+      "source": "Atlas/Comparisons/Exceptional/Order60Four.lean"
+    },
+    {
+      "id": "psl2-five-a5",
+      "relation": "isomorphism",
+      "left": "PSL(2,F)",
+      "right": "A5",
+      "parameters": "F any finite field of cardinality 5; proved elementary order-60 recognition",
+      "declaration": "Atlas.Comparisons.Exceptional.psl2Card5EquivAlt5",
+      "source": "Atlas/Comparisons/Exceptional/Order60Five.lean"
+    },
+    {
+      "id": "psl2-seven-psl3-two",
+      "relation": "isomorphism",
+      "left": "PSL(2,ZMod 7)",
+      "right": "PSL(3,ZMod 2)",
+      "parameters": "Actual matrix models; common faithful action on eight points",
+      "declaration": "Atlas.Comparisons.Exceptional.psl2SevenEquivPsl3Two",
+      "source": "Atlas/Comparisons/Exceptional/Order168.lean"
+    },
+    {
+      "id": "psl2-four-five",
+      "relation": "isomorphism",
+      "left": "PSL(2,F)",
+      "right": "PSL(2,ZMod 5)",
+      "parameters": "F any finite field of cardinality 4; composition of the verified maps",
+      "declaration": "Atlas.Comparisons.Exceptional.psl2Card4EquivPsl2Five",
+      "source": "Atlas/Comparisons/Exceptional/Order60Five.lean"
+    }
+  ],
+  "evidence": {
+    "directory": "verification/runs/orthogonal-comparison-contracts/20260915T124053-3",
+    "manifest_sha256": "37096d772fcbf8b19f560ccabbc0de21a4a6df9b1617a86de2ae219297f0bd15"
+  },
+  "supplements": [
+    {
+      "schema_version": 1,
+      "entries": [
+        {
+          "id": "c1-a1",
+          "relation": "isomorphism",
+          "left": "C(1,F)",
+          "right": "PSL(2,F)",
+          "parameters": "F any field; Lie rank one, PSL dimension two",
+          "declaration": "Atlas.Comparisons.Classical.c1EquivA1",
+          "source": "Atlas/Comparisons/LowRank/Symplectic.lean",
+          "construction_kind": "wrapper"
+        },
+        {
+          "id": "psu2-a1",
+          "relation": "isomorphism",
+          "left": "PSU(2,K/F)",
+          "right": "PSL(2,F)",
+          "parameters": "F,K finite fields; Algebra F K; finrank F K = 2; PSL over base F",
+          "declaration": "Atlas.Comparisons.Classical.psuTwoEquivA1",
+          "source": "Atlas/Comparisons/LowRank/Unitary.lean",
+          "construction_kind": "inverse"
+        },
+        {
+          "id": "psu2-c1",
+          "relation": "isomorphism",
+          "left": "PSU(2,K/F)",
+          "right": "C(1,F)",
+          "parameters": "F,K finite quadratic extension; all characteristics",
+          "declaration": "Atlas.Comparisons.Classical.psuTwoEquivC1",
+          "source": "Atlas/Comparisons/LowRank/Unitary.lean",
+          "construction_kind": "composition"
+        },
+        {
+          "id": "psu2-b1",
+          "relation": "isomorphism",
+          "left": "PSU(2,K/F)",
+          "right": "B(1,F)",
+          "parameters": "F,K finite quadratic extension; all characteristics",
+          "declaration": "Atlas.Comparisons.Classical.psuTwoEquivB1",
+          "source": "Atlas/Comparisons/LowRank/Unitary.lean",
+          "construction_kind": "composition"
+        },
+        {
+          "id": "minus-d2-a1",
+          "relation": "isomorphism",
+          "left": "DMinus(2,F,K)",
+          "right": "PSL(2,K)",
+          "parameters": "F,K finite quadratic extension; Lie rank two; PSL over extension K",
+          "declaration": "Atlas.Comparisons.Classical.dMinusTwoEquivA1",
+          "source": "Atlas/Comparisons/LowRank/MinusOrthogonal.lean",
+          "construction_kind": "wrapper"
+        },
+        {
+          "id": "minus-d3-unitary",
+          "relation": "isomorphism",
+          "left": "DMinus(3,F,K)",
+          "right": "PSU(4,K/F)",
+          "parameters": "F,K finite quadratic extension; Lie rank three, unitary dimension four",
+          "declaration": "Atlas.Comparisons.Classical.dMinusThreeEquivUnitary",
+          "source": "Atlas/Comparisons/LowRank/MinusOrthogonal.lean",
+          "construction_kind": "wrapper"
+        },
+        {
+          "id": "unitary-field",
+          "relation": "isomorphism",
+          "left": "PSU(d,K/F)",
+          "right": "PSU(d,Kprime/Fprime)",
+          "parameters": "Finite quadratic extensions; explicit base and extension field equivalences; actual Frobenius involutions",
+          "declaration": "Atlas.Comparisons.Classical.unitaryFieldEquiv",
+          "source": "Atlas/Comparisons/LowRank/FieldTransport.lean",
+          "construction_kind": "transport"
+        },
+        {
+          "id": "minus-d-field",
+          "relation": "isomorphism",
+          "left": "DMinus(n,F,K)",
+          "right": "DMinus(n,Fprime,Kprime)",
+          "parameters": "Finite quadratic extensions; explicit base/extension field equivalences with commuting algebraMap square",
+          "declaration": "Atlas.Comparisons.Classical.dMinusFieldEquiv",
+          "source": "Atlas/Comparisons/LowRank/FieldTransport.lean",
+          "construction_kind": "transport"
+        },
+        {
+          "id": "c2-binary-s6",
+          "relation": "isomorphism",
+          "left": "C(2,ZMod 2)",
+          "right": "S6",
+          "parameters": "Full group of order720; compatible with existing derived A6 map",
+          "declaration": "Atlas.Comparisons.Exceptional.c2BinaryEquivSymmetric",
+          "source": "Atlas/Comparisons/Small/BinarySymplectic.lean",
+          "construction_kind": "composition"
+        },
+        {
+          "id": "c2-card2-s6",
+          "relation": "isomorphism",
+          "left": "C(2,F)",
+          "right": "S6",
+          "parameters": "F any finite field of cardinality2; field transport of actual six-refinement action",
+          "declaration": "Atlas.Comparisons.Exceptional.c2Card2EquivSymmetric",
+          "source": "Atlas/Comparisons/Small/BinarySymplectic.lean",
+          "construction_kind": "transport"
+        },
+        {
+          "id": "b2-card2-s6",
+          "relation": "isomorphism",
+          "left": "B(2,F)",
+          "right": "S6",
+          "parameters": "F any finite field of cardinality2; full B2/C2 comparison composed with transported six-point action",
+          "declaration": "Atlas.Comparisons.Exceptional.b2Card2EquivSymmetric",
+          "source": "Atlas/Comparisons/Small/BinarySymplectic.lean",
+          "construction_kind": "composition"
+        }
+      ],
+      "evidence": {
+        "directory": "verification/runs/comparison-low-rank-exposure/20260927T093630-6",
+        "manifest_sha256": "33074c9d06e7b1b22465964647fd1a562a8b7e26d9471c0bab64d48ae3bdd8e4"
+      }
+    },
+    {
+      "schema_version": 1,
+      "entries": [
+        {
+          "id": "psu4-binary-c2-ternary",
+          "relation": "isomorphism",
+          "left": "PSU(4,K/ZMod 2)",
+          "right": "C(2,ZMod 3)",
+          "parameters": "K finite; Algebra (ZMod 2) K; finrank (ZMod 2) K = 2; actual positive E6 Weyl reductions",
+          "declaration": "Atlas.Comparisons.Exceptional.psu4BinaryEquivPSp4Ternary",
+          "source": "Atlas/Comparisons/Exceptional/Order25920.lean",
+          "construction_kind": "construction"
+        },
+        {
+          "id": "psu4-card2-c2-card3",
+          "relation": "isomorphism",
+          "left": "PSU(4,L/F)",
+          "right": "C(2,T)",
+          "parameters": "F,L,T finite fields; Algebra F L; finrank F L = 2; |F|=2 and |T|=3; full-center projective models",
+          "declaration": "Atlas.Comparisons.Exceptional.psu4Card2EquivPSp4Card3",
+          "source": "Atlas/Comparisons/Exceptional/Order25920.lean",
+          "construction_kind": "transport"
+        },
+        {
+          "id": "minus-d3-card2-c2-card3",
+          "relation": "isomorphism",
+          "left": "DMinus(3,F,L)",
+          "right": "C(2,T)",
+          "parameters": "F,L,T finite fields; Algebra F L; finrank F L = 2; |F|=2 and |T|=3; retained minus/unitary map",
+          "declaration": "Atlas.Comparisons.Exceptional.dMinus3Card2EquivPSp4Card3",
+          "source": "Atlas/Comparisons/Exceptional/Order25920.lean",
+          "construction_kind": "composition"
+        },
+        {
+          "id": "psu4-card2-b2-card3",
+          "relation": "isomorphism",
+          "left": "PSU(4,L/F)",
+          "right": "B(2,T)",
+          "parameters": "F,L,T finite fields; Algebra F L; finrank F L = 2; |F|=2 and |T|=3; retained B2/C2 map",
+          "declaration": "Atlas.Comparisons.Exceptional.psu4Card2EquivB2Card3",
+          "source": "Atlas/Comparisons/Exceptional/Order25920.lean",
+          "construction_kind": "composition"
+        }
+      ],
+      "evidence": {
+        "directory": "verification/runs/comparison-order25920-public/20261010T130445-1081507",
+        "manifest_sha256": "02a424a37baa34d8796d3a8230e784cbb27b30f262cba89dcf95661e7da955ce"
+      }
+    }
+  ]
+}

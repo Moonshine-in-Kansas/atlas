@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "minus-orthogonal-rank-three-all-ranks-order",
+  "imports": [
+    "Atlas.LinearGroups.Orthogonal.Minus.AllRanks"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_order_all",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.AllRanks",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "all-ranks-order-independence",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Orthogonal.Minus.Simplicity",
+        "Atlas.LinearGroups.Orthogonal.Minus.RankThreeSimplicity",
+        "Atlas.LinearGroups.Unitary.Simplicity",
+        "Atlas.LinearGroups.Unitary.SimplicityThree",
+        "Atlas.LinearGroups.Unitary.SimplicityHigher",
+        "Atlas.LinearGroups.Orthogonal.Minus.RankTwoSimplicity",
+        "Atlas.LinearGroups.PSLSimplicity"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.Unitary.simple_of_good",
+        "Atlas.Unitary.noncommutative_of_good",
+        "Atlas.Orthogonal.Minus.family_simple",
+        "Atlas.Unitary.binary_projective_simple",
+        "Atlas.Unitary.binary_projective_noncommutative"
+      ]
+    }
+  ]
+}

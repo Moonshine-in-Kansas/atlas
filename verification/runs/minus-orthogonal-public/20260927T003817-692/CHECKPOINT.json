@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "minus-orthogonal-public",
+  "imports": [
+    "Atlas.LinearGroups.Orthogonal.Minus.Family",
+    "Atlas.LinearGroups.Type2D",
+    "Atlas.LinearGroups.Orthogonal.Minus.FieldTransport",
+    "Atlas.LinearGroups.Orthogonal.Minus.KernelTransport",
+    "Atlas.LinearGroups.Orthogonal.Minus.WittIndex",
+    "Atlas.LinearGroups.Orthogonal.Minus.FullOrder",
+    "Atlas.LinearGroups.Orthogonal.Minus.CenterOdd",
+    "Atlas.LinearGroups.Orthogonal.Minus.IntrinsicOdd",
+    "Atlas.LinearGroups.Orthogonal.Minus.IntrinsicEven",
+    "Atlas.LinearGroups.Orthogonal.Minus.OrderChecks"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Orthogonal.DMinus",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Family",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.DMinus",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Family",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.card_elementary_center_mul_two",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.CenterOdd",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.card_full",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.FullOrder",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.elementary_eq_intrinsic_kernel",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.IntrinsicOdd",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.elementary_index_even",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.IntrinsicEven",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.elementary_index_odd",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.IntrinsicOdd",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_center_scalar",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Family",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_elementary_perfect",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Family",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_faithful",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Family",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_finite",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Family",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_full_order",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Family",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_intrinsic_even",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Family",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_intrinsic_odd",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Family",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_noncommutative",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Family",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_order",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Family",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_primitive",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Family",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_projection_kernel",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Family",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_simple",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Family",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.fieldCoordinates_siegel",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.KernelTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.fieldEquivProjective_projection",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.fullDickson_field_transport",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.KernelTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.fullDickson_kernel_elementary",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.IntrinsicEven",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.order_rank_four_binary",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.OrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.order_rank_four_ternary",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.OrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.order_rank_three_binary",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.OrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.order_rank_three_ternary",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.OrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.witt_index_exact",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.WittIndex",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Type2DConstruction",
+      "module": "Atlas.LinearGroups.Type2D",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.exists_type2D",
+      "module": "Atlas.LinearGroups.Type2D",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.type2D_construction",
+      "module": "Atlas.LinearGroups.Type2D",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.type2D_prime_power",
+      "module": "Atlas.LinearGroups.Type2D",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "minus-public-trust",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Unitary.",
+        "Atlas.PSL."
+      ],
+      "forbid_modules": []
+    }
+  ]
+}

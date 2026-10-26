@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas.LinearGroups.TypeReeG2",
+    "Atlas.LinearGroups.ReeG2.Checks",
+    "Atlas.LinearGroups.ReeG2.G2Embedding"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "ree-g2-family-interface",
+  "targets": [
+    {
+      "declaration": "Atlas.ReeG2.Checks.action243",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.action27",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.borelOrder243",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.borelOrder27",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.inverseTwist243",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.inverseTwist27",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.nonabelian243",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.nonabelian27",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.order2187",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.order243",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.order27",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.parameters2187",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.pointCount243",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.pointCount27",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.rootOrder243",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.rootOrder27",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.simple243",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.simple27",
+      "module": "Atlas.LinearGroups.ReeG2.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Model",
+      "module": "Atlas.LinearGroups.ReeG2.Generators",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.card_borel",
+      "module": "Atlas.LinearGroups.ReeG2.Borel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.card_pointSet",
+      "module": "Atlas.LinearGroups.ReeG2.Points",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.fieldEquiv",
+      "module": "Atlas.LinearGroups.ReeG2.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.finite_model",
+      "module": "Atlas.LinearGroups.TypeReeG2",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.fixes_infinity_iff_mem_borel",
+      "module": "Atlas.LinearGroups.ReeG2.ExactStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.g2Embedding",
+      "module": "Atlas.LinearGroups.ReeG2.G2Embedding",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.g2Embedding_injective",
+      "module": "Atlas.LinearGroups.ReeG2.G2Embedding",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.infinityStabilizer_eq_borel",
+      "module": "Atlas.LinearGroups.ReeG2.Order",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.model_noncommutative",
+      "module": "Atlas.LinearGroups.ReeG2.Noncommutative",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.order",
+      "module": "Atlas.LinearGroups.ReeG2.Order",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.perfect",
+      "module": "Atlas.LinearGroups.ReeG2.Perfect",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.pointAction_faithful",
+      "module": "Atlas.LinearGroups.ReeG2.FaithfulAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.pointAction_preprimitive",
+      "module": "Atlas.LinearGroups.ReeG2.PointTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.pointAction_two_pretransitive",
+      "module": "Atlas.LinearGroups.ReeG2.PointTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.simple",
+      "module": "Atlas.LinearGroups.ReeG2.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.TypeReeG2Construction",
+      "module": "Atlas.LinearGroups.TypeReeG2",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.exists_typeReeG2",
+      "module": "Atlas.LinearGroups.TypeReeG2",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.exists_typeReeG2_parameter",
+      "module": "Atlas.LinearGroups.TypeReeG2",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.typeReeG2_construction",
+      "module": "Atlas.LinearGroups.TypeReeG2",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.typeReeG2_field_transport",
+      "module": "Atlas.LinearGroups.TypeReeG2",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "family-package-concrete-ree",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.G2.Order",
+        "Atlas.LinearGroups.G2.Simplicity",
+        "Atlas.LinearGroups.G2.Perfectness"
+      ]
+    }
+  ]
+}

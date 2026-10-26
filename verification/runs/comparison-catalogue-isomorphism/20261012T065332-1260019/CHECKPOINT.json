@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "comparison-catalogue-isomorphism",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.Comparisons"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.Entry",
+      "module": "Atlas.Comparisons.CatalogueModels",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.Extension",
+      "module": "Atlas.Comparisons.CatalogueModels",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.FieldOfChar",
+      "module": "Atlas.Comparisons.CatalogueModels",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.FiniteField",
+      "module": "Atlas.Comparisons.CatalogueModels",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.Fixed",
+      "module": "Atlas.Comparisons.CatalogueModels",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.Fixed.Model",
+      "module": "Atlas.Comparisons.CatalogueModels",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.Fixed.card",
+      "module": "Atlas.Comparisons.CatalogueCardinality",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.Fixed.label",
+      "module": "Atlas.Comparisons.CatalogueModels",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.Model",
+      "module": "Atlas.Comparisons.CatalogueModels",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.admissible",
+      "module": "Atlas.Comparisons.CatalogueModels",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.card",
+      "module": "Atlas.Comparisons.CatalogueCardinality",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.exceptional_not_isomorphic",
+      "module": "Atlas.Comparisons.CatalogueObstructions",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.exists_normalized",
+      "module": "Atlas.Comparisons.CatalogueNormalization",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.isomorphic_iff_normalized_label_eq",
+      "module": "Atlas.Comparisons",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.isomorphic_of_normalized_label_eq",
+      "module": "Atlas.Comparisons",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.label",
+      "module": "Atlas.Comparisons.CatalogueModels",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.normalizeEquiv",
+      "module": "Atlas.Comparisons.CatalogueNormalization",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.normalizedEntry",
+      "module": "Atlas.Comparisons.CatalogueNormalization",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.normalizedEntry_label",
+      "module": "Atlas.Comparisons.CatalogueNormalization",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.normalized_label_eq_of_isomorphic",
+      "module": "Atlas.Comparisons",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.not_isomorphic_of_normalized_label_ne",
+      "module": "Atlas.Comparisons",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.not_isomorphic_of_not_collision",
+      "module": "Atlas.Comparisons.CatalogueCardinality",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Catalogue.same_label_equiv",
+      "module": "Atlas.Comparisons.CatalogueSameLabel",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.B_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.Co1_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.Co2_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.Co3_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.Dminus_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.Dplus_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.F4_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.Fi22_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.Fi23_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.Fi24prime_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.G2_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.HS_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.J2_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.M11_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.M12_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.M22_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.M23_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.M24_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.McL_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.Ru_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.Suz_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.Tits_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.alternating_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.cyclic_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.field_card_primePower",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.linear_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.smallRee_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.suzuki_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.symplectic_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.triality_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.CatalogueOrders.unitary_card",
+      "module": "Atlas.Comparisons.CatalogueOrders",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.SameFieldSize.fieldEquiv",
+      "module": "Atlas.Comparisons.SameFieldSize",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.SameFieldSize.minusEquiv",
+      "module": "Atlas.Comparisons.SameFieldSize",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.SameFieldSize.trialityEquiv",
+      "module": "Atlas.Comparisons.SameFieldSize",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.not_isomorphic_of_card_ne",
+      "module": "Atlas.Comparisons.Cardinality",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": []
+}

@@ -1,0 +1,394 @@
+{
+  "schema_version": 1,
+  "id": "tits-transfer",
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas.Tits.FiveQuartetImageOrder",
+    "Atlas.Tits.FiveQuartetMultiplier",
+    "Atlas.Tits.FiveQuartetMultiplierProperties",
+    "Atlas.Tits.TransferDefinition",
+    "Atlas.Tits.TransferWitnessPowers",
+    "Atlas.Tits.TransferWitnessCycles",
+    "Atlas.Tits.TransferFixedCharacters",
+    "Atlas.Tits.TransferGeometricProduct",
+    "Atlas.Tits.TransferTwoCycleCancellation",
+    "Atlas.Tits.TransferEvaluation"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Tits.alphaCycleValue_row_constant",
+      "module": "Atlas.Tits.TransferTwoCycleCancellation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alphaCycleValue_two_square",
+      "module": "Atlas.Tits.TransferTwoCycleCancellation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alphaFixedNeighbour_coordinate",
+      "module": "Atlas.Tits.TransferFixedCharacters",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alphaFixedNeighbour_exhaustion",
+      "module": "Atlas.Tits.TransferFixedCharacters",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alphaFixedNeighbour_injective",
+      "module": "Atlas.Tits.TransferFixedCharacters",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alphaTranslationMatrix_columns",
+      "module": "Atlas.Tits.TransferWitnessPowers",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alphaTranslationMatrix_point_trace",
+      "module": "Atlas.Tits.TransferWitnessPowers",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alphaTranslationMatrix_sum",
+      "module": "Atlas.Tits.TransferWitnessPowers",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alphaTwoCycleRow_spec",
+      "module": "Atlas.Tits.TransferTwoCycleCancellation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alpha_coordinate_fixed_certificate",
+      "module": "Atlas.Tits.TransferWitnessCycles",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alpha_cycle_length_cases",
+      "module": "Atlas.Tits.TransferEvaluation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alpha_four_cycle_value",
+      "module": "Atlas.Tits.TransferEvaluation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alpha_nonfixed_cycle_product",
+      "module": "Atlas.Tits.TransferEvaluation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alpha_one_cycle_product",
+      "module": "Atlas.Tits.TransferEvaluation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alpha_one_cycle_value",
+      "module": "Atlas.Tits.TransferEvaluation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alpha_row_cycle_product",
+      "module": "Atlas.Tits.TransferTwoCycleCancellation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alpha_two_cycle_product",
+      "module": "Atlas.Tits.TransferTwoCycleCancellation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.codeAlpha_coordinate_fixed_iff",
+      "module": "Atlas.Tits.TransferWitnessCycles",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.fiveQuartetConjugation_stabilizer_injective",
+      "module": "Atlas.Tits.FiveQuartetMultiplier",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.fiveQuartetConjugation_surjective",
+      "module": "Atlas.Tits.FiveQuartetMultiplier",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.fiveQuartetHom_kernel_order",
+      "module": "Atlas.Tits.FiveQuartetMultiplierProperties",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.fiveQuartetImageMultiplier_exponent",
+      "module": "Atlas.Tits.FiveQuartetMultiplierProperties",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.fiveQuartetImageMultiplier_involution",
+      "module": "Atlas.Tits.FiveQuartetMultiplier",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.fiveQuartetImageMultiplier_kernel_order",
+      "module": "Atlas.Tits.FiveQuartetMultiplier",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.fiveQuartetImageMultiplier_surjective",
+      "module": "Atlas.Tits.FiveQuartetMultiplier",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.fiveQuartetImage_card_dvd",
+      "module": "Atlas.Tits.FiveQuartetImageOrder",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.fiveQuartetImage_order",
+      "module": "Atlas.Tits.FiveQuartetImageOrder",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.fiveQuartetImage_point_stabilizer_order",
+      "module": "Atlas.Tits.FiveQuartetMultiplier",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.fiveQuartetMultiplier_generator_independent",
+      "module": "Atlas.Tits.FiveQuartetMultiplierProperties",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.fiveQuartetMultiplier_kernel_order",
+      "module": "Atlas.Tits.FiveQuartetMultiplier",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.fiveQuartetMultiplier_surjective",
+      "module": "Atlas.Tits.FiveQuartetMultiplier",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.fiveQuartetSylow_order",
+      "module": "Atlas.Tits.FiveQuartetMultiplier",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.fiveQuartetSylow_unique",
+      "module": "Atlas.Tits.FiveQuartetMultiplier",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.geometricCycleLength_eq_period",
+      "module": "Atlas.Tits.TransferEvaluation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.geometricCycleValue_mk",
+      "module": "Atlas.Tits.TransferGeometricProduct",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.geometricCycleValue_out",
+      "module": "Atlas.Tits.TransferGeometricProduct",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.imageBeta_order",
+      "module": "Atlas.Tits.FiveQuartetImageOrder",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localAlpha_fixed_card",
+      "module": "Atlas.Tits.TransferWitnessCycles",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localAlpha_fixed_iff",
+      "module": "Atlas.Tits.TransferWitnessCycles",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localAlpha_four_cycles_card",
+      "module": "Atlas.Tits.TransferWitnessCycles",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localAlpha_fourth",
+      "module": "Atlas.Tits.TransferWitnessPowers",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localAlpha_one_cycles_card",
+      "module": "Atlas.Tits.TransferWitnessCycles",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localAlpha_period_cases",
+      "module": "Atlas.Tits.TransferWitnessCycles",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localAlpha_period_four_iff",
+      "module": "Atlas.Tits.TransferWitnessCycles",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localAlpha_period_four_points_card",
+      "module": "Atlas.Tits.TransferWitnessCycles",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localAlpha_period_one_iff",
+      "module": "Atlas.Tits.TransferWitnessCycles",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localAlpha_period_two_iff",
+      "module": "Atlas.Tits.TransferWitnessCycles",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localAlpha_period_two_points_card",
+      "module": "Atlas.Tits.TransferWitnessCycles",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localAlpha_square",
+      "module": "Atlas.Tits.TransferWitnessPowers",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localAlpha_two_cycles_card",
+      "module": "Atlas.Tits.TransferWitnessCycles",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localCodeAlpha_square",
+      "module": "Atlas.Tits.TransferWitnessPowers",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localCodeAlpha_translation",
+      "module": "Atlas.Tits.TransferWitnessPowers",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localCodeAlpha_transport",
+      "module": "Atlas.Tits.TransferWitnessPowers",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.multiplierAt_alphaFixedNeighbour",
+      "module": "Atlas.Tits.TransferFixedCharacters",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.multiplierAt_alpha_fixed",
+      "module": "Atlas.Tits.TransferFixedCharacters",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.neighbourCosetEquiv_mk",
+      "module": "Atlas.Tits.TransferDefinition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.neighbourCosetEquiv_out",
+      "module": "Atlas.Tits.TransferGeometricProduct",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.neighbourCosetEquiv_period",
+      "module": "Atlas.Tits.TransferDefinition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.neighbourCosetEquiv_smul",
+      "module": "Atlas.Tits.TransferDefinition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.neighbour_period_same_orbit",
+      "module": "Atlas.Tits.TransferGeometricProduct",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.originalAlpha_square",
+      "module": "Atlas.Tits.TransferWitnessPowers",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.originalE3_square",
+      "module": "Atlas.Tits.TransferWitnessPowers",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.pointAlpha_fourth",
+      "module": "Atlas.Tits.TransferWitnessPowers",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.pointAlpha_square",
+      "module": "Atlas.Tits.TransferWitnessPowers",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.pointCycleValue_orbit",
+      "module": "Atlas.Tits.TransferGeometricProduct",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.pointE3_square",
+      "module": "Atlas.Tits.TransferWitnessPowers",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.transfer",
+      "module": "Atlas.Tits.TransferDefinition",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Tits.transfer_alpha",
+      "module": "Atlas.Tits.TransferEvaluation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.transfer_cycle_product",
+      "module": "Atlas.Tits.TransferDefinition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.transfer_cycle_product_neighbour_period",
+      "module": "Atlas.Tits.TransferDefinition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.transfer_geometric_cycle_product",
+      "module": "Atlas.Tits.TransferGeometricProduct",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independent-of-global-rudvalis-simplicity",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.Rudvalis.ProjectiveSimplicity",
+        "Atlas.Sporadic.Rudvalis",
+        "Atlas.Tits.Order",
+        "Atlas.Tits.TransferKernelConsequences",
+        "Atlas.Tits.Simplicity"
+      ]
+    }
+  ]
+}

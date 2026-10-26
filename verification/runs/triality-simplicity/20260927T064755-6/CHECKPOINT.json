@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "triality-simplicity",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Triality.Simplicity"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Triality.ParabolicPoints",
+      "module": "Atlas.LinearGroups.Triality.ParabolicAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.borel_opposite_intersection_le_torus",
+      "module": "Atlas.LinearGroups.Triality.ParabolicCoreReduction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.firstLine_coordinate_zero",
+      "module": "Atlas.LinearGroups.Triality.ParabolicCoreReduction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.longRootCell_entry",
+      "module": "Atlas.LinearGroups.Triality.ParabolicCoreReduction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.noncommutative",
+      "module": "Atlas.LinearGroups.Triality.Perfect",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.normal_in_longParabolic_eq_bot",
+      "module": "Atlas.LinearGroups.Triality.TorusCore",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.normal_in_longParabolic_le_borel",
+      "module": "Atlas.LinearGroups.Triality.ParabolicCoreReduction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.normal_in_longParabolic_le_torus",
+      "module": "Atlas.LinearGroups.Triality.ParabolicCoreReduction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.normal_in_torus_eq_bot",
+      "module": "Atlas.LinearGroups.Triality.TorusCore",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.parabolic",
+      "module": "Atlas.LinearGroups.Triality.ParabolicAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.parabolicPoints_faithful",
+      "module": "Atlas.LinearGroups.Triality.ParabolicAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.parabolicPoints_nontrivial",
+      "module": "Atlas.LinearGroups.Triality.ParabolicAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.parabolicPoints_primitive",
+      "module": "Atlas.LinearGroups.Triality.ParabolicAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.parabolicRadical",
+      "module": "Atlas.LinearGroups.Triality.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.parabolicRadical_le",
+      "module": "Atlas.LinearGroups.Triality.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.parabolicRadical_normal",
+      "module": "Atlas.LinearGroups.Triality.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.parabolicRadical_solvable",
+      "module": "Atlas.LinearGroups.Triality.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.parabolic_isCoatom",
+      "module": "Atlas.LinearGroups.Triality.ParabolicAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.parabolic_ne_top",
+      "module": "Atlas.LinearGroups.Triality.ParabolicAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.parabolic_normalCore_eq_bot",
+      "module": "Atlas.LinearGroups.Triality.ParabolicAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.shortWeyl_inv_e_zero",
+      "module": "Atlas.LinearGroups.Triality.ParabolicCoreReduction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.simple",
+      "module": "Atlas.LinearGroups.Triality.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.torusScale_fixed_all",
+      "module": "Atlas.LinearGroups.Triality.TorusCore",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "triality-simplicity-independence",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Triality.Order"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.Triality.card_group",
+        "Atlas.Triality.fixedPointEquiv"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "f4-near-cone-count",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.F4.NearVectorCount",
+    "Atlas.LinearGroups.F4.NearPointCount"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.F4.NearPoints",
+      "module": "Atlas.LinearGroups.F4.NearPointCount",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.NearVectors",
+      "module": "Atlas.LinearGroups.F4.NearVectorCount",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.NonzeroNearSpin",
+      "module": "Atlas.LinearGroups.F4.NearVectorCount",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.card_nearPoints",
+      "module": "Atlas.LinearGroups.F4.NearPointCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.card_nearVectors",
+      "module": "Atlas.LinearGroups.F4.NearVectorCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.card_nonzeroNearSpin",
+      "module": "Atlas.LinearGroups.F4.NearVectorCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearVectorsEquiv",
+      "module": "Atlas.LinearGroups.F4.NearVectorCount",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.nonzeroNearSpinEquiv",
+      "module": "Atlas.LinearGroups.F4.NearVectorCount",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independent-f4-near-cone-count",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.F4.card_Model",
+        "Atlas.F4.card_parabolic",
+        "Atlas.F4.card_oppositePairStabilizer",
+        "Atlas.F4.OrderChecks.",
+        "Atlas.Fischer.",
+        "Atlas.ReeG2.",
+        "Atlas.F4.isSimple",
+        "Atlas.F4.isPerfect",
+        "Atlas.F4.generated_eq_top"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.OrderChecks"
+      ]
+    }
+  ]
+}

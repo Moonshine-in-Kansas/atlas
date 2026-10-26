@@ -1,0 +1,357 @@
+{
+  "schema_version": 1,
+  "id": "symplectic-order",
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "targets": [
+    {
+      "declaration": "Atlas.LinearFunctional.card_fiber",
+      "module": "Atlas.LinearAlgebra.LinearFunctionalFiber",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.LinearFunctional.fiberEquivKernel",
+      "module": "Atlas.LinearAlgebra.LinearFunctionalFiber",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.HyperbolicPairs",
+      "module": "Atlas.LinearGroups.Symplectic.PairCount",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.ScalarKernel",
+      "module": "Atlas.LinearGroups.Symplectic.Center",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_center",
+      "module": "Atlas.LinearGroups.Symplectic.Center",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_psp",
+      "module": "Atlas.LinearGroups.Symplectic.ProjectiveOrder",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_psp_mul_center",
+      "module": "Atlas.LinearGroups.Symplectic.ProjectiveOrder",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_sp",
+      "module": "Atlas.LinearGroups.Symplectic.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_sp_succ",
+      "module": "Atlas.LinearGroups.Symplectic.PairAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.centerEquivScalarKernel",
+      "module": "Atlas.LinearGroups.Symplectic.Center",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.center_denominator_positive",
+      "module": "Atlas.LinearGroups.Symplectic.OrderInterface",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.center_mul_card_psp",
+      "module": "Atlas.LinearGroups.Symplectic.OrderInterface",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.center_order_dvd",
+      "module": "Atlas.LinearGroups.Symplectic.ProjectiveOrder",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.central_is_scalar",
+      "module": "Atlas.LinearGroups.Symplectic.Center",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.central_preserves_lines",
+      "module": "Atlas.LinearGroups.Symplectic.Center",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.exists_pair_transporter",
+      "module": "Atlas.LinearGroups.Symplectic.PairAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.extendLinear",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.extendLinear_headTail",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.extendLinear_preserves",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.extendPair",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.extend_restrict",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.headTail_decomposition",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.headTail_e",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.headTail_f",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.hyperbolicPairs_card",
+      "module": "Atlas.LinearGroups.Symplectic.PairCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.mem_center_iff_scalar",
+      "module": "Atlas.LinearGroups.Symplectic.Center",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.mem_pairStabilizer",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.nonzero_vector_card",
+      "module": "Atlas.LinearGroups.Symplectic.PairCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.orderNumerator_succ",
+      "module": "Atlas.LinearGroups.Symplectic.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.pairFiberEquiv",
+      "module": "Atlas.LinearGroups.Symplectic.PairCount",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.pairStabilizer",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.pairStabilizerEquiv",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.pairStabilizer_block",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.pairStabilizer_head",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.pairStabilizer_tail",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.partner_card",
+      "module": "Atlas.LinearGroups.Symplectic.PairCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.restrictPair",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.restrictPair_apply",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.restrict_extend",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.scalarElement",
+      "module": "Atlas.LinearGroups.Symplectic.Center",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.scalarElement_apply",
+      "module": "Atlas.LinearGroups.Symplectic.Center",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.scalarKernel_square",
+      "module": "Atlas.LinearGroups.Symplectic.Center",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.scalarToCenter",
+      "module": "Atlas.LinearGroups.Symplectic.Center",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.scalarToCenter_injective",
+      "module": "Atlas.LinearGroups.Symplectic.Center",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.scalarToCenter_surjective",
+      "module": "Atlas.LinearGroups.Symplectic.Center",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.scalar_is_central",
+      "module": "Atlas.LinearGroups.Symplectic.Center",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.scalar_square_eq_one",
+      "module": "Atlas.LinearGroups.Symplectic.Center",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.standardPair",
+      "module": "Atlas.LinearGroups.Symplectic.PairAction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.standardPairOrbitEquiv",
+      "module": "Atlas.LinearGroups.Symplectic.PairAction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.standardPair_stabilizer",
+      "module": "Atlas.LinearGroups.Symplectic.PairAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.tailLinear",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.tailLinear_preserves",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.tailMap",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.tailMap_apply",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.tailMap_mul",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.tailMap_one",
+      "module": "Atlas.LinearGroups.Symplectic.PairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.vector_finrank",
+      "module": "Atlas.LinearGroups.Symplectic.PairCount",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "order-independent-of-generation-and-simplicity",
+      "all_roots": true,
+      "module_allowlists": [
+        {
+          "prefix": "Atlas.",
+          "modules": [
+            "Atlas.LinearGroups.Symplectic.Basic",
+            "Atlas.LinearGroups.Symplectic.Transvection",
+            "Atlas.LinearGroups.Symplectic.TransvectionImage",
+            "Atlas.LinearGroups.Symplectic.Basis",
+            "Atlas.LinearGroups.Symplectic.Isometry",
+            "Atlas.LinearAlgebra.SymplecticBasis",
+            "Atlas.LinearAlgebra.AlternatingFrame",
+            "Atlas.LinearAlgebra.LinearFunctionalFiber",
+            "Atlas.LinearGroups.Symplectic.PairCount",
+            "Atlas.LinearGroups.Symplectic.PairStabilizer",
+            "Atlas.LinearGroups.Symplectic.PairAction",
+            "Atlas.LinearGroups.Symplectic.Order",
+            "Atlas.LinearGroups.Symplectic.Center",
+            "Atlas.LinearGroups.Symplectic.ProjectiveOrder",
+            "Atlas.LinearGroups.Symplectic.OrderInterface"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "center-independent-of-order",
+      "roots": [
+        "Atlas.Symplectic.central_preserves_lines",
+        "Atlas.Symplectic.central_is_scalar",
+        "Atlas.Symplectic.scalar_is_central",
+        "Atlas.Symplectic.scalar_square_eq_one",
+        "Atlas.Symplectic.mem_center_iff_scalar",
+        "Atlas.Symplectic.ScalarKernel",
+        "Atlas.Symplectic.scalarKernel_square",
+        "Atlas.Symplectic.scalarElement",
+        "Atlas.Symplectic.scalarElement_apply",
+        "Atlas.Symplectic.scalarToCenter",
+        "Atlas.Symplectic.scalarToCenter_injective",
+        "Atlas.Symplectic.scalarToCenter_surjective",
+        "Atlas.Symplectic.centerEquivScalarKernel",
+        "Atlas.Symplectic.card_center"
+      ],
+      "module_allowlists": [
+        {
+          "prefix": "Atlas.",
+          "modules": [
+            "Atlas.LinearGroups.Symplectic.Basic",
+            "Atlas.LinearGroups.Symplectic.Isometry",
+            "Atlas.LinearGroups.Symplectic.Transvection",
+            "Atlas.LinearGroups.Symplectic.TransvectionImage",
+            "Atlas.LinearGroups.Symplectic.Center",
+            "Atlas.LinearGroups.Symplectic.OrderInterface"
+          ]
+        }
+      ]
+    }
+  ]
+}

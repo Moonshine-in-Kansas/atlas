@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "f4-simplicity",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.F4.Simplicity",
+    "Atlas.LinearGroups.F4.Center",
+    "Atlas.LinearGroups.F4.SimplicityChecks"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.F4.SimplicityChecks.binary_simple",
+      "module": "Atlas.LinearGroups.F4.SimplicityChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.SimplicityChecks.eight_simple",
+      "module": "Atlas.LinearGroups.F4.SimplicityChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.SimplicityChecks.five_simple",
+      "module": "Atlas.LinearGroups.F4.SimplicityChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.SimplicityChecks.four_simple",
+      "module": "Atlas.LinearGroups.F4.SimplicityChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.SimplicityChecks.ternary_simple",
+      "module": "Atlas.LinearGroups.F4.SimplicityChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.center_eq_bot",
+      "module": "Atlas.LinearGroups.F4.Center",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.isSimple",
+      "module": "Atlas.LinearGroups.F4.Simplicity",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independent-f4-simplicity",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.F4.card_Model",
+        "Atlas.F4.card_oppositePairStabilizer",
+        "Atlas.F4.OrderChecks.",
+        "Atlas.Fischer.",
+        "Atlas.ReeG2."
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.OrderChecks"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1189 @@
+STATEMENT Atlas.Sporadic.Fischer24.positive_perfect
+Atlas.Sporadic.Fischer24.positive_perfect : @Group.IsPerfect.{0} (↥Atlas.Sporadic.Fischer24.PositiveModel)
+  (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+    (@Subgroup.toGroup.{0}
+      (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      (@Equiv.Perm.permGroup.{0}
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      Atlas.Fischer.rootGeneratedRayGroup)
+    Atlas.Sporadic.Fischer24.PositiveModel)
+AXIOMS Atlas.Sporadic.Fischer24.positive_perfect: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.card
+Atlas.Sporadic.Fischer24.card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Fischer24.Model)
+  (@OfNat.ofNat.{0} Nat (nat_lit 2510411418381323442585600) (instOfNatNat (nat_lit 2510411418381323442585600)))
+AXIOMS Atlas.Sporadic.Fischer24.card: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.positive_index
+Atlas.Sporadic.Fischer24.positive_index : @Eq.{1} Nat
+  (@Subgroup.index.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+    (@Subgroup.toGroup.{0}
+      (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      (@Equiv.Perm.permGroup.{0}
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      Atlas.Fischer.rootGeneratedRayGroup)
+    (@MonoidHom.ker.{0, 0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+      (@Subgroup.toGroup.{0}
+        (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        (@Equiv.Perm.permGroup.{0}
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        Atlas.Fischer.rootGeneratedRayGroup)
+      (Multiplicative.{0} Atlas.Codes.Bit)
+      (@Multiplicative.mulOneClass.{0} Atlas.Codes.Bit
+        (@AddMonoid.toAddZeroClass.{0} Atlas.Codes.Bit
+          (@AddMonoidWithOne.toAddMonoid.{0} Atlas.Codes.Bit
+            (@AddGroupWithOne.toAddMonoidWithOne.{0} Atlas.Codes.Bit
+              (@Ring.toAddGroupWithOne.{0} Atlas.Codes.Bit
+                (@DivisionRing.toRing.{0} Atlas.Codes.Bit
+                  (@Field.toDivisionRing.{0} Atlas.Codes.Bit
+                    (@ZMod.instField (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+                      Nat.fact_prime_two))))))))
+      Atlas.Fischer.rootGeneratedRayParity))
+  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+AXIOMS Atlas.Sporadic.Fischer24.positive_index: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.positive_faithful
+Atlas.Sporadic.Fischer24.positive_faithful : @FaithfulSMul.{0, 0} (↥Atlas.Sporadic.Fischer24.PositiveModel)
+  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+  (@SemigroupAction.toSMul.{0, 0} (↥Atlas.Sporadic.Fischer24.PositiveModel)
+    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+    (@Monoid.toSemigroup.{0} (↥Atlas.Sporadic.Fischer24.PositiveModel)
+      (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.PositiveModel)
+        (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.PositiveModel)
+          (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+            (@Subgroup.toGroup.{0}
+              (Equiv.Perm.{1}
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+              (@Equiv.Perm.permGroup.{0}
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+              Atlas.Fischer.rootGeneratedRayGroup)
+            Atlas.Sporadic.Fischer24.PositiveModel))))
+    (@MulAction.toSemigroupAction.{0, 0} (↥Atlas.Sporadic.Fischer24.PositiveModel)
+      (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+      (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.PositiveModel)
+        (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.PositiveModel)
+          (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+            (@Subgroup.toGroup.{0}
+              (Equiv.Perm.{1}
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+              (@Equiv.Perm.permGroup.{0}
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+              Atlas.Fischer.rootGeneratedRayGroup)
+            Atlas.Sporadic.Fischer24.PositiveModel)))
+      (@Subgroup.instMulActionSubtypeMem.{0, 0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+        (@Subgroup.toGroup.{0}
+          (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          (@Equiv.Perm.permGroup.{0}
+            (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          Atlas.Fischer.rootGeneratedRayGroup)
+        (@Subgroup.instMulActionSubtypeMem.{0, 0}
+          (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+          (@Equiv.Perm.permGroup.{0}
+            (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          (Equiv.Perm.applyMulAction.{0}
+            (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          Atlas.Fischer.rootGeneratedRayGroup)
+        Atlas.Sporadic.Fischer24.PositiveModel)))
+AXIOMS Atlas.Sporadic.Fischer24.positive_faithful: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.projection_surjective
+Atlas.Sporadic.Fischer24.projection_surjective : @Function.Surjective.{1, 1} (↥Atlas.Sporadic.Fischer24.AlgebraGroup)
+  (↥Atlas.Sporadic.Fischer24.Model)
+  (@DFunLike.coe.{1, 1, 1}
+    (@MonoidHom.{0, 0} (↥Atlas.Sporadic.Fischer24.AlgebraGroup) (↥Atlas.Sporadic.Fischer24.Model)
+      (@MulOneClass.toMulOne.{0} (↥Atlas.Sporadic.Fischer24.AlgebraGroup)
+        (@Monoid.toMulOneClass.{0} (↥Atlas.Sporadic.Fischer24.AlgebraGroup)
+          (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.AlgebraGroup)
+            (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.AlgebraGroup)
+              (@Subgroup.toGroup.{0} (Equiv.Perm.{1} Atlas.Fischer.Coordinates)
+                (@Equiv.Perm.permGroup.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.AlgebraGroup)))))
+      (@MulOneClass.toMulOne.{0} (↥Atlas.Sporadic.Fischer24.Model)
+        (@Monoid.toMulOneClass.{0} (↥Atlas.Sporadic.Fischer24.Model)
+          (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+            (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+              (@Subgroup.toGroup.{0}
+                (Equiv.Perm.{1}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                (@Equiv.Perm.permGroup.{0}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                Atlas.Sporadic.Fischer24.Model))))))
+    (↥Atlas.Sporadic.Fischer24.AlgebraGroup) (fun x => ↥Atlas.Sporadic.Fischer24.Model)
+    (@MonoidHom.instFunLike.{0, 0} (↥Atlas.Sporadic.Fischer24.AlgebraGroup) (↥Atlas.Sporadic.Fischer24.Model)
+      (@MulOneClass.toMulOne.{0} (↥Atlas.Sporadic.Fischer24.AlgebraGroup)
+        (@Monoid.toMulOneClass.{0} (↥Atlas.Sporadic.Fischer24.AlgebraGroup)
+          (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.AlgebraGroup)
+            (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.AlgebraGroup)
+              (@Subgroup.toGroup.{0} (Equiv.Perm.{1} Atlas.Fischer.Coordinates)
+                (@Equiv.Perm.permGroup.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.AlgebraGroup)))))
+      (@MulOneClass.toMulOne.{0} (↥Atlas.Sporadic.Fischer24.Model)
+        (@Monoid.toMulOneClass.{0} (↥Atlas.Sporadic.Fischer24.Model)
+          (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+            (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+              (@Subgroup.toGroup.{0}
+                (Equiv.Perm.{1}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                (@Equiv.Perm.permGroup.{0}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                Atlas.Sporadic.Fischer24.Model))))))
+    Atlas.Sporadic.Fischer24.projection)
+AXIOMS Atlas.Sporadic.Fischer24.projection_surjective: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.not_simple
+Atlas.Sporadic.Fischer24.not_simple : Not
+  (@IsSimpleGroup.{0} (↥Atlas.Sporadic.Fischer24.Model)
+    (@Subgroup.toGroup.{0}
+      (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      (@Equiv.Perm.permGroup.{0}
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      Atlas.Sporadic.Fischer24.Model))
+AXIOMS Atlas.Sporadic.Fischer24.not_simple: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.rankThree_action_compatible
+Atlas.Sporadic.Fischer24.rankThree_action_compatible : ∀ (g : ↥Atlas.Sporadic.Fischer24.Model)
+  (x : @Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points),
+  @Eq.{1}
+    (Atlas.Fischer.ResiduePoint
+      (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+        (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+    (@DFunLike.coe.{1, 1, 1}
+      (Equiv.{1, 1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay)
+        (Atlas.Fischer.ResiduePoint
+          (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+            (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+      (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay)
+      (fun x =>
+        Atlas.Fischer.ResiduePoint
+          (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+            (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+      (@EquivLike.toFunLike.{1, 1, 1}
+        (Equiv.{1, 1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay)
+          (Atlas.Fischer.ResiduePoint
+            (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+              (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay)
+        (Atlas.Fischer.ResiduePoint
+          (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+            (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+        (@Equiv.instEquivLike.{1, 1}
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay)
+          (Atlas.Fischer.ResiduePoint
+            (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+              (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))))
+      Atlas.Sporadic.Fischer24.rankThreePointComparison
+      (@HSMul.hSMul.{0, 0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+        (@instHSMul.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+          (@SemigroupAction.toSMul.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+            (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+            (@Monoid.toSemigroup.{0} (↥Atlas.Sporadic.Fischer24.Model)
+              (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+                (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+                  (@Subgroup.toGroup.{0}
+                    (Equiv.Perm.{1}
+                      (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                    (@Equiv.Perm.permGroup.{0}
+                      (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                    Atlas.Sporadic.Fischer24.Model))))
+            (@MulAction.toSemigroupAction.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+              (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+              (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+                (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+                  (@Subgroup.toGroup.{0}
+                    (Equiv.Perm.{1}
+                      (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                    (@Equiv.Perm.permGroup.{0}
+                      (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                    Atlas.Sporadic.Fischer24.Model)))
+              (@Subgroup.instMulActionSubtypeMem.{0, 0}
+                (Equiv.Perm.{1}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+                (@Equiv.Perm.permGroup.{0}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                (Equiv.Perm.applyMulAction.{0}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                Atlas.Sporadic.Fischer24.Model))))
+        g x))
+    (@HSMul.hSMul.{0, 0, 0}
+      (Atlas.Fischer.ResidueGroup
+        (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+          (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+      (Atlas.Fischer.ResiduePoint
+        (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+          (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+      (Atlas.Fischer.ResiduePoint
+        (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+          (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+      (@instHSMul.{0, 0}
+        (Atlas.Fischer.ResidueGroup
+          (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+            (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+        (Atlas.Fischer.ResiduePoint
+          (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+            (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+        (@SemigroupAction.toSMul.{0, 0}
+          (Atlas.Fischer.ResidueGroup
+            (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+              (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+          (Atlas.Fischer.ResiduePoint
+            (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+              (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+          (@Monoid.toSemigroup.{0}
+            (Atlas.Fischer.ResidueGroup
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+            (@DivInvMonoid.toMonoid.{0}
+              (Atlas.Fischer.ResidueGroup
+                (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                  (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+              (@Group.toDivInvMonoid.{0}
+                (Atlas.Fischer.ResidueGroup
+                  (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                    (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                (@QuotientGroup.Quotient.group.{0}
+                  (↥(Atlas.Fischer.residueCentralizer
+                      (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                        (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+                  (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+                    (@Subgroup.toGroup.{0}
+                      (Equiv.Perm.{1}
+                        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                      (@Equiv.Perm.permGroup.{0}
+                        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                      Atlas.Fischer.rootGeneratedRayGroup)
+                    (Atlas.Fischer.residueCentralizer
+                      (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                        (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+                  (Atlas.Fischer.residueCentralElementary
+                    (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                      (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                  ⋯))))
+          (@MulAction.toSemigroupAction.{0, 0}
+            (Atlas.Fischer.ResidueGroup
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+            (Atlas.Fischer.ResiduePoint
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+            (@DivInvMonoid.toMonoid.{0}
+              (Atlas.Fischer.ResidueGroup
+                (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                  (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+              (@Group.toDivInvMonoid.{0}
+                (Atlas.Fischer.ResidueGroup
+                  (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                    (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                (@QuotientGroup.Quotient.group.{0}
+                  (↥(Atlas.Fischer.residueCentralizer
+                      (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                        (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+                  (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+                    (@Subgroup.toGroup.{0}
+                      (Equiv.Perm.{1}
+                        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                      (@Equiv.Perm.permGroup.{0}
+                        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                      Atlas.Fischer.rootGeneratedRayGroup)
+                    (Atlas.Fischer.residueCentralizer
+                      (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                        (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+                  (Atlas.Fischer.residueCentralElementary
+                    (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                      (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                  ⋯)))
+            (Atlas.Fischer.residueGroupMulAction
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))))
+      (@DFunLike.coe.{1, 1, 1}
+        (@MulEquiv.{0, 0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+          (Atlas.Fischer.ResidueGroup
+            (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+              (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+          (@Subgroup.mul.{0}
+            (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            (@Equiv.Perm.permGroup.{0}
+              (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            Atlas.Fischer.rootGeneratedRayGroup)
+          (@MulOne.toMul.{0}
+            (Atlas.Fischer.ResidueGroup
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+            (@MulOneClass.toMulOne.{0}
+              (Atlas.Fischer.ResidueGroup
+                (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                  (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+              (@Monoid.toMulOneClass.{0}
+                (Atlas.Fischer.ResidueGroup
+                  (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                    (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                (@DivInvMonoid.toMonoid.{0}
+                  (Atlas.Fischer.ResidueGroup
+                    (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                      (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                  (@Group.toDivInvMonoid.{0}
+                    (Atlas.Fischer.ResidueGroup
+                      (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                        (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                    (@QuotientGroup.Quotient.group.{0}
+                      (↥(Atlas.Fischer.residueCentralizer
+                          (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                            (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+                      (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+                        (@Subgroup.toGroup.{0}
+                          (Equiv.Perm.{1}
+                            (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                          (@Equiv.Perm.permGroup.{0}
+                            (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                          Atlas.Fischer.rootGeneratedRayGroup)
+                        (Atlas.Fischer.residueCentralizer
+                          (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                            (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+                      (Atlas.Fischer.residueCentralElementary
+                        (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                          (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                      ⋯)))))))
+        (↥Atlas.Fischer.rootGeneratedRayGroup)
+        (fun x =>
+          Atlas.Fischer.ResidueGroup
+            (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+              (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+        (@EquivLike.toFunLike.{1, 1, 1}
+          (@MulEquiv.{0, 0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+            (Atlas.Fischer.ResidueGroup
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+            (@Subgroup.mul.{0}
+              (Equiv.Perm.{1}
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+              (@Equiv.Perm.permGroup.{0}
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+              Atlas.Fischer.rootGeneratedRayGroup)
+            (@MulOne.toMul.{0}
+              (Atlas.Fischer.ResidueGroup
+                (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                  (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+              (@MulOneClass.toMulOne.{0}
+                (Atlas.Fischer.ResidueGroup
+                  (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                    (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                (@Monoid.toMulOneClass.{0}
+                  (Atlas.Fischer.ResidueGroup
+                    (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                      (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                  (@DivInvMonoid.toMonoid.{0}
+                    (Atlas.Fischer.ResidueGroup
+                      (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                        (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                    (@Group.toDivInvMonoid.{0}
+                      (Atlas.Fischer.ResidueGroup
+                        (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                          (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                      (@QuotientGroup.Quotient.group.{0}
+                        (↥(Atlas.Fischer.residueCentralizer
+                            (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                              (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+                        (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+                          (@Subgroup.toGroup.{0}
+                            (Equiv.Perm.{1}
+                              (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates)
+                                Atlas.Fischer.DisplayedReflectingRay))
+                            (@Equiv.Perm.permGroup.{0}
+                              (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates)
+                                Atlas.Fischer.DisplayedReflectingRay))
+                            Atlas.Fischer.rootGeneratedRayGroup)
+                          (Atlas.Fischer.residueCentralizer
+                            (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                              (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+                        (Atlas.Fischer.residueCentralElementary
+                          (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                            (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                        ⋯)))))))
+          (↥Atlas.Fischer.rootGeneratedRayGroup)
+          (Atlas.Fischer.ResidueGroup
+            (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+              (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+          (@MulEquiv.instEquivLike.{0, 0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+            (Atlas.Fischer.ResidueGroup
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+            (@Subgroup.mul.{0}
+              (Equiv.Perm.{1}
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+              (@Equiv.Perm.permGroup.{0}
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+              Atlas.Fischer.rootGeneratedRayGroup)
+            (@MulOne.toMul.{0}
+              (Atlas.Fischer.ResidueGroup
+                (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                  (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+              (@MulOneClass.toMulOne.{0}
+                (Atlas.Fischer.ResidueGroup
+                  (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                    (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                (@Monoid.toMulOneClass.{0}
+                  (Atlas.Fischer.ResidueGroup
+                    (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                      (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                  (@DivInvMonoid.toMonoid.{0}
+                    (Atlas.Fischer.ResidueGroup
+                      (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                        (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                    (@Group.toDivInvMonoid.{0}
+                      (Atlas.Fischer.ResidueGroup
+                        (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                          (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                      (@QuotientGroup.Quotient.group.{0}
+                        (↥(Atlas.Fischer.residueCentralizer
+                            (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                              (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+                        (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+                          (@Subgroup.toGroup.{0}
+                            (Equiv.Perm.{1}
+                              (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates)
+                                Atlas.Fischer.DisplayedReflectingRay))
+                            (@Equiv.Perm.permGroup.{0}
+                              (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates)
+                                Atlas.Fischer.DisplayedReflectingRay))
+                            Atlas.Fischer.rootGeneratedRayGroup)
+                          (Atlas.Fischer.residueCentralizer
+                            (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                              (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+                        (Atlas.Fischer.residueCentralElementary
+                          (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                            (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+                        ⋯))))))))
+        Atlas.Sporadic.Fischer24.rankThreeGroupComparison g)
+      (@DFunLike.coe.{1, 1, 1}
+        (Equiv.{1, 1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay)
+          (Atlas.Fischer.ResiduePoint
+            (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+              (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay)
+        (fun x =>
+          Atlas.Fischer.ResiduePoint
+            (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+              (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+        (@EquivLike.toFunLike.{1, 1, 1}
+          (Equiv.{1, 1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay)
+            (Atlas.Fischer.ResiduePoint
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay)
+          (Atlas.Fischer.ResiduePoint
+            (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+              (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+          (@Equiv.instEquivLike.{1, 1}
+            (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay)
+            (Atlas.Fischer.ResiduePoint
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))))
+        Atlas.Sporadic.Fischer24.rankThreePointComparison x))
+AXIOMS Atlas.Sporadic.Fischer24.rankThree_action_compatible: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.frames_card
+Atlas.Sporadic.Fischer24.frames_card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Fischer24.Frames)
+  (@OfNat.ofNat.{0} Nat (nat_lit 2503413946215) (instOfNatNat (nat_lit 2503413946215)))
+AXIOMS Atlas.Sporadic.Fischer24.frames_card: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.linear_card
+Atlas.Sporadic.Fischer24.linear_card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Fischer24.LinearCover)
+  (@OfNat.ofNat.{0} Nat (nat_lit 3765617127571985163878400) (instOfNatNat (nat_lit 3765617127571985163878400)))
+AXIOMS Atlas.Sporadic.Fischer24.linear_card: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.derived
+Atlas.Sporadic.Fischer24.derived : @Eq.{1}
+  (@Subgroup.{0} (↥Atlas.Sporadic.Fischer24.Model)
+    (@Subgroup.toGroup.{0}
+      (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      (@Equiv.Perm.permGroup.{0}
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      Atlas.Sporadic.Fischer24.Model))
+  (@commutator.{0} (↥Atlas.Sporadic.Fischer24.Model)
+    (@Subgroup.toGroup.{0}
+      (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      (@Equiv.Perm.permGroup.{0}
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      Atlas.Sporadic.Fischer24.Model))
+  (@MonoidHom.ker.{0, 0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+    (@Subgroup.toGroup.{0}
+      (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      (@Equiv.Perm.permGroup.{0}
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      Atlas.Fischer.rootGeneratedRayGroup)
+    (Multiplicative.{0} Atlas.Codes.Bit)
+    (@Multiplicative.mulOneClass.{0} Atlas.Codes.Bit
+      (@AddMonoid.toAddZeroClass.{0} Atlas.Codes.Bit
+        (@AddMonoidWithOne.toAddMonoid.{0} Atlas.Codes.Bit
+          (@AddGroupWithOne.toAddMonoidWithOne.{0} Atlas.Codes.Bit
+            (@Ring.toAddGroupWithOne.{0} Atlas.Codes.Bit
+              (@DivisionRing.toRing.{0} Atlas.Codes.Bit
+                (@Field.toDivisionRing.{0} Atlas.Codes.Bit
+                  (@ZMod.instField (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+                    Nat.fact_prime_two))))))))
+    Atlas.Fischer.rootGeneratedRayParity)
+AXIOMS Atlas.Sporadic.Fischer24.derived: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.pentad_frames
+Atlas.Sporadic.Fischer24.pentad_frames : ∀
+  (t : Atlas.Fischer.OrderedCommutingTuple (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5)))),
+  @Eq.{1} Nat (Nat.card.{0} (Atlas.Fischer.CommutingPentadFrame t))
+    (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+AXIOMS Atlas.Sporadic.Fischer24.pentad_frames: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.algebra_card
+Atlas.Sporadic.Fischer24.algebra_card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Fischer24.AlgebraGroup)
+  (@OfNat.ofNat.{0} Nat (nat_lit 7531234255143970327756800) (instOfNatNat (nat_lit 7531234255143970327756800)))
+AXIOMS Atlas.Sporadic.Fischer24.algebra_card: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.faithful
+Atlas.Sporadic.Fischer24.faithful : @FaithfulSMul.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+  (@SemigroupAction.toSMul.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+    (@Monoid.toSemigroup.{0} (↥Atlas.Sporadic.Fischer24.Model)
+      (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+        (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+          (@Subgroup.toGroup.{0}
+            (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            (@Equiv.Perm.permGroup.{0}
+              (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            Atlas.Sporadic.Fischer24.Model))))
+    (@MulAction.toSemigroupAction.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+      (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+      (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+        (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+          (@Subgroup.toGroup.{0}
+            (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            (@Equiv.Perm.permGroup.{0}
+              (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            Atlas.Sporadic.Fischer24.Model)))
+      (@Subgroup.instMulActionSubtypeMem.{0, 0}
+        (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+        (@Equiv.Perm.permGroup.{0}
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        (Equiv.Perm.applyMulAction.{0}
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        Atlas.Sporadic.Fischer24.Model)))
+AXIOMS Atlas.Sporadic.Fischer24.faithful: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.order
+Atlas.Sporadic.Fischer24.order : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Fischer24.Model)
+  (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+    (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+              (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                  (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                    (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                    (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+                    (@OfNat.ofNat.{0} Nat (nat_lit 22) (instOfNatNat (nat_lit 22))))
+                  (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                    (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                    (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+                    (@OfNat.ofNat.{0} Nat (nat_lit 16) (instOfNatNat (nat_lit 16)))))
+                (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                  (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                  (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5)))
+                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                (@OfNat.ofNat.{0} Nat (nat_lit 7) (instOfNatNat (nat_lit 7)))
+                (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 11) (instOfNatNat (nat_lit 11))))
+          (@OfNat.ofNat.{0} Nat (nat_lit 13) (instOfNatNat (nat_lit 13))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 17) (instOfNatNat (nat_lit 17))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 23) (instOfNatNat (nat_lit 23))))
+    (@OfNat.ofNat.{0} Nat (nat_lit 29) (instOfNatNat (nat_lit 29))))
+AXIOMS Atlas.Sporadic.Fischer24.order: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.positive_card
+Atlas.Sporadic.Fischer24.positive_card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Fischer24.PositiveModel)
+  (@OfNat.ofNat.{0} Nat (nat_lit 1255205709190661721292800) (instOfNatNat (nat_lit 1255205709190661721292800)))
+AXIOMS Atlas.Sporadic.Fischer24.positive_card: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.positive_transitive
+Atlas.Sporadic.Fischer24.positive_transitive : @MulAction.IsPretransitive.{0, 0}
+  (↥Atlas.Sporadic.Fischer24.PositiveModel)
+  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+  (@SemigroupAction.toSMul.{0, 0} (↥Atlas.Sporadic.Fischer24.PositiveModel)
+    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+    (@Monoid.toSemigroup.{0} (↥Atlas.Sporadic.Fischer24.PositiveModel)
+      (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.PositiveModel)
+        (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.PositiveModel)
+          (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+            (@Subgroup.toGroup.{0}
+              (Equiv.Perm.{1}
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+              (@Equiv.Perm.permGroup.{0}
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+              Atlas.Fischer.rootGeneratedRayGroup)
+            Atlas.Sporadic.Fischer24.PositiveModel))))
+    (@MulAction.toSemigroupAction.{0, 0} (↥Atlas.Sporadic.Fischer24.PositiveModel)
+      (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+      (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.PositiveModel)
+        (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.PositiveModel)
+          (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+            (@Subgroup.toGroup.{0}
+              (Equiv.Perm.{1}
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+              (@Equiv.Perm.permGroup.{0}
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+              Atlas.Fischer.rootGeneratedRayGroup)
+            Atlas.Sporadic.Fischer24.PositiveModel)))
+      (@Subgroup.instMulActionSubtypeMem.{0, 0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+        (@Subgroup.toGroup.{0}
+          (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          (@Equiv.Perm.permGroup.{0}
+            (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          Atlas.Fischer.rootGeneratedRayGroup)
+        (@Subgroup.instMulActionSubtypeMem.{0, 0}
+          (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+          (@Equiv.Perm.permGroup.{0}
+            (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          (Equiv.Perm.applyMulAction.{0}
+            (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          Atlas.Fischer.rootGeneratedRayGroup)
+        Atlas.Sporadic.Fischer24.PositiveModel)))
+AXIOMS Atlas.Sporadic.Fischer24.positive_transitive: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.rank_three
+Atlas.Sporadic.Fischer24.rank_three : ∀ (i : Atlas.Codes.Omega),
+  @Eq.{1} Nat
+    (Nat.card.{0}
+      (@MulAction.orbitRel.Quotient.{0, 0}
+        (↥(@MulAction.stabilizer.{0, 0} Atlas.Sporadic.Fischer24.RankThreeModel
+            (Atlas.Fischer.ResiduePoint
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+            (@QuotientGroup.Quotient.group.{0}
+              (↥(Atlas.Fischer.residueCentralizer
+                  (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                    (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+              (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+                (@Subgroup.toGroup.{0}
+                  (Equiv.Perm.{1}
+                    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                  (@Equiv.Perm.permGroup.{0}
+                    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                  Atlas.Fischer.rootGeneratedRayGroup)
+                (Atlas.Fischer.residueCentralizer
+                  (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                    (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+              (Atlas.Fischer.residueCentralElementary
+                (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                  (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+              ⋯)
+            (Atlas.Fischer.residueGroupMulAction
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+            (Atlas.Fischer.residueBasicPoint
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))
+              i ⋯)))
+        Atlas.Sporadic.Fischer24.RankThreePoints
+        (@Subgroup.toGroup.{0} Atlas.Sporadic.Fischer24.RankThreeModel
+          (@QuotientGroup.Quotient.group.{0}
+            (↥(Atlas.Fischer.residueCentralizer
+                (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                  (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+            (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+              (@Subgroup.toGroup.{0}
+                (Equiv.Perm.{1}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                (@Equiv.Perm.permGroup.{0}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                Atlas.Fischer.rootGeneratedRayGroup)
+              (Atlas.Fischer.residueCentralizer
+                (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                  (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+            (Atlas.Fischer.residueCentralElementary
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+            ⋯)
+          (@MulAction.stabilizer.{0, 0} Atlas.Sporadic.Fischer24.RankThreeModel
+            (Atlas.Fischer.ResiduePoint
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+            (@QuotientGroup.Quotient.group.{0}
+              (↥(Atlas.Fischer.residueCentralizer
+                  (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                    (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+              (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+                (@Subgroup.toGroup.{0}
+                  (Equiv.Perm.{1}
+                    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                  (@Equiv.Perm.permGroup.{0}
+                    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                  Atlas.Fischer.rootGeneratedRayGroup)
+                (Atlas.Fischer.residueCentralizer
+                  (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                    (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+              (Atlas.Fischer.residueCentralElementary
+                (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                  (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+              ⋯)
+            (Atlas.Fischer.residueGroupMulAction
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+            (Atlas.Fischer.residueBasicPoint
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))
+              i ⋯)))
+        (@Subgroup.instMulActionSubtypeMem.{0, 0} Atlas.Sporadic.Fischer24.RankThreeModel
+          Atlas.Sporadic.Fischer24.RankThreePoints
+          (@QuotientGroup.Quotient.group.{0}
+            (↥(Atlas.Fischer.residueCentralizer
+                (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                  (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+            (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+              (@Subgroup.toGroup.{0}
+                (Equiv.Perm.{1}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                (@Equiv.Perm.permGroup.{0}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                Atlas.Fischer.rootGeneratedRayGroup)
+              (Atlas.Fischer.residueCentralizer
+                (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                  (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+            (Atlas.Fischer.residueCentralElementary
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+            ⋯)
+          (Atlas.Fischer.residueGroupMulAction
+            (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+              (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+          (@MulAction.stabilizer.{0, 0} Atlas.Sporadic.Fischer24.RankThreeModel
+            (Atlas.Fischer.ResiduePoint
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+            (@QuotientGroup.Quotient.group.{0}
+              (↥(Atlas.Fischer.residueCentralizer
+                  (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                    (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+              (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+                (@Subgroup.toGroup.{0}
+                  (Equiv.Perm.{1}
+                    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                  (@Equiv.Perm.permGroup.{0}
+                    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                  Atlas.Fischer.rootGeneratedRayGroup)
+                (Atlas.Fischer.residueCentralizer
+                  (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                    (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))))
+              (Atlas.Fischer.residueCentralElementary
+                (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                  (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+              ⋯)
+            (Atlas.Fischer.residueGroupMulAction
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega)))
+            (Atlas.Fischer.residueBasicPoint
+              (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+                (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))
+              i ⋯)))))
+    (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+AXIOMS Atlas.Sporadic.Fischer24.rank_three: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.pentad_frames_transitive
+Atlas.Sporadic.Fischer24.pentad_frames_transitive : ∀
+  (t : Atlas.Fischer.OrderedCommutingTuple (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5)))),
+  @MulAction.IsPretransitive.{0, 0}
+    (↥(@MulAction.stabilizer.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+        (Atlas.Fischer.OrderedCommutingTuple (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+        (@Subgroup.toGroup.{0}
+          (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          (@Equiv.Perm.permGroup.{0}
+            (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          Atlas.Sporadic.Fischer24.Model)
+        (Atlas.Fischer.orderedCommutingTupleMulAction (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5)))) t))
+    (Atlas.Fischer.CommutingPentadFrame t)
+    (@SemigroupAction.toSMul.{0, 0}
+      (↥(@MulAction.stabilizer.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+          (Atlas.Fischer.OrderedCommutingTuple (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+          (@Subgroup.toGroup.{0}
+            (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            (@Equiv.Perm.permGroup.{0}
+              (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            Atlas.Sporadic.Fischer24.Model)
+          (Atlas.Fischer.orderedCommutingTupleMulAction (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+          t))
+      (Atlas.Fischer.CommutingPentadFrame t)
+      (@Monoid.toSemigroup.{0}
+        (↥(@MulAction.stabilizer.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+            (Atlas.Fischer.OrderedCommutingTuple (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+            (@Subgroup.toGroup.{0}
+              (Equiv.Perm.{1}
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+              (@Equiv.Perm.permGroup.{0}
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+              Atlas.Sporadic.Fischer24.Model)
+            (Atlas.Fischer.orderedCommutingTupleMulAction (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+            t))
+        (@DivInvMonoid.toMonoid.{0}
+          (↥(@MulAction.stabilizer.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+              (Atlas.Fischer.OrderedCommutingTuple (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+              (@Subgroup.toGroup.{0}
+                (Equiv.Perm.{1}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                (@Equiv.Perm.permGroup.{0}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                Atlas.Sporadic.Fischer24.Model)
+              (Atlas.Fischer.orderedCommutingTupleMulAction
+                (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+              t))
+          (@Group.toDivInvMonoid.{0}
+            (↥(@MulAction.stabilizer.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+                (Atlas.Fischer.OrderedCommutingTuple (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+                (@Subgroup.toGroup.{0}
+                  (Equiv.Perm.{1}
+                    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                  (@Equiv.Perm.permGroup.{0}
+                    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                  Atlas.Sporadic.Fischer24.Model)
+                (Atlas.Fischer.orderedCommutingTupleMulAction
+                  (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+                t))
+            (@Subgroup.toGroup.{0} (↥Atlas.Sporadic.Fischer24.Model)
+              (@Subgroup.toGroup.{0}
+                (Equiv.Perm.{1}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                (@Equiv.Perm.permGroup.{0}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                Atlas.Sporadic.Fischer24.Model)
+              (@MulAction.stabilizer.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+                (Atlas.Fischer.OrderedCommutingTuple (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+                (@Subgroup.toGroup.{0}
+                  (Equiv.Perm.{1}
+                    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                  (@Equiv.Perm.permGroup.{0}
+                    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                  Atlas.Sporadic.Fischer24.Model)
+                (Atlas.Fischer.orderedCommutingTupleMulAction
+                  (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+                t)))))
+      (@MulAction.toSemigroupAction.{0, 0}
+        (↥(@MulAction.stabilizer.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+            (Atlas.Fischer.OrderedCommutingTuple (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+            (@Subgroup.toGroup.{0}
+              (Equiv.Perm.{1}
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+              (@Equiv.Perm.permGroup.{0}
+                (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+              Atlas.Sporadic.Fischer24.Model)
+            (Atlas.Fischer.orderedCommutingTupleMulAction (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+            t))
+        (Atlas.Fischer.CommutingPentadFrame t)
+        (@DivInvMonoid.toMonoid.{0}
+          (↥(@MulAction.stabilizer.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+              (Atlas.Fischer.OrderedCommutingTuple (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+              (@Subgroup.toGroup.{0}
+                (Equiv.Perm.{1}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                (@Equiv.Perm.permGroup.{0}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                Atlas.Sporadic.Fischer24.Model)
+              (Atlas.Fischer.orderedCommutingTupleMulAction
+                (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+              t))
+          (@Group.toDivInvMonoid.{0}
+            (↥(@MulAction.stabilizer.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+                (Atlas.Fischer.OrderedCommutingTuple (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+                (@Subgroup.toGroup.{0}
+                  (Equiv.Perm.{1}
+                    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                  (@Equiv.Perm.permGroup.{0}
+                    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                  Atlas.Sporadic.Fischer24.Model)
+                (Atlas.Fischer.orderedCommutingTupleMulAction
+                  (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+                t))
+            (@Subgroup.toGroup.{0} (↥Atlas.Sporadic.Fischer24.Model)
+              (@Subgroup.toGroup.{0}
+                (Equiv.Perm.{1}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                (@Equiv.Perm.permGroup.{0}
+                  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                Atlas.Sporadic.Fischer24.Model)
+              (@MulAction.stabilizer.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+                (Atlas.Fischer.OrderedCommutingTuple (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+                (@Subgroup.toGroup.{0}
+                  (Equiv.Perm.{1}
+                    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                  (@Equiv.Perm.permGroup.{0}
+                    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                  Atlas.Sporadic.Fischer24.Model)
+                (Atlas.Fischer.orderedCommutingTupleMulAction
+                  (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+                t))))
+        (Atlas.Fischer.commutingPentadFrameMulAction t)))
+AXIOMS Atlas.Sporadic.Fischer24.pentad_frames_transitive: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.finite
+Atlas.Sporadic.Fischer24.finite : Finite.{1} ↥Atlas.Sporadic.Fischer24.Model
+AXIOMS Atlas.Sporadic.Fischer24.finite: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.pointwise_frame_kernel
+Atlas.Sporadic.Fischer24.pointwise_frame_kernel : @Eq.{1}
+  (@Subgroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+    (@Subgroup.toGroup.{0}
+      (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      (@Equiv.Perm.permGroup.{0}
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      Atlas.Fischer.rootGeneratedRayGroup))
+  Atlas.Fischer.basicFramePointwiseRayStabilizer
+  (@MonoidHom.range.{0, 0} (Multiplicative.{0} Atlas.Fischer.Cocode)
+    (@Multiplicative.group.{0} Atlas.Fischer.Cocode
+      (@AddCommGroup.toAddGroup.{0} Atlas.Fischer.Cocode
+        (@Submodule.Quotient.addCommGroup.{0, 0} Atlas.Codes.Bit Atlas.Codes.BinaryWord
+          (@DivisionRing.toRing.{0} Atlas.Codes.Bit
+            (@Field.toDivisionRing.{0} Atlas.Codes.Bit
+              (@ZMod.instField (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) Nat.fact_prime_two)))
+          (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Atlas.Codes.Bit) fun i =>
+            @Ring.toAddCommGroup.{0} Atlas.Codes.Bit
+              (@DivisionRing.toRing.{0} Atlas.Codes.Bit
+                (@Field.toDivisionRing.{0} Atlas.Codes.Bit
+                  (@ZMod.instField (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) Nat.fact_prime_two))))
+          (@Pi.Function.module.{0, 0, 0} Atlas.Codes.Omega Atlas.Codes.Bit Atlas.Codes.Bit
+            (@DivisionSemiring.toSemiring.{0} Atlas.Codes.Bit
+              (@Semifield.toDivisionSemiring.{0} Atlas.Codes.Bit
+                (@Field.toSemifield.{0} Atlas.Codes.Bit
+                  (@ZMod.instField (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) Nat.fact_prime_two))))
+            (@Semiring.toAddCommMonoid.{0} Atlas.Codes.Bit
+              (@DivisionSemiring.toSemiring.{0} Atlas.Codes.Bit
+                (@Semifield.toDivisionSemiring.{0} Atlas.Codes.Bit
+                  (@Field.toSemifield.{0} Atlas.Codes.Bit
+                    (@ZMod.instField (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+                      Nat.fact_prime_two)))))
+            (@Semiring.toModule.{0} Atlas.Codes.Bit
+              (@DivisionSemiring.toSemiring.{0} Atlas.Codes.Bit
+                (@Semifield.toDivisionSemiring.{0} Atlas.Codes.Bit
+                  (@Field.toSemifield.{0} Atlas.Codes.Bit
+                    (@ZMod.instField (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+                      Nat.fact_prime_two))))))
+          Atlas.Codes.golay)))
+    (↥Atlas.Fischer.rootGeneratedRayGroup)
+    (@Subgroup.toGroup.{0}
+      (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      (@Equiv.Perm.permGroup.{0}
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      Atlas.Fischer.rootGeneratedRayGroup)
+    Atlas.Fischer.generatedCocodeRayHom)
+AXIOMS Atlas.Sporadic.Fischer24.pointwise_frame_kernel: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.primitive
+Atlas.Sporadic.Fischer24.primitive : @MulAction.IsPreprimitive.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+  (@SemigroupAction.toSMul.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+    (@Monoid.toSemigroup.{0} (↥Atlas.Sporadic.Fischer24.Model)
+      (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+        (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+          (@Subgroup.toGroup.{0}
+            (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            (@Equiv.Perm.permGroup.{0}
+              (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            Atlas.Sporadic.Fischer24.Model))))
+    (@MulAction.toSemigroupAction.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+      (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+      (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+        (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+          (@Subgroup.toGroup.{0}
+            (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            (@Equiv.Perm.permGroup.{0}
+              (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            Atlas.Sporadic.Fischer24.Model)))
+      (@Subgroup.instMulActionSubtypeMem.{0, 0}
+        (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+        (@Equiv.Perm.permGroup.{0}
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        (Equiv.Perm.applyMulAction.{0}
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        Atlas.Sporadic.Fischer24.Model)))
+AXIOMS Atlas.Sporadic.Fischer24.primitive: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.points_card
+Atlas.Sporadic.Fischer24.points_card : @Eq.{1} Nat
+  (Nat.card.{0} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points))
+  (@OfNat.ofNat.{0} Nat (nat_lit 306936) (instOfNatNat (nat_lit 306936)))
+AXIOMS Atlas.Sporadic.Fischer24.points_card: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.pentad_stabilizer
+Atlas.Sporadic.Fischer24.pentad_stabilizer : ∀
+  (t : Atlas.Fischer.OrderedCommutingTuple (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5)))),
+  @Eq.{1} Nat
+    (Nat.card.{0}
+      ↥(@MulAction.stabilizer.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+          (Atlas.Fischer.OrderedCommutingTuple (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+          (@Subgroup.toGroup.{0}
+            (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            (@Equiv.Perm.permGroup.{0}
+              (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            Atlas.Sporadic.Fischer24.Model)
+          (Atlas.Fischer.orderedCommutingTupleMulAction (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+          t))
+    (@OfNat.ofNat.{0} Nat (nat_lit 589824) (instOfNatNat (nat_lit 589824)))
+AXIOMS Atlas.Sporadic.Fischer24.pentad_stabilizer: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.subdegrees
+Atlas.Sporadic.Fischer24.subdegrees : ∀ (i : Atlas.Codes.Omega)
+  (j : Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))),
+  @Eq.{1} Nat
+    (Nat.card.{0}
+      (@Subtype.{1} Atlas.Sporadic.Fischer24.RankThreePoints fun x =>
+        @Eq.{1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+          (Atlas.Fischer.residueSuborbitIndex
+            (@EmptyCollection.emptyCollection.{0} (Finset.{0} Atlas.Codes.Omega)
+              (@Finset.instEmptyCollection.{0} Atlas.Codes.Omega))
+            i ⋯ x)
+          j))
+    (@Matrix.vecCons.{0} Nat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+      (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+      (@Matrix.vecCons.{0} Nat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 31671) (instOfNatNat (nat_lit 31671)))
+        (@Matrix.vecCons.{0} Nat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+          (@OfNat.ofNat.{0} Nat (nat_lit 275264) (instOfNatNat (nat_lit 275264))) (@Matrix.vecEmpty.{0} Nat)))
+      j)
+AXIOMS Atlas.Sporadic.Fischer24.subdegrees: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.no_solvable_normal
+Atlas.Sporadic.Fischer24.no_solvable_normal : ∀
+  (N :
+    @Subgroup.{0} (↥Atlas.Sporadic.Fischer24.Model)
+      (@Subgroup.toGroup.{0}
+        (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        (@Equiv.Perm.permGroup.{0}
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        Atlas.Sporadic.Fischer24.Model))
+  [@Subgroup.Normal.{0} (↥Atlas.Sporadic.Fischer24.Model)
+      (@Subgroup.toGroup.{0}
+        (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        (@Equiv.Perm.permGroup.{0}
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        Atlas.Sporadic.Fischer24.Model)
+      N]
+  [@Group.IsSolvable.{0} (↥N)
+      (@Subgroup.toGroup.{0} (↥Atlas.Sporadic.Fischer24.Model)
+        (@Subgroup.toGroup.{0}
+          (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          (@Equiv.Perm.permGroup.{0}
+            (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          Atlas.Sporadic.Fischer24.Model)
+        N)],
+  @Eq.{1}
+    (@Subgroup.{0} (↥Atlas.Sporadic.Fischer24.Model)
+      (@Subgroup.toGroup.{0}
+        (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        (@Equiv.Perm.permGroup.{0}
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        Atlas.Sporadic.Fischer24.Model))
+    N
+    (@Bot.bot.{0}
+      (@Subgroup.{0} (↥Atlas.Sporadic.Fischer24.Model)
+        (@Subgroup.toGroup.{0}
+          (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          (@Equiv.Perm.permGroup.{0}
+            (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          Atlas.Sporadic.Fischer24.Model))
+      (@Subgroup.instBot.{0} (↥Atlas.Sporadic.Fischer24.Model)
+        (@Subgroup.toGroup.{0}
+          (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          (@Equiv.Perm.permGroup.{0}
+            (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          Atlas.Sporadic.Fischer24.Model)))
+AXIOMS Atlas.Sporadic.Fischer24.no_solvable_normal: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.center
+Atlas.Sporadic.Fischer24.center : @Eq.{1}
+  (@Subgroup.{0} (↥Atlas.Sporadic.Fischer24.Model)
+    (@Subgroup.toGroup.{0}
+      (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      (@Equiv.Perm.permGroup.{0}
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      Atlas.Sporadic.Fischer24.Model))
+  (@Subgroup.center.{0} (↥Atlas.Sporadic.Fischer24.Model)
+    (@Subgroup.toGroup.{0}
+      (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      (@Equiv.Perm.permGroup.{0}
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      Atlas.Sporadic.Fischer24.Model))
+  (@Bot.bot.{0}
+    (@Subgroup.{0} (↥Atlas.Sporadic.Fischer24.Model)
+      (@Subgroup.toGroup.{0}
+        (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        (@Equiv.Perm.permGroup.{0}
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        Atlas.Sporadic.Fischer24.Model))
+    (@Subgroup.instBot.{0} (↥Atlas.Sporadic.Fischer24.Model)
+      (@Subgroup.toGroup.{0}
+        (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        (@Equiv.Perm.permGroup.{0}
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        Atlas.Sporadic.Fischer24.Model)))
+AXIOMS Atlas.Sporadic.Fischer24.center: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.scalar_kernel
+Atlas.Sporadic.Fischer24.scalar_kernel : @Eq.{1}
+  (@Subgroup.{0} (↥Atlas.Sporadic.Fischer24.AlgebraGroup)
+    (@Subgroup.toGroup.{0} (Equiv.Perm.{1} Atlas.Fischer.Coordinates)
+      (@Equiv.Perm.permGroup.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.AlgebraGroup))
+  (@MonoidHom.ker.{0, 0} (↥Atlas.Sporadic.Fischer24.AlgebraGroup)
+    (@Subgroup.toGroup.{0} (Equiv.Perm.{1} Atlas.Fischer.Coordinates)
+      (@Equiv.Perm.permGroup.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.AlgebraGroup)
+    (↥Atlas.Sporadic.Fischer24.Model)
+    (@Monoid.toMulOneClass.{0} (↥Atlas.Sporadic.Fischer24.Model)
+      (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+        (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+          (@Subgroup.toGroup.{0}
+            (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            (@Equiv.Perm.permGroup.{0}
+              (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            Atlas.Sporadic.Fischer24.Model))))
+    Atlas.Sporadic.Fischer24.projection)
+  (@MonoidHom.range.{0, 0} (↥Atlas.Fischer.Mu3)
+    (@Subgroup.toGroup.{0}
+      (@Units.{0} Atlas.Fischer.Scalar
+        (@CommMonoid.toMonoid.{0} Atlas.Fischer.Scalar
+          (@CommRing.toCommMonoid.{0} Atlas.Fischer.Scalar
+            (@QuadraticAlgebra.instCommRing.{0} Rat
+              (@Neg.neg.{0} Rat Rat.instNeg (@OfNat.ofNat.{0} Rat (nat_lit 1) (@Rat.instOfNat (nat_lit 1))))
+              (@Neg.neg.{0} Rat Rat.instNeg (@OfNat.ofNat.{0} Rat (nat_lit 1) (@Rat.instOfNat (nat_lit 1))))
+              Rat.commRing))))
+      (@Units.instGroup.{0} Atlas.Fischer.Scalar
+        (@CommMonoid.toMonoid.{0} Atlas.Fischer.Scalar
+          (@CommRing.toCommMonoid.{0} Atlas.Fischer.Scalar
+            (@QuadraticAlgebra.instCommRing.{0} Rat
+              (@Neg.neg.{0} Rat Rat.instNeg (@OfNat.ofNat.{0} Rat (nat_lit 1) (@Rat.instOfNat (nat_lit 1))))
+              (@Neg.neg.{0} Rat Rat.instNeg (@OfNat.ofNat.{0} Rat (nat_lit 1) (@Rat.instOfNat (nat_lit 1))))
+              Rat.commRing))))
+      Atlas.Fischer.Mu3)
+    (↥Atlas.Fischer.SemilinearAlgebraAutomorphism)
+    (@Subgroup.toGroup.{0} (Equiv.Perm.{1} Atlas.Fischer.Coordinates)
+      (@Equiv.Perm.permGroup.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.SemilinearAlgebraAutomorphism)
+    Atlas.Fischer.scalarAlgebraRepresentation)
+AXIOMS Atlas.Sporadic.Fischer24.scalar_kernel: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.exists_model
+Atlas.Sporadic.Fischer24.exists_model : ∃ G x,
+  And (Finite.{1} G)
+    (@Eq.{1} Nat (Nat.card.{0} G)
+      (@OfNat.ofNat.{0} Nat (nat_lit 2510411418381323442585600) (instOfNatNat (nat_lit 2510411418381323442585600))))
+AXIOMS Atlas.Sporadic.Fischer24.exists_model: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.construction
+Atlas.Sporadic.Fischer24.construction : Atlas.Sporadic.Fischer24.OrderConstruction
+AXIOMS Atlas.Sporadic.Fischer24.construction: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.Sporadic.Fischer24.transitive
+Atlas.Sporadic.Fischer24.transitive : @MulAction.IsPretransitive.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+  (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+  (@SemigroupAction.toSMul.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+    (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+    (@Monoid.toSemigroup.{0} (↥Atlas.Sporadic.Fischer24.Model)
+      (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+        (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+          (@Subgroup.toGroup.{0}
+            (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            (@Equiv.Perm.permGroup.{0}
+              (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            Atlas.Sporadic.Fischer24.Model))))
+    (@MulAction.toSemigroupAction.{0, 0} (↥Atlas.Sporadic.Fischer24.Model)
+      (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+      (@DivInvMonoid.toMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+        (@Group.toDivInvMonoid.{0} (↥Atlas.Sporadic.Fischer24.Model)
+          (@Subgroup.toGroup.{0}
+            (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            (@Equiv.Perm.permGroup.{0}
+              (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+            Atlas.Sporadic.Fischer24.Model)))
+      (@Subgroup.instMulActionSubtypeMem.{0, 0}
+        (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Sporadic.Fischer24.Points)
+        (@Equiv.Perm.permGroup.{0}
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        (Equiv.Perm.applyMulAction.{0}
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        Atlas.Sporadic.Fischer24.Model)))
+AXIOMS Atlas.Sporadic.Fischer24.transitive: [propext, Classical.choice, Quot.sound]
+GRAPH COMPLETE 44181 declarations; 30 selected roots

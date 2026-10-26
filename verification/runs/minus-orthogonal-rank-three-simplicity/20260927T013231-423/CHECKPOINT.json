@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "minus-orthogonal-rank-three-simplicity",
+  "imports": [
+    "Atlas.LinearGroups.Orthogonal.Minus.RankThreeSimplicity"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThree_noncommutative",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeSimplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThree_simple",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeSimplicity",
+      "kind": "any"
+    }
+  ],
+  "boundaries": []
+}

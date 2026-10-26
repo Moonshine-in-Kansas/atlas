@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "f4-public-package",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.TypeF4",
+    "Atlas.LinearGroups.F4.NearPointCount"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.F4.Model",
+      "module": "Atlas.LinearGroups.F4.Basic",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.card_Model",
+      "module": "Atlas.LinearGroups.F4.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.card_nearPoints",
+      "module": "Atlas.LinearGroups.F4.NearPointCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.center_eq_bot",
+      "module": "Atlas.LinearGroups.F4.Center",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.exists_mul_ne_mul",
+      "module": "Atlas.LinearGroups.F4.LongRootSeed",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.fieldPointTransport_equivariant",
+      "module": "Atlas.LinearGroups.F4.FieldPointTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.fieldTransport_root",
+      "module": "Atlas.LinearGroups.F4.FieldRootTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.finite_model",
+      "module": "Atlas.LinearGroups.F4.Basic",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.generated_eq_top",
+      "module": "Atlas.LinearGroups.F4.Generation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.isPerfect",
+      "module": "Atlas.LinearGroups.F4.Perfect",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.isSimple",
+      "module": "Atlas.LinearGroups.F4.Simplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.localRadical_card",
+      "module": "Atlas.LinearGroups.F4.LocalRadicals",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.localRadical_conj",
+      "module": "Atlas.LinearGroups.F4.LocalRadicals",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.localRadical_normal",
+      "module": "Atlas.LinearGroups.F4.LocalRadicals",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.whiteZeroPoints_primitive",
+      "module": "Atlas.LinearGroups.F4.PointPrimitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.TypeF4Construction",
+      "module": "Atlas.LinearGroups.TypeF4",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.exists_typeF4",
+      "module": "Atlas.LinearGroups.TypeF4",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.exists_typeF4_prime_power",
+      "module": "Atlas.LinearGroups.TypeF4",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.typeF4_construction",
+      "module": "Atlas.LinearGroups.TypeF4",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.typeF4_fieldTransport",
+      "module": "Atlas.LinearGroups.TypeF4",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.typeF4_prime_power",
+      "module": "Atlas.LinearGroups.TypeF4",
+      "kind": "theorem"
+    }
+  ]
+}

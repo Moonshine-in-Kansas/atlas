@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas.LinearGroups.Unitary.ProjectiveOrderChecks"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "unitary-projective-order",
+  "targets": [
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.center_four_binary",
+      "module": "Atlas.LinearGroups.Unitary.ProjectiveOrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.center_three_binary",
+      "module": "Atlas.LinearGroups.Unitary.ProjectiveOrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.psu_five_binary",
+      "module": "Atlas.LinearGroups.Unitary.ProjectiveOrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.psu_four_binary",
+      "module": "Atlas.LinearGroups.Unitary.ProjectiveOrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.psu_four_ternary",
+      "module": "Atlas.LinearGroups.Unitary.ProjectiveOrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.psu_three_binary",
+      "module": "Atlas.LinearGroups.Unitary.ProjectiveOrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.psu_three_ternary",
+      "module": "Atlas.LinearGroups.Unitary.ProjectiveOrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.psu_two_binary",
+      "module": "Atlas.LinearGroups.Unitary.ProjectiveOrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.psu_two_ternary",
+      "module": "Atlas.LinearGroups.Unitary.ProjectiveOrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Unitary.card_psu",
+      "module": "Atlas.LinearGroups.Unitary.ProjectiveOrder",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Unitary.card_psu_factor",
+      "module": "Atlas.LinearGroups.Unitary.ProjectiveOrder",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Unitary.card_psu_mul_center",
+      "module": "Atlas.LinearGroups.Unitary.ProjectiveOrder",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Unitary.card_psu_mul_gcd",
+      "module": "Atlas.LinearGroups.Unitary.ProjectiveOrder",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Unitary.center_factor_dvd_orderSU",
+      "module": "Atlas.LinearGroups.Unitary.ProjectiveOrder",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independent-projective-unitary-order",
+      "all_roots": true,
+      "module_allowlists": [
+        {
+          "prefix": "Atlas.",
+          "modules": [
+            "Atlas.FieldTheory.FiniteQuadraticCounts",
+            "Atlas.FieldTheory.FiniteQuadraticExtension",
+            "Atlas.FieldTheory.FiniteQuadraticFibers",
+            "Atlas.LinearGroups.Unitary.Basic",
+            "Atlas.LinearGroups.Unitary.Center",
+            "Atlas.LinearGroups.Unitary.CenterLines",
+            "Atlas.LinearGroups.Unitary.Determinant",
+            "Atlas.LinearGroups.Unitary.Hermitian",
+            "Atlas.LinearGroups.Unitary.IsotropicScalar",
+            "Atlas.LinearGroups.Unitary.NormCounts",
+            "Atlas.LinearGroups.Unitary.NormOneTransport",
+            "Atlas.LinearGroups.Unitary.Order",
+            "Atlas.LinearGroups.Unitary.OrderChecks",
+            "Atlas.LinearGroups.Unitary.OrderFormula",
+            "Atlas.LinearGroups.Unitary.OrthogonalSplit",
+            "Atlas.LinearGroups.Unitary.Projective",
+            "Atlas.LinearGroups.Unitary.ProjectiveOrder",
+            "Atlas.LinearGroups.Unitary.ProjectiveOrderChecks",
+            "Atlas.LinearGroups.Unitary.ScalarParameters",
+            "Atlas.LinearGroups.Unitary.ScalarSubgroup",
+            "Atlas.LinearGroups.Unitary.ShellAction",
+            "Atlas.LinearGroups.Unitary.StandardComplement",
+            "Atlas.LinearGroups.Unitary.StandardStabilizer",
+            "Atlas.LinearGroups.Unitary.Transvections",
+            "Atlas.LinearGroups.Unitary.VectorAction"
+          ]
+        }
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.Unitary.simple",
+        "Atlas.Unitary.perfect",
+        "Atlas.Unitary.generation"
+      ],
+      "forbid_modules": [
+        "Atlas.GroupTheory.IwasawaStabilizer"
+      ]
+    }
+  ]
+}

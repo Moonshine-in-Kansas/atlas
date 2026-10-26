@@ -2,7 +2,31 @@
 # Install once with: git config core.hooksPath verification/hooks
 set -eu
 cd "$(git rev-parse --show-toplevel)"
-ruby verification/release_metadata.rb check
+# Only the explicitly authorized review branch uses preparation validation.
+# Main, tags and all other refs continue to require full release acceptance.
+mode=check-preparation
+updates=0
+head_commit=$(git rev-parse HEAD)
+while read -r local_ref local_sha remote_ref remote_sha; do
+  updates=$((updates + 1))
+  if test "$local_sha" = 0000000000000000000000000000000000000000; then
+    echo 'Release push refused: ref deletion requires separate handling.' >&2
+    exit 1
+  fi
+  target_commit=$(git rev-parse "$local_sha^{commit}")
+  if test "$target_commit" != "$head_commit"; then
+    echo 'Release push refused: the pushed commit must be the checked HEAD.' >&2
+    exit 1
+  fi
+  if test "$remote_ref" != refs/heads/v1.2-review; then
+    mode=check
+  fi
+done
+if test "$updates" -eq 0; then
+  echo 'Release push refused: no ref update supplied to the guard.' >&2
+  exit 1
+fi
+ruby verification/release_metadata.rb "$mode"
 if test -n "$(git status --porcelain --untracked-files=normal)"; then
   echo 'Release push refused: commit the reviewed release changes first.' >&2
   exit 1

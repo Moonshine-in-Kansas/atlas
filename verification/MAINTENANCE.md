@@ -1,104 +1,107 @@
-# Maintaining release metadata
+# Maintaining Version 1.2 metadata
 
-`catalogue/` contains machine-readable catalogue and line-count data. The root
-README, catalogue, research PDF, audit summary, licensing and Lean configuration
-are the reader's entry points. Detailed verification material belongs here.
+This is a prepared candidate with pending publication acceptance. All 33
+catalogue defaults, six additional model contracts, four strengthened contracts
+and two aggregate comparison contracts are indexed. The three deferred targets
+remain open; preparation does not retry them or count them as passed.
 
-After cloning, install the local publication gate once:
-
-```sh
-git config core.hooksPath verification/hooks
-```
-
-For documentation-only changes (including a new research PDF), run:
+## Local preparation
 
 ```sh
 ruby verification/release_metadata.rb refresh
-ruby verification/release_metadata.rb check
+ruby verification/release_metadata.rb check-preparation
 ```
 
-The refresh regenerates AUDIT.md, THEOREM_STATEMENTS.md and both manifests.
-The statement document is rendered from the hashed compiled-statement log in the
-current evidence snapshot. New snapshots must include that log and its hash.
-The check is read-only.
-The pre-push hook requires a passing check and a clean committed checkout.
-Git hooks are local safeguards, not a server policy; clones must install them,
-and a user can deliberately bypass them. No push or visibility change is automated.
+Refresh generates the catalogue pages, 66 principal compiled statements,
+Comparator result table and YAML result index, AUDIT.md and complete manifests.
+The read-only preparation check verifies exact source and pin hashes, all 1,207
+audit roots across the catalogue and realization/comparison registries,
+immutable checker bundles, 33 diagram measurements, reader links and every
+distributed file. It accepts explicitly pending verification as a preparation
+state. It launches no proof checker and grants no publication acceptance.
 
-For changed mathematics, toolchain pins, catalogue targets or measured source
-lines, old success records cannot be reused: the metadata gate fails. Run the
-required build/dependency audit and checker runs, retain their evidence in a new
-dated directory, and update `current.json` only after reviewing successful results.
-Its source map must cover exactly the current Atlas sources and three pin/build
-files; its roots must match the current catalogue and verification target list.
-Recompute line counts and update `catalogue/measurement.json`. Never modify an
-old successful run to make it appear to cover new mathematics.
+`RELEASE_MANIFEST.json` covers every distributed file except the three manifests
+themselves. `SHA256SUMS` additionally covers that JSON manifest;
+`verification/release-candidate/PACKAGE_SHA256SUMS` additionally covers
+`SHA256SUMS`. Only the final package checksum file excludes itself. Ignored local
+Git metadata, Lake caches and `verification/results/` outputs are not distributed.
 
-The current evidence summaries are historical records, not signed execution
-attestations. Source hashes bind their applicability; they do not prove the
-checks actually ran. A later independent rerun remains possible.
+## Publication gate
 
-The mathematical review of new catalogue descriptions, changes to licensing,
-and explicit permission before public visibility remain human decisions.
+```sh
+ruby verification/release_metadata.rb check
+git config core.hooksPath verification/hooks
+```
 
-## Formalization metadata and Comparator contracts
+`check` repeats preparation validation and refuses outstanding acceptance.
+The owner has separately authorized uploading the candidate to `v1.2-review`
+while keeping `main` at Version 1.0 for review. Only that review branch uses
+`check-preparation` in the pre-push hook. Main, version tags and every other
+branch still require `check`. Every pushed commit must match the checked HEAD,
+and the checkout must be clean. Mixed pushes containing a main/tag update use
+the strict gate for the whole push. The Pages workflow always uses the strict
+gate and deploys automatically only for main. A review upload creates no final
+release tag and does not change the default branch or deploy Pages.
 
-The single root `formalization.yaml` holds the project-wide description. Its
-`status.main_results` and verification report counts are generated from
-`verification/existence/registry.json`. Each registry entry supplies the display
-name, declaration, scope, solution imports and immutable successful evidence path.
-Every family/sporadic catalogue entry must have an existence-contract entry;
-an uncovered new group blocks publication.
+Local hooks are safeguards, not a server policy. Owner review and completion of
+acceptance remain prerequisites for promoting Version 1.2 to main.
+These commands never push, enable Pages or change repository visibility.
 
-The reviewed mathematical specifications remain in
-`verification/existence/{Challenge,Solution}.lean` and
-`verification/existence/discriminators/{Challenge,Solution}.lean`.
-Edit these deliberately when adding or changing results. The tooling does not
-invent a mathematical specification from an implementation theorem.
-The shared renderer generates each individual Challenge, Solution and Comparator
-configuration when preparing a queue. The same renderer checks that the recorded
-successful inputs match the current contracts exactly.
+`current.json` separates the supplemental cache audit and dated checker records
+from current-export acceptance. The cache audit is a successful fresh root
+elaboration and full compiled dependency inspection. It is not a fresh rebuild
+of every project proof or an independent kernel replay. Its two false scope flags
+are checked, and its success cannot fill an independent-checker acceptance slot.
 
-For a new release:
+Before promotion, the exact export still needs accepted project proof rechecking,
+a complete dependency audit, Nanoda and interface Comparator evidence. The three
+deferred mathematical contracts must also be resolved under a later assignment.
+Existing 42/45 outcomes stay immutable. New acceptance uses separate dated
+evidence, exact source/pin and root maps, a hashed bundle, original process
+receipts and an explicit `ACCEPTANCE.json`; old results must not be relabelled.
+An accepted receipt declares its check kind, allowed axioms, unchanged inputs
+and actual proof-rebuild/replay scope. The gate validates applicability and
+process outcomes. Human review of the real logs and mathematical scope remains
+necessary; a JSON receipt and its hashes are not execution attestations.
 
-1. Update the reviewed contracts and registry for new or changed results. Preserve
-   the project-wide YAML description; update its prose when the scope changes.
-2. Use the existing preparation and sequential runner instructions to check both
-   required scopes. Run one checker at a time with the documented memory limits.
-3. Collect successful evidence with
-   `ruby verification/existence/collect-results.rb QUEUE_DIRECTORY YYYY-MM-DD`
-   and the corresponding `discriminators/collect-results.rb` command. A date is
-   optional and defaults to the current UTC date. Collectors refuse to overwrite
-   different historical records and update registry evidence pointers only for
-   validated passes. Use a new evidence directory for changed runs.
-4. Run `ruby verification/release_metadata.rb refresh`, then `check`.
-   This automatically synchronizes and validates the root YAML, combined Comparator
-   configurations and target index, as well as release checksums. The pre-push
-   hook repeats the check. Changed contracts, changed source snapshots, missing
-   results, corrupted logs or incomplete catalogue coverage block publication.
+## Contracts and reproduction
 
-No historical proof result is promoted to cover changed sources. A metadata
-refresh runs no Lean proofs and grants no new verification status. Project-wide
-YAML prose and mathematical specifications still require deliberate maintenance.
-The private release-preparation script uses this same gate; uploads remain explicit.
+The format-2 [registry](existence/registry.json) binds every actual model to its
+reviewed reference, solution and configuration in the original dated bundle.
+Albert F₄ and Chevalley F₄ are distinct witnesses. E₆/E₇/E₈ use their completed
+Chevalley anchors. Missing or substituted defaults are rejected.
 
-Run `ruby verification/existence/test-sync.rb` for lightweight regression checks
-of these safeguards, without launching Lean or accessing the network.
+To prepare a portable harness without running a checker:
 
-## Proof dependency diagrams
+```sh
+ruby verification/existence/prepare-queue.rb /absolute/path/to/new-queue AtlasExistence.cyclic
+```
 
-Catalogue entries optionally carry a `proof_dependencies` HTML path.
-The metadata gate generates/checks the single Lean files / theorems column and
-checks each diagram’s theorem roots and source hashes. Regenerate all twenty-three
-published group/family pages with `ruby verification/dependency-maps/sporadic/generate.rb`
-after changes to the diagram generator or template, then run the usual metadata
-refresh/check. Changed mathematical sources require new verification evidence;
-the generator accepts only the recorded release licence-header substitution
-against the historical dependency graph. The private release-preparation script
-copies the maintained viewer tools and regenerates against release sources.
-GitHub Pages was enabled with owner authorization on 5 October 2026.
-The catalogue’s `proof_dependencies_site` selects the rendered website URL.
-The Pages workflow checks metadata and source bindings, then publishes only the
-linked diagrams and an index. Repository source/audit links stay on github.com.
-Changes to diagrams, catalogue data or the workflow redeploy automatically.
-Local release preparation never enables Pages or pushes without authorization.
+With no target arguments this prepares the 42 previously passed targets.
+It refuses the three owner-deferred targets and existing output directories.
+Only local Lake paths and package metadata are adapted; reviewed Lean/config
+bytes are copied exactly. Follow [the checker guide](INDEPENDENT_CHECKERS.md)
+for an actual replay. No previous pass is promoted by harness preparation.
+
+Run lightweight regression checks with an output directory outside the candidate:
+
+```sh
+ruby verification/test_metadata.rb /absolute/path/to/new-test-output
+```
+
+These deliberately alter in-memory test inputs and isolated scratch files.
+They do not edit mathematical sources, dated evidence or original receipts.
+
+## Reader documents and website
+
+Edit catalogue data and use `ruby catalogue/manage.rb refresh`, then `check`.
+Do not hand-edit generated catalogue or theorem-statement pages. Measurements
+are dated declaration-span counts, with exact roots, sources and diagrams bound
+by `catalogue/measurement.json`; they are not a new recount or proof check.
+
+The research-note TeX/PDF remains the dated 25 October development account;
+README records its broader local scope. Construction jobs and internal progress
+notes are excluded. Version 1.0's immutable release and original public history
+must be rechecked before any promotion. The prepared Pages workflow preserves
+old unversioned URLs and separate `v1.0/` and `v1.2/` views; the root becomes the
+Version 1.2 view only after the strict gate and publication succeed.

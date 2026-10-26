@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "orthogonal-d-family-simplicity",
+  "targets": [
+    {
+      "declaration": "Atlas.Orthogonal.Checks.d4_four_simple",
+      "module": "Atlas.LinearGroups.Orthogonal.DSimplicityChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Checks.d4_three_simple",
+      "module": "Atlas.LinearGroups.Orthogonal.DSimplicityChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_elementary_perfect",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_noncommutative",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_perfect",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_simple",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_simple_iff",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "d-simplicity-independent-of-order",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Orthogonal.FullOrder",
+        "Atlas.LinearGroups.Orthogonal.ProjectiveDOrderAllChar",
+        "Atlas.LinearGroups.Orthogonal.EvenDOrder",
+        "Atlas.LinearGroups.Orthogonal.DOrderChecks"
+      ]
+    },
+    {
+      "id": "d-perfectness-independent-of-simplicity",
+      "roots": [
+        "Atlas.Orthogonal.DPlus_perfect",
+        "Atlas.Orthogonal.DPlus_elementary_perfect"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.Orthogonal.projectiveD_simple_all_char",
+        "Atlas.Orthogonal.DPlus_simple"
+      ]
+    }
+  ]
+}

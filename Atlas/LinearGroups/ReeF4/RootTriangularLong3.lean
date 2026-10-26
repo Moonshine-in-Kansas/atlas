@@ -1,0 +1,108 @@
+import Atlas.LinearGroups.ReeF4.RootTriangularLong2
+namespace Atlas.ReeF4
+open Atlas.Albert
+variable {F : Type*} [CommRing F] [CharP F 2]
+set_option maxRecDepth 8192 in
+set_option maxHeartbeats 1000000 in
+theorem alternating_long_strictlyLowering_3 (u z : F) :
+    StrictlyLoweringFormula (alternatingLongPermutation 3) (longSL2Formula u z) := by
+  intro w c hzero
+  rcases c with ⟨i,j⟩
+  fin_cases i <;> fin_cases j
+  · -- Coordinate (0,0); 1 genuine higher support coordinates.
+    have hz0 := hzero (2,0) (by decide)
+    change w.2 2 0 = 0 at hz0
+    simp [longSL2Formula, wilsonCoordinatesEquiv, hz0]
+  · -- Coordinate (0,1); 1 genuine higher support coordinates.
+    have hz0 := hzero (0,2) (by decide)
+    change w.2 0 2 = 0 at hz0
+    simp [longSL2Formula, wilsonCoordinatesEquiv, hz0]
+  · -- Coordinate (0,2); 0 genuine higher support coordinates.
+    simp [longSL2Formula, wilsonCoordinatesEquiv]
+  · -- Coordinate (0,3); 0 genuine higher support coordinates.
+    simp [longSL2Formula, wilsonCoordinatesEquiv]
+  · -- Coordinate (0,4); 1 genuine higher support coordinates.
+    have hz0 := hzero (1,5) (by decide)
+    change w.2 1 4 = 0 at hz0
+    simp [longSL2Formula, wilsonCoordinatesEquiv, hz0]
+  · -- Coordinate (0,5); 1 genuine higher support coordinates.
+    have hz0 := hzero (2,3) (by decide)
+    change w.2 2 3 = 0 at hz0
+    simp [longSL2Formula, wilsonCoordinatesEquiv, hz0]
+  · -- Coordinate (0,6); 3 genuine higher support coordinates.
+    have hz0 := hzero (0,7) (by decide)
+    change w.2 0 6 = 0 at hz0
+    have hz1 := hzero (2,6) (by decide)
+    change w.2 2 5 = 0 at hz1
+    have hz2 := hzero (2,7) (by decide)
+    change w.2 2 6 = 0 at hz2
+    simp [longSL2Formula, wilsonCoordinatesEquiv, hz0, hz1, hz2]
+  · -- Coordinate (0,7); 1 genuine higher support coordinates.
+    have hz0 := hzero (2,7) (by decide)
+    change w.2 2 6 = 0 at hz0
+    simp [longSL2Formula, wilsonCoordinatesEquiv, hz0]
+  · -- Coordinate (0,8); 0 genuine higher support coordinates.
+    simp [longSL2Formula, wilsonCoordinatesEquiv]
+  · -- Coordinate (1,0); 0 genuine higher support coordinates.
+    simp [longSL2Formula, wilsonCoordinatesEquiv]
+  · -- Coordinate (1,1); 1 genuine higher support coordinates.
+    have hz0 := hzero (1,2) (by decide)
+    change w.2 1 2 = 0 at hz0
+    simp [longSL2Formula, wilsonCoordinatesEquiv, hz0]
+  · -- Coordinate (1,2); 0 genuine higher support coordinates.
+    simp [longSL2Formula, wilsonCoordinatesEquiv]
+  · -- Coordinate (1,3); 3 genuine higher support coordinates.
+    have hz0 := hzero (0,4) (by decide)
+    change w.1 0 = 0 at hz0
+    have hz1 := hzero (2,4) (by decide)
+    change w.1 2 = 0 at hz1
+    have hz2 := hzero (1,5) (by decide)
+    change w.2 1 4 = 0 at hz2
+    simp [longSL2Formula, wilsonCoordinatesEquiv, hz0, hz1, hz2]
+  · -- Coordinate (1,4); 0 genuine higher support coordinates.
+    simp [longSL2Formula, wilsonCoordinatesEquiv]
+  · -- Coordinate (1,5); 0 genuine higher support coordinates.
+    simp [longSL2Formula, wilsonCoordinatesEquiv]
+  · -- Coordinate (1,6); 1 genuine higher support coordinates.
+    have hz0 := hzero (1,7) (by decide)
+    change w.2 1 6 = 0 at hz0
+    simp [longSL2Formula, wilsonCoordinatesEquiv, hz0]
+  · -- Coordinate (1,7); 0 genuine higher support coordinates.
+    simp [longSL2Formula, wilsonCoordinatesEquiv]
+  · -- Coordinate (1,8); 0 genuine higher support coordinates.
+    simp [longSL2Formula, wilsonCoordinatesEquiv]
+  · -- Coordinate (2,0); 0 genuine higher support coordinates.
+    simp [longSL2Formula, wilsonCoordinatesEquiv]
+  · -- Coordinate (2,1); 3 genuine higher support coordinates.
+    have hz0 := hzero (0,1) (by decide)
+    change w.2 0 1 = 0 at hz0
+    have hz1 := hzero (0,2) (by decide)
+    change w.2 0 2 = 0 at hz1
+    have hz2 := hzero (2,2) (by decide)
+    change w.2 2 2 = 0 at hz2
+    simp [longSL2Formula, wilsonCoordinatesEquiv, hz0, hz1, hz2]
+  · -- Coordinate (2,2); 1 genuine higher support coordinates.
+    have hz0 := hzero (0,2) (by decide)
+    change w.2 0 2 = 0 at hz0
+    simp [longSL2Formula, wilsonCoordinatesEquiv, hz0]
+  · -- Coordinate (2,3); 0 genuine higher support coordinates.
+    simp [longSL2Formula, wilsonCoordinatesEquiv]
+  · -- Coordinate (2,4); 1 genuine higher support coordinates.
+    have hz0 := hzero (1,5) (by decide)
+    change w.2 1 4 = 0 at hz0
+    simp [longSL2Formula, wilsonCoordinatesEquiv, hz0]
+  · -- Coordinate (2,5); 1 genuine higher support coordinates.
+    have hz0 := hzero (0,3) (by decide)
+    change w.2 0 3 = 0 at hz0
+    simp [longSL2Formula, wilsonCoordinatesEquiv, hz0]
+  · -- Coordinate (2,6); 1 genuine higher support coordinates.
+    have hz0 := hzero (2,7) (by decide)
+    change w.2 2 6 = 0 at hz0
+    simp [longSL2Formula, wilsonCoordinatesEquiv, hz0]
+  · -- Coordinate (2,7); 0 genuine higher support coordinates.
+    simp [longSL2Formula, wilsonCoordinatesEquiv]
+  · -- Coordinate (2,8); 1 genuine higher support coordinates.
+    have hz0 := hzero (0,8) (by decide)
+    change w.2 0 7 = 0 at hz0
+    simp [longSL2Formula, wilsonCoordinatesEquiv, hz0]
+end Atlas.ReeF4

@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "orthogonal-d-family-structure",
+  "targets": [
+    {
+      "declaration": "Atlas.Orthogonal.Checks.d4_four_order",
+      "module": "Atlas.LinearGroups.Orthogonal.DOrderChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Checks.d4_four_simple",
+      "module": "Atlas.LinearGroups.Orthogonal.DSimplicityChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Checks.d4_three_order",
+      "module": "Atlas.LinearGroups.Orthogonal.DOrderChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Checks.d4_three_simple",
+      "module": "Atlas.LinearGroups.Orthogonal.DSimplicityChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_admissible",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_card",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_card_mul_denominator",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_center_order",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_center_order_exact",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_elementary_eq_derived",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_elementary_index",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_elementary_order",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_elementary_order_exact",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_elementary_perfect",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_equiv_of_card_eq",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamilyTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_even_intrinsic",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_faithful",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_fieldEquiv",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamilyTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_fieldEquiv_projection",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamilyTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_fieldEquiv_refl",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamilyTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_fieldEquiv_symm",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamilyTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_fieldEquiv_trans",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamilyTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_finite",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_full_order",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_noncommutative",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_odd_intrinsic",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_order",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_order_denominator",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_order_denominator_positive",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_order_divisibility",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_order_numerator",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_order_numerator_positive",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_perfect",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_primitive",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_roots_normal_generate",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_scalar_eq_center",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_scalar_order_exact",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_simple",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_simple_iff",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_transitive",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryD_all_char",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryD_all_char_mul_gcd_two",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryD_center_all_char",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryD_center_all_char_mul_gcd_two",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryD_scalar_all_char_mul_gcd_two",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.dicksonValue_fieldEquivFullD",
+      "module": "Atlas.LinearGroups.Orthogonal.DicksonValueFieldTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.dicksonValue_semilinear_transport",
+      "module": "Atlas.LinearGroups.Orthogonal.DicksonValueFieldTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryD_index_all_char",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryD_scalar_eq_center",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fieldEquivDicksonKernelD",
+      "module": "Atlas.LinearGroups.Orthogonal.DicksonFieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fieldEquivDicksonKernelD_elementary",
+      "module": "Atlas.LinearGroups.Orthogonal.DicksonFieldTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fieldEquivDicksonKernelD_full",
+      "module": "Atlas.LinearGroups.Orthogonal.DicksonFieldTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fieldEquivDicksonKernelD_projective",
+      "module": "Atlas.LinearGroups.Orthogonal.DicksonFieldTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fieldEquivElementaryD_refl",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamilyTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fieldEquivElementaryD_trans",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamilyTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fullDicksonD_field_transport",
+      "module": "Atlas.LinearGroups.Orthogonal.DicksonValueFieldTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fullDicksonKernelElementaryEquiv",
+      "module": "Atlas.LinearGroups.Orthogonal.DicksonFieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.orthogonal_gcd_two_even",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.orthogonal_gcd_two_odd",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.projectiveDQuotientCenterEquiv",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.residual_finrank_fieldEquivFullD",
+      "module": "Atlas.LinearGroups.Orthogonal.DicksonValueFieldTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.residual_finrank_semilinear_transport",
+      "module": "Atlas.LinearGroups.Orthogonal.DicksonValueFieldTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.semilinearResidualEquiv",
+      "module": "Atlas.LinearGroups.Orthogonal.DicksonValueFieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.TypeDConstruction",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.exists_typeD",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.typeD_construction",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.typeD_prime_power",
+      "module": "Atlas.LinearGroups.Orthogonal.DConstruction",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "d-intrinsic-identification-independent-of-simplicity",
+      "roots": [
+        "Atlas.Orthogonal.DPlus_scalar_eq_center",
+        "Atlas.Orthogonal.DPlus_elementary_eq_derived",
+        "Atlas.Orthogonal.fullDicksonKernelElementaryEquiv",
+        "Atlas.Orthogonal.fieldEquivDicksonKernelD",
+        "Atlas.Orthogonal.fieldEquivDicksonKernelD_full",
+        "Atlas.Orthogonal.fieldEquivDicksonKernelD_elementary",
+        "Atlas.Orthogonal.fieldEquivDicksonKernelD_projective",
+        "Atlas.Orthogonal.DPlus_odd_intrinsic",
+        "Atlas.Orthogonal.DPlus_even_intrinsic",
+        "Atlas.Orthogonal.semilinearResidualEquiv",
+        "Atlas.Orthogonal.residual_finrank_semilinear_transport",
+        "Atlas.Orthogonal.dicksonValue_semilinear_transport",
+        "Atlas.Orthogonal.residual_finrank_fieldEquivFullD",
+        "Atlas.Orthogonal.dicksonValue_fieldEquivFullD",
+        "Atlas.Orthogonal.fullDicksonD_field_transport"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.Orthogonal.DPlus_simple",
+        "Atlas.Orthogonal.projectiveD_simple_all_char",
+        "Atlas.Orthogonal.fullDicksonD_kernel_simple"
+      ]
+    }
+  ]
+}

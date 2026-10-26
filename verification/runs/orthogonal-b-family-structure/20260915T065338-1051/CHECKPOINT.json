@@ -1,0 +1,909 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "orthogonal-b-family-structure",
+  "targets": [
+    {
+      "declaration": "Atlas.Orthogonal.B",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B1_conjugation_mem_coordinate",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootGenerationB1",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B1_five_simple",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B1_projective_singular_faithful",
+      "module": "Atlas.LinearGroups.Orthogonal.B1SingularFaithful",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B1_three_not_simple",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B1_three_order",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B1_two_not_simple",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B1_two_order",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_admissible",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_card",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_card_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_card_mul_denominator",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_card_mul_denominator_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_center_eq_bot",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_center_eq_bot_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksStructure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_center_order",
+      "module": "Atlas.LinearGroups.Orthogonal.BStructure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_center_order_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksStructure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_coordinate_roots_generate_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometryAllRanks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementaryEquiv",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementaryEquiv_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_card_mul_denominator",
+      "module": "Atlas.LinearGroups.Orthogonal.BStructure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_card_mul_denominator_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksStructure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_eq_derived",
+      "module": "Atlas.LinearGroups.Orthogonal.BStructure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_eq_derived_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksStructure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_index",
+      "module": "Atlas.LinearGroups.Orthogonal.BStructure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_index_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksStructure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_index_gcd_square",
+      "module": "Atlas.LinearGroups.Orthogonal.BFinalOrderIdentities",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_order",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_order_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_perfect",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_perfect_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_primitive_all_char",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometryAllRanks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_singular_line_transport_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometryAllRanks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_transitive_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometryAllRanks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_equiv_of_card_eq",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamilyTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_equiv_of_card_eq_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksStructure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_even_intrinsic",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_faithful",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometryInterface",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_faithful_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometryAllRanks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_fieldEquiv",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_fieldEquiv_projection",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_fieldEquiv_refl",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamilyTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_fieldEquiv_symm",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamilyTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_fieldEquiv_trans",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamilyTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_finite",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_full_order_gcd",
+      "module": "Atlas.LinearGroups.Orthogonal.BFinalOrderIdentities",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_generated_by_siegel",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_good",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_noncommutative",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_noncommutative_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_odd_elementary_primitive",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometryInterface",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_odd_intrinsic",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_odd_intrinsic_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksStructure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_odd_roots_normal_generate",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometryInterface",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_odd_transitive",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometryInterface",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order_denominator",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order_denominator_positive",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order_divisibility",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order_divisibility_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order_numerator",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order_numerator_positive",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_perfect",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_perfect_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_primitive_all_char",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometryAllRanks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_quotientCenterEquiv_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksStructure",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_roots_abelian",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometryInterface",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_roots_normal_generate_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometryAllRanks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_roots_normal_in_stabilizer",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometryInterface",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_scalar_eq_bot",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_scalar_eq_bot_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_scalar_eq_center_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksStructure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_scalar_order",
+      "module": "Atlas.LinearGroups.Orthogonal.BStructure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_sign_factor_eq_gcd",
+      "module": "Atlas.LinearGroups.Orthogonal.BFinalOrderIdentities",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_simple",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_simple_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_simple_iff",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_simple_iff_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_transitive_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometryAllRanks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryB_one_eq_oddKernel",
+      "module": "Atlas.LinearGroups.Orthogonal.B1Structure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateB_line_transport",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootGeneration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateBasisB",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootSubgroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateBasisD",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootSubgroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateD_line_transport",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootGeneration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroup",
+      "module": "Atlas.LinearGroups.Orthogonal.RootBasisGeneration",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroupB",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootSubgroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroupB_eq_elementary",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootGeneration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroupB_eq_elementary_of_pos",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootGenerationB1",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroupB_le_elementary",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootSubgroups",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroupB_one_eq_elementary",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootGenerationB1",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroupD",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootSubgroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroupD_eq_elementary",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootGeneration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroupD_le_elementary",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootSubgroups",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroup_le_elementary",
+      "module": "Atlas.LinearGroups.Orthogonal.RootBasisGeneration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRoot_mem",
+      "module": "Atlas.LinearGroups.Orthogonal.RootBasisGeneration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinate_frame_line_transport",
+      "module": "Atlas.LinearGroups.Orthogonal.RootLineElimination",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinate_root_le_of_coefficient_vanishing",
+      "module": "Atlas.LinearGroups.Orthogonal.RootCoordinateExpansion",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinate_siegel_mem_of_coefficient_vanishing",
+      "module": "Atlas.LinearGroups.Orthogonal.RootCoordinateExpansion",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryB1_singular_line_transport",
+      "module": "Atlas.LinearGroups.Orthogonal.SingularPrimitiveB2",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryB2_perpendicular_stabilizer_line_transport",
+      "module": "Atlas.LinearGroups.Orthogonal.SingularPrimitiveB2",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryB_one_center_eq_bot",
+      "module": "Atlas.LinearGroups.Orthogonal.B1Structure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryB_one_eq_intrinsicKernel",
+      "module": "Atlas.LinearGroups.Orthogonal.B1Structure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryB_one_kernelEquiv",
+      "module": "Atlas.LinearGroups.Orthogonal.B1Structure",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryB_one_to_oddKernel",
+      "module": "Atlas.LinearGroups.Orthogonal.B1Structure",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryB_one_to_oddKernel_injective",
+      "module": "Atlas.LinearGroups.Orthogonal.B1Structure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryB_one_to_oddKernel_surjective",
+      "module": "Atlas.LinearGroups.Orthogonal.B1Structure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementary_le_of_root_and_line_transport",
+      "module": "Atlas.LinearGroups.Orthogonal.RootGenerationFromLineTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementary_perpendicular_stabilizer_line_transport",
+      "module": "Atlas.LinearGroups.Orthogonal.PerpendicularLineStabilizerOrbit",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementary_singular_line_transport_of_isometry",
+      "module": "Atlas.LinearGroups.Orthogonal.PerpendicularLineStabilizerOrbit",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_elementary_pretransitive",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_elementary_primitive",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularPoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_elementary_singular_transport",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_full_faithful",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularPoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_full_primitive",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularPoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_projective_faithful",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularPoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_projective_pretransitive",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_projective_primitive",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularPoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_roots_normal_generate",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_singular_eq_of_first_eq",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_singular_first_ne_zero",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenSingularLift_equivariant",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularPoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenSingularLift_ne_zero",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularPoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenSingularLift_smul",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularPoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenSingularPointActionHom",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenSingularPointEquiv",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenSingularPointLift",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenSingularPointLift_injective",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularPoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenSingularPointLift_smul",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularPoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenSingularPointLift_surjective",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularPoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenSingularPointOfVector",
+      "module": "Atlas.LinearGroups.Orthogonal.EvenBSingularPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fieldEquivElementaryB_refl",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamilyTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fieldEquivElementaryB_trans",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamilyTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.projectiveSingularB_primitive_rank_two_up",
+      "module": "Atlas.LinearGroups.Orthogonal.SingularGeometryOddB",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.psl_two_center_eq_bot",
+      "module": "Atlas.LinearGroups.Orthogonal.B1Structure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.rootB_e_le_coordinate",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootSubgroups",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.rootB_f_le_coordinate",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootSubgroups",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.rootD_e_le_coordinate",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootSubgroups",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.rootD_f_le_coordinate",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateRootSubgroups",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.rootSubgroup_le_coordinateRootSubgroup",
+      "module": "Atlas.LinearGroups.Orthogonal.RootBasisGeneration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.rootSubgroup_le_of_basis",
+      "module": "Atlas.LinearGroups.Orthogonal.RootBasisGeneration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.root_line_transport_of_pairing",
+      "module": "Atlas.LinearGroups.Orthogonal.RootLineElimination",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.root_normalClosure_eq_top_of_line_transport",
+      "module": "Atlas.LinearGroups.Orthogonal.RootNormalGenerationLines",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.singularPointsB2_primitive",
+      "module": "Atlas.LinearGroups.Orthogonal.SingularPrimitiveB2",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.singularPointsB_primitive_rank_two_up",
+      "module": "Atlas.LinearGroups.Orthogonal.SingularGeometryOddB",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.singularPoints_smul_eq_of_scaled_rep",
+      "module": "Atlas.LinearGroups.Orthogonal.SingularPrimitiveB2",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.singular_line_kernel_scalar_of_triangle",
+      "module": "Atlas.LinearGroups.Orthogonal.SingularTriangleKernel",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.singular_stabilizerB2_perpendicular_transitive",
+      "module": "Atlas.LinearGroups.Orthogonal.SingularPrimitiveB2",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.singular_stabilizerB_perpendicular_transitive_rank_two_up",
+      "module": "Atlas.LinearGroups.Orthogonal.SingularGeometryOddB",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.subgroup_line_transport_of_pairing",
+      "module": "Atlas.LinearGroups.Orthogonal.RootLineElimination",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.two_root_cross_transport",
+      "module": "Atlas.LinearGroups.Orthogonal.CoordinateCrossTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.TypeBGeometricConstruction",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometricConstruction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.TypeBStructuralConstruction",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksStructure",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.exists_typeB",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.exists_typeB_all_ranks",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.exists_typeB_geometric",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometricConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.exists_typeB_structural",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksStructure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.typeB_all_ranks_construction",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.typeB_construction",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.typeB_geometric_construction",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometricConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.typeB_prime_power",
+      "module": "Atlas.LinearGroups.Orthogonal.BConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.typeB_prime_power_all_ranks",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.typeB_prime_power_geometric",
+      "module": "Atlas.LinearGroups.Orthogonal.BGeometricConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.typeB_prime_power_structural",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksStructure",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.typeB_structural_construction",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksStructure",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "b-structure-independent-of-simplicity",
+      "roots": [
+        "Atlas.Orthogonal.B_center_eq_bot_all_rank",
+        "Atlas.Orthogonal.B_scalar_eq_center_all_rank",
+        "Atlas.Orthogonal.B_odd_intrinsic_all_rank",
+        "Atlas.Orthogonal.B_elementary_eq_derived_all_rank",
+        "Atlas.Orthogonal.coordinateRootSubgroupB_eq_elementary_of_pos"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.Orthogonal.B_simple",
+        "Atlas.Orthogonal.projectiveB_simple",
+        "Atlas.Orthogonal.projectiveD_simple"
+      ]
+    },
+    {
+      "id": "geometry-independent-of-simplicity",
+      "all_roots": false,
+      "forbid_name_prefixes": [
+        "Atlas.Orthogonal.B_simple",
+        "Atlas.Orthogonal.projectiveB_simple",
+        "Atlas.Orthogonal.projectiveD_simple",
+        "Atlas.Orthogonal.DPlus_simple",
+        "Atlas.Symplectic.simple"
+      ],
+      "roots": [
+        "Atlas.Orthogonal.evenB_singular_first_ne_zero",
+        "Atlas.Orthogonal.evenB_singular_eq_of_first_eq",
+        "Atlas.Orthogonal.evenB_elementary_singular_transport",
+        "Atlas.Orthogonal.evenB_elementary_pretransitive",
+        "Atlas.Orthogonal.evenB_projective_pretransitive",
+        "Atlas.Orthogonal.evenB_roots_normal_generate",
+        "Atlas.Orthogonal.evenSingularLift_ne_zero",
+        "Atlas.Orthogonal.evenSingularLift_smul",
+        "Atlas.Orthogonal.evenSingularPointOfVector",
+        "Atlas.Orthogonal.evenSingularPointLift",
+        "Atlas.Orthogonal.evenSingularPointLift_surjective",
+        "Atlas.Orthogonal.evenSingularPointLift_injective",
+        "Atlas.Orthogonal.evenSingularPointEquiv",
+        "Atlas.Orthogonal.evenSingularLift_equivariant",
+        "Atlas.Orthogonal.evenSingularPointLift_smul",
+        "Atlas.Orthogonal.evenSingularPointActionHom",
+        "Atlas.Orthogonal.evenB_full_faithful",
+        "Atlas.Orthogonal.evenB_projective_faithful",
+        "Atlas.Orthogonal.evenB_full_primitive",
+        "Atlas.Orthogonal.evenB_elementary_primitive",
+        "Atlas.Orthogonal.evenB_projective_primitive",
+        "Atlas.Orthogonal.singular_line_kernel_scalar_of_triangle",
+        "Atlas.Orthogonal.B1_projective_singular_faithful",
+        "Atlas.Orthogonal.elementary_perpendicular_stabilizer_line_transport",
+        "Atlas.Orthogonal.elementary_singular_line_transport_of_isometry",
+        "Atlas.Orthogonal.elementaryB1_singular_line_transport",
+        "Atlas.Orthogonal.elementaryB2_perpendicular_stabilizer_line_transport",
+        "Atlas.Orthogonal.singularPoints_smul_eq_of_scaled_rep",
+        "Atlas.Orthogonal.singular_stabilizerB2_perpendicular_transitive",
+        "Atlas.Orthogonal.singularPointsB2_primitive",
+        "Atlas.Orthogonal.singularPointsB_primitive_rank_two_up",
+        "Atlas.Orthogonal.projectiveSingularB_primitive_rank_two_up",
+        "Atlas.Orthogonal.singular_stabilizerB_perpendicular_transitive_rank_two_up",
+        "Atlas.Orthogonal.root_normalClosure_eq_top_of_line_transport",
+        "Atlas.Orthogonal.B_faithful_all_rank",
+        "Atlas.Orthogonal.B_coordinate_roots_generate_all_rank",
+        "Atlas.Orthogonal.B_elementary_singular_line_transport_all_rank",
+        "Atlas.Orthogonal.B_elementary_transitive_all_rank",
+        "Atlas.Orthogonal.B_transitive_all_rank",
+        "Atlas.Orthogonal.B_elementary_primitive_all_char",
+        "Atlas.Orthogonal.B_primitive_all_char",
+        "Atlas.Orthogonal.B_roots_normal_generate_all_rank"
+      ]
+    }
+  ]
+}

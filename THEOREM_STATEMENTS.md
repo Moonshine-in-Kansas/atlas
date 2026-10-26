@@ -1,23 +1,16 @@
 # Principal compiled theorem statements
 
-Generated from the successful compiled-declaration audit at source commit
-`935474b0c3678e053e1152a49ed6593bd8ad44c9`. These are verbatim elaborated `#check @name`
-outputs, with explicit parameters, typeclasses and universes; proof bodies are omitted.
-The selections are the catalogue's primary order and simplicity interfaces.
-Exact-exception and other structural results remain in the catalogue and full audit.
-Definitions of the named models are linked through their source files; this is a
-signature reference, not a self-contained definition of every dependency.
+These signatures are copied verbatim from the source-bound 26 October compiled
+audit, with implicit parameters and instances visible. See [verification status](AUDIT.md)
+for the distinction between this cached-artifact audit and a fresh proof rebuild.
 
-The source-bound [audit](AUDIT.md) records trust and verification scope.
-Regenerate using `ruby verification/statements.rb refresh`.
+<a id="family-cyclic"></a>
 
-## C_p
-
-Model: `Atlas.Families.Cyclic.Model` ([source](Atlas/Families/Cyclic/Basic.lean)).
+## Cₚ
 
 ### Order
 
-`Atlas.Families.Cyclic.card` — [source](Atlas/Families/Cyclic/Basic.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Families.Cyclic.card : ∀ (m : Nat),
@@ -25,9 +18,9 @@ Atlas.Families.Cyclic.card : ∀ (m : Nat),
     @Eq.{1} Nat (Nat.card.{0} (Atlas.Families.Cyclic.Model m)) (Atlas.Families.Cyclic.order m)
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Families.Cyclic.isSimpleGroup` — [source](Atlas/Families/Cyclic/Basic.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Families.Cyclic.isSimpleGroup : ∀ (p : Nat),
@@ -38,13 +31,13 @@ Atlas.Families.Cyclic.isSimpleGroup : ∀ (p : Nat),
           (@Ring.toAddGroupWithOne.{0} (ZMod p) (@CommRing.toRing.{0} (ZMod p) (ZMod.commRing p)))))
 ```
 
-## A_n
+<a id="family-alternating"></a>
 
-Model: `Atlas.Families.Alternating.Model` ([source](Atlas/Families/Alternating/Basic.lean)).
+## Aₙ
 
 ### Order
 
-`Atlas.Families.Alternating.card_factorial` — [source](Atlas/Families/Alternating/Basic.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Families.Alternating.card_factorial : ∀ (n : Nat),
@@ -54,9 +47,9 @@ Atlas.Families.Alternating.card_factorial : ∀ (n : Nat),
         (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Families.Alternating.isSimpleGroup` — [source](Atlas/Families/Alternating/Basic.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Families.Alternating.isSimpleGroup : ∀ (n : Nat),
@@ -66,13 +59,13 @@ Atlas.Families.Alternating.isSimpleGroup : ∀ (n : Nat),
         (@alternatingGroup.{0} (Fin n) (Fin.fintype n) (instDecidableEqFin n)))
 ```
 
-## PSL_n(q)
+<a id="family-psl"></a>
 
-Model: `Matrix.ProjectiveSpecialLinearGroup` ([source](.lake/packages/mathlib/Mathlib/LinearAlgebra/Matrix/ProjectiveSpecialLinearGroup.lean)).
+## Aₙ(q)
 
 ### Order
 
-`Atlas.card_psl_factor` — [source](Atlas/LinearGroups/ProjectiveSpecialLinear.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.card_psl_factor.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] (n : Nat)
@@ -104,9 +97,9 @@ Model: `Matrix.ProjectiveSpecialLinearGroup` ([source](.lake/packages/mathlib/Ma
           (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.psl_simple_iff` — [source](Atlas/LinearGroups/PSLFamily.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.psl_simple_iff.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
@@ -135,13 +128,97 @@ Model: `Matrix.ProjectiveSpecialLinearGroup` ([source](.lake/packages/mathlib/Ma
             (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))))
 ```
 
-## B_n(q) / PΩ(2n+1,q)
+<a id="family-psu"></a>
 
-Model: `Atlas.Orthogonal.B` ([source](Atlas/LinearGroups/Orthogonal/BFamily.lean)).
+## ²Aₙ(q)
 
 ### Order
 
-`Atlas.Orthogonal.B_card_all_rank` — [source](Atlas/LinearGroups/Orthogonal/BAllRanks.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+@Atlas.Unitary.card_psu_factor.{u_1,
+    u_2} : ∀ {F : Type u_1} {K : Type u_2} [inst : Field.{u_1} F] [inst_1 : Field.{u_2} K] [inst_2 : Finite.{u_1 + 1} F]
+  [inst_3 : Finite.{u_2 + 1} K]
+  [inst_4 :
+    @Algebra.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+      (@DivisionSemiring.toSemiring.{u_2} K
+        (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))]
+  (hdeg :
+    @Eq.{1} Nat
+      (@Module.finrank.{u_1, u_2} F K
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@Semiring.toAddCommMonoid.{u_2} K
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1))))
+        (@Algebra.toModule.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))
+          inst_4))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+  (n : Nat),
+  @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) n →
+    @Eq.{1} Nat (Nat.card.{u_2} (@Atlas.Unitary.PSU.{u_1, u_2} F K inst inst_1 inst_2 inst_3 inst_4 n hdeg))
+      (@HDiv.hDiv.{0, 0, 0} Nat Nat Nat (@instHDiv.{0} Nat Nat.instDiv)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+            (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) (Nat.card.{u_1} F)
+            (@HDiv.hDiv.{0, 0, 0} Nat Nat Nat (@instHDiv.{0} Nat Nat.instDiv)
+              (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat) n
+                (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) n
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (∏
+            i ∈
+              @Finset.Icc.{0} Nat Nat.instPreorder Nat.instLocallyFiniteOrder
+                (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) n,
+            Atlas.Unitary.orderFactor (Nat.card.{u_1} F) i))
+        (n.gcd
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) (Nat.card.{u_1} F)
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+```
+
+### Simple
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+@Atlas.Unitary.simple_of_good.{u_1,
+    u_2} : ∀ {F : Type u_1} {K : Type u_2} [inst : Field.{u_1} F] [inst_1 : Field.{u_2} K] [inst_2 : Finite.{u_1 + 1} F]
+  [inst_3 : Finite.{u_2 + 1} K]
+  [inst_4 :
+    @Algebra.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+      (@DivisionSemiring.toSemiring.{u_2} K
+        (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))]
+  (hdeg :
+    @Eq.{1} Nat
+      (@Module.finrank.{u_1, u_2} F K
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@Semiring.toAddCommMonoid.{u_2} K
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1))))
+        (@Algebra.toModule.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))
+          inst_4))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+  {n : Nat},
+  Atlas.Unitary.Good n (Nat.card.{u_1} F) →
+    @IsSimpleGroup.{u_2} (@Atlas.Unitary.PSU.{u_1, u_2} F K inst inst_1 inst_2 inst_3 inst_4 n hdeg)
+      (@QuotientGroup.Quotient.group.{u_2} (@Atlas.Unitary.SU.{u_1, u_2} F K inst inst_1 inst_2 inst_3 inst_4 n hdeg)
+        (@Atlas.Unitary.group_su.{u_1, u_2} F K inst inst_1 inst_2 inst_3 inst_4 n hdeg)
+        (@Subgroup.center.{u_2} (@Atlas.Unitary.SU.{u_1, u_2} F K inst inst_1 inst_2 inst_3 inst_4 n hdeg)
+          (@Atlas.Unitary.group_su.{u_1, u_2} F K inst inst_1 inst_2 inst_3 inst_4 n hdeg))
+        ⋯)
+```
+
+<a id="family-b"></a>
+
+## Bₙ(q)
+
+### Order
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.Orthogonal.B_card_all_rank.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
@@ -149,9 +226,9 @@ Model: `Atlas.Orthogonal.B` ([source](Atlas/LinearGroups/Orthogonal/BFamily.lean
     @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.Orthogonal.B.{u_1} n F inst)) (Atlas.Orthogonal.B_order n (Nat.card.{u_1} F))
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Orthogonal.B_simple_all_rank` — [source](Atlas/LinearGroups/Orthogonal/BAllRanksConstruction.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.Orthogonal.B_simple_all_rank.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
@@ -159,12 +236,12 @@ Model: `Atlas.Orthogonal.B` ([source](Atlas/LinearGroups/Orthogonal/BFamily.lean
     @IsSimpleGroup.{u_1} (@Atlas.Orthogonal.B.{u_1} n F inst)
       (@Atlas.Orthogonal.projectiveElementaryGroup.{u_1, u_1} F (Atlas.Orthogonal.VectorB.{u_1} n F) inst
         (@Prod.instAddCommGroup.{u_1, u_1} (Atlas.Orthogonal.VectorD.{u_1} n F) F
-          (@Pi.addCommGroup.{0, u_1} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+          (@Pi.addCommGroup.{0, u_1} (Atlas.Orthogonal.Index n) (fun a ↦ F) fun i ↦
             @Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
           (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
         (@Prod.instModule.{u_1, u_1, u_1} F (Atlas.Orthogonal.VectorD.{u_1} n F) F
           (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
-          (@Pi.addCommMonoid.{0, u_1} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+          (@Pi.addCommMonoid.{0, u_1} (Atlas.Orthogonal.Index n) (fun a ↦ F) fun i ↦
             @Semiring.toAddCommMonoid.{u_1} F
               (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
           (@Semiring.toAddCommMonoid.{u_1} F
@@ -180,13 +257,85 @@ Model: `Atlas.Orthogonal.B` ([source](Atlas/LinearGroups/Orthogonal/BFamily.lean
         (@Atlas.Orthogonal.formB.{u_1} n F (@Field.toCommRing.{u_1} F inst)))
 ```
 
-## C_n(q) / PSp(2n,q)
+<a id="family-suzuki"></a>
 
-Model: `Atlas.Symplectic.PSp` ([source](Atlas/LinearGroups/Symplectic/Basic.lean)).
+## ²B₂(q)
 
 ### Order
 
-`Atlas.Symplectic.card_psp` — [source](Atlas/LinearGroups/Symplectic/ProjectiveOrder.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+@Atlas.SuzukiFamily.card_group.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))]
+  (m : Nat),
+  @Eq.{1} Nat (Nat.card.{u_1} F)
+      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) m)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))) →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.SuzukiFamily.Group.{u_1} F inst inst_1 inst_2 m))
+      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+            (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) (Nat.card.{u_1} F)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (Nat.card.{u_1} F) (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) (Nat.card.{u_1} F)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+```
+
+### Simple
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+@Atlas.SuzukiFamily.simple_of_large.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))]
+  (m : Nat),
+  @Eq.{1} Nat (Nat.card.{u_1} F)
+      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) m)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))) →
+    @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) m →
+      @IsSimpleGroup.{u_1} (@Atlas.SuzukiFamily.Group.{u_1} F inst inst_1 inst_2 m)
+        (@Subgroup.toGroup.{u_1}
+          (@Atlas.Symplectic.Sp.{u_1} (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) F
+            (@Field.toCommRing.{u_1} F inst))
+          (@SymplecticGroup.instGroupSubtypeMatrixSumMemSubmonoidSymplecticGroup.{0, u_1}
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) F
+            (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (@Field.toCommRing.{u_1} F inst))
+          (@Atlas.SuzukiFamily.generated.{u_1} F inst inst_1 inst_2 m))
+```
+
+<a id="family-c"></a>
+
+## Cₙ(q)
+
+### Order
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.Symplectic.card_psp.{u_1} : ∀ {n : Nat} {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F],
@@ -199,9 +348,9 @@ Model: `Atlas.Symplectic.PSp` ([source](Atlas/LinearGroups/Symplectic/Basic.lean
             (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Symplectic.simple_of_good` — [source](Atlas/LinearGroups/Symplectic/Simplicity.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.Symplectic.simple_of_good.{u_1} : ∀ {n : Nat} {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F],
@@ -216,13 +365,13 @@ Model: `Atlas.Symplectic.PSp` ([source](Atlas/LinearGroups/Symplectic/Basic.lean
         ⋯)
 ```
 
-## D_n(q) / PΩ+(2n,q)
+<a id="family-d"></a>
 
-Model: `Atlas.Orthogonal.DPlus` ([source](Atlas/LinearGroups/Orthogonal/DFamily.lean)).
+## Dₙ(q)
 
 ### Order
 
-`Atlas.Orthogonal.DPlus_card` — [source](Atlas/LinearGroups/Orthogonal/DFamily.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.Orthogonal.DPlus_card.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
@@ -231,16 +380,16 @@ Model: `Atlas.Orthogonal.DPlus` ([source](Atlas/LinearGroups/Orthogonal/DFamily.
       (Atlas.Orthogonal.DPlus_order n (Nat.card.{u_1} F))
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Orthogonal.DPlus_simple` — [source](Atlas/LinearGroups/Orthogonal/DConstruction.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.Orthogonal.DPlus_simple.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] (n : Nat),
   @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) n →
     @IsSimpleGroup.{u_1} (@Atlas.Orthogonal.DPlus.{u_1} n F inst)
       (@Atlas.Orthogonal.projectiveElementaryGroup.{u_1, u_1} F (Atlas.Orthogonal.VectorD.{u_1} n F) inst
-        (@Pi.addCommGroup.{0, u_1} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+        (@Pi.addCommGroup.{0, u_1} (Atlas.Orthogonal.Index n) (fun a ↦ F) fun i ↦
           @Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
         (@Pi.Function.module.{0, u_1, u_1} (Atlas.Orthogonal.Index n) F F
           (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
@@ -251,13 +400,753 @@ Model: `Atlas.Orthogonal.DPlus` ([source](Atlas/LinearGroups/Orthogonal/DFamily.
         (@Atlas.Orthogonal.formD.{u_1} n F (@Field.toCommRing.{u_1} F inst)))
 ```
 
-## G2(q)
+<a id="family-2d"></a>
 
-Model: `Atlas.G2.Model` ([source](Atlas/LinearGroups/G2/Basic.lean)).
+## ²Dₙ(q)
 
 ### Order
 
-`Atlas.G2.card_Model` — [source](Atlas/LinearGroups/G2/Order.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+@Atlas.Orthogonal.Minus.family_order.{u_1,
+    u_2} : ∀ {F : Type u_1} {K : Type u_2} [inst : Field.{u_1} F] [inst_1 : Field.{u_2} K] [inst_2 : Finite.{u_1 + 1} F]
+  [inst_3 : Finite.{u_2 + 1} K]
+  [inst_4 :
+    @Algebra.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+      (@DivisionSemiring.toSemiring.{u_2} K
+        (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))]
+  (hdeg :
+    @Eq.{1} Nat
+      (@Module.finrank.{u_1, u_2} F K
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@Semiring.toAddCommMonoid.{u_2} K
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1))))
+        (@Algebra.toModule.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))
+          inst_4))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+  (n : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) n →
+    @Eq.{1} Nat
+      (Nat.card.{max u_2 u_1} (@Atlas.Orthogonal.Minus.DMinus.{u_1, u_2} n F K inst inst_1 inst_2 inst_3 inst_4 hdeg))
+      (@HDiv.hDiv.{0, 0, 0} Nat Nat Nat (@instHDiv.{0} Nat Nat.instDiv)
+        (Atlas.Orthogonal.Minus.orderNumerator (Nat.card.{u_1} F) n)
+        (Nat.gcd (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (Nat.card.{u_1} F) n)
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+```
+
+### Simple
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+@Atlas.Orthogonal.Minus.family_simple.{u_1,
+    u_2} : ∀ {F : Type u_1} {K : Type u_2} [inst : Field.{u_1} F] [inst_1 : Field.{u_2} K] [inst_2 : Finite.{u_1 + 1} F]
+  [inst_3 : Finite.{u_2 + 1} K]
+  [inst_4 :
+    @Algebra.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+      (@DivisionSemiring.toSemiring.{u_2} K
+        (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))]
+  (hdeg :
+    @Eq.{1} Nat
+      (@Module.finrank.{u_1, u_2} F K
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@Semiring.toAddCommMonoid.{u_2} K
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1))))
+        (@Algebra.toModule.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))
+          inst_4))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+  (n : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) n →
+    @IsSimpleGroup.{max u_2 u_1} (@Atlas.Orthogonal.Minus.DMinus.{u_1, u_2} n F K inst inst_1 inst_2 inst_3 inst_4 hdeg)
+      (@Atlas.Orthogonal.projectiveElementaryGroup.{u_1, max u_1 u_2} F
+        (Atlas.Orthogonal.Minus.Vector.{u_1, u_2}
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) n
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+          F K)
+        inst
+        (@Prod.instAddCommGroup.{u_1, u_2}
+          (Atlas.Orthogonal.VectorD.{u_1}
+            (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) n
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+            F)
+          K
+          (@Pi.addCommGroup.{0, u_1}
+            (Atlas.Orthogonal.Index
+              (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) n
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+            (fun a ↦ F) fun i ↦
+            @Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
+          (@Ring.toAddCommGroup.{u_2} K (@DivisionRing.toRing.{u_2} K (@Field.toDivisionRing.{u_2} K inst_1))))
+        (@Prod.instModule.{u_1, u_1, u_2} F
+          (Atlas.Orthogonal.VectorD.{u_1}
+            (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) n
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+            F)
+          K (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+          (@Pi.addCommMonoid.{0, u_1}
+            (Atlas.Orthogonal.Index
+              (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) n
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+            (fun a ↦ F) fun i ↦
+            @Semiring.toAddCommMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+          (@Semiring.toAddCommMonoid.{u_2} K
+            (@DivisionSemiring.toSemiring.{u_2} K
+              (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1))))
+          (@Pi.Function.module.{0, u_1, u_1}
+            (Atlas.Orthogonal.Index
+              (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) n
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+            F F (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+            (@Semiring.toModule.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Algebra.toModule.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+            (@DivisionSemiring.toSemiring.{u_2} K
+              (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))
+            inst_4))
+        (@Atlas.Orthogonal.Minus.form.{u_1, u_2} F K inst inst_1 inst_2 inst_3 inst_4 hdeg
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) n
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+```
+
+<a id="family-3d4"></a>
+
+## ³D₄(q)
+
+### Order
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Triality.card_group.{u_1,
+  u_2} : ∀ (F : Type u_1) (K : Type u_2) [inst : Field.{u_1} F] [inst_1 : Field.{u_2} K] [inst_2 : Finite.{u_1 + 1} F]
+  [inst_3 : Finite.{u_2 + 1} K]
+  [inst_4 :
+    @Algebra.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+      (@DivisionSemiring.toSemiring.{u_2} K
+        (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))],
+  @Eq.{1} Nat
+      (@Module.finrank.{u_1, u_2} F K
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@Semiring.toAddCommMonoid.{u_2} K
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1))))
+        (@Algebra.toModule.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))
+          inst_4))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+    @Eq.{1} Nat (Nat.card.{u_2} (@Atlas.Triality.Group.{u_1, u_2} F K inst inst_1 inst_2 inst_3 inst_4))
+      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (Nat.card.{u_1} F) (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))))
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+              (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+                (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                  (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                  (Nat.card.{u_1} F) (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+                (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                  (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                  (Nat.card.{u_1} F) (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))))
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (Nat.card.{u_1} F) (@OfNat.ofNat.{0} Nat (nat_lit 6) (instOfNatNat (nat_lit 6))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+          (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+            (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) (Nat.card.{u_1} F)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+```
+
+### Simple
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Triality.simple.{u_1,
+  u_2} : ∀ (F : Type u_1) (K : Type u_2) [inst : Field.{u_1} F] [inst_1 : Field.{u_2} K] [inst_2 : Finite.{u_1 + 1} F]
+  [inst_3 : Finite.{u_2 + 1} K]
+  [inst_4 :
+    @Algebra.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+      (@DivisionSemiring.toSemiring.{u_2} K
+        (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))],
+  @Eq.{1} Nat
+      (@Module.finrank.{u_1, u_2} F K
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@Semiring.toAddCommMonoid.{u_2} K
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1))))
+        (@Algebra.toModule.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))
+          inst_4))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+    @IsSimpleGroup.{u_2} (@Atlas.Triality.Group.{u_1, u_2} F K inst inst_1 inst_2 inst_3 inst_4)
+      (@Subgroup.toGroup.{u_2}
+        (@Atlas.Orthogonal.O_DPlus.{u_2} (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K
+          (@Field.toCommRing.{u_2} K inst_1))
+        (@Subgroup.toGroup.{u_2}
+          (@LinearEquiv.{u_2, u_2, u_2, u_2} K K
+            (@CommSemiring.toSemiring.{u_2} K (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))
+            (@CommSemiring.toSemiring.{u_2} K (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))
+            (@RingHom.id.{u_2} K
+              (@Semiring.toNonAssocSemiring.{u_2} K
+                (@CommSemiring.toSemiring.{u_2} K
+                  (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))))
+            (@RingHom.id.{u_2} K
+              (@Semiring.toNonAssocSemiring.{u_2} K
+                (@CommSemiring.toSemiring.{u_2} K
+                  (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))))
+            ⋯ ⋯ (Atlas.Orthogonal.VectorD.{u_2} (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K)
+            (Atlas.Orthogonal.VectorD.{u_2} (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K)
+            (@AddCommGroup.toAddCommMonoid.{u_2}
+              (Atlas.Orthogonal.VectorD.{u_2} (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K)
+              (@Pi.addCommGroup.{0, u_2}
+                (Atlas.Orthogonal.Index (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) (fun a ↦ K)
+                fun i ↦ @Ring.toAddCommGroup.{u_2} K (@CommRing.toRing.{u_2} K (@Field.toCommRing.{u_2} K inst_1))))
+            (@AddCommGroup.toAddCommMonoid.{u_2}
+              (Atlas.Orthogonal.VectorD.{u_2} (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K)
+              (@Pi.addCommGroup.{0, u_2}
+                (Atlas.Orthogonal.Index (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) (fun a ↦ K)
+                fun i ↦ @Ring.toAddCommGroup.{u_2} K (@CommRing.toRing.{u_2} K (@Field.toCommRing.{u_2} K inst_1))))
+            (@Pi.Function.module.{0, u_2, u_2}
+              (Atlas.Orthogonal.Index (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) K K
+              (@CommSemiring.toSemiring.{u_2} K (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))
+              (@Semiring.toAddCommMonoid.{u_2} K
+                (@CommSemiring.toSemiring.{u_2} K
+                  (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1))))
+              (@Semiring.toModule.{u_2} K
+                (@CommSemiring.toSemiring.{u_2} K
+                  (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))))
+            (@Pi.Function.module.{0, u_2, u_2}
+              (Atlas.Orthogonal.Index (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) K K
+              (@CommSemiring.toSemiring.{u_2} K (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))
+              (@Semiring.toAddCommMonoid.{u_2} K
+                (@CommSemiring.toSemiring.{u_2} K
+                  (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1))))
+              (@Semiring.toModule.{u_2} K
+                (@CommSemiring.toSemiring.{u_2} K
+                  (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1))))))
+          (@LinearEquiv.automorphismGroup.{u_2, u_2} K
+            (Atlas.Orthogonal.VectorD.{u_2} (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K)
+            (@CommSemiring.toSemiring.{u_2} K (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))
+            (@AddCommGroup.toAddCommMonoid.{u_2}
+              (Atlas.Orthogonal.VectorD.{u_2} (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K)
+              (@Pi.addCommGroup.{0, u_2}
+                (Atlas.Orthogonal.Index (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) (fun a ↦ K)
+                fun i ↦ @Ring.toAddCommGroup.{u_2} K (@CommRing.toRing.{u_2} K (@Field.toCommRing.{u_2} K inst_1))))
+            (@Pi.Function.module.{0, u_2, u_2}
+              (Atlas.Orthogonal.Index (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) K K
+              (@CommSemiring.toSemiring.{u_2} K (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))
+              (@Semiring.toAddCommMonoid.{u_2} K
+                (@CommSemiring.toSemiring.{u_2} K
+                  (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1))))
+              (@Semiring.toModule.{u_2} K
+                (@CommSemiring.toSemiring.{u_2} K
+                  (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1))))))
+          (@Atlas.Orthogonal.isometrySubgroup.{u_2, u_2} K (@Field.toCommRing.{u_2} K inst_1)
+            (Atlas.Orthogonal.VectorD.{u_2} (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K)
+            (@Pi.addCommGroup.{0, u_2}
+              (Atlas.Orthogonal.Index (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) (fun a ↦ K) fun i ↦
+              @Ring.toAddCommGroup.{u_2} K (@CommRing.toRing.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))
+            (@Pi.Function.module.{0, u_2, u_2}
+              (Atlas.Orthogonal.Index (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) K K
+              (@CommSemiring.toSemiring.{u_2} K (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))
+              (@Semiring.toAddCommMonoid.{u_2} K
+                (@CommSemiring.toSemiring.{u_2} K
+                  (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1))))
+              (@Semiring.toModule.{u_2} K
+                (@CommSemiring.toSemiring.{u_2} K
+                  (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))))
+            (@Atlas.Orthogonal.formD.{u_2} (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K
+              (@Field.toCommRing.{u_2} K inst_1))))
+        (@Atlas.Triality.generated.{u_1, u_2} F K inst inst_1 inst_2 inst_3 inst_4))
+```
+
+<a id="family-e6"></a>
+
+## E₆(q)
+
+### Order
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.E6_order.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.FiniteFieldDomain.{u_1} K inst →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.Chevalley.Catalogue.E6.{u_1} K inst))
+      (@HDiv.hDiv.{0, 0, 0} Nat Nat Nat (@instHDiv.{0} Nat Nat.instDiv)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+              (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                  (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                    (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                      (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                      (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 36) (instOfNatNat (nat_lit 36))))
+                    (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                        (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                      (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+                  (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                    (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                      (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                      (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+                    (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+                (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                  (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                    (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                    (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 6) (instOfNatNat (nat_lit 6))))
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+              (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                  (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                  (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+            (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+              (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 9) (instOfNatNat (nat_lit 9))))
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (Nat.gcd (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) (Nat.card.{u_1} K)
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+```
+
+### Simple
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.E6_simple.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.FiniteFieldDomain.{u_1} K inst →
+    @IsSimpleGroup.{u_1} (@Atlas.Chevalley.Catalogue.E6.{u_1} K inst) (@Atlas.Chevalley.Catalogue.E6Group.{u_1} K inst)
+```
+
+<a id="family-e7"></a>
+
+## E₇(q)
+
+### Order
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.E7_order.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.FiniteFieldDomain.{u_1} K inst →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.Chevalley.Catalogue.E7.{u_1} K inst))
+      (@HDiv.hDiv.{0, 0, 0} Nat Nat Nat (@instHDiv.{0} Nat Nat.instDiv)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+              (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                  (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                    (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                        (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 63) (instOfNatNat (nat_lit 63))))
+                      (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                        (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                          (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                          (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+                    (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                        (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 6) (instOfNatNat (nat_lit 6))))
+                      (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+                  (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                    (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                      (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                      (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+                    (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+                (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                  (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                    (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                    (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 10) (instOfNatNat (nat_lit 10))))
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+              (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                  (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                  (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))))
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+            (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+              (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 14) (instOfNatNat (nat_lit 14))))
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 18) (instOfNatNat (nat_lit 18))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (Nat.gcd (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) (Nat.card.{u_1} K)
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+```
+
+### Simple
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.E7_simple.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.FiniteFieldDomain.{u_1} K inst →
+    @IsSimpleGroup.{u_1} (@Atlas.Chevalley.Catalogue.E7.{u_1} K inst) (@Atlas.Chevalley.Catalogue.E7Group.{u_1} K inst)
+```
+
+<a id="family-e8"></a>
+
+## E₈(q)
+
+### Order
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.E8_order.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.FiniteFieldDomain.{u_1} K inst →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.Chevalley.Catalogue.E8.{u_1} K inst))
+      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+              (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                  (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                    (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                        (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 120) (instOfNatNat (nat_lit 120))))
+                      (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                        (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                          (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                          (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+                    (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                        (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+                      (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+                  (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                    (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                      (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                      (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))))
+                    (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+                (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                  (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                    (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                    (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 14) (instOfNatNat (nat_lit 14))))
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+              (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                  (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                  (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 18) (instOfNatNat (nat_lit 18))))
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+            (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+              (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 20) (instOfNatNat (nat_lit 20))))
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 24) (instOfNatNat (nat_lit 24))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+          (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+            (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) (Nat.card.{u_1} K)
+            (@OfNat.ofNat.{0} Nat (nat_lit 30) (instOfNatNat (nat_lit 30))))
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+```
+
+### Simple
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.E8_simple.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.FiniteFieldDomain.{u_1} K inst →
+    @IsSimpleGroup.{u_1} (@Atlas.Chevalley.Catalogue.E8.{u_1} K inst) (@Atlas.Chevalley.Catalogue.E8Group.{u_1} K inst)
+```
+
+<a id="family-f4"></a>
+
+## F₄(q)
+
+### Order
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+@Atlas.F4.card_Model.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F],
+  @Eq.{1} Nat (Nat.card.{u_1} ↥(@Atlas.F4.Model.{u_1} F inst))
+    (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (Nat.card.{u_1} F) (@OfNat.ofNat.{0} Nat (nat_lit 24) (instOfNatNat (nat_lit 24))))
+            (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+              (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                (Nat.card.{u_1} F) (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))))
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (Nat.card.{u_1} F) (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+          (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+            (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) (Nat.card.{u_1} F)
+            (@OfNat.ofNat.{0} Nat (nat_lit 6) (instOfNatNat (nat_lit 6))))
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+      (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+        (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+          (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) (Nat.card.{u_1} F)
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+```
+
+### Simple
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+@Atlas.F4.isSimple.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F],
+  @IsSimpleGroup.{u_1} (↥(@Atlas.F4.Model.{u_1} F inst))
+    (@Subgroup.toGroup.{u_1}
+      (@LinearEquiv.{u_1, u_1, u_1, u_1} F F
+        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+        (@RingHom.id.{u_1} F
+          (@Semiring.toNonAssocSemiring.{u_1} F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+        (@RingHom.id.{u_1} F
+          (@Semiring.toNonAssocSemiring.{u_1} F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+        ⋯ ⋯ (Atlas.Albert.Carrier.{u_1} F) (Atlas.Albert.Carrier.{u_1} F)
+        (@Prod.instAddCommMonoid.{u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) → F)
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) → Atlas.SplitOctonion.Carrier.{u_1} F)
+          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) (fun a ↦ F)
+            fun i ↦
+            @Semiring.toAddCommMonoid.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+            (fun a ↦ Atlas.SplitOctonion.Carrier.{u_1} F) fun i ↦
+            @Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) (fun a ↦ F)
+              fun i ↦
+              @Semiring.toAddCommMonoid.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+        (@Prod.instAddCommMonoid.{u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) → F)
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) → Atlas.SplitOctonion.Carrier.{u_1} F)
+          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) (fun a ↦ F)
+            fun i ↦
+            @Semiring.toAddCommMonoid.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+            (fun a ↦ Atlas.SplitOctonion.Carrier.{u_1} F) fun i ↦
+            @Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) (fun a ↦ F)
+              fun i ↦
+              @Semiring.toAddCommMonoid.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+        (@Prod.instModule.{u_1, u_1, u_1} F (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) → F)
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) → Atlas.SplitOctonion.Carrier.{u_1} F)
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) (fun a ↦ F)
+            fun i ↦
+            @Semiring.toAddCommMonoid.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+            (fun a ↦ Atlas.SplitOctonion.Carrier.{u_1} F) fun i ↦
+            @Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) (fun a ↦ F)
+              fun i ↦
+              @Semiring.toAddCommMonoid.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+          (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) F F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+            (@Semiring.toModule.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+          (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) F
+            (Atlas.SplitOctonion.Carrier.{u_1} F)
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) (fun a ↦ F)
+              fun i ↦
+              @Semiring.toAddCommMonoid.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+            (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) F F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+              (@Semiring.toAddCommMonoid.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+              (@Semiring.toModule.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F
+                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))))
+        (@Prod.instModule.{u_1, u_1, u_1} F (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) → F)
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) → Atlas.SplitOctonion.Carrier.{u_1} F)
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) (fun a ↦ F)
+            fun i ↦
+            @Semiring.toAddCommMonoid.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+            (fun a ↦ Atlas.SplitOctonion.Carrier.{u_1} F) fun i ↦
+            @Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) (fun a ↦ F)
+              fun i ↦
+              @Semiring.toAddCommMonoid.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+          (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) F F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+            (@Semiring.toModule.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+          (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) F
+            (Atlas.SplitOctonion.Carrier.{u_1} F)
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) (fun a ↦ F)
+              fun i ↦
+              @Semiring.toAddCommMonoid.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+            (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) F F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+              (@Semiring.toAddCommMonoid.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+              (@Semiring.toModule.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F
+                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))))
+      (@LinearEquiv.automorphismGroup.{u_1, u_1} F (Atlas.Albert.Carrier.{u_1} F)
+        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+        (@Prod.instAddCommMonoid.{u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) → F)
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) → Atlas.SplitOctonion.Carrier.{u_1} F)
+          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) (fun a ↦ F)
+            fun i ↦
+            @Semiring.toAddCommMonoid.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+            (fun a ↦ Atlas.SplitOctonion.Carrier.{u_1} F) fun i ↦
+            @Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) (fun a ↦ F)
+              fun i ↦
+              @Semiring.toAddCommMonoid.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+        (@Prod.instModule.{u_1, u_1, u_1} F (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) → F)
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) → Atlas.SplitOctonion.Carrier.{u_1} F)
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) (fun a ↦ F)
+            fun i ↦
+            @Semiring.toAddCommMonoid.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+            (fun a ↦ Atlas.SplitOctonion.Carrier.{u_1} F) fun i ↦
+            @Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) (fun a ↦ F)
+              fun i ↦
+              @Semiring.toAddCommMonoid.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+          (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) F F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+            (@Semiring.toModule.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+          (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) F
+            (Atlas.SplitOctonion.Carrier.{u_1} F)
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) (fun a ↦ F)
+              fun i ↦
+              @Semiring.toAddCommMonoid.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+            (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) F F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+              (@Semiring.toAddCommMonoid.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+              (@Semiring.toModule.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F
+                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))))
+      (@Atlas.F4.Model.{u_1} F inst))
+```
+
+<a id="exceptional-tits"></a>
+
+## ²F₄(2)′ (Tits)
+
+### Order
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Tits.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Tits.Model)
+  (@OfNat.ofNat.{0} Nat (nat_lit 17971200) (instOfNatNat (nat_lit 17971200)))
+```
+
+### Simple
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Tits.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Tits.Model
+  (@Subgroup.toGroup.{0} Atlas.Tits.Ambient
+    (@Subgroup.toGroup.{0} Atlas.Rudvalis.RudvalisGroup
+      (@QuotientGroup.Quotient.group.{0} (↥Atlas.Rudvalis.gaussianLatticeGroup)
+        (@Subgroup.toGroup.{0}
+          (@LinearEquiv.{0, 0, 0, 0} Rat Rat Rat.semiring Rat.semiring
+            (@RingHom.id.{0} Rat (@Semiring.toNonAssocSemiring.{0} Rat Rat.semiring))
+            (@RingHom.id.{0} Rat (@Semiring.toNonAssocSemiring.{0} Rat Rat.semiring)) ⋯ ⋯ Atlas.Rudvalis.RationalSpace
+            Atlas.Rudvalis.RationalSpace
+            (@Pi.addCommMonoid.{0, 0} Atlas.Rudvalis.Coordinate (fun a ↦ Rat) fun i ↦ Rat.addCommMonoid)
+            (@Pi.addCommMonoid.{0, 0} Atlas.Rudvalis.Coordinate (fun a ↦ Rat) fun i ↦ Rat.addCommMonoid)
+            (@Pi.Function.module.{0, 0, 0} Atlas.Rudvalis.Coordinate Rat Rat Rat.semiring Rat.addCommMonoid
+              (@Semiring.toModule.{0} Rat Rat.semiring))
+            (@Pi.Function.module.{0, 0, 0} Atlas.Rudvalis.Coordinate Rat Rat Rat.semiring Rat.addCommMonoid
+              (@Semiring.toModule.{0} Rat Rat.semiring)))
+          (@LinearEquiv.automorphismGroup.{0, 0} Rat Atlas.Rudvalis.RationalSpace Rat.semiring
+            (@Pi.addCommMonoid.{0, 0} Atlas.Rudvalis.Coordinate (fun a ↦ Rat) fun i ↦ Rat.addCommMonoid)
+            (@Pi.Function.module.{0, 0, 0} Atlas.Rudvalis.Coordinate Rat Rat Rat.semiring Rat.addCommMonoid
+              (@Semiring.toModule.{0} Rat Rat.semiring)))
+          Atlas.Rudvalis.gaussianLatticeGroup)
+        Atlas.Rudvalis.gaussianScalarSubgroup Atlas.Rudvalis.gaussianScalarSubgroup_normal)
+      Atlas.Tits.ambientStabilizer)
+    Atlas.Tits.derivedSubgroup)
+```
+
+<a id="family-g2"></a>
+
+## G₂(q)
+
+### Order
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.G2.card_Model.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [Finite.{u_1 + 1} K],
@@ -279,9 +1168,9 @@ Model: `Atlas.G2.Model` ([source](Atlas/LinearGroups/G2/Basic.lean)).
         (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.G2.isSimple` — [source](Atlas/LinearGroups/G2/Simplicity.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.G2.isSimple.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [Finite.{u_1 + 1} K],
@@ -302,13 +1191,13 @@ Model: `Atlas.G2.Model` ([source](Atlas/LinearGroups/G2/Basic.lean)).
               (@DivisionSemiring.toSemiring.{u_1} K
                 (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))))
           ⋯ ⋯ (Atlas.SplitOctonion.Carrier.{u_1} K) (Atlas.SplitOctonion.Carrier.{u_1} K)
-          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) (fun a => K)
-            fun i =>
+          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) (fun a ↦ K)
+            fun i ↦
             @Semiring.toAddCommMonoid.{u_1} K
               (@DivisionSemiring.toSemiring.{u_1} K
                 (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))
-          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) (fun a => K)
-            fun i =>
+          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) (fun a ↦ K)
+            fun i ↦
             @Semiring.toAddCommMonoid.{u_1} K
               (@DivisionSemiring.toSemiring.{u_1} K
                 (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))
@@ -333,8 +1222,8 @@ Model: `Atlas.G2.Model` ([source](Atlas/LinearGroups/G2/Basic.lean)).
         (@LinearEquiv.automorphismGroup.{u_1, u_1} K (Atlas.SplitOctonion.Carrier.{u_1} K)
           (@DivisionSemiring.toSemiring.{u_1} K
             (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))
-          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) (fun a => K)
-            fun i =>
+          (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8)))) (fun a ↦ K)
+            fun i ↦
             @Semiring.toAddCommMonoid.{u_1} K
               (@DivisionSemiring.toSemiring.{u_1} K
                 (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))
@@ -350,13 +1239,13 @@ Model: `Atlas.G2.Model` ([source](Atlas/LinearGroups/G2/Basic.lean)).
         (@Atlas.G2.Model.{u_1} K inst))
 ```
 
-## Ree (2G2)
+<a id="family-reeg2"></a>
 
-Model: `Atlas.ReeG2.Model` ([source](Atlas/LinearGroups/ReeG2/Generators.lean)).
+## ²G₂(q)
 
 ### Order
 
-`Atlas.ReeG2.order` — [source](Atlas/LinearGroups/ReeG2/Order.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.ReeG2.order.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
@@ -389,9 +1278,9 @@ Model: `Atlas.ReeG2.Model` ([source](Atlas/LinearGroups/ReeG2/Generators.lean)).
           (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.ReeG2.simple` — [source](Atlas/LinearGroups/ReeG2/Simplicity.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.ReeG2.simple.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
@@ -418,22 +1307,22 @@ Model: `Atlas.ReeG2.Model` ([source](Atlas/LinearGroups/ReeG2/Generators.lean)).
         (@Atlas.ReeG2.generated.{u_1} F inst inst_1 inst_2 m))
 ```
 
-## M11
+<a id="sporadic-m11"></a>
 
-Model: `Atlas.Sporadic.Mathieu11.Model` ([source](Atlas/Sporadic/Mathieu11.lean)).
+## M₁₁
 
 ### Order
 
-`Atlas.Sporadic.Mathieu11.card` — [source](Atlas/Sporadic/Mathieu11.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu11.card : ∀ (D : Atlas.Codes.Dodecad) (a : Atlas.Codes.Mathieu12Points D),
   @Eq.{1} Nat (Nat.card.{0} (Atlas.Sporadic.Mathieu11.Model D a)) Atlas.Sporadic.Mathieu11.order
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Sporadic.Mathieu11.isSimpleGroup` — [source](Atlas/Sporadic/Mathieu11.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu11.isSimpleGroup : ∀ (D : Atlas.Codes.Dodecad) (a : Atlas.Codes.Mathieu12Points D),
@@ -446,22 +1335,22 @@ Atlas.Sporadic.Mathieu11.isSimpleGroup : ∀ (D : Atlas.Codes.Dodecad) (a : Atla
       (Atlas.Codes.Mathieu11PointModel D a))
 ```
 
-## M12
+<a id="sporadic-m12"></a>
 
-Model: `Atlas.Sporadic.Mathieu12.Model` ([source](Atlas/Sporadic/Mathieu12.lean)).
+## M₁₂
 
 ### Order
 
-`Atlas.Sporadic.Mathieu12.card` — [source](Atlas/Sporadic/Mathieu12.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu12.card : ∀ (D : Atlas.Codes.Dodecad),
   @Eq.{1} Nat (Nat.card.{0} (Atlas.Sporadic.Mathieu12.Model D)) Atlas.Sporadic.Mathieu12.order
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Sporadic.Mathieu12.isSimpleGroup` — [source](Atlas/Sporadic/Mathieu12.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu12.isSimpleGroup : ∀ (D : Atlas.Codes.Dodecad),
@@ -472,22 +1361,22 @@ Atlas.Sporadic.Mathieu12.isSimpleGroup : ∀ (D : Atlas.Codes.Dodecad),
       (Atlas.Codes.Mathieu12DodecadModel D))
 ```
 
-## M22
+<a id="sporadic-m22"></a>
 
-Model: `Atlas.Sporadic.Mathieu22.Model` ([source](Atlas/Sporadic/Mathieu22.lean)).
+## M₂₂
 
 ### Order
 
-`Atlas.Sporadic.Mathieu22.card` — [source](Atlas/Sporadic/Mathieu22.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu22.card : ∀ (a : Atlas.Codes.Omega) (b : ↥(Atlas.Codes.Mathieu23Points a)),
   @Eq.{1} Nat (Nat.card.{0} (Atlas.Sporadic.Mathieu22.Model a b)) Atlas.Sporadic.Mathieu22.order
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Sporadic.Mathieu22.isSimpleGroup` — [source](Atlas/Sporadic/Mathieu22Simple.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu22.isSimpleGroup : ∀ (a : Atlas.Codes.Omega) (b : ↥(Atlas.Codes.Mathieu23Points a)),
@@ -500,22 +1389,22 @@ Atlas.Sporadic.Mathieu22.isSimpleGroup : ∀ (a : Atlas.Codes.Omega) (b : ↥(At
       (Atlas.Codes.Mathieu22PointModel a b))
 ```
 
-## M23
+<a id="sporadic-m23"></a>
 
-Model: `Atlas.Sporadic.Mathieu23.Model` ([source](Atlas/Sporadic/Mathieu23.lean)).
+## M₂₃
 
 ### Order
 
-`Atlas.Sporadic.Mathieu23.card` — [source](Atlas/Sporadic/Mathieu23.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu23.card : ∀ (a : Atlas.Codes.Omega),
   @Eq.{1} Nat (Nat.card.{0} (Atlas.Sporadic.Mathieu23.Model a)) Atlas.Sporadic.Mathieu23.order
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Sporadic.Mathieu23.isSimpleGroup` — [source](Atlas/Sporadic/Mathieu23.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu23.isSimpleGroup : ∀ (a : Atlas.Codes.Omega),
@@ -526,22 +1415,22 @@ Atlas.Sporadic.Mathieu23.isSimpleGroup : ∀ (a : Atlas.Codes.Omega),
       (Atlas.Codes.Mathieu23PointModel a))
 ```
 
-## M24
+<a id="sporadic-m24"></a>
 
-Model: `Atlas.Sporadic.Mathieu24.Model` ([source](Atlas/Sporadic/Mathieu24.lean)).
+## M₂₄
 
 ### Order
 
-`Atlas.Sporadic.Mathieu24.card` — [source](Atlas/Sporadic/Mathieu24Construction.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu24.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Mathieu24.Model)
   Atlas.Sporadic.Mathieu24.expectedOrder
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Sporadic.Mathieu24.isSimpleGroup` — [source](Atlas/Sporadic/Mathieu24Construction.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu24.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Mathieu24.Model
@@ -549,21 +1438,21 @@ Atlas.Sporadic.Mathieu24.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Mathi
     Atlas.Codes.Mathieu24CodeModel)
 ```
 
-## Co1
+<a id="sporadic-co1"></a>
 
-Model: `Atlas.Sporadic.Conway1.Model` ([source](Atlas/Sporadic/Conway1.lean)).
+## Co₁
 
 ### Order
 
-`Atlas.Sporadic.Conway1.card` — [source](Atlas/Sporadic/Conway1.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Conway1.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Conway1.Model) Atlas.Sporadic.Conway1.order
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Sporadic.Conway1.isSimpleGroup` — [source](Atlas/Sporadic/Conway1.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Conway1.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Conway1.Model
@@ -574,58 +1463,58 @@ Atlas.Sporadic.Conway1.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Conway1
         (@RingHom.id.{0} Int (@Semiring.toNonAssocSemiring.{0} Int Int.instSemiring)) ⋯ ⋯ (↥Atlas.Lattices.leech)
         (↥Atlas.Lattices.leech)
         (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
           (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
           Atlas.Lattices.leech)
         (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
           (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
           Atlas.Lattices.leech)
         (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
           (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech))
         (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
           (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech)))
       (@LinearEquiv.automorphismGroup.{0, 0} Int (↥Atlas.Lattices.leech) Int.instSemiring
         (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
           (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
           Atlas.Lattices.leech)
         (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
           (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech)))
       Atlas.Lattices.leechIsometries)
     Atlas.Conway.leechCentralSigns Atlas.Conway.instNormalLeechIsometryGroupLeechCentralSigns)
 ```
 
-## Co2
+<a id="sporadic-co2"></a>
 
-Model: `Atlas.Sporadic.Conway2.Model` ([source](Atlas/Sporadic/Conway2.lean)).
+## Co₂
 
 ### Order
 
-`Atlas.Sporadic.Conway2.card` — [source](Atlas/Sporadic/Conway2.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Conway2.card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Conway2.Model) Atlas.Sporadic.Conway2.order
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Sporadic.Conway2.isSimpleGroup` — [source](Atlas/Sporadic/Conway2Simplicity.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Conway2.isSimpleGroup : @IsSimpleGroup.{0} (↥Atlas.Sporadic.Conway2.Model)
@@ -636,58 +1525,58 @@ Atlas.Sporadic.Conway2.isSimpleGroup : @IsSimpleGroup.{0} (↥Atlas.Sporadic.Con
         (@RingHom.id.{0} Int (@Semiring.toNonAssocSemiring.{0} Int Int.instSemiring)) ⋯ ⋯ (↥Atlas.Lattices.leech)
         (↥Atlas.Lattices.leech)
         (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
           (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
           Atlas.Lattices.leech)
         (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
           (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
           Atlas.Lattices.leech)
         (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
           (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech))
         (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
           (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech)))
       (@LinearEquiv.automorphismGroup.{0, 0} Int (↥Atlas.Lattices.leech) Int.instSemiring
         (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
           (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
           Atlas.Lattices.leech)
         (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
           (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech)))
       Atlas.Lattices.leechIsometries)
     Atlas.Sporadic.Conway2.Model)
 ```
 
-## Co3
+<a id="sporadic-co3"></a>
 
-Model: `Atlas.Sporadic.Conway3.Model` ([source](Atlas/Sporadic/Conway3.lean)).
+## Co₃
 
 ### Order
 
-`Atlas.Sporadic.Conway3.card` — [source](Atlas/Sporadic/Conway3.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Conway3.card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Conway3.Model) Atlas.Sporadic.Conway3.order
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Sporadic.Conway3.isSimpleGroup` — [source](Atlas/Sporadic/Conway3Simplicity.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Conway3.isSimpleGroup : @IsSimpleGroup.{0} (↥Atlas.Sporadic.Conway3.Model)
@@ -698,59 +1587,59 @@ Atlas.Sporadic.Conway3.isSimpleGroup : @IsSimpleGroup.{0} (↥Atlas.Sporadic.Con
         (@RingHom.id.{0} Int (@Semiring.toNonAssocSemiring.{0} Int Int.instSemiring)) ⋯ ⋯ (↥Atlas.Lattices.leech)
         (↥Atlas.Lattices.leech)
         (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
           (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
           Atlas.Lattices.leech)
         (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
           (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
           Atlas.Lattices.leech)
         (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
           (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech))
         (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
           (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech)))
       (@LinearEquiv.automorphismGroup.{0, 0} Int (↥Atlas.Lattices.leech) Int.instSemiring
         (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+          (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
           (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
           Atlas.Lattices.leech)
         (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
           (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+            (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech)))
       Atlas.Lattices.leechIsometries)
     Atlas.Sporadic.Conway3.Model)
 ```
 
-## McL
+<a id="sporadic-mcl"></a>
 
-Model: `Atlas.Sporadic.McLaughlin.Model` ([source](Atlas/Sporadic/McLaughlin.lean)).
+## McL
 
 ### Order
 
-`Atlas.Sporadic.McLaughlin.card` — [source](Atlas/Sporadic/McLaughlin.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.McLaughlin.card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.McLaughlin.Model)
   Atlas.Sporadic.McLaughlin.order
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Sporadic.McLaughlin.isSimpleGroup` — [source](Atlas/Sporadic/McLaughlinSimplicity.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.McLaughlin.isSimpleGroup : @IsSimpleGroup.{0} (↥Atlas.Sporadic.McLaughlin.Model)
@@ -762,60 +1651,60 @@ Atlas.Sporadic.McLaughlin.isSimpleGroup : @IsSimpleGroup.{0} (↥Atlas.Sporadic.
           (@RingHom.id.{0} Int (@Semiring.toNonAssocSemiring.{0} Int Int.instSemiring)) ⋯ ⋯ (↥Atlas.Lattices.leech)
           (↥Atlas.Lattices.leech)
           (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech)
           (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech)
           (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
             (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
               (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
               Atlas.Lattices.leech))
           (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
             (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
               (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
               Atlas.Lattices.leech)))
         (@LinearEquiv.automorphismGroup.{0, 0} Int (↥Atlas.Lattices.leech) Int.instSemiring
           (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech)
           (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
             (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
               (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
               Atlas.Lattices.leech)))
         Atlas.Lattices.leechIsometries)
       Atlas.Sporadic.Conway3.Model)
     Atlas.Sporadic.McLaughlin.Model)
 ```
 
-## HS
+<a id="sporadic-hs"></a>
 
-Model: `Atlas.Sporadic.HigmanSims.Model` ([source](Atlas/Sporadic/HigmanSimsConfiguration.lean)).
+## HS
 
 ### Order
 
-`Atlas.Sporadic.HigmanSims.card` — [source](Atlas/Sporadic/HigmanSims.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.HigmanSims.card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.HigmanSims.Model)
   (@OfNat.ofNat.{0} Nat (nat_lit 44352000) (instOfNatNat (nat_lit 44352000)))
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Sporadic.HigmanSims.isSimpleGroup` — [source](Atlas/Sporadic/HigmanSimsSimplicity.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.HigmanSims.isSimpleGroup : @IsSimpleGroup.{0} (↥Atlas.Sporadic.HigmanSims.Model)
@@ -828,60 +1717,60 @@ Atlas.Sporadic.HigmanSims.isSimpleGroup : @IsSimpleGroup.{0} (↥Atlas.Sporadic.
           (@RingHom.id.{0} Int (@Semiring.toNonAssocSemiring.{0} Int Int.instSemiring)) ⋯ ⋯ (↥Atlas.Lattices.leech)
           (↥Atlas.Lattices.leech)
           (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech)
           (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech)
           (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
             (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
               (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
               Atlas.Lattices.leech))
           (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
             (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
               (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
               Atlas.Lattices.leech)))
         (@LinearEquiv.automorphismGroup.{0, 0} Int (↥Atlas.Lattices.leech) Int.instSemiring
           (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech)
           (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
             (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
               (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
               Atlas.Lattices.leech)))
         Atlas.Lattices.leechIsometries)
       (Atlas.Conway.fullVectorStabilizer (Atlas.Conway.normSixVector Atlas.Conway.co3MarkedCoordinate)))
     Atlas.Sporadic.HigmanSims.Model)
 ```
 
-## Suz
+<a id="sporadic-suz"></a>
 
-Model: `Atlas.Sporadic.Suzuki.Model` ([source](Atlas/Sporadic/Suzuki.lean)).
+## Suz
 
 ### Order
 
-`Atlas.Sporadic.Suzuki.card` — [source](Atlas/Sporadic/Suzuki.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Suzuki.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Suzuki.Model)
   (@OfNat.ofNat.{0} Nat (nat_lit 448345497600) (instOfNatNat (nat_lit 448345497600)))
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Sporadic.Suzuki.isSimpleGroup` — [source](Atlas/Sporadic/Suzuki.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Suzuki.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Suzuki.Model
@@ -893,60 +1782,60 @@ Atlas.Sporadic.Suzuki.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Suzuki.M
           (@RingHom.id.{0} Int (@Semiring.toNonAssocSemiring.{0} Int Int.instSemiring)) ⋯ ⋯ (↥Atlas.Lattices.leech)
           (↥Atlas.Lattices.leech)
           (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech)
           (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech)
           (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
             (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
               (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
               Atlas.Lattices.leech))
           (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
             (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
               (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
               Atlas.Lattices.leech)))
         (@LinearEquiv.automorphismGroup.{0, 0} Int (↥Atlas.Lattices.leech) Int.instSemiring
           (@Submodule.addCommMonoid.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instSemiring
-            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommMonoid)
+            (@Pi.addCommMonoid.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommMonoid)
             (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
             Atlas.Lattices.leech)
           (@AddCommGroup.toIntModule.{0} (↥Atlas.Lattices.leech)
             (@Submodule.addCommGroup.{0, 0} Int Atlas.Lattices.IntegerCoordinates Int.instRing
-              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup)
+              (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup)
               (@AddCommGroup.toIntModule.{0} Atlas.Lattices.IntegerCoordinates
-                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a => Int) fun i => Int.instAddCommGroup))
+                (@Pi.addCommGroup.{0, 0} Atlas.Codes.Omega (fun a ↦ Int) fun i ↦ Int.instAddCommGroup))
               Atlas.Lattices.leech)))
         Atlas.Lattices.leechIsometries)
       Atlas.Conway.eisensteinCentralizer)
     Atlas.Conway.eisensteinCentralizerScalars Atlas.Conway.eisensteinCentralizerScalars_normal)
 ```
 
-## J2
+<a id="sporadic-j2"></a>
 
-Model: `Atlas.Sporadic.Janko2.Model` ([source](Atlas/Sporadic/Janko2.lean)).
+## J₂
 
 ### Order
 
-`Atlas.Sporadic.Janko2.card` — [source](Atlas/Sporadic/Janko2.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Janko2.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Janko2.Model)
   (@OfNat.ofNat.{0} Nat (nat_lit 604800) (instOfNatNat (nat_lit 604800)))
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Sporadic.Janko2.isSimpleGroup` — [source](Atlas/Sporadic/Janko2.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Janko2.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Janko2.Model
@@ -957,14 +1846,14 @@ Atlas.Sporadic.Janko2.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Janko2.M
         (@RingHom.id.{0} Rat (@Semiring.toNonAssocSemiring.{0} Rat Rat.semiring)) ⋯ ⋯
         Atlas.Lattices.IcosianRationalCoordinates Atlas.Lattices.IcosianRationalCoordinates
         (@Pi.addCommMonoid.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
-          (fun a => Atlas.Algebra.IcosianQuaternion) fun i =>
+          (fun a ↦ Atlas.Algebra.IcosianQuaternion) fun i ↦
           @Semiring.toAddCommMonoid.{0} Atlas.Algebra.IcosianQuaternion
             (@Ring.toSemiring.{0} Atlas.Algebra.IcosianQuaternion
               (@Quaternion.instRing.{0} Atlas.Algebra.GoldenRational
                 (@QuadraticAlgebra.instCommRing.{0} Rat (@OfNat.ofNat.{0} Rat (nat_lit 1) (@Rat.instOfNat (nat_lit 1)))
                   (@OfNat.ofNat.{0} Rat (nat_lit 1) (@Rat.instOfNat (nat_lit 1))) Rat.commRing))))
         (@Pi.addCommMonoid.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
-          (fun a => Atlas.Algebra.IcosianQuaternion) fun i =>
+          (fun a ↦ Atlas.Algebra.IcosianQuaternion) fun i ↦
           @Semiring.toAddCommMonoid.{0} Atlas.Algebra.IcosianQuaternion
             (@Ring.toSemiring.{0} Atlas.Algebra.IcosianQuaternion
               (@Quaternion.instRing.{0} Atlas.Algebra.GoldenRational
@@ -1004,7 +1893,7 @@ Atlas.Sporadic.Janko2.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Janko2.M
               (@Semiring.toModule.{0} Rat Rat.semiring)))))
       (@LinearEquiv.automorphismGroup.{0, 0} Rat Atlas.Lattices.IcosianRationalCoordinates Rat.semiring
         (@Pi.addCommMonoid.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
-          (fun a => Atlas.Algebra.IcosianQuaternion) fun i =>
+          (fun a ↦ Atlas.Algebra.IcosianQuaternion) fun i ↦
           @Semiring.toAddCommMonoid.{0} Atlas.Algebra.IcosianQuaternion
             (@Ring.toSemiring.{0} Atlas.Algebra.IcosianQuaternion
               (@Quaternion.instRing.{0} Atlas.Algebra.GoldenRational
@@ -1030,22 +1919,22 @@ Atlas.Sporadic.Janko2.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Janko2.M
     Atlas.Conway.icosianCentralSigns Atlas.Conway.icosianCentralSigns_normal)
 ```
 
-## Fi22
+<a id="sporadic-fi22"></a>
 
-Model: `Atlas.Sporadic.Fischer22.Model` ([source](Atlas/Sporadic/Fischer22.lean)).
+## Fi₂₂
 
 ### Order
 
-`Atlas.Sporadic.Fischer22.card` — [source](Atlas/Sporadic/Fischer22.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Fischer22.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Fischer22.Model)
   (@OfNat.ofNat.{0} Nat (nat_lit 64561751654400) (instOfNatNat (nat_lit 64561751654400)))
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Sporadic.Fischer22.simple` — [source](Atlas/Sporadic/Fischer22.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Fischer22.simple : @IsSimpleGroup.{0} Atlas.Sporadic.Fischer22.Model
@@ -1060,22 +1949,22 @@ Atlas.Sporadic.Fischer22.simple : @IsSimpleGroup.{0} Atlas.Sporadic.Fischer22.Mo
     (Atlas.Fischer.residueCentralElementary Atlas.Fischer.fischer22Marking) ⋯)
 ```
 
-## Fi23
+<a id="sporadic-fi23"></a>
 
-Model: `Atlas.Sporadic.Fischer23.Model` ([source](Atlas/Sporadic/Fischer23.lean)).
+## Fi₂₃
 
 ### Order
 
-`Atlas.Sporadic.Fischer23.card` — [source](Atlas/Sporadic/Fischer23.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Fischer23.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Fischer23.Model)
   (@OfNat.ofNat.{0} Nat (nat_lit 4089470473293004800) (instOfNatNat (nat_lit 4089470473293004800)))
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Sporadic.Fischer23.simple` — [source](Atlas/Sporadic/Fischer23.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Fischer23.simple : @IsSimpleGroup.{0} Atlas.Sporadic.Fischer23.Model
@@ -1090,22 +1979,22 @@ Atlas.Sporadic.Fischer23.simple : @IsSimpleGroup.{0} Atlas.Sporadic.Fischer23.Mo
     (Atlas.Fischer.residueCentralElementary Atlas.Fischer.fischer23Marking) ⋯)
 ```
 
-## Fi24Prime
+<a id="sporadic-fi24prime"></a>
 
-Model: `Atlas.Sporadic.Fischer24Prime.Model` ([source](Atlas/Sporadic/Fischer24Prime.lean)).
+## Fi₂₄′
 
 ### Order
 
-`Atlas.Sporadic.Fischer24Prime.card` — [source](Atlas/Sporadic/Fischer24Prime.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Fischer24Prime.card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Fischer24Prime.Model)
   (@OfNat.ofNat.{0} Nat (nat_lit 1255205709190661721292800) (instOfNatNat (nat_lit 1255205709190661721292800)))
 ```
 
-### Simplicity
+### Simple
 
-`Atlas.Sporadic.Fischer24Prime.simple` — [source](Atlas/Sporadic/Fischer24Prime.lean).
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Fischer24Prime.simple : @IsSimpleGroup.{0} (↥Atlas.Sporadic.Fischer24Prime.Model)
@@ -1117,3 +2006,43 @@ Atlas.Sporadic.Fischer24Prime.simple : @IsSimpleGroup.{0} (↥Atlas.Sporadic.Fis
       Atlas.Fischer.rootGeneratedRayGroup)
     Atlas.Sporadic.Fischer24Prime.Model)
 ```
+
+<a id="sporadic-ru"></a>
+
+## Ru
+
+### Order
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Sporadic.Rudvalis.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Rudvalis.Model)
+  (@OfNat.ofNat.{0} Nat (nat_lit 145926144000) (instOfNatNat (nat_lit 145926144000)))
+```
+
+### Simple
+
+[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Sporadic.Rudvalis.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Rudvalis.Model
+  (@QuotientGroup.Quotient.group.{0} (↥Atlas.Rudvalis.gaussianLatticeGroup)
+    (@Subgroup.toGroup.{0}
+      (@LinearEquiv.{0, 0, 0, 0} Rat Rat Rat.semiring Rat.semiring
+        (@RingHom.id.{0} Rat (@Semiring.toNonAssocSemiring.{0} Rat Rat.semiring))
+        (@RingHom.id.{0} Rat (@Semiring.toNonAssocSemiring.{0} Rat Rat.semiring)) ⋯ ⋯ Atlas.Rudvalis.RationalSpace
+        Atlas.Rudvalis.RationalSpace
+        (@Pi.addCommMonoid.{0, 0} Atlas.Rudvalis.Coordinate (fun a ↦ Rat) fun i ↦ Rat.addCommMonoid)
+        (@Pi.addCommMonoid.{0, 0} Atlas.Rudvalis.Coordinate (fun a ↦ Rat) fun i ↦ Rat.addCommMonoid)
+        (@Pi.Function.module.{0, 0, 0} Atlas.Rudvalis.Coordinate Rat Rat Rat.semiring Rat.addCommMonoid
+          (@Semiring.toModule.{0} Rat Rat.semiring))
+        (@Pi.Function.module.{0, 0, 0} Atlas.Rudvalis.Coordinate Rat Rat Rat.semiring Rat.addCommMonoid
+          (@Semiring.toModule.{0} Rat Rat.semiring)))
+      (@LinearEquiv.automorphismGroup.{0, 0} Rat Atlas.Rudvalis.RationalSpace Rat.semiring
+        (@Pi.addCommMonoid.{0, 0} Atlas.Rudvalis.Coordinate (fun a ↦ Rat) fun i ↦ Rat.addCommMonoid)
+        (@Pi.Function.module.{0, 0, 0} Atlas.Rudvalis.Coordinate Rat Rat Rat.semiring Rat.addCommMonoid
+          (@Semiring.toModule.{0} Rat Rat.semiring)))
+      Atlas.Rudvalis.gaussianLatticeGroup)
+    Atlas.Rudvalis.gaussianScalarSubgroup Atlas.Rudvalis.gaussianScalarSubgroup_normal)
+```
+

@@ -1,0 +1,2117 @@
+STATEMENT Atlas.SuzukiFamily.card_group SOURCE Atlas.LinearGroups.SuzukiFamily.Order
+@Atlas.SuzukiFamily.card_group.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))]
+  (m : Nat),
+  @Eq.{1} Nat (Nat.card.{u_1} F)
+      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) m)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))) →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.SuzukiFamily.Group.{u_1} F inst inst_1 inst_2 m))
+      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+            (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) (Nat.card.{u_1} F)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (Nat.card.{u_1} F) (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) (Nat.card.{u_1} F)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+STATEMENT Atlas.SuzukiFamily.card_group_binary SOURCE Atlas.LinearGroups.SuzukiFamily.Order
+@Atlas.SuzukiFamily.card_group_binary.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))],
+  @Eq.{1} Nat (Nat.card.{u_1} F) (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) →
+    @Eq.{1} Nat
+      (Nat.card.{u_1}
+        (@Atlas.SuzukiFamily.Group.{u_1} F inst inst_1 inst_2
+          (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 20) (instOfNatNat (nat_lit 20)))
+STATEMENT Atlas.SuzukiFamily.card_group_eight SOURCE Atlas.LinearGroups.SuzukiFamily.Order
+@Atlas.SuzukiFamily.card_group_eight.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))],
+  @Eq.{1} Nat (Nat.card.{u_1} F) (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))) →
+    @Eq.{1} Nat
+      (Nat.card.{u_1}
+        (@Atlas.SuzukiFamily.Group.{u_1} F inst inst_1 inst_2
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 29120) (instOfNatNat (nat_lit 29120)))
+STATEMENT Atlas.SuzukiFamily.card_group_oneTwentyEight SOURCE Atlas.LinearGroups.SuzukiFamily.Order
+@Atlas.SuzukiFamily.card_group_oneTwentyEight.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F]
+  [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))],
+  @Eq.{1} Nat (Nat.card.{u_1} F) (@OfNat.ofNat.{0} Nat (nat_lit 128) (instOfNatNat (nat_lit 128))) →
+    @Eq.{1} Nat
+      (Nat.card.{u_1}
+        (@Atlas.SuzukiFamily.Group.{u_1} F inst inst_1 inst_2
+          (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 34093383680) (instOfNatNat (nat_lit 34093383680)))
+STATEMENT Atlas.SuzukiFamily.card_group_thirtyTwo SOURCE Atlas.LinearGroups.SuzukiFamily.Order
+@Atlas.SuzukiFamily.card_group_thirtyTwo.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))],
+  @Eq.{1} Nat (Nat.card.{u_1} F) (@OfNat.ofNat.{0} Nat (nat_lit 32) (instOfNatNat (nat_lit 32))) →
+    @Eq.{1} Nat
+      (Nat.card.{u_1}
+        (@Atlas.SuzukiFamily.Group.{u_1} F inst inst_1 inst_2
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 32537600) (instOfNatNat (nat_lit 32537600)))
+DEFINITION Atlas.SuzukiFamily.Group SOURCE Atlas.LinearGroups.SuzukiFamily.Model
+@[reducible] def Atlas.SuzukiFamily.Group.{u_2} : (F : Type u_2) →
+  [inst : Field.{u_2} F] →
+    [Finite.{u_2 + 1} F] →
+      [@CharP.{u_2} F
+            (@AddGroupWithOne.toAddMonoidWithOne.{u_2} F
+              (@Ring.toAddGroupWithOne.{u_2} F (@DivisionRing.toRing.{u_2} F (@Field.toDivisionRing.{u_2} F inst))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))] →
+        Nat → Type u_2 :=
+fun F [inst : Field.{u_2} F] [inst_1 : Finite.{u_2 + 1} F]
+    [inst_2 :
+      @CharP.{u_2} F
+        (@AddGroupWithOne.toAddMonoidWithOne.{u_2} F
+          (@Ring.toAddGroupWithOne.{u_2} F (@DivisionRing.toRing.{u_2} F (@Field.toDivisionRing.{u_2} F inst))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))]
+    m =>
+  ↥(@Atlas.SuzukiFamily.generated.{u_2} F inst inst_1 inst_2 m)
+DEFINITION Atlas.SuzukiFamily.generated SOURCE Atlas.LinearGroups.SuzukiFamily.Model
+def Atlas.SuzukiFamily.generated.{u_1} : {F : Type u_1} →
+  [inst : Field.{u_1} F] →
+    [Finite.{u_1 + 1} F] →
+      [@CharP.{u_1} F
+            (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+              (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))] →
+        Nat →
+          @Subgroup.{u_1}
+            (@Atlas.Symplectic.Sp.{u_1} (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) F
+              (@Field.toCommRing.{u_1} F inst))
+            (@SymplecticGroup.instGroupSubtypeMatrixSumMemSubmonoidSymplecticGroup.{0, u_1}
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) F
+              (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (@Field.toCommRing.{u_1} F inst)) :=
+fun {F} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+    [inst_2 :
+      @CharP.{u_1} F
+        (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+          (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))]
+    m =>
+  @Subgroup.closure.{u_1}
+    (@Atlas.Symplectic.Sp.{u_1} (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) F
+      (@Field.toCommRing.{u_1} F inst))
+    (@SymplecticGroup.instGroupSubtypeMatrixSumMemSubmonoidSymplecticGroup.{0, u_1}
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) F
+      (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+      (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) (@Field.toCommRing.{u_1} F inst))
+    (@Union.union.{u_1}
+      (Set.{u_1}
+        (@Atlas.Symplectic.Sp.{u_1} (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) F
+          (@Field.toCommRing.{u_1} F inst)))
+      (@Set.instUnion.{u_1}
+        (@Atlas.Symplectic.Sp.{u_1} (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) F
+          (@Field.toCommRing.{u_1} F inst)))
+      (@Union.union.{u_1}
+        (Set.{u_1}
+          (@Atlas.Symplectic.Sp.{u_1} (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) F
+            (@Field.toCommRing.{u_1} F inst)))
+        (@Set.instUnion.{u_1}
+          (@Atlas.Symplectic.Sp.{u_1} (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) F
+            (@Field.toCommRing.{u_1} F inst)))
+        (@Set.range.{u_1, u_1 + 1}
+          (@Atlas.Symplectic.Sp.{u_1} (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) F
+            (@Field.toCommRing.{u_1} F inst))
+          (Prod.{u_1, u_1} F F) fun p =>
+          @Atlas.SuzukiFamily.rootElement.{u_1} F inst inst_1 inst_2 m (@Prod.fst.{u_1, u_1} F F p)
+            (@Prod.snd.{u_1, u_1} F F p))
+        (@Set.range.{u_1, u_1 + 1}
+          (@Atlas.Symplectic.Sp.{u_1} (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) F
+            (@Field.toCommRing.{u_1} F inst))
+          (@Units.{u_1} F
+            (@Semiring.toMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Atlas.SuzukiFamily.torusElement.{u_1} F inst inst_1 inst_2 m)))
+      (@Singleton.singleton.{u_1, u_1}
+        (@Atlas.Symplectic.Sp.{u_1} (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) F
+          (@Field.toCommRing.{u_1} F inst))
+        (Set.{u_1}
+          (@Atlas.Symplectic.Sp.{u_1} (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) F
+            (@Field.toCommRing.{u_1} F inst)))
+        (@Set.instSingletonSet.{u_1}
+          (@Atlas.Symplectic.Sp.{u_1} (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) F
+            (@Field.toCommRing.{u_1} F inst)))
+        (@Atlas.SuzukiFamily.weylElement.{u_1} F inst inst_1 inst_2)))
+DEFINITION Atlas.SuzukiFamily.weylElement SOURCE Atlas.LinearGroups.SuzukiFamily.Model
+def Atlas.SuzukiFamily.weylElement.{u_1} : {F : Type u_1} →
+  [inst : Field.{u_1} F] →
+    [Finite.{u_1 + 1} F] →
+      [@CharP.{u_1} F
+            (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+              (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))] →
+        @Atlas.Symplectic.Sp.{u_1} (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) F
+          (@Field.toCommRing.{u_1} F inst) :=
+fun {F} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F]
+    [@CharP.{u_1} F
+        (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+          (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))] =>
+  @Subtype.mk.{u_1 + 1}
+    (Matrix.{0, 0, u_1}
+      (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+      (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+      F)
+    (fun x =>
+      @Membership.mem.{u_1, u_1}
+        (Matrix.{0, 0, u_1}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F)
+        (@Submonoid.{u_1}
+          (Matrix.{0, 0, u_1}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F)
+          (@MulZeroOneClass.toMulOneClass.{u_1}
+            (Matrix.{0, 0, u_1}
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              F)
+            (@instMulZeroOneClassOfSemiring.{u_1}
+              (Matrix.{0, 0, u_1}
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                F)
+              (@Matrix.semiring.{u_1, 0}
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                F (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                fun a b =>
+                @instDecidableEqSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) a b))))
+        (@SetLike.instMembership.{u_1, u_1}
+          (@Submonoid.{u_1}
+            (Matrix.{0, 0, u_1}
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              F)
+            (@MulZeroOneClass.toMulOneClass.{u_1}
+              (Matrix.{0, 0, u_1}
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                F)
+              (@instMulZeroOneClassOfSemiring.{u_1}
+                (Matrix.{0, 0, u_1}
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  F)
+                (@Matrix.semiring.{u_1, 0}
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  fun a b =>
+                  @instDecidableEqSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) a b))))
+          (Matrix.{0, 0, u_1}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F)
+          (@Submonoid.instSetLike.{u_1}
+            (Matrix.{0, 0, u_1}
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              F)
+            (@MulZeroOneClass.toMulOneClass.{u_1}
+              (Matrix.{0, 0, u_1}
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                F)
+              (@instMulZeroOneClassOfSemiring.{u_1}
+                (Matrix.{0, 0, u_1}
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  F)
+                (@Matrix.semiring.{u_1, 0}
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  fun a b =>
+                  @instDecidableEqSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) a b)))))
+        (@Matrix.symplecticGroup.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) F
+          (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (@Field.toCommRing.{u_1} F inst) (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+        x)
+    (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+      (@RingEquiv.{u_1, u_1}
+        (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+        (Matrix.{0, 0, u_1}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F)
+        (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+          (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Semiring.toAddCommMonoid.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F
+          (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Semiring.toAddCommMonoid.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Matrix.add.{u_1, 0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+        (@Matrix.add.{u_1, 0, 0}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+      (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+      (fun x =>
+        Matrix.{0, 0, u_1}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F)
+      (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+        (@RingEquiv.{u_1, u_1}
+          (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+          (Matrix.{0, 0, u_1}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F)
+          (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+            (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F
+            (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Matrix.add.{u_1, 0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+          (@Matrix.add.{u_1, 0, 0}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+        (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+        (Matrix.{0, 0, u_1}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F)
+        (@RingEquiv.instEquivLike.{u_1, u_1}
+          (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+          (Matrix.{0, 0, u_1}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F)
+          (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+            (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F
+            (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Matrix.add.{u_1, 0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+          (@Matrix.add.{u_1, 0, 0}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))))
+      (@Atlas.SuzukiFamily.toStandard.{u_1} F inst) (@Atlas.SuzukiFamily.w.{u_1} F inst))
+    ⋯
+DEFINITION Atlas.SuzukiFamily.w SOURCE Atlas.LinearGroups.SuzukiFamily.Matrices
+def Atlas.SuzukiFamily.w.{u_1} : {F : Type u_1} →
+  [Field.{u_1} F] →
+    Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F :=
+fun {F} [inst : Field.{u_1} F] =>
+  @DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+    (Equiv.{u_1 + 1, u_1 + 1}
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+        Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+      (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F))
+    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+      Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+    (fun x =>
+      Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+    (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+      (Equiv.{u_1 + 1, u_1 + 1}
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+          Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+        (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F))
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+        Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+      (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+      (@Equiv.instEquivLike.{u_1 + 1, u_1 + 1}
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+          Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+        (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)))
+    (@Matrix.of.{u_1, 0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+    (@Matrix.vecCons.{u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+      (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+        (@OfNat.ofNat.{u_1} F (nat_lit 0)
+          (@Zero.toOfNat0.{u_1} F
+            (@MulZeroClass.toZero.{u_1} F
+              (@instMulZeroClassOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+        (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+          (@OfNat.ofNat.{u_1} F (nat_lit 0)
+            (@Zero.toOfNat0.{u_1} F
+              (@MulZeroClass.toZero.{u_1} F
+                (@instMulZeroClassOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+          (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+            (@OfNat.ofNat.{u_1} F (nat_lit 0)
+              (@Zero.toOfNat0.{u_1} F
+                (@MulZeroClass.toZero.{u_1} F
+                  (@instMulZeroClassOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+            (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+              (@OfNat.ofNat.{u_1} F (nat_lit 1)
+                (@One.toOfNat1.{u_1} F
+                  (@AddMonoidWithOne.toOne.{u_1} F
+                    (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+                      (@Ring.toAddGroupWithOne.{u_1} F
+                        (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))))))
+              (@Matrix.vecEmpty.{u_1} F)))))
+      (@Matrix.vecCons.{u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+        (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+          (@OfNat.ofNat.{u_1} F (nat_lit 0)
+            (@Zero.toOfNat0.{u_1} F
+              (@MulZeroClass.toZero.{u_1} F
+                (@instMulZeroClassOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+          (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+            (@OfNat.ofNat.{u_1} F (nat_lit 0)
+              (@Zero.toOfNat0.{u_1} F
+                (@MulZeroClass.toZero.{u_1} F
+                  (@instMulZeroClassOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+            (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+              (@OfNat.ofNat.{u_1} F (nat_lit 1)
+                (@One.toOfNat1.{u_1} F
+                  (@AddMonoidWithOne.toOne.{u_1} F
+                    (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+                      (@Ring.toAddGroupWithOne.{u_1} F
+                        (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))))))
+              (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+                (@OfNat.ofNat.{u_1} F (nat_lit 0)
+                  (@Zero.toOfNat0.{u_1} F
+                    (@MulZeroClass.toZero.{u_1} F
+                      (@instMulZeroClassOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+                (@Matrix.vecEmpty.{u_1} F)))))
+        (@Matrix.vecCons.{u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+          (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+            (@OfNat.ofNat.{u_1} F (nat_lit 0)
+              (@Zero.toOfNat0.{u_1} F
+                (@MulZeroClass.toZero.{u_1} F
+                  (@instMulZeroClassOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+            (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+              (@OfNat.ofNat.{u_1} F (nat_lit 1)
+                (@One.toOfNat1.{u_1} F
+                  (@AddMonoidWithOne.toOne.{u_1} F
+                    (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+                      (@Ring.toAddGroupWithOne.{u_1} F
+                        (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))))))
+              (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+                (@OfNat.ofNat.{u_1} F (nat_lit 0)
+                  (@Zero.toOfNat0.{u_1} F
+                    (@MulZeroClass.toZero.{u_1} F
+                      (@instMulZeroClassOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+                (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+                  (@OfNat.ofNat.{u_1} F (nat_lit 0)
+                    (@Zero.toOfNat0.{u_1} F
+                      (@MulZeroClass.toZero.{u_1} F
+                        (@instMulZeroClassOfSemiring.{u_1} F
+                          (@DivisionSemiring.toSemiring.{u_1} F
+                            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+                  (@Matrix.vecEmpty.{u_1} F)))))
+          (@Matrix.vecCons.{u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+            (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+            (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+              (@OfNat.ofNat.{u_1} F (nat_lit 1)
+                (@One.toOfNat1.{u_1} F
+                  (@AddMonoidWithOne.toOne.{u_1} F
+                    (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+                      (@Ring.toAddGroupWithOne.{u_1} F
+                        (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))))))
+              (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+                (@OfNat.ofNat.{u_1} F (nat_lit 0)
+                  (@Zero.toOfNat0.{u_1} F
+                    (@MulZeroClass.toZero.{u_1} F
+                      (@instMulZeroClassOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+                (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+                  (@OfNat.ofNat.{u_1} F (nat_lit 0)
+                    (@Zero.toOfNat0.{u_1} F
+                      (@MulZeroClass.toZero.{u_1} F
+                        (@instMulZeroClassOfSemiring.{u_1} F
+                          (@DivisionSemiring.toSemiring.{u_1} F
+                            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+                  (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+                    (@OfNat.ofNat.{u_1} F (nat_lit 0)
+                      (@Zero.toOfNat0.{u_1} F
+                        (@MulZeroClass.toZero.{u_1} F
+                          (@instMulZeroClassOfSemiring.{u_1} F
+                            (@DivisionSemiring.toSemiring.{u_1} F
+                              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+                    (@Matrix.vecEmpty.{u_1} F)))))
+            (@Matrix.vecEmpty.{u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F))))))
+DEFINITION Atlas.SuzukiFamily.toStandard SOURCE Atlas.LinearGroups.SuzukiFamily.SymplecticEmbedding
+def Atlas.SuzukiFamily.toStandard.{u_1} : {F : Type u_1} →
+  [inst : Field.{u_1} F] →
+    @RingEquiv.{u_1, u_1}
+      (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+      (Matrix.{0, 0, u_1}
+        (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+        (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+        F)
+      (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+        (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+        (@Distrib.toMul.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Semiring.toAddCommMonoid.{u_1} F
+          (@DivisionSemiring.toSemiring.{u_1} F
+            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+      (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+        (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+        F
+        (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+        (@Distrib.toMul.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Semiring.toAddCommMonoid.{u_1} F
+          (@DivisionSemiring.toSemiring.{u_1} F
+            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+      (@Matrix.add.{u_1, 0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+      (@Matrix.add.{u_1, 0, 0}
+        (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+        (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+        F
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))) :=
+fun {F} [inst : Field.{u_1} F] =>
+  @Matrix.reindexRingEquiv.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+    (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+    F (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+    (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+      (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+      (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+    (@Distrib.toMul.{u_1} F
+      (@instDistribOfSemiring.{u_1} F
+        (@DivisionSemiring.toSemiring.{u_1} F
+          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+    (@Semiring.toAddCommMonoid.{u_1} F
+      (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+    (@Equiv.symm.{1, 1}
+      (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) Atlas.SuzukiFamily.coordinateIndex)
+DEFINITION Atlas.SuzukiFamily.coordinateIndex SOURCE Atlas.LinearGroups.SuzukiFamily.SymplecticEmbedding
+def Atlas.SuzukiFamily.coordinateIndex : Equiv.{1, 1}
+  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) :=
+@Equiv.mk.{1, 1}
+  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+  (@Sum.elim.{0, 0, 1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+    (fun i =>
+      @Matrix.vecCons.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+        (Nat.succ (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))))
+        (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) (nat_lit 0)
+          (@Fin.instOfNat (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))
+            Atlas.SuzukiFamily.coordinateIndex._proof_1 (nat_lit 0)))
+        (@Matrix.vecCons.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+          (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) (nat_lit 1)
+            (@Fin.instOfNat (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))
+              Atlas.SuzukiFamily.coordinateIndex._proof_1 (nat_lit 1)))
+          (@Matrix.vecEmpty.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))))
+        i)
+    fun i =>
+    @Matrix.vecCons.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+      (Nat.succ (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))))
+      (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) (nat_lit 3)
+        (@Fin.instOfNat (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))
+          Atlas.SuzukiFamily.coordinateIndex._proof_1 (nat_lit 3)))
+      (@Matrix.vecCons.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+        (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) (nat_lit 2)
+          (@Fin.instOfNat (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))
+            Atlas.SuzukiFamily.coordinateIndex._proof_1 (nat_lit 2)))
+        (@Matrix.vecEmpty.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))))
+      i)
+  (@Matrix.vecCons.{0}
+    (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+    (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+    (@Sum.inl.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+      (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) (nat_lit 0)
+        (@Fin.instOfNat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+          Atlas.SuzukiFamily.coordinateIndex._proof_2 (nat_lit 0))))
+    (@Matrix.vecCons.{0}
+      (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+      (@Sum.inl.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+        (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) (nat_lit 1)
+          (@Fin.instOfNat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+            Atlas.SuzukiFamily.coordinateIndex._proof_2 (nat_lit 1))))
+      (@Matrix.vecCons.{0}
+        (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+        (@Sum.inr.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) (nat_lit 1)
+            (@Fin.instOfNat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+              Atlas.SuzukiFamily.coordinateIndex._proof_2 (nat_lit 1))))
+        (@Matrix.vecCons.{0}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+          (@Sum.inr.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) (nat_lit 0)
+              (@Fin.instOfNat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+                Atlas.SuzukiFamily.coordinateIndex._proof_2 (nat_lit 0))))
+          (@Matrix.vecEmpty.{0}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))))))))
+  Atlas.SuzukiFamily.coordinateIndex._proof_3 Atlas.SuzukiFamily.coordinateIndex._proof_4
+DEFINITION Atlas.Symplectic.Sp SOURCE Atlas.LinearGroups.Symplectic.Basic
+@[reducible] def Atlas.Symplectic.Sp.{u_1} : Nat → (F : Type u_1) → [CommRing.{u_1} F] → Type u_1 :=
+fun n F [inst : CommRing.{u_1} F] =>
+  ↥(@Matrix.symplecticGroup.{0, u_1} (Fin n) F (instDecidableEqFin n) inst (Fin.fintype n))
+DEFINITION Atlas.SuzukiFamily.torusElement SOURCE Atlas.LinearGroups.SuzukiFamily.Model
+def Atlas.SuzukiFamily.torusElement.{u_1} : {F : Type u_1} →
+  [inst : Field.{u_1} F] →
+    [Finite.{u_1 + 1} F] →
+      [@CharP.{u_1} F
+            (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+              (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))] →
+        Nat →
+          @Units.{u_1} F
+              (@Semiring.toMonoid.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))) →
+            @Atlas.Symplectic.Sp.{u_1} (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) F
+              (@Field.toCommRing.{u_1} F inst) :=
+fun {F} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+    [inst_2 :
+      @CharP.{u_1} F
+        (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+          (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))]
+    m t =>
+  @Subtype.mk.{u_1 + 1}
+    (Matrix.{0, 0, u_1}
+      (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+      (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+      F)
+    (fun x =>
+      @Membership.mem.{u_1, u_1}
+        (Matrix.{0, 0, u_1}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F)
+        (@Submonoid.{u_1}
+          (Matrix.{0, 0, u_1}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F)
+          (@MulZeroOneClass.toMulOneClass.{u_1}
+            (Matrix.{0, 0, u_1}
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              F)
+            (@instMulZeroOneClassOfSemiring.{u_1}
+              (Matrix.{0, 0, u_1}
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                F)
+              (@Matrix.semiring.{u_1, 0}
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                F (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                fun a b =>
+                @instDecidableEqSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) a b))))
+        (@SetLike.instMembership.{u_1, u_1}
+          (@Submonoid.{u_1}
+            (Matrix.{0, 0, u_1}
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              F)
+            (@MulZeroOneClass.toMulOneClass.{u_1}
+              (Matrix.{0, 0, u_1}
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                F)
+              (@instMulZeroOneClassOfSemiring.{u_1}
+                (Matrix.{0, 0, u_1}
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  F)
+                (@Matrix.semiring.{u_1, 0}
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  fun a b =>
+                  @instDecidableEqSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) a b))))
+          (Matrix.{0, 0, u_1}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F)
+          (@Submonoid.instSetLike.{u_1}
+            (Matrix.{0, 0, u_1}
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              F)
+            (@MulZeroOneClass.toMulOneClass.{u_1}
+              (Matrix.{0, 0, u_1}
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                F)
+              (@instMulZeroOneClassOfSemiring.{u_1}
+                (Matrix.{0, 0, u_1}
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  F)
+                (@Matrix.semiring.{u_1, 0}
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  fun a b =>
+                  @instDecidableEqSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) a b)))))
+        (@Matrix.symplecticGroup.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) F
+          (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (@Field.toCommRing.{u_1} F inst) (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+        x)
+    (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+      (@RingEquiv.{u_1, u_1}
+        (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+        (Matrix.{0, 0, u_1}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F)
+        (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+          (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Semiring.toAddCommMonoid.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F
+          (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Semiring.toAddCommMonoid.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Matrix.add.{u_1, 0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+        (@Matrix.add.{u_1, 0, 0}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+      (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+      (fun x =>
+        Matrix.{0, 0, u_1}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F)
+      (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+        (@RingEquiv.{u_1, u_1}
+          (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+          (Matrix.{0, 0, u_1}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F)
+          (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+            (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F
+            (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Matrix.add.{u_1, 0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+          (@Matrix.add.{u_1, 0, 0}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+        (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+        (Matrix.{0, 0, u_1}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F)
+        (@RingEquiv.instEquivLike.{u_1, u_1}
+          (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+          (Matrix.{0, 0, u_1}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F)
+          (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+            (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F
+            (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Matrix.add.{u_1, 0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+          (@Matrix.add.{u_1, 0, 0}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))))
+      (@Atlas.SuzukiFamily.toStandard.{u_1} F inst) (@Atlas.SuzukiFamily.h.{u_1} F inst inst_1 inst_2 m t))
+    ⋯
+DEFINITION Atlas.SuzukiFamily.h SOURCE Atlas.LinearGroups.SuzukiFamily.Matrices
+def Atlas.SuzukiFamily.h.{u_1} : {F : Type u_1} →
+  [inst : Field.{u_1} F] →
+    [Finite.{u_1 + 1} F] →
+      [@CharP.{u_1} F
+            (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+              (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))] →
+        Nat →
+          @Units.{u_1} F
+              (@Semiring.toMonoid.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))) →
+            Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F :=
+fun {F} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+    [inst_2 :
+      @CharP.{u_1} F
+        (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+          (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))]
+    m t =>
+  @Matrix.diagonal.{u_1, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+    (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+    (@MulZeroClass.toZero.{u_1} F
+      (@instMulZeroClassOfSemiring.{u_1} F
+        (@DivisionSemiring.toSemiring.{u_1} F
+          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+    (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+      (@HMul.hMul.{u_1, u_1, u_1} F F F
+        (@instHMul.{u_1} F
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+        (@Units.val.{u_1} F
+          (@Semiring.toMonoid.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+          t)
+        (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+          (@RingEquiv.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+          F (fun x => F)
+          (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+            (@RingEquiv.{u_1, u_1} F F
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+            F F
+            (@RingEquiv.instEquivLike.{u_1, u_1} F F
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+          (@Atlas.SuzukiFamily.theta.{u_1} F inst inst_1 inst_2 m)
+          (@Units.val.{u_1} F
+            (@Semiring.toMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+            t)))
+      (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+        (@Units.val.{u_1} F
+          (@Semiring.toMonoid.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+          t)
+        (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+          (@Units.val.{u_1} F
+            (@Semiring.toMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+            (@Inv.inv.{u_1}
+              (@Units.{u_1} F
+                (@Semiring.toMonoid.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Units.instInv.{u_1} F
+                (@Semiring.toMonoid.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              t))
+          (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+            (@HMul.hMul.{u_1, u_1, u_1} F F F
+              (@instHMul.{u_1} F
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+              (@Units.val.{u_1} F
+                (@Semiring.toMonoid.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                (@Inv.inv.{u_1}
+                  (@Units.{u_1} F
+                    (@Semiring.toMonoid.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                  (@Units.instInv.{u_1} F
+                    (@Semiring.toMonoid.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                  t))
+              (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+                (@RingEquiv.{u_1, u_1} F F
+                  (@Distrib.toMul.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                  (@Distrib.toMul.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                  (@Distrib.toAdd.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                  (@Distrib.toAdd.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+                F (fun x => F)
+                (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+                  (@RingEquiv.{u_1, u_1} F F
+                    (@Distrib.toMul.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    (@Distrib.toMul.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    (@Distrib.toAdd.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    (@Distrib.toAdd.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+                  F F
+                  (@RingEquiv.instEquivLike.{u_1, u_1} F F
+                    (@Distrib.toMul.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    (@Distrib.toMul.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    (@Distrib.toAdd.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    (@Distrib.toAdd.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+                (@Atlas.SuzukiFamily.theta.{u_1} F inst inst_1 inst_2 m)
+                (@Units.val.{u_1} F
+                  (@Semiring.toMonoid.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                  (@Inv.inv.{u_1}
+                    (@Units.{u_1} F
+                      (@Semiring.toMonoid.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    (@Units.instInv.{u_1} F
+                      (@Semiring.toMonoid.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    t))))
+            (@Matrix.vecEmpty.{u_1} F)))))
+DEFINITION Atlas.SuzukiFamily.theta SOURCE Atlas.LinearGroups.SuzukiFamily.Twist
+def Atlas.SuzukiFamily.theta.{u_1} : (F : Type u_1) →
+  [inst : Field.{u_1} F] →
+    [Finite.{u_1 + 1} F] →
+      [@CharP.{u_1} F
+            (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+              (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))] →
+        Nat →
+          @RingEquiv.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))) :=
+fun F [inst : Field.{u_1} F] [Finite.{u_1 + 1} F]
+    [@CharP.{u_1} F
+        (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+          (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))]
+    m =>
+  @iterateFrobeniusEquiv.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+    (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) m
+      (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)) ⋯ ⋯
+DEFINITION Atlas.SuzukiFamily.rootElement SOURCE Atlas.LinearGroups.SuzukiFamily.Model
+def Atlas.SuzukiFamily.rootElement.{u_1} : {F : Type u_1} →
+  [inst : Field.{u_1} F] →
+    [Finite.{u_1 + 1} F] →
+      [@CharP.{u_1} F
+            (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+              (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))] →
+        Nat →
+          F →
+            F →
+              @Atlas.Symplectic.Sp.{u_1} (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) F
+                (@Field.toCommRing.{u_1} F inst) :=
+fun {F} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+    [inst_2 :
+      @CharP.{u_1} F
+        (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+          (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))]
+    m a b =>
+  @Subtype.mk.{u_1 + 1}
+    (Matrix.{0, 0, u_1}
+      (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+      (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+      F)
+    (fun x =>
+      @Membership.mem.{u_1, u_1}
+        (Matrix.{0, 0, u_1}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F)
+        (@Submonoid.{u_1}
+          (Matrix.{0, 0, u_1}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F)
+          (@MulZeroOneClass.toMulOneClass.{u_1}
+            (Matrix.{0, 0, u_1}
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              F)
+            (@instMulZeroOneClassOfSemiring.{u_1}
+              (Matrix.{0, 0, u_1}
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                F)
+              (@Matrix.semiring.{u_1, 0}
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                F (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                fun a b =>
+                @instDecidableEqSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) a b))))
+        (@SetLike.instMembership.{u_1, u_1}
+          (@Submonoid.{u_1}
+            (Matrix.{0, 0, u_1}
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              F)
+            (@MulZeroOneClass.toMulOneClass.{u_1}
+              (Matrix.{0, 0, u_1}
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                F)
+              (@instMulZeroOneClassOfSemiring.{u_1}
+                (Matrix.{0, 0, u_1}
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  F)
+                (@Matrix.semiring.{u_1, 0}
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  fun a b =>
+                  @instDecidableEqSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) a b))))
+          (Matrix.{0, 0, u_1}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F)
+          (@Submonoid.instSetLike.{u_1}
+            (Matrix.{0, 0, u_1}
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+              F)
+            (@MulZeroOneClass.toMulOneClass.{u_1}
+              (Matrix.{0, 0, u_1}
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                F)
+              (@instMulZeroOneClassOfSemiring.{u_1}
+                (Matrix.{0, 0, u_1}
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  F)
+                (@Matrix.semiring.{u_1, 0}
+                  (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                  fun a b =>
+                  @instDecidableEqSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                    (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) a b)))))
+        (@Matrix.symplecticGroup.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) F
+          (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (@Field.toCommRing.{u_1} F inst) (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+        x)
+    (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+      (@RingEquiv.{u_1, u_1}
+        (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+        (Matrix.{0, 0, u_1}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F)
+        (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+          (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Semiring.toAddCommMonoid.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F
+          (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Semiring.toAddCommMonoid.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Matrix.add.{u_1, 0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+        (@Matrix.add.{u_1, 0, 0}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+      (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+      (fun x =>
+        Matrix.{0, 0, u_1}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F)
+      (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+        (@RingEquiv.{u_1, u_1}
+          (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+          (Matrix.{0, 0, u_1}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F)
+          (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+            (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F
+            (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Matrix.add.{u_1, 0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+          (@Matrix.add.{u_1, 0, 0}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+        (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+        (Matrix.{0, 0, u_1}
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+          F)
+        (@RingEquiv.instEquivLike.{u_1, u_1}
+          (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+          (Matrix.{0, 0, u_1}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F)
+          (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+            (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Matrix.instMulOfFintypeOfAddCommMonoid.{u_1, 0}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F
+            (@instFintypeSum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Matrix.add.{u_1, 0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+          (@Matrix.add.{u_1, 0, 0}
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            (Sum.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+            F
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))))
+      (@Atlas.SuzukiFamily.toStandard.{u_1} F inst) (@Atlas.SuzukiFamily.u.{u_1} F inst inst_1 inst_2 m a b))
+    ⋯
+DEFINITION Atlas.SuzukiFamily.u SOURCE Atlas.LinearGroups.SuzukiFamily.Matrices
+def Atlas.SuzukiFamily.u.{u_1} : {F : Type u_1} →
+  [inst : Field.{u_1} F] →
+    [Finite.{u_1 + 1} F] →
+      [@CharP.{u_1} F
+            (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+              (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))] →
+        Nat →
+          F →
+            F →
+              Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F :=
+fun {F} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+    [inst_2 :
+      @CharP.{u_1} F
+        (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+          (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))]
+    m a b =>
+  @DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+    (Equiv.{u_1 + 1, u_1 + 1}
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+        Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+      (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F))
+    (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+      Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+    (fun x =>
+      Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+    (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+      (Equiv.{u_1 + 1, u_1 + 1}
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+          Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+        (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F))
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+        Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+      (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+      (@Equiv.instEquivLike.{u_1 + 1, u_1 + 1}
+        (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+          Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+        (Matrix.{0, 0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)))
+    (@Matrix.of.{u_1, 0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+      (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) F)
+    (@Matrix.vecCons.{u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+      (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+        (@OfNat.ofNat.{u_1} F (nat_lit 1)
+          (@One.toOfNat1.{u_1} F
+            (@AddMonoidWithOne.toOne.{u_1} F
+              (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+                (@Ring.toAddGroupWithOne.{u_1} F
+                  (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))))))
+        (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+          (@OfNat.ofNat.{u_1} F (nat_lit 0)
+            (@Zero.toOfNat0.{u_1} F
+              (@MulZeroClass.toZero.{u_1} F
+                (@instMulZeroClassOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+          (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+            (@OfNat.ofNat.{u_1} F (nat_lit 0)
+              (@Zero.toOfNat0.{u_1} F
+                (@MulZeroClass.toZero.{u_1} F
+                  (@instMulZeroClassOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+            (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+              (@OfNat.ofNat.{u_1} F (nat_lit 0)
+                (@Zero.toOfNat0.{u_1} F
+                  (@MulZeroClass.toZero.{u_1} F
+                    (@instMulZeroClassOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+              (@Matrix.vecEmpty.{u_1} F)))))
+      (@Matrix.vecCons.{u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+        (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) a
+          (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+            (@OfNat.ofNat.{u_1} F (nat_lit 1)
+              (@One.toOfNat1.{u_1} F
+                (@AddMonoidWithOne.toOne.{u_1} F
+                  (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+                    (@Ring.toAddGroupWithOne.{u_1} F
+                      (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))))))
+            (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+              (@OfNat.ofNat.{u_1} F (nat_lit 0)
+                (@Zero.toOfNat0.{u_1} F
+                  (@MulZeroClass.toZero.{u_1} F
+                    (@instMulZeroClassOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+              (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+                (@OfNat.ofNat.{u_1} F (nat_lit 0)
+                  (@Zero.toOfNat0.{u_1} F
+                    (@MulZeroClass.toZero.{u_1} F
+                      (@instMulZeroClassOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+                (@Matrix.vecEmpty.{u_1} F)))))
+        (@Matrix.vecCons.{u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+          (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+            (@HAdd.hAdd.{u_1, u_1, u_1} F F F
+              (@instHAdd.{u_1} F
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+              (@HMul.hMul.{u_1, u_1, u_1} F F F
+                (@instHMul.{u_1} F
+                  (@Distrib.toMul.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+                a
+                (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+                  (@RingEquiv.{u_1, u_1} F F
+                    (@Distrib.toMul.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    (@Distrib.toMul.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    (@Distrib.toAdd.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    (@Distrib.toAdd.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+                  F (fun x => F)
+                  (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+                    (@RingEquiv.{u_1, u_1} F F
+                      (@Distrib.toMul.{u_1} F
+                        (@instDistribOfSemiring.{u_1} F
+                          (@DivisionSemiring.toSemiring.{u_1} F
+                            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                      (@Distrib.toMul.{u_1} F
+                        (@instDistribOfSemiring.{u_1} F
+                          (@DivisionSemiring.toSemiring.{u_1} F
+                            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                      (@Distrib.toAdd.{u_1} F
+                        (@instDistribOfSemiring.{u_1} F
+                          (@DivisionSemiring.toSemiring.{u_1} F
+                            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                      (@Distrib.toAdd.{u_1} F
+                        (@instDistribOfSemiring.{u_1} F
+                          (@DivisionSemiring.toSemiring.{u_1} F
+                            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+                    F F
+                    (@RingEquiv.instEquivLike.{u_1, u_1} F F
+                      (@Distrib.toMul.{u_1} F
+                        (@instDistribOfSemiring.{u_1} F
+                          (@DivisionSemiring.toSemiring.{u_1} F
+                            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                      (@Distrib.toMul.{u_1} F
+                        (@instDistribOfSemiring.{u_1} F
+                          (@DivisionSemiring.toSemiring.{u_1} F
+                            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                      (@Distrib.toAdd.{u_1} F
+                        (@instDistribOfSemiring.{u_1} F
+                          (@DivisionSemiring.toSemiring.{u_1} F
+                            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                      (@Distrib.toAdd.{u_1} F
+                        (@instDistribOfSemiring.{u_1} F
+                          (@DivisionSemiring.toSemiring.{u_1} F
+                            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+                  (@Atlas.SuzukiFamily.theta.{u_1} F inst inst_1 inst_2 m) a))
+              b)
+            (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+              (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+                (@RingEquiv.{u_1, u_1} F F
+                  (@Distrib.toMul.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                  (@Distrib.toMul.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                  (@Distrib.toAdd.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                  (@Distrib.toAdd.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+                F (fun x => F)
+                (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+                  (@RingEquiv.{u_1, u_1} F F
+                    (@Distrib.toMul.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    (@Distrib.toMul.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    (@Distrib.toAdd.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    (@Distrib.toAdd.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+                  F F
+                  (@RingEquiv.instEquivLike.{u_1, u_1} F F
+                    (@Distrib.toMul.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    (@Distrib.toMul.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    (@Distrib.toAdd.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    (@Distrib.toAdd.{u_1} F
+                      (@instDistribOfSemiring.{u_1} F
+                        (@DivisionSemiring.toSemiring.{u_1} F
+                          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+                (@Atlas.SuzukiFamily.theta.{u_1} F inst inst_1 inst_2 m) a)
+              (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+                (@OfNat.ofNat.{u_1} F (nat_lit 1)
+                  (@One.toOfNat1.{u_1} F
+                    (@AddMonoidWithOne.toOne.{u_1} F
+                      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+                        (@Ring.toAddGroupWithOne.{u_1} F
+                          (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))))))
+                (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+                  (@OfNat.ofNat.{u_1} F (nat_lit 0)
+                    (@Zero.toOfNat0.{u_1} F
+                      (@MulZeroClass.toZero.{u_1} F
+                        (@instMulZeroClassOfSemiring.{u_1} F
+                          (@DivisionSemiring.toSemiring.{u_1} F
+                            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+                  (@Matrix.vecEmpty.{u_1} F)))))
+          (@Matrix.vecCons.{u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F)
+            (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+            (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+              (@Atlas.SuzukiFamily.norm.{u_1} F inst inst_1 inst_2 m a b)
+              (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b
+                (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) a
+                  (@Matrix.vecCons.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+                    (@OfNat.ofNat.{u_1} F (nat_lit 1)
+                      (@One.toOfNat1.{u_1} F
+                        (@AddMonoidWithOne.toOne.{u_1} F
+                          (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+                            (@Ring.toAddGroupWithOne.{u_1} F
+                              (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))))))
+                    (@Matrix.vecEmpty.{u_1} F)))))
+            (@Matrix.vecEmpty.{u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) → F))))))
+DEFINITION Atlas.SuzukiFamily.norm SOURCE Atlas.LinearGroups.SuzukiFamily.Matrices
+def Atlas.SuzukiFamily.norm.{u_1} : {F : Type u_1} →
+  [inst : Field.{u_1} F] →
+    [Finite.{u_1 + 1} F] →
+      [@CharP.{u_1} F
+            (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+              (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))] →
+        Nat → F → F → F :=
+fun {F} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+    [inst_2 :
+      @CharP.{u_1} F
+        (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+          (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))]
+    m a b =>
+  @HAdd.hAdd.{u_1, u_1, u_1} F F F
+    (@instHAdd.{u_1} F
+      (@Distrib.toAdd.{u_1} F
+        (@instDistribOfSemiring.{u_1} F
+          (@DivisionSemiring.toSemiring.{u_1} F
+            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+    (@HAdd.hAdd.{u_1, u_1, u_1} F F F
+      (@instHAdd.{u_1} F
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+      (@HMul.hMul.{u_1, u_1, u_1} F F F
+        (@instHMul.{u_1} F
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+        (@HPow.hPow.{u_1, 0, u_1} F Nat F
+          (@instHPow.{u_1, 0} F Nat
+            (@NPow.toPow.{u_1} F
+              (@Monoid.toNPow.{u_1} F
+                (@Semiring.toMonoid.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+          a (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+        (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+          (@RingEquiv.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+          F (fun x => F)
+          (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+            (@RingEquiv.{u_1, u_1} F F
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+            F F
+            (@RingEquiv.instEquivLike.{u_1, u_1} F F
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+          (@Atlas.SuzukiFamily.theta.{u_1} F inst inst_1 inst_2 m) a))
+      (@HMul.hMul.{u_1, u_1, u_1} F F F
+        (@instHMul.{u_1} F
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+        a b))
+    (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+      (@RingEquiv.{u_1, u_1} F F
+        (@Distrib.toMul.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toMul.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+      F (fun x => F)
+      (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+        (@RingEquiv.{u_1, u_1} F F
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+        F F
+        (@RingEquiv.instEquivLike.{u_1, u_1} F F
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+      (@Atlas.SuzukiFamily.theta.{u_1} F inst inst_1 inst_2 m) b)
+SHARED EXTRACTION COMPLETE: 5 targets

@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas.FieldTheory.ReeTitsAutomorphism"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "ree-g2-field-twist",
+  "targets": [
+    {
+      "declaration": "Atlas.ReeG2.Parameters",
+      "module": "Atlas.FieldTheory.ReeTitsAutomorphism",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.card_ge_27",
+      "module": "Atlas.FieldTheory.ReeTitsAutomorphism",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.frobenius_period",
+      "module": "Atlas.FieldTheory.ReeTitsAutomorphism",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.map_sigma",
+      "module": "Atlas.FieldTheory.ReeTitsAutomorphism",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.map_theta",
+      "module": "Atlas.FieldTheory.ReeTitsAutomorphism",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.sigma",
+      "module": "Atlas.FieldTheory.ReeTitsAutomorphism",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.sigma_apply",
+      "module": "Atlas.FieldTheory.ReeTitsAutomorphism",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.sigma_eq_theta_cube",
+      "module": "Atlas.FieldTheory.ReeTitsAutomorphism",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.sigma_eq_theta_symm",
+      "module": "Atlas.FieldTheory.ReeTitsAutomorphism",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.sigma_square",
+      "module": "Atlas.FieldTheory.ReeTitsAutomorphism",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.sigma_theta",
+      "module": "Atlas.FieldTheory.ReeTitsAutomorphism",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.theta",
+      "module": "Atlas.FieldTheory.ReeTitsAutomorphism",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.theta_apply",
+      "module": "Atlas.FieldTheory.ReeTitsAutomorphism",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.theta_sigma",
+      "module": "Atlas.FieldTheory.ReeTitsAutomorphism",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.theta_square_cube",
+      "module": "Atlas.FieldTheory.ReeTitsAutomorphism",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "field-only",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.G2.",
+        "Atlas.ReeG2.Model",
+        "Atlas.ReeG2.generated"
+      ],
+      "forbid_modules": [
+        "Mathlib.GroupTheory.GroupAction.Iwasawa"
+      ]
+    }
+  ]
+}

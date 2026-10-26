@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "orthogonal-b-public-order",
+  "targets": [
+    {
+      "declaration": "Atlas.Orthogonal.B",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_admissible",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_card",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_card_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_card_mul_denominator",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_card_mul_denominator_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_finite",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_good",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order_denominator",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order_denominator_positive",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order_divisibility",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order_divisibility_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order_numerator",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order_numerator_positive",
+      "module": "Atlas.LinearGroups.Orthogonal.BFamily",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "orthogonal-b-public-order-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Orthogonal.B_simple",
+        "Atlas.Orthogonal.projectiveB_simple",
+        "Atlas.Orthogonal.projectiveD_simple"
+      ]
+    }
+  ]
+}

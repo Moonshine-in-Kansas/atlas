@@ -1,0 +1,84 @@
+{
+  "status": "incomplete",
+  "started_utc": "2026-10-24T14:42:23Z",
+  "source_attempt": "/home/gerald/atlas/claude/nanoda-draft-20261024/attempt-20261024T140812",
+  "scope": "All 59500 ATLAS theorems and all other kernel-safe declarations in the built 4957-module library, with full proof/type dependencies. Exactly 45 compiler-generated partial _unsafe_rec implementations are excluded; no theorem or mathematical definition is replaced or weakened.",
+  "stages": {
+    "filter": {
+      "status": "process-passed",
+      "command": [
+        "ruby",
+        "/home/gerald/atlas/claude/nanoda-draft-20261024/filter-partial.rb",
+        "/home/gerald/atlas/claude/nanoda-draft-20261024/attempt-20261024T140812",
+        "/home/gerald/atlas/claude/nanoda-draft-20261024/filtered-20261024T144223"
+      ],
+      "started_utc": "2026-10-24T14:42:41Z",
+      "policy": "Swap-aware: 9 GiB owned RSS+swap cap; combined worker RSS below 2/3 physical RAM; 1 GiB available RAM+free swap reserve; stop on sustained severe pressure.",
+      "owned_memory_cap": 9663676416,
+      "pid": 15494,
+      "finished_utc": "2026-10-24T14:43:34Z",
+      "exit_code": 0,
+      "signal": null,
+      "guard_stop": null,
+      "peak_owned_rss_and_swap": 525115392,
+      "final_memory": {
+        "MemTotal": 16407433216,
+        "MemAvailable": 6182379520,
+        "SwapFree": 7814758400
+      },
+      "log_sha256": "989008a241410f2f447c77447e63860d8ba43e1a95a5162574a4b713078b066b"
+    },
+    "nanoda": {
+      "status": "process-passed",
+      "command": [
+        "/home/gerald/atlas/.repository-split/recovery/tools/nanoda/target/release/nanoda_bin",
+        "/home/gerald/atlas/claude/nanoda-draft-20261024/filtered-20261024T144223/nanoda-config.json"
+      ],
+      "started_utc": "2026-10-24T14:43:51Z",
+      "policy": "Swap-aware: 9 GiB owned RSS+swap cap; combined worker RSS below 2/3 physical RAM; 1 GiB available RAM+free swap reserve; stop on sustained severe pressure.",
+      "owned_memory_cap": 9663676416,
+      "pid": 15533,
+      "finished_utc": "2026-10-24T16:10:14Z",
+      "exit_code": 0,
+      "signal": null,
+      "guard_stop": null,
+      "peak_owned_rss_and_swap": 8868655104,
+      "final_memory": {
+        "MemTotal": 16407433216,
+        "MemAvailable": 2378199040,
+        "SwapFree": 7914430464
+      },
+      "log_sha256": "eed9287826ee5e3b02d9fba10edd98b167d42145f96062f07ef5feab481728c9"
+    }
+  },
+  "tools": {
+    "comparator": {
+      "revision": "2312244ac716564a61cc0bf4e107d9abf1757a61",
+      "binary": "/home/gerald/atlas/.repository-split/recovery/tools/comparator/.lake/build/bin/comparator",
+      "sha256": "5dca99684e841c3c1dd8a50fa18d9119327295cf3b68c6e4e70f0c17c31321cc"
+    },
+    "lean4export": {
+      "revision": "cacf989bd75f608700820f6afc595f32e7a99a4d",
+      "binary": "/home/gerald/atlas/.repository-split/recovery/tools/comparator/.lake/packages/lean4export/.lake/build/bin/lean4export",
+      "sha256": "4fa9e14cada304109e85da5048bcd411cf781a03539b3e50953e5c537074bd9e"
+    },
+    "landrun": {
+      "revision": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4",
+      "binary": "/home/gerald/atlas/.repository-split/recovery/tools/landrun/landrun",
+      "sha256": "078bb47ad835558eb69b9d4c1074152d3e6f212f31b99ed5688e6dee4c402fdf"
+    },
+    "nanoda": {
+      "revision": "4c544ed4099c8227f07d5de77ad1e69fb0740a27",
+      "binary": "/home/gerald/atlas/.repository-split/recovery/tools/nanoda/target/release/nanoda_bin",
+      "sha256": "9dfb363c73311f7795a5c9ee2b1e4d6e17bf6ecc45f150aaa3bdba77079e1aa6"
+    }
+  },
+  "original_export_sha256": "b9d461d555a4458dc8fc2123120edc30bc5c0ba25e3c367ff0752387ef6f4cbb",
+  "source_commit": "95c13b57b188b350503fe3a5d6aace5f0a79047b",
+  "export_bytes": 3693526347,
+  "export_sha256": "e6b1fbcc5e1970c1ecdbdaab71389d0dd29a3f3e5c4ea2f58d08cb823f8b6922",
+  "roots": 69383,
+  "reason": "Nanoda did not finish with a success marker",
+  "sources_unchanged": true,
+  "finished_utc": "2026-10-24T16:10:15Z"
+}

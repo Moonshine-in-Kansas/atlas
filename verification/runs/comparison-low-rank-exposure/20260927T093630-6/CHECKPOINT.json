@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "comparison-low-rank-exposure",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.Comparisons.LowRank.FieldTransport",
+    "Atlas.Comparisons.LowRank.MinusOrthogonal",
+    "Atlas.Comparisons.LowRank.Symplectic",
+    "Atlas.Comparisons.LowRank.Unitary",
+    "Atlas.Comparisons.Small.BinarySymplectic"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Comparisons.Classical.c1EquivA1",
+      "module": "Atlas.Comparisons.LowRank.Symplectic",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.c1EquivA1_projection",
+      "module": "Atlas.Comparisons.LowRank.Symplectic",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.dMinusFieldEquiv",
+      "module": "Atlas.Comparisons.LowRank.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.dMinusThreeEquivUnitary",
+      "module": "Atlas.Comparisons.LowRank.MinusOrthogonal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.dMinusThreeEquivUnitary_inverse",
+      "module": "Atlas.Comparisons.LowRank.MinusOrthogonal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.dMinusTwoEquivA1",
+      "module": "Atlas.Comparisons.LowRank.MinusOrthogonal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.psuTwoEquivA1",
+      "module": "Atlas.Comparisons.LowRank.Unitary",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.psuTwoEquivB1",
+      "module": "Atlas.Comparisons.LowRank.Unitary",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.psuTwoEquivB1_coherence",
+      "module": "Atlas.Comparisons.LowRank.Unitary",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.psuTwoEquivC1",
+      "module": "Atlas.Comparisons.LowRank.Unitary",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.psuTwoEquivC1_coherence",
+      "module": "Atlas.Comparisons.LowRank.Unitary",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.unitaryFieldEquiv",
+      "module": "Atlas.Comparisons.LowRank.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.b2Card2EquivSymmetric",
+      "module": "Atlas.Comparisons.Small.BinarySymplectic",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.binaryFieldEquiv",
+      "module": "Atlas.Comparisons.Small.BinarySymplectic",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.c2BinaryEquivSymmetric",
+      "module": "Atlas.Comparisons.Small.BinarySymplectic",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.c2BinaryEquivSymmetric_coherence",
+      "module": "Atlas.Comparisons.Small.BinarySymplectic",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.c2BinaryEquivSymmetric_derived",
+      "module": "Atlas.Comparisons.Small.BinarySymplectic",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.c2Card2EquivSymmetric",
+      "module": "Atlas.Comparisons.Small.BinarySymplectic",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "no-sporadic-or-new-exceptional-recognition",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Comparisons.Exceptional.psuFourBinaryEquivPspFourTernary",
+        "Atlas.Comparisons.Exceptional.g2BinaryLongRootEquivPsuThreeTernary",
+        "Atlas.Comparisons.Exceptional.reeThreeEquivProjectiveSemilinear"
+      ]
+    }
+  ]
+}

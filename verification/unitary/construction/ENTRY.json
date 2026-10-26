@@ -1,0 +1,182 @@
+{
+  "id": "family.PSU",
+  "label": "PSU / twisted A",
+  "kind": "family",
+  "audit_entry": "PSU",
+  "proof_status": "construction_complete",
+  "construction": "Actual standard Hermitian SU_n(K/F), quotiented by its proved full norm-one scalar center",
+  "parameters": "F finite with q=|F|, K/F an actual quadratic extension; n is matrix dimension; stable catalogue: n>=3 and (n,q)!=(3,2)",
+  "exceptions": "The full theorem covers n>=2 and has exactly (2,2), (2,3), (3,2) as nonsimple cases. Dimension two is retained through the actual PSU2(F)≃PSL2(F) comparison.",
+  "recognition": "Direct finite Hermitian matrix construction, with actual field transport and SL graph-field fixed-subgroup identification; no order recognition, CFSG or projective fixed-point assertion",
+  "attribution": "ATLAS quadratic-extension, Hermitian norm-count, Witt-coordinate, transvection and Iwasawa proofs; pinned mathlib field and matrix infrastructure",
+  "owner": "Gerald Höhn",
+  "upstream_status": "No upstream acceptance claimed",
+  "roles": {
+    "model": {
+      "declaration": "Atlas.Unitary.PSU",
+      "source": "Atlas/LinearGroups/Unitary/Basic.lean"
+    },
+    "finite": {
+      "declaration": "Atlas.Unitary.finite_psu",
+      "source": "Atlas/LinearGroups/Unitary/Basic.lean"
+    },
+    "order": {
+      "declaration": "Atlas.Unitary.card_psu_factor",
+      "source": "Atlas/LinearGroups/Unitary/ProjectiveOrder.lean",
+      "formula": "q^(n*(n-1)/2) * product_{i=2..n}(q^i-(-1)^i) / gcd(n,q+1)"
+    },
+    "simple": {
+      "declaration": "Atlas.Unitary.simple_of_good",
+      "source": "Atlas/LinearGroups/Unitary/Family.lean"
+    },
+    "nonabelian": {
+      "declaration": "Atlas.Unitary.noncommutative_of_good",
+      "source": "Atlas/LinearGroups/Unitary/Family.lean"
+    }
+  },
+  "properties": [
+    {
+      "declaration": "Atlas.Unitary.transvectionGenerated_two_eq_top",
+      "source": "Atlas/LinearGroups/Unitary/RankOneGenerationAll.lean",
+      "description": "Actual SU2 transvection generation over every finite base field, including q=2 and q=3"
+    },
+    {
+      "declaration": "Atlas.Unitary.transvectionGenerated_eq_top_of_not_three_binary",
+      "source": "Atlas/LinearGroups/Unitary/GenerationComplete.lean",
+      "description": "Actual SU generation for all dimensions n>=2 except precisely the binary dimension-three case"
+    },
+    {
+      "declaration": "Atlas.type2A_construction",
+      "source": "Atlas/LinearGroups/Type2A.lean",
+      "description": "Construction record for the actual special-unitary matrix group and its center quotient"
+    },
+    {
+      "declaration": "Atlas.type2A_prime_power",
+      "source": "Atlas/LinearGroups/Type2A.lean",
+      "description": "Actual quadratic finite-field and matrix-quotient witnesses for p prime, f>=1 and every positive simplicity parameter"
+    },
+    {
+      "declaration": "Atlas.exists_type2A",
+      "source": "Atlas/LinearGroups/Type2A.lean",
+      "description": "Existence with an explicit equivalence to the retained projective special-unitary carrier"
+    },
+    {
+      "declaration": "Atlas.Unitary.simple_iff_good",
+      "source": "Atlas/LinearGroups/Unitary/Family.lean",
+      "description": "Exact simplicity criterion in every matrix dimension n>=2, excluding precisely (2,2), (2,3), (3,2)"
+    },
+    {
+      "declaration": "Atlas.Unitary.card_psu_mul_gcd",
+      "source": "Atlas/LinearGroups/Unitary/ProjectiveOrder.lean",
+      "description": "Division-free projective order identity with the full scalar-center factor"
+    },
+    {
+      "declaration": "Atlas.Unitary.transvectionGenerated_eq_top_of_good",
+      "source": "Atlas/LinearGroups/Unitary/Family.lean",
+      "description": "Actual line transvections generate SU in every positive simplicity case, including the binary rank-four base"
+    },
+    {
+      "declaration": "Atlas.Unitary.special_perfect_of_good",
+      "source": "Atlas/LinearGroups/Unitary/Family.lean",
+      "description": "Perfectness of the actual special-unitary carrier throughout the positive simplicity range"
+    },
+    {
+      "declaration": "Atlas.Unitary.isotropic_primitive",
+      "source": "Atlas/LinearGroups/Unitary/Family.lean",
+      "description": "Primitivity of the actual projective action on isotropic K-lines for n>=2"
+    },
+    {
+      "declaration": "Atlas.Unitary.projectiveEmbedding_injective",
+      "source": "Atlas/LinearGroups/Unitary/Projective.lean",
+      "description": "Faithful map from the actual center quotient into PGL over the quadratic extension"
+    },
+    {
+      "declaration": "Atlas.Unitary.card_isotropicPoints",
+      "source": "Atlas/LinearGroups/Unitary/IsotropicCount.lean",
+      "description": "Uniform isotropic K-line count, with denominator q^2-1"
+    },
+    {
+      "declaration": "Atlas.Unitary.center_eq_scalarSubgroup",
+      "source": "Atlas/LinearGroups/Unitary/Center.lean",
+      "description": "Full SU center equals the actual norm-one scalar subgroup satisfying lambda^n=1"
+    },
+    {
+      "declaration": "Atlas.Unitary.card_center",
+      "source": "Atlas/LinearGroups/Unitary/Center.lean",
+      "description": "Exact full scalar-center order gcd(n,q+1)"
+    },
+    {
+      "declaration": "Atlas.Unitary.graphFieldAutomorphism_involutive",
+      "source": "Atlas/LinearGroups/Unitary/FixedPoints.lean",
+      "description": "The actual inverse-conjugate-transpose graph-field automorphism of SL is involutive; no projective fixed-point claim"
+    },
+    {
+      "declaration": "Atlas.Unitary.card_threeRootGroup",
+      "source": "Atlas/LinearGroups/Unitary/ThreeRootGroup.lean",
+      "description": "The actual full three-dimensional unipotent subgroup has order q^3 in every characteristic"
+    },
+    {
+      "declaration": "Atlas.Unitary.threeRootGroup_center_iff",
+      "source": "Atlas/LinearGroups/Unitary/ThreeRootGroup.lean",
+      "description": "Exact center of that unipotent subgroup: first parameter zero and trace-zero second parameter"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.psu_three_ternary_simple",
+      "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+      "description": "Positive simplicity regression for the actual PSU3(3)"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.psu_four_binary_simple",
+      "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+      "description": "Positive simplicity regression for the actual PSU4(2)"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.psu_four_ternary_simple",
+      "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+      "description": "Positive simplicity regression for the actual PSU4(3)"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.psu_five_binary_simple",
+      "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+      "description": "Positive simplicity regression for PSU5(2), exercising the binary higher-dimensional induction"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.psu_two_binary_not_simple",
+      "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+      "description": "Actual nonsimplicity regression for PSU2(2)"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.psu_two_ternary_not_simple",
+      "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+      "description": "Actual nonsimplicity regression for PSU2(3)"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.psu_three_binary_not_simple",
+      "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+      "description": "Actual nonsimplicity regression for PSU3(2), through its proved proper nontrivial normal subgroup"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.points_three_ternary",
+      "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+      "description": "The PSU3(3) isotropic action has 28 points"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.points_four_binary",
+      "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+      "description": "The PSU4(2) isotropic action has 45 points"
+    },
+    {
+      "declaration": "Atlas.Unitary.OrderChecks.psu_two_quaternary_regression",
+      "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+      "description": "An actual quadratic-field PSU2(4) witness has order 60 and is nonabelian simple"
+    }
+  ],
+  "evidence": "unitary-family-v1",
+  "presentation": {
+    "label": "²Aₙ(q)",
+    "construction": "PSU_(n+1)(K/F), the actual Hermitian scalar quotient",
+    "parameters": "Lie rank n>=2; simple except (n,q)=(2,2)",
+    "order": "q^(n*(n+1)/2) * product_{i=2..n+1}(q^i-(-1)^i) / gcd(n+1,q+1)",
+    "note": "The catalogue table uses Lie rank n. Lean declarations use matrix dimension d=n+1 and q=|F|, not |K|=q^2. The complete dimension-d theorem begins at d=2 and has exactly three exceptions. The stable catalogue starts at d=3; dimension two has the actual PSL comparison. Field and fixed-subgroup equivalences are included verbatim in the public theorem extract."
+  }
+}

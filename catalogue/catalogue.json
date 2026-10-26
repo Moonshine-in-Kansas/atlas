@@ -1,9 +1,14 @@
 {
+  "schema_version": 1,
+  "version": "1.2",
+  "status": "release-candidate",
   "entries": [
     {
       "id": "family.Cyclic",
       "label": "C_p",
       "kind": "family",
+      "audit_entry": "Cyclic",
+      "proof_status": "construction_complete",
       "construction": "Multiplicative (ZMod p)",
       "parameters": "p prime; card theorem m>0; simple iff m prime",
       "exceptions": "",
@@ -116,14 +121,19 @@
       ],
       "presentation": {
         "label": "Cₚ",
-        "parameters": "p prime"
+        "parameters": "p prime",
+        "summary_order": "$p$",
+        "summary_simplicity": "Yes, $p$ prime (abelian)"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/cyclic/Cyclic.html"
     },
     {
       "id": "family.Alternating",
       "label": "A_n",
       "kind": "family",
+      "audit_entry": "Alternating",
+      "proof_status": "construction_complete",
       "construction": "alternatingGroup (Fin n)",
       "parameters": "n>=5 for nonabelian simplicity; A3 cyclic simple; A4 not simple; n<=2 trivial",
       "exceptions": "A3 is cyclic simple; A4 is not simple; degrees <=2 are trivial",
@@ -301,14 +311,19 @@
       ],
       "presentation": {
         "label": "Aₙ",
-        "parameters": "Simple for n ≥ 5; also A₃ ≅ C₃. A₄ is nonsimple; n ≤ 2 gives the trivial group."
+        "parameters": "Simple for n ≥ 5; also A₃ ≅ C₃. A₄ is nonsimple; n ≤ 2 gives the trivial group.",
+        "summary_order": "$n!/2$",
+        "summary_simplicity": "Yes, $n\\ge5$; also cyclic simple at $n=3$"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/alternating/Alternating.html"
     },
     {
       "id": "family.PSL",
       "label": "PSL_n(q)",
       "kind": "family",
+      "audit_entry": "PSL",
+      "proof_status": "construction_complete",
       "construction": "SL_n(F)/center(SL_n(F))",
       "parameters": "F arbitrary finite field; n>=2; simple iff (n,|F|) not (2,2),(2,3); prime-power existence p prime f>=1",
       "exceptions": "(n,q)=(2,2),(2,3) are excluded from simplicity for n>=2",
@@ -369,14 +384,202 @@
         "construction": "PSL_(n+1)(F)",
         "parameters": "n ≥ 1; simple except (n,q) = (1,2), (1,3)",
         "order": "q^(n(n+1)/2) * product(i=2..n+1, q^i−1) / gcd(n+1,q−1)",
-        "note": "The catalogue uses Lie rank n: Aₙ(q) = PSL_(n+1)(q). The audited PSL parameters and order formula below instead use n for the matrix dimension; no compiled declaration is renamed or reparameterized."
+        "note": "The catalogue uses Lie rank n: Aₙ(q) = PSL_(n+1)(q). The audited PSL parameters and order formula below instead use n for the matrix dimension; no compiled declaration is renamed or reparameterized.",
+        "summary_order": "$\\displaystyle \\frac{q^{n(n+1)/2}\\prod_{i=2}^{n+1}(q^i-1)}{\\gcd(n+1,q-1)}$",
+        "summary_simplicity": "Yes, $n\\ge1$, except $(n,q)=(1,2),(1,3)$"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/psl/PSL.html"
+    },
+    {
+      "id": "family.PSU",
+      "label": "PSU / twisted A",
+      "kind": "family",
+      "audit_entry": "PSU",
+      "proof_status": "construction_complete",
+      "construction": "Actual standard Hermitian SU_n(K/F), quotiented by its proved full norm-one scalar center",
+      "parameters": "F finite with q=|F|, K/F an actual quadratic extension; n is matrix dimension; stable catalogue: n>=3 and (n,q)!=(3,2)",
+      "exceptions": "The full theorem covers n>=2 and has exactly (2,2), (2,3), (3,2) as nonsimple cases. Dimension two is retained through the actual PSU2(F)≃PSL2(F) comparison.",
+      "recognition": "Direct finite Hermitian matrix construction, with actual field transport and SL graph-field fixed-subgroup identification; no order recognition, CFSG or projective fixed-point assertion",
+      "attribution": "ATLAS quadratic-extension, Hermitian norm-count, Witt-coordinate, transvection and Iwasawa proofs; pinned mathlib field and matrix infrastructure",
+      "roles": {
+        "model": {
+          "declaration": "Atlas.Unitary.PSU",
+          "source": "Atlas/LinearGroups/Unitary/Basic.lean"
+        },
+        "finite": {
+          "declaration": "Atlas.Unitary.finite_psu",
+          "source": "Atlas/LinearGroups/Unitary/Basic.lean"
+        },
+        "order": {
+          "declaration": "Atlas.Unitary.card_psu_factor",
+          "source": "Atlas/LinearGroups/Unitary/ProjectiveOrder.lean",
+          "formula": "q^(n*(n-1)/2) * product_{i=2..n}(q^i-(-1)^i) / gcd(n,q+1)"
+        },
+        "simple": {
+          "declaration": "Atlas.Unitary.simple_of_good",
+          "source": "Atlas/LinearGroups/Unitary/Family.lean"
+        },
+        "nonabelian": {
+          "declaration": "Atlas.Unitary.noncommutative_of_good",
+          "source": "Atlas/LinearGroups/Unitary/Family.lean"
+        }
+      },
+      "properties": [
+        {
+          "declaration": "Atlas.Unitary.transvectionGenerated_two_eq_top",
+          "source": "Atlas/LinearGroups/Unitary/RankOneGenerationAll.lean",
+          "description": "Actual SU2 transvection generation over every finite base field, including q=2 and q=3"
+        },
+        {
+          "declaration": "Atlas.Unitary.transvectionGenerated_eq_top_of_not_three_binary",
+          "source": "Atlas/LinearGroups/Unitary/GenerationComplete.lean",
+          "description": "Actual SU generation for all dimensions n>=2 except precisely the binary dimension-three case"
+        },
+        {
+          "declaration": "Atlas.type2A_construction",
+          "source": "Atlas/LinearGroups/Type2A.lean",
+          "description": "Construction record for the actual special-unitary matrix group and its center quotient"
+        },
+        {
+          "declaration": "Atlas.type2A_prime_power",
+          "source": "Atlas/LinearGroups/Type2A.lean",
+          "description": "Actual quadratic finite-field and matrix-quotient witnesses for p prime, f>=1 and every positive simplicity parameter"
+        },
+        {
+          "declaration": "Atlas.exists_type2A",
+          "source": "Atlas/LinearGroups/Type2A.lean",
+          "description": "Existence with an explicit equivalence to the retained projective special-unitary carrier"
+        },
+        {
+          "declaration": "Atlas.Unitary.simple_iff_good",
+          "source": "Atlas/LinearGroups/Unitary/Family.lean",
+          "description": "Exact simplicity criterion in every matrix dimension n>=2, excluding precisely (2,2), (2,3), (3,2)"
+        },
+        {
+          "declaration": "Atlas.Unitary.card_psu_mul_gcd",
+          "source": "Atlas/LinearGroups/Unitary/ProjectiveOrder.lean",
+          "description": "Division-free projective order identity with the full scalar-center factor"
+        },
+        {
+          "declaration": "Atlas.Unitary.transvectionGenerated_eq_top_of_good",
+          "source": "Atlas/LinearGroups/Unitary/Family.lean",
+          "description": "Actual line transvections generate SU in every positive simplicity case, including the binary rank-four base"
+        },
+        {
+          "declaration": "Atlas.Unitary.special_perfect_of_good",
+          "source": "Atlas/LinearGroups/Unitary/Family.lean",
+          "description": "Perfectness of the actual special-unitary carrier throughout the positive simplicity range"
+        },
+        {
+          "declaration": "Atlas.Unitary.isotropic_primitive",
+          "source": "Atlas/LinearGroups/Unitary/Family.lean",
+          "description": "Primitivity of the actual projective action on isotropic K-lines for n>=2"
+        },
+        {
+          "declaration": "Atlas.Unitary.projectiveEmbedding_injective",
+          "source": "Atlas/LinearGroups/Unitary/Projective.lean",
+          "description": "Faithful map from the actual center quotient into PGL over the quadratic extension"
+        },
+        {
+          "declaration": "Atlas.Unitary.card_isotropicPoints",
+          "source": "Atlas/LinearGroups/Unitary/IsotropicCount.lean",
+          "description": "Uniform isotropic K-line count, with denominator q^2-1"
+        },
+        {
+          "declaration": "Atlas.Unitary.center_eq_scalarSubgroup",
+          "source": "Atlas/LinearGroups/Unitary/Center.lean",
+          "description": "Full SU center equals the actual norm-one scalar subgroup satisfying lambda^n=1"
+        },
+        {
+          "declaration": "Atlas.Unitary.card_center",
+          "source": "Atlas/LinearGroups/Unitary/Center.lean",
+          "description": "Exact full scalar-center order gcd(n,q+1)"
+        },
+        {
+          "declaration": "Atlas.Unitary.graphFieldAutomorphism_involutive",
+          "source": "Atlas/LinearGroups/Unitary/FixedPoints.lean",
+          "description": "The actual inverse-conjugate-transpose graph-field automorphism of SL is involutive; no projective fixed-point claim"
+        },
+        {
+          "declaration": "Atlas.Unitary.card_threeRootGroup",
+          "source": "Atlas/LinearGroups/Unitary/ThreeRootGroup.lean",
+          "description": "The actual full three-dimensional unipotent subgroup has order q^3 in every characteristic"
+        },
+        {
+          "declaration": "Atlas.Unitary.threeRootGroup_center_iff",
+          "source": "Atlas/LinearGroups/Unitary/ThreeRootGroup.lean",
+          "description": "Exact center of that unipotent subgroup: first parameter zero and trace-zero second parameter"
+        },
+        {
+          "declaration": "Atlas.Unitary.OrderChecks.psu_three_ternary_simple",
+          "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+          "description": "Positive simplicity regression for the actual PSU3(3)"
+        },
+        {
+          "declaration": "Atlas.Unitary.OrderChecks.psu_four_binary_simple",
+          "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+          "description": "Positive simplicity regression for the actual PSU4(2)"
+        },
+        {
+          "declaration": "Atlas.Unitary.OrderChecks.psu_four_ternary_simple",
+          "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+          "description": "Positive simplicity regression for the actual PSU4(3)"
+        },
+        {
+          "declaration": "Atlas.Unitary.OrderChecks.psu_five_binary_simple",
+          "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+          "description": "Positive simplicity regression for PSU5(2), exercising the binary higher-dimensional induction"
+        },
+        {
+          "declaration": "Atlas.Unitary.OrderChecks.psu_two_binary_not_simple",
+          "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+          "description": "Actual nonsimplicity regression for PSU2(2)"
+        },
+        {
+          "declaration": "Atlas.Unitary.OrderChecks.psu_two_ternary_not_simple",
+          "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+          "description": "Actual nonsimplicity regression for PSU2(3)"
+        },
+        {
+          "declaration": "Atlas.Unitary.OrderChecks.psu_three_binary_not_simple",
+          "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+          "description": "Actual nonsimplicity regression for PSU3(2), through its proved proper nontrivial normal subgroup"
+        },
+        {
+          "declaration": "Atlas.Unitary.OrderChecks.points_three_ternary",
+          "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+          "description": "The PSU3(3) isotropic action has 28 points"
+        },
+        {
+          "declaration": "Atlas.Unitary.OrderChecks.points_four_binary",
+          "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+          "description": "The PSU4(2) isotropic action has 45 points"
+        },
+        {
+          "declaration": "Atlas.Unitary.OrderChecks.psu_two_quaternary_regression",
+          "source": "Atlas/LinearGroups/Unitary/FamilyChecks.lean",
+          "description": "An actual quadratic-field PSU2(4) witness has order 60 and is nonabelian simple"
+        }
+      ],
+      "presentation": {
+        "label": "²Aₙ(q)",
+        "construction": "PSU_(n+1)(K/F), the actual Hermitian scalar quotient",
+        "parameters": "Lie rank n>=2; simple except (n,q)=(2,2)",
+        "order": "q^(n*(n+1)/2) * product_{i=2..n+1}(q^i-(-1)^i) / gcd(n+1,q+1)",
+        "note": "The catalogue table uses Lie rank n. Lean declarations use matrix dimension d=n+1 and q=|F|, not |K|=q^2. The complete dimension-d theorem begins at d=2 and has exactly three exceptions. The stable catalogue starts at d=3; dimension two has the actual PSL comparison. Field and fixed-subgroup equivalences are included verbatim in the public theorem extract.",
+        "summary_order": "$\\displaystyle \\frac{q^{n(n+1)/2}\\prod_{i=2}^{n+1}(q^i-(-1)^i)}{\\gcd(n+1,q+1)}$",
+        "summary_simplicity": "Yes, $n\\ge1$, except $(n,q)=(1,2),(1,3),(2,2)$"
+      },
+      "evidence": "unitary-family-v1",
+      "proof_dependencies": "verification/dependency-maps/psu/PSU.html"
     },
     {
       "id": "family.B",
       "label": "B_n(q) / PΩ(2n+1,q)",
       "kind": "family",
+      "audit_entry": "B",
+      "proof_status": "construction_complete",
       "construction": "Actual scalar quotient of the Siegel-generated subgroup of the quadratic form Q(x,y,z)=sum x_i*y_i+z^2; identified with the determinant/spinor kernel in odd characteristic and the full orthogonal group in characteristic two",
       "parameters": "n is Lie rank, natural dimension 2*n+1; F arbitrary finite field, q=|F|; n>=1, every characteristic",
       "exceptions": "Nonsimple exactly (n,q)=(1,2),(1,3),(2,2); these actual groups remain constructed",
@@ -1095,14 +1298,200 @@
       "presentation": {
         "label": "Bₙ(q)",
         "construction": "PΩ_(2n+1)(F), from the quadratic-form model",
-        "parameters": "n ≥ 1; simple except (n,q) = (1,2), (1,3), (2,2)"
+        "parameters": "n ≥ 1; simple except (n,q) = (1,2), (1,3), (2,2)",
+        "summary_order": "$\\displaystyle \\frac{q^{n^2}\\prod_{i=1}^{n}(q^{2i}-1)}{\\gcd(2,q-1)}$",
+        "summary_simplicity": "Yes, $n\\ge1$, except $(1,2),(1,3),(2,2)$"
       },
+      "evidence": "orthogonal-b-0b45591",
       "proof_dependencies": "verification/dependency-maps/b/B.html"
+    },
+    {
+      "id": "family.Suzuki",
+      "label": "Suzuki (2B2)",
+      "kind": "family",
+      "audit_entry": "SuzukiLie",
+      "proof_status": "construction_complete",
+      "construction": "Actual subgroup of Sp4(F) generated by the explicit Tits-twisted root, torus and Weyl matrices",
+      "parameters": "F finite of characteristic 2, q=|F|=2^(2m+1); simple family m>=1, hence q>=8",
+      "exceptions": "The same model at m=0 (q=2) has order20 and is nonsimple; simple_iff proves the exact range",
+      "recognition": "Direct standard Suzuki matrix construction and faithful ovoid action; no abstract Chevalley theorem, CFSG or order recognition. Exceptional graph-field fixed-point characterization is not asserted",
+      "attribution": "Explicit Suzuki matrices and Frobenius twist; unique two-cell decomposition; perfect faithful primitive action with solvable point stabilizer",
+      "roles": {
+        "model": {
+          "declaration": "Atlas.SuzukiFamily.Group",
+          "source": "Atlas/LinearGroups/SuzukiFamily/Model.lean"
+        },
+        "finite": {
+          "declaration": "Atlas.SuzukiFamily.finite_group",
+          "source": "Atlas/LinearGroups/SuzukiFamily/Model.lean"
+        },
+        "order": {
+          "declaration": "Atlas.SuzukiFamily.card_group",
+          "source": "Atlas/LinearGroups/SuzukiFamily/Order.lean",
+          "formula": "q^2 * (q^2+1) * (q-1)"
+        },
+        "simple": {
+          "declaration": "Atlas.SuzukiFamily.simple_of_large",
+          "source": "Atlas/LinearGroups/SuzukiFamily/Simplicity.lean"
+        },
+        "nonabelian": {
+          "declaration": "Atlas.SuzukiFamily.noncommutative_of_large",
+          "source": "Atlas/LinearGroups/SuzukiFamily/Simplicity.lean"
+        }
+      },
+      "properties": [
+        {
+          "declaration": "Atlas.SuzukiFamily.theta_square",
+          "source": "Atlas/LinearGroups/SuzukiFamily/Twist.lean",
+          "description": "The iterated Frobenius twist squares to the squaring map"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.map_theta",
+          "source": "Atlas/LinearGroups/SuzukiFamily/Twist.lean",
+          "description": "Every field isomorphism commutes with the chosen Tits twist"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.embedding_injective",
+          "source": "Atlas/LinearGroups/SuzukiFamily/Model.lean",
+          "description": "The actual generated subgroup embeds in the retained Sp4 model"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.generated_hasForm",
+          "source": "Atlas/LinearGroups/SuzukiFamily/Bruhat.lean",
+          "description": "Every group matrix lies in one of the two explicit cells"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.cellMap_bijective",
+          "source": "Atlas/LinearGroups/SuzukiFamily/Bruhat.lean",
+          "description": "Unique disjoint two-cell parameters, proved before order or simplicity"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.fixes_infinity_iff_short",
+          "source": "Atlas/LinearGroups/SuzukiFamily/ExactStabilizer.lean",
+          "description": "The full infinity stabilizer is exactly the root-by-torus cell"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.fixes_two_iff_torus",
+          "source": "Atlas/LinearGroups/SuzukiFamily/ExactStabilizer.lean",
+          "description": "The two-base-point stabilizer is exactly the torus"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.pointAction_faithful",
+          "source": "Atlas/LinearGroups/SuzukiFamily/ExactStabilizer.lean",
+          "description": "Faithfulness of the actual projective ovoid action"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.pointAction_two_pretransitive",
+          "source": "Atlas/LinearGroups/SuzukiFamily/PointTransitivity.lean",
+          "description": "Double transitivity on the actual ovoid"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.pointAction_preprimitive",
+          "source": "Atlas/LinearGroups/SuzukiFamily/PointTransitivity.lean",
+          "description": "Primitivity derived independently of full-group order"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.card_pointSet",
+          "source": "Atlas/LinearGroups/SuzukiFamily/Ovoid.lean",
+          "description": "The ovoid contains q^2+1 actual projective points"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.card_rootSubgroup",
+          "source": "Atlas/LinearGroups/SuzukiFamily/RootSubgroup.lean",
+          "description": "The root subgroup has order q^2"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.card_torusSubgroup",
+          "source": "Atlas/LinearGroups/SuzukiFamily/SplitBorel.lean",
+          "description": "The split torus has order q-1"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.card_borel",
+          "source": "Atlas/LinearGroups/SuzukiFamily/Borel.lean",
+          "description": "The full point stabilizer has order q^2(q-1)"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.borel_solvable",
+          "source": "Atlas/LinearGroups/SuzukiFamily/BorelSolvable.lean",
+          "description": "The full point stabilizer is solvable"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.borelProjection_ker_eq_root",
+          "source": "Atlas/LinearGroups/SuzukiFamily/BorelSolvable.lean",
+          "description": "The stabilizer projection has exactly the root-group kernel"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.borelProjection_section",
+          "source": "Atlas/LinearGroups/SuzukiFamily/SplitBorel.lean",
+          "description": "The torus section splits the stabilizer projection"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.rootIntoBorel_injective",
+          "source": "Atlas/LinearGroups/SuzukiFamily/SplitBorel.lean",
+          "description": "The root-group map into the full stabilizer is injective"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.perfect_of_large",
+          "source": "Atlas/LinearGroups/SuzukiFamily/Perfect.lean",
+          "description": "Perfectness for every m>=1 by torus commutators, a Weyl word and torus squares"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.simple_iff",
+          "source": "Atlas/LinearGroups/SuzukiFamily/ExactSimplicity.lean",
+          "description": "Exact simplicity criterion: m>=1"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.binary_not_simple",
+          "source": "Atlas/LinearGroups/SuzukiFamily/SmallField.lean",
+          "description": "The same binary generated model has order20 and is nonsimple"
+        },
+        {
+          "declaration": "Atlas.SuzukiFamily.fieldEquiv_embedding",
+          "source": "Atlas/LinearGroups/SuzukiFamily/FieldTransport.lean",
+          "description": "Field transport agrees with entrywise transport in Sp4"
+        },
+        {
+          "declaration": "Atlas.typeSuzuki_construction",
+          "source": "Atlas/LinearGroups/TypeSuzuki.lean",
+          "description": "Complete public package for the actual matrix model"
+        },
+        {
+          "declaration": "Atlas.exists_typeSuzuki",
+          "source": "Atlas/LinearGroups/TypeSuzuki.lean",
+          "description": "Group existence retains an equivalence to the actual model"
+        },
+        {
+          "declaration": "Atlas.typeSuzuki_prime_power",
+          "source": "Atlas/LinearGroups/TypeSuzuki.lean",
+          "description": "Every m>=1 is realized over an actual characteristic-two finite field"
+        },
+        {
+          "declaration": "Atlas.exists_typeSuzuki_parameter",
+          "source": "Atlas/LinearGroups/TypeSuzuki.lean",
+          "description": "Canonical Galois-field witness with the displayed Suzuki order"
+        },
+        {
+          "declaration": "Atlas.typeSuzuki_field_transport",
+          "source": "Atlas/LinearGroups/TypeSuzuki.lean",
+          "description": "Actual group equivalence under a field isomorphism"
+        }
+      ],
+      "presentation": {
+        "label": "²B₂(q)",
+        "parameters": "q=2^(2m+1), m>=1; simple for all public parameters",
+        "construction": "Four-dimensional Suzuki matrix group",
+        "summary_order": "$q^2(q^2+1)(q-1)$",
+        "summary_simplicity": "Yes, $q=2^{2m+1}$, $m\\ge1$"
+      },
+      "evidence": "suzuki-family-v1",
+      "proof_dependencies": "verification/dependency-maps/suzukifamily/SuzukiFamily.html"
     },
     {
       "id": "family.C",
       "label": "C_n(q) / PSp(2n,q)",
       "kind": "family",
+      "audit_entry": "C",
+      "proof_status": "construction_complete",
       "construction": "Carrier of Matrix.symplecticGroup (Fin n) F, quotiented by its actual center",
       "parameters": "n is symplectic rank, dimension 2*n; F arbitrary finite field, q=|F|; simple exactly when (n=1 and q>3) or (n>=2 and (n,q)!=(2,2))",
       "exceptions": "Rank zero is trivial; nonsimple positive-rank pairs (n,q)=(1,2),(1,3),(2,2)",
@@ -1306,14 +1695,19 @@
       "presentation": {
         "label": "Cₙ(q)",
         "construction": "PSp_(2n)(F)",
-        "parameters": "n ≥ 1; simple except (n,q) = (1,2), (1,3), (2,2)"
+        "parameters": "n ≥ 1; simple except (n,q) = (1,2), (1,3), (2,2)",
+        "summary_order": "$\\displaystyle \\frac{q^{n^2}\\prod_{i=1}^{n}(q^{2i}-1)}{\\gcd(2,q-1)}$",
+        "summary_simplicity": "Yes, $n\\ge1$, except $(1,2),(1,3),(2,2)$"
       },
+      "evidence": "symplectic-family-f07f142",
       "proof_dependencies": "verification/dependency-maps/c/C.html"
     },
     {
       "id": "family.D",
       "label": "D_n(q) / PΩ+(2n,q)",
       "kind": "family",
+      "audit_entry": "D",
+      "proof_status": "construction_complete",
       "construction": "Actual scalar quotient of the Siegel-generated subgroup of the split quadratic form Q(x,y)=sum x_i*y_i; identified with the determinant/spinor kernel in odd characteristic and Dickson kernel in characteristic two",
       "parameters": "n is Lie rank, natural dimension 2*n; F arbitrary finite field, q=|F|; n>=4, every characteristic",
       "exceptions": "No exceptions for n>=4; lower-rank comparisons are separate obligations",
@@ -1612,14 +2006,710 @@
       "presentation": {
         "label": "Dₙ(q)",
         "construction": "PΩ⁺_(2n)(F), from the split quadratic-form model",
-        "parameters": "n ≥ 4; simple for every q"
+        "parameters": "n ≥ 4; simple for every q",
+        "summary_order": "$\\displaystyle \\frac{q^{n(n-1)}(q^n-1)\\prod_{i=1}^{n-1}(q^{2i}-1)}{\\gcd(4,q^n-1)}$",
+        "summary_simplicity": "Yes, $n\\ge4$ (split form)"
       },
+      "evidence": "orthogonal-d-0cf54c3",
       "proof_dependencies": "verification/dependency-maps/d/D.html"
+    },
+    {
+      "id": "family.2D",
+      "label": "Minus orthogonal / twisted D",
+      "kind": "family",
+      "audit_entry": "2D",
+      "proof_status": "construction_complete",
+      "construction": "Actual hyperbolic planes plus quadratic-extension norm plane; intrinsic Omega equals Siegel-generated isometries, quotiented by its full scalar center",
+      "parameters": "F arbitrary finite field, q=|F|; K/F actual quadratic extension; n is half-dimension/Lie rank; stable simple family n>=4, every characteristic",
+      "exceptions": "No simplicity exceptions for n>=2 over finite fields. Rank2 is structurally PSL2(K); rank3 is structurally PSU4(q). Stable principal roles retain n>=4; separately audited uniform order and simplicity supplements cover every n>=2.",
+      "recognition": "Concrete quadratic-form model and kernel identification; no order recognition or graph-field fixed-point assertion",
+      "attribution": "ATLAS norm-plane, quadratic reflection/Siegel, spinor/Dickson, finite-field and Iwasawa proofs; pinned mathlib foundations",
+      "roles": {
+        "model": {
+          "declaration": "Atlas.Orthogonal.DMinus",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean"
+        },
+        "finite": {
+          "declaration": "Atlas.Orthogonal.Minus.family_finite",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean"
+        },
+        "order": {
+          "declaration": "Atlas.Orthogonal.Minus.family_order",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+          "formula": "q^(n*(n-1)) * (q^n+1) * product_{i=1..n-1}(q^(2*i)-1) / gcd(4,q^n+1)"
+        },
+        "simple": {
+          "declaration": "Atlas.Orthogonal.Minus.family_simple",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean"
+        },
+        "nonabelian": {
+          "declaration": "Atlas.Orthogonal.Minus.family_noncommutative",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean"
+        }
+      },
+      "properties": [
+        {
+          "declaration": "Atlas.type2D_construction",
+          "source": "Atlas/LinearGroups/Type2D.lean",
+          "description": "Actual stable norm-plane construction with intrinsic kernel and scalar quotient interfaces"
+        },
+        {
+          "declaration": "Atlas.type2D_prime_power",
+          "source": "Atlas/LinearGroups/Type2D.lean",
+          "description": "Actual finite base field and quadratic extension for every prime p and exponent f>=1, in rank n>=4"
+        },
+        {
+          "declaration": "Atlas.exists_type2D",
+          "source": "Atlas/LinearGroups/Type2D.lean",
+          "description": "Existence retaining an explicit equivalence to the constructed quadratic quotient"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.family_full_order",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+          "description": "Full orthogonal-group order, independently derived by hyperbolic-pair orbit-stabilizer"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.family_elementary_perfect",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+          "description": "Actual elementary group perfect for n>=4, including q=2 and q=3"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.family_center_scalar",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+          "description": "Full elementary center equals its actual scalar subgroup for n>=3"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.family_projection_kernel",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+          "description": "Actual quotient map kernel is the full center for n>=3"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.family_faithful",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+          "description": "Faithful action on the actual singular points for n>=3"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.family_primitive",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+          "description": "Primitive actual singular-point action for n>=4"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.family_intrinsic_odd",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+          "description": "Elementary subgroup is the simultaneous determinant/spinor kernel in odd characteristic for n>=3"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.family_intrinsic_even",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+          "description": "Elementary subgroup is the residual-rank Dickson kernel in characteristic two for n>=3"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.witt_index_exact",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/WittIndex.lean",
+          "description": "Exact maximal totally singular dimension, with an explicit attaining subspace"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.fieldEquivProjective_projection",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/FieldTransport.lean",
+          "description": "Actual compatible base/extension field transport commutes with scalar quotient projection"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.fullDickson_field_transport",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/KernelTransport.lean",
+          "description": "Residual-rank Dickson character preserved by actual field transport"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.family_rankTwo_order",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/RankTwoFamily.lean",
+          "description": "Actual rank-two carrier order, including q=2 and q=3, via its structural PSL2(K) equivalence"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.family_rankTwo_simple",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/RankTwoFamily.lean",
+          "description": "Actual rank-two carrier simple over every finite base field"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.family_rankTwo_noncommutative",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/RankTwoFamily.lean",
+          "description": "Actual rank-two carrier noncommutative over every finite base field"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.rankTwo_elementary_eq_intrinsic_kernel",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/RankTwoIntrinsicOdd.lean",
+          "description": "Rank-two elementary group equals the actual determinant/spinor kernel in odd characteristic"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.rankTwoDickson_kernel_elementary",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/RankTwoIntrinsicEven.lean",
+          "description": "Rank-two elementary group equals the actual residual-parity kernel in characteristic two"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.rankTwo_center_scalar",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/RankTwoSimplicity.lean",
+          "description": "Full rank-two elementary center equals its trivial scalar subgroup"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.rankTwo_elementary_perfect",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/RankTwoSimplicity.lean",
+          "description": "Actual rank-two elementary group is perfect"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.family_rankThree_comparison",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/AllRanks.lean",
+          "description": "Actual exterior-square/Hodge multiplicative equivalence with PSU4(q), in every characteristic"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.family_order_all",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/AllRanks.lean",
+          "description": "Uniform projective order for every n>=2 over finite fields"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.family_simple_all",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/AllRanks.lean",
+          "description": "Nonexceptional simplicity for every n>=2 over finite fields"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.family_noncommutative_all",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/AllRanks.lean",
+          "description": "Noncommutativity for every n>=2 over finite fields"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.family_elementary_perfect_all",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/AllRanks.lean",
+          "description": "Actual elementary group perfect for every n>=2"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.rankThreeProjectiveHom_kernel",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/RankThreeKernel.lean",
+          "description": "Actual projective exterior-action kernel is exactly the SU4 center"
+        },
+        {
+          "declaration": "Atlas.Orthogonal.Minus.rankThreeElementaryHom_surjective",
+          "source": "Atlas/LinearGroups/Orthogonal/Minus/RankThreeFullImage.lean",
+          "description": "Actual SU4 exterior action surjects onto the elementary minus group"
+        }
+      ],
+      "presentation": {
+        "label": "²Dₙ(q)",
+        "construction": "PΩ⁻_(2n)(q), actual norm-plane scalar quotient",
+        "parameters": "Stable family n≥4; separately proved low ranks n=2,3; every finite field",
+        "order": "q^(n*(n-1)) * (q^n+1) * product_{i=1..n-1}(q^(2*i)-1) / gcd(4,q^n+1)",
+        "note": "Order and nonabelian simplicity proved uniformly for n≥2. Concrete low-rank comparisons: PSL₂(q²) and PSU₄(q). Stable principal roles and their independent evidence retain n≥4.",
+        "summary_order": "$\\displaystyle \\frac{q^{n(n-1)}(q^n+1)\\prod_{i=1}^{n-1}(q^{2i}-1)}{\\gcd(4,q^n+1)}$",
+        "summary_simplicity": "Yes, $n\\ge4$; ranks $2,3$ separately proved"
+      },
+      "evidence": "minus-orthogonal-rank-three-supplement-v1",
+      "proof_dependencies": "verification/dependency-maps/minusd/MinusD.html"
+    },
+    {
+      "id": "family.3D4",
+      "label": "3D4",
+      "kind": "family",
+      "audit_entry": "3D4",
+      "proof_status": "construction_complete",
+      "construction": "Actual subgroup of the split eight-dimensional orthogonal group over a cubic extension K/F, generated by four literal triality-folded root families",
+      "parameters": "F and K finite fields, Algebra F K, [K:F]=3; q=|F|, |K|=q^3; every prime power q>=2",
+      "exceptions": "None: the same matrix model is nonabelian simple also at q=2 and in characteristic three",
+      "recognition": "Direct pinned triality-folded matrix construction; no recognition from order. Full related-triple graph-field fixed-point comparison and generalized-hexagon axioms are not claimed",
+      "attribution": "Explicit D4 root matrices, cubic Frobenius folding, twelve-cell Bruhat coordinates, SL2/trace perfectness and the solvable-radical Iwasawa criterion",
+      "roles": {
+        "model": {
+          "declaration": "Atlas.Triality.Group",
+          "source": "Atlas/LinearGroups/Triality/FoldedGenerators.lean"
+        },
+        "finite": {
+          "declaration": "Atlas.Triality.finite_group",
+          "source": "Atlas/LinearGroups/Triality/FoldedGenerators.lean"
+        },
+        "order": {
+          "declaration": "Atlas.Triality.card_group",
+          "source": "Atlas/LinearGroups/Triality/Order.lean",
+          "formula": "q^12 * (q^8+q^4+1) * (q^6-1) * (q^2-1)"
+        },
+        "simple": {
+          "declaration": "Atlas.Triality.simple",
+          "source": "Atlas/LinearGroups/Triality/Simplicity.lean"
+        },
+        "nonabelian": {
+          "declaration": "Atlas.Triality.noncommutative",
+          "source": "Atlas/LinearGroups/Triality/Perfect.lean"
+        }
+      },
+      "properties": [
+        {
+          "declaration": "Atlas.Triality.perfect",
+          "source": "Atlas/LinearGroups/Triality/Perfect.lean",
+          "description": "Perfectness in every finite characteristic by the short-root SL2 image and surjective cubic trace"
+        },
+        {
+          "declaration": "Atlas.Triality.intoProjective_injective",
+          "source": "Atlas/LinearGroups/Triality/ProjectiveEmbedding.lean",
+          "description": "Actual faithful embedding in projective elementary split D4 over K"
+        },
+        {
+          "declaration": "Atlas.Triality.borelProjection_kernel",
+          "source": "Atlas/LinearGroups/Triality/SplitBorel.lean",
+          "description": "The Borel projection has exactly the positive-unipotent kernel"
+        },
+        {
+          "declaration": "Atlas.Triality.borelProjection_section",
+          "source": "Atlas/LinearGroups/Triality/SplitBorel.lean",
+          "description": "The actual torus section splits the Borel projection"
+        },
+        {
+          "declaration": "Atlas.Triality.parabolicPointsEquiv_smul",
+          "source": "Atlas/LinearGroups/Triality/ActionTransport.lean",
+          "description": "Compatible cubic field transport intertwines the retained parabolic actions"
+        },
+        {
+          "declaration": "Atlas.Triality.card_parabolicPoints",
+          "source": "Atlas/LinearGroups/Triality/ParabolicIndices.lean",
+          "description": "The long-parabolic coset action has (q^3+1)(q^8+q^4+1) points"
+        },
+        {
+          "declaration": "Atlas.Triality.card_shortParabolicQuotient",
+          "source": "Atlas/LinearGroups/Triality/ParabolicIndices.lean",
+          "description": "The short-parabolic index is (q+1)(q^8+q^4+1)"
+        },
+        {
+          "declaration": "Atlas.type3D4_construction",
+          "source": "Atlas/LinearGroups/Type3D4.lean",
+          "description": "Complete construction package for the actual folded-root subgroup"
+        },
+        {
+          "declaration": "Atlas.exists_type3D4",
+          "source": "Atlas/LinearGroups/Type3D4.lean",
+          "description": "Existence with an explicit equivalence to the actual matrix model"
+        },
+        {
+          "declaration": "Atlas.type3D4_prime_power",
+          "source": "Atlas/LinearGroups/Type3D4.lean",
+          "description": "Every prime power is realized by an actual finite cubic extension"
+        },
+        {
+          "declaration": "Atlas.exists_type3D4_parameter",
+          "source": "Atlas/LinearGroups/Type3D4.lean",
+          "description": "Prime-power existence retains the canonical actual model"
+        },
+        {
+          "declaration": "Atlas.type3D4_field_transport",
+          "source": "Atlas/LinearGroups/Type3D4.lean",
+          "description": "Actual group equivalence under base-field isomorphism"
+        }
+      ],
+      "presentation": {
+        "label": "³D₄(q)",
+        "parameters": "Every prime power q ≥ 2; simple without exceptions",
+        "construction": "Actual subgroup of the split eight-dimensional orthogonal group over a cubic extension K/F, generated by four literal triality-folded root families",
+        "summary_order": "$q^{12}(q^8+q^4+1)(q^6-1)(q^2-1)$",
+        "summary_simplicity": "Yes, every $q\\ge2$"
+      },
+      "evidence": "triality-family-v1",
+      "proof_dependencies": "verification/dependency-maps/triality/Triality.html"
+    },
+    {
+      "id": "family.E6",
+      "label": "E6",
+      "kind": "family",
+      "audit_entry": "E6",
+      "proof_status": "construction_complete",
+      "construction": "The root-generated elementary adjoint subgroup of matrix units from the integral Geck root operators, with its inherited group operations and faithful adjoint action. The simply connected group is a separate cover, not this carrier.",
+      "parameters": "K an arbitrary finite field; q = Nat.card K; rank = 6; every finite characteristic",
+      "exceptions": "K an arbitrary finite field; q = Nat.card K; rank = 6; every finite characteristic",
+      "recognition": "First completed anchor of this family; the historical intrinsic realization remains planned and no identification with it is asserted",
+      "attribution": "construction: independent; finite: independent; order: independent; center: independent; simple: independent; nonabelian: independent; exceptions: independent",
+      "roles": {
+        "model": {
+          "declaration": "Atlas.Chevalley.Catalogue.E6",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesConstruction.lean"
+        },
+        "finite": {
+          "declaration": "Atlas.Chevalley.Catalogue.E6_finite",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesFinite.lean"
+        },
+        "order": {
+          "declaration": "Atlas.Chevalley.Catalogue.E6_order",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesOrder.lean"
+        },
+        "simple": {
+          "declaration": "Atlas.Chevalley.Catalogue.E6_simple",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesSimple.lean"
+        },
+        "nonabelian": {
+          "declaration": "Atlas.Chevalley.Catalogue.E6_nonabelian",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesNonabelian.lean"
+        }
+      },
+      "properties": [
+        {
+          "declaration": "Atlas.Chevalley.Catalogue.E6_center",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesCenter.lean",
+          "description": "K an arbitrary finite field; q = Nat.card K; rank = 6; every finite characteristic"
+        },
+        {
+          "declaration": "Atlas.Chevalley.Catalogue.E6_exceptions",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesExceptions.lean",
+          "description": "K an arbitrary finite field; q = Nat.card K; rank = 6; every finite characteristic"
+        }
+      ],
+      "presentation": {
+        "label": "E₆(q)",
+        "order": "$\\displaystyle \\frac{q^{36}\\prod_{d\\in\\{2,5,6,8,9,12\\}}(q^d-1)}{\\gcd(3,q-1)}$",
+        "summary_order": "$\\displaystyle \\frac{q^{36}\\prod_{d\\in\\{2,5,6,8,9,12\\}}(q^d-1)}{\\gcd(3,q-1)}$",
+        "summary_simplicity": "Yes, every q≥2"
+      },
+      "evidence": null,
+      "proof_dependencies": "verification/dependency-maps/e6/E6.html",
+      "first_completed_anchor": "family.E6/chevalley"
+    },
+    {
+      "id": "family.E7",
+      "label": "E7",
+      "kind": "family",
+      "audit_entry": "E7",
+      "proof_status": "construction_complete",
+      "construction": "The root-generated elementary adjoint subgroup of matrix units from the integral Geck root operators, with its inherited group operations and faithful adjoint action. The simply connected group is a separate cover, not this carrier.",
+      "parameters": "K an arbitrary finite field; q = Nat.card K; rank = 7; every finite characteristic",
+      "exceptions": "K an arbitrary finite field; q = Nat.card K; rank = 7; every finite characteristic",
+      "recognition": "First completed anchor of this family; the historical intrinsic realization remains planned and no identification with it is asserted",
+      "attribution": "construction: independent; finite: independent; order: independent; center: independent; simple: independent; nonabelian: independent; exceptions: independent",
+      "roles": {
+        "model": {
+          "declaration": "Atlas.Chevalley.Catalogue.E7",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesConstruction.lean"
+        },
+        "finite": {
+          "declaration": "Atlas.Chevalley.Catalogue.E7_finite",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesFinite.lean"
+        },
+        "order": {
+          "declaration": "Atlas.Chevalley.Catalogue.E7_order",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesOrder.lean"
+        },
+        "simple": {
+          "declaration": "Atlas.Chevalley.Catalogue.E7_simple",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesSimple.lean"
+        },
+        "nonabelian": {
+          "declaration": "Atlas.Chevalley.Catalogue.E7_nonabelian",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesNonabelian.lean"
+        }
+      },
+      "properties": [
+        {
+          "declaration": "Atlas.Chevalley.Catalogue.E7_center",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesCenter.lean",
+          "description": "K an arbitrary finite field; q = Nat.card K; rank = 7; every finite characteristic"
+        },
+        {
+          "declaration": "Atlas.Chevalley.Catalogue.E7_exceptions",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesExceptions.lean",
+          "description": "K an arbitrary finite field; q = Nat.card K; rank = 7; every finite characteristic"
+        }
+      ],
+      "presentation": {
+        "label": "E₇(q)",
+        "order": "$\\displaystyle \\frac{q^{63}\\prod_{d\\in\\{2,6,8,10,12,14,18\\}}(q^d-1)}{\\gcd(2,q-1)}$",
+        "summary_order": "$\\displaystyle \\frac{q^{63}\\prod_{d\\in\\{2,6,8,10,12,14,18\\}}(q^d-1)}{\\gcd(2,q-1)}$",
+        "summary_simplicity": "Yes, every q≥2"
+      },
+      "evidence": null,
+      "proof_dependencies": "verification/dependency-maps/e7/E7.html",
+      "first_completed_anchor": "family.E7/chevalley"
+    },
+    {
+      "id": "family.E8",
+      "label": "E8",
+      "kind": "family",
+      "audit_entry": "E8",
+      "proof_status": "construction_complete",
+      "construction": "The root-generated elementary adjoint subgroup of matrix units from the integral Geck root operators, with its inherited group operations and faithful adjoint action. The simply connected group is a separate cover, not this carrier.",
+      "parameters": "K an arbitrary finite field; q = Nat.card K; rank = 8; every finite characteristic",
+      "exceptions": "K an arbitrary finite field; q = Nat.card K; rank = 8; every finite characteristic",
+      "recognition": "First completed anchor of this family; the historical intrinsic realization remains planned and no identification with it is asserted",
+      "attribution": "construction: independent; finite: independent; order: independent; center: independent; simple: independent; nonabelian: independent; exceptions: independent",
+      "roles": {
+        "model": {
+          "declaration": "Atlas.Chevalley.Catalogue.E8",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesConstruction.lean"
+        },
+        "finite": {
+          "declaration": "Atlas.Chevalley.Catalogue.E8_finite",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesFinite.lean"
+        },
+        "order": {
+          "declaration": "Atlas.Chevalley.Catalogue.E8_order",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesOrder.lean"
+        },
+        "simple": {
+          "declaration": "Atlas.Chevalley.Catalogue.E8_simple",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesSimple.lean"
+        },
+        "nonabelian": {
+          "declaration": "Atlas.Chevalley.Catalogue.E8_nonabelian",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesNonabelian.lean"
+        }
+      },
+      "properties": [
+        {
+          "declaration": "Atlas.Chevalley.Catalogue.E8_center",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesCenter.lean",
+          "description": "K an arbitrary finite field; q = Nat.card K; rank = 8; every finite characteristic"
+        },
+        {
+          "declaration": "Atlas.Chevalley.Catalogue.E8_exceptions",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/ESeriesExceptions.lean",
+          "description": "K an arbitrary finite field; q = Nat.card K; rank = 8; every finite characteristic"
+        }
+      ],
+      "presentation": {
+        "label": "E₈(q)",
+        "order": "$q^{120}\\prod_{d\\in\\{2,8,12,14,18,20,24,30\\}}(q^d-1)$",
+        "summary_order": "$q^{120}\\prod_{d\\in\\{2,8,12,14,18,20,24,30\\}}(q^d-1)$",
+        "summary_simplicity": "Yes, every q≥2"
+      },
+      "evidence": null,
+      "proof_dependencies": "verification/dependency-maps/e8/E8.html",
+      "first_completed_anchor": "family.E8/chevalley"
+    },
+    {
+      "id": "family.F4",
+      "label": "F4(q)",
+      "kind": "family",
+      "audit_entry": "F4",
+      "proof_status": "construction_complete",
+      "construction": "Full stabilizer of the integral cubic polynomial and distinguished unit in the marked 27-dimensional split Albert space",
+      "parameters": "F is an arbitrary finite field, q=|F|; every prime power q>=2, including characteristics 2 and 3",
+      "exceptions": "None: the full group is nonabelian simple for every finite field, including q=2 and q=3",
+      "recognition": "Concrete split-Albert/Dickson–Wilson construction; no abstract Chevalley theorem, CFSG, target-order recognition or assumed BN-pair",
+      "attribution": "Existing split-octonion and classical quadratic models, explicit Albert root transformations, actual stabilizer reconstruction, and the generic solvable-radical Iwasawa criterion",
+      "roles": {
+        "model": {
+          "declaration": "Atlas.F4.Model",
+          "source": "Atlas/LinearGroups/F4/Basic.lean"
+        },
+        "finite": {
+          "declaration": "Atlas.F4.finite_model",
+          "source": "Atlas/LinearGroups/F4/Basic.lean"
+        },
+        "order": {
+          "declaration": "Atlas.F4.card_Model",
+          "source": "Atlas/LinearGroups/F4/Order.lean",
+          "formula": "q^24 * (q^12-1) * (q^8-1) * (q^6-1) * (q^2-1)"
+        },
+        "simple": {
+          "declaration": "Atlas.F4.isSimple",
+          "source": "Atlas/LinearGroups/F4/Simplicity.lean"
+        },
+        "nonabelian": {
+          "declaration": "Atlas.F4.exists_mul_ne_mul",
+          "source": "Atlas/LinearGroups/F4/LongRootSeed.lean"
+        }
+      },
+      "properties": [
+        {
+          "declaration": "Atlas.F4.generated_eq_top",
+          "source": "Atlas/LinearGroups/F4/Generation.lean",
+          "description": "The 48 explicit root groups generate the full intrinsic Albert stabilizer"
+        },
+        {
+          "declaration": "Atlas.F4.isPerfect",
+          "source": "Atlas/LinearGroups/F4/Perfect.lean",
+          "description": "Uniform perfectness from same-length A2 commutators, including q=2"
+        },
+        {
+          "declaration": "Atlas.F4.center_eq_bot",
+          "source": "Atlas/LinearGroups/F4/Center.lean",
+          "description": "The full group has trivial center, without taking a projective quotient"
+        },
+        {
+          "declaration": "Atlas.F4.whiteZeroPoints_primitive",
+          "source": "Atlas/LinearGroups/F4/PointPrimitivity.lean",
+          "description": "The actual trace-zero rank-one point action is primitive over every field"
+        },
+        {
+          "declaration": "Atlas.F4.fieldTransport_root",
+          "source": "Atlas/LinearGroups/F4/FieldRootTransport.lean",
+          "description": "Field isomorphisms preserve all 48 root groups with their parameters"
+        },
+        {
+          "declaration": "Atlas.F4.fieldPointTransport_equivariant",
+          "source": "Atlas/LinearGroups/F4/FieldPointTransport.lean",
+          "description": "Coefficientwise field transport intertwines the actual projective point actions"
+        },
+        {
+          "declaration": "Atlas.F4.localRadical_conj",
+          "source": "Atlas/LinearGroups/F4/LocalRadicals.lean",
+          "description": "Canonical local radicals transform by actual conjugation"
+        },
+        {
+          "declaration": "Atlas.F4.localRadical_normal",
+          "source": "Atlas/LinearGroups/F4/LocalRadicals.lean",
+          "description": "Each local radical is normal in its actual point stabilizer"
+        },
+        {
+          "declaration": "Atlas.F4.localRadical_card",
+          "source": "Atlas/LinearGroups/F4/LocalRadicals.lean",
+          "description": "Every local radical has order q^15"
+        },
+        {
+          "declaration": "Atlas.F4.card_nearPoints",
+          "source": "Atlas/LinearGroups/F4/NearPointCount.lean",
+          "description": "Independent near-point cone count q(q^4-1)(q^3+1)/(q-1)"
+        },
+        {
+          "declaration": "Atlas.typeF4_construction",
+          "source": "Atlas/LinearGroups/TypeF4.lean",
+          "description": "Complete package retaining the full Albert model and geometric interfaces"
+        },
+        {
+          "declaration": "Atlas.typeF4_prime_power",
+          "source": "Atlas/LinearGroups/TypeF4.lean",
+          "description": "Genuine finite-field realization for every prime p and exponent f>=1"
+        },
+        {
+          "declaration": "Atlas.exists_typeF4",
+          "source": "Atlas/LinearGroups/TypeF4.lean",
+          "description": "Nonabelian simple existence witnessed by the actual Albert model"
+        },
+        {
+          "declaration": "Atlas.exists_typeF4_prime_power",
+          "source": "Atlas/LinearGroups/TypeF4.lean",
+          "description": "Uniform existence and exact order for all prime powers"
+        }
+      ],
+      "presentation": {
+        "label": "F₄(q)",
+        "construction": "Full cubic-and-unit stabilizer of the split Albert space",
+        "parameters": "Simple for every q ≥ 2",
+        "summary_order": "$q^{24}(q^{12}-1)(q^8-1)(q^6-1)(q^2-1)$",
+        "summary_simplicity": "Yes, every $q\\ge2$"
+      },
+      "evidence": "f4-albert-family-v1",
+      "proof_dependencies": "verification/dependency-maps/f4/F4.html"
+    },
+    {
+      "id": "exceptional.Tits",
+      "label": "Tits group",
+      "kind": "exceptional",
+      "audit_entry": "Tits",
+      "proof_status": "construction_complete",
+      "construction": "Actual derived subgroup of the distinguished-cross stabilizer in the constructed projective Conway–Wales lattice group",
+      "parameters": "Fixed exceptional derived-Ree/Tits group ²F₄(2)′, constructed as the commutator subgroup of the inherited cross stabilizer",
+      "exceptions": "",
+      "recognition": "Direct inherited lattice-stabilizer construction; no comparison with an independently constructed Ree matrix group or recognition from order is asserted",
+      "attribution": "Inherited Conway–Wales geometry, actual five-quartet multiplier and transfer, normal-index bound, and index-two nonsquare simplicity argument",
+      "roles": {
+        "model": {
+          "declaration": "Atlas.Tits.Model",
+          "source": "Atlas/Tits/LocalGroups.lean"
+        },
+        "finite": {
+          "declaration": "Atlas.Tits.finite",
+          "source": "Atlas/Tits/Construction.lean"
+        },
+        "order": {
+          "declaration": "Atlas.Tits.card",
+          "source": "Atlas/Tits/Order.lean",
+          "formula": "17971200"
+        },
+        "simple": {
+          "declaration": "Atlas.Tits.isSimpleGroup",
+          "source": "Atlas/Tits/Simplicity.lean"
+        },
+        "nonabelian": {
+          "declaration": "Atlas.Tits.noncommutative",
+          "source": "Atlas/Tits/Simplicity.lean"
+        }
+      },
+      "properties": [
+        {
+          "declaration": "Atlas.Tits.embeddingIntoRudvalis_injective",
+          "source": "Atlas/Tits/LocalGroups.lean",
+          "description": "Injective inclusion of the actual derived stabilizer into the constructed Rudvalis group"
+        },
+        {
+          "declaration": "Atlas.Tits.derived_eq_transferKernel",
+          "source": "Atlas/Tits/Order.lean",
+          "description": "The actual derived subgroup equals the actual transfer kernel"
+        },
+        {
+          "declaration": "Atlas.Tits.index_derived",
+          "source": "Atlas/Tits/Order.lean",
+          "description": "The derived subgroup has index two in the inherited cross stabilizer"
+        },
+        {
+          "declaration": "Atlas.Tits.transfer_alpha",
+          "source": "Atlas/Tits/TransferEvaluation.lean",
+          "description": "The explicit geometric transfer witness has value minus one"
+        },
+        {
+          "declaration": "Atlas.Tits.transfer_range_order",
+          "source": "Atlas/Tits/Order.lean",
+          "description": "The transfer image has order two, although the local multiplier has image order four"
+        },
+        {
+          "declaration": "Atlas.Tits.normal_subgroups",
+          "source": "Atlas/Tits/Order.lean",
+          "description": "The ambient normal subgroups are precisely the identity, the derived subgroup and the whole stabilizer"
+        },
+        {
+          "declaration": "Atlas.Tits.perfect",
+          "source": "Atlas/Tits/Simplicity.lean",
+          "description": "Perfectness of the same derived-subgroup model"
+        },
+        {
+          "declaration": "Atlas.Tits.order",
+          "source": "Atlas/Tits/Construction.lean",
+          "description": "Prime factorization of the actual model order"
+        },
+        {
+          "declaration": "Atlas.Tits.model_is_derived",
+          "source": "Atlas/Tits/Construction.lean",
+          "description": "The primary model is the literal commutator subgroup of the inherited cross stabilizer"
+        },
+        {
+          "declaration": "Atlas.Tits.construction",
+          "source": "Atlas/Tits/Construction.lean",
+          "description": "Complete public package for the same concrete model"
+        },
+        {
+          "declaration": "Atlas.Tits.model_neighbours_faithful",
+          "source": "Atlas/Tits/RetainedAction.lean",
+          "description": "The restricted action on 1755 orthogonal crosses is faithful"
+        },
+        {
+          "declaration": "Atlas.Tits.model_neighbour_stabilizer_card",
+          "source": "Atlas/Tits/RetainedAction.lean",
+          "description": "Every point stabilizer in the transitive derived-group action has order10240"
+        },
+        {
+          "declaration": "Atlas.Tits.embedding_range_card",
+          "source": "Atlas/Tits/RetainedAction.lean",
+          "description": "The actual subgroup image in Rudvalis has order17971200"
+        },
+        {
+          "declaration": "Atlas.Tits.embedding_range_index",
+          "source": "Atlas/Tits/RetainedAction.lean",
+          "description": "The actual subgroup image in Rudvalis has index8120"
+        }
+      ],
+      "presentation": {
+        "label": "²F₄(2)′ (Tits)",
+        "parameters": "Fixed exceptional derived group; nonabelian simple",
+        "note": "Exceptional derived-Ree/Tits entry, not a sporadic group. No independent Ree-model comparison is claimed.",
+        "summary_order": "17,971,200",
+        "summary_simplicity": "Yes"
+      },
+      "evidence": "tits-v1",
+      "proof_dependencies": "verification/dependency-maps/tits/Tits.html"
     },
     {
       "id": "family.G2",
       "label": "G2(q)",
       "kind": "family",
+      "audit_entry": "G2",
+      "proof_status": "construction_complete",
       "construction": "Full group of linear multiplication-preserving automorphisms of the uniform eight-coordinate split octonion algebra",
       "parameters": "F is an arbitrary finite field, q=|F|, including characteristics 2 and 3; simple exactly when q>2",
       "exceptions": "q=2: actual long-root normal closure has order6048 and index2 in G2(2), whose order is12096",
@@ -1773,14 +2863,19 @@
       "presentation": {
         "label": "G₂(q)",
         "construction": "Automorphism group of the split octonion algebra over F",
-        "parameters": "Simple for q > 2"
+        "parameters": "Simple for q > 2",
+        "summary_order": "$q^6(q^6-1)(q^2-1)$",
+        "summary_simplicity": "Yes, $q>2$"
       },
+      "evidence": "g2-octonion-family-v1",
       "proof_dependencies": "verification/dependency-maps/g2/G2.html"
     },
     {
       "id": "family.ReeG2",
       "label": "Ree (2G2)",
       "kind": "family",
+      "audit_entry": "ReeG2",
+      "proof_status": "construction_complete",
       "construction": "Actual subgroup of GL7(F) generated by the explicit Tits-twisted alpha, beta, gamma, torus and Weyl matrices",
       "parameters": "F finite of characteristic 3, q=|F|=3^(2m+1), m>=1; the public family starts at q=27",
       "exceptions": "m=0 (q=3) is excluded from the public simple family; no low-parameter extension or PSL2(8) identification is certified here",
@@ -1904,14 +2999,19 @@
       "presentation": {
         "label": "²G₂(q)",
         "construction": "Tits-twisted seven-dimensional Ree matrix group",
-        "parameters": "q=3^(2m+1), m>=1; simple for all public parameters"
+        "parameters": "q=3^(2m+1), m>=1; simple for all public parameters",
+        "summary_order": "$q^3(q^3+1)(q-1)$",
+        "summary_simplicity": "Yes, $q=3^{2m+1}$, $m\\ge1$"
       },
+      "evidence": "ree-g2-family-v1",
       "proof_dependencies": "verification/dependency-maps/reeg2/ReeG2.html"
     },
     {
       "id": "sporadic.M11",
       "label": "M11",
       "kind": "sporadic",
+      "audit_entry": "Mathieu11",
+      "proof_status": "construction_complete",
       "construction": "point stabilizer in full Golay dodecad stabilizer",
       "parameters": "any constructed Golay dodecad D and a point of D; canonical standard choices also provided",
       "exceptions": "",
@@ -2003,14 +3103,19 @@
         }
       ],
       "presentation": {
-        "label": "M₁₁"
+        "label": "M₁₁",
+        "summary_order": "7,920",
+        "summary_simplicity": "Yes"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/m11/M11.html"
     },
     {
       "id": "sporadic.M12",
       "label": "M12",
       "kind": "sporadic",
+      "audit_entry": "Mathieu12",
+      "proof_status": "construction_complete",
       "construction": "full Golay dodecad stabilizer",
       "parameters": "any constructed Golay dodecad D; canonical standard choice provided",
       "exceptions": "",
@@ -2097,14 +3202,19 @@
         }
       ],
       "presentation": {
-        "label": "M₁₂"
+        "label": "M₁₂",
+        "summary_order": "95,040",
+        "summary_simplicity": "Yes"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/m12/M12.html"
     },
     {
       "id": "sporadic.M22",
       "label": "M22",
       "kind": "sporadic",
+      "audit_entry": "Mathieu22",
+      "proof_status": "construction_complete",
       "construction": "two coordinate pointwise stabilizer in full Golay automorphism group",
       "parameters": "any coordinate a and distinct coordinate b",
       "exceptions": "",
@@ -2206,14 +3316,19 @@
         }
       ],
       "presentation": {
-        "label": "M₂₂"
+        "label": "M₂₂",
+        "summary_order": "443,520",
+        "summary_simplicity": "Yes"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/m22/M22.html"
     },
     {
       "id": "sporadic.M23",
       "label": "M23",
       "kind": "sporadic",
+      "audit_entry": "Mathieu23",
+      "proof_status": "construction_complete",
       "construction": "coordinate stabilizer in full Golay automorphism group",
       "parameters": "any coordinate a",
       "exceptions": "",
@@ -2305,14 +3420,19 @@
         }
       ],
       "presentation": {
-        "label": "M₂₃"
+        "label": "M₂₃",
+        "summary_order": "10,200,960",
+        "summary_simplicity": "Yes"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/m23/M23.html"
     },
     {
       "id": "sporadic.M24",
       "label": "M24",
       "kind": "sporadic",
+      "audit_entry": "Mathieu24",
+      "proof_status": "construction_complete",
       "construction": "full permutation automorphism group of constructed binary Golay code",
       "parameters": "fixed constructed carrier; no supplied order or simplicity certificate",
       "exceptions": "",
@@ -2425,14 +3545,19 @@
       ],
       "presentation": {
         "label": "M₂₄",
-        "parameters": "Fixed constructed group"
+        "parameters": "Fixed constructed group",
+        "summary_order": "244,823,040",
+        "summary_simplicity": "Yes"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/m24/M24.html"
     },
     {
       "id": "sporadic.Co1",
       "label": "Co1",
       "kind": "sporadic",
+      "audit_entry": "Conway1",
+      "proof_status": "construction_complete",
       "construction": "full Golay Leech isometry group modulo its center {±1}",
       "parameters": "fixed constructed carrier; no supplied order or simplicity certificate",
       "exceptions": "",
@@ -2545,14 +3670,19 @@
       ],
       "presentation": {
         "label": "Co₁",
-        "parameters": "Fixed constructed group"
+        "parameters": "Fixed constructed group",
+        "summary_order": "4,157,776,806,543,360,000",
+        "summary_simplicity": "Yes"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/co1/Co1.html"
     },
     {
       "id": "sporadic.Co2",
       "label": "Co2",
       "kind": "sporadic",
+      "audit_entry": "Conway2",
+      "proof_status": "construction_complete",
       "construction": "actual norm-four vector stabilizer in full Leech isometry group",
       "parameters": "fixed constructed carrier; no supplied order or simplicity certificate",
       "exceptions": "",
@@ -2770,14 +3900,19 @@
       ],
       "presentation": {
         "label": "Co₂",
-        "parameters": "Fixed constructed group"
+        "parameters": "Fixed constructed group",
+        "summary_order": "42,305,421,312,000",
+        "summary_simplicity": "Yes"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/co2/Co2.html"
     },
     {
       "id": "sporadic.Co3",
       "label": "Co3",
       "kind": "sporadic",
+      "audit_entry": "Conway3",
+      "proof_status": "construction_complete",
       "construction": "actual norm-six vector stabilizer in full Leech isometry group",
       "parameters": "fixed constructed carrier; no supplied order or simplicity certificate",
       "exceptions": "",
@@ -3010,14 +4145,19 @@
       ],
       "presentation": {
         "label": "Co₃",
-        "parameters": "Fixed constructed group"
+        "parameters": "Fixed constructed group",
+        "summary_order": "495,766,656,000",
+        "summary_simplicity": "Yes"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/co3/Co3.html"
     },
     {
       "id": "sporadic.McL",
       "label": "McL",
       "kind": "sporadic",
+      "audit_entry": "McLaughlin",
+      "proof_status": "construction_complete",
       "construction": "actual pointwise Leech 2-2-3 triangle stabilizer",
       "parameters": "fixed constructed carrier; no supplied order or simplicity certificate",
       "exceptions": "",
@@ -3310,14 +4450,19 @@
       ],
       "presentation": {
         "label": "McL",
-        "parameters": "Fixed constructed group"
+        "parameters": "Fixed constructed group",
+        "summary_order": "898,128,000",
+        "summary_simplicity": "Yes"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/mcl/McL.html"
     },
     {
       "id": "sporadic.HS",
       "label": "HS",
       "kind": "sporadic",
+      "audit_entry": "HigmanSims",
+      "proof_status": "construction_complete",
       "construction": "actual pointwise Leech 2-3-3 triangle stabilizer",
       "parameters": "fixed constructed carrier; no supplied order or simplicity certificate",
       "exceptions": "",
@@ -3660,14 +4805,19 @@
       ],
       "presentation": {
         "label": "HS",
-        "parameters": "Fixed constructed group"
+        "parameters": "Fixed constructed group",
+        "summary_order": "44,352,000",
+        "summary_simplicity": "Yes"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/hs/HS.html"
     },
     {
       "id": "sporadic.Suz",
       "label": "Suz",
       "kind": "sporadic",
+      "audit_entry": "Suzuki",
+      "proof_status": "construction_complete",
       "construction": "actual Eisenstein Leech centralizer modulo six scalar isometries",
       "parameters": "fixed constructed carrier; no supplied order or simplicity certificate",
       "exceptions": "",
@@ -3985,14 +5135,19 @@
       ],
       "presentation": {
         "label": "Suz",
-        "parameters": "Fixed constructed group"
+        "parameters": "Fixed constructed group",
+        "summary_order": "448,345,497,600",
+        "summary_simplicity": "Yes"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/suz/Suz.html"
     },
     {
       "id": "sporadic.J2",
       "label": "J2",
       "kind": "sporadic",
+      "audit_entry": "Janko2",
+      "proof_status": "construction_complete",
       "construction": "actual icosian linear group modulo its center of order two",
       "parameters": "fixed constructed carrier; no supplied order or simplicity certificate",
       "exceptions": "",
@@ -4375,14 +5530,19 @@
       ],
       "presentation": {
         "label": "J₂",
-        "parameters": "Fixed constructed group"
+        "parameters": "Fixed constructed group",
+        "summary_order": "604,800",
+        "summary_simplicity": "Yes"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/j2/J2.html"
     },
     {
       "id": "sporadic.Fi22",
       "label": "Fi22",
       "kind": "sporadic",
+      "audit_entry": "Fischer22",
+      "proof_status": "construction_complete",
       "construction": "commuting-pair centralizer quotient in actual full ray group",
       "parameters": "fixed constructed carrier; no supplied order or simplicity certificate",
       "exceptions": "",
@@ -4510,14 +5670,19 @@
       ],
       "presentation": {
         "label": "Fi₂₂",
-        "parameters": "Fixed constructed group"
+        "parameters": "Fixed constructed group",
+        "summary_order": "64,561,751,654,400",
+        "summary_simplicity": "Yes"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/fi22/Fi22.html"
     },
     {
       "id": "sporadic.Fi23",
       "label": "Fi23",
       "kind": "sporadic",
+      "audit_entry": "Fischer23",
+      "proof_status": "construction_complete",
       "construction": "singleton centralizer quotient in actual full ray group",
       "parameters": "fixed constructed carrier; no supplied order or simplicity certificate",
       "exceptions": "",
@@ -4645,14 +5810,19 @@
       ],
       "presentation": {
         "label": "Fi₂₃",
-        "parameters": "Fixed constructed group"
+        "parameters": "Fixed constructed group",
+        "summary_order": "4,089,470,473,293,004,800",
+        "summary_simplicity": "Yes"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/fi23/Fi23.html"
     },
     {
       "id": "sporadic.Fi24Prime",
       "label": "Fi24Prime",
       "kind": "sporadic",
+      "audit_entry": "Fischer24Prime",
+      "proof_status": "construction_complete",
       "construction": "positive subgroup of actual Conway-Parker root-generated ray group",
       "parameters": "fixed constructed carrier; no supplied order or simplicity certificate",
       "exceptions": "",
@@ -4750,9 +5920,172 @@
       ],
       "presentation": {
         "label": "Fi₂₄′",
-        "parameters": "Fixed constructed group"
+        "parameters": "Fixed constructed group",
+        "summary_order": "1,255,205,709,190,661,721,292,800",
+        "summary_simplicity": "Yes"
       },
+      "evidence": "audit-2026-09-14",
       "proof_dependencies": "verification/dependency-maps/fi24prime/Fi24Prime.html"
+    },
+    {
+      "id": "sporadic.Ru",
+      "label": "Ru",
+      "kind": "sporadic",
+      "audit_entry": "Ru",
+      "proof_status": "construction_complete",
+      "construction": "full Gaussian automorphism group of the explicit Conway–Wales lattice, modulo its scalar units",
+      "parameters": "fixed constructed lattice stabilizer quotient; no supplied order or simplicity certificate",
+      "exceptions": "",
+      "recognition": "Direct Conway–Wales lattice construction; no general recognition or classification uniqueness theorem claimed",
+      "attribution": "Version 33 lattice, intrinsic frame geometry and primitive-action normal-subgroup argument",
+      "roles": {
+        "model": {
+          "declaration": "Atlas.Sporadic.Rudvalis.Model",
+          "source": "Atlas/Sporadic/Rudvalis.lean"
+        },
+        "finite": {
+          "declaration": "Atlas.Sporadic.Rudvalis.finite",
+          "source": "Atlas/Sporadic/Rudvalis.lean"
+        },
+        "order": {
+          "declaration": "Atlas.Sporadic.Rudvalis.card",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "formula": "145926144000"
+        },
+        "simple": {
+          "declaration": "Atlas.Sporadic.Rudvalis.isSimpleGroup",
+          "source": "Atlas/Sporadic/Rudvalis.lean"
+        },
+        "nonabelian": {
+          "declaration": "Atlas.Sporadic.Rudvalis.exists_mul_ne_mul",
+          "source": "Atlas/Sporadic/Rudvalis.lean"
+        }
+      },
+      "properties": [
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.center",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "center"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.center_card",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "center card"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.faithful",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "faithful"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.frameEmbedding_injective",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "frameEmbedding injective"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.frameLinearMap_kernel_card",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "frameLinearMap kernel card"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.frameLinearMap_surjective",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "frameLinearMap surjective"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.frameSigns_dimension",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "frameSigns dimension"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.frameTranslationMap_kernel",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "frameTranslationMap kernel"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.frameTranslationMap_surjective",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "frameTranslationMap surjective"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.frameTranslation_dimension",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "frameTranslation dimension"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.frame_card",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "frame card"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.frame_group_card",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "frame group card"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.frame_group_perfect",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "frame group perfect"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.generation",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "generation"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.linear_card",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "linear card"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.nonabelian",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "nonabelian"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.order",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "order"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.point_card",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "point card"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.point_stabilizer_card",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "point stabilizer card"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.primitive",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "primitive"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.projection_kernel",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "projection kernel"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.projection_surjective",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "projection surjective"
+        },
+        {
+          "declaration": "Atlas.Sporadic.Rudvalis.reflection_square",
+          "source": "Atlas/Sporadic/Rudvalis.lean",
+          "description": "reflection square"
+        }
+      ],
+      "presentation": {
+        "label": "Ru",
+        "parameters": "Fixed constructed group",
+        "summary_order": "145,926,144,000",
+        "summary_simplicity": "Yes"
+      },
+      "evidence": "rudvalis-v33-v1",
+      "proof_dependencies": "verification/dependency-maps/ru/Ru.html"
     }
   ],
   "auxiliary": [
@@ -4764,7 +6097,9 @@
       "order_reference": {
         "declaration": "Atlas.Sporadic.Conway1.cover_card",
         "source": "Atlas/Sporadic/Conway1.lean"
-      }
+      },
+      "evidence": "audit-2026-09-14",
+      "evidence_scope": "checked in this audit: build + compiled statements + transitive dependencies"
     },
     {
       "id": "auxiliary.Fi24",
@@ -4774,7 +6109,9 @@
       "order_reference": {
         "declaration": "Atlas.Sporadic.Fischer24.card",
         "source": "Atlas/Sporadic/Fischer24.lean"
-      }
+      },
+      "evidence": "audit-2026-09-14",
+      "evidence_scope": "checked in this audit: build + compiled statements + transitive dependencies"
     },
     {
       "id": "auxiliary.6_Suz",
@@ -4784,7 +6121,9 @@
       "order_reference": {
         "declaration": "Atlas.Sporadic.Suzuki.linear_card",
         "source": "Atlas/Sporadic/Suzuki.lean"
-      }
+      },
+      "evidence": "audit-2026-09-14",
+      "evidence_scope": "checked in this audit: build + compiled statements + transitive dependencies"
     },
     {
       "id": "auxiliary.3_Suz",
@@ -4794,7 +6133,9 @@
       "order_reference": {
         "declaration": "Atlas.Sporadic.Suzuki.triple_card",
         "source": "Atlas/Sporadic/Suzuki.lean"
-      }
+      },
+      "evidence": "audit-2026-09-14",
+      "evidence_scope": "checked in this audit: build + compiled statements + transitive dependencies"
     },
     {
       "id": "auxiliary.2_J2",
@@ -4804,7 +6145,9 @@
       "order_reference": {
         "declaration": "Atlas.Sporadic.Janko2.linear_card",
         "source": "Atlas/Sporadic/Janko2.lean"
-      }
+      },
+      "evidence": "audit-2026-09-14",
+      "evidence_scope": "checked in this audit: build + compiled statements + transitive dependencies"
     },
     {
       "id": "auxiliary.right_icosian_units",
@@ -4814,7 +6157,9 @@
       "order_reference": {
         "declaration": "Atlas.Sporadic.Janko2.right_scalar_card",
         "source": "Atlas/Sporadic/Janko2.lean"
-      }
+      },
+      "evidence": "audit-2026-09-14",
+      "evidence_scope": "checked in this audit: build + compiled statements + transitive dependencies"
     },
     {
       "id": "auxiliary.PGL",
@@ -4824,7 +6169,9 @@
       "order_reference": {
         "declaration": "Atlas.card_pgl",
         "source": "Atlas/LinearGroups/ProjectiveGeneralLinear.lean"
-      }
+      },
+      "evidence": "audit-2026-09-14",
+      "evidence_scope": "compiled prerequisite in graph; not a simple-family entry"
     },
     {
       "id": "auxiliary.3_Fi24Prime",
@@ -4834,7 +6181,9 @@
       "order_reference": {
         "declaration": "Atlas.Sporadic.Fischer24.linear_card",
         "source": "Atlas/Sporadic/Fischer24.lean"
-      }
+      },
+      "evidence": "audit-2026-09-14",
+      "evidence_scope": "checked: selected compiled signature and full dependency graph"
     },
     {
       "id": "auxiliary.full_Fischer_semilinear_group",
@@ -4844,7 +6193,9 @@
       "order_reference": {
         "declaration": "Atlas.Sporadic.Fischer24.algebra_card",
         "source": "Atlas/Sporadic/Fischer24.lean"
-      }
+      },
+      "evidence": "audit-2026-09-14",
+      "evidence_scope": "checked: selected compiled signature and full dependency graph"
     },
     {
       "id": "auxiliary.2_Fi22",
@@ -4854,235 +6205,128 @@
       "order_reference": {
         "declaration": "Atlas.Fischer.DoubleCover22.card",
         "source": "Atlas/Fischer/DoubleCover22.lean"
-      }
+      },
+      "evidence": "audit-2026-09-14",
+      "evidence_scope": "root-imported current build; separate historical certificate not rerun/extracted in this audit"
     }
   ],
-  "comparisons": [
-    {
-      "id": "b1-a1",
-      "relation": "isomorphism",
-      "left": "B(1,F)",
-      "right": "PSL(2,F)",
-      "parameters": "F any field; natural quadratic dimension 3; PSL dimension 2; includes q=2,3",
-      "declaration": "Atlas.Comparisons.Classical.b1EquivA1",
-      "source": "Atlas/Comparisons/Classical/Orthogonal.lean"
+  "evidence": {
+    "audit-2026-09-14": {
+      "directory": "verification/status-audit/2026-09-14",
+      "manifest": "verification/status-audit/2026-09-14/MANIFEST.sha256",
+      "manifest_sha256": "5b0b21072b7f99b488b43ee44366075584250ca7de235df8a14efbccfeea6ca7",
+      "source_commit": "9cf371923c57ce7c83c87ded71521b2e57560236",
+      "toolchain": "leanprover/lean4:v4.34.0-rc2"
     },
-    {
-      "id": "even-b-c",
-      "relation": "isomorphism",
-      "left": "B(n,F)",
-      "right": "C(n,F)",
-      "parameters": "F finite, characteristic 2; n >= 1; natural dimensions 2n+1 and 2n",
-      "declaration": "Atlas.Comparisons.Classical.evenBEquivC",
-      "source": "Atlas/Comparisons/Classical/Orthogonal.lean"
+    "symplectic-family-f07f142": {
+      "format": "shared-family-v1",
+      "directory": "verification/symplectic/construction",
+      "manifest": "verification/symplectic/construction/MANIFEST.sha256",
+      "manifest_sha256": "8847076f3b1f2c96229da6a4d46947c02b3a46746f21e19f5913fca13f2da04b",
+      "source_commit": "f07f14263cf32cc68307c1d9ec0215bf3852554f",
+      "toolchain": "leanprover/lean4:v4.34.0-rc2",
+      "statements": "verification/symplectic/construction/THEOREM_STATEMENTS.txt.gz"
     },
-    {
-      "id": "b2-c2",
-      "relation": "isomorphism",
-      "left": "B(2,F)",
-      "right": "C(2,F)",
-      "parameters": "F finite, every characteristic; natural dimensions 5 and 4",
-      "declaration": "Atlas.Comparisons.Classical.b2EquivC2",
-      "source": "Atlas/Comparisons/Classical/Orthogonal.lean"
+    "orthogonal-d-0cf54c3": {
+      "format": "orthogonal-family-v1",
+      "directory": "verification/orthogonal/d-family/20260915T032826",
+      "manifest": "verification/orthogonal/d-family/20260915T032826/MANIFEST.sha256",
+      "manifest_sha256": "fed433ae3729789d46466c90a076f48b88b71f65dc838ba1d3526f62cf06b064",
+      "source_commit": "0cf54c3e6d77f1fd71ec80a948b9b2b9a948563a",
+      "toolchain": "leanprover/lean4:v4.34.0-rc2",
+      "statements": "verification/orthogonal/d-family/20260915T032826/THEOREM_STATEMENTS.txt.gz"
     },
-    {
-      "id": "d2-product",
-      "relation": "isomorphism",
-      "left": "D+(2,F)",
-      "right": "PSL(2,F) x PSL(2,F)",
-      "parameters": "F any field; split quadratic dimension 4; PSL dimensions 2 and 2",
-      "declaration": "Atlas.Comparisons.Classical.d2EquivProduct",
-      "source": "Atlas/Comparisons/Classical/Orthogonal.lean"
+    "orthogonal-b-0b45591": {
+      "format": "orthogonal-b-family-v1",
+      "directory": "verification/orthogonal/b-family/20260915T065338-1051",
+      "manifest": "verification/orthogonal/b-family/20260915T065338-1051/MANIFEST.sha256",
+      "manifest_sha256": "d9056a8a35823421a1251a07d5236f5f8ce4b7fbc5ff46becb6815b71a7eecb2",
+      "source_commit": "0b45591bae40156645bfc99d3912709f319a44e0",
+      "toolchain": "leanprover/lean4:v4.34.0-rc2",
+      "statements": "verification/orthogonal/b-family/20260915T065338-1051/THEOREM_STATEMENTS.txt.gz"
     },
-    {
-      "id": "d3-a3",
-      "relation": "isomorphism",
-      "left": "D+(3,F)",
-      "right": "PSL(4,F)",
-      "parameters": "F finite, every characteristic; split quadratic dimension 6; PSL dimension 4",
-      "declaration": "Atlas.Comparisons.Classical.d3EquivA3",
-      "source": "Atlas/Comparisons/Classical/Orthogonal.lean"
+    "g2-octonion-family-v1": {
+      "format": "g2-family-v1",
+      "directory": "verification/g2/construction",
+      "manifest": "verification/g2/construction/MANIFEST.sha256",
+      "manifest_sha256": "3a4912064a0c4d71006e0a53bc11549c461ef98bcfb4dede53ace08bd12e8fe2",
+      "source_commit": "1b9830c8f24e0bac1f3e68766ce9dd2fd7bb19b7",
+      "toolchain": "leanprover/lean4:v4.34.0-rc2",
+      "statements": "verification/g2/construction/THEOREM_STATEMENTS.txt.gz"
     },
-    {
-      "id": "b-field",
-      "relation": "isomorphism",
-      "left": "B(n,F)",
-      "right": "B(n,K)",
-      "parameters": "F,K any fields; n any natural rank; explicit field isomorphism F ~= K",
-      "declaration": "Atlas.Comparisons.Classical.bFieldEquiv",
-      "source": "Atlas/Comparisons/Classical/Orthogonal.lean"
+    "ree-g2-family-v1": {
+      "format": "ree-g2-family-v1",
+      "directory": "verification/ree-g2/construction",
+      "manifest": "verification/ree-g2/construction/MANIFEST.sha256",
+      "manifest_sha256": "1594ca3043475bc46e7bd73f035de237f0d2e9f0664af94410f96f06b6e43f83",
+      "source_commit": "607a62fd524f0b30f4206a4ad8f4f39df93374fb",
+      "toolchain": "leanprover/lean4:v4.34.0-rc2",
+      "statements": "verification/ree-g2/construction/THEOREM_STATEMENTS.txt.gz"
     },
-    {
-      "id": "d-field",
-      "relation": "isomorphism",
-      "left": "D+(n,F)",
-      "right": "D+(n,K)",
-      "parameters": "F,K any fields; n any natural rank; explicit field isomorphism F ~= K",
-      "declaration": "Atlas.Comparisons.Classical.dFieldEquiv",
-      "source": "Atlas/Comparisons/Classical/Orthogonal.lean"
+    "rudvalis-v33-v1": {
+      "format": "rudvalis-v33-v1",
+      "directory": "verification/rudvalis/v33/construction",
+      "manifest": "verification/rudvalis/v33/construction/MANIFEST.sha256",
+      "manifest_sha256": "e5105ff6aeb4eb5309990beff4d552710673f6afe50225adc49c8c6fe52def57",
+      "source_commit": "410d8f041d9c54234f70c0211b5330f4d88c7f74",
+      "toolchain": "leanprover/lean4:v4.34.0-rc2",
+      "statements": "verification/rudvalis/v33/construction/THEOREM_STATEMENTS.txt"
     },
-    {
-      "id": "odd-b-c-order",
-      "relation": "same_order",
-      "left": "B(n,F)",
-      "right": "C(n,F)",
-      "parameters": "F finite, odd characteristic; n >= 2; no isomorphism asserted",
-      "declaration": "Atlas.Comparisons.Classical.oddB_card_eq_C",
-      "source": "Atlas/Comparisons/Classical/OrthogonalOrder.lean"
+    "tits-v1": {
+      "format": "tits-v1",
+      "directory": "verification/tits/construction",
+      "manifest": "verification/tits/construction/MANIFEST.sha256",
+      "manifest_sha256": "819d784d7829c38096f8a141af8c936017cd36935ff4befa35b721cc9cdc646f",
+      "source_commit": "a3e0ae7a95770c13bfd3428aa6144091f9b4393b",
+      "toolchain": "leanprover/lean4:v4.34.0-rc2",
+      "statements": "verification/tits/construction/THEOREM_STATEMENTS.txt"
     },
-    {
-      "id": "odd-b-c-distinct",
-      "relation": "nonisomorphism",
-      "left": "B(n,F)",
-      "right": "C(n,F)",
-      "parameters": "F finite, odd characteristic; n >= 3; distinguished by proved involution-class counts",
-      "declaration": "Atlas.Comparisons.Classical.oddB_not_equiv_C",
-      "source": "Atlas/Comparisons/Classical/OrthogonalInvolutions.lean"
+    "unitary-family-v1": {
+      "format": "unitary-family-v1",
+      "directory": "verification/unitary/construction",
+      "manifest": "verification/unitary/construction/MANIFEST.sha256",
+      "manifest_sha256": "91edf8abd4a4c117d9e6546c77fa7a5cd03b0ee0292f6a38e3dfd757d57c14fe",
+      "source_commit": "78498397be5ae15e2b30b8feadd87b7cd73cf3ab",
+      "toolchain": "leanprover/lean4:v4.34.0-rc2",
+      "statements": "verification/unitary/construction/THEOREM_STATEMENTS.txt"
     },
-    {
-      "id": "psl2-nine-a6",
-      "relation": "isomorphism",
-      "left": "PSL(2,F)",
-      "right": "A6",
-      "parameters": "F any finite field of cardinality 9; common faithful ten-point actions",
-      "declaration": "Atlas.Comparisons.Exceptional.psl2Card9EquivAlt6",
-      "source": "Atlas/Comparisons/Exceptional/Order360.lean"
+    "minus-orthogonal-rank-three-supplement-v1": {
+      "format": "minus-orthogonal-rank-three-supplement-v1",
+      "directory": "verification/minus-orthogonal/rank-three",
+      "manifest": "verification/minus-orthogonal/rank-three/MANIFEST.sha256",
+      "manifest_sha256": "ecc6a9dc04783e07d185e3be464a9b1993fcf552ed903d2b4767f6ae6277053b",
+      "source_commit": "2751d77e85e643bbc06b079d806783490bc73023",
+      "toolchain": "leanprover/lean4:v4.34.0-rc2",
+      "statements": "verification/minus-orthogonal/rank-three/THEOREM_STATEMENTS.txt"
     },
-    {
-      "id": "psl2-nine-canonical-a6",
-      "relation": "isomorphism",
-      "left": "PSL(2,GaloisField 3 2)",
-      "right": "A6",
-      "parameters": "Canonical pinned finite-field wrapper",
-      "declaration": "Atlas.Comparisons.Exceptional.psl2NineEquivAlt6",
-      "source": "Atlas/Comparisons/Exceptional/Order360.lean"
+    "suzuki-family-v1": {
+      "format": "suzuki-family-v1",
+      "directory": "verification/suzuki-family/construction",
+      "manifest": "verification/suzuki-family/construction/MANIFEST.sha256",
+      "manifest_sha256": "2b9a0513a859dae2bfdea832cf77140c8749934b8f7ff07036bfb7fac6872750",
+      "source_commit": "82c0bcf1b163c6bff51bceed1d44239609515102",
+      "toolchain": "leanprover/lean4:v4.34.0-rc2",
+      "statements": "verification/suzuki-family/construction/THEOREM_STATEMENTS.txt"
     },
-    {
-      "id": "b2-derived-c2-derived",
-      "relation": "isomorphism",
-      "left": "B(2,ZMod 2)'",
-      "right": "C(2,ZMod 2)'",
-      "parameters": "Actual commutator subgroups; restriction of the full B2/C2 comparison",
-      "declaration": "Atlas.Comparisons.Exceptional.b2BinaryDerivedEquivC2Derived",
-      "source": "Atlas/Comparisons/Exceptional/BinaryDerived.lean"
+    "triality-family-v1": {
+      "format": "triality-family-v1",
+      "directory": "verification/triality/construction",
+      "manifest": "verification/triality/construction/SHA256SUMS",
+      "manifest_sha256": "ffb254cc0501c6b38274044e1bf2f91669ee27e783b94dc834c592579f5ffd1c",
+      "source_commit": "f6530f5daa450913cb6d76f90cbc9a5791cf8e9c",
+      "toolchain": "leanprover/lean4:v4.34.0-rc2"
     },
-    {
-      "id": "c2-derived-a6",
-      "relation": "isomorphism",
-      "left": "C(2,ZMod 2)'",
-      "right": "A6",
-      "parameters": "Derived group of order 360; full C2(2) is not the endpoint",
-      "declaration": "Atlas.Comparisons.Exceptional.c2BinaryDerivedEquivAlt6",
-      "source": "Atlas/Comparisons/Exceptional/BinaryDerived.lean"
-    },
-    {
-      "id": "psl2-nine-b2-derived",
-      "relation": "isomorphism",
-      "left": "PSL(2,F)",
-      "right": "B(2,ZMod 2)'",
-      "parameters": "F finite of cardinality 9; composition through actual A6",
-      "declaration": "Atlas.Comparisons.Exceptional.psl2Card9EquivB2BinaryDerived",
-      "source": "Atlas/Comparisons/Exceptional/Order360.lean"
-    },
-    {
-      "id": "psl2-nine-c2-derived",
-      "relation": "isomorphism",
-      "left": "PSL(2,F)",
-      "right": "C(2,ZMod 2)'",
-      "parameters": "F finite of cardinality 9; composition through actual A6",
-      "declaration": "Atlas.Comparisons.Exceptional.psl2Card9EquivC2BinaryDerived",
-      "source": "Atlas/Comparisons/Exceptional/Order360.lean"
-    },
-    {
-      "id": "a8-d3-two",
-      "relation": "isomorphism",
-      "left": "A8",
-      "right": "D+(3,ZMod 2)",
-      "parameters": "Actual binary deleted permutation quotient with explicit split isometry",
-      "declaration": "Atlas.Comparisons.Exceptional.alt8EquivD3Two",
-      "source": "Atlas/Comparisons/Exceptional/Order20160A8.lean"
-    },
-    {
-      "id": "psl4-two-a8",
-      "relation": "isomorphism",
-      "left": "PSL(4,ZMod 2)",
-      "right": "A8",
-      "parameters": "Actual D3/A3 comparison composed with the faithful deleted-module action",
-      "declaration": "Atlas.Comparisons.Exceptional.psl4TwoEquivAlt8",
-      "source": "Atlas/Comparisons/Exceptional/Order20160A8.lean"
-    },
-    {
-      "id": "psl4-two-psl3-four-distinct",
-      "relation": "nonisomorphism",
-      "left": "PSL(4,ZMod 2)",
-      "right": "PSL(3,F)",
-      "parameters": "F finite of cardinality 4; Sylow-2 centers of cardinalities 2 and 4",
-      "declaration": "Atlas.Comparisons.Exceptional.psl4Two_not_equiv_psl3Card4",
-      "source": "Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean"
-    },
-    {
-      "id": "a8-psl3-four-distinct",
-      "relation": "nonisomorphism",
-      "left": "A8",
-      "right": "PSL(3,F)",
-      "parameters": "F finite of cardinality 4; transport of the proved Sylow-center obstruction",
-      "declaration": "Atlas.Comparisons.Exceptional.alt8_not_equiv_psl3Card4",
-      "source": "Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean"
-    },
-    {
-      "id": "psl4-two-psl3-four-order",
-      "relation": "same_order",
-      "left": "PSL(4,ZMod 2)",
-      "right": "PSL(3,F)",
-      "parameters": "F finite of cardinality 4; both orders 20160",
-      "declaration": "Atlas.Comparisons.Exceptional.psl4Two_card_eq_psl3Card4",
-      "source": "Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean"
-    },
-    {
-      "id": "a8-psl3-four-order",
-      "relation": "same_order",
-      "left": "A8",
-      "right": "PSL(3,F)",
-      "parameters": "F finite of cardinality 4; both orders 20160",
-      "declaration": "Atlas.Comparisons.Exceptional.alt8_card_eq_psl3Card4",
-      "source": "Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean"
-    },
-    {
-      "id": "psl2-four-a5",
-      "relation": "isomorphism",
-      "left": "PSL(2,F)",
-      "right": "A5",
-      "parameters": "F any finite field of cardinality 4; natural projective-line action",
-      "declaration": "Atlas.Comparisons.Exceptional.psl2Card4EquivAlt5",
-      "source": "Atlas/Comparisons/Exceptional/Order60Four.lean"
-    },
-    {
-      "id": "psl2-five-a5",
-      "relation": "isomorphism",
-      "left": "PSL(2,F)",
-      "right": "A5",
-      "parameters": "F any finite field of cardinality 5; proved elementary order-60 recognition",
-      "declaration": "Atlas.Comparisons.Exceptional.psl2Card5EquivAlt5",
-      "source": "Atlas/Comparisons/Exceptional/Order60Five.lean"
-    },
-    {
-      "id": "psl2-seven-psl3-two",
-      "relation": "isomorphism",
-      "left": "PSL(2,ZMod 7)",
-      "right": "PSL(3,ZMod 2)",
-      "parameters": "Actual matrix models; common faithful action on eight points",
-      "declaration": "Atlas.Comparisons.Exceptional.psl2SevenEquivPsl3Two",
-      "source": "Atlas/Comparisons/Exceptional/Order168.lean"
-    },
-    {
-      "id": "psl2-four-five",
-      "relation": "isomorphism",
-      "left": "PSL(2,F)",
-      "right": "PSL(2,ZMod 5)",
-      "parameters": "F any finite field of cardinality 4; composition of the verified maps",
-      "declaration": "Atlas.Comparisons.Exceptional.psl2Card4EquivPsl2Five",
-      "source": "Atlas/Comparisons/Exceptional/Order60Five.lean"
+    "f4-albert-family-v1": {
+      "format": "f4-albert-family-v1",
+      "directory": "verification/f4/construction",
+      "manifest": "verification/f4/construction/SHA256SUMS",
+      "manifest_sha256": "e9388e6850d9459adbf57f4c6b5c225fd22b67b0111c1c6d9a67661789f98a5f",
+      "source_commit": "f5d5bcf5034650399a79c1e71829fcf36655ce57",
+      "toolchain": "leanprover/lean4:v4.34.0-rc2"
     }
-  ],
-  "proof_dependencies_site": "https://moonshine-in-kansas.github.io/atlas/"
+  },
+  "root_extension_evidence": {
+    "directory": "verification/runs/principal-constructions/20261019T145213-9",
+    "manifest_sha256": "26de1bc2b0d73ed8ccc01e259da219561f7d752240ee35b694322fc598ee31fa"
+  }
 }

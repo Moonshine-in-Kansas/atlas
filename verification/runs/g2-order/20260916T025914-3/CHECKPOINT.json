@@ -1,0 +1,484 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "g2-order",
+  "targets": [
+    {
+      "declaration": "Atlas.G2.OrderChecks.binary_order",
+      "module": "Atlas.LinearGroups.G2.OrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.OrderChecks.binary_points",
+      "module": "Atlas.LinearGroups.G2.OrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.OrderChecks.eight_order",
+      "module": "Atlas.LinearGroups.G2.OrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.OrderChecks.five_order",
+      "module": "Atlas.LinearGroups.G2.OrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.OrderChecks.four_order",
+      "module": "Atlas.LinearGroups.G2.OrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.OrderChecks.four_points",
+      "module": "Atlas.LinearGroups.G2.OrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.OrderChecks.ternary_order",
+      "module": "Atlas.LinearGroups.G2.OrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.OrderChecks.ternary_points",
+      "module": "Atlas.LinearGroups.G2.OrderChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.PairStabilizer.fixingPair",
+      "module": "Atlas.LinearGroups.G2.PairStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.PairStabilizer.fixingPairEquivSL2",
+      "module": "Atlas.LinearGroups.G2.PairStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.SingularPoints",
+      "module": "Atlas.LinearGroups.G2.SingularPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.borelProductEquiv",
+      "module": "Atlas.LinearGroups.G2.Borel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.borel_relIndex_parabolic",
+      "module": "Atlas.LinearGroups.G2.Parabolic",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.card_Model",
+      "module": "Atlas.LinearGroups.G2.Order",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.card_Model_eq_points_mul_stabilizer",
+      "module": "Atlas.LinearGroups.G2.Order",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.card_borel",
+      "module": "Atlas.LinearGroups.G2.Borel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.card_fixingFirstVector_SL2",
+      "module": "Atlas.LinearGroups.G2.VectorStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.card_fixingFirstVector_formula",
+      "module": "Atlas.LinearGroups.G2.Order",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.card_nonzeroSingularOctonions",
+      "module": "Atlas.LinearGroups.G2.SingularOctonions",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.card_parabolic",
+      "module": "Atlas.LinearGroups.G2.Parabolic",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.card_pointStabilizer_formula",
+      "module": "Atlas.LinearGroups.G2.Order",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.card_singularPoints",
+      "module": "Atlas.LinearGroups.G2.SingularPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.card_singularPoints_sum",
+      "module": "Atlas.LinearGroups.G2.SingularPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.card_splitTorus",
+      "module": "Atlas.LinearGroups.G2.Torus",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.card_unipotent",
+      "module": "Atlas.LinearGroups.G2.Unipotent",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.exists_mul_ne_mul",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.exists_smul_firstPoint",
+      "module": "Atlas.LinearGroups.G2.PointStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.firstPoint",
+      "module": "Atlas.LinearGroups.G2.PointStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.fixingFirstVector",
+      "module": "Atlas.LinearGroups.G2.VectorStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.fixingFirstVectorEquivPartners",
+      "module": "Atlas.LinearGroups.G2.VectorStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.generated",
+      "module": "Atlas.LinearGroups.G2.Generation",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.generated_eq_top",
+      "module": "Atlas.LinearGroups.G2.Generation",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.lineScalarHom",
+      "module": "Atlas.LinearGroups.G2.PointStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.lineScalarHom_kernel",
+      "module": "Atlas.LinearGroups.G2.PointStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.lineScalarHom_surjective",
+      "module": "Atlas.LinearGroups.G2.PointStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.nonzeroSingularEquivPointsUnits",
+      "module": "Atlas.LinearGroups.G2.SingularPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.nonzeroSingularOctonionsEquivCoordinates",
+      "module": "Atlas.LinearGroups.G2.SingularOctonions",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.parabolic",
+      "module": "Atlas.LinearGroups.G2.Parabolic",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.parabolicNormalForm",
+      "module": "Atlas.LinearGroups.G2.Parabolic",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.parabolic_eq_pointStabilizer",
+      "module": "Atlas.LinearGroups.G2.Parabolic",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.pointStabilizer",
+      "module": "Atlas.LinearGroups.G2.PointStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.pointStabilizerEquiv",
+      "module": "Atlas.LinearGroups.G2.PointStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootA",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootA_add",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootA_injective",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootB",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootB_add",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootB_injective",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootC",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootC_add",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootC_injective",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootD",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootD_add",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootD_injective",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootE",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootE_add",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootE_injective",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootF",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootF_add",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootF_injective",
+      "module": "Atlas.LinearGroups.G2.RootGroups",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.singularOctonionsEquivCoordinates",
+      "module": "Atlas.LinearGroups.G2.SingularOctonions",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.singularPointMk",
+      "module": "Atlas.LinearGroups.G2.SingularPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.singularPointsAction",
+      "module": "Atlas.LinearGroups.G2.SingularAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.singularPointsFaithful",
+      "module": "Atlas.LinearGroups.G2.SingularAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.singularPoints_pretransitive",
+      "module": "Atlas.LinearGroups.G2.PointStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.singular_lines_kernel_trivial",
+      "module": "Atlas.LinearGroups.G2.SingularAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.singular_vector_reduction_first",
+      "module": "Atlas.LinearGroups.G2.SingularReduction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.torus",
+      "module": "Atlas.LinearGroups.G2.Torus",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.torusHom",
+      "module": "Atlas.LinearGroups.G2.Torus",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.torusHom_injective",
+      "module": "Atlas.LinearGroups.G2.Torus",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.torusParameterEquiv",
+      "module": "Atlas.LinearGroups.G2.Torus",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.torus_normalizes_unipotent",
+      "module": "Atlas.LinearGroups.G2.Borel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.torus_rootA",
+      "module": "Atlas.LinearGroups.G2.TorusNormalization",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.torus_rootB",
+      "module": "Atlas.LinearGroups.G2.TorusNormalization",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.torus_rootC",
+      "module": "Atlas.LinearGroups.G2.TorusNormalization",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.torus_rootD",
+      "module": "Atlas.LinearGroups.G2.TorusNormalization",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.torus_rootE",
+      "module": "Atlas.LinearGroups.G2.TorusNormalization",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.torus_rootF",
+      "module": "Atlas.LinearGroups.G2.TorusNormalization",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.torus_unipotentProduct",
+      "module": "Atlas.LinearGroups.G2.TorusNormalization",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.unipotentEquiv",
+      "module": "Atlas.LinearGroups.G2.Unipotent",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.unipotentParameters_product",
+      "module": "Atlas.LinearGroups.G2.Unipotent",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.unipotentProduct",
+      "module": "Atlas.LinearGroups.G2.Unipotent",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.unipotentProduct_inv",
+      "module": "Atlas.LinearGroups.G2.Unipotent",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.unipotentProduct_mul",
+      "module": "Atlas.LinearGroups.G2.Unipotent",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.unipotent_disjoint_torus",
+      "module": "Atlas.LinearGroups.G2.Borel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.unipotent_eq_range",
+      "module": "Atlas.LinearGroups.G2.Unipotent",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.weylR",
+      "module": "Atlas.LinearGroups.G2.WeylMaps",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.weylR_sq",
+      "module": "Atlas.LinearGroups.G2.WeylMaps",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.weylS",
+      "module": "Atlas.LinearGroups.G2.WeylMaps",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.weylS_sq",
+      "module": "Atlas.LinearGroups.G2.WeylMaps",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "order-independent-of-simplicity-and-exception",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.G2.card_model",
+        "Atlas.G2.isSimpleGroup"
+      ],
+      "forbid_modules": [
+        "Mathlib.GroupTheory.GroupAction.Iwasawa",
+        "Atlas.LinearGroups.G2.Simplicity",
+        "Atlas.LinearGroups.G2.BinaryException",
+        "Atlas.LinearGroups.G2.Perfectness",
+        "Atlas.LinearGroups.G2.LongRootNormalGeneration"
+      ]
+    }
+  ]
+}

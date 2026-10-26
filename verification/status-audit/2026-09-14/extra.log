@@ -1,0 +1,377 @@
+STATEMENT Atlas.finite_psl
+@Atlas.finite_psl.{u_1,
+    u_2} : ∀ {ι : Type u_1} {F : Type u_2} [inst : Fintype.{u_1} ι] [inst_1 : DecidableEq.{u_1 + 1} ι]
+  [inst_2 : Field.{u_2} F] [Finite.{u_2 + 1} F],
+  Finite.{max (u_2 + 1) (u_1 + 1)}
+    (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+AXIOMS Atlas.finite_psl: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.psl_nonabelian_simple
+@Atlas.psl_nonabelian_simple.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) n →
+    @Ne.{1} (Prod.{0, 0} Nat Nat) (@Prod.mk.{0, 0} Nat Nat n (Nat.card.{u_1} F))
+        (@Prod.mk.{0, 0} Nat Nat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) →
+      @Ne.{1} (Prod.{0, 0} Nat Nat) (@Prod.mk.{0, 0} Nat Nat n (Nat.card.{u_1} F))
+          (@Prod.mk.{0, 0} Nat Nat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+            (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) →
+        And
+          (@IsSimpleGroup.{u_1}
+            (@Matrix.ProjectiveSpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+              (@Field.toCommRing.{u_1} F inst))
+            (@QuotientGroup.Quotient.group.{u_1}
+              (@Matrix.SpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+                (@Field.toCommRing.{u_1} F inst))
+              (@Matrix.SpecialLinearGroup.instGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+                (@Field.toCommRing.{u_1} F inst))
+              (@Subgroup.center.{u_1}
+                (@Matrix.SpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+                  (@Field.toCommRing.{u_1} F inst))
+                (@Matrix.SpecialLinearGroup.instGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+                  (@Field.toCommRing.{u_1} F inst)))
+              ⋯))
+          (Not
+            (@IsMulCommutative.{u_1}
+              (@Matrix.ProjectiveSpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+                (@Field.toCommRing.{u_1} F inst))
+              (@MulOne.toMul.{u_1}
+                (@Matrix.ProjectiveSpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+                  (@Field.toCommRing.{u_1} F inst))
+                (@MulOneClass.toMulOne.{u_1}
+                  (@Matrix.ProjectiveSpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+                    (@Field.toCommRing.{u_1} F inst))
+                  (@Monoid.toMulOneClass.{u_1}
+                    (@Matrix.ProjectiveSpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+                      (@Field.toCommRing.{u_1} F inst))
+                    (@DivInvMonoid.toMonoid.{u_1}
+                      (@Matrix.ProjectiveSpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+                        (@Field.toCommRing.{u_1} F inst))
+                      (@Group.toDivInvMonoid.{u_1}
+                        (@Matrix.ProjectiveSpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+                          (@Field.toCommRing.{u_1} F inst))
+                        (@QuotientGroup.Quotient.group.{u_1}
+                          (@Matrix.SpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+                            (@Field.toCommRing.{u_1} F inst))
+                          (@Matrix.SpecialLinearGroup.instGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n)
+                            F (@Field.toCommRing.{u_1} F inst))
+                          (@Subgroup.center.{u_1}
+                            (@Matrix.SpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+                              (@Field.toCommRing.{u_1} F inst))
+                            (@Matrix.SpecialLinearGroup.instGroup.{0, u_1} (Fin n) (instDecidableEqFin n)
+                              (Fin.fintype n) F (@Field.toCommRing.{u_1} F inst)))
+                          ⋯))))))))
+AXIOMS Atlas.psl_nonabelian_simple: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.typeA_construction
+@Atlas.typeA_construction.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) n →
+    @Ne.{1} (Prod.{0, 0} Nat Nat) (@Prod.mk.{0, 0} Nat Nat n (Nat.card.{u_1} F))
+        (@Prod.mk.{0, 0} Nat Nat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) →
+      @Ne.{1} (Prod.{0, 0} Nat Nat) (@Prod.mk.{0, 0} Nat Nat n (Nat.card.{u_1} F))
+          (@Prod.mk.{0, 0} Nat Nat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+            (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) →
+        @Atlas.TypeAConstruction.{u_1} n F inst
+AXIOMS Atlas.typeA_construction: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.exists_typeA
+@Atlas.exists_typeA.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) n →
+    @Ne.{1} (Prod.{0, 0} Nat Nat) (@Prod.mk.{0, 0} Nat Nat n (Nat.card.{u_1} F))
+        (@Prod.mk.{0, 0} Nat Nat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) →
+      @Ne.{1} (Prod.{0, 0} Nat Nat) (@Prod.mk.{0, 0} Nat Nat n (Nat.card.{u_1} F))
+          (@Prod.mk.{0, 0} Nat Nat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+            (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) →
+        ∃ G x x_1,
+          And (Finite.{u_1 + 1} G)
+            (And (@IsSimpleGroup.{u_1} G x)
+              (And
+                (Not
+                  (@IsMulCommutative.{u_1} G
+                    (@MulOne.toMul.{u_1} G
+                      (@MulOneClass.toMulOne.{u_1} G
+                        (@Monoid.toMulOneClass.{u_1} G
+                          (@DivInvMonoid.toMonoid.{u_1} G (@Group.toDivInvMonoid.{u_1} G x)))))))
+                (And
+                  (@Eq.{1} Nat (Nat.card.{u_1} G)
+                    (@HDiv.hDiv.{0, 0, 0} Nat Nat Nat (@instHDiv.{0} Nat Nat.instDiv)
+                      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                        (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                          (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                          (Nat.card.{u_1} F)
+                          (@HDiv.hDiv.{0, 0, 0} Nat Nat Nat (@instHDiv.{0} Nat Nat.instDiv)
+                            (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat) n
+                              (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) n
+                                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+                            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                        (∏
+                          i ∈
+                            @Finset.Icc.{0} Nat Nat.instPreorder Nat.instLocallyFiniteOrder
+                              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) n,
+                          @HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                              (Nat.card.{u_1} F) i)
+                            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+                      (n.gcd
+                        (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) (Nat.card.{u_1} F)
+                          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))))
+                  (And
+                    (@FaithfulSMul.{u_1, u_1} G
+                      (@Projectivization.{u_1, u_1} F (Fin n → F) (@Field.toDivisionRing.{u_1} F inst)
+                        (@Pi.addCommGroup.{0, u_1} (Fin n) (fun a => F) fun i =>
+                          @Ring.toAddCommGroup.{u_1} F
+                            (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
+                        (@Pi.Function.module.{0, u_1, u_1} (Fin n) F F
+                          (@DivisionSemiring.toSemiring.{u_1} F
+                            (@DivisionRing.toDivisionSemiring.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
+                          (@Semiring.toAddCommMonoid.{u_1} F
+                            (@Ring.toSemiring.{u_1} F
+                              (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                          (@Semiring.toModule.{u_1} F
+                            (@DivisionSemiring.toSemiring.{u_1} F
+                              (@DivisionRing.toDivisionSemiring.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))))
+                      (@SemigroupAction.toSMul.{u_1, u_1} G
+                        (@Projectivization.{u_1, u_1} F (Fin n → F) (@Field.toDivisionRing.{u_1} F inst)
+                          (@Pi.addCommGroup.{0, u_1} (Fin n) (fun a => F) fun i =>
+                            @Ring.toAddCommGroup.{u_1} F
+                              (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
+                          (@Pi.Function.module.{0, u_1, u_1} (Fin n) F F
+                            (@DivisionSemiring.toSemiring.{u_1} F
+                              (@DivisionRing.toDivisionSemiring.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
+                            (@Semiring.toAddCommMonoid.{u_1} F
+                              (@Ring.toSemiring.{u_1} F
+                                (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                            (@Semiring.toModule.{u_1} F
+                              (@DivisionSemiring.toSemiring.{u_1} F
+                                (@DivisionRing.toDivisionSemiring.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))))
+                        (@Monoid.toSemigroup.{u_1} G (@DivInvMonoid.toMonoid.{u_1} G (@Group.toDivInvMonoid.{u_1} G x)))
+                        (@MulAction.toSemigroupAction.{u_1, u_1} G
+                          (@Projectivization.{u_1, u_1} F (Fin n → F) (@Field.toDivisionRing.{u_1} F inst)
+                            (@Pi.addCommGroup.{0, u_1} (Fin n) (fun a => F) fun i =>
+                              @Ring.toAddCommGroup.{u_1} F
+                                (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
+                            (@Pi.Function.module.{0, u_1, u_1} (Fin n) F F
+                              (@DivisionSemiring.toSemiring.{u_1} F
+                                (@DivisionRing.toDivisionSemiring.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
+                              (@Semiring.toAddCommMonoid.{u_1} F
+                                (@Ring.toSemiring.{u_1} F
+                                  (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                              (@Semiring.toModule.{u_1} F
+                                (@DivisionSemiring.toSemiring.{u_1} F
+                                  (@DivisionRing.toDivisionSemiring.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))))
+                          (@DivInvMonoid.toMonoid.{u_1} G (@Group.toDivInvMonoid.{u_1} G x)) x_1)))
+                    (And
+                      (@MulAction.IsMultiplyPretransitive.{u_1, u_1} G
+                        (@Projectivization.{u_1, u_1} F (Fin n → F) (@Field.toDivisionRing.{u_1} F inst)
+                          (@Pi.addCommGroup.{0, u_1} (Fin n) (fun a => F) fun i =>
+                            @Ring.toAddCommGroup.{u_1} F
+                              (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
+                          (@Pi.Function.module.{0, u_1, u_1} (Fin n) F F
+                            (@DivisionSemiring.toSemiring.{u_1} F
+                              (@DivisionRing.toDivisionSemiring.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
+                            (@Semiring.toAddCommMonoid.{u_1} F
+                              (@Ring.toSemiring.{u_1} F
+                                (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                            (@Semiring.toModule.{u_1} F
+                              (@DivisionSemiring.toSemiring.{u_1} F
+                                (@DivisionRing.toDivisionSemiring.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))))
+                        x x_1 (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                      (And
+                        (Nonempty.{u_1 + 1}
+                          (@MulEquiv.{u_1, u_1} G
+                            (@Matrix.ProjectiveSpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n)
+                              (Fin.fintype n) F (@Field.toCommRing.{u_1} F inst))
+                            (@MulOne.toMul.{u_1} G
+                              (@MulOneClass.toMulOne.{u_1} G
+                                (@Monoid.toMulOneClass.{u_1} G
+                                  (@DivInvMonoid.toMonoid.{u_1} G (@Group.toDivInvMonoid.{u_1} G x)))))
+                            (@MulOne.toMul.{u_1}
+                              (@Matrix.ProjectiveSpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n)
+                                (Fin.fintype n) F (@Field.toCommRing.{u_1} F inst))
+                              (@MulOneClass.toMulOne.{u_1}
+                                (@Matrix.ProjectiveSpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n)
+                                  (Fin.fintype n) F (@Field.toCommRing.{u_1} F inst))
+                                (@Monoid.toMulOneClass.{u_1}
+                                  (@Matrix.ProjectiveSpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n)
+                                    (Fin.fintype n) F (@Field.toCommRing.{u_1} F inst))
+                                  (@DivInvMonoid.toMonoid.{u_1}
+                                    (@Matrix.ProjectiveSpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n)
+                                      (Fin.fintype n) F (@Field.toCommRing.{u_1} F inst))
+                                    (@Group.toDivInvMonoid.{u_1}
+                                      (@Matrix.ProjectiveSpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n)
+                                        (Fin.fintype n) F (@Field.toCommRing.{u_1} F inst))
+                                      (@QuotientGroup.Quotient.group.{u_1}
+                                        (@Matrix.SpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n)
+                                          (Fin.fintype n) F (@Field.toCommRing.{u_1} F inst))
+                                        (@Matrix.SpecialLinearGroup.instGroup.{0, u_1} (Fin n) (instDecidableEqFin n)
+                                          (Fin.fintype n) F (@Field.toCommRing.{u_1} F inst))
+                                        (@Subgroup.center.{u_1}
+                                          (@Matrix.SpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n)
+                                            (Fin.fintype n) F (@Field.toCommRing.{u_1} F inst))
+                                          (@Matrix.SpecialLinearGroup.instGroup.{0, u_1} (Fin n) (instDecidableEqFin n)
+                                            (Fin.fintype n) F (@Field.toCommRing.{u_1} F inst)))
+                                        ⋯))))))))
+                        (@Atlas.TypeAConstruction.{u_1} n F inst)))))))
+AXIOMS Atlas.exists_typeA: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.typeA_prime_power
+Atlas.typeA_prime_power : ∀ (p f n : Nat),
+  Nat.Prime p →
+    @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) f →
+      @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) n →
+        @Ne.{1} (Prod.{0, 0} Nat Nat)
+            (@Prod.mk.{0, 0} Nat Nat n
+              (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) p f))
+            (@Prod.mk.{0, 0} Nat Nat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) →
+          @Ne.{1} (Prod.{0, 0} Nat Nat)
+              (@Prod.mk.{0, 0} Nat Nat n
+                (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                  (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) p f))
+              (@Prod.mk.{0, 0} Nat Nat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+                (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))) →
+            ∃ F x,
+              ∃ (_ : Finite.{1} F),
+                And
+                  (@Eq.{1} Nat (Nat.card.{0} F)
+                    (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                      (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) p f))
+                  (@Atlas.TypeAConstruction.{0} n F x)
+AXIOMS Atlas.typeA_prime_power: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.psl_toPGL_injective
+@Atlas.psl_toPGL_injective.{u_1,
+    u_2} : ∀ {ι : Type u_1} {F : Type u_2} [inst : Fintype.{u_1} ι] [inst_1 : DecidableEq.{u_1 + 1} ι]
+  [inst_2 : Field.{u_2} F],
+  @Function.Injective.{max (u_1 + 1) (u_2 + 1), max (u_1 + 1) (u_2 + 1)}
+    (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+    (@Matrix.ProjGenLinGroup.{u_1, u_2} ι inst inst_1 F (@Field.toCommRing.{u_2} F inst_2))
+    (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), max (u_1 + 1) (u_2 + 1), max (u_1 + 1) (u_2 + 1)}
+      (@MonoidHom.{max u_2 u_1, max u_2 u_1}
+        (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+        (@Matrix.ProjGenLinGroup.{u_1, u_2} ι inst inst_1 F (@Field.toCommRing.{u_2} F inst_2))
+        (@MulOneClass.toMulOne.{max u_1 u_2}
+          (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+          (@Monoid.toMulOneClass.{max u_1 u_2}
+            (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+            (@DivInvMonoid.toMonoid.{max u_1 u_2}
+              (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+              (@Group.toDivInvMonoid.{max u_1 u_2}
+                (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+                (@QuotientGroup.Quotient.group.{max u_1 u_2}
+                  (@Matrix.SpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+                  (@Matrix.SpecialLinearGroup.instGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+                  (@Subgroup.center.{max u_2 u_1}
+                    (@Matrix.SpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+                    (@Matrix.SpecialLinearGroup.instGroup.{u_1, u_2} ι inst_1 inst F
+                      (@Field.toCommRing.{u_2} F inst_2)))
+                  ⋯)))))
+        (@MulOneClass.toMulOne.{max u_1 u_2}
+          (@Matrix.ProjGenLinGroup.{u_1, u_2} ι inst inst_1 F (@Field.toCommRing.{u_2} F inst_2))
+          (@Monoid.toMulOneClass.{max u_1 u_2}
+            (@Matrix.ProjGenLinGroup.{u_1, u_2} ι inst inst_1 F (@Field.toCommRing.{u_2} F inst_2))
+            (@DivInvMonoid.toMonoid.{max u_1 u_2}
+              (@Matrix.ProjGenLinGroup.{u_1, u_2} ι inst inst_1 F (@Field.toCommRing.{u_2} F inst_2))
+              (@Group.toDivInvMonoid.{max u_1 u_2}
+                (@Matrix.ProjGenLinGroup.{u_1, u_2} ι inst inst_1 F (@Field.toCommRing.{u_2} F inst_2))
+                (@Matrix.instGroupProjGenLinGroup.{u_1, u_2} ι inst inst_1 F (@Field.toCommRing.{u_2} F inst_2)))))))
+      (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+      (fun x => @Matrix.ProjGenLinGroup.{u_1, u_2} ι inst inst_1 F (@Field.toCommRing.{u_2} F inst_2))
+      (@MonoidHom.instFunLike.{max u_1 u_2, max u_1 u_2}
+        (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+        (@Matrix.ProjGenLinGroup.{u_1, u_2} ι inst inst_1 F (@Field.toCommRing.{u_2} F inst_2))
+        (@MulOneClass.toMulOne.{max u_1 u_2}
+          (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+          (@Monoid.toMulOneClass.{max u_1 u_2}
+            (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+            (@DivInvMonoid.toMonoid.{max u_1 u_2}
+              (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+              (@Group.toDivInvMonoid.{max u_1 u_2}
+                (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+                (@QuotientGroup.Quotient.group.{max u_1 u_2}
+                  (@Matrix.SpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+                  (@Matrix.SpecialLinearGroup.instGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+                  (@Subgroup.center.{max u_2 u_1}
+                    (@Matrix.SpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+                    (@Matrix.SpecialLinearGroup.instGroup.{u_1, u_2} ι inst_1 inst F
+                      (@Field.toCommRing.{u_2} F inst_2)))
+                  ⋯)))))
+        (@MulOneClass.toMulOne.{max u_1 u_2}
+          (@Matrix.ProjGenLinGroup.{u_1, u_2} ι inst inst_1 F (@Field.toCommRing.{u_2} F inst_2))
+          (@Monoid.toMulOneClass.{max u_1 u_2}
+            (@Matrix.ProjGenLinGroup.{u_1, u_2} ι inst inst_1 F (@Field.toCommRing.{u_2} F inst_2))
+            (@DivInvMonoid.toMonoid.{max u_1 u_2}
+              (@Matrix.ProjGenLinGroup.{u_1, u_2} ι inst inst_1 F (@Field.toCommRing.{u_2} F inst_2))
+              (@Group.toDivInvMonoid.{max u_1 u_2}
+                (@Matrix.ProjGenLinGroup.{u_1, u_2} ι inst inst_1 F (@Field.toCommRing.{u_2} F inst_2))
+                (@Matrix.instGroupProjGenLinGroup.{u_1, u_2} ι inst inst_1 F (@Field.toCommRing.{u_2} F inst_2)))))))
+      (@Matrix.ProjectiveSpecialLinearGroup.toPGL.{u_1, u_2} ι F inst inst_1 (@Field.toCommRing.{u_2} F inst_2)))
+AXIOMS Atlas.psl_toPGL_injective: [propext, Classical.choice, Quot.sound]
+STATEMENT Atlas.psl_faithful
+@Atlas.psl_faithful.{u_1,
+    u_2} : ∀ {ι : Type u_1} {F : Type u_2} [inst : Fintype.{u_1} ι] [inst_1 : DecidableEq.{u_1 + 1} ι]
+  [inst_2 : Field.{u_2} F],
+  @FaithfulSMul.{max u_2 u_1, max u_1 u_2}
+    (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+    (@Projectivization.{u_2, max u_1 u_2} F (ι → F) (@Field.toDivisionRing.{u_2} F inst_2)
+      (@Pi.addCommGroup.{u_1, u_2} ι (fun a => F) fun i =>
+        @Ring.toAddCommGroup.{u_2} F (@DivisionRing.toRing.{u_2} F (@Field.toDivisionRing.{u_2} F inst_2)))
+      (@Pi.Function.module.{u_1, u_2, u_2} ι F F
+        (@DivisionSemiring.toSemiring.{u_2} F
+          (@DivisionRing.toDivisionSemiring.{u_2} F (@Field.toDivisionRing.{u_2} F inst_2)))
+        (@Semiring.toAddCommMonoid.{u_2} F
+          (@Ring.toSemiring.{u_2} F (@DivisionRing.toRing.{u_2} F (@Field.toDivisionRing.{u_2} F inst_2))))
+        (@Semiring.toModule.{u_2} F
+          (@DivisionSemiring.toSemiring.{u_2} F
+            (@DivisionRing.toDivisionSemiring.{u_2} F (@Field.toDivisionRing.{u_2} F inst_2))))))
+    (@SemigroupAction.toSMul.{max u_1 u_2, max u_1 u_2}
+      (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+      (@Projectivization.{u_2, max u_1 u_2} F (ι → F) (@Field.toDivisionRing.{u_2} F inst_2)
+        (@Pi.addCommGroup.{u_1, u_2} ι (fun a => F) fun i =>
+          @Ring.toAddCommGroup.{u_2} F (@DivisionRing.toRing.{u_2} F (@Field.toDivisionRing.{u_2} F inst_2)))
+        (@Pi.Function.module.{u_1, u_2, u_2} ι F F
+          (@DivisionSemiring.toSemiring.{u_2} F
+            (@DivisionRing.toDivisionSemiring.{u_2} F (@Field.toDivisionRing.{u_2} F inst_2)))
+          (@Semiring.toAddCommMonoid.{u_2} F
+            (@Ring.toSemiring.{u_2} F (@DivisionRing.toRing.{u_2} F (@Field.toDivisionRing.{u_2} F inst_2))))
+          (@Semiring.toModule.{u_2} F
+            (@DivisionSemiring.toSemiring.{u_2} F
+              (@DivisionRing.toDivisionSemiring.{u_2} F (@Field.toDivisionRing.{u_2} F inst_2))))))
+      (@Monoid.toSemigroup.{max u_1 u_2}
+        (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+        (@DivInvMonoid.toMonoid.{max u_1 u_2}
+          (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+          (@Group.toDivInvMonoid.{max u_1 u_2}
+            (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+            (@QuotientGroup.Quotient.group.{max u_1 u_2}
+              (@Matrix.SpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+              (@Matrix.SpecialLinearGroup.instGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+              (@Subgroup.center.{max u_2 u_1}
+                (@Matrix.SpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+                (@Matrix.SpecialLinearGroup.instGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2)))
+              ⋯))))
+      (@MulAction.toSemigroupAction.{max u_1 u_2, max u_1 u_2}
+        (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+        (@Projectivization.{u_2, max u_1 u_2} F (ι → F) (@Field.toDivisionRing.{u_2} F inst_2)
+          (@Pi.addCommGroup.{u_1, u_2} ι (fun a => F) fun i =>
+            @Ring.toAddCommGroup.{u_2} F (@DivisionRing.toRing.{u_2} F (@Field.toDivisionRing.{u_2} F inst_2)))
+          (@Pi.Function.module.{u_1, u_2, u_2} ι F F
+            (@DivisionSemiring.toSemiring.{u_2} F
+              (@DivisionRing.toDivisionSemiring.{u_2} F (@Field.toDivisionRing.{u_2} F inst_2)))
+            (@Semiring.toAddCommMonoid.{u_2} F
+              (@Ring.toSemiring.{u_2} F (@DivisionRing.toRing.{u_2} F (@Field.toDivisionRing.{u_2} F inst_2))))
+            (@Semiring.toModule.{u_2} F
+              (@DivisionSemiring.toSemiring.{u_2} F
+                (@DivisionRing.toDivisionSemiring.{u_2} F (@Field.toDivisionRing.{u_2} F inst_2))))))
+        (@DivInvMonoid.toMonoid.{max u_1 u_2}
+          (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+          (@Group.toDivInvMonoid.{max u_1 u_2}
+            (@Matrix.ProjectiveSpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+            (@QuotientGroup.Quotient.group.{max u_1 u_2}
+              (@Matrix.SpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+              (@Matrix.SpecialLinearGroup.instGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+              (@Subgroup.center.{max u_2 u_1}
+                (@Matrix.SpecialLinearGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2))
+                (@Matrix.SpecialLinearGroup.instGroup.{u_1, u_2} ι inst_1 inst F (@Field.toCommRing.{u_2} F inst_2)))
+              ⋯)))
+        (@Projectivization.instMulActionProjectiveSpecialLinearGroupForall.{u_2, u_1} F inst_2 ι inst inst_1)))
+AXIOMS Atlas.psl_faithful: [propext, Classical.choice, Quot.sound]
+GRAPH COMPLETE 29559 declarations; 7 selected roots

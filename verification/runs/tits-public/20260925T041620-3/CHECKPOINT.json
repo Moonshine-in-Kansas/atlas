@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "id": "tits-public",
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas.Tits.Order",
+    "Atlas.Tits.Simplicity",
+    "Atlas.Tits.RetainedAction",
+    "Atlas.Tits.Construction",
+    "Atlas.Tits.CharacterConsequences",
+    "Atlas.Tits.PointRowKernelOrder"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Tits.Ambient",
+      "module": "Atlas.Tits.LocalGroups",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Tits.Model",
+      "module": "Atlas.Tits.LocalGroups",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Tits.Neighbours",
+      "module": "Atlas.Tits.LocalGroups",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Tits.alpha_not_mem_derived",
+      "module": "Atlas.Tits.CharacterConsequences",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.alpha_square_mem_derived",
+      "module": "Atlas.Tits.CharacterConsequences",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.ambientStabilizer",
+      "module": "Atlas.Tits.LocalGroups",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Tits.ambient_generated_by_derived_alpha",
+      "module": "Atlas.Tits.CharacterConsequences",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.card",
+      "module": "Atlas.Tits.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.cardAmbient",
+      "module": "Atlas.Tits.LocalGroups",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.cardNeighbours",
+      "module": "Atlas.Tits.LocalGroups",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.construction",
+      "module": "Atlas.Tits.Construction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.derivedSubgroup",
+      "module": "Atlas.Tits.LocalGroups",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Tits.derived_eq_transferKernel",
+      "module": "Atlas.Tits.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.derived_ne_bot",
+      "module": "Atlas.Tits.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.embeddingIntoRudvalis",
+      "module": "Atlas.Tits.LocalGroups",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Tits.embeddingIntoRudvalis_injective",
+      "module": "Atlas.Tits.LocalGroups",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.embedding_range_card",
+      "module": "Atlas.Tits.RetainedAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.embedding_range_index",
+      "module": "Atlas.Tits.RetainedAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.finite",
+      "module": "Atlas.Tits.Construction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.index_derived",
+      "module": "Atlas.Tits.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.isSimpleGroup",
+      "module": "Atlas.Tits.Simplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.localProjection_surjective",
+      "module": "Atlas.Tits.LocalGroups",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.mem_transfer_range_iff",
+      "module": "Atlas.Tits.CharacterConsequences",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.modelEquivTransferKernel",
+      "module": "Atlas.Tits.CharacterConsequences",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Tits.model_is_derived",
+      "module": "Atlas.Tits.Construction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.model_neighbour_stabilizer_card",
+      "module": "Atlas.Tits.RetainedAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.model_neighbours_faithful",
+      "module": "Atlas.Tits.RetainedAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.model_neighbours_transitive",
+      "module": "Atlas.Tits.RetainedAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Tits.monomialPointRowKernel",
+      "module": "Atlas.Tits.PointRowKernelOrder",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Tits.monomialPointRowKernel_card",
+      "module": "Atlas.Tits.PointRowKernelOrder",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.monomialPointRowKernel_index",
+      "module": "Atlas.Tits.PointRowKernelOrder",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.nonabelian",
+      "module": "Atlas.Tits.Simplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.noncommutative",
+      "module": "Atlas.Tits.Simplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.normal_subgroups",
+      "module": "Atlas.Tits.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.order",
+      "module": "Atlas.Tits.Construction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.perfect",
+      "module": "Atlas.Tits.Simplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.point_scalar_kernel_le_row_kernel",
+      "module": "Atlas.Tits.PointRowKernelOrder",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.transfer",
+      "module": "Atlas.Tits.TransferDefinition",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Tits.transfer_alpha",
+      "module": "Atlas.Tits.TransferEvaluation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.transfer_nontrivial",
+      "module": "Atlas.Tits.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.transfer_range_order",
+      "module": "Atlas.Tits.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.transfer_range_set",
+      "module": "Atlas.Tits.CharacterConsequences",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independent-of-global-rudvalis-simplicity",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.Rudvalis.ProjectiveSimplicity",
+        "Atlas.Sporadic.Rudvalis"
+      ]
+    }
+  ]
+}

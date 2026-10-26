@@ -1,0 +1,777 @@
+{
+  "schema_version": 1,
+  "id": "symplectic-simplicity",
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "targets": [
+    {
+      "declaration": "Atlas.Arithmetic.geometricSum",
+      "module": "Atlas.Algebra.GeometricSumBounds",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Arithmetic.geometricSum_gt_one",
+      "module": "Atlas.Algebra.GeometricSumBounds",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Arithmetic.geometricSum_lt_power",
+      "module": "Atlas.Algebra.GeometricSumBounds",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Arithmetic.geometricSum_shift",
+      "module": "Atlas.Algebra.GeometricSumBounds",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Arithmetic.geometricSum_succ",
+      "module": "Atlas.Algebra.GeometricSumBounds",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Arithmetic.geometric_block_nondivisibility",
+      "module": "Atlas.Algebra.GeometricSumBounds",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.projectiveSubmoduleEquiv",
+      "module": "Atlas.LinearAlgebra.ProjectiveSubmodule",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.Orthogonal",
+      "module": "Atlas.LinearGroups.Symplectic.PointGeometry",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.Points",
+      "module": "Atlas.LinearGroups.Symplectic.Projective",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.abelian_transvection_images",
+      "module": "Atlas.LinearGroups.Symplectic.AbelianImages",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.binary_seven_transvections",
+      "module": "Atlas.LinearGroups.Symplectic.BinaryIdentity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_lineTransvections",
+      "module": "Atlas.LinearGroups.Symplectic.LineTransvections",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_perpendicular_points",
+      "module": "Atlas.LinearGroups.Symplectic.PointCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_perpendicular_points_sum",
+      "module": "Atlas.LinearGroups.Symplectic.PointCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_points",
+      "module": "Atlas.LinearGroups.Symplectic.PointCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_points_sum",
+      "module": "Atlas.LinearGroups.Symplectic.PointCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_suborbit_one",
+      "module": "Atlas.LinearGroups.Symplectic.PointCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_suborbit_two",
+      "module": "Atlas.LinearGroups.Symplectic.PointCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_suborbit_two_power",
+      "module": "Atlas.LinearGroups.Symplectic.Primitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_suborbit_zero",
+      "module": "Atlas.LinearGroups.Symplectic.PointCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.directionGroup",
+      "module": "Atlas.LinearGroups.Symplectic.LineTransvections",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.directionGroup_conj",
+      "module": "Atlas.LinearGroups.Symplectic.LineTransvections",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.directionGroup_scale",
+      "module": "Atlas.LinearGroups.Symplectic.LineTransvections",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.ePoint",
+      "module": "Atlas.LinearGroups.Symplectic.PointGeometry",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.e_nonzero",
+      "module": "Atlas.LinearGroups.Symplectic.PointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.exists_generated_send",
+      "module": "Atlas.LinearGroups.Symplectic.GeneratedAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.exists_generated_send_fix",
+      "module": "Atlas.LinearGroups.Symplectic.GeneratedAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.exists_isometry_orthogonal_pair",
+      "module": "Atlas.LinearGroups.Symplectic.OrthogonalFrame",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.exists_pairing_both",
+      "module": "Atlas.LinearGroups.Symplectic.GeneratedAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.exists_projective_send",
+      "module": "Atlas.LinearGroups.Symplectic.ProjectiveGeneration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.exists_scalar_square_ne_one",
+      "module": "Atlas.LinearGroups.Symplectic.PerfectLarge",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.extendHom",
+      "module": "Atlas.LinearGroups.Symplectic.Generation",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.extendHom_apply",
+      "module": "Atlas.LinearGroups.Symplectic.Generation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.extend_mem_generated",
+      "module": "Atlas.LinearGroups.Symplectic.Generation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.extend_transvection",
+      "module": "Atlas.LinearGroups.Symplectic.Generation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.fPoint",
+      "module": "Atlas.LinearGroups.Symplectic.PointGeometry",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.f_nonzero",
+      "module": "Atlas.LinearGroups.Symplectic.PointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.fixes_points_iff_central",
+      "module": "Atlas.LinearGroups.Symplectic.Projective",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.headTail_e_succ",
+      "module": "Atlas.LinearGroups.Symplectic.OrthogonalFrame",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.iwasawa",
+      "module": "Atlas.LinearGroups.Symplectic.LineTransvections",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.lineTransvections",
+      "module": "Atlas.LinearGroups.Symplectic.LineTransvections",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.lineTransvections_abelian",
+      "module": "Atlas.LinearGroups.Symplectic.LineTransvections",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.lineTransvections_conj",
+      "module": "Atlas.LinearGroups.Symplectic.LineTransvections",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.lineTransvections_generate",
+      "module": "Atlas.LinearGroups.Symplectic.LineTransvections",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.lineTransvections_le_stabilizer",
+      "module": "Atlas.LinearGroups.Symplectic.LineTransvections",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.lineTransvections_mk",
+      "module": "Atlas.LinearGroups.Symplectic.LineTransvections",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.lineTransvections_normal",
+      "module": "Atlas.LinearGroups.Symplectic.LineTransvections",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.mem_directionGroup",
+      "module": "Atlas.LinearGroups.Symplectic.LineTransvections",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.mem_transvectionGroup",
+      "module": "Atlas.LinearGroups.Symplectic.Generation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.nonorthogonal_stabilizer_transitive",
+      "module": "Atlas.LinearGroups.Symplectic.PointOrbits",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.normalize_nonorthogonal_pair",
+      "module": "Atlas.LinearGroups.Symplectic.PointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.normalize_orthogonal_pair",
+      "module": "Atlas.LinearGroups.Symplectic.PointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.orthogonal_mk",
+      "module": "Atlas.LinearGroups.Symplectic.PointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.orthogonal_self",
+      "module": "Atlas.LinearGroups.Symplectic.PointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.orthogonal_smul",
+      "module": "Atlas.LinearGroups.Symplectic.PointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.orthogonal_stabilizer_transitive",
+      "module": "Atlas.LinearGroups.Symplectic.PointOrbits",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.orthogonal_symm",
+      "module": "Atlas.LinearGroups.Symplectic.PointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.parameterHom",
+      "module": "Atlas.LinearGroups.Symplectic.LineTransvections",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.perfect_of_abelian_images",
+      "module": "Atlas.LinearGroups.Symplectic.AbelianImages",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.perfect_of_card_gt_three",
+      "module": "Atlas.LinearGroups.Symplectic.PerfectLarge",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.perfect_of_card_three",
+      "module": "Atlas.LinearGroups.Symplectic.PerfectThree",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.perfect_of_card_two",
+      "module": "Atlas.LinearGroups.Symplectic.PerfectTwo",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.perfect_of_good",
+      "module": "Atlas.LinearGroups.Symplectic.Perfectness",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.perfect_of_transvections",
+      "module": "Atlas.LinearGroups.Symplectic.PerfectLarge",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.perpendicularPointsEquiv",
+      "module": "Atlas.LinearGroups.Symplectic.PointCount",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.pointPerm",
+      "module": "Atlas.LinearGroups.Symplectic.Projective",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.pointPerm_kernel",
+      "module": "Atlas.LinearGroups.Symplectic.Projective",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.pointSum",
+      "module": "Atlas.LinearGroups.Symplectic.PointCount",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projection_smul",
+      "module": "Atlas.LinearGroups.Symplectic.Projective",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projection_transvection_ne_one",
+      "module": "Atlas.LinearGroups.Symplectic.Nontrivial",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projectiveAction",
+      "module": "Atlas.LinearGroups.Symplectic.Projective",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projectivePerm",
+      "module": "Atlas.LinearGroups.Symplectic.Projective",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projectiveTransvectionGroup",
+      "module": "Atlas.LinearGroups.Symplectic.ProjectiveGeneration",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projectiveTransvectionGroup_eq_top",
+      "module": "Atlas.LinearGroups.Symplectic.ProjectiveGeneration",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projective_faithful",
+      "module": "Atlas.LinearGroups.Symplectic.Projective",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projective_nontrivial",
+      "module": "Atlas.LinearGroups.Symplectic.Nontrivial",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projective_not_commutative",
+      "module": "Atlas.LinearGroups.Symplectic.Noncommutative",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projective_orthogonal_smul",
+      "module": "Atlas.LinearGroups.Symplectic.PointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projective_parameter_injective",
+      "module": "Atlas.LinearGroups.Symplectic.LineTransvections",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projective_perfect_of_card_gt_three",
+      "module": "Atlas.LinearGroups.Symplectic.PerfectLarge",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projective_perfect_of_good",
+      "module": "Atlas.LinearGroups.Symplectic.Perfectness",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projective_preprimitive",
+      "module": "Atlas.LinearGroups.Symplectic.Primitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projective_pretransitive",
+      "module": "Atlas.LinearGroups.Symplectic.ProjectiveGeneration",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Symplectic.rankOneIndex",
+      "module": "Atlas.LinearGroups.Symplectic.RankOne",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.rankOnePSL",
+      "module": "Atlas.LinearGroups.Symplectic.RankOne",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.rankOnePSL_projection",
+      "module": "Atlas.LinearGroups.Symplectic.RankOne",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.rankOneSL",
+      "module": "Atlas.LinearGroups.Symplectic.RankOne",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.rankOneSL_action",
+      "module": "Atlas.LinearGroups.Symplectic.RankOne",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.rankOneVector",
+      "module": "Atlas.LinearGroups.Symplectic.RankOne",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.rankOne_form_mul",
+      "module": "Atlas.LinearGroups.Symplectic.RankOne",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.rankOne_mem_iff_det",
+      "module": "Atlas.LinearGroups.Symplectic.RankOne",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.simple_high_rank",
+      "module": "Atlas.LinearGroups.Symplectic.SimplicityHighRank",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.simple_of_good",
+      "module": "Atlas.LinearGroups.Symplectic.Simplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.simple_rank_one",
+      "module": "Atlas.LinearGroups.Symplectic.Simplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.stabilizer_orbit_iff",
+      "module": "Atlas.LinearGroups.Symplectic.PointOrbits",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.suborbitIndex",
+      "module": "Atlas.LinearGroups.Symplectic.PointOrbits",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.suborbitIndex_eq_one_iff",
+      "module": "Atlas.LinearGroups.Symplectic.PointCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.suborbitIndex_eq_two_iff",
+      "module": "Atlas.LinearGroups.Symplectic.PointCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.suborbitIndex_invariant",
+      "module": "Atlas.LinearGroups.Symplectic.PointOrbits",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.suborbitIndex_self",
+      "module": "Atlas.LinearGroups.Symplectic.PointOrbits",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.suborbitIndex_transitive",
+      "module": "Atlas.LinearGroups.Symplectic.PointOrbits",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.ternary_four_transvections",
+      "module": "Atlas.LinearGroups.Symplectic.TernaryIdentity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.transvectionGroup",
+      "module": "Atlas.LinearGroups.Symplectic.GeneratedAction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Symplectic.transvectionGroup_eq_top",
+      "module": "Atlas.LinearGroups.Symplectic.Generation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.transvection_fixes_of_orthogonal",
+      "module": "Atlas.LinearGroups.Symplectic.GeneratedAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.transvection_mem",
+      "module": "Atlas.LinearGroups.Symplectic.GeneratedAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.transvection_mem_commutator_of_scalar",
+      "module": "Atlas.LinearGroups.Symplectic.PerfectLarge",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Symplectic.transvection_pow",
+      "module": "Atlas.LinearGroups.Symplectic.AbelianImages",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "positive-simplicity-independent-of-order-and-exceptions",
+      "all_roots": true,
+      "module_allowlists": [
+        {
+          "prefix": "Atlas.",
+          "modules": [
+            "Atlas.LinearGroups.Symplectic.Basic",
+            "Atlas.LinearGroups.Symplectic.Transvection",
+            "Atlas.LinearGroups.Symplectic.TransvectionImage",
+            "Atlas.LinearGroups.Symplectic.Basis",
+            "Atlas.LinearGroups.Symplectic.Isometry",
+            "Atlas.LinearAlgebra.SymplecticBasis",
+            "Atlas.LinearAlgebra.AlternatingFrame",
+            "Atlas.LinearGroups.Symplectic.Projective",
+            "Atlas.LinearGroups.Symplectic.GeneratedAction",
+            "Atlas.LinearGroups.Symplectic.Generation",
+            "Atlas.LinearGroups.Symplectic.ProjectiveGeneration",
+            "Atlas.LinearGroups.Symplectic.PairStabilizer",
+            "Atlas.LinearGroups.Symplectic.Center",
+            "Atlas.LinearAlgebra.ProjectiveSubmodule",
+            "Atlas.Algebra.GeometricSumBounds",
+            "Atlas.LinearGroups.Symplectic.OrthogonalFrame",
+            "Atlas.LinearGroups.Symplectic.PointGeometry",
+            "Atlas.LinearGroups.Symplectic.PointOrbits",
+            "Atlas.LinearGroups.Symplectic.PointCount",
+            "Atlas.LinearGroups.Symplectic.Primitivity",
+            "Atlas.LinearAlgebra.LinearFunctionalFiber",
+            "Atlas.GroupTheory.RankThreePrimitivity",
+            "Atlas.GroupTheory.FiniteSuborbitPrimitivity",
+            "Atlas.LinearGroups.Symplectic.PerfectLarge",
+            "Atlas.LinearGroups.Symplectic.AbelianImages",
+            "Atlas.LinearGroups.Symplectic.TernaryIdentity",
+            "Atlas.LinearGroups.Symplectic.PerfectThree",
+            "Atlas.LinearGroups.Symplectic.BinaryIdentity",
+            "Atlas.LinearGroups.Symplectic.PerfectTwo",
+            "Atlas.LinearGroups.Symplectic.Perfectness",
+            "Atlas.LinearGroups.Symplectic.Nontrivial",
+            "Atlas.LinearGroups.Symplectic.Noncommutative",
+            "Atlas.LinearGroups.Symplectic.LineTransvections",
+            "Atlas.LinearGroups.Symplectic.SimplicityHighRank",
+            "Atlas.LinearGroups.Symplectic.RankOne",
+            "Atlas.LinearGroups.Symplectic.Simplicity"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "generation-independent-of-order-and-simplicity",
+      "module_allowlists": [
+        {
+          "prefix": "Atlas.",
+          "modules": [
+            "Atlas.LinearGroups.Symplectic.Basic",
+            "Atlas.LinearGroups.Symplectic.Transvection",
+            "Atlas.LinearGroups.Symplectic.TransvectionImage",
+            "Atlas.LinearGroups.Symplectic.Basis",
+            "Atlas.LinearGroups.Symplectic.Isometry",
+            "Atlas.LinearAlgebra.SymplecticBasis",
+            "Atlas.LinearAlgebra.AlternatingFrame",
+            "Atlas.LinearGroups.Symplectic.Projective",
+            "Atlas.LinearGroups.Symplectic.GeneratedAction",
+            "Atlas.LinearGroups.Symplectic.Generation",
+            "Atlas.LinearGroups.Symplectic.ProjectiveGeneration",
+            "Atlas.LinearGroups.Symplectic.PairStabilizer",
+            "Atlas.LinearGroups.Symplectic.Center"
+          ]
+        }
+      ],
+      "roots": [
+        "Atlas.Symplectic.Points",
+        "Atlas.Symplectic.fixes_points_iff_central",
+        "Atlas.Symplectic.pointPerm",
+        "Atlas.Symplectic.pointPerm_kernel",
+        "Atlas.Symplectic.projectivePerm",
+        "Atlas.Symplectic.projectiveAction",
+        "Atlas.Symplectic.projection_smul",
+        "Atlas.Symplectic.projective_faithful",
+        "Atlas.Symplectic.transvectionGroup",
+        "Atlas.Symplectic.transvection_mem",
+        "Atlas.Symplectic.exists_pairing_both",
+        "Atlas.Symplectic.exists_generated_send",
+        "Atlas.Symplectic.transvection_fixes_of_orthogonal",
+        "Atlas.Symplectic.exists_generated_send_fix",
+        "Atlas.Symplectic.extendHom",
+        "Atlas.Symplectic.extendHom_apply",
+        "Atlas.Symplectic.extend_transvection",
+        "Atlas.Symplectic.extend_mem_generated",
+        "Atlas.Symplectic.mem_transvectionGroup",
+        "Atlas.Symplectic.transvectionGroup_eq_top",
+        "Atlas.Symplectic.projectiveTransvectionGroup",
+        "Atlas.Symplectic.projectiveTransvectionGroup_eq_top",
+        "Atlas.Symplectic.exists_projective_send",
+        "Atlas.Symplectic.projective_pretransitive"
+      ]
+    },
+    {
+      "id": "geometry-independent-of-order-perfectness-and-simplicity",
+      "module_allowlists": [
+        {
+          "prefix": "Atlas.",
+          "modules": [
+            "Atlas.LinearGroups.Symplectic.Basic",
+            "Atlas.LinearGroups.Symplectic.Transvection",
+            "Atlas.LinearGroups.Symplectic.TransvectionImage",
+            "Atlas.LinearGroups.Symplectic.Basis",
+            "Atlas.LinearGroups.Symplectic.Isometry",
+            "Atlas.LinearAlgebra.SymplecticBasis",
+            "Atlas.LinearAlgebra.AlternatingFrame",
+            "Atlas.LinearGroups.Symplectic.Projective",
+            "Atlas.LinearGroups.Symplectic.GeneratedAction",
+            "Atlas.LinearGroups.Symplectic.Generation",
+            "Atlas.LinearGroups.Symplectic.ProjectiveGeneration",
+            "Atlas.LinearGroups.Symplectic.PairStabilizer",
+            "Atlas.LinearGroups.Symplectic.Center",
+            "Atlas.LinearAlgebra.ProjectiveSubmodule",
+            "Atlas.Algebra.GeometricSumBounds",
+            "Atlas.LinearGroups.Symplectic.OrthogonalFrame",
+            "Atlas.LinearGroups.Symplectic.PointGeometry",
+            "Atlas.LinearGroups.Symplectic.PointOrbits",
+            "Atlas.LinearGroups.Symplectic.PointCount",
+            "Atlas.LinearGroups.Symplectic.Primitivity",
+            "Atlas.LinearAlgebra.LinearFunctionalFiber",
+            "Atlas.GroupTheory.RankThreePrimitivity",
+            "Atlas.GroupTheory.FiniteSuborbitPrimitivity"
+          ]
+        }
+      ],
+      "roots": [
+        "Atlas.LinearAlgebra.projectiveSubmoduleEquiv",
+        "Atlas.Arithmetic.geometricSum",
+        "Atlas.Arithmetic.geometricSum_succ",
+        "Atlas.Arithmetic.geometricSum_shift",
+        "Atlas.Arithmetic.geometricSum_lt_power",
+        "Atlas.Arithmetic.geometricSum_gt_one",
+        "Atlas.Arithmetic.geometric_block_nondivisibility",
+        "Atlas.Symplectic.headTail_e_succ",
+        "Atlas.Symplectic.exists_isometry_orthogonal_pair",
+        "Atlas.Symplectic.Orthogonal",
+        "Atlas.Symplectic.orthogonal_mk",
+        "Atlas.Symplectic.orthogonal_self",
+        "Atlas.Symplectic.orthogonal_symm",
+        "Atlas.Symplectic.orthogonal_smul",
+        "Atlas.Symplectic.projective_orthogonal_smul",
+        "Atlas.Symplectic.e_nonzero",
+        "Atlas.Symplectic.f_nonzero",
+        "Atlas.Symplectic.ePoint",
+        "Atlas.Symplectic.fPoint",
+        "Atlas.Symplectic.normalize_orthogonal_pair",
+        "Atlas.Symplectic.normalize_nonorthogonal_pair",
+        "Atlas.Symplectic.orthogonal_stabilizer_transitive",
+        "Atlas.Symplectic.nonorthogonal_stabilizer_transitive",
+        "Atlas.Symplectic.suborbitIndex",
+        "Atlas.Symplectic.suborbitIndex_self",
+        "Atlas.Symplectic.suborbitIndex_invariant",
+        "Atlas.Symplectic.suborbitIndex_transitive",
+        "Atlas.Symplectic.stabilizer_orbit_iff",
+        "Atlas.Symplectic.card_points",
+        "Atlas.Symplectic.perpendicularPointsEquiv",
+        "Atlas.Symplectic.card_perpendicular_points",
+        "Atlas.Symplectic.card_suborbit_zero",
+        "Atlas.Symplectic.suborbitIndex_eq_one_iff",
+        "Atlas.Symplectic.suborbitIndex_eq_two_iff",
+        "Atlas.Symplectic.card_suborbit_one",
+        "Atlas.Symplectic.card_suborbit_two",
+        "Atlas.Symplectic.pointSum",
+        "Atlas.Symplectic.card_points_sum",
+        "Atlas.Symplectic.card_perpendicular_points_sum",
+        "Atlas.Symplectic.card_suborbit_two_power",
+        "Atlas.Symplectic.projective_preprimitive"
+      ]
+    },
+    {
+      "id": "perfectness-independent-of-order-and-simplicity",
+      "module_allowlists": [
+        {
+          "prefix": "Atlas.",
+          "modules": [
+            "Atlas.LinearGroups.Symplectic.Basic",
+            "Atlas.LinearGroups.Symplectic.Transvection",
+            "Atlas.LinearGroups.Symplectic.TransvectionImage",
+            "Atlas.LinearGroups.Symplectic.Basis",
+            "Atlas.LinearGroups.Symplectic.Isometry",
+            "Atlas.LinearAlgebra.SymplecticBasis",
+            "Atlas.LinearAlgebra.AlternatingFrame",
+            "Atlas.LinearGroups.Symplectic.Projective",
+            "Atlas.LinearGroups.Symplectic.GeneratedAction",
+            "Atlas.LinearGroups.Symplectic.Generation",
+            "Atlas.LinearGroups.Symplectic.ProjectiveGeneration",
+            "Atlas.LinearGroups.Symplectic.PairStabilizer",
+            "Atlas.LinearGroups.Symplectic.Center",
+            "Atlas.LinearGroups.Symplectic.PerfectLarge",
+            "Atlas.LinearGroups.Symplectic.AbelianImages",
+            "Atlas.LinearGroups.Symplectic.TernaryIdentity",
+            "Atlas.LinearGroups.Symplectic.PerfectThree",
+            "Atlas.LinearGroups.Symplectic.BinaryIdentity",
+            "Atlas.LinearGroups.Symplectic.PerfectTwo",
+            "Atlas.LinearGroups.Symplectic.Perfectness",
+            "Atlas.LinearGroups.Symplectic.Nontrivial",
+            "Atlas.LinearGroups.Symplectic.Noncommutative"
+          ]
+        }
+      ],
+      "roots": [
+        "Atlas.Symplectic.exists_scalar_square_ne_one",
+        "Atlas.Symplectic.transvection_mem_commutator_of_scalar",
+        "Atlas.Symplectic.perfect_of_transvections",
+        "Atlas.Symplectic.perfect_of_card_gt_three",
+        "Atlas.Symplectic.projective_perfect_of_card_gt_three",
+        "Atlas.Symplectic.abelian_transvection_images",
+        "Atlas.Symplectic.transvection_pow",
+        "Atlas.Symplectic.perfect_of_abelian_images",
+        "Atlas.Symplectic.ternary_four_transvections",
+        "Atlas.Symplectic.perfect_of_card_three",
+        "Atlas.Symplectic.binary_seven_transvections",
+        "Atlas.Symplectic.perfect_of_card_two",
+        "Atlas.Symplectic.perfect_of_good",
+        "Atlas.Symplectic.projective_perfect_of_good",
+        "Atlas.Symplectic.projection_transvection_ne_one",
+        "Atlas.Symplectic.projective_nontrivial",
+        "Atlas.Symplectic.projective_not_commutative"
+      ]
+    }
+  ]
+}

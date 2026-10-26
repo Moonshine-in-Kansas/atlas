@@ -1,0 +1,985 @@
+STATEMENT Atlas.Comparisons.Catalogue.Entry SOURCE Atlas.Comparisons.CatalogueModels
+Atlas.Comparisons.Catalogue.Entry : Type 1
+STATEMENT Atlas.Comparisons.Catalogue.Extension SOURCE Atlas.Comparisons.CatalogueModels
+Atlas.Comparisons.Catalogue.Extension : Nat → Type 1
+STATEMENT Atlas.Comparisons.Catalogue.FieldOfChar SOURCE Atlas.Comparisons.CatalogueModels
+Atlas.Comparisons.Catalogue.FieldOfChar : Nat → Type 1
+STATEMENT Atlas.Comparisons.Catalogue.FiniteField SOURCE Atlas.Comparisons.CatalogueModels
+Atlas.Comparisons.Catalogue.FiniteField : Type 1
+STATEMENT Atlas.Comparisons.Catalogue.Fixed SOURCE Atlas.Comparisons.CatalogueModels
+Atlas.Comparisons.Catalogue.Fixed : Type
+STATEMENT Atlas.Comparisons.Catalogue.Fixed.Model SOURCE Atlas.Comparisons.CatalogueModels
+Atlas.Comparisons.Catalogue.Fixed.Model : Atlas.Comparisons.Catalogue.Fixed → Type
+STATEMENT Atlas.Comparisons.Catalogue.Fixed.card SOURCE Atlas.Comparisons.CatalogueCardinality
+Atlas.Comparisons.Catalogue.Fixed.card : ∀ (x : Atlas.Comparisons.Catalogue.Fixed),
+  @Eq.{1} Nat (Nat.card.{0} x.Model) (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed x.label))
+STATEMENT Atlas.Comparisons.Catalogue.Fixed.label SOURCE Atlas.Comparisons.CatalogueModels
+Atlas.Comparisons.Catalogue.Fixed.label : Atlas.Comparisons.Catalogue.Fixed → Atlas.OrderArithmetic.FixedLabel
+STATEMENT Atlas.Comparisons.Catalogue.Model SOURCE Atlas.Comparisons.CatalogueModels
+Atlas.Comparisons.Catalogue.Model : Atlas.Comparisons.Catalogue.Entry → Type
+STATEMENT Atlas.Comparisons.Catalogue.admissible SOURCE Atlas.Comparisons.CatalogueModels
+Atlas.Comparisons.Catalogue.admissible : ∀ (x : Atlas.Comparisons.Catalogue.Entry),
+  Atlas.OrderArithmetic.Admissible (Atlas.Comparisons.Catalogue.label x)
+STATEMENT Atlas.Comparisons.Catalogue.card SOURCE Atlas.Comparisons.CatalogueCardinality
+Atlas.Comparisons.Catalogue.card : ∀ (x : Atlas.Comparisons.Catalogue.Entry),
+  @Eq.{1} Nat (Nat.card.{0} (Atlas.Comparisons.Catalogue.Model x))
+    (Atlas.OrderArithmetic.order (Atlas.Comparisons.Catalogue.label x))
+STATEMENT Atlas.Comparisons.Catalogue.exceptional_not_isomorphic SOURCE Atlas.Comparisons.CatalogueObstructions
+Atlas.Comparisons.Catalogue.exceptional_not_isomorphic : ∀ (x y : Atlas.Comparisons.Catalogue.Entry),
+  Atlas.OrderArithmetic.Exceptional (Atlas.Comparisons.Catalogue.label x) (Atlas.Comparisons.Catalogue.label y) →
+    Not
+      (Nonempty.{1}
+        (@MulEquiv.{0, 0} (Atlas.Comparisons.Catalogue.Model x) (Atlas.Comparisons.Catalogue.Model y)
+          (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model x)
+            (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model x)
+              (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model x)
+                (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+                  (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+                    (Atlas.Comparisons.Catalogue.modelGroup x))))))
+          (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model y)
+            (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model y)
+              (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model y)
+                (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model y)
+                  (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model y)
+                    (Atlas.Comparisons.Catalogue.modelGroup y))))))))
+STATEMENT Atlas.Comparisons.Catalogue.exists_normalized SOURCE Atlas.Comparisons.CatalogueNormalization
+Atlas.Comparisons.Catalogue.exists_normalized : ∀ (x : Atlas.Comparisons.Catalogue.Entry),
+  ∃ y,
+    And
+      (@Eq.{1} Atlas.OrderArithmetic.RawEntry (Atlas.Comparisons.Catalogue.label y)
+        (Atlas.OrderArithmetic.normalize (Atlas.Comparisons.Catalogue.label x)))
+      (Nonempty.{1}
+        (@MulEquiv.{0, 0} (Atlas.Comparisons.Catalogue.Model x) (Atlas.Comparisons.Catalogue.Model y)
+          (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model x)
+            (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model x)
+              (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model x)
+                (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+                  (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+                    (Atlas.Comparisons.Catalogue.modelGroup x))))))
+          (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model y)
+            (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model y)
+              (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model y)
+                (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model y)
+                  (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model y)
+                    (Atlas.Comparisons.Catalogue.modelGroup y))))))))
+STATEMENT Atlas.Comparisons.Catalogue.isomorphic_iff_normalized_label_eq SOURCE Atlas.Comparisons
+Atlas.Comparisons.Catalogue.isomorphic_iff_normalized_label_eq : ∀ (x y : Atlas.Comparisons.Catalogue.Entry),
+  Iff
+    (Nonempty.{1}
+      (@MulEquiv.{0, 0} (Atlas.Comparisons.Catalogue.Model x) (Atlas.Comparisons.Catalogue.Model y)
+        (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model x)
+          (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model x)
+            (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model x)
+              (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+                (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+                  (Atlas.Comparisons.Catalogue.modelGroup x))))))
+        (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model y)
+          (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model y)
+            (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model y)
+              (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model y)
+                (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model y)
+                  (Atlas.Comparisons.Catalogue.modelGroup y))))))))
+    (@Eq.{1} Atlas.OrderArithmetic.RawEntry (Atlas.OrderArithmetic.normalize (Atlas.Comparisons.Catalogue.label x))
+      (Atlas.OrderArithmetic.normalize (Atlas.Comparisons.Catalogue.label y)))
+STATEMENT Atlas.Comparisons.Catalogue.isomorphic_of_normalized_label_eq SOURCE Atlas.Comparisons
+Atlas.Comparisons.Catalogue.isomorphic_of_normalized_label_eq : ∀ (x y : Atlas.Comparisons.Catalogue.Entry),
+  @Eq.{1} Atlas.OrderArithmetic.RawEntry (Atlas.OrderArithmetic.normalize (Atlas.Comparisons.Catalogue.label x))
+      (Atlas.OrderArithmetic.normalize (Atlas.Comparisons.Catalogue.label y)) →
+    Nonempty.{1}
+      (@MulEquiv.{0, 0} (Atlas.Comparisons.Catalogue.Model x) (Atlas.Comparisons.Catalogue.Model y)
+        (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model x)
+          (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model x)
+            (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model x)
+              (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+                (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+                  (Atlas.Comparisons.Catalogue.modelGroup x))))))
+        (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model y)
+          (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model y)
+            (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model y)
+              (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model y)
+                (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model y)
+                  (Atlas.Comparisons.Catalogue.modelGroup y)))))))
+STATEMENT Atlas.Comparisons.Catalogue.label SOURCE Atlas.Comparisons.CatalogueModels
+Atlas.Comparisons.Catalogue.label : Atlas.Comparisons.Catalogue.Entry → Atlas.OrderArithmetic.RawEntry
+STATEMENT Atlas.Comparisons.Catalogue.normalizeEquiv SOURCE Atlas.Comparisons.CatalogueNormalization
+Atlas.Comparisons.Catalogue.normalizeEquiv : (x : Atlas.Comparisons.Catalogue.Entry) →
+  @MulEquiv.{0, 0} (Atlas.Comparisons.Catalogue.Model x)
+    (Atlas.Comparisons.Catalogue.Model (Atlas.Comparisons.Catalogue.normalizedEntry x))
+    (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model x)
+      (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model x)
+        (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model x)
+          (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+            (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+              (Atlas.Comparisons.Catalogue.modelGroup x))))))
+    (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model (Atlas.Comparisons.Catalogue.normalizedEntry x))
+      (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model (Atlas.Comparisons.Catalogue.normalizedEntry x))
+        (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model (Atlas.Comparisons.Catalogue.normalizedEntry x))
+          (@DivInvMonoid.toMonoid.{0}
+            (Atlas.Comparisons.Catalogue.Model (Atlas.Comparisons.Catalogue.normalizedEntry x))
+            (@Group.toDivInvMonoid.{0}
+              (Atlas.Comparisons.Catalogue.Model (Atlas.Comparisons.Catalogue.normalizedEntry x))
+              (Atlas.Comparisons.Catalogue.modelGroup (Atlas.Comparisons.Catalogue.normalizedEntry x)))))))
+STATEMENT Atlas.Comparisons.Catalogue.normalizedEntry SOURCE Atlas.Comparisons.CatalogueNormalization
+Atlas.Comparisons.Catalogue.normalizedEntry : Atlas.Comparisons.Catalogue.Entry → Atlas.Comparisons.Catalogue.Entry
+STATEMENT Atlas.Comparisons.Catalogue.normalizedEntry_label SOURCE Atlas.Comparisons.CatalogueNormalization
+Atlas.Comparisons.Catalogue.normalizedEntry_label : ∀ (x : Atlas.Comparisons.Catalogue.Entry),
+  @Eq.{1} Atlas.OrderArithmetic.RawEntry
+    (Atlas.Comparisons.Catalogue.label (Atlas.Comparisons.Catalogue.normalizedEntry x))
+    (Atlas.OrderArithmetic.normalize (Atlas.Comparisons.Catalogue.label x))
+STATEMENT Atlas.Comparisons.Catalogue.normalized_label_eq_of_isomorphic SOURCE Atlas.Comparisons
+Atlas.Comparisons.Catalogue.normalized_label_eq_of_isomorphic : ∀ (x y : Atlas.Comparisons.Catalogue.Entry),
+  Nonempty.{1}
+      (@MulEquiv.{0, 0} (Atlas.Comparisons.Catalogue.Model x) (Atlas.Comparisons.Catalogue.Model y)
+        (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model x)
+          (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model x)
+            (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model x)
+              (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+                (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+                  (Atlas.Comparisons.Catalogue.modelGroup x))))))
+        (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model y)
+          (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model y)
+            (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model y)
+              (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model y)
+                (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model y)
+                  (Atlas.Comparisons.Catalogue.modelGroup y))))))) →
+    @Eq.{1} Atlas.OrderArithmetic.RawEntry (Atlas.OrderArithmetic.normalize (Atlas.Comparisons.Catalogue.label x))
+      (Atlas.OrderArithmetic.normalize (Atlas.Comparisons.Catalogue.label y))
+STATEMENT Atlas.Comparisons.Catalogue.not_isomorphic_of_normalized_label_ne SOURCE Atlas.Comparisons
+Atlas.Comparisons.Catalogue.not_isomorphic_of_normalized_label_ne : ∀ (x y : Atlas.Comparisons.Catalogue.Entry),
+  @Ne.{1} Atlas.OrderArithmetic.RawEntry (Atlas.OrderArithmetic.normalize (Atlas.Comparisons.Catalogue.label x))
+      (Atlas.OrderArithmetic.normalize (Atlas.Comparisons.Catalogue.label y)) →
+    Not
+      (Nonempty.{1}
+        (@MulEquiv.{0, 0} (Atlas.Comparisons.Catalogue.Model x) (Atlas.Comparisons.Catalogue.Model y)
+          (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model x)
+            (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model x)
+              (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model x)
+                (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+                  (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+                    (Atlas.Comparisons.Catalogue.modelGroup x))))))
+          (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model y)
+            (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model y)
+              (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model y)
+                (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model y)
+                  (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model y)
+                    (Atlas.Comparisons.Catalogue.modelGroup y))))))))
+STATEMENT Atlas.Comparisons.Catalogue.not_isomorphic_of_not_collision SOURCE Atlas.Comparisons.CatalogueCardinality
+Atlas.Comparisons.Catalogue.not_isomorphic_of_not_collision : ∀ (x y : Atlas.Comparisons.Catalogue.Entry),
+  Not (Atlas.OrderArithmetic.Collision (Atlas.Comparisons.Catalogue.label x) (Atlas.Comparisons.Catalogue.label y)) →
+    Not
+      (Nonempty.{1}
+        (@MulEquiv.{0, 0} (Atlas.Comparisons.Catalogue.Model x) (Atlas.Comparisons.Catalogue.Model y)
+          (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model x)
+            (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model x)
+              (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model x)
+                (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+                  (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+                    (Atlas.Comparisons.Catalogue.modelGroup x))))))
+          (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model y)
+            (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model y)
+              (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model y)
+                (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model y)
+                  (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model y)
+                    (Atlas.Comparisons.Catalogue.modelGroup y))))))))
+STATEMENT Atlas.Comparisons.Catalogue.same_label_equiv SOURCE Atlas.Comparisons.CatalogueSameLabel
+Atlas.Comparisons.Catalogue.same_label_equiv : ∀ (x y : Atlas.Comparisons.Catalogue.Entry),
+  @Eq.{1} Atlas.OrderArithmetic.RawEntry (Atlas.Comparisons.Catalogue.label x) (Atlas.Comparisons.Catalogue.label y) →
+    Nonempty.{1}
+      (@MulEquiv.{0, 0} (Atlas.Comparisons.Catalogue.Model x) (Atlas.Comparisons.Catalogue.Model y)
+        (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model x)
+          (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model x)
+            (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model x)
+              (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+                (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model x)
+                  (Atlas.Comparisons.Catalogue.modelGroup x))))))
+        (@MulOne.toMul.{0} (Atlas.Comparisons.Catalogue.Model y)
+          (@MulOneClass.toMulOne.{0} (Atlas.Comparisons.Catalogue.Model y)
+            (@Monoid.toMulOneClass.{0} (Atlas.Comparisons.Catalogue.Model y)
+              (@DivInvMonoid.toMonoid.{0} (Atlas.Comparisons.Catalogue.Model y)
+                (@Group.toDivInvMonoid.{0} (Atlas.Comparisons.Catalogue.Model y)
+                  (Atlas.Comparisons.Catalogue.modelGroup y)))))))
+STATEMENT Atlas.Comparisons.CatalogueOrders.B_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.B_card.{u_1} : ∀ (F : Type u_1) [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (r : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) r →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.Orthogonal.B.{u_1} r F inst))
+      (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.B r (Nat.card.{u_1} F)))
+STATEMENT Atlas.Comparisons.CatalogueOrders.Co1_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.Co1_card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Conway1.Model)
+  (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.Co1))
+STATEMENT Atlas.Comparisons.CatalogueOrders.Co2_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.Co2_card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Conway2.Model)
+  (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.Co2))
+STATEMENT Atlas.Comparisons.CatalogueOrders.Co3_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.Co3_card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Conway3.Model)
+  (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.Co3))
+STATEMENT Atlas.Comparisons.CatalogueOrders.Dminus_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.Dminus_card.{u_1,
+  u_2} : ∀ (F : Type u_1) (K : Type u_2) [inst : Field.{u_1} F] [inst_1 : Field.{u_2} K] [inst_2 : Finite.{u_1 + 1} F]
+  [inst_3 : Finite.{u_2 + 1} K]
+  [inst_4 :
+    @Algebra.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+      (@DivisionSemiring.toSemiring.{u_2} K
+        (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))]
+  (hdeg :
+    @Eq.{1} Nat
+      (@Module.finrank.{u_1, u_2} F K
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@Semiring.toAddCommMonoid.{u_2} K
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1))))
+        (@Algebra.toModule.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))
+          inst_4))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+  (r : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) r →
+    @Eq.{1} Nat
+      (Nat.card.{max u_2 u_1} (@Atlas.Orthogonal.DMinus.{u_1, u_2} r F K inst inst_1 inst_2 inst_3 inst_4 hdeg))
+      (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.Dminus r (Nat.card.{u_1} F)))
+STATEMENT Atlas.Comparisons.CatalogueOrders.Dplus_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.Dplus_card.{u_1} : ∀ (F : Type u_1) [inst : Field.{u_1} F] [Finite.{u_1 + 1} F]
+  (r : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) r →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.Orthogonal.DPlus.{u_1} r F inst))
+      (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.Dplus r (Nat.card.{u_1} F)))
+STATEMENT Atlas.Comparisons.CatalogueOrders.F4_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.F4_card.{u_1} : ∀ (F : Type u_1) [inst : Field.{u_1} F] [Finite.{u_1 + 1} F],
+  @Eq.{1} Nat (Nat.card.{u_1} ↥(@Atlas.F4.Model.{u_1} F inst))
+    (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.F4 (Nat.card.{u_1} F)))
+STATEMENT Atlas.Comparisons.CatalogueOrders.Fi22_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.Fi22_card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Fischer22.Model)
+  (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.Fi22))
+STATEMENT Atlas.Comparisons.CatalogueOrders.Fi23_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.Fi23_card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Fischer23.Model)
+  (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.Fi23))
+STATEMENT Atlas.Comparisons.CatalogueOrders.Fi24prime_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.Fi24prime_card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Fischer24Prime.Model)
+  (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.Fi24prime))
+STATEMENT Atlas.Comparisons.CatalogueOrders.G2_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.G2_card.{u_1} : ∀ (F : Type u_1) [inst : Field.{u_1} F] [Finite.{u_1 + 1} F],
+  @Eq.{1} Nat (Nat.card.{u_1} ↥(@Atlas.G2.Model.{u_1} F inst))
+    (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.G2 (Nat.card.{u_1} F)))
+STATEMENT Atlas.Comparisons.CatalogueOrders.HS_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.HS_card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.HigmanSims.Model)
+  (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.HS))
+STATEMENT Atlas.Comparisons.CatalogueOrders.J2_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.J2_card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Janko2.Model)
+  (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.J2))
+STATEMENT Atlas.Comparisons.CatalogueOrders.M11_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.M11_card : ∀ (D : Atlas.Codes.Dodecad) (a : Atlas.Codes.Mathieu12Points D),
+  @Eq.{1} Nat (Nat.card.{0} (Atlas.Sporadic.Mathieu11.Model D a))
+    (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.M11))
+STATEMENT Atlas.Comparisons.CatalogueOrders.M12_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.M12_card : ∀ (D : Atlas.Codes.Dodecad),
+  @Eq.{1} Nat (Nat.card.{0} (Atlas.Sporadic.Mathieu12.Model D))
+    (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.M12))
+STATEMENT Atlas.Comparisons.CatalogueOrders.M22_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.M22_card : ∀ (a : Atlas.Codes.Omega) (b : ↥(Atlas.Codes.Mathieu23Points a)),
+  @Eq.{1} Nat (Nat.card.{0} (Atlas.Sporadic.Mathieu22.Model a b))
+    (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.M22))
+STATEMENT Atlas.Comparisons.CatalogueOrders.M23_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.M23_card : ∀ (a : Atlas.Codes.Omega),
+  @Eq.{1} Nat (Nat.card.{0} (Atlas.Sporadic.Mathieu23.Model a))
+    (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.M23))
+STATEMENT Atlas.Comparisons.CatalogueOrders.M24_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.M24_card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Mathieu24.Model)
+  (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.M24))
+STATEMENT Atlas.Comparisons.CatalogueOrders.McL_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.McL_card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.McLaughlin.Model)
+  (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.McL))
+STATEMENT Atlas.Comparisons.CatalogueOrders.Ru_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.Ru_card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Rudvalis.Model)
+  (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.Ru))
+STATEMENT Atlas.Comparisons.CatalogueOrders.Suz_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.Suz_card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Suzuki.Model)
+  (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.Suz))
+STATEMENT Atlas.Comparisons.CatalogueOrders.Tits_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.Tits_card : @Eq.{1} Nat (Nat.card.{0} Atlas.Tits.Model)
+  (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.fixed Atlas.OrderArithmetic.FixedLabel.Tits))
+STATEMENT Atlas.Comparisons.CatalogueOrders.alternating_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.alternating_card : ∀ (n : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) n →
+    @Eq.{1} Nat (Nat.card.{0} (Atlas.Families.Alternating.Model n))
+      (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.alternating n))
+STATEMENT Atlas.Comparisons.CatalogueOrders.cyclic_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.cyclic_card : ∀ (p : Nat),
+  @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) p →
+    @Eq.{1} Nat (Nat.card.{0} (Atlas.Families.Cyclic.Model p))
+      (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.cyclic p))
+STATEMENT Atlas.Comparisons.CatalogueOrders.field_card_primePower SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.field_card_primePower.{u_1} : ∀ (F : Type u_1) [Field.{u_1} F] [Finite.{u_1 + 1} F],
+  Atlas.OrderArithmetic.PrimePower (Nat.card.{u_1} F)
+STATEMENT Atlas.Comparisons.CatalogueOrders.linear_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.linear_card.{u_1} : ∀ (F : Type u_1) [inst : Field.{u_1} F] [Finite.{u_1 + 1} F]
+  (d : Nat) [@NeZero.{0} Nat (@MulZeroClass.toZero.{0} Nat Nat.instMulZeroClass) d],
+  @Eq.{1} Nat
+    (Nat.card.{u_1}
+      (@Matrix.ProjectiveSpecialLinearGroup.{0, u_1} (Fin d) (instDecidableEqFin d) (Fin.fintype d) F
+        (@Field.toCommRing.{u_1} F inst)))
+    (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.linear d (Nat.card.{u_1} F)))
+STATEMENT Atlas.Comparisons.CatalogueOrders.smallRee_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.smallRee_card.{u_1} : ∀ (F : Type u_1) [inst : Field.{u_1} F]
+  [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  (m : Nat),
+  @Eq.{1} Nat (Nat.card.{u_1} F)
+      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) m)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))) →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.ReeG2.Model.{u_1} F inst inst_1 inst_2 m))
+      (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.smallRee (Nat.card.{u_1} F)))
+STATEMENT Atlas.Comparisons.CatalogueOrders.suzuki_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.suzuki_card.{u_1} : ∀ (F : Type u_1) [inst : Field.{u_1} F]
+  [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))]
+  (m : Nat),
+  @Eq.{1} Nat (Nat.card.{u_1} F)
+      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) m)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))) →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.SuzukiFamily.Group.{u_1} F inst inst_1 inst_2 m))
+      (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.suzuki (Nat.card.{u_1} F)))
+STATEMENT Atlas.Comparisons.CatalogueOrders.symplectic_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.symplectic_card.{u_1} : ∀ (F : Type u_1) [inst : Field.{u_1} F] [Finite.{u_1 + 1} F]
+  (r : Nat),
+  @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) r →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.Symplectic.PSp.{u_1} r F (@Field.toCommRing.{u_1} F inst)))
+      (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.C r (Nat.card.{u_1} F)))
+STATEMENT Atlas.Comparisons.CatalogueOrders.triality_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.triality_card.{u_1,
+  u_2} : ∀ (F : Type u_1) (K : Type u_2) [inst : Field.{u_1} F] [inst_1 : Field.{u_2} K] [inst_2 : Finite.{u_1 + 1} F]
+  [inst_3 : Finite.{u_2 + 1} K]
+  [inst_4 :
+    @Algebra.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+      (@DivisionSemiring.toSemiring.{u_2} K
+        (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))],
+  @Eq.{1} Nat
+      (@Module.finrank.{u_1, u_2} F K
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@Semiring.toAddCommMonoid.{u_2} K
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1))))
+        (@Algebra.toModule.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))
+          inst_4))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+    @Eq.{1} Nat (Nat.card.{u_2} (@Atlas.Triality.Group.{u_1, u_2} F K inst inst_1 inst_2 inst_3 inst_4))
+      (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.trialityD4 (Nat.card.{u_1} F)))
+STATEMENT Atlas.Comparisons.CatalogueOrders.unitary_card SOURCE Atlas.Comparisons.CatalogueOrders
+Atlas.Comparisons.CatalogueOrders.unitary_card.{u_1,
+  u_2} : ∀ (F : Type u_1) (K : Type u_2) [inst : Field.{u_1} F] [inst_1 : Field.{u_2} K] [inst_2 : Finite.{u_1 + 1} F]
+  [inst_3 : Finite.{u_2 + 1} K]
+  [inst_4 :
+    @Algebra.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+      (@DivisionSemiring.toSemiring.{u_2} K
+        (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))]
+  (hdeg :
+    @Eq.{1} Nat
+      (@Module.finrank.{u_1, u_2} F K
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@Semiring.toAddCommMonoid.{u_2} K
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1))))
+        (@Algebra.toModule.{u_1, u_2} F K (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))
+          inst_4))
+      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+  (d : Nat),
+  @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) d →
+    @Eq.{1} Nat (Nat.card.{u_2} (@Atlas.Unitary.PSU.{u_1, u_2} F K inst inst_1 inst_2 inst_3 inst_4 d hdeg))
+      (Atlas.OrderArithmetic.order (Atlas.OrderArithmetic.RawEntry.unitary d (Nat.card.{u_1} F)))
+STATEMENT Atlas.Comparisons.SameFieldSize.fieldEquiv SOURCE Atlas.Comparisons.SameFieldSize
+@Atlas.Comparisons.SameFieldSize.fieldEquiv.{u_1,
+    u_2} : {F : Type u_1} →
+  {E : Type u_2} →
+    [inst : Field.{u_1} F] →
+      [inst_1 : Field.{u_2} E] →
+        [Finite.{u_1 + 1} F] →
+          [Finite.{u_2 + 1} E] →
+            @Eq.{1} Nat (Nat.card.{u_1} F) (Nat.card.{u_2} E) →
+              @RingEquiv.{u_1, u_2} F E
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toMul.{u_2} E
+                  (@instDistribOfSemiring.{u_2} E
+                    (@DivisionSemiring.toSemiring.{u_2} E
+                      (@Semifield.toDivisionSemiring.{u_2} E (@Field.toSemifield.{u_2} E inst_1)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_2} E
+                  (@instDistribOfSemiring.{u_2} E
+                    (@DivisionSemiring.toSemiring.{u_2} E
+                      (@Semifield.toDivisionSemiring.{u_2} E (@Field.toSemifield.{u_2} E inst_1)))))
+STATEMENT Atlas.Comparisons.SameFieldSize.minusEquiv SOURCE Atlas.Comparisons.SameFieldSize
+@Atlas.Comparisons.SameFieldSize.minusEquiv.{u_1, u_2, u_3,
+    u_4} : {F : Type u_1} →
+  {K : Type u_2} →
+    {E : Type u_3} →
+      {L : Type u_4} →
+        [inst : Field.{u_1} F] →
+          [inst_1 : Field.{u_2} K] →
+            [inst_2 : Field.{u_3} E] →
+              [inst_3 : Field.{u_4} L] →
+                [inst_4 : Finite.{u_1 + 1} F] →
+                  [inst_5 : Finite.{u_2 + 1} K] →
+                    [inst_6 : Finite.{u_3 + 1} E] →
+                      [inst_7 : Finite.{u_4 + 1} L] →
+                        [inst_8 :
+                            @Algebra.{u_1, u_2} F K
+                              (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+                              (@DivisionSemiring.toSemiring.{u_2} K
+                                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))] →
+                          [inst_9 :
+                              @Algebra.{u_3, u_4} E L
+                                (@Semifield.toCommSemiring.{u_3} E (@Field.toSemifield.{u_3} E inst_2))
+                                (@DivisionSemiring.toSemiring.{u_4} L
+                                  (@Semifield.toDivisionSemiring.{u_4} L (@Field.toSemifield.{u_4} L inst_3)))] →
+                            (hK :
+                                @Eq.{1} Nat
+                                  (@Module.finrank.{u_1, u_2} F K
+                                    (@DivisionSemiring.toSemiring.{u_1} F
+                                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+                                    (@Semiring.toAddCommMonoid.{u_2} K
+                                      (@DivisionSemiring.toSemiring.{u_2} K
+                                        (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1))))
+                                    (@Algebra.toModule.{u_1, u_2} F K
+                                      (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+                                      (@DivisionSemiring.toSemiring.{u_2} K
+                                        (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))
+                                      inst_8))
+                                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) →
+                              (hL :
+                                  @Eq.{1} Nat
+                                    (@Module.finrank.{u_3, u_4} E L
+                                      (@DivisionSemiring.toSemiring.{u_3} E
+                                        (@Semifield.toDivisionSemiring.{u_3} E (@Field.toSemifield.{u_3} E inst_2)))
+                                      (@Semiring.toAddCommMonoid.{u_4} L
+                                        (@DivisionSemiring.toSemiring.{u_4} L
+                                          (@Semifield.toDivisionSemiring.{u_4} L (@Field.toSemifield.{u_4} L inst_3))))
+                                      (@Algebra.toModule.{u_3, u_4} E L
+                                        (@Semifield.toCommSemiring.{u_3} E (@Field.toSemifield.{u_3} E inst_2))
+                                        (@DivisionSemiring.toSemiring.{u_4} L
+                                          (@Semifield.toDivisionSemiring.{u_4} L (@Field.toSemifield.{u_4} L inst_3)))
+                                        inst_9))
+                                    (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) →
+                                @Eq.{1} Nat (Nat.card.{u_1} F) (Nat.card.{u_3} E) →
+                                  (r : Nat) →
+                                    @MulEquiv.{max u_2 u_1, max u_4 u_3}
+                                      (@Atlas.Orthogonal.DMinus.{u_1, u_2} r F K inst inst_1 inst_4 inst_5 inst_8 hK)
+                                      (@Atlas.Orthogonal.DMinus.{u_3, u_4} r E L inst_2 inst_3 inst_6 inst_7 inst_9 hL)
+                                      (@MulOne.toMul.{max u_1 u_2}
+                                        (@Atlas.Orthogonal.DMinus.{u_1, u_2} r F K inst inst_1 inst_4 inst_5 inst_8 hK)
+                                        (@MulOneClass.toMulOne.{max u_1 u_2}
+                                          (@Atlas.Orthogonal.DMinus.{u_1, u_2} r F K inst inst_1 inst_4 inst_5 inst_8
+                                            hK)
+                                          (@Monoid.toMulOneClass.{max u_1 u_2}
+                                            (@Atlas.Orthogonal.DMinus.{u_1, u_2} r F K inst inst_1 inst_4 inst_5 inst_8
+                                              hK)
+                                            (@DivInvMonoid.toMonoid.{max u_1 u_2}
+                                              (@Atlas.Orthogonal.DMinus.{u_1, u_2} r F K inst inst_1 inst_4 inst_5
+                                                inst_8 hK)
+                                              (@Group.toDivInvMonoid.{max u_1 u_2}
+                                                (@Atlas.Orthogonal.DMinus.{u_1, u_2} r F K inst inst_1 inst_4 inst_5
+                                                  inst_8 hK)
+                                                (@Atlas.Orthogonal.projectiveElementaryGroup.{u_1, max u_1 u_2} F
+                                                  (Atlas.Orthogonal.Minus.Vector.{u_1, u_2}
+                                                    (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) r
+                                                      (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+                                                    F K)
+                                                  inst
+                                                  (@Prod.instAddCommGroup.{u_1, u_2}
+                                                    (Atlas.Orthogonal.VectorD.{u_1}
+                                                      (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) r
+                                                        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+                                                      F)
+                                                    K
+                                                    (@Pi.addCommGroup.{0, u_1}
+                                                      (Atlas.Orthogonal.Index
+                                                        (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                                                          r
+                                                          (@OfNat.ofNat.{0} Nat (nat_lit 1)
+                                                            (instOfNatNat (nat_lit 1)))))
+                                                      (fun a => F) fun i =>
+                                                      @Ring.toAddCommGroup.{u_1} F
+                                                        (@DivisionRing.toRing.{u_1} F
+                                                          (@Field.toDivisionRing.{u_1} F inst)))
+                                                    (@Ring.toAddCommGroup.{u_2} K
+                                                      (@DivisionRing.toRing.{u_2} K
+                                                        (@Field.toDivisionRing.{u_2} K inst_1))))
+                                                  (@Prod.instModule.{u_1, u_1, u_2} F
+                                                    (Atlas.Orthogonal.VectorD.{u_1}
+                                                      (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) r
+                                                        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+                                                      F)
+                                                    K
+                                                    (@CommSemiring.toSemiring.{u_1} F
+                                                      (@Semifield.toCommSemiring.{u_1} F
+                                                        (@Field.toSemifield.{u_1} F inst)))
+                                                    (@Pi.addCommMonoid.{0, u_1}
+                                                      (Atlas.Orthogonal.Index
+                                                        (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                                                          r
+                                                          (@OfNat.ofNat.{0} Nat (nat_lit 1)
+                                                            (instOfNatNat (nat_lit 1)))))
+                                                      (fun a => F) fun i =>
+                                                      @Semiring.toAddCommMonoid.{u_1} F
+                                                        (@DivisionSemiring.toSemiring.{u_1} F
+                                                          (@Semifield.toDivisionSemiring.{u_1} F
+                                                            (@Field.toSemifield.{u_1} F inst))))
+                                                    (@Semiring.toAddCommMonoid.{u_2} K
+                                                      (@DivisionSemiring.toSemiring.{u_2} K
+                                                        (@Semifield.toDivisionSemiring.{u_2} K
+                                                          (@Field.toSemifield.{u_2} K inst_1))))
+                                                    (@Pi.Function.module.{0, u_1, u_1}
+                                                      (Atlas.Orthogonal.Index
+                                                        (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                                                          r
+                                                          (@OfNat.ofNat.{0} Nat (nat_lit 1)
+                                                            (instOfNatNat (nat_lit 1)))))
+                                                      F F
+                                                      (@CommSemiring.toSemiring.{u_1} F
+                                                        (@Semifield.toCommSemiring.{u_1} F
+                                                          (@Field.toSemifield.{u_1} F inst)))
+                                                      (@Semiring.toAddCommMonoid.{u_1} F
+                                                        (@DivisionSemiring.toSemiring.{u_1} F
+                                                          (@Semifield.toDivisionSemiring.{u_1} F
+                                                            (@Field.toSemifield.{u_1} F inst))))
+                                                      (@Semiring.toModule.{u_1} F
+                                                        (@CommSemiring.toSemiring.{u_1} F
+                                                          (@Semifield.toCommSemiring.{u_1} F
+                                                            (@Field.toSemifield.{u_1} F inst)))))
+                                                    (@Algebra.toModule.{u_1, u_2} F K
+                                                      (@Semifield.toCommSemiring.{u_1} F
+                                                        (@Field.toSemifield.{u_1} F inst))
+                                                      (@DivisionSemiring.toSemiring.{u_2} K
+                                                        (@Semifield.toDivisionSemiring.{u_2} K
+                                                          (@Field.toSemifield.{u_2} K inst_1)))
+                                                      inst_8))
+                                                  (@Atlas.Orthogonal.Minus.form.{u_1, u_2} F K inst inst_1 inst_4 inst_5
+                                                    inst_8 hK
+                                                    (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) r
+                                                      (@OfNat.ofNat.{0} Nat (nat_lit 1)
+                                                        (instOfNatNat (nat_lit 1)))))))))))
+                                      (@MulOne.toMul.{max u_3 u_4}
+                                        (@Atlas.Orthogonal.DMinus.{u_3, u_4} r E L inst_2 inst_3 inst_6 inst_7 inst_9
+                                          hL)
+                                        (@MulOneClass.toMulOne.{max u_3 u_4}
+                                          (@Atlas.Orthogonal.DMinus.{u_3, u_4} r E L inst_2 inst_3 inst_6 inst_7 inst_9
+                                            hL)
+                                          (@Monoid.toMulOneClass.{max u_3 u_4}
+                                            (@Atlas.Orthogonal.DMinus.{u_3, u_4} r E L inst_2 inst_3 inst_6 inst_7
+                                              inst_9 hL)
+                                            (@DivInvMonoid.toMonoid.{max u_3 u_4}
+                                              (@Atlas.Orthogonal.DMinus.{u_3, u_4} r E L inst_2 inst_3 inst_6 inst_7
+                                                inst_9 hL)
+                                              (@Group.toDivInvMonoid.{max u_3 u_4}
+                                                (@Atlas.Orthogonal.DMinus.{u_3, u_4} r E L inst_2 inst_3 inst_6 inst_7
+                                                  inst_9 hL)
+                                                (@Atlas.Orthogonal.projectiveElementaryGroup.{u_3, max u_3 u_4} E
+                                                  (Atlas.Orthogonal.Minus.Vector.{u_3, u_4}
+                                                    (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) r
+                                                      (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+                                                    E L)
+                                                  inst_2
+                                                  (@Prod.instAddCommGroup.{u_3, u_4}
+                                                    (Atlas.Orthogonal.VectorD.{u_3}
+                                                      (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) r
+                                                        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+                                                      E)
+                                                    L
+                                                    (@Pi.addCommGroup.{0, u_3}
+                                                      (Atlas.Orthogonal.Index
+                                                        (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                                                          r
+                                                          (@OfNat.ofNat.{0} Nat (nat_lit 1)
+                                                            (instOfNatNat (nat_lit 1)))))
+                                                      (fun a => E) fun i =>
+                                                      @Ring.toAddCommGroup.{u_3} E
+                                                        (@DivisionRing.toRing.{u_3} E
+                                                          (@Field.toDivisionRing.{u_3} E inst_2)))
+                                                    (@Ring.toAddCommGroup.{u_4} L
+                                                      (@DivisionRing.toRing.{u_4} L
+                                                        (@Field.toDivisionRing.{u_4} L inst_3))))
+                                                  (@Prod.instModule.{u_3, u_3, u_4} E
+                                                    (Atlas.Orthogonal.VectorD.{u_3}
+                                                      (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) r
+                                                        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+                                                      E)
+                                                    L
+                                                    (@CommSemiring.toSemiring.{u_3} E
+                                                      (@Semifield.toCommSemiring.{u_3} E
+                                                        (@Field.toSemifield.{u_3} E inst_2)))
+                                                    (@Pi.addCommMonoid.{0, u_3}
+                                                      (Atlas.Orthogonal.Index
+                                                        (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                                                          r
+                                                          (@OfNat.ofNat.{0} Nat (nat_lit 1)
+                                                            (instOfNatNat (nat_lit 1)))))
+                                                      (fun a => E) fun i =>
+                                                      @Semiring.toAddCommMonoid.{u_3} E
+                                                        (@DivisionSemiring.toSemiring.{u_3} E
+                                                          (@Semifield.toDivisionSemiring.{u_3} E
+                                                            (@Field.toSemifield.{u_3} E inst_2))))
+                                                    (@Semiring.toAddCommMonoid.{u_4} L
+                                                      (@DivisionSemiring.toSemiring.{u_4} L
+                                                        (@Semifield.toDivisionSemiring.{u_4} L
+                                                          (@Field.toSemifield.{u_4} L inst_3))))
+                                                    (@Pi.Function.module.{0, u_3, u_3}
+                                                      (Atlas.Orthogonal.Index
+                                                        (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                                                          r
+                                                          (@OfNat.ofNat.{0} Nat (nat_lit 1)
+                                                            (instOfNatNat (nat_lit 1)))))
+                                                      E E
+                                                      (@CommSemiring.toSemiring.{u_3} E
+                                                        (@Semifield.toCommSemiring.{u_3} E
+                                                          (@Field.toSemifield.{u_3} E inst_2)))
+                                                      (@Semiring.toAddCommMonoid.{u_3} E
+                                                        (@DivisionSemiring.toSemiring.{u_3} E
+                                                          (@Semifield.toDivisionSemiring.{u_3} E
+                                                            (@Field.toSemifield.{u_3} E inst_2))))
+                                                      (@Semiring.toModule.{u_3} E
+                                                        (@CommSemiring.toSemiring.{u_3} E
+                                                          (@Semifield.toCommSemiring.{u_3} E
+                                                            (@Field.toSemifield.{u_3} E inst_2)))))
+                                                    (@Algebra.toModule.{u_3, u_4} E L
+                                                      (@Semifield.toCommSemiring.{u_3} E
+                                                        (@Field.toSemifield.{u_3} E inst_2))
+                                                      (@DivisionSemiring.toSemiring.{u_4} L
+                                                        (@Semifield.toDivisionSemiring.{u_4} L
+                                                          (@Field.toSemifield.{u_4} L inst_3)))
+                                                      inst_9))
+                                                  (@Atlas.Orthogonal.Minus.form.{u_3, u_4} E L inst_2 inst_3 inst_6
+                                                    inst_7 inst_9 hL
+                                                    (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) r
+                                                      (@OfNat.ofNat.{0} Nat (nat_lit 1)
+                                                        (instOfNatNat (nat_lit 1)))))))))))
+STATEMENT Atlas.Comparisons.SameFieldSize.trialityEquiv SOURCE Atlas.Comparisons.SameFieldSize
+@Atlas.Comparisons.SameFieldSize.trialityEquiv.{u_1, u_2, u_3,
+    u_4} : {F : Type u_1} →
+  {K : Type u_2} →
+    {E : Type u_3} →
+      {L : Type u_4} →
+        [inst : Field.{u_1} F] →
+          [inst_1 : Field.{u_2} K] →
+            [inst_2 : Field.{u_3} E] →
+              [inst_3 : Field.{u_4} L] →
+                [inst_4 : Finite.{u_1 + 1} F] →
+                  [inst_5 : Finite.{u_2 + 1} K] →
+                    [inst_6 : Finite.{u_3 + 1} E] →
+                      [inst_7 : Finite.{u_4 + 1} L] →
+                        [inst_8 :
+                            @Algebra.{u_1, u_2} F K
+                              (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+                              (@DivisionSemiring.toSemiring.{u_2} K
+                                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))] →
+                          [inst_9 :
+                              @Algebra.{u_3, u_4} E L
+                                (@Semifield.toCommSemiring.{u_3} E (@Field.toSemifield.{u_3} E inst_2))
+                                (@DivisionSemiring.toSemiring.{u_4} L
+                                  (@Semifield.toDivisionSemiring.{u_4} L (@Field.toSemifield.{u_4} L inst_3)))] →
+                            @Eq.{1} Nat
+                                (@Module.finrank.{u_1, u_2} F K
+                                  (@DivisionSemiring.toSemiring.{u_1} F
+                                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+                                  (@Semiring.toAddCommMonoid.{u_2} K
+                                    (@DivisionSemiring.toSemiring.{u_2} K
+                                      (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1))))
+                                  (@Algebra.toModule.{u_1, u_2} F K
+                                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+                                    (@DivisionSemiring.toSemiring.{u_2} K
+                                      (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_1)))
+                                    inst_8))
+                                (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+                              @Eq.{1} Nat
+                                  (@Module.finrank.{u_3, u_4} E L
+                                    (@DivisionSemiring.toSemiring.{u_3} E
+                                      (@Semifield.toDivisionSemiring.{u_3} E (@Field.toSemifield.{u_3} E inst_2)))
+                                    (@Semiring.toAddCommMonoid.{u_4} L
+                                      (@DivisionSemiring.toSemiring.{u_4} L
+                                        (@Semifield.toDivisionSemiring.{u_4} L (@Field.toSemifield.{u_4} L inst_3))))
+                                    (@Algebra.toModule.{u_3, u_4} E L
+                                      (@Semifield.toCommSemiring.{u_3} E (@Field.toSemifield.{u_3} E inst_2))
+                                      (@DivisionSemiring.toSemiring.{u_4} L
+                                        (@Semifield.toDivisionSemiring.{u_4} L (@Field.toSemifield.{u_4} L inst_3)))
+                                      inst_9))
+                                  (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+                                @Eq.{1} Nat (Nat.card.{u_1} F) (Nat.card.{u_3} E) →
+                                  @MulEquiv.{u_2, u_4}
+                                    (@Atlas.Triality.Group.{u_1, u_2} F K inst inst_1 inst_4 inst_5 inst_8)
+                                    (@Atlas.Triality.Group.{u_3, u_4} E L inst_2 inst_3 inst_6 inst_7 inst_9)
+                                    (@Subgroup.mul.{u_2}
+                                      (@Atlas.Orthogonal.O_DPlus.{u_2}
+                                        (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K
+                                        (@Field.toCommRing.{u_2} K inst_1))
+                                      (@Subgroup.toGroup.{u_2}
+                                        (@LinearEquiv.{u_2, u_2, u_2, u_2} K K
+                                          (@CommSemiring.toSemiring.{u_2} K
+                                            (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))
+                                          (@CommSemiring.toSemiring.{u_2} K
+                                            (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))
+                                          (@RingHom.id.{u_2} K
+                                            (@Semiring.toNonAssocSemiring.{u_2} K
+                                              (@CommSemiring.toSemiring.{u_2} K
+                                                (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))))
+                                          (@RingHom.id.{u_2} K
+                                            (@Semiring.toNonAssocSemiring.{u_2} K
+                                              (@CommSemiring.toSemiring.{u_2} K
+                                                (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))))
+                                          ⋯ ⋯
+                                          (Atlas.Orthogonal.VectorD.{u_2}
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K)
+                                          (Atlas.Orthogonal.VectorD.{u_2}
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K)
+                                          (@AddCommGroup.toAddCommMonoid.{u_2}
+                                            (Atlas.Orthogonal.VectorD.{u_2}
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K)
+                                            (@Pi.addCommGroup.{0, u_2}
+                                              (Atlas.Orthogonal.Index
+                                                (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                                              (fun a => K) fun i =>
+                                              @Ring.toAddCommGroup.{u_2} K
+                                                (@CommRing.toRing.{u_2} K (@Field.toCommRing.{u_2} K inst_1))))
+                                          (@AddCommGroup.toAddCommMonoid.{u_2}
+                                            (Atlas.Orthogonal.VectorD.{u_2}
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K)
+                                            (@Pi.addCommGroup.{0, u_2}
+                                              (Atlas.Orthogonal.Index
+                                                (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                                              (fun a => K) fun i =>
+                                              @Ring.toAddCommGroup.{u_2} K
+                                                (@CommRing.toRing.{u_2} K (@Field.toCommRing.{u_2} K inst_1))))
+                                          (@Pi.Function.module.{0, u_2, u_2}
+                                            (Atlas.Orthogonal.Index
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                                            K K
+                                            (@CommSemiring.toSemiring.{u_2} K
+                                              (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))
+                                            (@Semiring.toAddCommMonoid.{u_2} K
+                                              (@CommSemiring.toSemiring.{u_2} K
+                                                (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1))))
+                                            (@Semiring.toModule.{u_2} K
+                                              (@CommSemiring.toSemiring.{u_2} K
+                                                (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))))
+                                          (@Pi.Function.module.{0, u_2, u_2}
+                                            (Atlas.Orthogonal.Index
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                                            K K
+                                            (@CommSemiring.toSemiring.{u_2} K
+                                              (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))
+                                            (@Semiring.toAddCommMonoid.{u_2} K
+                                              (@CommSemiring.toSemiring.{u_2} K
+                                                (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1))))
+                                            (@Semiring.toModule.{u_2} K
+                                              (@CommSemiring.toSemiring.{u_2} K
+                                                (@CommRing.toCommSemiring.{u_2} K
+                                                  (@Field.toCommRing.{u_2} K inst_1))))))
+                                        (@LinearEquiv.automorphismGroup.{u_2, u_2} K
+                                          (Atlas.Orthogonal.VectorD.{u_2}
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K)
+                                          (@CommSemiring.toSemiring.{u_2} K
+                                            (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))
+                                          (@AddCommGroup.toAddCommMonoid.{u_2}
+                                            (Atlas.Orthogonal.VectorD.{u_2}
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K)
+                                            (@Pi.addCommGroup.{0, u_2}
+                                              (Atlas.Orthogonal.Index
+                                                (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                                              (fun a => K) fun i =>
+                                              @Ring.toAddCommGroup.{u_2} K
+                                                (@CommRing.toRing.{u_2} K (@Field.toCommRing.{u_2} K inst_1))))
+                                          (@Pi.Function.module.{0, u_2, u_2}
+                                            (Atlas.Orthogonal.Index
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                                            K K
+                                            (@CommSemiring.toSemiring.{u_2} K
+                                              (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))
+                                            (@Semiring.toAddCommMonoid.{u_2} K
+                                              (@CommSemiring.toSemiring.{u_2} K
+                                                (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1))))
+                                            (@Semiring.toModule.{u_2} K
+                                              (@CommSemiring.toSemiring.{u_2} K
+                                                (@CommRing.toCommSemiring.{u_2} K
+                                                  (@Field.toCommRing.{u_2} K inst_1))))))
+                                        (@Atlas.Orthogonal.isometrySubgroup.{u_2, u_2} K
+                                          (@Field.toCommRing.{u_2} K inst_1)
+                                          (Atlas.Orthogonal.VectorD.{u_2}
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K)
+                                          (@Pi.addCommGroup.{0, u_2}
+                                            (Atlas.Orthogonal.Index
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                                            (fun a => K) fun i =>
+                                            @Ring.toAddCommGroup.{u_2} K
+                                              (@CommRing.toRing.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))
+                                          (@Pi.Function.module.{0, u_2, u_2}
+                                            (Atlas.Orthogonal.Index
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                                            K K
+                                            (@CommSemiring.toSemiring.{u_2} K
+                                              (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))
+                                            (@Semiring.toAddCommMonoid.{u_2} K
+                                              (@CommSemiring.toSemiring.{u_2} K
+                                                (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1))))
+                                            (@Semiring.toModule.{u_2} K
+                                              (@CommSemiring.toSemiring.{u_2} K
+                                                (@CommRing.toCommSemiring.{u_2} K (@Field.toCommRing.{u_2} K inst_1)))))
+                                          (@Atlas.Orthogonal.formD.{u_2}
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) K
+                                            (@Field.toCommRing.{u_2} K inst_1))))
+                                      (@Atlas.Triality.generated.{u_1, u_2} F K inst inst_1 inst_4 inst_5 inst_8))
+                                    (@Subgroup.mul.{u_4}
+                                      (@Atlas.Orthogonal.O_DPlus.{u_4}
+                                        (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) L
+                                        (@Field.toCommRing.{u_4} L inst_3))
+                                      (@Subgroup.toGroup.{u_4}
+                                        (@LinearEquiv.{u_4, u_4, u_4, u_4} L L
+                                          (@CommSemiring.toSemiring.{u_4} L
+                                            (@CommRing.toCommSemiring.{u_4} L (@Field.toCommRing.{u_4} L inst_3)))
+                                          (@CommSemiring.toSemiring.{u_4} L
+                                            (@CommRing.toCommSemiring.{u_4} L (@Field.toCommRing.{u_4} L inst_3)))
+                                          (@RingHom.id.{u_4} L
+                                            (@Semiring.toNonAssocSemiring.{u_4} L
+                                              (@CommSemiring.toSemiring.{u_4} L
+                                                (@CommRing.toCommSemiring.{u_4} L (@Field.toCommRing.{u_4} L inst_3)))))
+                                          (@RingHom.id.{u_4} L
+                                            (@Semiring.toNonAssocSemiring.{u_4} L
+                                              (@CommSemiring.toSemiring.{u_4} L
+                                                (@CommRing.toCommSemiring.{u_4} L (@Field.toCommRing.{u_4} L inst_3)))))
+                                          ⋯ ⋯
+                                          (Atlas.Orthogonal.VectorD.{u_4}
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) L)
+                                          (Atlas.Orthogonal.VectorD.{u_4}
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) L)
+                                          (@AddCommGroup.toAddCommMonoid.{u_4}
+                                            (Atlas.Orthogonal.VectorD.{u_4}
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) L)
+                                            (@Pi.addCommGroup.{0, u_4}
+                                              (Atlas.Orthogonal.Index
+                                                (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                                              (fun a => L) fun i =>
+                                              @Ring.toAddCommGroup.{u_4} L
+                                                (@CommRing.toRing.{u_4} L (@Field.toCommRing.{u_4} L inst_3))))
+                                          (@AddCommGroup.toAddCommMonoid.{u_4}
+                                            (Atlas.Orthogonal.VectorD.{u_4}
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) L)
+                                            (@Pi.addCommGroup.{0, u_4}
+                                              (Atlas.Orthogonal.Index
+                                                (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                                              (fun a => L) fun i =>
+                                              @Ring.toAddCommGroup.{u_4} L
+                                                (@CommRing.toRing.{u_4} L (@Field.toCommRing.{u_4} L inst_3))))
+                                          (@Pi.Function.module.{0, u_4, u_4}
+                                            (Atlas.Orthogonal.Index
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                                            L L
+                                            (@CommSemiring.toSemiring.{u_4} L
+                                              (@CommRing.toCommSemiring.{u_4} L (@Field.toCommRing.{u_4} L inst_3)))
+                                            (@Semiring.toAddCommMonoid.{u_4} L
+                                              (@CommSemiring.toSemiring.{u_4} L
+                                                (@CommRing.toCommSemiring.{u_4} L (@Field.toCommRing.{u_4} L inst_3))))
+                                            (@Semiring.toModule.{u_4} L
+                                              (@CommSemiring.toSemiring.{u_4} L
+                                                (@CommRing.toCommSemiring.{u_4} L (@Field.toCommRing.{u_4} L inst_3)))))
+                                          (@Pi.Function.module.{0, u_4, u_4}
+                                            (Atlas.Orthogonal.Index
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                                            L L
+                                            (@CommSemiring.toSemiring.{u_4} L
+                                              (@CommRing.toCommSemiring.{u_4} L (@Field.toCommRing.{u_4} L inst_3)))
+                                            (@Semiring.toAddCommMonoid.{u_4} L
+                                              (@CommSemiring.toSemiring.{u_4} L
+                                                (@CommRing.toCommSemiring.{u_4} L (@Field.toCommRing.{u_4} L inst_3))))
+                                            (@Semiring.toModule.{u_4} L
+                                              (@CommSemiring.toSemiring.{u_4} L
+                                                (@CommRing.toCommSemiring.{u_4} L
+                                                  (@Field.toCommRing.{u_4} L inst_3))))))
+                                        (@LinearEquiv.automorphismGroup.{u_4, u_4} L
+                                          (Atlas.Orthogonal.VectorD.{u_4}
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) L)
+                                          (@CommSemiring.toSemiring.{u_4} L
+                                            (@CommRing.toCommSemiring.{u_4} L (@Field.toCommRing.{u_4} L inst_3)))
+                                          (@AddCommGroup.toAddCommMonoid.{u_4}
+                                            (Atlas.Orthogonal.VectorD.{u_4}
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) L)
+                                            (@Pi.addCommGroup.{0, u_4}
+                                              (Atlas.Orthogonal.Index
+                                                (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                                              (fun a => L) fun i =>
+                                              @Ring.toAddCommGroup.{u_4} L
+                                                (@CommRing.toRing.{u_4} L (@Field.toCommRing.{u_4} L inst_3))))
+                                          (@Pi.Function.module.{0, u_4, u_4}
+                                            (Atlas.Orthogonal.Index
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                                            L L
+                                            (@CommSemiring.toSemiring.{u_4} L
+                                              (@CommRing.toCommSemiring.{u_4} L (@Field.toCommRing.{u_4} L inst_3)))
+                                            (@Semiring.toAddCommMonoid.{u_4} L
+                                              (@CommSemiring.toSemiring.{u_4} L
+                                                (@CommRing.toCommSemiring.{u_4} L (@Field.toCommRing.{u_4} L inst_3))))
+                                            (@Semiring.toModule.{u_4} L
+                                              (@CommSemiring.toSemiring.{u_4} L
+                                                (@CommRing.toCommSemiring.{u_4} L
+                                                  (@Field.toCommRing.{u_4} L inst_3))))))
+                                        (@Atlas.Orthogonal.isometrySubgroup.{u_4, u_4} L
+                                          (@Field.toCommRing.{u_4} L inst_3)
+                                          (Atlas.Orthogonal.VectorD.{u_4}
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) L)
+                                          (@Pi.addCommGroup.{0, u_4}
+                                            (Atlas.Orthogonal.Index
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                                            (fun a => L) fun i =>
+                                            @Ring.toAddCommGroup.{u_4} L
+                                              (@CommRing.toRing.{u_4} L (@Field.toCommRing.{u_4} L inst_3)))
+                                          (@Pi.Function.module.{0, u_4, u_4}
+                                            (Atlas.Orthogonal.Index
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))))
+                                            L L
+                                            (@CommSemiring.toSemiring.{u_4} L
+                                              (@CommRing.toCommSemiring.{u_4} L (@Field.toCommRing.{u_4} L inst_3)))
+                                            (@Semiring.toAddCommMonoid.{u_4} L
+                                              (@CommSemiring.toSemiring.{u_4} L
+                                                (@CommRing.toCommSemiring.{u_4} L (@Field.toCommRing.{u_4} L inst_3))))
+                                            (@Semiring.toModule.{u_4} L
+                                              (@CommSemiring.toSemiring.{u_4} L
+                                                (@CommRing.toCommSemiring.{u_4} L (@Field.toCommRing.{u_4} L inst_3)))))
+                                          (@Atlas.Orthogonal.formD.{u_4}
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) L
+                                            (@Field.toCommRing.{u_4} L inst_3))))
+                                      (@Atlas.Triality.generated.{u_3, u_4} E L inst_2 inst_3 inst_6 inst_7 inst_9))
+STATEMENT Atlas.Comparisons.not_isomorphic_of_card_ne SOURCE Atlas.Comparisons.Cardinality
+@Atlas.Comparisons.not_isomorphic_of_card_ne.{u_1,
+    u_2} : ∀ {G : Type u_1} {H : Type u_2} [inst : Group.{u_1} G] [inst_1 : Group.{u_2} H],
+  @Ne.{1} Nat (Nat.card.{u_1} G) (Nat.card.{u_2} H) →
+    Not
+      (Nonempty.{max (u_2 + 1) (u_1 + 1)}
+        (@MulEquiv.{u_1, u_2} G H
+          (@MulOne.toMul.{u_1} G
+            (@MulOneClass.toMulOne.{u_1} G
+              (@Monoid.toMulOneClass.{u_1} G (@DivInvMonoid.toMonoid.{u_1} G (@Group.toDivInvMonoid.{u_1} G inst)))))
+          (@MulOne.toMul.{u_2} H
+            (@MulOneClass.toMulOne.{u_2} H
+              (@Monoid.toMulOneClass.{u_2} H
+                (@DivInvMonoid.toMonoid.{u_2} H (@Group.toDivInvMonoid.{u_2} H inst_1)))))))

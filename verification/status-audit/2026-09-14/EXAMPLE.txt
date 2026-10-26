@@ -1,0 +1,136 @@
+@[reducible] def Atlas.Sporadic.Fischer22.Model : Type :=
+Atlas.Fischer.ResidueGroup Atlas.Fischer.fischer22Marking
+@[reducible] def Atlas.Fischer.ResidueGroup : Finset.{0} Atlas.Codes.Omega → Type :=
+fun S =>
+  @HasQuotient.Quotient.{0, 0} (↥(Atlas.Fischer.residueCentralizer S))
+    (@Subgroup.{0} (↥(Atlas.Fischer.residueCentralizer S))
+      (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+        (@Subgroup.toGroup.{0}
+          (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          (@Equiv.Perm.permGroup.{0}
+            (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          Atlas.Fischer.rootGeneratedRayGroup)
+        (Atlas.Fischer.residueCentralizer S)))
+    (@QuotientGroup.instHasQuotientSubgroup.{0} (↥(Atlas.Fischer.residueCentralizer S))
+      (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+        (@Subgroup.toGroup.{0}
+          (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          (@Equiv.Perm.permGroup.{0}
+            (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+          Atlas.Fischer.rootGeneratedRayGroup)
+        (Atlas.Fischer.residueCentralizer S)))
+    (Atlas.Fischer.residueCentralElementary S)
+@[reducible] def Atlas.Fischer.residueCentralizer : Finset.{0} Atlas.Codes.Omega →
+  @Subgroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+    (@Subgroup.toGroup.{0}
+      (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      (@Equiv.Perm.permGroup.{0}
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      Atlas.Fischer.rootGeneratedRayGroup) :=
+fun S => Atlas.Fischer.markedPentadPointwise S
+def Atlas.Fischer.residueCentralElementary : (S : Finset.{0} Atlas.Codes.Omega) →
+  @Subgroup.{0} (↥(Atlas.Fischer.residueCentralizer S))
+    (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+      (@Subgroup.toGroup.{0}
+        (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        (@Equiv.Perm.permGroup.{0}
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        Atlas.Fischer.rootGeneratedRayGroup)
+      (Atlas.Fischer.residueCentralizer S)) :=
+fun S =>
+  @Subgroup.subgroupOf.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+    (@Subgroup.toGroup.{0}
+      (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      (@Equiv.Perm.permGroup.{0}
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      Atlas.Fischer.rootGeneratedRayGroup)
+    (Atlas.Fischer.residueElementary S) (Atlas.Fischer.residueCentralizer S)
+def Atlas.Fischer.fischer22Marking : Finset.{0} Atlas.Codes.Omega :=
+@Insert.insert.{0, 0} Atlas.Codes.Omega (Finset.{0} Atlas.Codes.Omega)
+  (@Finset.instInsert.{0} Atlas.Codes.Omega fun a b =>
+    @instDecidableEqProd.{0, 0} Atlas.Codes.HexIndex Atlas.Codes.Tetrad
+      (fun a b =>
+        @instDecidableEqProd.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+          (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) a b)
+      (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))) a b)
+  Atlas.Fischer.fischerFirstCoordinate
+  (@Singleton.singleton.{0, 0} Atlas.Codes.Omega (Finset.{0} Atlas.Codes.Omega)
+    (@Finset.instSingleton.{0} Atlas.Codes.Omega) Atlas.Fischer.fischerSecondCoordinate)
+@QuotientGroup.Quotient.group.{0} (↥(Atlas.Fischer.residueCentralizer Atlas.Fischer.fischer22Marking))
+  (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+    (@Subgroup.toGroup.{0}
+      (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      (@Equiv.Perm.permGroup.{0}
+        (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+      Atlas.Fischer.rootGeneratedRayGroup)
+    (Atlas.Fischer.residueCentralizer Atlas.Fischer.fischer22Marking))
+  (Atlas.Fischer.residueCentralElementary Atlas.Fischer.fischer22Marking) ⋯
+⋯
+Atlas.Sporadic.Fischer22.finite : Finite.{1} Atlas.Sporadic.Fischer22.Model
+Atlas.Sporadic.Fischer22.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Fischer22.Model)
+  (@OfNat.ofNat.{0} Nat (nat_lit 64561751654400) (instOfNatNat (nat_lit 64561751654400)))
+Atlas.Sporadic.Fischer22.simple : @IsSimpleGroup.{0} Atlas.Sporadic.Fischer22.Model
+  (@QuotientGroup.Quotient.group.{0} (↥(Atlas.Fischer.residueCentralizer Atlas.Fischer.fischer22Marking))
+    (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+      (@Subgroup.toGroup.{0}
+        (Equiv.Perm.{1} (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        (@Equiv.Perm.permGroup.{0}
+          (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+        Atlas.Fischer.rootGeneratedRayGroup)
+      (Atlas.Fischer.residueCentralizer Atlas.Fischer.fischer22Marking))
+    (Atlas.Fischer.residueCentralElementary Atlas.Fischer.fischer22Marking) ⋯)
+Atlas.Sporadic.Fischer22.noncommutative : Not
+  (@IsMulCommutative.{0} Atlas.Sporadic.Fischer22.Model
+    (@MulOne.toMul.{0} Atlas.Sporadic.Fischer22.Model
+      (@MulOneClass.toMulOne.{0} Atlas.Sporadic.Fischer22.Model
+        (@Monoid.toMulOneClass.{0} Atlas.Sporadic.Fischer22.Model
+          (@DivInvMonoid.toMonoid.{0} Atlas.Sporadic.Fischer22.Model
+            (@Group.toDivInvMonoid.{0} Atlas.Sporadic.Fischer22.Model
+              (@QuotientGroup.Quotient.group.{0} (↥(Atlas.Fischer.residueCentralizer Atlas.Fischer.fischer22Marking))
+                (@Subgroup.toGroup.{0} (↥Atlas.Fischer.rootGeneratedRayGroup)
+                  (@Subgroup.toGroup.{0}
+                    (Equiv.Perm.{1}
+                      (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                    (@Equiv.Perm.permGroup.{0}
+                      (@Set.Elem.{0} (Finset.{0} Atlas.Fischer.Coordinates) Atlas.Fischer.DisplayedReflectingRay))
+                    Atlas.Fischer.rootGeneratedRayGroup)
+                  (Atlas.Fischer.residueCentralizer Atlas.Fischer.fischer22Marking))
+                (Atlas.Fischer.residueCentralElementary Atlas.Fischer.fischer22Marking) ⋯)))))))
+'Atlas.Sporadic.Fischer22.finite' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Atlas.Sporadic.Fischer22.card' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Atlas.Sporadic.Fischer22.simple' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Atlas.Sporadic.Fischer22.noncommutative' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@[reducible] def Atlas.Families.Cyclic.Model : Nat → Type :=
+fun m => Multiplicative.{0} (ZMod m)
+Atlas.Families.Cyclic.card : ∀ (m : Nat),
+  @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) m →
+    @Eq.{1} Nat (Nat.card.{0} (Atlas.Families.Cyclic.Model m)) (Atlas.Families.Cyclic.order m)
+Atlas.Families.Cyclic.isSimpleGroup : ∀ (p : Nat),
+  Atlas.Families.Cyclic.IsAdmissible p →
+    @IsSimpleGroup.{0} (Atlas.Families.Cyclic.Model p)
+      (@Multiplicative.group.{0} (ZMod p)
+        (@AddGroupWithOne.toAddGroup.{0} (ZMod p)
+          (@Ring.toAddGroupWithOne.{0} (ZMod p) (@CommRing.toRing.{0} (ZMod p) (ZMod.commRing p)))))
+Atlas.Families.Cyclic.commutative : ∀ (m : Nat) (a b : Atlas.Families.Cyclic.Model m),
+  @Eq.{1} (Atlas.Families.Cyclic.Model m)
+    (@HMul.hMul.{0, 0, 0} (Atlas.Families.Cyclic.Model m) (Atlas.Families.Cyclic.Model m)
+      (Atlas.Families.Cyclic.Model m)
+      (@instHMul.{0} (Atlas.Families.Cyclic.Model m)
+        (@Multiplicative.mul.{0} (ZMod m)
+          (@Distrib.toAdd.{0} (ZMod m)
+            (@instDistribOfSemiring.{0} (ZMod m)
+              (@CommSemiring.toSemiring.{0} (ZMod m) (@CommRing.toCommSemiring.{0} (ZMod m) (ZMod.commRing m)))))))
+      a b)
+    (@HMul.hMul.{0, 0, 0} (Atlas.Families.Cyclic.Model m) (Atlas.Families.Cyclic.Model m)
+      (Atlas.Families.Cyclic.Model m)
+      (@instHMul.{0} (Atlas.Families.Cyclic.Model m)
+        (@Multiplicative.mul.{0} (ZMod m)
+          (@Distrib.toAdd.{0} (ZMod m)
+            (@instDistribOfSemiring.{0} (ZMod m)
+              (@CommSemiring.toSemiring.{0} (ZMod m) (@CommRing.toCommSemiring.{0} (ZMod m) (ZMod.commRing m)))))))
+      b a)
+'Atlas.Families.Cyclic.card' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Atlas.Families.Cyclic.isSimpleGroup' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Atlas.Families.Cyclic.commutative' depends on axioms: [propext, Quot.sound.{u}]

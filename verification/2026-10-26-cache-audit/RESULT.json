@@ -1,0 +1,57 @@
+{
+  "status": "passed-source-bound-cache-audit",
+  "started_utc": "2026-10-26T02:46:13Z",
+  "scope": "Fresh root elaboration and complete compiled type/proof dependency inspection using a read-only source-bound cache; not a fresh project rebuild or independent kernel replay",
+  "roots": 1207,
+  "cache_source": "/home/gerald/atlas/.publication-tools/twisted-e6-foundations-20261019/export",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "steps": [
+    {
+      "name": "cache-hashes",
+      "record": "cache-hashes.json",
+      "status": "process-passed"
+    },
+    {
+      "name": "root-elaboration",
+      "record": "root-elaboration.json",
+      "status": "process-passed"
+    },
+    {
+      "name": "audit-root-elaboration",
+      "record": "audit-root-elaboration.json",
+      "status": "process-passed"
+    },
+    {
+      "name": "full-dependency-extraction",
+      "record": "full-dependency-extraction.json",
+      "status": "process-passed"
+    }
+  ],
+  "disk_available_before": 3006496768,
+  "dependency_revisions": {
+    "mathlib": "85e3a25e006c35636f0e53b0e9296caca2685bc0",
+    "plausible": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+    "LeanSearchClient": "ba67e212be1197b84c1f1f6299488a10a3002713",
+    "importGraph": "d8823026ac7ef130c253089d95685f9877b95323",
+    "proofwidgets": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+    "aesop": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+    "Qq": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+    "batteries": "d54dddc581e08be364c278052863524bff7a99a9",
+    "Cli": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af"
+  },
+  "dependency_nodes": 99886,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "cache_artifacts_unchanged": true,
+  "sources_unchanged": true,
+  "fresh_project_rebuild": false,
+  "independent_replay": false,
+  "finished_utc": "2026-10-26T02:53:39Z"
+}

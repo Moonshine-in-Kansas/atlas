@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "suzuki-family-order",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.SuzukiFamily.Order"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.SuzukiFamily.card_group",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Order",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.card_group_binary",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Order",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.card_group_eight",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Order",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.card_group_oneTwentyEight",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Order",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.card_group_thirtyTwo",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Order",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "order-independent-of-simplicity-and-other-families",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.SuzukiFamily.Perfect",
+        "Atlas.LinearGroups.SuzukiFamily.Simplicity",
+        "Atlas.Sporadic.Suzuki"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.ReeG2.",
+        "Atlas.Sporadic.Suzuki",
+        "Atlas.SuzukiFamily.simple_iff"
+      ]
+    }
+  ]
+}

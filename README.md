@@ -1,70 +1,66 @@
 # A constructive ATLAS of finite simple groups in Lean
 
-Read the [**research note (PDF)**](atlas_research_note.pdf) — mathematical background, constructions and project overview.
+**Version 1.2 review candidate — branch `v1.2-review`.** The public default remains the preserved
+[Version 1.0](https://github.com/Moonshine-in-Kansas/atlas/releases/tag/v1.0)
+until the owner has reviewed this candidate and the release requirements are met.
+Uploading this review branch does not change `main`, publish a final v1.2 release
+or deploy the website. The source-bound compiled audit
+covers all 1,207 selected declarations; three Comparator targets remain open.
+See [verification status](AUDIT.md).
 
-If you use ATLAS in your research, please cite Gerald Höhn, *A constructive ATLAS of finite simple groups in Lean* ([arXiv:2609.35847](https://arxiv.org/abs/2609.35847)).
+ATLAS constructs explicit finite groups and proves their orders, simplicity and
+structural properties. This candidate contains **16 completed families,
+16 sporadic constructions and the Tits group**, with their full parameter ranges
+and exceptions. The stable entry point is `import Atlas`.
 
-A Lean library constructing explicit finite simple groups and proving their orders,
-simplicity and structural properties. The selected scope comprises eight families
-and fifteen sporadic entries; parameter restrictions and small exceptions are part
-of the statements. This is not a proof of classification exhaustiveness (CFSG),
-and does not claim constructions of the Monster or all remaining groups.
+Read the [catalogue](CATALOGUE.md), [proved comparisons](COMPARISON.md),
+[additional realizations](catalogue/REALIZATIONS.md), and
+[research note (PDF)](atlas_research_note.pdf) ([TeX](atlas_research_note.tex)).
+The research note is the unchanged, dated 25 October development account:
+its broader local source inventory is distinguished from this filtered export.
+It is not a claim that every local draft module is included or release-accepted.
 
-See [the catalogue](CATALOGUE.md) for actual models and theorem names, and
-[the audit instructions](AUDIT.md) for verification scope and limitations.
-The stable entry point is `import Atlas`; namespaces and source paths are preserved.
-The small Ree family starts at q=27.
+This is a construction library, not a proof of classification exhaustiveness.
+Equality of orders is not used as a substitute for an isomorphism. The typed
+comparison theorem covers its stated 13 families and 17 individual groups;
+the three E-series families have separate construction and simplicity results.
 
-The [independent existence checks](verification/existence/README.md) provide clean
-reference statements, solution wrappers, reproducible Comparator scripts and
-[per-entry results](verification/existence/RESULTS.md).
+## Build and check
 
-[Formalization metadata](formalization.yaml): project description, main results,
-and links to their Comparator configurations.
-
-## Finding the mathematics
-
-The [principal theorem statements](THEOREM_STATEMENTS.md) show the compiled order
-and simplicity signatures, including implicit parameters and assumptions, without proofs.
-
-| Directory | Contents |
-|---|---|
-| `Atlas/Families/` | Cyclic and alternating family interfaces |
-| `Atlas/LinearGroups/` | Classical families, split G₂ and small Ree constructions |
-| `Atlas/Sporadic/` | Public sporadic models and construction interfaces |
-| `Atlas/Codes/`, `Atlas/Mathieu/` | Golay/hexacode infrastructure and Mathieu groups |
-| `Atlas/Lattices/`, `Atlas/Conway/` | Lattice constructions and the Conway-related developments |
-| `Atlas/Fischer/` | Fischer constructions and proofs |
-| `Atlas/Comparisons/` | Proved isomorphisms and nonisomorphisms |
-| Other `Atlas/` subject directories | Shared algebra, geometry and group-theoretic infrastructure |
-| `catalogue/` | Machine-readable interfaces and measured proof-line counts |
-| `verification/` | Checking tools and recorded verification evidence |
-
-[Independent-checker reproduction](verification/INDEPENDENT_CHECKERS.md) explains
-how to repeat the Nanoda and Comparator checks separately from the ordinary Lean build.
-
-## Build
-
-
-Install Lean's elan toolchain manager, Git and (for audit scripts) Ruby. Then:
+Install Lean's elan toolchain manager, Git and Ruby, then run:
 
 ```sh
 lake exe cache get
 LEAN_NUM_THREADS=2 lake build
+ruby catalogue/manage.rb check
 LEAN_NUM_THREADS=2 ruby verification/check.rb
 ```
 
-The toolchain and all dependency revisions are pinned in `lean-toolchain` and
-`lake-manifest.json`. The first command obtains public mathlib dependency caches;
-ATLAS source is compiled locally. The default targets are `Atlas` and `Atlas.Audit`.
-Use one build/audit driver at a time. A fresh project build can take substantial time
-and memory on a laptop; no full mathlib source rebuild is required.
+Lean and all dependency revisions remain pinned. Run one build or audit driver
+at a time. `verification/check.rb` builds the source and audits the selected
+compiled statements and complete proof/type dependencies. Independent Nanoda
+and Comparator replay are separate checks; see the
+[reproduction guide](verification/INDEPENDENT_CHECKERS.md).
 
-No CI, scheduled verification or website is configured. See [AUDIT.md](AUDIT.md) for the current source-bound checks and [release maintenance](verification/MAINTENANCE.md) for the automatic metadata gate.
+## Source guide
+
+| Path | Contents |
+|---|---|
+| `Atlas/Families/`, `Atlas/LinearGroups/` | Family models, uniform orders, simplicity and transport |
+| `Atlas/Sporadic/`, `Atlas/Mathieu/`, `Atlas/Conway/`, `Atlas/Fischer/` | Sporadic constructions and public interfaces |
+| `Atlas/Codes/`, `Atlas/Lattices/`, `Atlas/Algebra/` | Codes, lattices and algebraic constructions |
+| `Atlas/Comparisons/`, `Atlas/OrderArithmetic/` | Isomorphisms, nonisomorphisms and order arithmetic |
+| `catalogue/` | Mathematical interfaces and proof-dependency measurements |
+| `verification/` | Reproduction tools and dated verification records |
+
+Partial Lean foundations for other groups remain explicitly outside the
+completed catalogue. Construction-job documents and internal progress notes
+are not part of this export.
 
 ## Citation and license
 
-Author: Gerald Höhn. See [CITATION.cff](CITATION.cff) and the existing
-[ATLAS Research and Attribution License 1.0](LICENSE). Commercial use and AI training
-require written permission; scholarly use requires attribution and citation.
-Distributed derivative works must include the license and preserve its conditions.
+Author: Gerald Höhn. Please cite *A constructive ATLAS of finite simple groups in
+Lean*, [arXiv:2609.35847](https://arxiv.org/abs/2609.35847).
+See [CITATION.cff](CITATION.cff), the approved
+[ATLAS Research and Attribution License 1.0](LICENSE) and
+[licensing scope](LICENSING.md). Dependencies retain their own licenses.

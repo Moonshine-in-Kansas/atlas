@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "f4-field-point-root-transport",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.F4.FieldPointTransport",
+    "Atlas.LinearGroups.F4.FieldRootTransport"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.F4.coefficientSemilinear",
+      "module": "Atlas.LinearGroups.F4.FieldPointTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.coefficientSemilinear_injective",
+      "module": "Atlas.LinearGroups.F4.FieldPointTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.coefficient_parabolicVector",
+      "module": "Atlas.LinearGroups.F4.FieldPointTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.fieldParabolicTransport",
+      "module": "Atlas.LinearGroups.F4.FieldPointTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.fieldPointMap",
+      "module": "Atlas.LinearGroups.F4.FieldPointTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.fieldPointMap_inverse",
+      "module": "Atlas.LinearGroups.F4.FieldPointTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.fieldPointTransport",
+      "module": "Atlas.LinearGroups.F4.FieldPointTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.fieldPointTransport_equivariant",
+      "module": "Atlas.LinearGroups.F4.FieldPointTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.fieldPointTransport_parabolicPoint",
+      "module": "Atlas.LinearGroups.F4.FieldPointTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.fieldTransport_coordinateCycle",
+      "module": "Atlas.LinearGroups.F4.FieldRootTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.fieldTransport_longRoot",
+      "module": "Atlas.LinearGroups.F4.FieldRootTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.fieldTransport_longRootSeeds",
+      "module": "Atlas.LinearGroups.F4.FieldRootTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.fieldTransport_longRootStep",
+      "module": "Atlas.LinearGroups.F4.FieldRootTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.fieldTransport_longRootWord",
+      "module": "Atlas.LinearGroups.F4.FieldRootTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.fieldTransport_mem_parabolic_iff",
+      "module": "Atlas.LinearGroups.F4.FieldPointTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.fieldTransport_root",
+      "module": "Atlas.LinearGroups.F4.FieldRootTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.fieldTransport_shortRoot",
+      "module": "Atlas.LinearGroups.F4.FieldRootTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.fieldTransport_shortRootFirstPair",
+      "module": "Atlas.LinearGroups.F4.FieldRootTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.fieldTransport_shortWeylFirstPair",
+      "module": "Atlas.LinearGroups.F4.FieldRootTransport",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independent-f4-field-point-root-transport",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.F4.card_Model",
+        "Atlas.F4.card_parabolic",
+        "Atlas.F4.card_oppositePairStabilizer",
+        "Atlas.F4.OrderChecks.",
+        "Atlas.Fischer.",
+        "Atlas.ReeG2.",
+        "Atlas.F4.isSimple",
+        "Atlas.F4.isPerfect",
+        "Atlas.F4.generated_eq_top"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.OrderChecks"
+      ]
+    }
+  ]
+}

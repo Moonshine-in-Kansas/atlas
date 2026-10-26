@@ -1,0 +1,14 @@
+import Atlas.LinearGroups.ReeF4.WeylStarData
+
+/-! One bounded row of the concrete Weyl/star coefficient identity. -/
+namespace Atlas.ReeF4
+open Atlas.Albert
+set_option maxRecDepth 8192 in
+set_option maxHeartbeats 600000 in
+theorem weylStarCheckRow005 : ∀ j : TraceZeroCoordinate,
+    weylStarCoefficient (F := ZMod 2) 0 (.inr (0,5)) j =
+      weylOperator 0 (extensionCoefficient (.inr (0,5)) j) +
+        weylStarCorrection 0 (traceZeroCross (starMarkedVector (.inr (0,5))) (starMarkedVector j)) := by
+  intro j
+  fin_cases j <;> decide
+end Atlas.ReeF4

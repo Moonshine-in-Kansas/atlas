@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "suzuki-family-exception",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.SuzukiFamily.SmallField"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.GroupTheory.not_simple_of_card_twenty",
+      "module": "Atlas.GroupTheory.OrderTwentyNotSimple",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.binary_not_simple",
+      "module": "Atlas.LinearGroups.SuzukiFamily.SmallField",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "exception-independent-scope",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.Sporadic.Suzuki",
+        "Atlas.LinearGroups.SuzukiFamily.Perfect",
+        "Atlas.LinearGroups.SuzukiFamily.Simplicity"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.ReeG2.",
+        "Atlas.Sporadic.Suzuki"
+      ]
+    }
+  ]
+}

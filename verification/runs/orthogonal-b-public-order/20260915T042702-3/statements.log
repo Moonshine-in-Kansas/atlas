@@ -1,0 +1,2599 @@
+STATEMENT Atlas.Orthogonal.B SOURCE Atlas.LinearGroups.Orthogonal.BFamily
+Atlas.Orthogonal.B.{u_1} : Nat → (F : Type u_1) → [Field.{u_1} F] → Type u_1
+STATEMENT Atlas.Orthogonal.B_admissible SOURCE Atlas.LinearGroups.Orthogonal.BFamily
+Atlas.Orthogonal.B_admissible : Nat → Nat → Prop
+STATEMENT Atlas.Orthogonal.B_card SOURCE Atlas.LinearGroups.Orthogonal.BFamily
+@Atlas.Orthogonal.B_card.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) n →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.Orthogonal.B.{u_1} n F inst)) (Atlas.Orthogonal.B_order n (Nat.card.{u_1} F))
+STATEMENT Atlas.Orthogonal.B_card_all_rank SOURCE Atlas.LinearGroups.Orthogonal.BAllRanks
+@Atlas.Orthogonal.B_card_all_rank.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) n →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.Orthogonal.B.{u_1} n F inst)) (Atlas.Orthogonal.B_order n (Nat.card.{u_1} F))
+STATEMENT Atlas.Orthogonal.B_card_mul_denominator SOURCE Atlas.LinearGroups.Orthogonal.BFamily
+@Atlas.Orthogonal.B_card_mul_denominator.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) n →
+    @Eq.{1} Nat
+      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+        (Nat.card.{u_1} (@Atlas.Orthogonal.B.{u_1} n F inst)) (Atlas.Orthogonal.B_order_denominator (Nat.card.{u_1} F)))
+      (Atlas.Orthogonal.B_order_numerator n (Nat.card.{u_1} F))
+STATEMENT Atlas.Orthogonal.B_card_mul_denominator_all_rank SOURCE Atlas.LinearGroups.Orthogonal.BAllRanks
+@Atlas.Orthogonal.B_card_mul_denominator_all_rank.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F]
+  (n : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) n →
+    @Eq.{1} Nat
+      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+        (Nat.card.{u_1} (@Atlas.Orthogonal.B.{u_1} n F inst)) (Atlas.Orthogonal.B_order_denominator (Nat.card.{u_1} F)))
+      (Atlas.Orthogonal.B_order_numerator n (Nat.card.{u_1} F))
+STATEMENT Atlas.Orthogonal.B_finite SOURCE Atlas.LinearGroups.Orthogonal.BFamily
+@Atlas.Orthogonal.B_finite.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
+  Finite.{u_1 + 1} (@Atlas.Orthogonal.B.{u_1} n F inst)
+STATEMENT Atlas.Orthogonal.B_good SOURCE Atlas.LinearGroups.Orthogonal.BAllRanks
+Atlas.Orthogonal.B_good : Nat → Nat → Prop
+STATEMENT Atlas.Orthogonal.B_order SOURCE Atlas.LinearGroups.Orthogonal.BFamily
+Atlas.Orthogonal.B_order : Nat → Nat → Nat
+STATEMENT Atlas.Orthogonal.B_order_denominator SOURCE Atlas.LinearGroups.Orthogonal.BFamily
+Atlas.Orthogonal.B_order_denominator : Nat → Nat
+STATEMENT Atlas.Orthogonal.B_order_denominator_positive SOURCE Atlas.LinearGroups.Orthogonal.BFamily
+Atlas.Orthogonal.B_order_denominator_positive : ∀ (q : Nat),
+  @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+    (Atlas.Orthogonal.B_order_denominator q)
+STATEMENT Atlas.Orthogonal.B_order_divisibility SOURCE Atlas.LinearGroups.Orthogonal.BFamily
+@Atlas.Orthogonal.B_order_divisibility.{u_1} : ∀ {F : Type u_1} [Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) n →
+    @Dvd.dvd.{0} Nat Nat.instDvd (Atlas.Orthogonal.B_order_denominator (Nat.card.{u_1} F))
+      (Atlas.Orthogonal.B_order_numerator n (Nat.card.{u_1} F))
+STATEMENT Atlas.Orthogonal.B_order_divisibility_all_rank SOURCE Atlas.LinearGroups.Orthogonal.BAllRanks
+@Atlas.Orthogonal.B_order_divisibility_all_rank.{u_1} : ∀ {F : Type u_1} [Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) n →
+    @Dvd.dvd.{0} Nat Nat.instDvd (Atlas.Orthogonal.B_order_denominator (Nat.card.{u_1} F))
+      (Atlas.Orthogonal.B_order_numerator n (Nat.card.{u_1} F))
+STATEMENT Atlas.Orthogonal.B_order_numerator SOURCE Atlas.LinearGroups.Orthogonal.BFamily
+Atlas.Orthogonal.B_order_numerator : Nat → Nat → Nat
+STATEMENT Atlas.Orthogonal.B_order_numerator_positive SOURCE Atlas.LinearGroups.Orthogonal.BFamily
+Atlas.Orthogonal.B_order_numerator_positive : ∀ (n q : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) q →
+    @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+      (Atlas.Orthogonal.B_order_numerator n q)
+DEFINITION Atlas.Orthogonal.B_order_numerator SOURCE Atlas.LinearGroups.Orthogonal.BFamily
+def Atlas.Orthogonal.B_order_numerator : Nat → Nat → Nat :=
+fun n q =>
+  @HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+    (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+      (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) q
+      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat) n n))
+    (∏ i ∈ Finset.range n,
+      @HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+        (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+          (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) q
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) i
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+DEFINITION Atlas.Orthogonal.B_order_denominator SOURCE Atlas.LinearGroups.Orthogonal.BFamily
+def Atlas.Orthogonal.B_order_denominator : Nat → Nat :=
+fun q =>
+  Nat.gcd (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+    (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) q
+      (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+DEFINITION Atlas.Orthogonal.B_order SOURCE Atlas.LinearGroups.Orthogonal.BFamily
+def Atlas.Orthogonal.B_order : Nat → Nat → Nat :=
+fun n q =>
+  @HDiv.hDiv.{0, 0, 0} Nat Nat Nat (@instHDiv.{0} Nat Nat.instDiv) (Atlas.Orthogonal.B_order_numerator n q)
+    (Atlas.Orthogonal.B_order_denominator q)
+DEFINITION Atlas.Orthogonal.B_good SOURCE Atlas.LinearGroups.Orthogonal.BAllRanks
+def Atlas.Orthogonal.B_good : Nat → Nat → Prop :=
+fun n q =>
+  And (@LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) n)
+    (And (@LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) q)
+      (And
+        (@Ne.{1} (Prod.{0, 0} Nat Nat) (@Prod.mk.{0, 0} Nat Nat n q)
+          (@Prod.mk.{0, 0} Nat Nat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+        (And
+          (@Ne.{1} (Prod.{0, 0} Nat Nat) (@Prod.mk.{0, 0} Nat Nat n q)
+            (@Prod.mk.{0, 0} Nat Nat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+              (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))))
+          (@Ne.{1} (Prod.{0, 0} Nat Nat) (@Prod.mk.{0, 0} Nat Nat n q)
+            (@Prod.mk.{0, 0} Nat Nat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))))))
+DEFINITION Atlas.Orthogonal.B SOURCE Atlas.LinearGroups.Orthogonal.BFamily
+@[reducible] def Atlas.Orthogonal.B.{u_1} : Nat → (F : Type u_1) → [Field.{u_1} F] → Type u_1 :=
+fun n F [inst : Field.{u_1} F] =>
+  @Atlas.Orthogonal.ProjectiveElementary.{u_1, u_1} F (Atlas.Orthogonal.VectorB.{u_1} n F) inst
+    (@Prod.instAddCommGroup.{u_1, u_1} (Atlas.Orthogonal.VectorD.{u_1} n F) F
+      (@Pi.addCommGroup.{0, u_1} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+        @Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
+      (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+    (@Prod.instModule.{u_1, u_1, u_1} F (Atlas.Orthogonal.VectorD.{u_1} n F) F
+      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+      (@Pi.addCommMonoid.{0, u_1} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+        @Semiring.toAddCommMonoid.{u_1} F
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+      (@Semiring.toAddCommMonoid.{u_1} F
+        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+      (@Pi.Function.module.{0, u_1, u_1} (Atlas.Orthogonal.Index n) F F
+        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+        (@Semiring.toAddCommMonoid.{u_1} F
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+        (@Semiring.toModule.{u_1} F
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+      (@Semiring.toModule.{u_1} F
+        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+    (@Atlas.Orthogonal.formB.{u_1} n F (@Field.toCommRing.{u_1} F inst))
+DEFINITION Atlas.Orthogonal.formB SOURCE Atlas.LinearGroups.Orthogonal.Basic
+def Atlas.Orthogonal.formB.{u_2} : (n : Nat) →
+  (F : Type u_2) →
+    [inst : CommRing.{u_2} F] →
+      @QuadraticForm.{u_2, u_2} F (Atlas.Orthogonal.VectorB.{u_2} n F) (@CommRing.toCommSemiring.{u_2} F inst)
+        (@Prod.instAddCommMonoid.{u_2, u_2} (Atlas.Orthogonal.VectorD.{u_2} n F) F
+          (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+            @Semiring.toAddCommMonoid.{u_2} F
+              (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+          (@Semiring.toAddCommMonoid.{u_2} F
+            (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+        (@Prod.instModule.{u_2, u_2, u_2} F (Atlas.Orthogonal.VectorD.{u_2} n F) F
+          (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+          (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+            @Semiring.toAddCommMonoid.{u_2} F
+              (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+          (@Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+          (@Pi.Function.module.{0, u_2, u_2} (Atlas.Orthogonal.Index n) F F
+            (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+            (@Semiring.toAddCommMonoid.{u_2} F
+              (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+            (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+          (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))) :=
+fun n F [inst : CommRing.{u_2} F] =>
+  @HAdd.hAdd.{u_2, u_2, u_2}
+    (@QuadraticMap.{u_2, u_2, u_2} F (Prod.{u_2, u_2} (Atlas.Orthogonal.VectorD.{u_2} n F) F) F
+      (@CommRing.toCommSemiring.{u_2} F inst)
+      (@Prod.instAddCommMonoid.{u_2, u_2} (Atlas.Orthogonal.VectorD.{u_2} n F) F
+        (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+          @Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+          (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+            (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+              (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst))))))
+      (@Prod.instModule.{u_2, u_2, u_2} F (Atlas.Orthogonal.VectorD.{u_2} n F) F
+        (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+        (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+          @Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+          (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+            (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+              (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst)))))
+        (@Pi.Function.module.{0, u_2, u_2} (Atlas.Orthogonal.Index n) F F
+          (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+          (@Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+          (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+        (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+      (@Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+      (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+    (@QuadraticMap.{u_2, u_2, u_2} F (Prod.{u_2, u_2} (Atlas.Orthogonal.VectorD.{u_2} n F) F) F
+      (@CommRing.toCommSemiring.{u_2} F inst)
+      (@Prod.instAddCommMonoid.{u_2, u_2} (Atlas.Orthogonal.VectorD.{u_2} n F) F
+        (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+          @Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+          (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+            (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+              (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst))))))
+      (@Prod.instModule.{u_2, u_2, u_2} F (Atlas.Orthogonal.VectorD.{u_2} n F) F
+        (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+        (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+          @Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+          (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+            (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+              (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst)))))
+        (@Pi.Function.module.{0, u_2, u_2} (Atlas.Orthogonal.Index n) F F
+          (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+          (@Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+          (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+        (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+      (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+        (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+          (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+            (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst)))))
+      (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+    (@QuadraticForm.{u_2, u_2} F (Atlas.Orthogonal.VectorB.{u_2} n F) (@CommRing.toCommSemiring.{u_2} F inst)
+      (@Prod.instAddCommMonoid.{u_2, u_2} (Atlas.Orthogonal.VectorD.{u_2} n F) F
+        (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+          @Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+      (@Prod.instModule.{u_2, u_2, u_2} F (Atlas.Orthogonal.VectorD.{u_2} n F) F
+        (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+        (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+          @Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@Pi.Function.module.{0, u_2, u_2} (Atlas.Orthogonal.Index n) F F
+          (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+          (@Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+          (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+        (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))))
+    (@instHAdd.{u_2}
+      (@QuadraticMap.{u_2, u_2, u_2} F (Prod.{u_2, u_2} (Atlas.Orthogonal.VectorD.{u_2} n F) F) F
+        (@CommRing.toCommSemiring.{u_2} F inst)
+        (@Prod.instAddCommMonoid.{u_2, u_2} (Atlas.Orthogonal.VectorD.{u_2} n F) F
+          (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+            @Semiring.toAddCommMonoid.{u_2} F
+              (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+          (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+            (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+              (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+                (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F
+                  (@CommRing.toNonUnitalCommRing.{u_2} F inst))))))
+        (@Prod.instModule.{u_2, u_2, u_2} F (Atlas.Orthogonal.VectorD.{u_2} n F) F
+          (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+          (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+            @Semiring.toAddCommMonoid.{u_2} F
+              (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+          (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+            (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+              (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+                (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst)))))
+          (@Pi.Function.module.{0, u_2, u_2} (Atlas.Orthogonal.Index n) F F
+            (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+            (@Semiring.toAddCommMonoid.{u_2} F
+              (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+            (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+          (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+        (@Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+      (@QuadraticMap.instAdd.{u_2, u_2, u_2} F (Prod.{u_2, u_2} (Atlas.Orthogonal.VectorD.{u_2} n F) F) F
+        (@CommRing.toCommSemiring.{u_2} F inst)
+        (@Prod.instAddCommMonoid.{u_2, u_2} (Atlas.Orthogonal.VectorD.{u_2} n F) F
+          (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+            @Semiring.toAddCommMonoid.{u_2} F
+              (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+          (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+            (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+              (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+                (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F
+                  (@CommRing.toNonUnitalCommRing.{u_2} F inst))))))
+        (@Prod.instModule.{u_2, u_2, u_2} F (Atlas.Orthogonal.VectorD.{u_2} n F) F
+          (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+          (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+            @Semiring.toAddCommMonoid.{u_2} F
+              (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+          (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+            (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+              (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+                (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst)))))
+          (@Pi.Function.module.{0, u_2, u_2} (Atlas.Orthogonal.Index n) F F
+            (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+            (@Semiring.toAddCommMonoid.{u_2} F
+              (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+            (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+          (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+        (@Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))))
+    (@QuadraticMap.comp.{u_2, u_2, u_2, u_2} F (Prod.{u_2, u_2} (Atlas.Orthogonal.VectorD.{u_2} n F) F)
+      (Atlas.Orthogonal.VectorD.{u_2} n F) F (@CommRing.toCommSemiring.{u_2} F inst)
+      (@Prod.instAddCommMonoid.{u_2, u_2} (Atlas.Orthogonal.VectorD.{u_2} n F) F
+        (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+          @Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+          (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+            (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+              (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst))))))
+      (@Prod.instModule.{u_2, u_2, u_2} F (Atlas.Orthogonal.VectorD.{u_2} n F) F
+        (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+        (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+          @Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+          (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+            (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+              (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst)))))
+        (@Pi.Function.module.{0, u_2, u_2} (Atlas.Orthogonal.Index n) F F
+          (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+          (@Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+          (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+        (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+      (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+        @Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+      (@Pi.Function.module.{0, u_2, u_2} (Atlas.Orthogonal.Index n) F F
+        (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+        (@Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+      (@Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+      (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+      (@Atlas.Orthogonal.formD.{u_2} n F inst)
+      (@LinearMap.fst.{u_2, u_2, u_2} F (Atlas.Orthogonal.VectorD.{u_2} n F) F
+        (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+        (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+          @Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+          (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+            (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+              (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst)))))
+        (@Pi.Function.module.{0, u_2, u_2} (Atlas.Orthogonal.Index n) F F
+          (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+          (@Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+          (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+        (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))))
+    (@QuadraticMap.comp.{u_2, u_2, u_2, u_2} F (Prod.{u_2, u_2} (Atlas.Orthogonal.VectorD.{u_2} n F) F) F F
+      (@CommRing.toCommSemiring.{u_2} F inst)
+      (@Prod.instAddCommMonoid.{u_2, u_2} (Atlas.Orthogonal.VectorD.{u_2} n F) F
+        (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+          @Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+          (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+            (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+              (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst))))))
+      (@Prod.instModule.{u_2, u_2, u_2} F (Atlas.Orthogonal.VectorD.{u_2} n F) F
+        (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+        (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+          @Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+          (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+            (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+              (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst)))))
+        (@Pi.Function.module.{0, u_2, u_2} (Atlas.Orthogonal.Index n) F F
+          (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+          (@Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+          (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+        (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+      (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+        (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+          (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+            (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst)))))
+      (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+      (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+        (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+          (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+            (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst)))))
+      (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+      (@QuadraticMap.sq.{u_2, u_2} F F (@CommRing.toCommSemiring.{u_2} F inst)
+        (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+          (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+            (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst))))
+        (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))) ⋯ ⋯)
+      (@LinearMap.snd.{u_2, u_2, u_2} F (Atlas.Orthogonal.VectorD.{u_2} n F) F
+        (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+        (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+          @Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@NonUnitalNonAssocSemiring.toAddCommMonoid.{u_2} F
+          (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+            (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+              (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst)))))
+        (@Pi.Function.module.{0, u_2, u_2} (Atlas.Orthogonal.Index n) F F
+          (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+          (@Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+          (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))))
+        (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))))
+DEFINITION Atlas.Orthogonal.formD SOURCE Atlas.LinearGroups.Orthogonal.Basic
+def Atlas.Orthogonal.formD.{u_2} : (n : Nat) →
+  (F : Type u_2) →
+    [inst : CommRing.{u_2} F] →
+      @QuadraticForm.{u_2, u_2} F (Atlas.Orthogonal.VectorD.{u_2} n F) (@CommRing.toCommSemiring.{u_2} F inst)
+        (@Pi.addCommMonoid.{0, u_2} (Atlas.Orthogonal.Index n) (fun a => F) fun i =>
+          @Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+        (@Pi.Function.module.{0, u_2, u_2} (Atlas.Orthogonal.Index n) F F
+          (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))
+          (@Semiring.toAddCommMonoid.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))
+          (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst)))) :=
+fun n F [inst : CommRing.{u_2} F] =>
+  ∑ i,
+    @QuadraticMap.proj.{u_2, u_2, 0} F F (@CommRing.toCommSemiring.{u_2} F inst)
+      (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} F
+        (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} F
+          (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} F (@CommRing.toNonUnitalCommRing.{u_2} F inst))))
+      (@Semiring.toModule.{u_2} F (@CommSemiring.toSemiring.{u_2} F (@CommRing.toCommSemiring.{u_2} F inst))) ⋯ ⋯
+      (Atlas.Orthogonal.Index n) (@Sum.inl.{0, 0} (Fin n) (Fin n) i) (@Sum.inr.{0, 0} (Fin n) (Fin n) i)
+DEFINITION Atlas.Orthogonal.Index SOURCE Atlas.LinearGroups.Orthogonal.Basic
+@[reducible] def Atlas.Orthogonal.Index : Nat → Type :=
+fun n => Sum.{0, 0} (Fin n) (Fin n)
+DEFINITION Atlas.Orthogonal.VectorD SOURCE Atlas.LinearGroups.Orthogonal.Basic
+@[reducible] def Atlas.Orthogonal.VectorD.{u_1} : Nat → Type u_1 → Type u_1 :=
+fun n F => Atlas.Orthogonal.Index n → F
+DEFINITION Atlas.Orthogonal.VectorB SOURCE Atlas.LinearGroups.Orthogonal.Basic
+@[reducible] def Atlas.Orthogonal.VectorB.{u_1} : Nat → Type u_1 → Type u_1 :=
+fun n F => Prod.{u_1, u_1} (Atlas.Orthogonal.VectorD.{u_1} n F) F
+DEFINITION Atlas.Orthogonal.ProjectiveElementary SOURCE Atlas.LinearGroups.Orthogonal.ProjectiveElementary
+def Atlas.Orthogonal.ProjectiveElementary.{u_1, u_2} : {F : Type u_1} →
+  {V : Type u_2} →
+    [inst : Field.{u_1} F] →
+      [inst_1 : AddCommGroup.{u_2} V] →
+        [inst_2 :
+            @_root_.Module.{u_1, u_2} F V
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)] →
+          @QuadraticForm.{u_1, u_2} F V (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 →
+            Type u_2 :=
+fun {F} {V} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]
+    [inst_2 :
+      @_root_.Module.{u_1, u_2} F V
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)]
+    Q =>
+  @HasQuotient.Quotient.{u_2, u_2} (↥(@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q))
+    (@Subgroup.{u_2} (↥(@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q))
+      (@Subgroup.toGroup.{u_2}
+        (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+        (@Subgroup.toGroup.{u_2}
+          (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@RingHom.id.{u_1} F
+              (@Semiring.toNonAssocSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+            (@RingHom.id.{u_1} F
+              (@Semiring.toNonAssocSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+            ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+            inst_2)
+          (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+          (@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+        (@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q)))
+    (@QuotientGroup.instHasQuotientSubgroup.{u_2}
+      (↥(@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q))
+      (@Subgroup.toGroup.{u_2}
+        (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+        (@Subgroup.toGroup.{u_2}
+          (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@RingHom.id.{u_1} F
+              (@Semiring.toNonAssocSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+            (@RingHom.id.{u_1} F
+              (@Semiring.toNonAssocSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+            ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+            inst_2)
+          (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+          (@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+        (@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q)))
+    (@Atlas.Orthogonal.elementaryScalarSubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q)
+DEFINITION Atlas.Orthogonal.elementaryScalarSubgroup SOURCE Atlas.LinearGroups.Orthogonal.ProjectiveElementary
+def Atlas.Orthogonal.elementaryScalarSubgroup.{u_1, u_2} : {F : Type u_1} →
+  {V : Type u_2} →
+    [inst : Field.{u_1} F] →
+      [inst_1 : AddCommGroup.{u_2} V] →
+        [inst_2 :
+            @_root_.Module.{u_1, u_2} F V
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)] →
+          (Q :
+              @QuadraticForm.{u_1, u_2} F V (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2) →
+            @Subgroup.{u_2} (↥(@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q))
+              (@Subgroup.toGroup.{u_2}
+                (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+                (@Subgroup.toGroup.{u_2}
+                  (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                    (@RingHom.id.{u_1} F
+                      (@Semiring.toNonAssocSemiring.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                    (@RingHom.id.{u_1} F
+                      (@Semiring.toNonAssocSemiring.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                    ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                  (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+                  (@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+                (@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q)) :=
+fun {F} {V} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]
+    [inst_2 :
+      @_root_.Module.{u_1, u_2} F V
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)]
+    Q =>
+  @Subgroup.mk.{u_2} (↥(@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q))
+    (@Subgroup.toGroup.{u_2}
+      (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+      (@Subgroup.toGroup.{u_2}
+        (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+          (@RingHom.id.{u_1} F
+            (@Semiring.toNonAssocSemiring.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+          (@RingHom.id.{u_1} F
+            (@Semiring.toNonAssocSemiring.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+          ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+          inst_2)
+        (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+          (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+        (@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+      (@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q))
+    (@Submonoid.mk.{u_2} (↥(@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q))
+      (@Monoid.toMulOneClass.{u_2} (↥(@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q))
+        (@DivInvMonoid.toMonoid.{u_2} (↥(@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q))
+          (@Group.toDivInvMonoid.{u_2} (↥(@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q))
+            (@Subgroup.toGroup.{u_2}
+              (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+              (@Subgroup.toGroup.{u_2}
+                (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                  ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                  inst_2 inst_2)
+                (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+                (@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+              (@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q)))))
+      (@Subsemigroup.mk.{u_2} (↥(@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q))
+        (@MulOne.toMul.{u_2} (↥(@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q))
+          (@MulOneClass.toMulOne.{u_2} (↥(@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q))
+            (@Monoid.toMulOneClass.{u_2} (↥(@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q))
+              (@DivInvMonoid.toMonoid.{u_2}
+                (↥(@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q))
+                (@Group.toDivInvMonoid.{u_2}
+                  (↥(@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q))
+                  (@Subgroup.toGroup.{u_2}
+                    (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2
+                        Q))
+                    (@Subgroup.toGroup.{u_2}
+                      (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@RingHom.id.{u_1} F
+                          (@Semiring.toNonAssocSemiring.{u_1} F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                        (@RingHom.id.{u_1} F
+                          (@Semiring.toNonAssocSemiring.{u_1} F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                        ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                      (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+                      (@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2
+                        Q))
+                    (@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q)))))))
+        (@Set.ofPred.{u_2} ↥(@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q) fun z =>
+          ∃ c,
+            And
+              (@Eq.{u_1 + 1} F
+                (@HPow.hPow.{u_1, 0, u_1} F Nat F
+                  (@instHPow.{u_1, 0} F Nat
+                    (@NPow.toPow.{u_1} F
+                      (@Monoid.toNPow.{u_1} F
+                        (@Semiring.toMonoid.{u_1} F
+                          (@DivisionSemiring.toSemiring.{u_1} F
+                            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+                  c (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                (@OfNat.ofNat.{u_1} F (nat_lit 1)
+                  (@One.toOfNat1.{u_1} F
+                    (@AddMonoidWithOne.toOne.{u_1} F
+                      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+                        (@Ring.toAddGroupWithOne.{u_1} F
+                          (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))))))
+              (∀ (x : V),
+                @Eq.{u_2 + 1} V
+                  (@DFunLike.coe.{u_2 + 1, u_2 + 1, u_2 + 1}
+                    (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                      (@RingHom.id.{u_1} F
+                        (@Semiring.toNonAssocSemiring.{u_1} F
+                          (@CommSemiring.toSemiring.{u_1} F
+                            (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                      (@RingHom.id.{u_1} F
+                        (@Semiring.toNonAssocSemiring.{u_1} F
+                          (@CommSemiring.toSemiring.{u_1} F
+                            (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                      ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                      (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                    V (fun x => V)
+                    (@EquivLike.toFunLike.{u_2 + 1, u_2 + 1, u_2 + 1}
+                      (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@RingHom.id.{u_1} F
+                          (@Semiring.toNonAssocSemiring.{u_1} F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                        (@RingHom.id.{u_1} F
+                          (@Semiring.toNonAssocSemiring.{u_1} F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                        ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                      V V
+                      (@DFinsupp.instEquivLikeLinearEquiv.{u_1, u_1, u_2, u_2} F F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@RingHom.id.{u_1} F
+                          (@Semiring.toNonAssocSemiring.{u_1} F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                        (@RingHom.id.{u_1} F
+                          (@Semiring.toNonAssocSemiring.{u_1} F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                        ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2))
+                    (@Subtype.val.{u_2 + 1}
+                      (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@RingHom.id.{u_1} F
+                          (@Semiring.toNonAssocSemiring.{u_1} F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                        (@RingHom.id.{u_1} F
+                          (@Semiring.toNonAssocSemiring.{u_1} F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                        ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                      (fun x =>
+                        @Membership.mem.{u_2, u_2}
+                          (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@RingHom.id.{u_1} F
+                              (@Semiring.toNonAssocSemiring.{u_1} F
+                                (@CommSemiring.toSemiring.{u_1} F
+                                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                            (@RingHom.id.{u_1} F
+                              (@Semiring.toNonAssocSemiring.{u_1} F
+                                (@CommSemiring.toSemiring.{u_1} F
+                                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                            ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                            (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                          (@Subgroup.{u_2}
+                            (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                              (@RingHom.id.{u_1} F
+                                (@Semiring.toNonAssocSemiring.{u_1} F
+                                  (@CommSemiring.toSemiring.{u_1} F
+                                    (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                              (@RingHom.id.{u_1} F
+                                (@Semiring.toNonAssocSemiring.{u_1} F
+                                  (@CommSemiring.toSemiring.{u_1} F
+                                    (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                              ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                            (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2))
+                          (@SetLike.instMembership.{u_2, u_2}
+                            (@Subgroup.{u_2}
+                              (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                                (@CommSemiring.toSemiring.{u_1} F
+                                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                                (@CommSemiring.toSemiring.{u_1} F
+                                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                                (@RingHom.id.{u_1} F
+                                  (@Semiring.toNonAssocSemiring.{u_1} F
+                                    (@CommSemiring.toSemiring.{u_1} F
+                                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                                (@RingHom.id.{u_1} F
+                                  (@Semiring.toNonAssocSemiring.{u_1} F
+                                    (@CommSemiring.toSemiring.{u_1} F
+                                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                                ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                              (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                                (@CommSemiring.toSemiring.{u_1} F
+                                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2))
+                            (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                              (@RingHom.id.{u_1} F
+                                (@Semiring.toNonAssocSemiring.{u_1} F
+                                  (@CommSemiring.toSemiring.{u_1} F
+                                    (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                              (@RingHom.id.{u_1} F
+                                (@Semiring.toNonAssocSemiring.{u_1} F
+                                  (@CommSemiring.toSemiring.{u_1} F
+                                    (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                              ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                            (@Subgroup.instSetLike.{u_2}
+                              (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                                (@CommSemiring.toSemiring.{u_1} F
+                                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                                (@CommSemiring.toSemiring.{u_1} F
+                                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                                (@RingHom.id.{u_1} F
+                                  (@Semiring.toNonAssocSemiring.{u_1} F
+                                    (@CommSemiring.toSemiring.{u_1} F
+                                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                                (@RingHom.id.{u_1} F
+                                  (@Semiring.toNonAssocSemiring.{u_1} F
+                                    (@CommSemiring.toSemiring.{u_1} F
+                                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                                ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                              (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                                (@CommSemiring.toSemiring.{u_1} F
+                                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)))
+                          (@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1
+                            inst_2 Q)
+                          x)
+                      (@Subtype.val.{u_2 + 1}
+                        (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1
+                            inst_2 Q))
+                        (fun x =>
+                          @Membership.mem.{u_2, u_2}
+                            (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1
+                                inst_2 Q))
+                            (@Subgroup.{u_2}
+                              (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V
+                                  inst_1 inst_2 Q))
+                              (@Subgroup.toGroup.{u_2}
+                                (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                                  (@CommSemiring.toSemiring.{u_1} F
+                                    (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                                  (@CommSemiring.toSemiring.{u_1} F
+                                    (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                                  (@RingHom.id.{u_1} F
+                                    (@Semiring.toNonAssocSemiring.{u_1} F
+                                      (@CommSemiring.toSemiring.{u_1} F
+                                        (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                                  (@RingHom.id.{u_1} F
+                                    (@Semiring.toNonAssocSemiring.{u_1} F
+                                      (@CommSemiring.toSemiring.{u_1} F
+                                        (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                                  ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                                  (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                                (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                                  (@CommSemiring.toSemiring.{u_1} F
+                                    (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                                  (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+                                (@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V
+                                  inst_1 inst_2 Q)))
+                            (@SetLike.instMembership.{u_2, u_2}
+                              (@Subgroup.{u_2}
+                                (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V
+                                    inst_1 inst_2 Q))
+                                (@Subgroup.toGroup.{u_2}
+                                  (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                                    (@CommSemiring.toSemiring.{u_1} F
+                                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                                    (@CommSemiring.toSemiring.{u_1} F
+                                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                                    (@RingHom.id.{u_1} F
+                                      (@Semiring.toNonAssocSemiring.{u_1} F
+                                        (@CommSemiring.toSemiring.{u_1} F
+                                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                                    (@RingHom.id.{u_1} F
+                                      (@Semiring.toNonAssocSemiring.{u_1} F
+                                        (@CommSemiring.toSemiring.{u_1} F
+                                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                                    ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                                  (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                                    (@CommSemiring.toSemiring.{u_1} F
+                                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+                                  (@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V
+                                    inst_1 inst_2 Q)))
+                              (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V
+                                  inst_1 inst_2 Q))
+                              (@Subgroup.instSetLike.{u_2}
+                                (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V
+                                    inst_1 inst_2 Q))
+                                (@Subgroup.toGroup.{u_2}
+                                  (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                                    (@CommSemiring.toSemiring.{u_1} F
+                                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                                    (@CommSemiring.toSemiring.{u_1} F
+                                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                                    (@RingHom.id.{u_1} F
+                                      (@Semiring.toNonAssocSemiring.{u_1} F
+                                        (@CommSemiring.toSemiring.{u_1} F
+                                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                                    (@RingHom.id.{u_1} F
+                                      (@Semiring.toNonAssocSemiring.{u_1} F
+                                        (@CommSemiring.toSemiring.{u_1} F
+                                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                                    ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                                  (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                                    (@CommSemiring.toSemiring.{u_1} F
+                                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+                                  (@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V
+                                    inst_1 inst_2 Q))))
+                            (@Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} F V inst inst_1 inst_2 Q) x)
+                        z))
+                    x)
+                  (@HSMul.hSMul.{u_1, u_2, u_2} F V V
+                    (@instHSMul.{u_1, u_2} F V
+                      (@SMulZeroClass.toSMul.{u_1, u_2} F V
+                        (@AddZero.toZero.{u_2} V
+                          (@AddZeroClass.toAddZero.{u_2} V
+                            (@AddMonoid.toAddZeroClass.{u_2} V
+                              (@SubNegMonoid.toAddMonoid.{u_2} V
+                                (@AddGroup.toSubNegMonoid.{u_2} V (@AddCommGroup.toAddGroup.{u_2} V inst_1))))))
+                        (@DistribSMul.toSMulZeroClass.{u_1, u_2} F V
+                          (@AddMonoid.toAddZeroClass.{u_2} V
+                            (@SubNegMonoid.toAddMonoid.{u_2} V
+                              (@AddGroup.toSubNegMonoid.{u_2} V (@AddCommGroup.toAddGroup.{u_2} V inst_1))))
+                          (@DistribMulAction.toDistribSMul.{u_1, u_2} F V
+                            (@Semiring.toMonoid.{u_1} F
+                              (@DivisionSemiring.toSemiring.{u_1} F
+                                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                            (@SubNegMonoid.toAddMonoid.{u_2} V
+                              (@AddGroup.toSubNegMonoid.{u_2} V (@AddCommGroup.toAddGroup.{u_2} V inst_1)))
+                            (@Module.toDistribMulAction.{u_1, u_2} F V
+                              (@DivisionSemiring.toSemiring.{u_1} F
+                                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+                              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)))))
+                    c x)))
+        ⋯)
+      ⋯)
+    ⋯
+DEFINITION Atlas.Orthogonal.elementarySubgroup SOURCE Atlas.LinearGroups.Orthogonal.Elementary
+def Atlas.Orthogonal.elementarySubgroup.{u_1, u_2} : {F : Type u_1} →
+  {V : Type u_2} →
+    [inst : Field.{u_1} F] →
+      [inst_1 : AddCommGroup.{u_2} V] →
+        [inst_2 :
+            @_root_.Module.{u_1, u_2} F V
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)] →
+          (Q :
+              @QuadraticForm.{u_1, u_2} F V (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2) →
+            @Subgroup.{u_2}
+              (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+              (@Subgroup.toGroup.{u_2}
+                (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                  ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                  inst_2 inst_2)
+                (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+                (@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q)) :=
+fun {F} {V} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]
+    [inst_2 :
+      @_root_.Module.{u_1, u_2} F V
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)]
+    Q =>
+  @Subgroup.closure.{u_2}
+    (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+    (@Subgroup.toGroup.{u_2}
+      (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+        (@RingHom.id.{u_1} F
+          (@Semiring.toNonAssocSemiring.{u_1} F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+        (@RingHom.id.{u_1} F
+          (@Semiring.toNonAssocSemiring.{u_1} F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+        ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+        inst_2)
+      (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+      (@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+    (@Set.ofPred.{u_2}
+      ↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q) fun g =>
+      ∃ u v,
+        ∃ (hu :
+          @Eq.{u_1 + 1} F
+            (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+              (@QuadraticForm.{u_1, u_2} F V (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+              V (fun x => F)
+              (@QuadraticMap.instFunLike.{u_1, u_2, u_1} F V F
+                (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+                (@Semiring.toAddCommMonoid.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                (@Semiring.toModule.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              Q u)
+            (@OfNat.ofNat.{u_1} F (nat_lit 0)
+              (@Zero.toOfNat0.{u_1} F
+                (@MulZeroClass.toZero.{u_1} F
+                  (@instMulZeroClassOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))))
+          (huv :
+          @Eq.{u_1 + 1} F
+            (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+              (@LinearMap.{u_1, u_1, u_2, u_1} F F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                (@AddCommGroup.toAddCommMonoid.{u_1} F
+                  (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                inst_2
+                (@Semiring.toModule.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              V (fun x => F)
+              (@LinearMap.instFunLike.{u_1, u_1, u_2, u_1} F F V F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                (@AddCommGroup.toAddCommMonoid.{u_1} F
+                  (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                inst_2
+                (@Semiring.toModule.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+              (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, max (u_1 + 1) (u_2 + 1)}
+                (@LinearMap.BilinMap.{u_1, u_2, u_1} F
+                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)) V F
+                  (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                  (@AddCommGroup.toAddCommMonoid.{u_1} F
+                    (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                  inst_2
+                  (@Semiring.toModule.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                V
+                (fun x =>
+                  @LinearMap.{u_1, u_1, u_2, u_1} F F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                    (@RingHom.id.{u_1} F
+                      (@Semiring.toNonAssocSemiring.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                    V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                    (@AddCommGroup.toAddCommMonoid.{u_1} F
+                      (@Ring.toAddCommGroup.{u_1} F
+                        (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                    inst_2
+                    (@Semiring.toModule.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@LinearMap.instFunLike.{u_1, u_1, u_2, max u_1 u_2} F F V
+                  (@LinearMap.{u_1, u_1, u_2, u_1} F F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                    (@RingHom.id.{u_1} F
+                      (@Semiring.toNonAssocSemiring.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                    V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                    (@AddCommGroup.toAddCommMonoid.{u_1} F
+                      (@Ring.toAddCommGroup.{u_1} F
+                        (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                    inst_2
+                    (@Semiring.toModule.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                  (@LinearMap.addCommMonoid.{u_1, u_1, u_2, u_1} F F V F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                    (@AddCommGroup.toAddCommMonoid.{u_1} F
+                      (@Ring.toAddCommGroup.{u_1} F
+                        (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                    inst_2
+                    (@Semiring.toModule.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                    (@RingHom.id.{u_1} F
+                      (@Semiring.toNonAssocSemiring.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+                  inst_2
+                  (@LinearMap.module.{u_1, u_1, u_1, u_2, u_1} F F F V F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                    (@AddCommGroup.toAddCommMonoid.{u_1} F
+                      (@Ring.toAddCommGroup.{u_1} F
+                        (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                    inst_2
+                    (@Semiring.toModule.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                    (@RingHom.id.{u_1} F
+                      (@Semiring.toNonAssocSemiring.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                    (@Semiring.toModule.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                    ⋯)
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+                (@QuadraticMap.polarBilin.{u_1, u_2, u_1} F V F (@Field.toCommRing.{u_1} F inst) inst_1
+                  (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
+                  inst_2
+                  (@Semiring.toModule.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                  Q)
+                u)
+              v)
+            (@OfNat.ofNat.{u_1} F (nat_lit 0)
+              (@Zero.toOfNat0.{u_1} F
+                (@MulZeroClass.toZero.{u_1} F
+                  (@instMulZeroClassOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))),
+          @Eq.{u_2 + 1}
+            (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q)) g
+            (@Atlas.Orthogonal.siegelElement.{u_1, u_2} F V inst inst_1 inst_2 Q u v hu huv))
+DEFINITION Atlas.Orthogonal.siegelElement SOURCE Atlas.LinearGroups.Orthogonal.Elementary
+def Atlas.Orthogonal.siegelElement.{u_1, u_2} : {F : Type u_1} →
+  {V : Type u_2} →
+    [inst : Field.{u_1} F] →
+      [inst_1 : AddCommGroup.{u_2} V] →
+        [inst_2 :
+            @_root_.Module.{u_1, u_2} F V
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)] →
+          (Q :
+              @QuadraticForm.{u_1, u_2} F V (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2) →
+            (u v : V) →
+              @Eq.{u_1 + 1} F
+                  (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+                    (@QuadraticForm.{u_1, u_2} F V (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+                      (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+                    V (fun x => F)
+                    (@QuadraticMap.instFunLike.{u_1, u_2, u_1} F V F
+                      (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+                      (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+                      (@Semiring.toAddCommMonoid.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                      (@Semiring.toModule.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    Q u)
+                  (@OfNat.ofNat.{u_1} F (nat_lit 0)
+                    (@Zero.toOfNat0.{u_1} F
+                      (@MulZeroClass.toZero.{u_1} F
+                        (@instMulZeroClassOfSemiring.{u_1} F
+                          (@DivisionSemiring.toSemiring.{u_1} F
+                            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))) →
+                @Eq.{u_1 + 1} F
+                    (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+                      (@LinearMap.{u_1, u_1, u_2, u_1} F F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@RingHom.id.{u_1} F
+                          (@Semiring.toNonAssocSemiring.{u_1} F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                        V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                        (@AddCommGroup.toAddCommMonoid.{u_1} F
+                          (@Ring.toAddCommGroup.{u_1} F
+                            (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                        inst_2
+                        (@Semiring.toModule.{u_1} F
+                          (@CommSemiring.toSemiring.{u_1} F
+                            (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                      V (fun x => F)
+                      (@LinearMap.instFunLike.{u_1, u_1, u_2, u_1} F F V F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                        (@AddCommGroup.toAddCommMonoid.{u_1} F
+                          (@Ring.toAddCommGroup.{u_1} F
+                            (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                        inst_2
+                        (@Semiring.toModule.{u_1} F
+                          (@CommSemiring.toSemiring.{u_1} F
+                            (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                        (@RingHom.id.{u_1} F
+                          (@Semiring.toNonAssocSemiring.{u_1} F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+                      (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, max (u_1 + 1) (u_2 + 1)}
+                        (@LinearMap.BilinMap.{u_1, u_2, u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)) V F
+                          (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                          (@AddCommGroup.toAddCommMonoid.{u_1} F
+                            (@Ring.toAddCommGroup.{u_1} F
+                              (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                          inst_2
+                          (@Semiring.toModule.{u_1} F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                        V
+                        (fun x =>
+                          @LinearMap.{u_1, u_1, u_2, u_1} F F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@RingHom.id.{u_1} F
+                              (@Semiring.toNonAssocSemiring.{u_1} F
+                                (@CommSemiring.toSemiring.{u_1} F
+                                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                            V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                            (@AddCommGroup.toAddCommMonoid.{u_1} F
+                              (@Ring.toAddCommGroup.{u_1} F
+                                (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                            inst_2
+                            (@Semiring.toModule.{u_1} F
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                        (@LinearMap.instFunLike.{u_1, u_1, u_2, max u_1 u_2} F F V
+                          (@LinearMap.{u_1, u_1, u_2, u_1} F F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@RingHom.id.{u_1} F
+                              (@Semiring.toNonAssocSemiring.{u_1} F
+                                (@CommSemiring.toSemiring.{u_1} F
+                                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                            V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                            (@AddCommGroup.toAddCommMonoid.{u_1} F
+                              (@Ring.toAddCommGroup.{u_1} F
+                                (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                            inst_2
+                            (@Semiring.toModule.{u_1} F
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                          (@CommSemiring.toSemiring.{u_1} F
+                            (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                          (@CommSemiring.toSemiring.{u_1} F
+                            (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                          (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                          (@LinearMap.addCommMonoid.{u_1, u_1, u_2, u_1} F F V F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                            (@AddCommGroup.toAddCommMonoid.{u_1} F
+                              (@Ring.toAddCommGroup.{u_1} F
+                                (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                            inst_2
+                            (@Semiring.toModule.{u_1} F
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                            (@RingHom.id.{u_1} F
+                              (@Semiring.toNonAssocSemiring.{u_1} F
+                                (@CommSemiring.toSemiring.{u_1} F
+                                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+                          inst_2
+                          (@LinearMap.module.{u_1, u_1, u_1, u_2, u_1} F F F V F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                            (@AddCommGroup.toAddCommMonoid.{u_1} F
+                              (@Ring.toAddCommGroup.{u_1} F
+                                (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                            inst_2
+                            (@Semiring.toModule.{u_1} F
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                            (@RingHom.id.{u_1} F
+                              (@Semiring.toNonAssocSemiring.{u_1} F
+                                (@CommSemiring.toSemiring.{u_1} F
+                                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@Semiring.toModule.{u_1} F
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                            ⋯)
+                          (@RingHom.id.{u_1} F
+                            (@Semiring.toNonAssocSemiring.{u_1} F
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+                        (@QuadraticMap.polarBilin.{u_1, u_2, u_1} F V F (@Field.toCommRing.{u_1} F inst) inst_1
+                          (@Ring.toAddCommGroup.{u_1} F
+                            (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
+                          inst_2
+                          (@Semiring.toModule.{u_1} F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                          Q)
+                        u)
+                      v)
+                    (@OfNat.ofNat.{u_1} F (nat_lit 0)
+                      (@Zero.toOfNat0.{u_1} F
+                        (@MulZeroClass.toZero.{u_1} F
+                          (@instMulZeroClassOfSemiring.{u_1} F
+                            (@DivisionSemiring.toSemiring.{u_1} F
+                              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))) →
+                  ↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2
+                      Q) :=
+fun {F} {V} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]
+    [inst_2 :
+      @_root_.Module.{u_1, u_2} F V
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)]
+    Q u v hu huv =>
+  @DFunLike.coe.{u_2 + 1, u_2 + 1, u_2 + 1}
+    (Equiv.{u_2 + 1, u_2 + 1}
+      (@QuadraticMap.IsometryEquiv.{u_1, u_2, u_2, u_1} F V V F
+        (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))
+        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+        (@Semiring.toAddCommMonoid.{u_1} F
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+        inst_2 inst_2
+        (@Semiring.toModule.{u_1} F
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+        Q Q)
+      ↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+    (@QuadraticMap.IsometryEquiv.{u_1, u_2, u_2, u_1} F V V F
+      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+      (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+      (@Semiring.toAddCommMonoid.{u_1} F
+        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+      inst_2 inst_2
+      (@Semiring.toModule.{u_1} F
+        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+      Q Q)
+    (fun x => ↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+    (@EquivLike.toFunLike.{u_2 + 1, u_2 + 1, u_2 + 1}
+      (Equiv.{u_2 + 1, u_2 + 1}
+        (@QuadraticMap.IsometryEquiv.{u_1, u_2, u_2, u_1} F V V F
+          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))
+          (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+          (@Semiring.toAddCommMonoid.{u_1} F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+          inst_2 inst_2
+          (@Semiring.toModule.{u_1} F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+          Q Q)
+        ↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+      (@QuadraticMap.IsometryEquiv.{u_1, u_2, u_2, u_1} F V V F
+        (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))
+        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+        (@Semiring.toAddCommMonoid.{u_1} F
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+        inst_2 inst_2
+        (@Semiring.toModule.{u_1} F
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+        Q Q)
+      (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+      (@Equiv.instEquivLike.{u_2 + 1, u_2 + 1}
+        (@QuadraticMap.IsometryEquiv.{u_1, u_2, u_2, u_1} F V V F
+          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))
+          (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+          (@Semiring.toAddCommMonoid.{u_1} F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+          inst_2 inst_2
+          (@Semiring.toModule.{u_1} F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+          Q Q)
+        ↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q)))
+    (@Equiv.symm.{u_2 + 1, u_2 + 1}
+      (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+      (@QuadraticMap.IsometryEquiv.{u_1, u_2, u_2, u_1} F V V F
+        (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))
+        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+        (@Semiring.toAddCommMonoid.{u_1} F
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+        inst_2 inst_2
+        (@Semiring.toModule.{u_1} F
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))
+        Q Q)
+      (@Atlas.Orthogonal.isometryCarrierEquiv.{u_1, u_2} F (@Field.toCommRing.{u_1} F inst) V inst_1 inst_2 Q))
+    (@Atlas.Quadratic.siegelIsometry.{u_1, u_2} F V inst inst_1 inst_2 Q u v hu huv)
+DEFINITION Atlas.Quadratic.siegelIsometry SOURCE Atlas.LinearAlgebra.QuadraticSiegel
+def Atlas.Quadratic.siegelIsometry.{u_1, u_2} : {F : Type u_1} →
+  {V : Type u_2} →
+    [inst : Field.{u_1} F] →
+      [inst_1 : AddCommGroup.{u_2} V] →
+        [inst_2 :
+            @_root_.Module.{u_1, u_2} F V
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)] →
+          (Q :
+              @QuadraticForm.{u_1, u_2} F V (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2) →
+            (u v : V) →
+              @Eq.{u_1 + 1} F
+                  (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+                    (@QuadraticForm.{u_1, u_2} F V (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+                      (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+                    V (fun x => F)
+                    (@QuadraticMap.instFunLike.{u_1, u_2, u_1} F V F
+                      (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+                      (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+                      (@Semiring.toAddCommMonoid.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                      (@Semiring.toModule.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                    Q u)
+                  (@OfNat.ofNat.{u_1} F (nat_lit 0)
+                    (@Zero.toOfNat0.{u_1} F
+                      (@MulZeroClass.toZero.{u_1} F
+                        (@instMulZeroClassOfSemiring.{u_1} F
+                          (@DivisionSemiring.toSemiring.{u_1} F
+                            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))) →
+                @Eq.{u_1 + 1} F
+                    (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+                      (@LinearMap.{u_1, u_1, u_2, u_1} F F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@RingHom.id.{u_1} F
+                          (@Semiring.toNonAssocSemiring.{u_1} F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                        V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                        (@AddCommGroup.toAddCommMonoid.{u_1} F
+                          (@Ring.toAddCommGroup.{u_1} F
+                            (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                        inst_2
+                        (@Semiring.toModule.{u_1} F
+                          (@CommSemiring.toSemiring.{u_1} F
+                            (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                      V (fun x => F)
+                      (@LinearMap.instFunLike.{u_1, u_1, u_2, u_1} F F V F
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@CommSemiring.toSemiring.{u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                        (@AddCommGroup.toAddCommMonoid.{u_1} F
+                          (@Ring.toAddCommGroup.{u_1} F
+                            (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                        inst_2
+                        (@Semiring.toModule.{u_1} F
+                          (@CommSemiring.toSemiring.{u_1} F
+                            (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                        (@RingHom.id.{u_1} F
+                          (@Semiring.toNonAssocSemiring.{u_1} F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+                      (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, max (u_1 + 1) (u_2 + 1)}
+                        (@LinearMap.BilinMap.{u_1, u_2, u_1} F
+                          (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)) V F
+                          (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                          (@AddCommGroup.toAddCommMonoid.{u_1} F
+                            (@Ring.toAddCommGroup.{u_1} F
+                              (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                          inst_2
+                          (@Semiring.toModule.{u_1} F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                        V
+                        (fun x =>
+                          @LinearMap.{u_1, u_1, u_2, u_1} F F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@RingHom.id.{u_1} F
+                              (@Semiring.toNonAssocSemiring.{u_1} F
+                                (@CommSemiring.toSemiring.{u_1} F
+                                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                            V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                            (@AddCommGroup.toAddCommMonoid.{u_1} F
+                              (@Ring.toAddCommGroup.{u_1} F
+                                (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                            inst_2
+                            (@Semiring.toModule.{u_1} F
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                        (@LinearMap.instFunLike.{u_1, u_1, u_2, max u_1 u_2} F F V
+                          (@LinearMap.{u_1, u_1, u_2, u_1} F F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@RingHom.id.{u_1} F
+                              (@Semiring.toNonAssocSemiring.{u_1} F
+                                (@CommSemiring.toSemiring.{u_1} F
+                                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                            V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                            (@AddCommGroup.toAddCommMonoid.{u_1} F
+                              (@Ring.toAddCommGroup.{u_1} F
+                                (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                            inst_2
+                            (@Semiring.toModule.{u_1} F
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                          (@CommSemiring.toSemiring.{u_1} F
+                            (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                          (@CommSemiring.toSemiring.{u_1} F
+                            (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                          (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                          (@LinearMap.addCommMonoid.{u_1, u_1, u_2, u_1} F F V F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                            (@AddCommGroup.toAddCommMonoid.{u_1} F
+                              (@Ring.toAddCommGroup.{u_1} F
+                                (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                            inst_2
+                            (@Semiring.toModule.{u_1} F
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                            (@RingHom.id.{u_1} F
+                              (@Semiring.toNonAssocSemiring.{u_1} F
+                                (@CommSemiring.toSemiring.{u_1} F
+                                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+                          inst_2
+                          (@LinearMap.module.{u_1, u_1, u_1, u_2, u_1} F F F V F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                            (@AddCommGroup.toAddCommMonoid.{u_1} F
+                              (@Ring.toAddCommGroup.{u_1} F
+                                (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                            inst_2
+                            (@Semiring.toModule.{u_1} F
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                            (@RingHom.id.{u_1} F
+                              (@Semiring.toNonAssocSemiring.{u_1} F
+                                (@CommSemiring.toSemiring.{u_1} F
+                                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                            (@Semiring.toModule.{u_1} F
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                            ⋯)
+                          (@RingHom.id.{u_1} F
+                            (@Semiring.toNonAssocSemiring.{u_1} F
+                              (@CommSemiring.toSemiring.{u_1} F
+                                (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+                        (@QuadraticMap.polarBilin.{u_1, u_2, u_1} F V F (@Field.toCommRing.{u_1} F inst) inst_1
+                          (@Ring.toAddCommGroup.{u_1} F
+                            (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
+                          inst_2
+                          (@Semiring.toModule.{u_1} F
+                            (@CommSemiring.toSemiring.{u_1} F
+                              (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                          Q)
+                        u)
+                      v)
+                    (@OfNat.ofNat.{u_1} F (nat_lit 0)
+                      (@Zero.toOfNat0.{u_1} F
+                        (@MulZeroClass.toZero.{u_1} F
+                          (@instMulZeroClassOfSemiring.{u_1} F
+                            (@DivisionSemiring.toSemiring.{u_1} F
+                              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))) →
+                  @QuadraticMap.IsometryEquiv.{u_1, u_2, u_2, u_1} F V V F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                    (@Semiring.toAddCommMonoid.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                    inst_2 inst_2
+                    (@Semiring.toModule.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                    Q Q :=
+fun {F} {V} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]
+    [inst_2 :
+      @_root_.Module.{u_1, u_2} F V
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)]
+    Q u v hu huv =>
+  @QuadraticMap.IsometryEquiv.mk.{u_1, u_2, u_2, u_1} F V V F
+    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+    (@Semiring.toAddCommMonoid.{u_1} F
+      (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+    inst_2 inst_2
+    (@Semiring.toModule.{u_1} F
+      (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+    Q Q
+    (@LinearEquiv.mk.{u_1, u_1, u_2, u_2} F F
+      (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+      (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+      (@RingHom.id.{u_1} F
+        (@Semiring.toNonAssocSemiring.{u_1} F
+          (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+      (@RingHom.id.{u_1} F
+        (@Semiring.toNonAssocSemiring.{u_1} F
+          (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+      ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+      inst_2
+      (@LinearMap.mk.{u_1, u_1, u_2, u_2} F F
+        (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@RingHom.id.{u_1} F
+          (@Semiring.toNonAssocSemiring.{u_1} F
+            (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2
+        (@AddHom.mk.{u_2, u_2} V V
+          (@AddCommMagma.toAdd.{u_2} V
+            (@AddCommSemigroup.toAddCommMagma.{u_2} V
+              (@AddCommMonoid.toAddCommSemigroup.{u_2} V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1))))
+          (@AddCommMagma.toAdd.{u_2} V
+            (@AddCommSemigroup.toAddCommMagma.{u_2} V
+              (@AddCommMonoid.toAddCommSemigroup.{u_2} V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1))))
+          (@Atlas.Quadratic.siegel.{u_1, u_2} F V inst inst_1 inst_2 Q u v) ⋯)
+        ⋯)
+      (@Atlas.Quadratic.siegel.{u_1, u_2} F V inst inst_1 inst_2 Q u
+        (@Neg.neg.{u_2} V
+          (@NegZeroClass.toNeg.{u_2} V
+            (@SubNegZeroMonoid.toNegZeroClass.{u_2} V
+              (@SubtractionMonoid.toSubNegZeroMonoid.{u_2} V
+                (@SubtractionCommMonoid.toSubtractionMonoid.{u_2} V
+                  (@AddCommGroup.toDivisionAddCommMonoid.{u_2} V inst_1)))))
+          v))
+      ⋯ ⋯)
+    ⋯
+DEFINITION Atlas.Quadratic.siegel SOURCE Atlas.LinearAlgebra.QuadraticSiegel
+def Atlas.Quadratic.siegel.{u_1, u_2} : {F : Type u_1} →
+  {V : Type u_2} →
+    [inst : Field.{u_1} F] →
+      [inst_1 : AddCommGroup.{u_2} V] →
+        [inst_2 :
+            @_root_.Module.{u_1, u_2} F V
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)] →
+          @QuadraticForm.{u_1, u_2} F V (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 →
+            V → V → V → V :=
+fun {F} {V} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]
+    [inst_2 :
+      @_root_.Module.{u_1, u_2} F V
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)]
+    Q u v x =>
+  @HSub.hSub.{u_2, u_2, u_2} V V V
+    (@instHSub.{u_2} V
+      (@SubNegMonoid.toSub.{u_2} V (@AddGroup.toSubNegMonoid.{u_2} V (@AddCommGroup.toAddGroup.{u_2} V inst_1))))
+    (@HSub.hSub.{u_2, u_2, u_2} V V V
+      (@instHSub.{u_2} V
+        (@SubNegMonoid.toSub.{u_2} V (@AddGroup.toSubNegMonoid.{u_2} V (@AddCommGroup.toAddGroup.{u_2} V inst_1))))
+      (@HAdd.hAdd.{u_2, u_2, u_2} V V V
+        (@instHAdd.{u_2} V
+          (@AddCommMagma.toAdd.{u_2} V
+            (@AddCommSemigroup.toAddCommMagma.{u_2} V
+              (@AddCommMonoid.toAddCommSemigroup.{u_2} V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)))))
+        x
+        (@HSMul.hSMul.{u_1, u_2, u_2} F V V
+          (@instHSMul.{u_1, u_2} F V
+            (@SMulZeroClass.toSMul.{u_1, u_2} F V
+              (@AddZero.toZero.{u_2} V
+                (@AddZeroClass.toAddZero.{u_2} V
+                  (@AddMonoid.toAddZeroClass.{u_2} V
+                    (@SubNegMonoid.toAddMonoid.{u_2} V
+                      (@AddGroup.toSubNegMonoid.{u_2} V (@AddCommGroup.toAddGroup.{u_2} V inst_1))))))
+              (@DistribSMul.toSMulZeroClass.{u_1, u_2} F V
+                (@AddMonoid.toAddZeroClass.{u_2} V
+                  (@SubNegMonoid.toAddMonoid.{u_2} V
+                    (@AddGroup.toSubNegMonoid.{u_2} V (@AddCommGroup.toAddGroup.{u_2} V inst_1))))
+                (@DistribMulAction.toDistribSMul.{u_1, u_2} F V
+                  (@Semiring.toMonoid.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                  (@SubNegMonoid.toAddMonoid.{u_2} V
+                    (@AddGroup.toSubNegMonoid.{u_2} V (@AddCommGroup.toAddGroup.{u_2} V inst_1)))
+                  (@Module.toDistribMulAction.{u_1, u_2} F V
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)))))
+          (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+            (@LinearMap.{u_1, u_1, u_2, u_1} F F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+              (@RingHom.id.{u_1} F
+                (@Semiring.toNonAssocSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+              V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+              (@AddCommGroup.toAddCommMonoid.{u_1} F
+                (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+              inst_2
+              (@Semiring.toModule.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F
+                  (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            V (fun x => F)
+            (@LinearMap.instFunLike.{u_1, u_1, u_2, u_1} F F V F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+              (@AddCommGroup.toAddCommMonoid.{u_1} F
+                (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+              inst_2
+              (@Semiring.toModule.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F
+                  (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+              (@RingHom.id.{u_1} F
+                (@Semiring.toNonAssocSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+            (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, max (u_1 + 1) (u_2 + 1)}
+              (@LinearMap.BilinMap.{u_1, u_2, u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))
+                V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                (@AddCommGroup.toAddCommMonoid.{u_1} F
+                  (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                inst_2
+                (@Semiring.toModule.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              V
+              (fun x =>
+                @LinearMap.{u_1, u_1, u_2, u_1} F F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                  V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                  (@AddCommGroup.toAddCommMonoid.{u_1} F
+                    (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                  inst_2
+                  (@Semiring.toModule.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@LinearMap.instFunLike.{u_1, u_1, u_2, max u_1 u_2} F F V
+                (@LinearMap.{u_1, u_1, u_2, u_1} F F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                  V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                  (@AddCommGroup.toAddCommMonoid.{u_1} F
+                    (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                  inst_2
+                  (@Semiring.toModule.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                (@LinearMap.addCommMonoid.{u_1, u_1, u_2, u_1} F F V F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                  (@AddCommGroup.toAddCommMonoid.{u_1} F
+                    (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                  inst_2
+                  (@Semiring.toModule.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+                inst_2
+                (@LinearMap.module.{u_1, u_1, u_1, u_2, u_1} F F F V F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                  (@AddCommGroup.toAddCommMonoid.{u_1} F
+                    (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                  inst_2
+                  (@Semiring.toModule.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F
+                        (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                  (@Semiring.toModule.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                  ⋯)
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+              (@QuadraticMap.polarBilin.{u_1, u_2, u_1} F V F (@Field.toCommRing.{u_1} F inst) inst_1
+                (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst)))
+                inst_2
+                (@Semiring.toModule.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                Q)
+              x)
+            v)
+          u))
+      (@HSMul.hSMul.{u_1, u_2, u_2} F V V
+        (@instHSMul.{u_1, u_2} F V
+          (@SMulZeroClass.toSMul.{u_1, u_2} F V
+            (@AddZero.toZero.{u_2} V
+              (@AddZeroClass.toAddZero.{u_2} V
+                (@AddMonoid.toAddZeroClass.{u_2} V
+                  (@SubNegMonoid.toAddMonoid.{u_2} V
+                    (@AddGroup.toSubNegMonoid.{u_2} V (@AddCommGroup.toAddGroup.{u_2} V inst_1))))))
+            (@DistribSMul.toSMulZeroClass.{u_1, u_2} F V
+              (@AddMonoid.toAddZeroClass.{u_2} V
+                (@SubNegMonoid.toAddMonoid.{u_2} V
+                  (@AddGroup.toSubNegMonoid.{u_2} V (@AddCommGroup.toAddGroup.{u_2} V inst_1))))
+              (@DistribMulAction.toDistribSMul.{u_1, u_2} F V
+                (@Semiring.toMonoid.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                (@SubNegMonoid.toAddMonoid.{u_2} V
+                  (@AddGroup.toSubNegMonoid.{u_2} V (@AddCommGroup.toAddGroup.{u_2} V inst_1)))
+                (@Module.toDistribMulAction.{u_1, u_2} F V
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+                  (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)))))
+        (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+          (@LinearMap.{u_1, u_1, u_2, u_1} F F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@RingHom.id.{u_1} F
+              (@Semiring.toNonAssocSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+            V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+            (@AddCommGroup.toAddCommMonoid.{u_1} F
+              (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+            inst_2
+            (@Semiring.toModule.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          V (fun x => F)
+          (@LinearMap.instFunLike.{u_1, u_1, u_2, u_1} F F V F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+            (@AddCommGroup.toAddCommMonoid.{u_1} F
+              (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+            inst_2
+            (@Semiring.toModule.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+            (@RingHom.id.{u_1} F
+              (@Semiring.toNonAssocSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F
+                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+          (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, max (u_1 + 1) (u_2 + 1)}
+            (@LinearMap.BilinMap.{u_1, u_2, u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)) V
+              F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+              (@AddCommGroup.toAddCommMonoid.{u_1} F
+                (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+              inst_2
+              (@Semiring.toModule.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F
+                  (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            V
+            (fun x =>
+              @LinearMap.{u_1, u_1, u_2, u_1} F F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                (@AddCommGroup.toAddCommMonoid.{u_1} F
+                  (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                inst_2
+                (@Semiring.toModule.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@LinearMap.instFunLike.{u_1, u_1, u_2, max u_1 u_2} F F V
+              (@LinearMap.{u_1, u_1, u_2, u_1} F F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                (@AddCommGroup.toAddCommMonoid.{u_1} F
+                  (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                inst_2
+                (@Semiring.toModule.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+              (@LinearMap.addCommMonoid.{u_1, u_1, u_2, u_1} F F V F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                (@AddCommGroup.toAddCommMonoid.{u_1} F
+                  (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                inst_2
+                (@Semiring.toModule.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+              inst_2
+              (@LinearMap.module.{u_1, u_1, u_1, u_2, u_1} F F F V F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                (@AddCommGroup.toAddCommMonoid.{u_1} F
+                  (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                inst_2
+                (@Semiring.toModule.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@Semiring.toModule.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                ⋯)
+              (@RingHom.id.{u_1} F
+                (@Semiring.toNonAssocSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+            (@QuadraticMap.polarBilin.{u_1, u_2, u_1} F V F (@Field.toCommRing.{u_1} F inst) inst_1
+              (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))) inst_2
+              (@Semiring.toModule.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F
+                  (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+              Q)
+            x)
+          u)
+        v))
+    (@HSMul.hSMul.{u_1, u_2, u_2} F V V
+      (@instHSMul.{u_1, u_2} F V
+        (@SMulZeroClass.toSMul.{u_1, u_2} F V
+          (@AddZero.toZero.{u_2} V
+            (@AddZeroClass.toAddZero.{u_2} V
+              (@AddMonoid.toAddZeroClass.{u_2} V
+                (@SubNegMonoid.toAddMonoid.{u_2} V
+                  (@AddGroup.toSubNegMonoid.{u_2} V (@AddCommGroup.toAddGroup.{u_2} V inst_1))))))
+          (@DistribSMul.toSMulZeroClass.{u_1, u_2} F V
+            (@AddMonoid.toAddZeroClass.{u_2} V
+              (@SubNegMonoid.toAddMonoid.{u_2} V
+                (@AddGroup.toSubNegMonoid.{u_2} V (@AddCommGroup.toAddGroup.{u_2} V inst_1))))
+            (@DistribMulAction.toDistribSMul.{u_1, u_2} F V
+              (@Semiring.toMonoid.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+              (@SubNegMonoid.toAddMonoid.{u_2} V
+                (@AddGroup.toSubNegMonoid.{u_2} V (@AddCommGroup.toAddGroup.{u_2} V inst_1)))
+              (@Module.toDistribMulAction.{u_1, u_2} F V
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)))))
+      (@HMul.hMul.{u_1, u_1, u_1} F F F
+        (@instHMul.{u_1} F
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+        (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+          (@QuadraticForm.{u_1, u_2} F V (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+            (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+          V (fun x => F)
+          (@QuadraticMap.instFunLike.{u_1, u_2, u_1} F V F
+            (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+            (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+            (@Semiring.toAddCommMonoid.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+            (@Semiring.toModule.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          Q v)
+        (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+          (@LinearMap.{u_1, u_1, u_2, u_1} F F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@RingHom.id.{u_1} F
+              (@Semiring.toNonAssocSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+            V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+            (@AddCommGroup.toAddCommMonoid.{u_1} F
+              (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+            inst_2
+            (@Semiring.toModule.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          V (fun x => F)
+          (@LinearMap.instFunLike.{u_1, u_1, u_2, u_1} F F V F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+            (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+            (@AddCommGroup.toAddCommMonoid.{u_1} F
+              (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+            inst_2
+            (@Semiring.toModule.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+            (@RingHom.id.{u_1} F
+              (@Semiring.toNonAssocSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F
+                  (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+          (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, max (u_1 + 1) (u_2 + 1)}
+            (@LinearMap.BilinMap.{u_1, u_2, u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)) V
+              F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+              (@AddCommGroup.toAddCommMonoid.{u_1} F
+                (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+              inst_2
+              (@Semiring.toModule.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F
+                  (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            V
+            (fun x =>
+              @LinearMap.{u_1, u_1, u_2, u_1} F F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                (@AddCommGroup.toAddCommMonoid.{u_1} F
+                  (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                inst_2
+                (@Semiring.toModule.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@LinearMap.instFunLike.{u_1, u_1, u_2, max u_1 u_2} F F V
+              (@LinearMap.{u_1, u_1, u_2, u_1} F F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                V F (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                (@AddCommGroup.toAddCommMonoid.{u_1} F
+                  (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                inst_2
+                (@Semiring.toModule.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+              (@LinearMap.addCommMonoid.{u_1, u_1, u_2, u_1} F F V F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                (@AddCommGroup.toAddCommMonoid.{u_1} F
+                  (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                inst_2
+                (@Semiring.toModule.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+              inst_2
+              (@LinearMap.module.{u_1, u_1, u_1, u_2, u_1} F F F V F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                (@AddCommGroup.toAddCommMonoid.{u_1} F
+                  (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+                inst_2
+                (@Semiring.toModule.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F
+                      (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst)))
+                (@Semiring.toModule.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+                ⋯)
+              (@RingHom.id.{u_1} F
+                (@Semiring.toNonAssocSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@CommRing.toCommSemiring.{u_1} F (@Field.toCommRing.{u_1} F inst))))))
+            (@QuadraticMap.polarBilin.{u_1, u_2, u_1} F V F (@Field.toCommRing.{u_1} F inst) inst_1
+              (@Ring.toAddCommGroup.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))) inst_2
+              (@Semiring.toModule.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F
+                  (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+              Q)
+            x)
+          u))
+      u)
+DEFINITION Atlas.Quadratic.siegelLinear SOURCE Atlas.LinearAlgebra.QuadraticSiegel
+def Atlas.Quadratic.siegelLinear.{u_1, u_2} : {F : Type u_1} →
+  {V : Type u_2} →
+    [inst : Field.{u_1} F] →
+      [inst_1 : AddCommGroup.{u_2} V] →
+        [inst_2 :
+            @_root_.Module.{u_1, u_2} F V
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)] →
+          @QuadraticForm.{u_1, u_2} F V (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 →
+            V →
+              V →
+                @LinearMap.{u_1, u_1, u_2, u_2} F F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                  V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                  inst_2 inst_2 :=
+fun {F} {V} [inst : Field.{u_1} F] [inst_1 : AddCommGroup.{u_2} V]
+    [inst_2 :
+      @_root_.Module.{u_1, u_2} F V
+        (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)]
+    Q u v =>
+  @LinearMap.mk.{u_1, u_1, u_2, u_2} F F
+    (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+    (@DivisionSemiring.toSemiring.{u_1} F (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))
+    (@RingHom.id.{u_1} F
+      (@Semiring.toNonAssocSemiring.{u_1} F
+        (@DivisionSemiring.toSemiring.{u_1} F
+          (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+    V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2
+    (@AddHom.mk.{u_2, u_2} V V
+      (@AddCommMagma.toAdd.{u_2} V
+        (@AddCommSemigroup.toAddCommMagma.{u_2} V
+          (@AddCommMonoid.toAddCommSemigroup.{u_2} V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1))))
+      (@AddCommMagma.toAdd.{u_2} V
+        (@AddCommSemigroup.toAddCommMagma.{u_2} V
+          (@AddCommMonoid.toAddCommSemigroup.{u_2} V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1))))
+      (@Atlas.Quadratic.siegel.{u_1, u_2} F V inst inst_1 inst_2 Q u v) ⋯)
+    ⋯
+DEFINITION Atlas.Orthogonal.isometryCarrierEquiv SOURCE Atlas.LinearGroups.Orthogonal.Basic
+def Atlas.Orthogonal.isometryCarrierEquiv.{u_1, u_2} : {F : Type u_1} →
+  [inst : CommRing.{u_1} F] →
+    {V : Type u_2} →
+      [inst_1 : AddCommGroup.{u_2} V] →
+        [inst_2 :
+            @_root_.Module.{u_1, u_2} F V (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)] →
+          (Q :
+              @QuadraticForm.{u_1, u_2} F V (@CommRing.toCommSemiring.{u_1} F inst)
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2) →
+            Equiv.{u_2 + 1, u_2 + 1} (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F inst V inst_1 inst_2 Q))
+              (@QuadraticMap.IsometryEquiv.{u_1, u_2, u_2, u_1} F V V F (@CommRing.toCommSemiring.{u_1} F inst)
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                (@Semiring.toAddCommMonoid.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst)))
+                inst_2 inst_2
+                (@Semiring.toModule.{u_1} F (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst)))
+                Q Q) :=
+fun {F} [inst : CommRing.{u_1} F] {V} [inst_1 : AddCommGroup.{u_2} V]
+    [inst_2 :
+      @_root_.Module.{u_1, u_2} F V (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)]
+    Q =>
+  @Equiv.mk.{u_2 + 1, u_2 + 1} (↥(@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F inst V inst_1 inst_2 Q))
+    (@QuadraticMap.IsometryEquiv.{u_1, u_2, u_2, u_1} F V V F (@CommRing.toCommSemiring.{u_1} F inst)
+      (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+      (@Semiring.toAddCommMonoid.{u_1} F (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst)))
+      inst_2 inst_2
+      (@Semiring.toModule.{u_1} F (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))) Q Q)
+    (fun g =>
+      let __src :=
+        @Subtype.val.{u_2 + 1}
+          (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+            (@RingHom.id.{u_1} F
+              (@Semiring.toNonAssocSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+            (@RingHom.id.{u_1} F
+              (@Semiring.toNonAssocSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+            ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+            inst_2)
+          (fun x =>
+            @Membership.mem.{u_2, u_2}
+              (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                inst_2 inst_2)
+              (@Subgroup.{u_2}
+                (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                  ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                  inst_2 inst_2)
+                (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                  (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2))
+              (@SetLike.instMembership.{u_2, u_2}
+                (@Subgroup.{u_2}
+                  (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                    (@RingHom.id.{u_1} F
+                      (@Semiring.toNonAssocSemiring.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                    (@RingHom.id.{u_1} F
+                      (@Semiring.toNonAssocSemiring.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                    ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                  (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2))
+                (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                  ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                  inst_2 inst_2)
+                (@Subgroup.instSetLike.{u_2}
+                  (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                    (@RingHom.id.{u_1} F
+                      (@Semiring.toNonAssocSemiring.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                    (@RingHom.id.{u_1} F
+                      (@Semiring.toNonAssocSemiring.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                    ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                  (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)))
+              (@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F inst V inst_1 inst_2 Q) x)
+          g;
+      @QuadraticMap.IsometryEquiv.mk.{u_1, u_2, u_2, u_1} F V V F (@CommRing.toCommSemiring.{u_1} F inst)
+        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+        (@Semiring.toAddCommMonoid.{u_1} F (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst)))
+        inst_2 inst_2
+        (@Semiring.toModule.{u_1} F (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))) Q Q
+        __src ⋯)
+    (fun g =>
+      @Subtype.mk.{u_2 + 1}
+        (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+          (@RingHom.id.{u_1} F
+            (@Semiring.toNonAssocSemiring.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+          (@RingHom.id.{u_1} F
+            (@Semiring.toNonAssocSemiring.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+          ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+          inst_2)
+        (fun x =>
+          @Membership.mem.{u_2, u_2}
+            (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+              (@RingHom.id.{u_1} F
+                (@Semiring.toNonAssocSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+              (@RingHom.id.{u_1} F
+                (@Semiring.toNonAssocSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+              ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+              inst_2 inst_2)
+            (@Subgroup.{u_2}
+              (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                inst_2 inst_2)
+              (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2))
+            (@SetLike.instMembership.{u_2, u_2}
+              (@Subgroup.{u_2}
+                (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                  ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                  inst_2 inst_2)
+                (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                  (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2))
+              (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                inst_2 inst_2)
+              (@Subgroup.instSetLike.{u_2}
+                (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                  ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                  inst_2 inst_2)
+                (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                  (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)))
+            (@Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} F inst V inst_1 inst_2 Q) x)
+        (@QuadraticMap.IsometryEquiv.toLinearEquiv.{u_1, u_2, u_2, u_1} F V V F (@CommRing.toCommSemiring.{u_1} F inst)
+          (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+          (@Semiring.toAddCommMonoid.{u_1} F (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst)))
+          inst_2 inst_2
+          (@Semiring.toModule.{u_1} F (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))) Q Q g)
+        ⋯)
+    ⋯ ⋯
+DEFINITION Atlas.Orthogonal.isometrySubgroup SOURCE Atlas.LinearGroups.Orthogonal.Basic
+def Atlas.Orthogonal.isometrySubgroup.{u_1, u_2} : {F : Type u_1} →
+  [inst : CommRing.{u_1} F] →
+    {V : Type u_2} →
+      [inst_1 : AddCommGroup.{u_2} V] →
+        [inst_2 :
+            @_root_.Module.{u_1, u_2} F V (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)] →
+          @QuadraticForm.{u_1, u_2} F V (@CommRing.toCommSemiring.{u_1} F inst)
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 →
+            @Subgroup.{u_2}
+              (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                inst_2 inst_2)
+              (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2) :=
+fun {F} [inst : CommRing.{u_1} F] {V} [inst_1 : AddCommGroup.{u_2} V]
+    [inst_2 :
+      @_root_.Module.{u_1, u_2} F V (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+        (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)]
+    Q =>
+  @Subgroup.mk.{u_2}
+    (@LinearEquiv.{u_1, u_1, u_2, u_2} F F (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+      (@RingHom.id.{u_1} F
+        (@Semiring.toNonAssocSemiring.{u_1} F
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+      (@RingHom.id.{u_1} F
+        (@Semiring.toNonAssocSemiring.{u_1} F
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+      ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+      inst_2)
+    (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+      (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+    (@Submonoid.mk.{u_2}
+      (@LinearEquiv.{u_1, u_1, u_2, u_2} F F (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+        (@RingHom.id.{u_1} F
+          (@Semiring.toNonAssocSemiring.{u_1} F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+        (@RingHom.id.{u_1} F
+          (@Semiring.toNonAssocSemiring.{u_1} F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+        ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+        inst_2)
+      (@Monoid.toMulOneClass.{u_2}
+        (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+          (@RingHom.id.{u_1} F
+            (@Semiring.toNonAssocSemiring.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+          (@RingHom.id.{u_1} F
+            (@Semiring.toNonAssocSemiring.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+          ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+          inst_2)
+        (@DivInvMonoid.toMonoid.{u_2}
+          (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+            (@RingHom.id.{u_1} F
+              (@Semiring.toNonAssocSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+            (@RingHom.id.{u_1} F
+              (@Semiring.toNonAssocSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+            ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+            inst_2)
+          (@Group.toDivInvMonoid.{u_2}
+            (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+              (@RingHom.id.{u_1} F
+                (@Semiring.toNonAssocSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+              (@RingHom.id.{u_1} F
+                (@Semiring.toNonAssocSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+              ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+              inst_2 inst_2)
+            (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+              (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2))))
+      (@Subsemigroup.mk.{u_2}
+        (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+          (@RingHom.id.{u_1} F
+            (@Semiring.toNonAssocSemiring.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+          (@RingHom.id.{u_1} F
+            (@Semiring.toNonAssocSemiring.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+          ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+          inst_2)
+        (@MulOne.toMul.{u_2}
+          (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+            (@RingHom.id.{u_1} F
+              (@Semiring.toNonAssocSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+            (@RingHom.id.{u_1} F
+              (@Semiring.toNonAssocSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+            ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+            inst_2)
+          (@MulOneClass.toMulOne.{u_2}
+            (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+              (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+              (@RingHom.id.{u_1} F
+                (@Semiring.toNonAssocSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+              (@RingHom.id.{u_1} F
+                (@Semiring.toNonAssocSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+              ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+              inst_2 inst_2)
+            (@Monoid.toMulOneClass.{u_2}
+              (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                (@RingHom.id.{u_1} F
+                  (@Semiring.toNonAssocSemiring.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                inst_2 inst_2)
+              (@DivInvMonoid.toMonoid.{u_2}
+                (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                  (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                  (@RingHom.id.{u_1} F
+                    (@Semiring.toNonAssocSemiring.{u_1} F
+                      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                  ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                  inst_2 inst_2)
+                (@Group.toDivInvMonoid.{u_2}
+                  (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                    (@RingHom.id.{u_1} F
+                      (@Semiring.toNonAssocSemiring.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                    (@RingHom.id.{u_1} F
+                      (@Semiring.toNonAssocSemiring.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                    ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                  (@LinearEquiv.automorphismGroup.{u_1, u_2} F V
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2))))))
+        (@Set.ofPred.{u_2}
+          (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+            (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+            (@RingHom.id.{u_1} F
+              (@Semiring.toNonAssocSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+            (@RingHom.id.{u_1} F
+              (@Semiring.toNonAssocSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+            ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+            inst_2)
+          fun g =>
+          ∀ (v : V),
+            @Eq.{u_1 + 1} F
+              (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+                (@QuadraticForm.{u_1, u_2} F V (@CommRing.toCommSemiring.{u_1} F inst)
+                  (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+                V (fun x => F)
+                (@QuadraticMap.instFunLike.{u_1, u_2, u_1} F V F (@CommRing.toCommSemiring.{u_1} F inst)
+                  (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+                  (@Semiring.toAddCommMonoid.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst)))
+                  (@Semiring.toModule.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                Q
+                (@DFunLike.coe.{u_2 + 1, u_2 + 1, u_2 + 1}
+                  (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                    (@RingHom.id.{u_1} F
+                      (@Semiring.toNonAssocSemiring.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                    (@RingHom.id.{u_1} F
+                      (@Semiring.toNonAssocSemiring.{u_1} F
+                        (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                    ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                    (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                  V (fun x => V)
+                  (@EquivLike.toFunLike.{u_2 + 1, u_2 + 1, u_2 + 1}
+                    (@LinearEquiv.{u_1, u_1, u_2, u_2} F F
+                      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                      (@RingHom.id.{u_1} F
+                        (@Semiring.toNonAssocSemiring.{u_1} F
+                          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                      (@RingHom.id.{u_1} F
+                        (@Semiring.toNonAssocSemiring.{u_1} F
+                          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                      ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                      (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2)
+                    V V
+                    (@DFinsupp.instEquivLikeLinearEquiv.{u_1, u_1, u_2, u_2} F F
+                      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                      (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))
+                      (@RingHom.id.{u_1} F
+                        (@Semiring.toNonAssocSemiring.{u_1} F
+                          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                      (@RingHom.id.{u_1} F
+                        (@Semiring.toNonAssocSemiring.{u_1} F
+                          (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                      ⋯ ⋯ V V (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1)
+                      (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2 inst_2))
+                  g v))
+              (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+                (@QuadraticForm.{u_1, u_2} F V (@CommRing.toCommSemiring.{u_1} F inst)
+                  (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2)
+                V (fun x => F)
+                (@QuadraticMap.instFunLike.{u_1, u_2, u_1} F V F (@CommRing.toCommSemiring.{u_1} F inst)
+                  (@AddCommGroup.toAddCommMonoid.{u_2} V inst_1) inst_2
+                  (@Semiring.toAddCommMonoid.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst)))
+                  (@Semiring.toModule.{u_1} F
+                    (@CommSemiring.toSemiring.{u_1} F (@CommRing.toCommSemiring.{u_1} F inst))))
+                Q v))
+        ⋯)
+      ⋯)
+    ⋯
+DEFINITION Atlas.Orthogonal.B_admissible SOURCE Atlas.LinearGroups.Orthogonal.BFamily
+def Atlas.Orthogonal.B_admissible : Nat → Nat → Prop :=
+fun n q =>
+  And (@LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) n)
+    (And (@LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) q)
+      (@Ne.{1} (Prod.{0, 0} Nat Nat) (@Prod.mk.{0, 0} Nat Nat n q)
+        (@Prod.mk.{0, 0} Nat Nat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))))
+SHARED EXTRACTION COMPLETE: 15 targets

@@ -3,8 +3,8 @@
 ATLAS-owned material in this release is licensed under the
 **ATLAS Research and Attribution License 1.0**, in [LICENSE](LICENSE).
 This is the license selected by the author for the first public release.
-The repository has not yet been made public. Earlier license drafts in private
-preparation are not presented as alternative licenses for this release.
+The public repository opened on 25 September 2026. This release preserves the
+author's approved license; earlier private license drafts are not alternatives.
 
 Noncommercial research is permitted under the license's conditions. Scholarly use
 requires attribution and citation. Commercial use and AI training, including

@@ -1,0 +1,498 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "orthogonal-comparison-contracts",
+  "targets": [
+    {
+      "declaration": "Atlas.Comparisons.Classical.b1EquivA1",
+      "module": "Atlas.Comparisons.Classical.Orthogonal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.b2EquivC2",
+      "module": "Atlas.Comparisons.Classical.Orthogonal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.bFieldEquiv",
+      "module": "Atlas.Comparisons.Classical.Orthogonal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.d2EquivProduct",
+      "module": "Atlas.Comparisons.Classical.Orthogonal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.d3EquivA3",
+      "module": "Atlas.Comparisons.Classical.Orthogonal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.dFieldEquiv",
+      "module": "Atlas.Comparisons.Classical.Orthogonal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.evenBEquivC",
+      "module": "Atlas.Comparisons.Classical.Orthogonal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.oddB_C_involution_counts",
+      "module": "Atlas.Comparisons.Classical.OrthogonalInvolutions",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.oddB_card_eq_C",
+      "module": "Atlas.Comparisons.Classical.OrthogonalOrder",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.oddB_not_equiv_C",
+      "module": "Atlas.Comparisons.Classical.OrthogonalInvolutions",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Classical.oddB_same_order_nonisomorphic_C",
+      "module": "Atlas.Comparisons.Classical.OrthogonalInvolutions",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.DeletedEight.alternatingHom_elementary",
+      "module": "Atlas.Comparisons.Exceptional.Order20160A8",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.DeletedEight.permutationHom",
+      "module": "Atlas.Comparisons.Exceptional.DeletedEightFaithful",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.DeletedEight.permutationHom_injective",
+      "module": "Atlas.Comparisons.Exceptional.DeletedEightFaithful",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.DeletedEight.quotientQuadratic",
+      "module": "Atlas.Comparisons.Exceptional.DeletedEight",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.DeletedEight.quotient_finrank",
+      "module": "Atlas.Comparisons.Exceptional.DeletedEight",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.DeletedEight.quotient_polar_nondegenerate",
+      "module": "Atlas.Comparisons.Exceptional.DeletedEightNondegenerate",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.DeletedEight.splitIsometry",
+      "module": "Atlas.Comparisons.Exceptional.DeletedEightSplit",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.Nine.card",
+      "module": "Atlas.Comparisons.Exceptional.NineCoordinates",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.Nine.fieldEquiv",
+      "module": "Atlas.Comparisons.Exceptional.NineCoordinates",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.Nine.lower_coordinates",
+      "module": "Atlas.Comparisons.Exceptional.PSL2NineGenerators",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.Nine.marking",
+      "module": "Atlas.Comparisons.Exceptional.PSL2NineAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.Nine.permutation",
+      "module": "Atlas.Comparisons.Exceptional.PSL2NineAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.Nine.permutation_injective",
+      "module": "Atlas.Comparisons.Exceptional.PSL2NineAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.Nine.permutation_inversion",
+      "module": "Atlas.Comparisons.Exceptional.PSL2NineAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.Nine.permutation_omega",
+      "module": "Atlas.Comparisons.Exceptional.PSL2NineAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.Nine.permutation_upper",
+      "module": "Atlas.Comparisons.Exceptional.PSL2NineAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.Nine.psl_generated",
+      "module": "Atlas.Comparisons.Exceptional.PSL2NineGenerators",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.Nine.sl_generated",
+      "module": "Atlas.Comparisons.Exceptional.PSL2NineGenerators",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.Nine.upper_coordinates",
+      "module": "Atlas.Comparisons.Exceptional.PSL2NineGenerators",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.TriplePartitions.action",
+      "module": "Atlas.Comparisons.Exceptional.TriplePartitions",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.TriplePartitions.action_doubleSwap",
+      "module": "Atlas.Comparisons.Exceptional.TriplePartitions",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.TriplePartitions.action_firstCycle",
+      "module": "Atlas.Comparisons.Exceptional.TriplePartitions",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.TriplePartitions.action_injective",
+      "module": "Atlas.Comparisons.Exceptional.TriplePartitions",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.TriplePartitions.action_secondCycle",
+      "module": "Atlas.Comparisons.Exceptional.TriplePartitions",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.TriplePartitions.marking",
+      "module": "Atlas.Comparisons.Exceptional.TriplePartitions",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.TriplePartitions.partition_card",
+      "module": "Atlas.Comparisons.Exceptional.TriplePartitions",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.alt6_card",
+      "module": "Atlas.Comparisons.Exceptional.Order360",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.alt8EquivD3Two",
+      "module": "Atlas.Comparisons.Exceptional.Order20160A8",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.alt8_card",
+      "module": "Atlas.Comparisons.Exceptional.Order20160A8",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.alt8_card_eq_psl3Card4",
+      "module": "Atlas.Comparisons.Exceptional.Order20160Nonisomorphism",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.alt8_not_equiv_psl3Card4",
+      "module": "Atlas.Comparisons.Exceptional.Order20160Nonisomorphism",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.b2BinaryDerivedEquivC2Derived",
+      "module": "Atlas.Comparisons.Exceptional.BinaryDerived",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.b2BinaryDerivedEquivC2Derived_coe",
+      "module": "Atlas.Comparisons.Exceptional.BinaryDerived",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.c2BinaryDerivedEquivAlt6",
+      "module": "Atlas.Comparisons.Exceptional.BinaryDerived",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.c2BinaryDerivedEquivAlt6_coherence",
+      "module": "Atlas.Comparisons.Exceptional.BinaryDerived",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.cardFourFieldEquiv",
+      "module": "Atlas.Comparisons.Exceptional.Order60Four",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2Card4EquivAlt5",
+      "module": "Atlas.Comparisons.Exceptional.Order60Four",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2Card4EquivAlt5_action",
+      "module": "Atlas.Comparisons.Exceptional.Order60Four",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2Card4EquivPsl2Five",
+      "module": "Atlas.Comparisons.Exceptional.Order60Five",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2Card4RecognitionEquivAlt5",
+      "module": "Atlas.Comparisons.Exceptional.Order60Five",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2Card5EquivAlt5",
+      "module": "Atlas.Comparisons.Exceptional.Order60Five",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2Card9EquivAlt6",
+      "module": "Atlas.Comparisons.Exceptional.Order360",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2Card9EquivB2BinaryDerived",
+      "module": "Atlas.Comparisons.Exceptional.Order360",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2Card9EquivC2BinaryDerived",
+      "module": "Atlas.Comparisons.Exceptional.Order360",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2Card9_card",
+      "module": "Atlas.Comparisons.Exceptional.Order360",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2FiveEquivAlt5",
+      "module": "Atlas.Comparisons.Exceptional.Order60Five",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2FourEquivAlt5",
+      "module": "Atlas.Comparisons.Exceptional.Order60Four",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2FourEquivPsl2Five",
+      "module": "Atlas.Comparisons.Exceptional.Order60Five",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2NineCoordinatesEquivAlt6",
+      "module": "Atlas.Comparisons.Exceptional.Order360",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2NineCoordinatesEquivAlt6_action",
+      "module": "Atlas.Comparisons.Exceptional.Order360",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2NineEquivAlt6",
+      "module": "Atlas.Comparisons.Exceptional.Order360",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2SevenEquivPsl3Two",
+      "module": "Atlas.Comparisons.Exceptional.Order168",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2SevenEquivSl3Two",
+      "module": "Atlas.Comparisons.Exceptional.Order168",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl2SevenEquivSl3Two_action",
+      "module": "Atlas.Comparisons.Exceptional.Order168",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl4TwoEquivAlt8",
+      "module": "Atlas.Comparisons.Exceptional.Order20160A8",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl4Two_card",
+      "module": "Atlas.Comparisons.Exceptional.Order20160A8",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl4Two_card_eq_psl3Card4",
+      "module": "Atlas.Comparisons.Exceptional.Order20160Nonisomorphism",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.Exceptional.psl4Two_not_equiv_psl3Card4",
+      "module": "Atlas.Comparisons.Exceptional.Order20160Nonisomorphism",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.commutatorEquiv",
+      "module": "Atlas.GroupTheory.CommutatorEquiv",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.commutatorEquiv_coe",
+      "module": "Atlas.GroupTheory.CommutatorEquiv",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.not_mulEquiv_of_sylow_center_card_ne",
+      "module": "Atlas.GroupTheory.SylowCenterInvariant",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.smallSimpleOrder60EquivAlt5",
+      "module": "Atlas.GroupTheory.SimpleOrderSixty",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.sylowCenterEquiv",
+      "module": "Atlas.GroupTheory.SylowCenterInvariant",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.sylowEquivOfMulEquiv",
+      "module": "Atlas.GroupTheory.SylowCenterInvariant",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularFour.card",
+      "module": "Atlas.LinearGroups.UpperUnitriangularFour",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularFour.centerEquiv",
+      "module": "Atlas.LinearGroups.UpperUnitriangularFour",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularFour.center_card",
+      "module": "Atlas.LinearGroups.UpperUnitriangularFour",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularFour.member_center_iff",
+      "module": "Atlas.LinearGroups.UpperUnitriangularFour",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularFour.projective_injective",
+      "module": "Atlas.LinearGroups.UnitriangularFourProjective",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularFour.sylowModelEquiv",
+      "module": "Atlas.LinearGroups.UnitriangularFourProjective",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularFour.sylowTwo",
+      "module": "Atlas.LinearGroups.UnitriangularFourProjective",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularFour.sylowTwo_card",
+      "module": "Atlas.LinearGroups.UnitriangularFourProjective",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularFour.sylowTwo_center_card",
+      "module": "Atlas.LinearGroups.UnitriangularFourProjective",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularThree.card",
+      "module": "Atlas.LinearGroups.UpperUnitriangularThree",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularThree.centerEquiv",
+      "module": "Atlas.LinearGroups.UpperUnitriangularThree",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularThree.center_card",
+      "module": "Atlas.LinearGroups.UpperUnitriangularThree",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularThree.member_center_iff",
+      "module": "Atlas.LinearGroups.UpperUnitriangularThree",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularThree.projective_injective",
+      "module": "Atlas.LinearGroups.UnitriangularThreeProjective",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularThree.sylowModelEquiv",
+      "module": "Atlas.LinearGroups.UnitriangularThreeProjective",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularThree.sylowTwo",
+      "module": "Atlas.LinearGroups.UnitriangularThreeProjective",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularThree.sylowTwo_card",
+      "module": "Atlas.LinearGroups.UnitriangularThreeProjective",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.LinearGroups.UnitriangularThree.sylowTwo_center_card",
+      "module": "Atlas.LinearGroups.UnitriangularThreeProjective",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.fieldEquivPSL",
+      "module": "Atlas.LinearGroups.PSLFieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.fieldEquivPSL_projection",
+      "module": "Atlas.LinearGroups.PSLFieldTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.fieldEquivSL",
+      "module": "Atlas.LinearGroups.PSLFieldTransport",
+      "kind": "any"
+    }
+  ],
+  "boundaries": []
+}

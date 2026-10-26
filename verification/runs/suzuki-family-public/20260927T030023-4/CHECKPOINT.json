@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "suzuki-family-public",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.SuzukiFamily.ExactSimplicity",
+    "Atlas.LinearGroups.SuzukiFamily.Checks",
+    "Atlas.LinearGroups.TypeSuzuki"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.SuzukiFamily.Group",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Model",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.binary_not_simple",
+      "module": "Atlas.LinearGroups.SuzukiFamily.SmallField",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.borelParameters",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Borel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.borelProjection_ker_eq_root",
+      "module": "Atlas.LinearGroups.SuzukiFamily.BorelSolvable",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.borelProjection_section",
+      "module": "Atlas.LinearGroups.SuzukiFamily.SplitBorel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.borel_solvable",
+      "module": "Atlas.LinearGroups.SuzukiFamily.BorelSolvable",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.card_borel",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Borel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.card_group",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Order",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.card_pointSet",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Ovoid",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.card_rootSubgroup",
+      "module": "Atlas.LinearGroups.SuzukiFamily.RootSubgroup",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.card_torusSubgroup",
+      "module": "Atlas.LinearGroups.SuzukiFamily.SplitBorel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.cellEquiv",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Bruhat",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.cellMap_bijective",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Bruhat",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.checks_binary",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.checks_eight",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.checks_oneTwentyEight",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.checks_thirtyTwo",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.embedding",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Model",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.embedding_injective",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Model",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.fieldEquiv",
+      "module": "Atlas.LinearGroups.SuzukiFamily.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.fieldEquiv_embedding",
+      "module": "Atlas.LinearGroups.SuzukiFamily.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.finite_group",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Model",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.fixes_infinity_iff_short",
+      "module": "Atlas.LinearGroups.SuzukiFamily.ExactStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.fixes_two_iff_torus",
+      "module": "Atlas.LinearGroups.SuzukiFamily.ExactStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.generated_hasForm",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Bruhat",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.map_theta",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Twist",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.noncommutative_of_large",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.perfect_of_large",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Perfect",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.pointAction_faithful",
+      "module": "Atlas.LinearGroups.SuzukiFamily.ExactStabilizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.pointAction_preprimitive",
+      "module": "Atlas.LinearGroups.SuzukiFamily.PointTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.pointAction_two_pretransitive",
+      "module": "Atlas.LinearGroups.SuzukiFamily.PointTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.rootIntoBorel_injective",
+      "module": "Atlas.LinearGroups.SuzukiFamily.SplitBorel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.simple_iff",
+      "module": "Atlas.LinearGroups.SuzukiFamily.ExactSimplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.simple_of_large",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.theta_square",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Twist",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.torusSubgroup",
+      "module": "Atlas.LinearGroups.SuzukiFamily.SplitBorel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.TypeSuzukiConstruction",
+      "module": "Atlas.LinearGroups.TypeSuzuki",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.exists_typeSuzuki",
+      "module": "Atlas.LinearGroups.TypeSuzuki",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.exists_typeSuzuki_parameter",
+      "module": "Atlas.LinearGroups.TypeSuzuki",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.typeSuzuki_construction",
+      "module": "Atlas.LinearGroups.TypeSuzuki",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.typeSuzuki_field_transport",
+      "module": "Atlas.LinearGroups.TypeSuzuki",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.typeSuzuki_prime_power",
+      "module": "Atlas.LinearGroups.TypeSuzuki",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "public-independent-scope",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.Sporadic.Suzuki"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.ReeG2.",
+        "Atlas.Sporadic.Suzuki"
+      ]
+    }
+  ]
+}

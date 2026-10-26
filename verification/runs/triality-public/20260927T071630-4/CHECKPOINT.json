@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "triality-public",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Triality.ParabolicIndices",
+    "Atlas.LinearGroups.Triality.Checks",
+    "Atlas.LinearGroups.Type3D4"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Triality.Group",
+      "module": "Atlas.LinearGroups.Triality.FoldedGenerators",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.PrimePowerModel",
+      "module": "Atlas.LinearGroups.Type3D4",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.baseFieldEquiv",
+      "module": "Atlas.LinearGroups.Triality.CubicFieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.borelProjection_kernel",
+      "module": "Atlas.LinearGroups.Triality.SplitBorel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.borelProjection_section",
+      "module": "Atlas.LinearGroups.Triality.SplitBorel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.card_group",
+      "module": "Atlas.LinearGroups.Triality.Order",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.card_parabolicPoints",
+      "module": "Atlas.LinearGroups.Triality.ParabolicIndices",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.card_shortParabolicQuotient",
+      "module": "Atlas.LinearGroups.Triality.ParabolicIndices",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.cellEquiv",
+      "module": "Atlas.LinearGroups.Triality.BruhatNormalForm",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.compatibleCubicEquiv_exists",
+      "module": "Atlas.LinearGroups.Triality.CubicFieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.dihedralWeylEquiv",
+      "module": "Atlas.LinearGroups.Triality.WeylDihedral",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.extension_card_q2",
+      "module": "Atlas.LinearGroups.Triality.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.extension_card_q3",
+      "module": "Atlas.LinearGroups.Triality.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.extension_card_q4",
+      "module": "Atlas.LinearGroups.Triality.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.finite_group",
+      "module": "Atlas.LinearGroups.Triality.FoldedGenerators",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.intoProjective_injective",
+      "module": "Atlas.LinearGroups.Triality.ProjectiveEmbedding",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.noncommutative",
+      "module": "Atlas.LinearGroups.Triality.Perfect",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.noncommutative_q2",
+      "module": "Atlas.LinearGroups.Triality.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.noncommutative_q3",
+      "module": "Atlas.LinearGroups.Triality.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.noncommutative_q4",
+      "module": "Atlas.LinearGroups.Triality.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.order_q2",
+      "module": "Atlas.LinearGroups.Triality.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.order_q3",
+      "module": "Atlas.LinearGroups.Triality.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.order_q4",
+      "module": "Atlas.LinearGroups.Triality.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.parabolicPointsEquiv_smul",
+      "module": "Atlas.LinearGroups.Triality.ActionTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.perfect",
+      "module": "Atlas.LinearGroups.Triality.Perfect",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.primePower_noncommutative",
+      "module": "Atlas.LinearGroups.Type3D4",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.primePower_order",
+      "module": "Atlas.LinearGroups.Type3D4",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.primePower_simple",
+      "module": "Atlas.LinearGroups.Type3D4",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.simple",
+      "module": "Atlas.LinearGroups.Triality.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.simple_q2",
+      "module": "Atlas.LinearGroups.Triality.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.simple_q3",
+      "module": "Atlas.LinearGroups.Triality.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.simple_q4",
+      "module": "Atlas.LinearGroups.Triality.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.unipotent_card_q2",
+      "module": "Atlas.LinearGroups.Triality.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.unipotent_card_q3",
+      "module": "Atlas.LinearGroups.Triality.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.unipotent_card_q4",
+      "module": "Atlas.LinearGroups.Triality.Checks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Type3D4Construction",
+      "module": "Atlas.LinearGroups.Type3D4",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.exists_type3D4",
+      "module": "Atlas.LinearGroups.Type3D4",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.exists_type3D4_parameter",
+      "module": "Atlas.LinearGroups.Type3D4",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.type3D4_construction",
+      "module": "Atlas.LinearGroups.Type3D4",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.type3D4_field_transport",
+      "module": "Atlas.LinearGroups.Type3D4",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.type3D4_prime_power",
+      "module": "Atlas.LinearGroups.Type3D4",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "triality-public-no-assumed-comparison",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Triality.fixedPointEquiv"
+      ]
+    }
+  ]
+}

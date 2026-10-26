@@ -1,17 +1,11 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
-# Draft for the repository root, based on the public reports inspected on 2026-09-29.
-# Review the source bibliography and automation/review descriptions before publishing.
-# The main-result index is complete for the current 23 + 4 reported contracts.
-# Names, result_record, additional_statement, verification and documentation are
-# project-specific extensions permitted by the v0.4 schema.
+---
 version: v0.4
 project:
   name: A constructive ATLAS of finite simple groups in Lean
-  description: >-
-    Explicit finite-group constructions with proofs of finiteness, order, simplicity and selected
-    structural properties. The public release includes eight families and fifteen sporadic entries.
-    Its main Comparator interface states existence with exact orders and simplicity; four strengthened
-    statements add invariants distinguishing specified same-order pairs.
+  description: Explicit finite-group constructions with proofs of finiteness, order,
+    simplicity and structural properties. The Version 1.2 candidate includes sixteen
+    families, sixteen sporadic constructions and the Tits group. Exact-export release
+    acceptance is pending.
   authors:
   - Gerald Höhn
   responsible_maintainers:
@@ -24,10 +18,9 @@ sources:
   id: atlas_research_note.pdf
   type: research note
   relationship: other
-  note: >-
-    Project overview accompanying this repository, not a claim that the development is a line-by-line
-    formalization of one paper. Construction-specific sources and adaptations should be credited individually
-    when expanding this source list.
+  note: Project overview accompanying this repository, not a claim that the development
+    is a line-by-line formalization of one paper. Construction-specific sources and
+    adaptations should be credited individually when expanding this source list.
 related_formalizations:
 - id: https://github.com/leanprover-community/mathlib4
   relationship: builds-on
@@ -38,220 +31,453 @@ classification:
 automation:
   methods:
   - method: manual
-    tool_setup: Human mathematical direction, choice of constructions and specification of intended
-      results.
+    tool_setup: Human mathematical direction, choice of constructions and specification
+      of intended results.
   - method: agent
     framework: OpenAI Codex
-    tool_setup: AI-assisted Lean implementation, proof development and repository tooling under human
-      direction.
+    tool_setup: AI-assisted Lean implementation, proof development and repository
+      tooling under human direction.
   - method: copilot
     framework: ChatGPT and Claude
     tool_setup: Mathematical discussion, planning, review assistance and documentation.
-  notes: >-
-    Human-directed, AI-assisted development. Exact model versions, costs and timings are omitted here
-    rather than reconstructed from incomplete records.
+  notes: Human-directed, AI-assisted development. Exact model versions, costs and
+    timings are omitted here rather than reconstructed from incomplete records.
 status:
-  scope: >-
-    The 23 existence contracts each assert one finite simple group with the stated order and commutativity
-    or noncommutativity, over the precise parameter ranges in the Challenge modules. The four strengthened
-    contracts assert order, simplicity, noncommutativity and an extra invariant together for one witness.
-    These 27 declarations are the selected public Comparator interface; they are not a count of distinct
-    groups and not an inventory of every theorem in Atlas. See CATALOGUE.md for the construction-specific
-    interfaces.
+  scope: The latest dated Comparator run contains 39 model-specific existence contracts,
+    four strengthened discriminator contracts and two concrete-model aggregate comparison
+    statements. These 45 declarations are not a count of distinct groups. Forty-two
+    passed; Albert F4 and the aggregate pair stopped at the memory cap. See AUDIT.md
+    for the filtered-export acceptance boundary.
   main_results:
-  - name: 'C_p: existence, order and simplicity'
-    declaration: AtlasExistence.cyclic
-    file: verification/existence/2026-09-29/cyclic/Solution.lean
-    comparator_config: verification/existence/2026-09-29/cyclic/comparator.json
-    result_record: verification/existence/2026-09-29/cyclic/RESULT.json
+  - name: AtlasComparison.main
+    declaration: AtlasComparison.main
+    file: verification/existence/2026-10-25-draft/Catalogue-isomorphism/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/Catalogue-isomorphism/comparator.json
+    result_record: verification/existence/2026-10-25-draft/Catalogue-isomorphism/RESULT.json
+    verification_status: incomplete
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: true
     sorry_count: 0
-  - name: 'A_n: existence, order and simplicity'
-    declaration: AtlasExistence.alternating
-    file: verification/existence/2026-09-29/alternating/Solution.lean
-    comparator_config: verification/existence/2026-09-29/alternating/comparator.json
-    result_record: verification/existence/2026-09-29/alternating/RESULT.json
+  - name: AtlasComparison.nonisomorphic
+    declaration: AtlasComparison.nonisomorphic
+    file: verification/existence/2026-10-25-draft/Catalogue-isomorphism/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/Catalogue-isomorphism/comparator.json
+    result_record: verification/existence/2026-10-25-draft/Catalogue-isomorphism/RESULT.json
+    verification_status: incomplete
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: true
     sorry_count: 0
-  - name: 'A_n(q): existence, order and simplicity'
-    declaration: AtlasExistence.typeA
-    file: verification/existence/2026-09-29/typeA/Solution.lean
-    comparator_config: verification/existence/2026-09-29/typeA/comparator.json
-    result_record: verification/existence/2026-09-29/typeA/RESULT.json
-    sorry_count: 0
-  - name: 'B_n(q): existence, order and simplicity'
-    declaration: AtlasExistence.typeB
-    file: verification/existence/2026-09-29/typeB/Solution.lean
-    comparator_config: verification/existence/2026-09-29/typeB/comparator.json
-    result_record: verification/existence/2026-09-29/typeB/RESULT.json
-    sorry_count: 0
-  - name: 'C_n(q): existence, order and simplicity'
-    declaration: AtlasExistence.typeC
-    file: verification/existence/2026-09-29/typeC/Solution.lean
-    comparator_config: verification/existence/2026-09-29/typeC/comparator.json
-    result_record: verification/existence/2026-09-29/typeC/RESULT.json
-    sorry_count: 0
-  - name: 'D_n(q): existence, order and simplicity'
-    declaration: AtlasExistence.typeD
-    file: verification/existence/2026-09-29/typeD/Solution.lean
-    comparator_config: verification/existence/2026-09-29/typeD/comparator.json
-    result_record: verification/existence/2026-09-29/typeD/RESULT.json
-    sorry_count: 0
-  - name: 'G_2(q): existence, order and simplicity'
-    declaration: AtlasExistence.G2
-    file: verification/existence/2026-09-29/G2/Solution.lean
-    comparator_config: verification/existence/2026-09-29/G2/comparator.json
-    result_record: verification/existence/2026-09-29/G2/RESULT.json
-    sorry_count: 0
-  - name: '^2G_2(q): existence, order and simplicity'
-    declaration: AtlasExistence.ReeG2
-    file: verification/existence/2026-09-29/ReeG2/Solution.lean
-    comparator_config: verification/existence/2026-09-29/ReeG2/comparator.json
-    result_record: verification/existence/2026-09-29/ReeG2/RESULT.json
-    sorry_count: 0
-  - name: 'M_11: existence, order and simplicity'
-    declaration: AtlasExistence.M11
-    file: verification/existence/2026-09-29/M11/Solution.lean
-    comparator_config: verification/existence/2026-09-29/M11/comparator.json
-    result_record: verification/existence/2026-09-29/M11/RESULT.json
-    sorry_count: 0
-  - name: 'M_12: existence, order and simplicity'
-    declaration: AtlasExistence.M12
-    file: verification/existence/2026-09-29/M12/Solution.lean
-    comparator_config: verification/existence/2026-09-29/M12/comparator.json
-    result_record: verification/existence/2026-09-29/M12/RESULT.json
-    sorry_count: 0
-  - name: 'M_22: existence, order and simplicity'
-    declaration: AtlasExistence.M22
-    file: verification/existence/2026-09-29/M22/Solution.lean
-    comparator_config: verification/existence/2026-09-29/M22/comparator.json
-    result_record: verification/existence/2026-09-29/M22/RESULT.json
-    sorry_count: 0
-  - name: 'M_23: existence, order and simplicity'
-    declaration: AtlasExistence.M23
-    file: verification/existence/2026-09-29/M23/Solution.lean
-    comparator_config: verification/existence/2026-09-29/M23/comparator.json
-    result_record: verification/existence/2026-09-29/M23/RESULT.json
-    sorry_count: 0
-  - name: 'M_24: existence, order and simplicity'
-    declaration: AtlasExistence.M24
-    file: verification/existence/2026-09-29/M24/Solution.lean
-    comparator_config: verification/existence/2026-09-29/M24/comparator.json
-    result_record: verification/existence/2026-09-29/M24/RESULT.json
-    sorry_count: 0
-  - name: 'Co_1: existence, order and simplicity'
-    declaration: AtlasExistence.Co1
-    file: verification/existence/2026-09-29/Co1/Solution.lean
-    comparator_config: verification/existence/2026-09-29/Co1/comparator.json
-    result_record: verification/existence/2026-09-29/Co1/RESULT.json
-    sorry_count: 0
-  - name: 'Co_2: existence, order and simplicity'
-    declaration: AtlasExistence.Co2
-    file: verification/existence/2026-09-29/Co2/Solution.lean
-    comparator_config: verification/existence/2026-09-29/Co2/comparator.json
-    result_record: verification/existence/2026-09-29/Co2/RESULT.json
-    sorry_count: 0
-  - name: 'Co_3: existence, order and simplicity'
-    declaration: AtlasExistence.Co3
-    file: verification/existence/2026-09-29/Co3/Solution.lean
-    comparator_config: verification/existence/2026-09-29/Co3/comparator.json
-    result_record: verification/existence/2026-09-29/Co3/RESULT.json
-    sorry_count: 0
-  - name: 'McL: existence, order and simplicity'
-    declaration: AtlasExistence.McL
-    file: verification/existence/2026-09-29/McL/Solution.lean
-    comparator_config: verification/existence/2026-09-29/McL/comparator.json
-    result_record: verification/existence/2026-09-29/McL/RESULT.json
-    sorry_count: 0
-  - name: 'HS: existence, order and simplicity'
-    declaration: AtlasExistence.HS
-    file: verification/existence/2026-09-29/HS/Solution.lean
-    comparator_config: verification/existence/2026-09-29/HS/comparator.json
-    result_record: verification/existence/2026-09-29/HS/RESULT.json
-    sorry_count: 0
-  - name: 'Suz: existence, order and simplicity'
-    declaration: AtlasExistence.Suz
-    file: verification/existence/2026-09-29/Suz/Solution.lean
-    comparator_config: verification/existence/2026-09-29/Suz/comparator.json
-    result_record: verification/existence/2026-09-29/Suz/RESULT.json
-    sorry_count: 0
-  - name: 'J_2: existence, order and simplicity'
-    declaration: AtlasExistence.J2
-    file: verification/existence/2026-09-29/J2/Solution.lean
-    comparator_config: verification/existence/2026-09-29/J2/comparator.json
-    result_record: verification/existence/2026-09-29/J2/RESULT.json
-    sorry_count: 0
-  - name: 'Fi_22: existence, order and simplicity'
-    declaration: AtlasExistence.Fi22
-    file: verification/existence/2026-09-29/Fi22/Solution.lean
-    comparator_config: verification/existence/2026-09-29/Fi22/comparator.json
-    result_record: verification/existence/2026-09-29/Fi22/RESULT.json
-    sorry_count: 0
-  - name: 'Fi_23: existence, order and simplicity'
-    declaration: AtlasExistence.Fi23
-    file: verification/existence/2026-09-29/Fi23/Solution.lean
-    comparator_config: verification/existence/2026-09-29/Fi23/comparator.json
-    result_record: verification/existence/2026-09-29/Fi23/RESULT.json
-    sorry_count: 0
-  - name: 'Fi_24'': existence, order and simplicity'
-    declaration: AtlasExistence.Fi24Prime
-    file: verification/existence/2026-09-29/Fi24Prime/Solution.lean
-    comparator_config: verification/existence/2026-09-29/Fi24Prime/comparator.json
-    result_record: verification/existence/2026-09-29/Fi24Prime/RESULT.json
-    sorry_count: 0
-  - name: 'B_n(q): involution-class count'
-    declaration: AtlasDistinguished.typeB
-    file: verification/existence/discriminators/2026-09-29/typeB/Solution.lean
-    comparator_config: verification/existence/discriminators/2026-09-29/typeB/comparator.json
-    result_record: verification/existence/discriminators/2026-09-29/typeB/RESULT.json
-    sorry_count: 0
-    additional_statement: For odd characteristic, the same group witness has k_2(G) = n.
-  - name: 'C_n(q): involution-class count'
-    declaration: AtlasDistinguished.typeC
-    file: verification/existence/discriminators/2026-09-29/typeC/Solution.lean
-    comparator_config: verification/existence/discriminators/2026-09-29/typeC/comparator.json
-    result_record: verification/existence/discriminators/2026-09-29/typeC/RESULT.json
-    sorry_count: 0
-    additional_statement: For odd characteristic, the same group witness has k_2(G) = floor(n/2) +
-      1.
-  - name: 'Order 20160: Sylow-2 centers of order 2'
+  - name: AtlasDistinguished.alternating8
     declaration: AtlasDistinguished.alternating8
-    file: verification/existence/discriminators/2026-09-29/alternating8/Solution.lean
-    comparator_config: verification/existence/discriminators/2026-09-29/alternating8/comparator.json
-    result_record: verification/existence/discriminators/2026-09-29/alternating8/RESULT.json
+    file: verification/existence/2026-10-25-draft/AtlasDistinguished-alternating8/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasDistinguished-alternating8/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasDistinguished-alternating8/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
     sorry_count: 0
-    additional_statement: The same group witness has order 20160, and every Sylow-2 subgroup has center
-      of order 2.
-  - name: 'Order 20160: Sylow-2 centers of order 4'
+  - name: AtlasDistinguished.psl3Four
     declaration: AtlasDistinguished.psl3Four
-    file: verification/existence/discriminators/2026-09-29/psl3Four/Solution.lean
-    comparator_config: verification/existence/discriminators/2026-09-29/psl3Four/comparator.json
-    result_record: verification/existence/discriminators/2026-09-29/psl3Four/RESULT.json
+    file: verification/existence/2026-10-25-draft/AtlasDistinguished-psl3Four/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasDistinguished-psl3Four/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasDistinguished-psl3Four/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
     sorry_count: 0
-    additional_statement: The same group witness has order 20160, and every Sylow-2 subgroup has center
-      of order 4.
+  - name: AtlasDistinguished.typeB
+    declaration: AtlasDistinguished.typeB
+    file: verification/existence/2026-10-25-draft/AtlasDistinguished-typeB/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasDistinguished-typeB/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasDistinguished-typeB/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasDistinguished.typeC
+    declaration: AtlasDistinguished.typeC
+    file: verification/existence/2026-10-25-draft/AtlasDistinguished-typeC/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasDistinguished-typeC/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasDistinguished-typeC/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.Co1
+    declaration: AtlasExistence.Co1
+    file: verification/existence/2026-10-25-draft/AtlasExistence-Co1/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-Co1/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-Co1/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.Co2
+    declaration: AtlasExistence.Co2
+    file: verification/existence/2026-10-25-draft/AtlasExistence-Co2/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-Co2/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-Co2/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.Co3
+    declaration: AtlasExistence.Co3
+    file: verification/existence/2026-10-25-draft/AtlasExistence-Co3/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-Co3/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-Co3/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.F4
+    declaration: AtlasExistence.F4
+    file: verification/existence/2026-10-25-draft/AtlasExistence-F4/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-F4/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-F4/RESULT.json
+    verification_status: incomplete
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: true
+    sorry_count: 0
+  - name: AtlasExistence.Fi22
+    declaration: AtlasExistence.Fi22
+    file: verification/existence/2026-10-25-draft/AtlasExistence-Fi22/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-Fi22/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-Fi22/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.Fi23
+    declaration: AtlasExistence.Fi23
+    file: verification/existence/2026-10-25-draft/AtlasExistence-Fi23/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-Fi23/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-Fi23/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.Fi24Prime
+    declaration: AtlasExistence.Fi24Prime
+    file: verification/existence/2026-10-25-draft/AtlasExistence-Fi24Prime/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-Fi24Prime/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-Fi24Prime/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.G2
+    declaration: AtlasExistence.G2
+    file: verification/existence/2026-10-25-draft/AtlasExistence-G2/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-G2/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-G2/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.HS
+    declaration: AtlasExistence.HS
+    file: verification/existence/2026-10-25-draft/AtlasExistence-HS/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-HS/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-HS/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.J2
+    declaration: AtlasExistence.J2
+    file: verification/existence/2026-10-25-draft/AtlasExistence-J2/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-J2/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-J2/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.M11
+    declaration: AtlasExistence.M11
+    file: verification/existence/2026-10-25-draft/AtlasExistence-M11/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-M11/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-M11/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.M12
+    declaration: AtlasExistence.M12
+    file: verification/existence/2026-10-25-draft/AtlasExistence-M12/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-M12/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-M12/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.M22
+    declaration: AtlasExistence.M22
+    file: verification/existence/2026-10-25-draft/AtlasExistence-M22/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-M22/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-M22/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.M23
+    declaration: AtlasExistence.M23
+    file: verification/existence/2026-10-25-draft/AtlasExistence-M23/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-M23/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-M23/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.M24
+    declaration: AtlasExistence.M24
+    file: verification/existence/2026-10-25-draft/AtlasExistence-M24/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-M24/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-M24/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.McL
+    declaration: AtlasExistence.McL
+    file: verification/existence/2026-10-25-draft/AtlasExistence-McL/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-McL/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-McL/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.ReeG2
+    declaration: AtlasExistence.ReeG2
+    file: verification/existence/2026-10-25-draft/AtlasExistence-ReeG2/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-ReeG2/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-ReeG2/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.Ru
+    declaration: AtlasExistence.Ru
+    file: verification/existence/2026-10-25-draft/AtlasExistence-Ru/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-Ru/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-Ru/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.Suz
+    declaration: AtlasExistence.Suz
+    file: verification/existence/2026-10-25-draft/AtlasExistence-Suz/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-Suz/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-Suz/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.SuzukiFamily
+    declaration: AtlasExistence.SuzukiFamily
+    file: verification/existence/2026-10-25-draft/AtlasExistence-SuzukiFamily/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-SuzukiFamily/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-SuzukiFamily/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.Tits
+    declaration: AtlasExistence.Tits
+    file: verification/existence/2026-10-25-draft/AtlasExistence-Tits/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-Tits/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-Tits/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.Triality
+    declaration: AtlasExistence.Triality
+    file: verification/existence/2026-10-25-draft/AtlasExistence-Triality/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-Triality/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-Triality/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.alternating
+    declaration: AtlasExistence.alternating
+    file: verification/existence/2026-10-25-draft/AtlasExistence-alternating/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-alternating/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-alternating/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.cyclic
+    declaration: AtlasExistence.cyclic
+    file: verification/existence/2026-10-25-draft/AtlasExistence-cyclic/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-cyclic/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-cyclic/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.type2A
+    declaration: AtlasExistence.type2A
+    file: verification/existence/2026-10-25-draft/AtlasExistence-type2A/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-type2A/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-type2A/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.type2D
+    declaration: AtlasExistence.type2D
+    file: verification/existence/2026-10-25-draft/AtlasExistence-type2D/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-type2D/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-type2D/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.typeA
+    declaration: AtlasExistence.typeA
+    file: verification/existence/2026-10-25-draft/AtlasExistence-typeA/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-typeA/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-typeA/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.typeB
+    declaration: AtlasExistence.typeB
+    file: verification/existence/2026-10-25-draft/AtlasExistence-typeB/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-typeB/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-typeB/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.typeC
+    declaration: AtlasExistence.typeC
+    file: verification/existence/2026-10-25-draft/AtlasExistence-typeC/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-typeC/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-typeC/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistence.typeD
+    declaration: AtlasExistence.typeD
+    file: verification/existence/2026-10-25-draft/AtlasExistence-typeD/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/AtlasExistence-typeD/comparator.json
+    result_record: verification/existence/2026-10-25-draft/AtlasExistence-typeD/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistenceChevalley.A
+    declaration: AtlasExistenceChevalley.A
+    file: verification/existence/2026-10-25-draft/Chevalley-A/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/Chevalley-A/comparator.json
+    result_record: verification/existence/2026-10-25-draft/Chevalley-A/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistenceChevalley.B
+    declaration: AtlasExistenceChevalley.B
+    file: verification/existence/2026-10-25-draft/Chevalley-B/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/Chevalley-B/comparator.json
+    result_record: verification/existence/2026-10-25-draft/Chevalley-B/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistenceChevalley.C
+    declaration: AtlasExistenceChevalley.C
+    file: verification/existence/2026-10-25-draft/Chevalley-C/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/Chevalley-C/comparator.json
+    result_record: verification/existence/2026-10-25-draft/Chevalley-C/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistenceChevalley.D
+    declaration: AtlasExistenceChevalley.D
+    file: verification/existence/2026-10-25-draft/Chevalley-D/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/Chevalley-D/comparator.json
+    result_record: verification/existence/2026-10-25-draft/Chevalley-D/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistenceChevalley.E6
+    declaration: AtlasExistenceChevalley.E6
+    file: verification/existence/2026-10-25-draft/Chevalley-E6/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/Chevalley-E6/comparator.json
+    result_record: verification/existence/2026-10-25-draft/Chevalley-E6/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistenceChevalley.E7
+    declaration: AtlasExistenceChevalley.E7
+    file: verification/existence/2026-10-25-draft/Chevalley-E7/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/Chevalley-E7/comparator.json
+    result_record: verification/existence/2026-10-25-draft/Chevalley-E7/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistenceChevalley.E8
+    declaration: AtlasExistenceChevalley.E8
+    file: verification/existence/2026-10-25-draft/Chevalley-E8/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/Chevalley-E8/comparator.json
+    result_record: verification/existence/2026-10-25-draft/Chevalley-E8/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistenceChevalley.F4
+    declaration: AtlasExistenceChevalley.F4
+    file: verification/existence/2026-10-25-draft/Chevalley-F4/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/Chevalley-F4/comparator.json
+    result_record: verification/existence/2026-10-25-draft/Chevalley-F4/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
+  - name: AtlasExistenceChevalley.G2
+    declaration: AtlasExistenceChevalley.G2
+    file: verification/existence/2026-10-25-draft/Chevalley-G2/Solution.lean
+    comparator_config: verification/existence/2026-10-25-draft/Chevalley-G2/comparator.json
+    result_record: verification/existence/2026-10-25-draft/Chevalley-G2/RESULT.json
+    verification_status: passed
+    evidence_scope: dated local snapshot; exact-export acceptance separate
+    deferred: false
+    sorry_count: 0
 fidelity:
-  divergences: >-
-    The Comparator interface deliberately hides the constructions behind existential quantifiers.
-    It does not certify a general recognition theorem or classification exhaustiveness. Group labels
-    are navigation labels, not extra hypotheses. Construction-specific statements and comparison maps
-    remain in the substantive ATLAS development. The added invariants distinguish the specified same-order
-    pairs, without asserting uniqueness among all finite groups.
+  divergences: The Comparator interface deliberately hides the constructions behind
+    existential quantifiers. It does not certify a general recognition theorem or
+    classification exhaustiveness. Group labels are navigation labels, not extra hypotheses.
+    Construction-specific statements and comparison maps remain in the substantive
+    ATLAS development. The added invariants distinguish the specified same-order pairs,
+    without asserting uniqueness among all finite groups.
 review:
   status: self-assessed
-  notes: >-
-    Human-directed development with AI-assisted review. The repository reports successful sandboxed
-    Comparator checks for the declarations indexed here. No independent human peer review of these
-    reference specifications is claimed. This metadata summarizes recorded checks; it is not an independent
-    rerun.
+  notes: Human-directed development with AI-assisted review. The repository reports
+    successful sandboxed Comparator checks for the declarations indexed here. No independent
+    human peer review of these reference specifications is claimed. This metadata
+    summarizes recorded checks; it is not an independent rerun.
 verification:
   reports:
-  - kind: existence
+  - kind: Comparator
     file: verification/existence/RESULTS.md
-    passed: 23
-    total: 23
-  - kind: strengthened-existence
-    file: verification/existence/discriminators/RESULTS.md
-    passed: 4
-    total: 4
+    passed: 42
+    total: 45
+    open: 3
+  - kind: Nanoda
+    file: verification/nanoda/2026-10-24-draft/KERNEL_RESULT.json
+    status: passed-kernel-check-with-pretty-printer-warning
+    checked_declarations: 139617
   permitted_axioms:
   - propext
   - Quot.sound
@@ -262,15 +488,10 @@ verification:
   - permitted-axiom check
   - standard Lean kernel replay
   reproduction_guides:
-  - verification/existence/README.md
-  - verification/existence/discriminators/README.md
-  notes: >-
-    The recorded new checks use Comparator with the standard Lean kernel, not Nanoda. The older audit
-    and Nanoda evidence are described separately in AUDIT.md. The saved per-entry files are evidence
-    artifacts; reproduce them using the preparation and sandbox instructions, not by treating each
-    directory as a standalone Lake project. The per-result sorry counts exclude deliberate Challenge
-    placeholders. No repository-wide source-text sorry count or exact per-theorem axiom inventory
-    is asserted here.
+  - verification/INDEPENDENT_CHECKERS.md
+  notes: Dated local-source evidence; not a new filtered-export pass. Three Comparator
+    targets remain incomplete. Original receipts, exclusions and scope boundaries
+    are preserved. Exact-export acceptance and metadata migration remain pending.
 documentation:
   overview: README.md
   mathematical_note: atlas_research_note.pdf

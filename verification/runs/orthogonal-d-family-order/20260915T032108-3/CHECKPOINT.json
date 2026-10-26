@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "orthogonal-d-family-order",
+  "targets": [
+    {
+      "declaration": "Atlas.Orthogonal.Checks.d4_four_order",
+      "module": "Atlas.LinearGroups.Orthogonal.DOrderChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Checks.d4_three_order",
+      "module": "Atlas.LinearGroups.Orthogonal.DOrderChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_admissible",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_card",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_card_mul_denominator",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_finite",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_order",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_order_denominator",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_order_denominator_positive",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_order_divisibility",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_order_numerator",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.DPlus_order_numerator_positive",
+      "module": "Atlas.LinearGroups.Orthogonal.DFamily",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryD_all_char",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryD_all_char_mul_gcd_two",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryD_center_all_char",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryD_center_all_char_mul_gcd_two",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryD_scalar_all_char_mul_gcd_two",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryD_index_all_char",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryD_scalar_eq_center",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.orthogonal_gcd_two_even",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.orthogonal_gcd_two_odd",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.projectiveDQuotientCenterEquiv",
+      "module": "Atlas.LinearGroups.Orthogonal.DStructureAllChar",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "d-order-independent-of-simplicity",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Orthogonal.SimplicityAllCharD",
+        "Atlas.LinearGroups.Orthogonal.DConstruction",
+        "Atlas.LinearGroups.Orthogonal.DSimplicityChecks"
+      ]
+    }
+  ]
+}

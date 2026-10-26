@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "suzuki-family-simplicity",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.SuzukiFamily.DerivedSubgroup",
+    "Atlas.LinearGroups.SuzukiFamily.RootDerived",
+    "Atlas.LinearGroups.SuzukiFamily.Perfect",
+    "Atlas.LinearGroups.SuzukiFamily.Simplicity"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.SuzukiFamily.add_one_ne_zero_of_ne_one",
+      "module": "Atlas.LinearGroups.SuzukiFamily.RootDerived",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.commutator_mem_derivedAmbient",
+      "module": "Atlas.LinearGroups.SuzukiFamily.DerivedSubgroup",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.conjugate_mem_derivedAmbient",
+      "module": "Atlas.LinearGroups.SuzukiFamily.DerivedSubgroup",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.derivedAmbient",
+      "module": "Atlas.LinearGroups.SuzukiFamily.DerivedSubgroup",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.exists_nontrivial_weights",
+      "module": "Atlas.LinearGroups.SuzukiFamily.DerivedSubgroup",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.group_nontrivial",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.noncommutative_of_large",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.perfect_of_large",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Perfect",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.root_central_mem_derived",
+      "module": "Atlas.LinearGroups.SuzukiFamily.RootDerived",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.root_mem_derivedAmbient",
+      "module": "Atlas.LinearGroups.SuzukiFamily.RootDerived",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.simple_of_large",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.torus_mem_derivedAmbient",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Perfect",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.torus_root_commutator",
+      "module": "Atlas.LinearGroups.SuzukiFamily.DerivedSubgroup",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.torus_square_mem_derivedAmbient",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Perfect",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.weyl_mem_derivedAmbient",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Perfect",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.weyl_root_word",
+      "module": "Atlas.LinearGroups.SuzukiFamily.Perfect",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "simplicity-independent-scope",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.Sporadic.Suzuki",
+        "Atlas.LinearGroups.SuzukiFamily.Order",
+        "Atlas.LinearGroups.SuzukiFamily.SmallField",
+        "Atlas.LinearGroups.SuzukiFamily.ExactSimplicity"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.ReeG2.",
+        "Atlas.Sporadic.Suzuki"
+      ]
+    }
+  ]
+}

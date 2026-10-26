@@ -1,0 +1,108 @@
+{
+  "groups": [
+    {
+      "entry": "F4",
+      "kind": "family",
+      "checking": "checked: separate full order, simplicity, generation, geometry, local-radical, transport and public audits",
+      "parameters": "F is an arbitrary finite field, q=|F|; every prime power q>=2, including characteristics 2 and 3",
+      "order": "q^24 * (q^12-1) * (q^8-1) * (q^6-1) * (q^2-1)",
+      "model": "Atlas.F4.Model",
+      "finiteness_theorem": "Atlas.F4.finite_model",
+      "order_theorem": "Atlas.F4.card_Model",
+      "simplicity_theorem": "Atlas.F4.isSimple",
+      "noncommutativity": "Atlas.F4.exists_mul_ne_mul"
+    }
+  ],
+  "properties": [
+    {
+      "declaration": "Atlas.F4.generated_eq_top",
+      "source": "Atlas/LinearGroups/F4/Generation.lean",
+      "description": "The 48 explicit root groups generate the full intrinsic Albert stabilizer",
+      "entry": "Atlas.F4"
+    },
+    {
+      "declaration": "Atlas.F4.isPerfect",
+      "source": "Atlas/LinearGroups/F4/Perfect.lean",
+      "description": "Uniform perfectness from same-length A2 commutators, including q=2",
+      "entry": "Atlas.F4"
+    },
+    {
+      "declaration": "Atlas.F4.center_eq_bot",
+      "source": "Atlas/LinearGroups/F4/Center.lean",
+      "description": "The full group has trivial center, without taking a projective quotient",
+      "entry": "Atlas.F4"
+    },
+    {
+      "declaration": "Atlas.F4.whiteZeroPoints_primitive",
+      "source": "Atlas/LinearGroups/F4/PointPrimitivity.lean",
+      "description": "The actual trace-zero rank-one point action is primitive over every field",
+      "entry": "Atlas.F4"
+    },
+    {
+      "declaration": "Atlas.F4.fieldTransport_root",
+      "source": "Atlas/LinearGroups/F4/FieldRootTransport.lean",
+      "description": "Field isomorphisms preserve all 48 root groups with their parameters",
+      "entry": "Atlas.F4"
+    },
+    {
+      "declaration": "Atlas.F4.fieldPointTransport_equivariant",
+      "source": "Atlas/LinearGroups/F4/FieldPointTransport.lean",
+      "description": "Coefficientwise field transport intertwines the actual projective point actions",
+      "entry": "Atlas.F4"
+    },
+    {
+      "declaration": "Atlas.F4.localRadical_conj",
+      "source": "Atlas/LinearGroups/F4/LocalRadicals.lean",
+      "description": "Canonical local radicals transform by actual conjugation",
+      "entry": "Atlas.F4"
+    },
+    {
+      "declaration": "Atlas.F4.localRadical_normal",
+      "source": "Atlas/LinearGroups/F4/LocalRadicals.lean",
+      "description": "Each local radical is normal in its actual point stabilizer",
+      "entry": "Atlas.F4"
+    },
+    {
+      "declaration": "Atlas.F4.localRadical_card",
+      "source": "Atlas/LinearGroups/F4/LocalRadicals.lean",
+      "description": "Every local radical has order q^15",
+      "entry": "Atlas.F4"
+    },
+    {
+      "declaration": "Atlas.F4.card_nearPoints",
+      "source": "Atlas/LinearGroups/F4/NearPointCount.lean",
+      "description": "Independent near-point cone count q(q^4-1)(q^3+1)/(q-1)",
+      "entry": "Atlas.F4"
+    },
+    {
+      "declaration": "Atlas.typeF4_construction",
+      "source": "Atlas/LinearGroups/TypeF4.lean",
+      "description": "Complete package retaining the full Albert model and geometric interfaces",
+      "entry": "Atlas.F4"
+    },
+    {
+      "declaration": "Atlas.typeF4_prime_power",
+      "source": "Atlas/LinearGroups/TypeF4.lean",
+      "description": "Genuine finite-field realization for every prime p and exponent f>=1",
+      "entry": "Atlas.F4"
+    },
+    {
+      "declaration": "Atlas.exists_typeF4",
+      "source": "Atlas/LinearGroups/TypeF4.lean",
+      "description": "Nonabelian simple existence witnessed by the actual Albert model",
+      "entry": "Atlas.F4"
+    },
+    {
+      "declaration": "Atlas.exists_typeF4_prime_power",
+      "source": "Atlas/LinearGroups/TypeF4.lean",
+      "description": "Uniform existence and exact order for all prime powers",
+      "entry": "Atlas.F4"
+    }
+  ],
+  "catalogue_scope": {
+    "construction": "Full stabilizer of the integral cubic polynomial and distinguished unit in the marked 27-dimensional split Albert space",
+    "parameters": "F is an arbitrary finite field, q=|F|; every prime power q>=2, including characteristics 2 and 3",
+    "exceptions": "None: the full group is nonabelian simple for every finite field, including q=2 and q=3",
+    "recognition": "Concrete split-Albert/Dickson–Wilson construction; no abstract Chevalley theorem, CFSG, target-order recognition or assumed BN-pair"
+  }
+}

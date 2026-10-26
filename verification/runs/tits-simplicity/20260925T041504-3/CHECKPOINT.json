@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "tits-simplicity",
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas.Tits.Simplicity"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Tits.isSimpleGroup",
+      "module": "Atlas.Tits.Simplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.nonabelian",
+      "module": "Atlas.Tits.Simplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.noncommutative",
+      "module": "Atlas.Tits.Simplicity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.perfect",
+      "module": "Atlas.Tits.Simplicity",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independent-of-global-rudvalis-simplicity",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.Rudvalis.ProjectiveSimplicity",
+        "Atlas.Sporadic.Rudvalis"
+      ]
+    }
+  ]
+}

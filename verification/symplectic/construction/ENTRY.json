@@ -1,0 +1,210 @@
+{
+  "id": "family.C",
+  "label": "C_n(q) / PSp(2n,q)",
+  "kind": "family",
+  "audit_entry": "C",
+  "proof_status": "construction_complete",
+  "construction": "Carrier of Matrix.symplecticGroup (Fin n) F, quotiented by its actual center",
+  "parameters": "n is symplectic rank, dimension 2*n; F arbitrary finite field, q=|F|; simple exactly when (n=1 and q>3) or (n>=2 and (n,q)!=(2,2))",
+  "exceptions": "Rank zero is trivial; nonsimple positive-rank pairs (n,q)=(1,2),(1,3),(2,2)",
+  "recognition": "Constructed symplectic family with its natural alternating form and actions; no CFSG or external recognition theorem assumed",
+  "attribution": "mathlib matrix carrier, finite-field and projective APIs, Iwasawa criterion and rank-one PSL simplicity; ATLAS hyperbolic splitting/counting, full generation, small-field perfectness, geometry, center and binary exception",
+  "owner": "Gerald Höhn",
+  "upstream_status": "No upstream acceptance claimed",
+  "roles": {
+    "model": {
+      "declaration": "Atlas.Symplectic.PSp",
+      "source": "Atlas/LinearGroups/Symplectic/Basic.lean"
+    },
+    "finite": {
+      "declaration": "Atlas.Symplectic.finite_psp",
+      "source": "Atlas/LinearGroups/Symplectic/Basic.lean"
+    },
+    "order": {
+      "declaration": "Atlas.Symplectic.card_psp",
+      "source": "Atlas/LinearGroups/Symplectic/ProjectiveOrder.lean",
+      "formula": "q^(n^2) * product_(i=1)^n (q^(2*i)-1) / gcd(2,q-1) (n>=1); order 1 at n=0"
+    },
+    "simple": {
+      "declaration": "Atlas.Symplectic.simple_of_good",
+      "source": "Atlas/LinearGroups/Symplectic/Simplicity.lean"
+    },
+    "nonabelian": {
+      "declaration": "Atlas.Symplectic.projective_not_commutative",
+      "source": "Atlas/LinearGroups/Symplectic/Noncommutative.lean"
+    }
+  },
+  "properties": [
+    {
+      "declaration": "Atlas.Symplectic.card_sp",
+      "source": "Atlas/LinearGroups/Symplectic/Order.lean",
+      "description": "Uniform full matrix-group order, including rank zero"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_center",
+      "source": "Atlas/LinearGroups/Symplectic/Center.lean",
+      "description": "Square-one scalar center cardinality"
+    },
+    {
+      "declaration": "Atlas.Symplectic.mem_center_iff_scalar",
+      "source": "Atlas/LinearGroups/Symplectic/Center.lean",
+      "description": "Exact scalar center identification"
+    },
+    {
+      "declaration": "Atlas.Symplectic.center_mul_card_psp",
+      "source": "Atlas/LinearGroups/Symplectic/OrderInterface.lean",
+      "description": "Division-free positive-rank quotient order"
+    },
+    {
+      "declaration": "Atlas.Symplectic.center_order_dvd",
+      "source": "Atlas/LinearGroups/Symplectic/ProjectiveOrder.lean",
+      "description": "Exact numerator divisibility"
+    },
+    {
+      "declaration": "Atlas.Symplectic.center_denominator_positive",
+      "source": "Atlas/LinearGroups/Symplectic/OrderInterface.lean",
+      "description": "Positive denominator"
+    },
+    {
+      "declaration": "Atlas.Symplectic.simple_iff_good",
+      "source": "Atlas/LinearGroups/Symplectic/Exceptions.lean",
+      "description": "Exact simplicity range including all failures"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projection_kernel",
+      "source": "Atlas/LinearGroups/Symplectic/Basic.lean",
+      "description": "Actual central quotient kernel"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projection_surjective",
+      "source": "Atlas/LinearGroups/Symplectic/Basic.lean",
+      "description": "Surjective canonical quotient"
+    },
+    {
+      "declaration": "Atlas.Symplectic.exists_isometry",
+      "source": "Atlas/LinearGroups/Symplectic/Basis.lean",
+      "description": "Transport of every nondegenerate alternating form of dimension 2*n"
+    },
+    {
+      "declaration": "Atlas.Symplectic.fullLinearIsometryEquiv_action",
+      "source": "Atlas/LinearGroups/Symplectic/FullLinearIsometries.lean",
+      "description": "Full linear-isometry multiplicative comparison respects the actual action"
+    },
+    {
+      "declaration": "Atlas.Symplectic.transvectionGroup_eq_top",
+      "source": "Atlas/LinearGroups/Symplectic/Generation.lean",
+      "description": "Full symplectic transvection generation in every characteristic"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projectiveTransvectionGroup_eq_top",
+      "source": "Atlas/LinearGroups/Symplectic/ProjectiveGeneration.lean",
+      "description": "Full projective transvection generation"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projective_faithful",
+      "source": "Atlas/LinearGroups/Symplectic/Projective.lean",
+      "description": "Faithful natural projective action"
+    },
+    {
+      "declaration": "Atlas.Symplectic.pointPerm_kernel",
+      "source": "Atlas/LinearGroups/Symplectic/Projective.lean",
+      "description": "Exact projective action kernel upstairs"
+    },
+    {
+      "declaration": "Atlas.Symplectic.stabilizer_orbit_iff",
+      "source": "Atlas/LinearGroups/Symplectic/PointOrbits.lean",
+      "description": "Actual rank-three point-stabilizer orbits for rank at least two"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projective_preprimitive",
+      "source": "Atlas/LinearGroups/Symplectic/Primitivity.lean",
+      "description": "Projective primitivity for rank at least two, including the binary exception"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_points",
+      "source": "Atlas/LinearGroups/Symplectic/PointCount.lean",
+      "description": "Projective point count"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_suborbit_one",
+      "source": "Atlas/LinearGroups/Symplectic/PointCount.lean",
+      "description": "Orthogonal nontrivial subdegree"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_suborbit_two_power",
+      "source": "Atlas/LinearGroups/Symplectic/Primitivity.lean",
+      "description": "Nonorthogonal subdegree"
+    },
+    {
+      "declaration": "Atlas.Symplectic.perfect_of_good",
+      "source": "Atlas/LinearGroups/Symplectic/Perfectness.lean",
+      "description": "Perfectness upstairs, including the binary and ternary branches"
+    },
+    {
+      "declaration": "Atlas.Symplectic.projective_perfect_of_good",
+      "source": "Atlas/LinearGroups/Symplectic/Perfectness.lean",
+      "description": "Perfectness of the actual quotient"
+    },
+    {
+      "declaration": "Atlas.Symplectic.card_lineTransvections",
+      "source": "Atlas/LinearGroups/Symplectic/LineTransvections.lean",
+      "description": "Line-transvection subgroup order q"
+    },
+    {
+      "declaration": "Atlas.Symplectic.lineTransvections_normal",
+      "source": "Atlas/LinearGroups/Symplectic/LineTransvections.lean",
+      "description": "Normality in the actual point stabilizer"
+    },
+    {
+      "declaration": "Atlas.Symplectic.toPGL_injective",
+      "source": "Atlas/LinearGroups/Symplectic/ProjectiveEmbedding.lean",
+      "description": "Embedding of the actual quotient in the retained PGL model"
+    },
+    {
+      "declaration": "Atlas.Symplectic.toPGL_action",
+      "source": "Atlas/LinearGroups/Symplectic/ProjectiveEmbedding.lean",
+      "description": "PGL embedding respects projective action"
+    },
+    {
+      "declaration": "Atlas.Symplectic.rankOnePSL_projection",
+      "source": "Atlas/LinearGroups/Symplectic/RankOne.lean",
+      "description": "Rank-one comparison respects the quotient maps"
+    },
+    {
+      "declaration": "Atlas.Symplectic.rankOneSL_action",
+      "source": "Atlas/LinearGroups/Symplectic/RankOne.lean",
+      "description": "Rank-one SL comparison respects the natural linear action"
+    },
+    {
+      "declaration": "Atlas.Symplectic.rankOnePSL_action",
+      "source": "Atlas/LinearGroups/Symplectic/RankOneAction.lean",
+      "description": "Rank-one PSL comparison respects projective action"
+    },
+    {
+      "declaration": "Atlas.Symplectic.exceptionalNormal_card",
+      "source": "Atlas/LinearGroups/Symplectic/Exceptions.lean",
+      "description": "Actual binary rank-two normal subgroup has order 360"
+    },
+    {
+      "declaration": "Atlas.typeC_construction",
+      "source": "Atlas/LinearGroups/TypeC.lean",
+      "description": "Public construction package for the actual Sp and PSp models"
+    },
+    {
+      "declaration": "Atlas.exists_typeC",
+      "source": "Atlas/LinearGroups/TypeC.lean",
+      "description": "Existence witnessed by the actual constructed quotient"
+    },
+    {
+      "declaration": "Atlas.typeC_prime_power",
+      "source": "Atlas/LinearGroups/TypeC.lean",
+      "description": "Actual finite-field realization for prime p and exponent f>=1"
+    },
+    {
+      "declaration": "Atlas.Symplectic.Checks.galois_four",
+      "source": "Atlas/LinearGroups/Symplectic/Checks.lean",
+      "description": "Actual field-of-order-four regression"
+    }
+  ],
+  "evidence": "symplectic-family-f07f142"
+}

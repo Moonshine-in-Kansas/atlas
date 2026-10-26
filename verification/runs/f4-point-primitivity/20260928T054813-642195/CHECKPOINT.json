@@ -1,0 +1,530 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "f4-point-primitivity",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.GroupTheory.PrimitivePointChains",
+    "Atlas.GroupTheory.PrimitivePointChainTransport",
+    "Atlas.LinearGroups.F4.CommonOpposite",
+    "Atlas.LinearGroups.F4.GeometryOneStepObstruction",
+    "Atlas.LinearGroups.F4.OppositePointOrbit",
+    "Atlas.LinearGroups.F4.PointOpposition",
+    "Atlas.LinearGroups.F4.NearPointGeometry",
+    "Atlas.LinearGroups.F4.NearDetection",
+    "Atlas.LinearGroups.F4.CanonicalNearEscape",
+    "Atlas.LinearGroups.F4.NearSpinRootMaps",
+    "Atlas.LinearGroups.F4.NearSpinReduction",
+    "Atlas.LinearGroups.F4.NearPointReduction",
+    "Atlas.LinearGroups.F4.NearPointEscape",
+    "Atlas.Algebra.Albert.ShortRootPairing",
+    "Atlas.LinearGroups.F4.ParabolicPairingEscape",
+    "Atlas.LinearGroups.F4.NonNearPointEscape",
+    "Atlas.LinearGroups.F4.PointPrimitivityCriterion",
+    "Atlas.LinearGroups.F4.PointPrimitivity"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Albert.tracePairing_self",
+      "module": "Atlas.Algebra.Albert.ShortRootPairing",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Albert.tracePairing_shortRootLinear",
+      "module": "Atlas.Algebra.Albert.ShortRootPairing",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Albert.tracePairing_shortRootLinear_one_ne_zero",
+      "module": "Atlas.Algebra.Albert.ShortRootPairing",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Albert.tracePairing_shortRootLinear_white",
+      "module": "Atlas.Algebra.Albert.ShortRootPairing",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.PointsOpposite",
+      "module": "Atlas.LinearGroups.F4.PointOpposition",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.action_rep_scale",
+      "module": "Atlas.LinearGroups.F4.PointOpposition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.baseVector_mem_parabolicImageZero",
+      "module": "Atlas.LinearGroups.F4.GeometryOneStepObstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.baseVector_ne_smul_parabolicVector",
+      "module": "Atlas.LinearGroups.F4.GeometryOneStepObstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.canonicalNearFirst",
+      "module": "Atlas.LinearGroups.F4.CanonicalNearEscape",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.canonicalNearFirst_A0",
+      "module": "Atlas.LinearGroups.F4.CanonicalNearEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.canonicalNearFirst_fixes_C0",
+      "module": "Atlas.LinearGroups.F4.CanonicalNearEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.canonicalNearFirst_fixes_point",
+      "module": "Atlas.LinearGroups.F4.CanonicalNearEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.canonicalNearFirst_mem_rootGenerated",
+      "module": "Atlas.LinearGroups.F4.CanonicalNearEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.canonicalNearIntermediate",
+      "module": "Atlas.LinearGroups.F4.CanonicalNearEscape",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.canonicalNearOpposite",
+      "module": "Atlas.LinearGroups.F4.CanonicalNearEscape",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.canonicalNearOpposite_chain",
+      "module": "Atlas.LinearGroups.F4.CanonicalNearEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.canonicalNearOpposite_pairing",
+      "module": "Atlas.LinearGroups.F4.CanonicalNearEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.canonicalNearOpposite_projective",
+      "module": "Atlas.LinearGroups.F4.CanonicalNearEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.canonicalNearSecond",
+      "module": "Atlas.LinearGroups.F4.CanonicalNearEscape",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.canonicalNearSecond_B4",
+      "module": "Atlas.LinearGroups.F4.CanonicalNearEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.canonicalNearSecond_fixes_A0",
+      "module": "Atlas.LinearGroups.F4.CanonicalNearEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.canonicalNearSecond_fixes_point",
+      "module": "Atlas.LinearGroups.F4.CanonicalNearEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.canonicalNearSecond_mem_rootGenerated",
+      "module": "Atlas.LinearGroups.F4.CanonicalNearEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.canonical_near_stabilizer_chain_escape",
+      "module": "Atlas.LinearGroups.F4.CanonicalNearEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.halfRoot_near_axis",
+      "module": "Atlas.LinearGroups.F4.NearPointReduction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.imageZero_rankOne_iff",
+      "module": "Atlas.LinearGroups.F4.NearPointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.mem_near_of_nonNearCoordinates_zero",
+      "module": "Atlas.LinearGroups.F4.NearDetection",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearAfterThree",
+      "module": "Atlas.LinearGroups.F4.NearSpinReduction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.nearClearedSpin",
+      "module": "Atlas.LinearGroups.F4.NearSpinReduction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.nearClearedSpin_eq",
+      "module": "Atlas.LinearGroups.F4.NearSpinReduction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearClearingWord",
+      "module": "Atlas.LinearGroups.F4.NearSpinReduction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.nearClearingWord_apply",
+      "module": "Atlas.LinearGroups.F4.NearSpinReduction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearDualCoordinate",
+      "module": "Atlas.LinearGroups.F4.NearPointReduction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.nearHyperbolicEquiv",
+      "module": "Atlas.LinearGroups.F4.NearPointGeometry",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.nearImageChart",
+      "module": "Atlas.LinearGroups.F4.NearPointGeometry",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.nearPivot",
+      "module": "Atlas.LinearGroups.F4.NearPointReduction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.nearPivotWord",
+      "module": "Atlas.LinearGroups.F4.NearPointReduction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.nearPivot_dual_destination",
+      "module": "Atlas.LinearGroups.F4.NearPointReduction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearPivot_nonzero_coordinate",
+      "module": "Atlas.LinearGroups.F4.NearPointReduction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearPoint_parabolic_to_base",
+      "module": "Atlas.LinearGroups.F4.NearPointEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearPoint_stabilizer_chain_escape",
+      "module": "Atlas.LinearGroups.F4.NearPointEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearQuadratic",
+      "module": "Atlas.LinearGroups.F4.NearPointGeometry",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.nearQuadratic_hyperbolic",
+      "module": "Atlas.LinearGroups.F4.NearPointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearSpinCoordinates",
+      "module": "Atlas.LinearGroups.F4.NearPointGeometry",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.nearStep",
+      "module": "Atlas.LinearGroups.F4.NearSpinRootMaps",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.nearStepSpin",
+      "module": "Atlas.LinearGroups.F4.NearSpinRootMaps",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.nearStep_apply",
+      "module": "Atlas.LinearGroups.F4.NearSpinRootMaps",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearVector",
+      "module": "Atlas.LinearGroups.F4.NearPointGeometry",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.nearVector_C0",
+      "module": "Atlas.LinearGroups.F4.NearPointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearVector_adjoint",
+      "module": "Atlas.LinearGroups.F4.NearPointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearVector_mem_imageZero",
+      "module": "Atlas.LinearGroups.F4.NearPointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearVector_pairing_dual",
+      "module": "Atlas.LinearGroups.F4.NearPointReduction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearVector_parabolic_reduce",
+      "module": "Atlas.LinearGroups.F4.NearPointReduction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearVector_rankOne_iff",
+      "module": "Atlas.LinearGroups.F4.NearPointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearVector_reconstruction",
+      "module": "Atlas.LinearGroups.F4.NearPointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearVector_reduce_pivot",
+      "module": "Atlas.LinearGroups.F4.NearSpinReduction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearVector_spin",
+      "module": "Atlas.LinearGroups.F4.NearPointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nearVector_trace",
+      "module": "Atlas.LinearGroups.F4.NearPointGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.no_one_step_opposite_move_at_parabolicPoint",
+      "module": "Atlas.LinearGroups.F4.GeometryOneStepObstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nonNearCoordinates",
+      "module": "Atlas.LinearGroups.F4.NearDetection",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.nonNearDetectingRoot",
+      "module": "Atlas.LinearGroups.F4.ParabolicPairingEscape",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.nonNearDetectingRoot_parabolic",
+      "module": "Atlas.LinearGroups.F4.ParabolicPairingEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nonnear_parabolic_self_pairing",
+      "module": "Atlas.LinearGroups.F4.ParabolicPairingEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nonnear_point_parabolic_move",
+      "module": "Atlas.LinearGroups.F4.NonNearPointEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.nonnear_point_stabilizer_chain_escape",
+      "module": "Atlas.LinearGroups.F4.NonNearPointEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.normalizeOppositeVector",
+      "module": "Atlas.LinearGroups.F4.OppositePointOrbit",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.F4.oppositeCell_pairing_detects_offDiagonal",
+      "module": "Atlas.LinearGroups.F4.CommonOpposite",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.opposite_points_parabolic_transitive",
+      "module": "Atlas.LinearGroups.F4.OppositePointOrbit",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.opposite_points_parabolic_transitive_pairing",
+      "module": "Atlas.LinearGroups.F4.OppositePointOrbit",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.opposite_points_stabilizer_transitive",
+      "module": "Atlas.LinearGroups.F4.PointOpposition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.opposite_vectors_parabolic_transport",
+      "module": "Atlas.LinearGroups.F4.OppositePointOrbit",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.parabolicImageZero_tracePairing",
+      "module": "Atlas.LinearGroups.F4.GeometryOneStepObstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.parabolicStabilizer_baseVector_pairing_zero",
+      "module": "Atlas.LinearGroups.F4.GeometryOneStepObstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.parabolic_detecting_move",
+      "module": "Atlas.LinearGroups.F4.ParabolicPairingEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.point_eq_parabolic_of_nearSpin_zero",
+      "module": "Atlas.LinearGroups.F4.NearPointEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.pointsOpposite_common",
+      "module": "Atlas.LinearGroups.F4.PointOpposition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.pointsOpposite_parabolic_iff",
+      "module": "Atlas.LinearGroups.F4.PointOpposition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.pointsOpposite_smul_iff",
+      "module": "Atlas.LinearGroups.F4.PointOpposition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.pointsOpposite_symm",
+      "module": "Atlas.LinearGroups.F4.PointOpposition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.tracePairing_shortRoot",
+      "module": "Atlas.LinearGroups.F4.ParabolicPairingEscape",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.whiteZeroPoints_common_opposite",
+      "module": "Atlas.LinearGroups.F4.OppositePointOrbit",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.whiteZeroPoints_primitive",
+      "module": "Atlas.LinearGroups.F4.PointPrimitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.whiteZeroPoints_primitive_of_base_escape",
+      "module": "Atlas.LinearGroups.F4.PointPrimitivityCriterion",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.whiteZero_common_opposite",
+      "module": "Atlas.LinearGroups.F4.CommonOpposite",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.whiteZero_vectors_common_opposite",
+      "module": "Atlas.LinearGroups.F4.OppositePointOrbit",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.primitive_of_nonrelated_orbit_and_chains",
+      "module": "Atlas.GroupTheory.PrimitivePointChains",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.stabilizerMoveChain_escape_smul",
+      "module": "Atlas.GroupTheory.PrimitivePointChainTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.stabilizerMoveChain_mem_block",
+      "module": "Atlas.GroupTheory.PrimitivePointChains",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.stabilizerMoveChain_smul",
+      "module": "Atlas.GroupTheory.PrimitivePointChainTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.stabilizerMoveChain_smul_iff",
+      "module": "Atlas.GroupTheory.PrimitivePointChainTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.stabilizerMoveChain_substitute",
+      "module": "Atlas.GroupTheory.PrimitivePointChains",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.stabilizerMoveChain_symm",
+      "module": "Atlas.GroupTheory.PrimitivePointChains",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.stabilizerMoveClosure",
+      "module": "Atlas.GroupTheory.PrimitivePointChains",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.stabilizerMoveClosure_image",
+      "module": "Atlas.GroupTheory.PrimitivePointChainTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.stabilizerMoveClosure_subset_block",
+      "module": "Atlas.GroupTheory.PrimitivePointChains",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independent-f4-point-primitivity",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.F4.card_Model",
+        "Atlas.F4.card_parabolic",
+        "Atlas.F4.card_oppositePairStabilizer",
+        "Atlas.F4.OrderChecks.",
+        "Atlas.Fischer.",
+        "Atlas.ReeG2.",
+        "Atlas.F4.isSimple",
+        "Atlas.F4.isPerfect",
+        "Atlas.F4.generated_eq_top"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.OrderChecks"
+      ]
+    }
+  ]
+}

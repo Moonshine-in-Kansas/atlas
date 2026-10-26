@@ -1,0 +1,1633 @@
+STATEMENT Atlas.ReeG2.Parameters SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+Atlas.ReeG2.Parameters.{u_1} : (F : Type u_1) → [Field.{u_1} F] → [Finite.{u_1 + 1} F] → Nat → Prop
+STATEMENT Atlas.ReeG2.card_ge_27 SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+@Atlas.ReeG2.card_ge_27.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [@CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  {m : Nat},
+  @Atlas.ReeG2.Parameters.{u_1} F inst inst_1 m →
+    @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 27) (instOfNatNat (nat_lit 27))) (Nat.card.{u_1} F)
+STATEMENT Atlas.ReeG2.frobenius_period SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+@Atlas.ReeG2.frobenius_period.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  {m : Nat},
+  @Eq.{1} Nat (Nat.card.{u_1} F)
+      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) m)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))) →
+    ∀ (x : F),
+      @Eq.{u_1 + 1} F
+        (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+          (@RingEquiv.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F
+                  (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F
+                  (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F
+                  (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@CommSemiring.toSemiring.{u_1} F
+                  (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+          F (fun x => F)
+          (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+            (@RingEquiv.{u_1, u_1} F F
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+            F F
+            (@RingEquiv.instEquivLike.{u_1, u_1} F F
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@CommSemiring.toSemiring.{u_1} F
+                    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+          (@iterateFrobeniusEquiv.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+              (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) m)
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+            (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)) ⋯ ⋯)
+          x)
+        x
+STATEMENT Atlas.ReeG2.map_sigma SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+@Atlas.ReeG2.map_sigma.{u_1,
+    u_2} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  {K : Type u_2} [inst_3 : Field.{u_2} K] [inst_4 : Finite.{u_2 + 1} K]
+  [inst_5 :
+    @CharP.{u_2} K
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_2} K
+        (@Ring.toAddGroupWithOne.{u_2} K (@DivisionRing.toRing.{u_2} K (@Field.toDivisionRing.{u_2} K inst_3))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  (e :
+    @RingEquiv.{u_1, u_2} F K
+      (@Distrib.toMul.{u_1} F
+        (@instDistribOfSemiring.{u_1} F
+          (@DivisionSemiring.toSemiring.{u_1} F
+            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+      (@Distrib.toMul.{u_2} K
+        (@instDistribOfSemiring.{u_2} K
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+      (@Distrib.toAdd.{u_1} F
+        (@instDistribOfSemiring.{u_1} F
+          (@DivisionSemiring.toSemiring.{u_1} F
+            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+      (@Distrib.toAdd.{u_2} K
+        (@instDistribOfSemiring.{u_2} K
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3))))))
+  (m : Nat) (x : F),
+  @Eq.{u_2 + 1} K
+    (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_1 + 1, u_2 + 1}
+      (@RingEquiv.{u_1, u_2} F K
+        (@Distrib.toMul.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toMul.{u_2} K
+          (@instDistribOfSemiring.{u_2} K
+            (@DivisionSemiring.toSemiring.{u_2} K
+              (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toAdd.{u_2} K
+          (@instDistribOfSemiring.{u_2} K
+            (@DivisionSemiring.toSemiring.{u_2} K
+              (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3))))))
+      F (fun x => K)
+      (@EquivLike.toFunLike.{max (u_1 + 1) (u_2 + 1), u_1 + 1, u_2 + 1}
+        (@RingEquiv.{u_1, u_2} F K
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3))))))
+        F K
+        (@RingEquiv.instEquivLike.{u_1, u_2} F K
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))))
+      e
+      (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+        (@RingEquiv.{u_1, u_1} F F
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+        F (fun x => F)
+        (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+          (@RingEquiv.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+          F F
+          (@RingEquiv.instEquivLike.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+        (@Atlas.ReeG2.sigma.{u_1} F inst inst_1 inst_2 m) x))
+    (@DFunLike.coe.{u_2 + 1, u_2 + 1, u_2 + 1}
+      (@RingEquiv.{u_2, u_2} K K
+        (@Distrib.toMul.{u_2} K
+          (@instDistribOfSemiring.{u_2} K
+            (@DivisionSemiring.toSemiring.{u_2} K
+              (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+        (@Distrib.toMul.{u_2} K
+          (@instDistribOfSemiring.{u_2} K
+            (@DivisionSemiring.toSemiring.{u_2} K
+              (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+        (@Distrib.toAdd.{u_2} K
+          (@instDistribOfSemiring.{u_2} K
+            (@DivisionSemiring.toSemiring.{u_2} K
+              (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+        (@Distrib.toAdd.{u_2} K
+          (@instDistribOfSemiring.{u_2} K
+            (@DivisionSemiring.toSemiring.{u_2} K
+              (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3))))))
+      K (fun x => K)
+      (@EquivLike.toFunLike.{u_2 + 1, u_2 + 1, u_2 + 1}
+        (@RingEquiv.{u_2, u_2} K K
+          (@Distrib.toMul.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toMul.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toAdd.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toAdd.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3))))))
+        K K
+        (@RingEquiv.instEquivLike.{u_2, u_2} K K
+          (@Distrib.toMul.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toMul.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toAdd.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toAdd.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))))
+      (@Atlas.ReeG2.sigma.{u_2} K inst_3 inst_4 inst_5 m)
+      (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_1 + 1, u_2 + 1}
+        (@RingEquiv.{u_1, u_2} F K
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3))))))
+        F (fun x => K)
+        (@EquivLike.toFunLike.{max (u_1 + 1) (u_2 + 1), u_1 + 1, u_2 + 1}
+          (@RingEquiv.{u_1, u_2} F K
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_2} K
+              (@instDistribOfSemiring.{u_2} K
+                (@DivisionSemiring.toSemiring.{u_2} K
+                  (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_2} K
+              (@instDistribOfSemiring.{u_2} K
+                (@DivisionSemiring.toSemiring.{u_2} K
+                  (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3))))))
+          F K
+          (@RingEquiv.instEquivLike.{u_1, u_2} F K
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_2} K
+              (@instDistribOfSemiring.{u_2} K
+                (@DivisionSemiring.toSemiring.{u_2} K
+                  (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_2} K
+              (@instDistribOfSemiring.{u_2} K
+                (@DivisionSemiring.toSemiring.{u_2} K
+                  (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))))
+        e x))
+STATEMENT Atlas.ReeG2.map_theta SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+@Atlas.ReeG2.map_theta.{u_1,
+    u_2} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  {K : Type u_2} [inst_3 : Field.{u_2} K] [inst_4 : Finite.{u_2 + 1} K]
+  [inst_5 :
+    @CharP.{u_2} K
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_2} K
+        (@Ring.toAddGroupWithOne.{u_2} K (@DivisionRing.toRing.{u_2} K (@Field.toDivisionRing.{u_2} K inst_3))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  (e :
+    @RingEquiv.{u_1, u_2} F K
+      (@Distrib.toMul.{u_1} F
+        (@instDistribOfSemiring.{u_1} F
+          (@DivisionSemiring.toSemiring.{u_1} F
+            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+      (@Distrib.toMul.{u_2} K
+        (@instDistribOfSemiring.{u_2} K
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+      (@Distrib.toAdd.{u_1} F
+        (@instDistribOfSemiring.{u_1} F
+          (@DivisionSemiring.toSemiring.{u_1} F
+            (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+      (@Distrib.toAdd.{u_2} K
+        (@instDistribOfSemiring.{u_2} K
+          (@DivisionSemiring.toSemiring.{u_2} K
+            (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3))))))
+  (m : Nat) (x : F),
+  @Eq.{u_2 + 1} K
+    (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_1 + 1, u_2 + 1}
+      (@RingEquiv.{u_1, u_2} F K
+        (@Distrib.toMul.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toMul.{u_2} K
+          (@instDistribOfSemiring.{u_2} K
+            (@DivisionSemiring.toSemiring.{u_2} K
+              (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toAdd.{u_2} K
+          (@instDistribOfSemiring.{u_2} K
+            (@DivisionSemiring.toSemiring.{u_2} K
+              (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3))))))
+      F (fun x => K)
+      (@EquivLike.toFunLike.{max (u_1 + 1) (u_2 + 1), u_1 + 1, u_2 + 1}
+        (@RingEquiv.{u_1, u_2} F K
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3))))))
+        F K
+        (@RingEquiv.instEquivLike.{u_1, u_2} F K
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))))
+      e
+      (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+        (@RingEquiv.{u_1, u_1} F F
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+        F (fun x => F)
+        (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+          (@RingEquiv.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+          F F
+          (@RingEquiv.instEquivLike.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+        (@Atlas.ReeG2.theta.{u_1} F inst inst_1 inst_2 m) x))
+    (@DFunLike.coe.{u_2 + 1, u_2 + 1, u_2 + 1}
+      (@RingEquiv.{u_2, u_2} K K
+        (@Distrib.toMul.{u_2} K
+          (@instDistribOfSemiring.{u_2} K
+            (@DivisionSemiring.toSemiring.{u_2} K
+              (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+        (@Distrib.toMul.{u_2} K
+          (@instDistribOfSemiring.{u_2} K
+            (@DivisionSemiring.toSemiring.{u_2} K
+              (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+        (@Distrib.toAdd.{u_2} K
+          (@instDistribOfSemiring.{u_2} K
+            (@DivisionSemiring.toSemiring.{u_2} K
+              (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+        (@Distrib.toAdd.{u_2} K
+          (@instDistribOfSemiring.{u_2} K
+            (@DivisionSemiring.toSemiring.{u_2} K
+              (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3))))))
+      K (fun x => K)
+      (@EquivLike.toFunLike.{u_2 + 1, u_2 + 1, u_2 + 1}
+        (@RingEquiv.{u_2, u_2} K K
+          (@Distrib.toMul.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toMul.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toAdd.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toAdd.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3))))))
+        K K
+        (@RingEquiv.instEquivLike.{u_2, u_2} K K
+          (@Distrib.toMul.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toMul.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toAdd.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toAdd.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))))
+      (@Atlas.ReeG2.theta.{u_2} K inst_3 inst_4 inst_5 m)
+      (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_1 + 1, u_2 + 1}
+        (@RingEquiv.{u_1, u_2} F K
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_2} K
+            (@instDistribOfSemiring.{u_2} K
+              (@DivisionSemiring.toSemiring.{u_2} K
+                (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3))))))
+        F (fun x => K)
+        (@EquivLike.toFunLike.{max (u_1 + 1) (u_2 + 1), u_1 + 1, u_2 + 1}
+          (@RingEquiv.{u_1, u_2} F K
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_2} K
+              (@instDistribOfSemiring.{u_2} K
+                (@DivisionSemiring.toSemiring.{u_2} K
+                  (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_2} K
+              (@instDistribOfSemiring.{u_2} K
+                (@DivisionSemiring.toSemiring.{u_2} K
+                  (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3))))))
+          F K
+          (@RingEquiv.instEquivLike.{u_1, u_2} F K
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_2} K
+              (@instDistribOfSemiring.{u_2} K
+                (@DivisionSemiring.toSemiring.{u_2} K
+                  (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_2} K
+              (@instDistribOfSemiring.{u_2} K
+                (@DivisionSemiring.toSemiring.{u_2} K
+                  (@Semifield.toDivisionSemiring.{u_2} K (@Field.toSemifield.{u_2} K inst_3)))))))
+        e x))
+STATEMENT Atlas.ReeG2.sigma SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+Atlas.ReeG2.sigma.{u_1} : (F : Type u_1) →
+  [inst : Field.{u_1} F] →
+    [Finite.{u_1 + 1} F] →
+      [@CharP.{u_1} F
+            (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+              (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))] →
+        Nat →
+          @RingEquiv.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+STATEMENT Atlas.ReeG2.sigma_apply SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+Atlas.ReeG2.sigma_apply.{u_1} : ∀ (F : Type u_1) [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  (m : Nat) (x : F),
+  @Eq.{u_1 + 1} F
+    (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+      (@RingEquiv.{u_1, u_1} F F
+        (@Distrib.toMul.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toMul.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+      F (fun x => F)
+      (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+        (@RingEquiv.{u_1, u_1} F F
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+        F F
+        (@RingEquiv.instEquivLike.{u_1, u_1} F F
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+      (@Atlas.ReeG2.sigma.{u_1} F inst inst_1 inst_2 m) x)
+    (@HPow.hPow.{u_1, 0, u_1} F Nat F
+      (@instHPow.{u_1, 0} F Nat
+        (@NPow.toPow.{u_1} F
+          (@Monoid.toNPow.{u_1} F
+            (@Semiring.toMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+      x
+      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) m
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+STATEMENT Atlas.ReeG2.sigma_eq_theta_cube SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+@Atlas.ReeG2.sigma_eq_theta_cube.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  {m : Nat} (x : F),
+  @Eq.{u_1 + 1} F
+    (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+      (@RingEquiv.{u_1, u_1} F F
+        (@Distrib.toMul.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toMul.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+      F (fun x => F)
+      (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+        (@RingEquiv.{u_1, u_1} F F
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+        F F
+        (@RingEquiv.instEquivLike.{u_1, u_1} F F
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+      (@Atlas.ReeG2.sigma.{u_1} F inst inst_1 inst_2 m) x)
+    (@HPow.hPow.{u_1, 0, u_1} F Nat F
+      (@instHPow.{u_1, 0} F Nat
+        (@NPow.toPow.{u_1} F
+          (@Monoid.toNPow.{u_1} F
+            (@Semiring.toMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+      (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+        (@RingEquiv.{u_1, u_1} F F
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+        F (fun x => F)
+        (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+          (@RingEquiv.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+          F F
+          (@RingEquiv.instEquivLike.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+        (@Atlas.ReeG2.theta.{u_1} F inst inst_1 inst_2 m) x)
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+STATEMENT Atlas.ReeG2.sigma_eq_theta_symm SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+@Atlas.ReeG2.sigma_eq_theta_symm.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  {m : Nat},
+  @Eq.{1} Nat (Nat.card.{u_1} F)
+      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) m)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))) →
+    @Eq.{u_1 + 1}
+      (@RingEquiv.{u_1, u_1} F F
+        (@Distrib.toMul.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toMul.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+      (@Atlas.ReeG2.sigma.{u_1} F inst inst_1 inst_2 m)
+      (@RingEquiv.symm.{u_1, u_1} F F
+        (@Distrib.toMul.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toMul.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Atlas.ReeG2.theta.{u_1} F inst inst_1 inst_2 m))
+STATEMENT Atlas.ReeG2.sigma_square SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+@Atlas.ReeG2.sigma_square.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  {m : Nat},
+  @Eq.{1} Nat (Nat.card.{u_1} F)
+      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) m)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))) →
+    ∀ (x : F),
+      @Eq.{u_1 + 1} F
+        (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+          (@RingEquiv.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+          F (fun x => F)
+          (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+            (@RingEquiv.{u_1, u_1} F F
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+            F F
+            (@RingEquiv.instEquivLike.{u_1, u_1} F F
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+          (@Atlas.ReeG2.sigma.{u_1} F inst inst_1 inst_2 m)
+          (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+            (@RingEquiv.{u_1, u_1} F F
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+            F (fun x => F)
+            (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+              (@RingEquiv.{u_1, u_1} F F
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+              F F
+              (@RingEquiv.instEquivLike.{u_1, u_1} F F
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+            (@Atlas.ReeG2.sigma.{u_1} F inst inst_1 inst_2 m) x))
+        (@HPow.hPow.{u_1, 0, u_1} F Nat F
+          (@instHPow.{u_1, 0} F Nat
+            (@NPow.toPow.{u_1} F
+              (@Monoid.toNPow.{u_1} F
+                (@Semiring.toMonoid.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+          x (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+STATEMENT Atlas.ReeG2.sigma_theta SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+@Atlas.ReeG2.sigma_theta.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  {m : Nat},
+  @Eq.{1} Nat (Nat.card.{u_1} F)
+      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) m)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))) →
+    ∀ (x : F),
+      @Eq.{u_1 + 1} F
+        (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+          (@RingEquiv.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+          F (fun x => F)
+          (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+            (@RingEquiv.{u_1, u_1} F F
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+            F F
+            (@RingEquiv.instEquivLike.{u_1, u_1} F F
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+          (@Atlas.ReeG2.sigma.{u_1} F inst inst_1 inst_2 m)
+          (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+            (@RingEquiv.{u_1, u_1} F F
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+            F (fun x => F)
+            (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+              (@RingEquiv.{u_1, u_1} F F
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+              F F
+              (@RingEquiv.instEquivLike.{u_1, u_1} F F
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+            (@Atlas.ReeG2.theta.{u_1} F inst inst_1 inst_2 m) x))
+        x
+STATEMENT Atlas.ReeG2.theta SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+Atlas.ReeG2.theta.{u_1} : (F : Type u_1) →
+  [inst : Field.{u_1} F] →
+    [Finite.{u_1 + 1} F] →
+      [@CharP.{u_1} F
+            (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+              (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))] →
+        Nat →
+          @RingEquiv.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+STATEMENT Atlas.ReeG2.theta_apply SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+Atlas.ReeG2.theta_apply.{u_1} : ∀ (F : Type u_1) [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  (m : Nat) (x : F),
+  @Eq.{u_1 + 1} F
+    (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+      (@RingEquiv.{u_1, u_1} F F
+        (@Distrib.toMul.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toMul.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+        (@Distrib.toAdd.{u_1} F
+          (@instDistribOfSemiring.{u_1} F
+            (@DivisionSemiring.toSemiring.{u_1} F
+              (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+      F (fun x => F)
+      (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+        (@RingEquiv.{u_1, u_1} F F
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+        F F
+        (@RingEquiv.instEquivLike.{u_1, u_1} F F
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toMul.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+          (@Distrib.toAdd.{u_1} F
+            (@instDistribOfSemiring.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+      (@Atlas.ReeG2.theta.{u_1} F inst inst_1 inst_2 m) x)
+    (@HPow.hPow.{u_1, 0, u_1} F Nat F
+      (@instHPow.{u_1, 0} F Nat
+        (@NPow.toPow.{u_1} F
+          (@Monoid.toNPow.{u_1} F
+            (@Semiring.toMonoid.{u_1} F
+              (@DivisionSemiring.toSemiring.{u_1} F
+                (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+      x
+      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) m))
+STATEMENT Atlas.ReeG2.theta_sigma SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+@Atlas.ReeG2.theta_sigma.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  {m : Nat},
+  @Eq.{1} Nat (Nat.card.{u_1} F)
+      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) m)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))) →
+    ∀ (x : F),
+      @Eq.{u_1 + 1} F
+        (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+          (@RingEquiv.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+          F (fun x => F)
+          (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+            (@RingEquiv.{u_1, u_1} F F
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+            F F
+            (@RingEquiv.instEquivLike.{u_1, u_1} F F
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+          (@Atlas.ReeG2.theta.{u_1} F inst inst_1 inst_2 m)
+          (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+            (@RingEquiv.{u_1, u_1} F F
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+            F (fun x => F)
+            (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+              (@RingEquiv.{u_1, u_1} F F
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+              F F
+              (@RingEquiv.instEquivLike.{u_1, u_1} F F
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+            (@Atlas.ReeG2.sigma.{u_1} F inst inst_1 inst_2 m) x))
+        x
+STATEMENT Atlas.ReeG2.theta_square_cube SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+@Atlas.ReeG2.theta_square_cube.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
+  [inst_2 :
+    @CharP.{u_1} F
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+        (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  {m : Nat},
+  @Eq.{1} Nat (Nat.card.{u_1} F)
+      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) m)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))) →
+    ∀ (x : F),
+      @Eq.{u_1 + 1} F
+        (@HPow.hPow.{u_1, 0, u_1} F Nat F
+          (@instHPow.{u_1, 0} F Nat
+            (@NPow.toPow.{u_1} F
+              (@Monoid.toNPow.{u_1} F
+                (@Semiring.toMonoid.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+          (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+            (@RingEquiv.{u_1, u_1} F F
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toMul.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+              (@Distrib.toAdd.{u_1} F
+                (@instDistribOfSemiring.{u_1} F
+                  (@DivisionSemiring.toSemiring.{u_1} F
+                    (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+            F (fun x => F)
+            (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+              (@RingEquiv.{u_1, u_1} F F
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+              F F
+              (@RingEquiv.instEquivLike.{u_1, u_1} F F
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+            (@Atlas.ReeG2.theta.{u_1} F inst inst_1 inst_2 m)
+            (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+              (@RingEquiv.{u_1, u_1} F F
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toMul.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                (@Distrib.toAdd.{u_1} F
+                  (@instDistribOfSemiring.{u_1} F
+                    (@DivisionSemiring.toSemiring.{u_1} F
+                      (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+              F (fun x => F)
+              (@EquivLike.toFunLike.{u_1 + 1, u_1 + 1, u_1 + 1}
+                (@RingEquiv.{u_1, u_1} F F
+                  (@Distrib.toMul.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                  (@Distrib.toMul.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                  (@Distrib.toAdd.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                  (@Distrib.toAdd.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))))
+                F F
+                (@RingEquiv.instEquivLike.{u_1, u_1} F F
+                  (@Distrib.toMul.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                  (@Distrib.toMul.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                  (@Distrib.toAdd.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+                  (@Distrib.toAdd.{u_1} F
+                    (@instDistribOfSemiring.{u_1} F
+                      (@DivisionSemiring.toSemiring.{u_1} F
+                        (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))))
+              (@Atlas.ReeG2.theta.{u_1} F inst inst_1 inst_2 m) x))
+          (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+        x
+DEFINITION Atlas.ReeG2.theta SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+def Atlas.ReeG2.theta.{u_1} : (F : Type u_1) →
+  [inst : Field.{u_1} F] →
+    [Finite.{u_1 + 1} F] →
+      [@CharP.{u_1} F
+            (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+              (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))] →
+        Nat →
+          @RingEquiv.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))) :=
+fun F [inst : Field.{u_1} F] [Finite.{u_1 + 1} F]
+    [@CharP.{u_1} F
+        (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+          (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+    m =>
+  @iterateFrobeniusEquiv.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) m
+    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)) ⋯ ⋯
+DEFINITION Atlas.ReeG2.sigma SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+def Atlas.ReeG2.sigma.{u_1} : (F : Type u_1) →
+  [inst : Field.{u_1} F] →
+    [Finite.{u_1 + 1} F] →
+      [@CharP.{u_1} F
+            (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+              (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))] →
+        Nat →
+          @RingEquiv.{u_1, u_1} F F
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toMul.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)))))
+            (@Distrib.toAdd.{u_1} F
+              (@instDistribOfSemiring.{u_1} F
+                (@DivisionSemiring.toSemiring.{u_1} F
+                  (@Semifield.toDivisionSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))) :=
+fun F [inst : Field.{u_1} F] [Finite.{u_1 + 1} F]
+    [@CharP.{u_1} F
+        (@AddGroupWithOne.toAddMonoidWithOne.{u_1} F
+          (@Ring.toAddGroupWithOne.{u_1} F (@DivisionRing.toRing.{u_1} F (@Field.toDivisionRing.{u_1} F inst))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+    m =>
+  @iterateFrobeniusEquiv.{u_1} F (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+    (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) m
+      (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+    (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst)) ⋯ ⋯
+DEFINITION Atlas.ReeG2.Parameters SOURCE Atlas.FieldTheory.ReeTitsAutomorphism
+structure Atlas.ReeG2.Parameters.{u_3} (F : Type u_3) [Field.{u_3} F] [Finite.{u_3 + 1} F] (m : Nat) : Prop
+number of parameters: 4
+fields:
+  Atlas.ReeG2.Parameters.positive.{u_3} : @LE.le.{0} Nat instLENat
+      (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) m
+  Atlas.ReeG2.Parameters.cardinality.{u_3} : @Eq.{1} Nat (Nat.card.{u_3} F)
+      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) m)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+constructor:
+  Atlas.ReeG2.Parameters.mk.{u_3} {F : Type u_3} [Field.{u_3} F] [Finite.{u_3 + 1} F] {m : Nat}
+    (positive : @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) m)
+    (cardinality :
+      @Eq.{1} Nat (Nat.card.{u_3} F)
+        (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+          (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+          (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+            (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) m)
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))) :
+    @Atlas.ReeG2.Parameters.{u_3} F inst✝ inst✝¹ m
+SHARED EXTRACTION COMPLETE: 15 targets

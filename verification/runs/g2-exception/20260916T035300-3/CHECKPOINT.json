@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "g2-exception",
+  "targets": [
+    {
+      "declaration": "Atlas.G2.Binary.IsLine",
+      "module": "Atlas.LinearGroups.G2.BinaryHexagon",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.Binary.Line",
+      "module": "Atlas.LinearGroups.G2.BinaryHexagon",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.Binary.Singular",
+      "module": "Atlas.LinearGroups.G2.BinaryHexagon",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.Binary.card_Line",
+      "module": "Atlas.LinearGroups.G2.BinaryHexagon",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.Binary.card_fixed_rootA",
+      "module": "Atlas.LinearGroups.G2.BinaryHexagon",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.Binary.card_fixed_rootF",
+      "module": "Atlas.LinearGroups.G2.BinaryHexagon",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.Binary.lineAction",
+      "module": "Atlas.LinearGroups.G2.BinaryHexagon",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.Binary.lineSign",
+      "module": "Atlas.LinearGroups.G2.BinaryHexagon",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.Binary.lineSign_rootA",
+      "module": "Atlas.LinearGroups.G2.BinarySign",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.Binary.lineSign_rootF_one",
+      "module": "Atlas.LinearGroups.G2.BinarySign",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.Binary.lineSign_surjective",
+      "module": "Atlas.LinearGroups.G2.BinarySign",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.H",
+      "module": "Atlas.LinearGroups.G2.BinaryIndex",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.H_ne_bot",
+      "module": "Atlas.LinearGroups.G2.BinaryIndex",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.H_proper",
+      "module": "Atlas.LinearGroups.G2.BinarySign",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.H_singularPoints_pretransitive",
+      "module": "Atlas.LinearGroups.G2.BinarySign",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.card_H",
+      "module": "Atlas.LinearGroups.G2.BinarySign",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.card_H_pointStabilizer",
+      "module": "Atlas.LinearGroups.G2.BinarySign",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.index_H",
+      "module": "Atlas.LinearGroups.G2.BinarySign",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.index_le_two",
+      "module": "Atlas.LinearGroups.G2.BinaryIndex",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.lineSign_kernel",
+      "module": "Atlas.LinearGroups.G2.BinarySign",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.not_simple",
+      "module": "Atlas.LinearGroups.G2.BinarySign",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.ExceptionChecks.binary_exact_range",
+      "module": "Atlas.LinearGroups.G2.ExceptionChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.ExceptionChecks.binary_index",
+      "module": "Atlas.LinearGroups.G2.ExceptionChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.ExceptionChecks.binary_normal_order",
+      "module": "Atlas.LinearGroups.G2.ExceptionChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.ExceptionChecks.binary_not_simple",
+      "module": "Atlas.LinearGroups.G2.ExceptionChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.ExceptionChecks.four_exact_range",
+      "module": "Atlas.LinearGroups.G2.ExceptionChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.ExceptionChecks.ternary_exact_range",
+      "module": "Atlas.LinearGroups.G2.ExceptionChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.card_longRootNormalClosure_binary",
+      "module": "Atlas.LinearGroups.G2.BinaryException",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.fieldEquiv_longRootNormalClosure_map",
+      "module": "Atlas.LinearGroups.G2.LocalFieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.index_longRootNormalClosure_binary",
+      "module": "Atlas.LinearGroups.G2.BinaryException",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.isSimple_iff",
+      "module": "Atlas.LinearGroups.G2.BinaryException",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.longRootNormalClosureFieldEquiv",
+      "module": "Atlas.LinearGroups.G2.LocalFieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.longRootNormalClosure_binary_nontrivial",
+      "module": "Atlas.LinearGroups.G2.BinaryException",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.longRootNormalClosure_binary_proper",
+      "module": "Atlas.LinearGroups.G2.BinaryException",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.not_simple_binary",
+      "module": "Atlas.LinearGroups.G2.BinaryException",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "binary-exception-independent-of-unitary-recognition",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.PSU",
+        "Atlas.Unitary",
+        "Atlas.TypeU",
+        "Atlas.CFSG",
+        "Chevalley"
+      ],
+      "forbid_modules": []
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "process-passed",
+  "command": [
+    "/home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean",
+    "-j1",
+    "-M8192",
+    "-Dpp.unicode.fun=true",
+    "-DrelaxedAutoImplicit=false",
+    "-Dweak.linter.mathlibStandardSet=true",
+    "-DmaxSynthPendingDepth=3",
+    "--root=/home/gerald/atlas/claude/release-v1.2-20261026/candidate",
+    "/home/gerald/atlas/claude/release-v1.2-20261026/candidate/Atlas/Audit.lean"
+  ],
+  "started_utc": "2026-10-26T02:47:21Z",
+  "policy": "Swap-aware: 9 GiB owned RSS+swap cap; combined worker RSS below 2/3 physical RAM; 1 GiB available RAM+free swap reserve; stop on sustained severe pressure.",
+  "owned_memory_cap": 9663676416,
+  "pid": 84392,
+  "finished_utc": "2026-10-26T02:47:56Z",
+  "exit_code": 0,
+  "signal": null,
+  "guard_stop": null,
+  "peak_owned_rss_and_swap": 4374593536,
+  "final_memory": {
+    "MemTotal": 16407433216,
+    "MemAvailable": 4541034496,
+    "SwapFree": 6486269952
+  },
+  "log_sha256": "85aa3b1acfd1bedbfe61c43b7684a4cfbfeecbf8972b7af7900a746e936d1c01"
+}

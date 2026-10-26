@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "g2-simplicity",
+  "targets": [
+    {
+      "declaration": "Atlas.G2.SimplicityChecks.binary_noncommutative",
+      "module": "Atlas.LinearGroups.G2.SimplicityChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.SimplicityChecks.eight_simple",
+      "module": "Atlas.LinearGroups.G2.SimplicityChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.SimplicityChecks.five_simple",
+      "module": "Atlas.LinearGroups.G2.SimplicityChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.SimplicityChecks.four_simple",
+      "module": "Atlas.LinearGroups.G2.SimplicityChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.SimplicityChecks.ternary_noncommutative",
+      "module": "Atlas.LinearGroups.G2.SimplicityChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.SimplicityChecks.ternary_simple",
+      "module": "Atlas.LinearGroups.G2.SimplicityChecks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.card_localAt",
+      "module": "Atlas.LinearGroups.G2.IwasawaLocal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.card_longRootLocal",
+      "module": "Atlas.LinearGroups.G2.LongRootLocal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.conjugate_local_eq",
+      "module": "Atlas.LinearGroups.G2.IwasawaLocal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.isPerfect",
+      "module": "Atlas.LinearGroups.G2.Perfectness",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.isSimple",
+      "module": "Atlas.LinearGroups.G2.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.iwasawa",
+      "module": "Atlas.LinearGroups.G2.IwasawaLocal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.localAt",
+      "module": "Atlas.LinearGroups.G2.IwasawaLocal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.localAtEquiv",
+      "module": "Atlas.LinearGroups.G2.IwasawaLocal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.localAt_commutative",
+      "module": "Atlas.LinearGroups.G2.IwasawaLocal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.localAt_conj",
+      "module": "Atlas.LinearGroups.G2.IwasawaLocal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.localAt_eq_of_transport",
+      "module": "Atlas.LinearGroups.G2.IwasawaLocal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.localAt_first",
+      "module": "Atlas.LinearGroups.G2.IwasawaLocal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.localAt_iSup_eq_normalClosure",
+      "module": "Atlas.LinearGroups.G2.IwasawaLocal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.longRootLocal",
+      "module": "Atlas.LinearGroups.G2.LongRootLocal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.longRootLocal_commutative",
+      "module": "Atlas.LinearGroups.G2.LongRootLocal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.longRootLocal_normal_in_pointStabilizer",
+      "module": "Atlas.LinearGroups.G2.LocalNormalizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.longRootNormalClosure",
+      "module": "Atlas.LinearGroups.G2.LongRootNormalGeneration",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.longRootNormalClosure_eq_top",
+      "module": "Atlas.LinearGroups.G2.LongRootNormalGeneration",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.longRootParameterEquiv",
+      "module": "Atlas.LinearGroups.G2.LongRootLocal",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.normal_eq_top_of_unipotent",
+      "module": "Atlas.LinearGroups.G2.LongRootNormalGeneration",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.pointStabilizer_le_longRootNormalizer",
+      "module": "Atlas.LinearGroups.G2.LocalNormalizer",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.rootA_mem_commutator",
+      "module": "Atlas.LinearGroups.G2.Perfectness",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.unipotent_le_longRootNormalClosure",
+      "module": "Atlas.LinearGroups.G2.LongRootNormalGeneration",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "simplicity-independent-of-numerical-group-order-and-binary-exception",
+      "all_roots": true,
+      "forbid_name_prefixes": [],
+      "forbid_modules": [
+        "Atlas.LinearGroups.G2.Order",
+        "Atlas.LinearGroups.G2.BinaryException",
+        "Atlas.LinearGroups.G2.BinaryIndex",
+        "Atlas.LinearGroups.G2.BinaryHexagon",
+        "Atlas.LinearGroups.G2.BinarySign"
+      ]
+    }
+  ]
+}

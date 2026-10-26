@@ -1,0 +1,172 @@
+{
+  "groups": [
+    {
+      "entry": "G2",
+      "kind": "family",
+      "checking": "checked: separate full structure, order, positive-simplicity and binary-exception audits",
+      "parameters": "F is an arbitrary finite field, q=|F|, including characteristics 2 and 3; simple exactly when q>2",
+      "order": "q^6 * (q^6-1) * (q^2-1)",
+      "model": "Atlas.G2.Model",
+      "finiteness_theorem": "Atlas.G2.finite_model",
+      "order_theorem": "Atlas.G2.card_Model",
+      "simplicity_theorem": "Atlas.G2.isSimple",
+      "noncommutativity": "Atlas.G2.exists_mul_ne_mul"
+    }
+  ],
+  "properties": [
+    {
+      "declaration": "Atlas.G2.isSimple_iff",
+      "source": "Atlas/LinearGroups/G2/BinaryException.lean",
+      "description": "Exact simplicity range for the same full octonion automorphism model",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.singularPoints_primitive",
+      "source": "Atlas/LinearGroups/G2/Primitivity.lean",
+      "description": "Actual singular-point action is primitive, including q=2",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.singularPointsFaithful",
+      "source": "Atlas/LinearGroups/G2/SingularAction.lean",
+      "description": "Faithful singular-point action independent of simplicity",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.card_singularPoints",
+      "source": "Atlas/LinearGroups/G2/SingularPoints.lean",
+      "description": "Uniform singular-point count (q^6-1)/(q-1)",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.card_orbitClass",
+      "source": "Atlas/LinearGroups/G2/Primitivity.lean",
+      "description": "Actual point-stabilizer subdegrees 1,q(q+1),q^3(q+1),q^5",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.parabolic_eq_pointStabilizer",
+      "source": "Atlas/LinearGroups/G2/Parabolic.lean",
+      "description": "Displayed Borel and Weyl map generate the full point stabilizer",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.borel_relIndex_parabolic",
+      "source": "Atlas/LinearGroups/G2/Parabolic.lean",
+      "description": "Borel has index q+1 in the actual point stabilizer",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.generated_eq_top",
+      "source": "Atlas/LinearGroups/G2/Generation.lean",
+      "description": "Explicit Dickson/Wilson maps generate the full automorphism group",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.card_unipotent",
+      "source": "Atlas/LinearGroups/G2/Unipotent.lean",
+      "description": "Unique six-parameter unipotent normal form has order q^6",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.card_borel",
+      "source": "Atlas/LinearGroups/G2/Borel.lean",
+      "description": "Actual Borel order q^6(q-1)^2",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.localAt_eq_of_transport",
+      "source": "Atlas/LinearGroups/G2/IwasawaLocal.lean",
+      "description": "Local group is independent of the chosen point transporter",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.localAt_conj",
+      "source": "Atlas/LinearGroups/G2/IwasawaLocal.lean",
+      "description": "Covariant conjugate family of actual local groups",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.card_localAt",
+      "source": "Atlas/LinearGroups/G2/IwasawaLocal.lean",
+      "description": "Each canonical local group has order q^2",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.localAt_normal",
+      "source": "Atlas/LinearGroups/G2/LocalProperties.lean",
+      "description": "Local group is normal in the actual corresponding point stabilizer",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.isPerfect",
+      "source": "Atlas/LinearGroups/G2/Perfectness.lean",
+      "description": "Uniform torus-commutator perfectness for q>2, including q=3",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.card_longRootNormalClosure_binary",
+      "source": "Atlas/LinearGroups/G2/BinaryException.lean",
+      "description": "Actual long-root normal closure has order6048 when q=2",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.index_longRootNormalClosure_binary",
+      "source": "Atlas/LinearGroups/G2/BinaryException.lean",
+      "description": "Actual long-root normal closure has index2 when q=2",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.not_simple_binary",
+      "source": "Atlas/LinearGroups/G2/BinaryException.lean",
+      "description": "Genuine nonsimplicity of the same model at q=2",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.typeG2_construction",
+      "source": "Atlas/LinearGroups/TypeG2.lean",
+      "description": "Complete public construction package for the concrete octonion automorphism family",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.exists_typeG2",
+      "source": "Atlas/LinearGroups/TypeG2.lean",
+      "description": "Simple-group existence witnessed by the actual octonion model",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.typeG2_prime_power",
+      "source": "Atlas/LinearGroups/TypeG2.lean",
+      "description": "Finite-field realization for every prime p and exponent f>=1",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.exists_typeG2_prime_power",
+      "source": "Atlas/LinearGroups/TypeG2.lean",
+      "description": "Simple noncommutative existence for prime p, exponent f>=1 and p^f>2",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.OrderChecks.four_order",
+      "source": "Atlas/LinearGroups/G2/OrderChecks.lean",
+      "description": "Uniform-order specialization over an actual field of order4",
+      "entry": "Atlas.G2"
+    },
+    {
+      "declaration": "Atlas.G2.SimplicityChecks.four_simple",
+      "source": "Atlas/LinearGroups/G2/SimplicityChecks.lean",
+      "description": "Simplicity over an actual field of order4",
+      "entry": "Atlas.G2"
+    }
+  ],
+  "catalogue_scope": {
+    "id": "family.G2",
+    "label": "G2(q)",
+    "kind": "family",
+    "audit_entry": "G2",
+    "proof_status": "construction_complete",
+    "construction": "Full group of linear multiplication-preserving automorphisms of the uniform eight-coordinate split octonion algebra",
+    "parameters": "F is an arbitrary finite field, q=|F|, including characteristics 2 and 3; simple exactly when q>2",
+    "exceptions": "q=2: actual long-root normal closure has order6048 and index2 in G2(2), whose order is12096"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "groups": [
+    {
+      "entry": "ReeG2",
+      "kind": "family",
+      "checking": "checked: independent full field, structure, order, simplicity, transport and comparison audits",
+      "parameters": "F finite of characteristic 3, q=|F|=3^(2m+1), m>=1; the public family starts at q=27",
+      "order": "q^3 * (q^3+1) * (q-1)",
+      "model": "Atlas.ReeG2.Model",
+      "finiteness_theorem": "Atlas.ReeG2.finite_model",
+      "order_theorem": "Atlas.ReeG2.order",
+      "simplicity_theorem": "Atlas.ReeG2.simple",
+      "noncommutativity": "Atlas.ReeG2.model_noncommutative"
+    }
+  ],
+  "properties": [
+    {
+      "declaration": "Atlas.ReeG2.perfect",
+      "source": "Atlas/LinearGroups/ReeG2/Perfect.lean",
+      "description": "Perfectness of the actual generated matrix group for m>=1",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.ReeG2.pointAction_two_pretransitive",
+      "source": "Atlas/LinearGroups/ReeG2/PointTransitivity.lean",
+      "description": "Actual faithful projective action is doubly transitive on q^3+1 points",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.ReeG2.pointAction_preprimitive",
+      "source": "Atlas/LinearGroups/ReeG2/PointTransitivity.lean",
+      "description": "Primitivity proved without a group-order or simplicity theorem",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.ReeG2.pointAction_faithful",
+      "source": "Atlas/LinearGroups/ReeG2/FaithfulAction.lean",
+      "description": "Faithfulness proved using the exact full stabilizer, before simplicity",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.ReeG2.card_pointSet",
+      "source": "Atlas/LinearGroups/ReeG2/Points.lean",
+      "description": "Actual Ree-Tits projective point count q^3+1",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.ReeG2.card_borel",
+      "source": "Atlas/LinearGroups/ReeG2/Borel.lean",
+      "description": "Root/torus Borel order q^3(q-1)",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.ReeG2.fixes_infinity_iff_mem_borel",
+      "source": "Atlas/LinearGroups/ReeG2/ExactStabilizer.lean",
+      "description": "Full infinity stabilizer is exactly the constructed Borel subgroup",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.ReeG2.infinityStabilizer_eq_borel",
+      "source": "Atlas/LinearGroups/ReeG2/Order.lean",
+      "description": "Exact stabilizer identity for the actual left action",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.ReeG2.g2Embedding_injective",
+      "source": "Atlas/LinearGroups/ReeG2/G2Embedding.lean",
+      "description": "Injective structural homomorphism into the actual split-octonion G2 model; no order recognition",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.typeReeG2_construction",
+      "source": "Atlas/LinearGroups/TypeReeG2.lean",
+      "description": "Public construction package for the same Tits-twisted seven-dimensional matrix group",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.exists_typeReeG2",
+      "source": "Atlas/LinearGroups/TypeReeG2.lean",
+      "description": "Existence witnessed by the actual matrix model over a specified field",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.exists_typeReeG2_parameter",
+      "source": "Atlas/LinearGroups/TypeReeG2.lean",
+      "description": "A nonabelian finite simple group for every m>=1, with a concrete canonical-field witness",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.typeReeG2_field_transport",
+      "source": "Atlas/LinearGroups/TypeReeG2.lean",
+      "description": "Concrete MulEquiv under every field equivalence",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.order27",
+      "source": "Atlas/LinearGroups/ReeG2/Checks.lean",
+      "description": "Uniform order specialized to GaloisField 3 3",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.order243",
+      "source": "Atlas/LinearGroups/ReeG2/Checks.lean",
+      "description": "Uniform order specialized to GaloisField 3 5",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.order2187",
+      "source": "Atlas/LinearGroups/ReeG2/Checks.lean",
+      "description": "Uniform order specialized to GaloisField 3 7",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.simple27",
+      "source": "Atlas/LinearGroups/ReeG2/Checks.lean",
+      "description": "Uniform simplicity specialized to the actual field of order27",
+      "entry": "Atlas.ReeG2"
+    },
+    {
+      "declaration": "Atlas.ReeG2.Checks.simple243",
+      "source": "Atlas/LinearGroups/ReeG2/Checks.lean",
+      "description": "Uniform simplicity specialized to the actual field of order243",
+      "entry": "Atlas.ReeG2"
+    }
+  ],
+  "catalogue_scope": {
+    "id": "family.ReeG2",
+    "label": "Ree (2G2)",
+    "kind": "family",
+    "audit_entry": "ReeG2",
+    "proof_status": "construction_complete",
+    "construction": "Actual subgroup of GL7(F) generated by the explicit Tits-twisted alpha, beta, gamma, torus and Weyl matrices",
+    "parameters": "F finite of characteristic 3, q=|F|=3^(2m+1), m>=1; the public family starts at q=27",
+    "exceptions": "m=0 (q=3) is excluded from the public simple family; no low-parameter extension or PSL2(8) identification is certified here"
+  }
+}

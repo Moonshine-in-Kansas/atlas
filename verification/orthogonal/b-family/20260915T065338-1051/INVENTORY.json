@@ -1,0 +1,850 @@
+{
+  "groups": [
+    {
+      "entry": "B",
+      "kind": "family",
+      "checking": "checked: separate full order, simplicity and structural audits",
+      "parameters": "n is Lie rank, natural dimension 2*n+1; F arbitrary finite field, q=|F|; n>=1, every characteristic",
+      "order": "q^(n*n) * product_(i=1)^n (q^(2*i)-1) / gcd(2,q-1)",
+      "model": "Atlas.Orthogonal.B",
+      "finiteness_theorem": "Atlas.Orthogonal.B_finite",
+      "order_theorem": "Atlas.Orthogonal.B_card_all_rank",
+      "simplicity_theorem": "Atlas.Orthogonal.B_simple_all_rank",
+      "noncommutativity": "Atlas.Orthogonal.B_noncommutative_all_rank"
+    }
+  ],
+  "properties": [
+    {
+      "declaration": "Atlas.Orthogonal.B1_conjugation_mem_coordinate",
+      "source": "Atlas/LinearGroups/Orthogonal/CoordinateRootGenerationB1.lean",
+      "description": "B1 conjugation mem coordinate",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B1_five_simple",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksChecks.lean",
+      "description": "B1 five simple",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B1_projective_singular_faithful",
+      "source": "Atlas/LinearGroups/Orthogonal/B1SingularFaithful.lean",
+      "description": "B1 projective singular faithful",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B1_three_not_simple",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksChecks.lean",
+      "description": "B1 three not simple",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B1_three_order",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksChecks.lean",
+      "description": "B1 three order",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B1_two_not_simple",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksChecks.lean",
+      "description": "B1 two not simple",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B1_two_order",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksChecks.lean",
+      "description": "B1 two order",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_card",
+      "source": "Atlas/LinearGroups/Orthogonal/BFamily.lean",
+      "description": "B card",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_card_mul_denominator",
+      "source": "Atlas/LinearGroups/Orthogonal/BFamily.lean",
+      "description": "B card mul denominator",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_card_mul_denominator_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanks.lean",
+      "description": "B card mul denominator all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_center_eq_bot",
+      "source": "Atlas/LinearGroups/Orthogonal/BConstruction.lean",
+      "description": "B center eq bot",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_center_eq_bot_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksStructure.lean",
+      "description": "B center eq bot all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_center_order",
+      "source": "Atlas/LinearGroups/Orthogonal/BStructure.lean",
+      "description": "B center order",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_center_order_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksStructure.lean",
+      "description": "B center order all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_coordinate_roots_generate_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometryAllRanks.lean",
+      "description": "B coordinate roots generate all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_card_mul_denominator",
+      "source": "Atlas/LinearGroups/Orthogonal/BStructure.lean",
+      "description": "B elementary card mul denominator",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_card_mul_denominator_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksStructure.lean",
+      "description": "B elementary card mul denominator all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_eq_derived",
+      "source": "Atlas/LinearGroups/Orthogonal/BStructure.lean",
+      "description": "B elementary eq derived",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_eq_derived_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksStructure.lean",
+      "description": "B elementary eq derived all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_index",
+      "source": "Atlas/LinearGroups/Orthogonal/BStructure.lean",
+      "description": "B elementary index",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_index_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksStructure.lean",
+      "description": "B elementary index all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_index_gcd_square",
+      "source": "Atlas/LinearGroups/Orthogonal/BFinalOrderIdentities.lean",
+      "description": "B elementary index gcd square",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_order",
+      "source": "Atlas/LinearGroups/Orthogonal/BConstruction.lean",
+      "description": "B elementary order",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_order_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksConstruction.lean",
+      "description": "B elementary order all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_perfect",
+      "source": "Atlas/LinearGroups/Orthogonal/BConstruction.lean",
+      "description": "B elementary perfect",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_perfect_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksConstruction.lean",
+      "description": "B elementary perfect all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_primitive_all_char",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometryAllRanks.lean",
+      "description": "B elementary primitive all char",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_singular_line_transport_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometryAllRanks.lean",
+      "description": "B elementary singular line transport all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_transitive_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometryAllRanks.lean",
+      "description": "B elementary transitive all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_equiv_of_card_eq",
+      "source": "Atlas/LinearGroups/Orthogonal/BFamilyTransport.lean",
+      "description": "B equiv of card eq",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_equiv_of_card_eq_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksStructure.lean",
+      "description": "B equiv of card eq all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_even_intrinsic",
+      "source": "Atlas/LinearGroups/Orthogonal/BConstruction.lean",
+      "description": "B even intrinsic",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_faithful",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometryInterface.lean",
+      "description": "B faithful",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_faithful_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometryAllRanks.lean",
+      "description": "B faithful all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_fieldEquiv_projection",
+      "source": "Atlas/LinearGroups/Orthogonal/BConstruction.lean",
+      "description": "B fieldEquiv projection",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_fieldEquiv_refl",
+      "source": "Atlas/LinearGroups/Orthogonal/BFamilyTransport.lean",
+      "description": "B fieldEquiv refl",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_fieldEquiv_symm",
+      "source": "Atlas/LinearGroups/Orthogonal/BFamilyTransport.lean",
+      "description": "B fieldEquiv symm",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_fieldEquiv_trans",
+      "source": "Atlas/LinearGroups/Orthogonal/BFamilyTransport.lean",
+      "description": "B fieldEquiv trans",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_full_order_gcd",
+      "source": "Atlas/LinearGroups/Orthogonal/BFinalOrderIdentities.lean",
+      "description": "B full order gcd",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_generated_by_siegel",
+      "source": "Atlas/LinearGroups/Orthogonal/BConstruction.lean",
+      "description": "B generated by siegel",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_noncommutative",
+      "source": "Atlas/LinearGroups/Orthogonal/BConstruction.lean",
+      "description": "B noncommutative",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_odd_elementary_primitive",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometryInterface.lean",
+      "description": "B odd elementary primitive",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_odd_intrinsic",
+      "source": "Atlas/LinearGroups/Orthogonal/BConstruction.lean",
+      "description": "B odd intrinsic",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_odd_intrinsic_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksStructure.lean",
+      "description": "B odd intrinsic all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_odd_roots_normal_generate",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometryInterface.lean",
+      "description": "B odd roots normal generate",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_odd_transitive",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometryInterface.lean",
+      "description": "B odd transitive",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order_denominator_positive",
+      "source": "Atlas/LinearGroups/Orthogonal/BFamily.lean",
+      "description": "B order denominator positive",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order_divisibility",
+      "source": "Atlas/LinearGroups/Orthogonal/BFamily.lean",
+      "description": "B order divisibility",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order_divisibility_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanks.lean",
+      "description": "B order divisibility all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_order_numerator_positive",
+      "source": "Atlas/LinearGroups/Orthogonal/BFamily.lean",
+      "description": "B order numerator positive",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_perfect",
+      "source": "Atlas/LinearGroups/Orthogonal/BConstruction.lean",
+      "description": "B perfect",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_perfect_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksConstruction.lean",
+      "description": "B perfect all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_primitive_all_char",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometryAllRanks.lean",
+      "description": "B primitive all char",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_roots_abelian",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometryInterface.lean",
+      "description": "B roots abelian",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_roots_normal_generate_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometryAllRanks.lean",
+      "description": "B roots normal generate all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_roots_normal_in_stabilizer",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometryInterface.lean",
+      "description": "B roots normal in stabilizer",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_scalar_eq_bot",
+      "source": "Atlas/LinearGroups/Orthogonal/BConstruction.lean",
+      "description": "B scalar eq bot",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_scalar_eq_bot_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksConstruction.lean",
+      "description": "B scalar eq bot all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_scalar_eq_center_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksStructure.lean",
+      "description": "B scalar eq center all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_scalar_order",
+      "source": "Atlas/LinearGroups/Orthogonal/BStructure.lean",
+      "description": "B scalar order",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_sign_factor_eq_gcd",
+      "source": "Atlas/LinearGroups/Orthogonal/BFinalOrderIdentities.lean",
+      "description": "B sign factor eq gcd",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_simple",
+      "source": "Atlas/LinearGroups/Orthogonal/BConstruction.lean",
+      "description": "B simple",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_simple_iff",
+      "source": "Atlas/LinearGroups/Orthogonal/BConstruction.lean",
+      "description": "B simple iff",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_simple_iff_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksConstruction.lean",
+      "description": "B simple iff all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_transitive_all_rank",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometryAllRanks.lean",
+      "description": "B transitive all rank",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.card_elementaryB_one_eq_oddKernel",
+      "source": "Atlas/LinearGroups/Orthogonal/B1Structure.lean",
+      "description": "card elementaryB one eq oddKernel",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateB_line_transport",
+      "source": "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean",
+      "description": "coordinateB line transport",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateD_line_transport",
+      "source": "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean",
+      "description": "coordinateD line transport",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroupB_eq_elementary",
+      "source": "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean",
+      "description": "coordinateRootSubgroupB eq elementary",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroupB_eq_elementary_of_pos",
+      "source": "Atlas/LinearGroups/Orthogonal/CoordinateRootGenerationB1.lean",
+      "description": "coordinateRootSubgroupB eq elementary of pos",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroupB_le_elementary",
+      "source": "Atlas/LinearGroups/Orthogonal/CoordinateRootSubgroups.lean",
+      "description": "coordinateRootSubgroupB le elementary",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroupB_one_eq_elementary",
+      "source": "Atlas/LinearGroups/Orthogonal/CoordinateRootGenerationB1.lean",
+      "description": "coordinateRootSubgroupB one eq elementary",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroupD_eq_elementary",
+      "source": "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean",
+      "description": "coordinateRootSubgroupD eq elementary",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroupD_le_elementary",
+      "source": "Atlas/LinearGroups/Orthogonal/CoordinateRootSubgroups.lean",
+      "description": "coordinateRootSubgroupD le elementary",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRootSubgroup_le_elementary",
+      "source": "Atlas/LinearGroups/Orthogonal/RootBasisGeneration.lean",
+      "description": "coordinateRootSubgroup le elementary",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinateRoot_mem",
+      "source": "Atlas/LinearGroups/Orthogonal/RootBasisGeneration.lean",
+      "description": "coordinateRoot mem",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinate_frame_line_transport",
+      "source": "Atlas/LinearGroups/Orthogonal/RootLineElimination.lean",
+      "description": "coordinate frame line transport",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinate_root_le_of_coefficient_vanishing",
+      "source": "Atlas/LinearGroups/Orthogonal/RootCoordinateExpansion.lean",
+      "description": "coordinate root le of coefficient vanishing",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.coordinate_siegel_mem_of_coefficient_vanishing",
+      "source": "Atlas/LinearGroups/Orthogonal/RootCoordinateExpansion.lean",
+      "description": "coordinate siegel mem of coefficient vanishing",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryB1_singular_line_transport",
+      "source": "Atlas/LinearGroups/Orthogonal/SingularPrimitiveB2.lean",
+      "description": "elementaryB1 singular line transport",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryB2_perpendicular_stabilizer_line_transport",
+      "source": "Atlas/LinearGroups/Orthogonal/SingularPrimitiveB2.lean",
+      "description": "elementaryB2 perpendicular stabilizer line transport",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryB_one_center_eq_bot",
+      "source": "Atlas/LinearGroups/Orthogonal/B1Structure.lean",
+      "description": "elementaryB one center eq bot",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryB_one_eq_intrinsicKernel",
+      "source": "Atlas/LinearGroups/Orthogonal/B1Structure.lean",
+      "description": "elementaryB one eq intrinsicKernel",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryB_one_to_oddKernel_injective",
+      "source": "Atlas/LinearGroups/Orthogonal/B1Structure.lean",
+      "description": "elementaryB one to oddKernel injective",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementaryB_one_to_oddKernel_surjective",
+      "source": "Atlas/LinearGroups/Orthogonal/B1Structure.lean",
+      "description": "elementaryB one to oddKernel surjective",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementary_le_of_root_and_line_transport",
+      "source": "Atlas/LinearGroups/Orthogonal/RootGenerationFromLineTransport.lean",
+      "description": "elementary le of root and line transport",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementary_perpendicular_stabilizer_line_transport",
+      "source": "Atlas/LinearGroups/Orthogonal/PerpendicularLineStabilizerOrbit.lean",
+      "description": "elementary perpendicular stabilizer line transport",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.elementary_singular_line_transport_of_isometry",
+      "source": "Atlas/LinearGroups/Orthogonal/PerpendicularLineStabilizerOrbit.lean",
+      "description": "elementary singular line transport of isometry",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_elementary_pretransitive",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularTransport.lean",
+      "description": "evenB elementary pretransitive",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_elementary_primitive",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularPoints.lean",
+      "description": "evenB elementary primitive",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_elementary_singular_transport",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularTransport.lean",
+      "description": "evenB elementary singular transport",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_full_faithful",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularPoints.lean",
+      "description": "evenB full faithful",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_full_primitive",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularPoints.lean",
+      "description": "evenB full primitive",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_projective_faithful",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularPoints.lean",
+      "description": "evenB projective faithful",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_projective_pretransitive",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularTransport.lean",
+      "description": "evenB projective pretransitive",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_projective_primitive",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularPoints.lean",
+      "description": "evenB projective primitive",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_roots_normal_generate",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularTransport.lean",
+      "description": "evenB roots normal generate",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_singular_eq_of_first_eq",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularTransport.lean",
+      "description": "evenB singular eq of first eq",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenB_singular_first_ne_zero",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularTransport.lean",
+      "description": "evenB singular first ne zero",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenSingularLift_equivariant",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularPoints.lean",
+      "description": "evenSingularLift equivariant",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenSingularLift_ne_zero",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularPoints.lean",
+      "description": "evenSingularLift ne zero",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenSingularLift_smul",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularPoints.lean",
+      "description": "evenSingularLift smul",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenSingularPointLift_injective",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularPoints.lean",
+      "description": "evenSingularPointLift injective",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenSingularPointLift_smul",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularPoints.lean",
+      "description": "evenSingularPointLift smul",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.evenSingularPointLift_surjective",
+      "source": "Atlas/LinearGroups/Orthogonal/EvenBSingularPoints.lean",
+      "description": "evenSingularPointLift surjective",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fieldEquivElementaryB_refl",
+      "source": "Atlas/LinearGroups/Orthogonal/BFamilyTransport.lean",
+      "description": "fieldEquivElementaryB refl",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.fieldEquivElementaryB_trans",
+      "source": "Atlas/LinearGroups/Orthogonal/BFamilyTransport.lean",
+      "description": "fieldEquivElementaryB trans",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.projectiveSingularB_primitive_rank_two_up",
+      "source": "Atlas/LinearGroups/Orthogonal/SingularGeometryOddB.lean",
+      "description": "projectiveSingularB primitive rank two up",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.psl_two_center_eq_bot",
+      "source": "Atlas/LinearGroups/Orthogonal/B1Structure.lean",
+      "description": "psl two center eq bot",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.rootB_e_le_coordinate",
+      "source": "Atlas/LinearGroups/Orthogonal/CoordinateRootSubgroups.lean",
+      "description": "rootB e le coordinate",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.rootB_f_le_coordinate",
+      "source": "Atlas/LinearGroups/Orthogonal/CoordinateRootSubgroups.lean",
+      "description": "rootB f le coordinate",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.rootD_e_le_coordinate",
+      "source": "Atlas/LinearGroups/Orthogonal/CoordinateRootSubgroups.lean",
+      "description": "rootD e le coordinate",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.rootD_f_le_coordinate",
+      "source": "Atlas/LinearGroups/Orthogonal/CoordinateRootSubgroups.lean",
+      "description": "rootD f le coordinate",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.rootSubgroup_le_coordinateRootSubgroup",
+      "source": "Atlas/LinearGroups/Orthogonal/RootBasisGeneration.lean",
+      "description": "rootSubgroup le coordinateRootSubgroup",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.rootSubgroup_le_of_basis",
+      "source": "Atlas/LinearGroups/Orthogonal/RootBasisGeneration.lean",
+      "description": "rootSubgroup le of basis",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.root_line_transport_of_pairing",
+      "source": "Atlas/LinearGroups/Orthogonal/RootLineElimination.lean",
+      "description": "root line transport of pairing",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.root_normalClosure_eq_top_of_line_transport",
+      "source": "Atlas/LinearGroups/Orthogonal/RootNormalGenerationLines.lean",
+      "description": "root normalClosure eq top of line transport",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.singularPointsB2_primitive",
+      "source": "Atlas/LinearGroups/Orthogonal/SingularPrimitiveB2.lean",
+      "description": "singularPointsB2 primitive",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.singularPointsB_primitive_rank_two_up",
+      "source": "Atlas/LinearGroups/Orthogonal/SingularGeometryOddB.lean",
+      "description": "singularPointsB primitive rank two up",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.singularPoints_smul_eq_of_scaled_rep",
+      "source": "Atlas/LinearGroups/Orthogonal/SingularPrimitiveB2.lean",
+      "description": "singularPoints smul eq of scaled rep",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.singular_line_kernel_scalar_of_triangle",
+      "source": "Atlas/LinearGroups/Orthogonal/SingularTriangleKernel.lean",
+      "description": "singular line kernel scalar of triangle",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.singular_stabilizerB2_perpendicular_transitive",
+      "source": "Atlas/LinearGroups/Orthogonal/SingularPrimitiveB2.lean",
+      "description": "singular stabilizerB2 perpendicular transitive",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.singular_stabilizerB_perpendicular_transitive_rank_two_up",
+      "source": "Atlas/LinearGroups/Orthogonal/SingularGeometryOddB.lean",
+      "description": "singular stabilizerB perpendicular transitive rank two up",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.subgroup_line_transport_of_pairing",
+      "source": "Atlas/LinearGroups/Orthogonal/RootLineElimination.lean",
+      "description": "subgroup line transport of pairing",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.two_root_cross_transport",
+      "source": "Atlas/LinearGroups/Orthogonal/CoordinateCrossTransport.lean",
+      "description": "two root cross transport",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.exists_typeB",
+      "source": "Atlas/LinearGroups/Orthogonal/BConstruction.lean",
+      "description": "exists typeB",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.exists_typeB_all_ranks",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksConstruction.lean",
+      "description": "exists typeB all ranks",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.exists_typeB_geometric",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometricConstruction.lean",
+      "description": "exists typeB geometric",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.exists_typeB_structural",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksStructure.lean",
+      "description": "exists typeB structural",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.typeB_all_ranks_construction",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksConstruction.lean",
+      "description": "typeB all ranks construction",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.typeB_construction",
+      "source": "Atlas/LinearGroups/Orthogonal/BConstruction.lean",
+      "description": "typeB construction",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.typeB_geometric_construction",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometricConstruction.lean",
+      "description": "typeB geometric construction",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.typeB_prime_power",
+      "source": "Atlas/LinearGroups/Orthogonal/BConstruction.lean",
+      "description": "typeB prime power",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.typeB_prime_power_all_ranks",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksConstruction.lean",
+      "description": "typeB prime power all ranks",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.typeB_prime_power_geometric",
+      "source": "Atlas/LinearGroups/Orthogonal/BGeometricConstruction.lean",
+      "description": "typeB prime power geometric",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.typeB_prime_power_structural",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksStructure.lean",
+      "description": "typeB prime power structural",
+      "entry": "Atlas.Orthogonal"
+    },
+    {
+      "declaration": "Atlas.typeB_structural_construction",
+      "source": "Atlas/LinearGroups/Orthogonal/BAllRanksStructure.lean",
+      "description": "typeB structural construction",
+      "entry": "Atlas.Orthogonal"
+    }
+  ],
+  "catalogue_scope": {
+    "id": "family.B",
+    "label": "B_n(q) / PΩ(2n+1,q)",
+    "kind": "family",
+    "audit_entry": "B",
+    "proof_status": "construction_complete",
+    "construction": "Actual scalar quotient of the Siegel-generated subgroup of the quadratic form Q(x,y,z)=sum x_i*y_i+z^2; identified with the determinant/spinor kernel in odd characteristic and the full orthogonal group in characteristic two",
+    "parameters": "n is Lie rank, natural dimension 2*n+1; F arbitrary finite field, q=|F|; n>=1, every characteristic",
+    "exceptions": "Nonsimple exactly (n,q)=(1,2),(1,3),(2,2); these actual groups remain constructed"
+  }
+}

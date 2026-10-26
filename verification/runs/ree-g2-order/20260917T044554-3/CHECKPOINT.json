@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas.LinearGroups.ReeG2.Order"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "ree-g2-order",
+  "targets": [
+    {
+      "declaration": "Atlas.ReeG2.infinity",
+      "module": "Atlas.LinearGroups.ReeG2.Order",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.infinityStabilizer_eq_borel",
+      "module": "Atlas.LinearGroups.ReeG2.Order",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.order",
+      "module": "Atlas.LinearGroups.ReeG2.Order",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "order-independent-of-perfectness-simplicity-and-G2",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.G2.",
+        "Atlas.ReeG2.simple"
+      ],
+      "forbid_modules": [
+        "Mathlib.GroupTheory.GroupAction.Iwasawa",
+        "Atlas.GroupTheory.SolvableStabilizerSimplicity",
+        "Atlas.LinearGroups.ReeG2.RootCommutators",
+        "Atlas.LinearGroups.ReeG2.TorusCommutators",
+        "Atlas.LinearGroups.ReeG2.BorelSolvable"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "suzuki-family-transport",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.SuzukiFamily.FieldTransport"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.SuzukiFamily.fieldEquiv",
+      "module": "Atlas.LinearGroups.SuzukiFamily.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.fieldEquiv_embedding",
+      "module": "Atlas.LinearGroups.SuzukiFamily.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.matrix_fieldEquiv",
+      "module": "Atlas.LinearGroups.SuzukiFamily.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.transport_mem_generated",
+      "module": "Atlas.LinearGroups.SuzukiFamily.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.transport_root",
+      "module": "Atlas.LinearGroups.SuzukiFamily.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.transport_torus",
+      "module": "Atlas.LinearGroups.SuzukiFamily.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.transport_weyl",
+      "module": "Atlas.LinearGroups.SuzukiFamily.FieldTransport",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "transport-independent-scope",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.Sporadic.Suzuki",
+        "Atlas.LinearGroups.SuzukiFamily.Perfect",
+        "Atlas.LinearGroups.SuzukiFamily.Simplicity"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.ReeG2.",
+        "Atlas.Sporadic.Suzuki"
+      ]
+    }
+  ]
+}

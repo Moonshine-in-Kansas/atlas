@@ -1,0 +1,187 @@
+{
+  "id": "family.2D",
+  "label": "Minus orthogonal / twisted D",
+  "kind": "family",
+  "audit_entry": "2D",
+  "proof_status": "construction_complete",
+  "construction": "Actual hyperbolic planes plus quadratic-extension norm plane; intrinsic Omega equals Siegel-generated isometries, quotiented by its full scalar center",
+  "parameters": "F arbitrary finite field, q=|F|; K/F actual quadratic extension; n is half-dimension/Lie rank; stable simple family n>=4, every characteristic",
+  "exceptions": "No simplicity exceptions for n>=2 over finite fields. Rank2 is structurally PSL2(K); rank3 is structurally PSU4(q). Stable principal roles retain n>=4; separately audited uniform order and simplicity supplements cover every n>=2.",
+  "recognition": "Concrete quadratic-form model and kernel identification; no order recognition or graph-field fixed-point assertion",
+  "attribution": "ATLAS norm-plane, quadratic reflection/Siegel, spinor/Dickson, finite-field and Iwasawa proofs; pinned mathlib foundations",
+  "owner": "Gerald Höhn",
+  "upstream_status": "No upstream acceptance claimed",
+  "roles": {
+    "model": {
+      "declaration": "Atlas.Orthogonal.DMinus",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean"
+    },
+    "finite": {
+      "declaration": "Atlas.Orthogonal.Minus.family_finite",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean"
+    },
+    "order": {
+      "declaration": "Atlas.Orthogonal.Minus.family_order",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+      "formula": "q^(n*(n-1)) * (q^n+1) * product_{i=1..n-1}(q^(2*i)-1) / gcd(4,q^n+1)"
+    },
+    "simple": {
+      "declaration": "Atlas.Orthogonal.Minus.family_simple",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean"
+    },
+    "nonabelian": {
+      "declaration": "Atlas.Orthogonal.Minus.family_noncommutative",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean"
+    }
+  },
+  "properties": [
+    {
+      "declaration": "Atlas.type2D_construction",
+      "source": "Atlas/LinearGroups/Type2D.lean",
+      "description": "Actual stable norm-plane construction with intrinsic kernel and scalar quotient interfaces"
+    },
+    {
+      "declaration": "Atlas.type2D_prime_power",
+      "source": "Atlas/LinearGroups/Type2D.lean",
+      "description": "Actual finite base field and quadratic extension for every prime p and exponent f>=1, in rank n>=4"
+    },
+    {
+      "declaration": "Atlas.exists_type2D",
+      "source": "Atlas/LinearGroups/Type2D.lean",
+      "description": "Existence retaining an explicit equivalence to the constructed quadratic quotient"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_full_order",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+      "description": "Full orthogonal-group order, independently derived by hyperbolic-pair orbit-stabilizer"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_elementary_perfect",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+      "description": "Actual elementary group perfect for n>=4, including q=2 and q=3"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_center_scalar",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+      "description": "Full elementary center equals its actual scalar subgroup for n>=3"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_projection_kernel",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+      "description": "Actual quotient map kernel is the full center for n>=3"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_faithful",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+      "description": "Faithful action on the actual singular points for n>=3"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_primitive",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+      "description": "Primitive actual singular-point action for n>=4"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_intrinsic_odd",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+      "description": "Elementary subgroup is the simultaneous determinant/spinor kernel in odd characteristic for n>=3"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_intrinsic_even",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/Family.lean",
+      "description": "Elementary subgroup is the residual-rank Dickson kernel in characteristic two for n>=3"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.witt_index_exact",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/WittIndex.lean",
+      "description": "Exact maximal totally singular dimension, with an explicit attaining subspace"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.fieldEquivProjective_projection",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/FieldTransport.lean",
+      "description": "Actual compatible base/extension field transport commutes with scalar quotient projection"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.fullDickson_field_transport",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/KernelTransport.lean",
+      "description": "Residual-rank Dickson character preserved by actual field transport"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_rankTwo_order",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/RankTwoFamily.lean",
+      "description": "Actual rank-two carrier order, including q=2 and q=3, via its structural PSL2(K) equivalence"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_rankTwo_simple",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/RankTwoFamily.lean",
+      "description": "Actual rank-two carrier simple over every finite base field"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_rankTwo_noncommutative",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/RankTwoFamily.lean",
+      "description": "Actual rank-two carrier noncommutative over every finite base field"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankTwo_elementary_eq_intrinsic_kernel",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/RankTwoIntrinsicOdd.lean",
+      "description": "Rank-two elementary group equals the actual determinant/spinor kernel in odd characteristic"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankTwoDickson_kernel_elementary",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/RankTwoIntrinsicEven.lean",
+      "description": "Rank-two elementary group equals the actual residual-parity kernel in characteristic two"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankTwo_center_scalar",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/RankTwoSimplicity.lean",
+      "description": "Full rank-two elementary center equals its trivial scalar subgroup"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankTwo_elementary_perfect",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/RankTwoSimplicity.lean",
+      "description": "Actual rank-two elementary group is perfect"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_rankThree_comparison",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/AllRanks.lean",
+      "description": "Actual exterior-square/Hodge multiplicative equivalence with PSU4(q), in every characteristic"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_order_all",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/AllRanks.lean",
+      "description": "Uniform projective order for every n>=2 over finite fields"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_simple_all",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/AllRanks.lean",
+      "description": "Nonexceptional simplicity for every n>=2 over finite fields"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_noncommutative_all",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/AllRanks.lean",
+      "description": "Noncommutativity for every n>=2 over finite fields"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_elementary_perfect_all",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/AllRanks.lean",
+      "description": "Actual elementary group perfect for every n>=2"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreeProjectiveHom_kernel",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/RankThreeKernel.lean",
+      "description": "Actual projective exterior-action kernel is exactly the SU4 center"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreeElementaryHom_surjective",
+      "source": "Atlas/LinearGroups/Orthogonal/Minus/RankThreeFullImage.lean",
+      "description": "Actual SU4 exterior action surjects onto the elementary minus group"
+    }
+  ],
+  "evidence": "minus-orthogonal-rank-three-supplement-v1",
+  "presentation": {
+    "label": "²Dₙ(q)",
+    "construction": "PΩ⁻_(2n)(q), actual norm-plane scalar quotient",
+    "parameters": "Stable family n≥4; separately proved low ranks n=2,3; every finite field",
+    "order": "q^(n*(n-1)) * (q^n+1) * product_{i=1..n-1}(q^(2*i)-1) / gcd(4,q^n+1)",
+    "note": "Order and nonabelian simplicity proved uniformly for n≥2. Concrete low-rank comparisons: PSL₂(q²) and PSU₄(q). Stable principal roles and their independent evidence retain n≥4."
+  }
+}

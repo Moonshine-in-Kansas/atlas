@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "minus-orthogonal-rank-three-all-ranks-simplicity",
+  "imports": [
+    "Atlas.LinearGroups.Orthogonal.Minus.AllRanks"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_elementary_perfect_all",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.AllRanks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_noncommutative_all",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.AllRanks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_rankThree_comparison",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.AllRanks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_rankThree_equiv",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.AllRanks",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_simple_all",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.AllRanks",
+      "kind": "any"
+    }
+  ],
+  "boundaries": []
+}

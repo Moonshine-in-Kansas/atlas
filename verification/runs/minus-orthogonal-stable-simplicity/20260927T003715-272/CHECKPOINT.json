@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "minus-orthogonal-stable-simplicity",
+  "imports": [
+    "Atlas.LinearGroups.Orthogonal.Minus.SingularPrimitive",
+    "Atlas.LinearGroups.Orthogonal.Minus.Simplicity",
+    "Atlas.LinearGroups.Orthogonal.Minus.Family"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Orthogonal.Minus.center_scalar",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.elementary_noncommutative",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_noncommutative",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Family",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.family_simple",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Family",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.projectiveSingular_faithful_minus",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.SingularPrimitive",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.projectiveSingular_primitive",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.SingularPrimitive",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.projective_noncommutative",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.projective_nontrivial",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.projective_perfect",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.projective_simple",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.Simplicity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.singularPoints_pretransitive_minus",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.SingularPrimitive",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.singularPoints_primitive",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.SingularPrimitive",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "separate-minus-proof-scope",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Unitary.",
+        "Atlas.PSL."
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Orthogonal.SimplicityAllCharD",
+        "Atlas.LinearGroups.Orthogonal.ProjectiveDOrderAllChar",
+        "Atlas.LinearGroups.Orthogonal.FullDicksonD",
+        "Atlas.LinearGroups.Orthogonal.Minus.FullOrder",
+        "Atlas.LinearGroups.Orthogonal.Minus.ElementaryOrder",
+        "Atlas.LinearGroups.Orthogonal.Minus.IntrinsicOdd",
+        "Atlas.LinearGroups.Orthogonal.Minus.IntrinsicEven",
+        "Atlas.LinearGroups.Orthogonal.Minus.ReflectionGeneration",
+        "Atlas.LinearGroups.Orthogonal.Minus.ProjectiveOrder"
+      ]
+    }
+  ]
+}

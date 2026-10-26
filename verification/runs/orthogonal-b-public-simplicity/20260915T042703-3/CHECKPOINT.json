@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "orthogonal-b-public-simplicity",
+  "targets": [
+    {
+      "declaration": "Atlas.Orthogonal.B_elementary_perfect_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_noncommutative_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_perfect_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_simple_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.B_simple_iff_all_rank",
+      "module": "Atlas.LinearGroups.Orthogonal.BAllRanksConstruction",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "b-perfectness-independent-of-simplicity",
+      "roots": [
+        "Atlas.Orthogonal.B_elementary_perfect_all_rank",
+        "Atlas.Orthogonal.B_perfect_all_rank"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.Orthogonal.B_simple",
+        "Atlas.Orthogonal.projectiveB_simple",
+        "Atlas.Orthogonal.projectiveD_simple"
+      ]
+    }
+  ]
+}

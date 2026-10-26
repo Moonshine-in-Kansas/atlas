@@ -1,0 +1,690 @@
+STATEMENT Algebra.trace_surjective SOURCE Mathlib.RingTheory.Trace.Basic
+Algebra.trace_surjective.{u_1,
+  u_2} : ∀ (K : Type u_1) (L : Type u_2) [inst : Field.{u_1} K] [inst_1 : Field.{u_2} L]
+  [inst_2 :
+    @Algebra.{u_1, u_2} K L (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+      (@DivisionSemiring.toSemiring.{u_2} L
+        (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_1)))]
+  [@FiniteDimensional.{u_1, u_2} K L (@Field.toDivisionRing.{u_1} K inst)
+      (@Ring.toAddCommGroup.{u_2} L (@DivisionRing.toRing.{u_2} L (@Field.toDivisionRing.{u_2} L inst_1)))
+      (@Algebra.toModule.{u_1, u_2} K L (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+        (@DivisionSemiring.toSemiring.{u_2} L
+          (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_1)))
+        inst_2)]
+  [@Algebra.IsSeparable.{u_1, u_2} K L (@Field.toCommRing.{u_1} K inst)
+      (@DivisionRing.toRing.{u_2} L (@Field.toDivisionRing.{u_2} L inst_1)) inst_2],
+  @Function.Surjective.{u_2 + 1, u_1 + 1} L K
+    (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+      (@LinearMap.{u_1, u_1, u_2, u_1} K K
+        (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst)))
+        (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst)))
+        (@RingHom.id.{u_1} K
+          (@Semiring.toNonAssocSemiring.{u_1} K
+            (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst)))))
+        L K
+        (@Semiring.toAddCommMonoid.{u_2} L
+          (@CommSemiring.toSemiring.{u_2} L (@CommRing.toCommSemiring.{u_2} L (@Field.toCommRing.{u_2} L inst_1))))
+        (@Semiring.toAddCommMonoid.{u_1} K
+          (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst))))
+        (@Algebra.toModule.{u_1, u_2} K L (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst))
+          (@CommSemiring.toSemiring.{u_2} L (@CommRing.toCommSemiring.{u_2} L (@Field.toCommRing.{u_2} L inst_1)))
+          inst_2)
+        (@Semiring.toModule.{u_1} K
+          (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst)))))
+      L (fun x => K)
+      (@LinearMap.instFunLike.{u_1, u_1, u_2, u_1} K K L K
+        (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst)))
+        (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst)))
+        (@Semiring.toAddCommMonoid.{u_2} L
+          (@CommSemiring.toSemiring.{u_2} L (@CommRing.toCommSemiring.{u_2} L (@Field.toCommRing.{u_2} L inst_1))))
+        (@Semiring.toAddCommMonoid.{u_1} K
+          (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst))))
+        (@Algebra.toModule.{u_1, u_2} K L (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst))
+          (@CommSemiring.toSemiring.{u_2} L (@CommRing.toCommSemiring.{u_2} L (@Field.toCommRing.{u_2} L inst_1)))
+          inst_2)
+        (@Semiring.toModule.{u_1} K
+          (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst))))
+        (@RingHom.id.{u_1} K
+          (@Semiring.toNonAssocSemiring.{u_1} K
+            (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst))))))
+      (@Algebra.trace.{u_1, u_2} K L (@Field.toCommRing.{u_1} K inst) (@Field.toCommRing.{u_2} L inst_1) inst_2))
+STATEMENT Atlas.GroupTheory.iwasawa_stabilizer_simple SOURCE Atlas.GroupTheory.IwasawaStabilizer
+@Atlas.GroupTheory.iwasawa_stabilizer_simple.{u_1,
+    u_2} : ∀ {G : Type u_1} {X : Type u_2} [inst : Group.{u_1} G]
+  [inst_1 : @MulAction.{u_1, u_2} G X (@DivInvMonoid.toMonoid.{u_1} G (@Group.toDivInvMonoid.{u_1} G inst))]
+  [@FaithfulSMul.{u_1, u_2} G X
+      (@SemigroupAction.toSMul.{u_1, u_2} G X
+        (@Monoid.toSemigroup.{u_1} G (@DivInvMonoid.toMonoid.{u_1} G (@Group.toDivInvMonoid.{u_1} G inst)))
+        (@MulAction.toSemigroupAction.{u_1, u_2} G X
+          (@DivInvMonoid.toMonoid.{u_1} G (@Group.toDivInvMonoid.{u_1} G inst)) inst_1))]
+  [@MulAction.IsPreprimitive.{u_1, u_2} G X
+      (@SemigroupAction.toSMul.{u_1, u_2} G X
+        (@Monoid.toSemigroup.{u_1} G (@DivInvMonoid.toMonoid.{u_1} G (@Group.toDivInvMonoid.{u_1} G inst)))
+        (@MulAction.toSemigroupAction.{u_1, u_2} G X
+          (@DivInvMonoid.toMonoid.{u_1} G (@Group.toDivInvMonoid.{u_1} G inst)) inst_1))]
+  [Nontrivial.{u_1} G] [@Group.IsPerfect.{u_1} G inst] (a : X) (A : @Subgroup.{u_1} G inst),
+  @LE.le.{u_1} (@Subgroup.{u_1} G inst)
+      (@Preorder.toLE.{u_1} (@Subgroup.{u_1} G inst)
+        (@PartialOrder.toPreorder.{u_1} (@Subgroup.{u_1} G inst) (@Subgroup.instPartialOrder.{u_1} G inst)))
+      A (@MulAction.stabilizer.{u_1, u_2} G X inst inst_1 a) →
+    @Subgroup.Normal.{u_1} (↥(@MulAction.stabilizer.{u_1, u_2} G X inst inst_1 a))
+        (@Subgroup.toGroup.{u_1} G inst (@MulAction.stabilizer.{u_1, u_2} G X inst inst_1 a))
+        (@Subgroup.subgroupOf.{u_1} G inst A (@MulAction.stabilizer.{u_1, u_2} G X inst inst_1 a)) →
+      @IsMulCommutative.{u_1} (↥A) (@Subgroup.mul.{u_1} G inst A) →
+        @Eq.{u_1 + 1} (@Subgroup.{u_1} G inst)
+            (@Subgroup.normalClosure.{u_1} G inst
+              (@SetLike.coe.{u_1, u_1} (@Subgroup.{u_1} G inst) G (@Subgroup.instSetLike.{u_1} G inst) A))
+            (@Top.top.{u_1} (@Subgroup.{u_1} G inst) (@Subgroup.instTop.{u_1} G inst)) →
+          @IsSimpleGroup.{u_1} G inst
+STATEMENT Atlas.Symplectic.simple_of_good SOURCE Atlas.LinearGroups.Symplectic.Simplicity
+@Atlas.Symplectic.simple_of_good.{u_1} : ∀ {n : Nat} {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F],
+  Atlas.Symplectic.Good n (Nat.card.{u_1} F) →
+    @IsSimpleGroup.{u_1} (@Atlas.Symplectic.PSp.{u_1} n F (@Field.toCommRing.{u_1} F inst))
+      (@QuotientGroup.Quotient.group.{u_1} (@Atlas.Symplectic.Sp.{u_1} n F (@Field.toCommRing.{u_1} F inst))
+        (@SymplecticGroup.instGroupSubtypeMatrixSumMemSubmonoidSymplecticGroup.{0, u_1} (Fin n) F (instDecidableEqFin n)
+          (Fin.fintype n) (@Field.toCommRing.{u_1} F inst))
+        (@Subgroup.center.{u_1} (@Atlas.Symplectic.Sp.{u_1} n F (@Field.toCommRing.{u_1} F inst))
+          (@SymplecticGroup.instGroupSubtypeMatrixSumMemSubmonoidSymplecticGroup.{0, u_1} (Fin n) F
+            (instDecidableEqFin n) (Fin.fintype n) (@Field.toCommRing.{u_1} F inst)))
+        ⋯)
+STATEMENT Atlas.psl_simple_iff SOURCE Atlas.LinearGroups.PSLFamily
+@Atlas.psl_simple_iff.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) n →
+    Iff
+      (@IsSimpleGroup.{u_1}
+        (@Matrix.ProjectiveSpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+          (@Field.toCommRing.{u_1} F inst))
+        (@QuotientGroup.Quotient.group.{u_1}
+          (@Matrix.SpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+            (@Field.toCommRing.{u_1} F inst))
+          (@Matrix.SpecialLinearGroup.instGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+            (@Field.toCommRing.{u_1} F inst))
+          (@Subgroup.center.{u_1}
+            (@Matrix.SpecialLinearGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+              (@Field.toCommRing.{u_1} F inst))
+            (@Matrix.SpecialLinearGroup.instGroup.{0, u_1} (Fin n) (instDecidableEqFin n) (Fin.fintype n) F
+              (@Field.toCommRing.{u_1} F inst)))
+          ⋯))
+      (And
+        (@Ne.{1} (Prod.{0, 0} Nat Nat) (@Prod.mk.{0, 0} Nat Nat n (Nat.card.{u_1} F))
+          (@Prod.mk.{0, 0} Nat Nat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+        (@Ne.{1} (Prod.{0, 0} Nat Nat) (@Prod.mk.{0, 0} Nat Nat n (Nat.card.{u_1} F))
+          (@Prod.mk.{0, 0} Nat Nat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+            (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))))
+STATEMENT FiniteField.Extension SOURCE Mathlib.FieldTheory.Finite.Extension
+FiniteField.Extension.{u_1} : (k : Type u_1) →
+  [inst : Field.{u_1} k] →
+    (p : Nat) →
+      [Fact (Nat.Prime p)] →
+        [@CharP.{u_1} k
+              (@AddGroupWithOne.toAddMonoidWithOne.{u_1} k
+                (@Ring.toAddGroupWithOne.{u_1} k (@DivisionRing.toRing.{u_1} k (@Field.toDivisionRing.{u_1} k inst))))
+              p] →
+          Nat → Type
+STATEMENT FiniteField.algebraMap_norm_eq_pow SOURCE Mathlib.FieldTheory.Finite.GaloisField
+@FiniteField.algebraMap_norm_eq_pow.{u_1,
+    u_2} : ∀ {K : Type u_1} {K' : Type u_2} [inst : Field.{u_1} K] [inst_1 : Field.{u_2} K']
+  [inst_2 :
+    @Algebra.{u_1, u_2} K K' (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+      (@DivisionSemiring.toSemiring.{u_2} K'
+        (@Semifield.toDivisionSemiring.{u_2} K' (@Field.toSemifield.{u_2} K' inst_1)))]
+  [Finite.{u_2 + 1} K'] {x : K'},
+  @Eq.{u_2 + 1} K'
+    (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_1 + 1, u_2 + 1}
+      (@RingHom.{u_1, u_2} K K'
+        (@Semiring.toNonAssocSemiring.{u_1} K
+          (@CommSemiring.toSemiring.{u_1} K (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))
+        (@Semiring.toNonAssocSemiring.{u_2} K'
+          (@DivisionSemiring.toSemiring.{u_2} K'
+            (@Semifield.toDivisionSemiring.{u_2} K' (@Field.toSemifield.{u_2} K' inst_1)))))
+      K (fun x => K')
+      (@RingHom.instFunLike.{u_1, u_2} K K'
+        (@Semiring.toNonAssocSemiring.{u_1} K
+          (@CommSemiring.toSemiring.{u_1} K (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))
+        (@Semiring.toNonAssocSemiring.{u_2} K'
+          (@DivisionSemiring.toSemiring.{u_2} K'
+            (@Semifield.toDivisionSemiring.{u_2} K' (@Field.toSemifield.{u_2} K' inst_1)))))
+      (@Algebra.algebraMap.{u_1, u_2} K K' (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+        (@DivisionSemiring.toSemiring.{u_2} K'
+          (@Semifield.toDivisionSemiring.{u_2} K' (@Field.toSemifield.{u_2} K' inst_1)))
+        inst_2)
+      (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+        (@MonoidHom.{u_2, u_1} K' K
+          (@MulOneClass.toMulOne.{u_2} K'
+            (@MulZeroOneClass.toMulOneClass.{u_2} K'
+              (@instMulZeroOneClassOfSemiring.{u_2} K'
+                (@Ring.toSemiring.{u_2} K' (@DivisionRing.toRing.{u_2} K' (@Field.toDivisionRing.{u_2} K' inst_1))))))
+          (@MulOneClass.toMulOne.{u_1} K
+            (@MulZeroOneClass.toMulOneClass.{u_1} K
+              (@instMulZeroOneClassOfSemiring.{u_1} K
+                (@CommSemiring.toSemiring.{u_1} K
+                  (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst)))))))
+        K' (fun x => K)
+        (@MonoidHom.instFunLike.{u_2, u_1} K' K
+          (@MulOneClass.toMulOne.{u_2} K'
+            (@MulZeroOneClass.toMulOneClass.{u_2} K'
+              (@instMulZeroOneClassOfSemiring.{u_2} K'
+                (@Ring.toSemiring.{u_2} K' (@DivisionRing.toRing.{u_2} K' (@Field.toDivisionRing.{u_2} K' inst_1))))))
+          (@MulOneClass.toMulOne.{u_1} K
+            (@MulZeroOneClass.toMulOneClass.{u_1} K
+              (@instMulZeroOneClassOfSemiring.{u_1} K
+                (@CommSemiring.toSemiring.{u_1} K
+                  (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst)))))))
+        (@Algebra.norm.{u_1, u_2} K K' (@Field.toCommRing.{u_1} K inst)
+          (@DivisionRing.toRing.{u_2} K' (@Field.toDivisionRing.{u_2} K' inst_1)) inst_2)
+        x))
+    (@HPow.hPow.{u_2, 0, u_2} K' Nat K'
+      (@instHPow.{u_2, 0} K' Nat
+        (@NPow.toPow.{u_2} K'
+          (@Monoid.toNPow.{u_2} K'
+            (@Semiring.toMonoid.{u_2} K'
+              (@DivisionSemiring.toSemiring.{u_2} K'
+                (@Semifield.toDivisionSemiring.{u_2} K' (@Field.toSemifield.{u_2} K' inst_1)))))))
+      x
+      (@HDiv.hDiv.{0, 0, 0} Nat Nat Nat (@instHDiv.{0} Nat Nat.instDiv)
+        (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) (Nat.card.{u_2} K')
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+        (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) (Nat.card.{u_1} K)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+STATEMENT FiniteField.finrank_extension SOURCE Mathlib.FieldTheory.Finite.Extension
+FiniteField.finrank_extension.{u_1} : ∀ (k : Type u_1) [inst : Field.{u_1} k] [inst_1 : Finite.{u_1 + 1} k] (p : Nat)
+  [inst_2 : Fact (Nat.Prime p)]
+  [inst_3 :
+    @CharP.{u_1} k
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} k
+        (@Ring.toAddGroupWithOne.{u_1} k (@DivisionRing.toRing.{u_1} k (@Field.toDivisionRing.{u_1} k inst))))
+      p]
+  (n : Nat) [inst_4 : @NeZero.{0} Nat (@MulZeroClass.toZero.{0} Nat Nat.instMulZeroClass) n],
+  @Eq.{1} Nat
+    (@Module.finrank.{u_1, 0} k (@FiniteField.Extension.{u_1} k inst p inst_2 inst_3 n)
+      (@DivisionSemiring.toSemiring.{u_1} k (@Semifield.toDivisionSemiring.{u_1} k (@Field.toSemifield.{u_1} k inst)))
+      (@Semiring.toAddCommMonoid.{0} (@FiniteField.Extension.{u_1} k inst p inst_2 inst_3 n)
+        (@DivisionSemiring.toSemiring.{0} (@FiniteField.Extension.{u_1} k inst p inst_2 inst_3 n)
+          (@Semifield.toDivisionSemiring.{0} (@FiniteField.Extension.{u_1} k inst p inst_2 inst_3 n)
+            (@Field.toSemifield.{0} (@FiniteField.Extension.{u_1} k inst p inst_2 inst_3 n)
+              (@FiniteField.instFieldExtension.{u_1} k inst p inst_2 inst_3 n)))))
+      (@Algebra.toModule.{u_1, 0} k (@FiniteField.Extension.{u_1} k inst p inst_2 inst_3 n)
+        (@Semifield.toCommSemiring.{u_1} k (@Field.toSemifield.{u_1} k inst))
+        (@DivisionSemiring.toSemiring.{0} (@FiniteField.Extension.{u_1} k inst p inst_2 inst_3 n)
+          (@Semifield.toDivisionSemiring.{0} (@FiniteField.Extension.{u_1} k inst p inst_2 inst_3 n)
+            (@Field.toSemifield.{0} (@FiniteField.Extension.{u_1} k inst p inst_2 inst_3 n)
+              (@FiniteField.instFieldExtension.{u_1} k inst p inst_2 inst_3 n))))
+        (@FiniteField.instAlgebraExtension.{u_1} k inst inst_1 p inst_2 inst_3 n inst_4)))
+    n
+STATEMENT FiniteField.frobeniusAlgEquivOfAlgebraic SOURCE Mathlib.FieldTheory.Finite.Basic
+FiniteField.frobeniusAlgEquivOfAlgebraic.{u_1,
+  u_2} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    [Fintype.{u_1} K] →
+      (L : Type u_2) →
+        [inst_2 : Field.{u_2} L] →
+          [inst_3 :
+              @Algebra.{u_1, u_2} K L (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+                (@DivisionSemiring.toSemiring.{u_2} L
+                  (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_2)))] →
+            [@Algebra.IsAlgebraic.{u_1, u_2} K L (@Field.toCommRing.{u_1} K inst)
+                  (@DivisionRing.toRing.{u_2} L (@Field.toDivisionRing.{u_2} L inst_2)) inst_3] →
+              @AlgEquiv.{u_1, u_2, u_2} K L L (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+                (@DivisionSemiring.toSemiring.{u_2} L
+                  (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_2)))
+                (@DivisionSemiring.toSemiring.{u_2} L
+                  (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_2)))
+                inst_3 inst_3
+STATEMENT FiniteField.natCard_extension SOURCE Mathlib.FieldTheory.Finite.Extension
+FiniteField.natCard_extension.{u_1} : ∀ (k : Type u_1) [inst : Field.{u_1} k] [Finite.{u_1 + 1} k] (p : Nat)
+  [inst_2 : Fact (Nat.Prime p)]
+  [inst_3 :
+    @CharP.{u_1} k
+      (@AddGroupWithOne.toAddMonoidWithOne.{u_1} k
+        (@Ring.toAddGroupWithOne.{u_1} k (@DivisionRing.toRing.{u_1} k (@Field.toDivisionRing.{u_1} k inst))))
+      p]
+  (n : Nat) [@NeZero.{0} Nat (@MulZeroClass.toZero.{0} Nat Nat.instMulZeroClass) n],
+  @Eq.{1} Nat (Nat.card.{0} (@FiniteField.Extension.{u_1} k inst p inst_2 inst_3 n))
+    (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+      (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) (Nat.card.{u_1} k) n)
+STATEMENT FiniteField.norm_surjective SOURCE Mathlib.FieldTheory.Finite.GaloisField
+FiniteField.norm_surjective.{u_1,
+  u_2} : ∀ (K : Type u_1) (K' : Type u_2) [inst : Field.{u_1} K] [inst_1 : Field.{u_2} K']
+  [inst_2 :
+    @Algebra.{u_1, u_2} K K' (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+      (@DivisionSemiring.toSemiring.{u_2} K'
+        (@Semifield.toDivisionSemiring.{u_2} K' (@Field.toSemifield.{u_2} K' inst_1)))]
+  [Finite.{u_2 + 1} K'],
+  @Function.Surjective.{u_2 + 1, u_1 + 1} K' K
+    (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+      (@MonoidHom.{u_2, u_1} K' K
+        (@MulOneClass.toMulOne.{u_2} K'
+          (@MulZeroOneClass.toMulOneClass.{u_2} K'
+            (@instMulZeroOneClassOfSemiring.{u_2} K'
+              (@Ring.toSemiring.{u_2} K' (@DivisionRing.toRing.{u_2} K' (@Field.toDivisionRing.{u_2} K' inst_1))))))
+        (@MulOneClass.toMulOne.{u_1} K
+          (@MulZeroOneClass.toMulOneClass.{u_1} K
+            (@instMulZeroOneClassOfSemiring.{u_1} K
+              (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst)))))))
+      K' (fun x => K)
+      (@MonoidHom.instFunLike.{u_2, u_1} K' K
+        (@MulOneClass.toMulOne.{u_2} K'
+          (@MulZeroOneClass.toMulOneClass.{u_2} K'
+            (@instMulZeroOneClassOfSemiring.{u_2} K'
+              (@Ring.toSemiring.{u_2} K' (@DivisionRing.toRing.{u_2} K' (@Field.toDivisionRing.{u_2} K' inst_1))))))
+        (@MulOneClass.toMulOne.{u_1} K
+          (@MulZeroOneClass.toMulOneClass.{u_1} K
+            (@instMulZeroOneClassOfSemiring.{u_1} K
+              (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst)))))))
+      (@Algebra.norm.{u_1, u_2} K K' (@Field.toCommRing.{u_1} K inst)
+        (@DivisionRing.toRing.{u_2} K' (@Field.toDivisionRing.{u_2} K' inst_1)) inst_2))
+STATEMENT FiniteField.orderOf_frobeniusAlgEquivOfAlgebraic SOURCE Mathlib.FieldTheory.Finite.Basic
+FiniteField.orderOf_frobeniusAlgEquivOfAlgebraic.{u_1,
+  u_2} : ∀ (K : Type u_1) [inst : Field.{u_1} K] [inst_1 : Fintype.{u_1} K] (L : Type u_2) [inst_2 : Field.{u_2} L]
+  [inst_3 :
+    @Algebra.{u_1, u_2} K L (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+      (@DivisionSemiring.toSemiring.{u_2} L
+        (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_2)))]
+  [inst_4 : Finite.{u_2 + 1} L],
+  @Eq.{1} Nat
+    (@orderOf.{u_2}
+      (@AlgEquiv.{u_1, u_2, u_2} K L L (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+        (@DivisionSemiring.toSemiring.{u_2} L
+          (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_2)))
+        (@DivisionSemiring.toSemiring.{u_2} L
+          (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_2)))
+        inst_3 inst_3)
+      (@DivInvMonoid.toMonoid.{u_2}
+        (@AlgEquiv.{u_1, u_2, u_2} K L L (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+          (@DivisionSemiring.toSemiring.{u_2} L
+            (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_2)))
+          (@DivisionSemiring.toSemiring.{u_2} L
+            (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_2)))
+          inst_3 inst_3)
+        (@Group.toDivInvMonoid.{u_2}
+          (@AlgEquiv.{u_1, u_2, u_2} K L L (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+            (@DivisionSemiring.toSemiring.{u_2} L
+              (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_2)))
+            (@DivisionSemiring.toSemiring.{u_2} L
+              (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_2)))
+            inst_3 inst_3)
+          (@AlgEquiv.aut.{u_1, u_2} K L (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+            (@DivisionSemiring.toSemiring.{u_2} L
+              (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_2)))
+            inst_3)))
+      (@FiniteField.frobeniusAlgEquivOfAlgebraic.{u_1, u_2} K inst inst_1 L inst_2 inst_3 ⋯))
+    (@Module.finrank.{u_1, u_2} K L
+      (@DivisionSemiring.toSemiring.{u_1} K (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))
+      (@Semiring.toAddCommMonoid.{u_2} L
+        (@DivisionSemiring.toSemiring.{u_2} L
+          (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_2))))
+      (@Algebra.toModule.{u_1, u_2} K L (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+        (@DivisionSemiring.toSemiring.{u_2} L
+          (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_2)))
+        inst_3))
+STATEMENT FiniteField.unitsMap_norm_surjective SOURCE Mathlib.FieldTheory.Finite.GaloisField
+FiniteField.unitsMap_norm_surjective.{u_1,
+  u_2} : ∀ (K : Type u_1) (K' : Type u_2) [inst : Field.{u_1} K] [inst_1 : Field.{u_2} K']
+  [inst_2 :
+    @Algebra.{u_1, u_2} K K' (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+      (@DivisionSemiring.toSemiring.{u_2} K'
+        (@Semifield.toDivisionSemiring.{u_2} K' (@Field.toSemifield.{u_2} K' inst_1)))]
+  [Finite.{u_2 + 1} K'],
+  @Function.Surjective.{u_2 + 1, u_1 + 1}
+    (@Units.{u_2} K'
+      (@Semiring.toMonoid.{u_2} K'
+        (@DivisionSemiring.toSemiring.{u_2} K'
+          (@Semifield.toDivisionSemiring.{u_2} K' (@Field.toSemifield.{u_2} K' inst_1)))))
+    (@Units.{u_1} K
+      (@Semiring.toMonoid.{u_1} K
+        (@DivisionSemiring.toSemiring.{u_1} K
+          (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))))
+    (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+      (@MonoidHom.{u_2, u_1}
+        (@Units.{u_2} K'
+          (@Semiring.toMonoid.{u_2} K'
+            (@DivisionSemiring.toSemiring.{u_2} K'
+              (@Semifield.toDivisionSemiring.{u_2} K' (@Field.toSemifield.{u_2} K' inst_1)))))
+        (@Units.{u_1} K
+          (@Semiring.toMonoid.{u_1} K
+            (@DivisionSemiring.toSemiring.{u_1} K
+              (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))))
+        (@MulOneClass.toMulOne.{u_2}
+          (@Units.{u_2} K'
+            (@Semiring.toMonoid.{u_2} K'
+              (@DivisionSemiring.toSemiring.{u_2} K'
+                (@Semifield.toDivisionSemiring.{u_2} K' (@Field.toSemifield.{u_2} K' inst_1)))))
+          (@Units.instMulOneClass.{u_2} K'
+            (@Semiring.toMonoid.{u_2} K'
+              (@DivisionSemiring.toSemiring.{u_2} K'
+                (@Semifield.toDivisionSemiring.{u_2} K' (@Field.toSemifield.{u_2} K' inst_1))))))
+        (@MulOneClass.toMulOne.{u_1}
+          (@Units.{u_1} K
+            (@Semiring.toMonoid.{u_1} K
+              (@DivisionSemiring.toSemiring.{u_1} K
+                (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))))
+          (@Units.instMulOneClass.{u_1} K
+            (@Semiring.toMonoid.{u_1} K
+              (@DivisionSemiring.toSemiring.{u_1} K
+                (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))))))
+      (@Units.{u_2} K'
+        (@Semiring.toMonoid.{u_2} K'
+          (@DivisionSemiring.toSemiring.{u_2} K'
+            (@Semifield.toDivisionSemiring.{u_2} K' (@Field.toSemifield.{u_2} K' inst_1)))))
+      (fun x =>
+        @Units.{u_1} K
+          (@Semiring.toMonoid.{u_1} K
+            (@DivisionSemiring.toSemiring.{u_1} K
+              (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))))
+      (@MonoidHom.instFunLike.{u_2, u_1}
+        (@Units.{u_2} K'
+          (@Semiring.toMonoid.{u_2} K'
+            (@DivisionSemiring.toSemiring.{u_2} K'
+              (@Semifield.toDivisionSemiring.{u_2} K' (@Field.toSemifield.{u_2} K' inst_1)))))
+        (@Units.{u_1} K
+          (@Semiring.toMonoid.{u_1} K
+            (@DivisionSemiring.toSemiring.{u_1} K
+              (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))))
+        (@MulOneClass.toMulOne.{u_2}
+          (@Units.{u_2} K'
+            (@Semiring.toMonoid.{u_2} K'
+              (@DivisionSemiring.toSemiring.{u_2} K'
+                (@Semifield.toDivisionSemiring.{u_2} K' (@Field.toSemifield.{u_2} K' inst_1)))))
+          (@Units.instMulOneClass.{u_2} K'
+            (@Semiring.toMonoid.{u_2} K'
+              (@DivisionSemiring.toSemiring.{u_2} K'
+                (@Semifield.toDivisionSemiring.{u_2} K' (@Field.toSemifield.{u_2} K' inst_1))))))
+        (@MulOneClass.toMulOne.{u_1}
+          (@Units.{u_1} K
+            (@Semiring.toMonoid.{u_1} K
+              (@DivisionSemiring.toSemiring.{u_1} K
+                (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))))
+          (@Units.instMulOneClass.{u_1} K
+            (@Semiring.toMonoid.{u_1} K
+              (@DivisionSemiring.toSemiring.{u_1} K
+                (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst)))))))
+      (@Units.map.{u_2, u_1} K' K
+        (@Semiring.toMonoid.{u_2} K'
+          (@DivisionSemiring.toSemiring.{u_2} K'
+            (@Semifield.toDivisionSemiring.{u_2} K' (@Field.toSemifield.{u_2} K' inst_1))))
+        (@Semiring.toMonoid.{u_1} K
+          (@DivisionSemiring.toSemiring.{u_1} K
+            (@Semifield.toDivisionSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))
+        (@Algebra.norm.{u_1, u_2} K K' (@Field.toCommRing.{u_1} K inst)
+          (@DivisionRing.toRing.{u_2} K' (@Field.toDivisionRing.{u_2} K' inst_1)) inst_2)))
+STATEMENT IsCyclic.card_powMonoidHom_ker SOURCE Mathlib.GroupTheory.SpecificGroups.Cyclic
+IsCyclic.card_powMonoidHom_ker.{u_1} : ∀ (G : Type u_1) [inst : CommGroup.{u_1} G]
+  [@IsCyclic.{u_1} G
+      (@ZPow.toPow.{u_1} G
+        (@DivInvMonoid.toZPow.{u_1} G (@Group.toDivInvMonoid.{u_1} G (@CommGroup.toGroup.{u_1} G inst))))]
+  [Finite.{u_1 + 1} G] (d : Nat),
+  @Eq.{1} Nat
+    (Nat.card.{u_1}
+      ↥(@MonoidHom.ker.{u_1, u_1} G (@CommGroup.toGroup.{u_1} G inst) G
+          (@Monoid.toMulOneClass.{u_1} G
+            (@DivInvMonoid.toMonoid.{u_1} G (@Group.toDivInvMonoid.{u_1} G (@CommGroup.toGroup.{u_1} G inst))))
+          (@powMonoidHom.{u_1} G (@CommGroup.toCommMonoid.{u_1} G inst) d)))
+    ((Nat.card.{u_1} G).gcd d)
+STATEMENT IsGalois.mem_range_algebraMap_iff_fixed SOURCE Mathlib.FieldTheory.Galois.Basic
+@IsGalois.mem_range_algebraMap_iff_fixed.{u_1,
+    u_2} : ∀ {F : Type u_1} [inst : Field.{u_1} F] {E : Type u_2} [inst_1 : Field.{u_2} E]
+  [inst_2 :
+    @Algebra.{u_1, u_2} F E (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+      (@DivisionSemiring.toSemiring.{u_2} E
+        (@Semifield.toDivisionSemiring.{u_2} E (@Field.toSemifield.{u_2} E inst_1)))]
+  [@IsGalois.{u_1, u_2} F inst E inst_1 inst_2]
+  [@FiniteDimensional.{u_1, u_2} F E (@Field.toDivisionRing.{u_1} F inst)
+      (@Ring.toAddCommGroup.{u_2} E (@DivisionRing.toRing.{u_2} E (@Field.toDivisionRing.{u_2} E inst_1)))
+      (@Algebra.toModule.{u_1, u_2} F E (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+        (@DivisionSemiring.toSemiring.{u_2} E
+          (@Semifield.toDivisionSemiring.{u_2} E (@Field.toSemifield.{u_2} E inst_1)))
+        inst_2)]
+  (x : E),
+  Iff
+    (@Membership.mem.{u_2, u_2} E (Set.{u_2} E) (@Set.instMembership.{u_2} E)
+      (@Set.range.{u_2, u_1 + 1} E F
+        (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_1 + 1, u_2 + 1}
+          (@RingHom.{u_1, u_2} F E
+            (@Semiring.toNonAssocSemiring.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+            (@Semiring.toNonAssocSemiring.{u_2} E
+              (@DivisionSemiring.toSemiring.{u_2} E
+                (@Semifield.toDivisionSemiring.{u_2} E (@Field.toSemifield.{u_2} E inst_1)))))
+          F (fun x => E)
+          (@RingHom.instFunLike.{u_1, u_2} F E
+            (@Semiring.toNonAssocSemiring.{u_1} F
+              (@CommSemiring.toSemiring.{u_1} F (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))))
+            (@Semiring.toNonAssocSemiring.{u_2} E
+              (@DivisionSemiring.toSemiring.{u_2} E
+                (@Semifield.toDivisionSemiring.{u_2} E (@Field.toSemifield.{u_2} E inst_1)))))
+          (@Algebra.algebraMap.{u_1, u_2} F E (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+            (@DivisionSemiring.toSemiring.{u_2} E
+              (@Semifield.toDivisionSemiring.{u_2} E (@Field.toSemifield.{u_2} E inst_1)))
+            inst_2)))
+      x)
+    (∀
+      (f :
+        @AlgEquiv.{u_1, u_2, u_2} F E E (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+          (@DivisionSemiring.toSemiring.{u_2} E
+            (@Semifield.toDivisionSemiring.{u_2} E (@Field.toSemifield.{u_2} E inst_1)))
+          (@DivisionSemiring.toSemiring.{u_2} E
+            (@Semifield.toDivisionSemiring.{u_2} E (@Field.toSemifield.{u_2} E inst_1)))
+          inst_2 inst_2),
+      @Eq.{u_2 + 1} E
+        (@DFunLike.coe.{u_2 + 1, u_2 + 1, u_2 + 1}
+          (@AlgEquiv.{u_1, u_2, u_2} F E E (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+            (@DivisionSemiring.toSemiring.{u_2} E
+              (@Semifield.toDivisionSemiring.{u_2} E (@Field.toSemifield.{u_2} E inst_1)))
+            (@DivisionSemiring.toSemiring.{u_2} E
+              (@Semifield.toDivisionSemiring.{u_2} E (@Field.toSemifield.{u_2} E inst_1)))
+            inst_2 inst_2)
+          E (fun x => E)
+          (@AlgEquiv.instFunLike.{u_1, u_2, u_2} F E E
+            (@Semifield.toCommSemiring.{u_1} F (@Field.toSemifield.{u_1} F inst))
+            (@DivisionSemiring.toSemiring.{u_2} E
+              (@Semifield.toDivisionSemiring.{u_2} E (@Field.toSemifield.{u_2} E inst_1)))
+            (@DivisionSemiring.toSemiring.{u_2} E
+              (@Semifield.toDivisionSemiring.{u_2} E (@Field.toSemifield.{u_2} E inst_1)))
+            inst_2 inst_2)
+          f x)
+        x)
+STATEMENT Matrix.mem_specialUnitaryGroup_iff SOURCE Mathlib.LinearAlgebra.UnitaryGroup
+@Matrix.mem_specialUnitaryGroup_iff.{u_1,
+    u_2} : ∀ {n : Type u_1} [inst : DecidableEq.{u_1 + 1} n] [inst_1 : Fintype.{u_1} n] {α : Type u_2}
+  [inst_2 : CommRing.{u_2} α]
+  [inst_3 :
+    @StarRing.{u_2} α
+      (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} α
+        (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} α
+          (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} α (@CommRing.toNonUnitalCommRing.{u_2} α inst_2))))]
+  {A : Matrix.{u_1, u_1, u_2} n n α},
+  Iff
+    (@Membership.mem.{max u_1 u_2, max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+      (@Submonoid.{max u_2 u_1} (Matrix.{u_1, u_1, u_2} n n α)
+        (@MulZeroOneClass.toMulOneClass.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+          (@instMulZeroOneClassOfSemiring.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+            (@Matrix.semiring.{u_2, u_1} n α
+              (@CommSemiring.toSemiring.{u_2} α (@CommRing.toCommSemiring.{u_2} α inst_2)) inst_1 inst))))
+      (@SetLike.instMembership.{max u_1 u_2, max u_1 u_2}
+        (@Submonoid.{max u_2 u_1} (Matrix.{u_1, u_1, u_2} n n α)
+          (@MulZeroOneClass.toMulOneClass.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+            (@instMulZeroOneClassOfSemiring.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+              (@Matrix.semiring.{u_2, u_1} n α
+                (@CommSemiring.toSemiring.{u_2} α (@CommRing.toCommSemiring.{u_2} α inst_2)) inst_1 inst))))
+        (Matrix.{u_1, u_1, u_2} n n α)
+        (@Submonoid.instSetLike.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+          (@MulZeroOneClass.toMulOneClass.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+            (@instMulZeroOneClassOfSemiring.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+              (@Matrix.semiring.{u_2, u_1} n α
+                (@CommSemiring.toSemiring.{u_2} α (@CommRing.toCommSemiring.{u_2} α inst_2)) inst_1 inst)))))
+      (@Matrix.specialUnitaryGroup.{u_1, u_2} n inst inst_1 α inst_2 inst_3) A)
+    (And
+      (@Membership.mem.{max u_1 u_2, max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+        (@Submonoid.{max u_2 u_1} (Matrix.{u_1, u_1, u_2} n n α)
+          (@MulZeroOneClass.toMulOneClass.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+            (@instMulZeroOneClassOfSemiring.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+              (@Matrix.semiring.{u_2, u_1} n α
+                (@CommSemiring.toSemiring.{u_2} α (@CommRing.toCommSemiring.{u_2} α inst_2)) inst_1 inst))))
+        (@SetLike.instMembership.{max u_1 u_2, max u_1 u_2}
+          (@Submonoid.{max u_2 u_1} (Matrix.{u_1, u_1, u_2} n n α)
+            (@MulZeroOneClass.toMulOneClass.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+              (@instMulZeroOneClassOfSemiring.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+                (@Matrix.semiring.{u_2, u_1} n α
+                  (@CommSemiring.toSemiring.{u_2} α (@CommRing.toCommSemiring.{u_2} α inst_2)) inst_1 inst))))
+          (Matrix.{u_1, u_1, u_2} n n α)
+          (@Submonoid.instSetLike.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+            (@MulZeroOneClass.toMulOneClass.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+              (@instMulZeroOneClassOfSemiring.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+                (@Matrix.semiring.{u_2, u_1} n α
+                  (@CommSemiring.toSemiring.{u_2} α (@CommRing.toCommSemiring.{u_2} α inst_2)) inst_1 inst)))))
+        (@Matrix.unitaryGroup.{u_1, u_2} n inst inst_1 α inst_2 inst_3) A)
+      (@Eq.{u_2 + 1} α (@Matrix.det.{u_2, u_1} n inst inst_1 α inst_2 A)
+        (@OfNat.ofNat.{u_2} α (nat_lit 1)
+          (@One.toOfNat1.{u_2} α
+            (@AddMonoidWithOne.toOne.{u_2} α
+              (@AddGroupWithOne.toAddMonoidWithOne.{u_2} α
+                (@Ring.toAddGroupWithOne.{u_2} α (@CommRing.toRing.{u_2} α inst_2))))))))
+STATEMENT Matrix.specialUnitaryGroup SOURCE Mathlib.LinearAlgebra.UnitaryGroup
+Matrix.specialUnitaryGroup.{u_1,
+  u_2} : (n : Type u_1) →
+  [inst : DecidableEq.{u_1 + 1} n] →
+    [inst_1 : Fintype.{u_1} n] →
+      (α : Type u_2) →
+        [inst_2 : CommRing.{u_2} α] →
+          [@StarRing.{u_2} α
+                (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} α
+                  (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} α
+                    (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} α
+                      (@CommRing.toNonUnitalCommRing.{u_2} α inst_2))))] →
+            @Submonoid.{max u_2 u_1} (Matrix.{u_1, u_1, u_2} n n α)
+              (@MulZeroOneClass.toMulOneClass.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+                (@instMulZeroOneClassOfSemiring.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+                  (@Matrix.semiring.{u_2, u_1} n α
+                    (@CommSemiring.toSemiring.{u_2} α (@CommRing.toCommSemiring.{u_2} α inst_2)) inst_1 inst)))
+STATEMENT Matrix.unitaryGroup SOURCE Mathlib.LinearAlgebra.UnitaryGroup
+Matrix.unitaryGroup.{u_1,
+  u_2} : (n : Type u_1) →
+  [inst : DecidableEq.{u_1 + 1} n] →
+    [inst_1 : Fintype.{u_1} n] →
+      (α : Type u_2) →
+        [inst_2 : CommRing.{u_2} α] →
+          [@StarRing.{u_2} α
+                (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{u_2} α
+                  (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{u_2} α
+                    (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{u_2} α
+                      (@CommRing.toNonUnitalCommRing.{u_2} α inst_2))))] →
+            @Submonoid.{max u_2 u_1} (Matrix.{u_1, u_1, u_2} n n α)
+              (@MulZeroOneClass.toMulOneClass.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+                (@instMulZeroOneClassOfSemiring.{max u_1 u_2} (Matrix.{u_1, u_1, u_2} n n α)
+                  (@Matrix.semiring.{u_2, u_1} n α
+                    (@CommSemiring.toSemiring.{u_2} α (@CommRing.toCommSemiring.{u_2} α inst_2)) inst_1 inst)))
+STATEMENT trace_eq_sum_automorphisms SOURCE Mathlib.RingTheory.Trace.Basic
+@trace_eq_sum_automorphisms.{u_1,
+    u_2} : ∀ {K : Type u_1} {L : Type u_2} [inst : Field.{u_1} K] [inst_1 : Field.{u_2} L]
+  [inst_2 :
+    @Algebra.{u_1, u_2} K L (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+      (@DivisionSemiring.toSemiring.{u_2} L
+        (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_1)))]
+  (x : L)
+  [inst_3 :
+    @FiniteDimensional.{u_1, u_2} K L (@Field.toDivisionRing.{u_1} K inst)
+      (@Ring.toAddCommGroup.{u_2} L (@DivisionRing.toRing.{u_2} L (@Field.toDivisionRing.{u_2} L inst_1)))
+      (@Algebra.toModule.{u_1, u_2} K L (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+        (@DivisionSemiring.toSemiring.{u_2} L
+          (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_1)))
+        inst_2)]
+  [@IsGalois.{u_1, u_2} K inst L inst_1 inst_2],
+  @Eq.{u_2 + 1} L
+    (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_1 + 1, u_2 + 1}
+      (@RingHom.{u_1, u_2} K L
+        (@Semiring.toNonAssocSemiring.{u_1} K
+          (@CommSemiring.toSemiring.{u_1} K (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))
+        (@Semiring.toNonAssocSemiring.{u_2} L
+          (@DivisionSemiring.toSemiring.{u_2} L
+            (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_1)))))
+      K (fun x => L)
+      (@RingHom.instFunLike.{u_1, u_2} K L
+        (@Semiring.toNonAssocSemiring.{u_1} K
+          (@CommSemiring.toSemiring.{u_1} K (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))
+        (@Semiring.toNonAssocSemiring.{u_2} L
+          (@DivisionSemiring.toSemiring.{u_2} L
+            (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_1)))))
+      (@Algebra.algebraMap.{u_1, u_2} K L (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+        (@DivisionSemiring.toSemiring.{u_2} L
+          (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_1)))
+        inst_2)
+      (@DFunLike.coe.{max (u_1 + 1) (u_2 + 1), u_2 + 1, u_1 + 1}
+        (@LinearMap.{u_1, u_1, u_2, u_1} K K
+          (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst)))
+          (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst)))
+          (@RingHom.id.{u_1} K
+            (@Semiring.toNonAssocSemiring.{u_1} K
+              (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst)))))
+          L K
+          (@Semiring.toAddCommMonoid.{u_2} L
+            (@CommSemiring.toSemiring.{u_2} L (@CommRing.toCommSemiring.{u_2} L (@Field.toCommRing.{u_2} L inst_1))))
+          (@Semiring.toAddCommMonoid.{u_1} K
+            (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst))))
+          (@Algebra.toModule.{u_1, u_2} K L (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst))
+            (@CommSemiring.toSemiring.{u_2} L (@CommRing.toCommSemiring.{u_2} L (@Field.toCommRing.{u_2} L inst_1)))
+            inst_2)
+          (@Semiring.toModule.{u_1} K
+            (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst)))))
+        L (fun x => K)
+        (@LinearMap.instFunLike.{u_1, u_1, u_2, u_1} K K L K
+          (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst)))
+          (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst)))
+          (@Semiring.toAddCommMonoid.{u_2} L
+            (@CommSemiring.toSemiring.{u_2} L (@CommRing.toCommSemiring.{u_2} L (@Field.toCommRing.{u_2} L inst_1))))
+          (@Semiring.toAddCommMonoid.{u_1} K
+            (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst))))
+          (@Algebra.toModule.{u_1, u_2} K L (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst))
+            (@CommSemiring.toSemiring.{u_2} L (@CommRing.toCommSemiring.{u_2} L (@Field.toCommRing.{u_2} L inst_1)))
+            inst_2)
+          (@Semiring.toModule.{u_1} K
+            (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst))))
+          (@RingHom.id.{u_1} K
+            (@Semiring.toNonAssocSemiring.{u_1} K
+              (@CommSemiring.toSemiring.{u_1} K (@CommRing.toCommSemiring.{u_1} K (@Field.toCommRing.{u_1} K inst))))))
+        (@Algebra.trace.{u_1, u_2} K L (@Field.toCommRing.{u_1} K inst) (@Field.toCommRing.{u_2} L inst_1) inst_2) x))
+    (∑ σ,
+      @DFunLike.coe.{u_2 + 1, u_2 + 1, u_2 + 1}
+        (@AlgEquiv.{u_1, u_2, u_2} K L L (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+          (@DivisionSemiring.toSemiring.{u_2} L
+            (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_1)))
+          (@DivisionSemiring.toSemiring.{u_2} L
+            (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_1)))
+          inst_2 inst_2)
+        L (fun x => L)
+        (@AlgEquiv.instFunLike.{u_1, u_2, u_2} K L L
+          (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))
+          (@DivisionSemiring.toSemiring.{u_2} L
+            (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_1)))
+          (@DivisionSemiring.toSemiring.{u_2} L
+            (@Semifield.toDivisionSemiring.{u_2} L (@Field.toSemifield.{u_2} L inst_1)))
+          inst_2 inst_2)
+        σ x)
+DEFINITION Atlas.Symplectic.Sp SOURCE Atlas.LinearGroups.Symplectic.Basic
+@[reducible] def Atlas.Symplectic.Sp.{u_1} : Nat → (F : Type u_1) → [CommRing.{u_1} F] → Type u_1 :=
+fun n F [inst : CommRing.{u_1} F] =>
+  ↥(@Matrix.symplecticGroup.{0, u_1} (Fin n) F (instDecidableEqFin n) inst (Fin.fintype n))
+DEFINITION Atlas.Symplectic.PSp SOURCE Atlas.LinearGroups.Symplectic.Basic
+@[reducible] def Atlas.Symplectic.PSp.{u_1} : Nat → (F : Type u_1) → [CommRing.{u_1} F] → Type u_1 :=
+fun n F [inst : CommRing.{u_1} F] =>
+  @HasQuotient.Quotient.{u_1, u_1} (@Atlas.Symplectic.Sp.{u_1} n F inst)
+    (@Subgroup.{u_1} (@Atlas.Symplectic.Sp.{u_1} n F inst)
+      (@SymplecticGroup.instGroupSubtypeMatrixSumMemSubmonoidSymplecticGroup.{0, u_1} (Fin n) F (instDecidableEqFin n)
+        (Fin.fintype n) inst))
+    (@QuotientGroup.instHasQuotientSubgroup.{u_1} (@Atlas.Symplectic.Sp.{u_1} n F inst)
+      (@SymplecticGroup.instGroupSubtypeMatrixSumMemSubmonoidSymplecticGroup.{0, u_1} (Fin n) F (instDecidableEqFin n)
+        (Fin.fintype n) inst))
+    (@Subgroup.center.{u_1} (@Atlas.Symplectic.Sp.{u_1} n F inst)
+      (@SymplecticGroup.instGroupSubtypeMatrixSumMemSubmonoidSymplecticGroup.{0, u_1} (Fin n) F (instDecidableEqFin n)
+        (Fin.fintype n) inst))
+DEFINITION Atlas.Symplectic.Good SOURCE Atlas.LinearGroups.Symplectic.Basic
+def Atlas.Symplectic.Good : Nat → Nat → Prop :=
+fun n q =>
+  Or
+    (And (@Eq.{1} Nat n (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+      (@LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) q))
+    (And (@LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) n)
+      (@Ne.{1} (Prod.{0, 0} Nat Nat) (@Prod.mk.{0, 0} Nat Nat n q)
+        (@Prod.mk.{0, 0} Nat Nat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))))
+SHARED EXTRACTION COMPLETE: 18 targets

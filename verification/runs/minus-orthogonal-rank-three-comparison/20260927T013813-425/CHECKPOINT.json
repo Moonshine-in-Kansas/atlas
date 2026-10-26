@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "minus-orthogonal-rank-three-comparison",
+  "imports": [
+    "Atlas.LinearGroups.Orthogonal.Minus.RankThreeOrderComparison",
+    "Atlas.LinearGroups.Orthogonal.Minus.RankThreeComparison",
+    "Atlas.LinearGroups.Orthogonal.Minus.RankThreeFullImage"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Orthogonal.Minus.gcd_four_cube_add_one",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeOrderComparison",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreeElementaryHom_surjective",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeFullImage",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreePSUHom_surjective",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeComparison",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreeProjectiveEquiv",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeComparison",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreeUnitaryEquiv",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeComparison",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreeUnitaryEquiv_projection",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeComparison",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThree_elementary_kernel_card_le",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeFullImage",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThree_elementary_perfect",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeFullImage",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThree_projective_card_eq_unitary",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeOrderComparison",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThree_special_order_mul",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeFullImage",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "comparison-independence",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Orthogonal.Minus.Simplicity",
+        "Atlas.LinearGroups.Orthogonal.Minus.RankThreeSimplicity",
+        "Atlas.LinearGroups.Unitary.Simplicity",
+        "Atlas.LinearGroups.Unitary.SimplicityThree",
+        "Atlas.LinearGroups.Unitary.SimplicityHigher"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.Unitary.simple_of_good",
+        "Atlas.Unitary.noncommutative_of_good",
+        "Atlas.Orthogonal.Minus.family_simple",
+        "Atlas.Unitary.binary_projective_simple",
+        "Atlas.Unitary.binary_projective_noncommutative"
+      ]
+    }
+  ]
+}

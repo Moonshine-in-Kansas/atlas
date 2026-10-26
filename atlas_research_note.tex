@@ -1,0 +1,2830 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,longtable,tabularx,microtype,enumitem,needspace}
+\usepackage{float,placeins}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.8}
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{5}
+\usepackage[hidelinks,pdfusetitle]{hyperref}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small A constructive ATLAS of finite simple groups}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\parindent}{15pt}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{2em}
+\clubpenalty=10000
+\widowpenalty=10000
+\setlist{nosep,leftmargin=*}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{formalization}[theorem]{Formalization result}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\PGL}{\mathrm{PGL}}
+\newcommand{\PSL}{\mathrm{PSL}}
+\newcommand{\PSU}{\mathrm{PSU}}
+\newcommand{\PSp}{\mathrm{PSp}}
+\newcommand{\POm}{\mathrm{P}\Omega}
+\newcommand{\Alt}{\operatorname{Alt}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\Co}{\mathrm{Co}}
+\newcommand{\Fi}{\mathrm{Fi}}
+\newcommand{\Suz}{\mathrm{Suz}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\atlas}{\textsc{Atlas}}
+\newcommand{\code}[1]{\texttt{\small #1}}
+\newcommand{\leanname}[1]{{\small\nolinkurl{#1}}}
+\title{A constructive ATLAS\\of finite simple groups in Lean}
+\author{Gerald H\"ohn\\[3pt]
+  \small Department of Mathematics, Kansas State University\\
+  \small\href{mailto:gerald@monstrous-moonshine.de}{\nolinkurl{gerald@monstrous-moonshine.de}}}
+\hypersetup{pdfauthor={Gerald H\"ohn},
+  pdfsubject={Constructions, orders, simplicity, and structural comparisons of finite simple groups},
+  pdfkeywords={finite simple groups, sporadic groups, classical groups, octonions, Lean, formal verification}}
+\date{25 October 2026 --- version 1.2 development draft}
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+We present a constructive atlas of finite simple groups with proofs of
+their orders, simplicity, and structural properties. The sixteen completed
+families comprise cyclic groups of prime order, alternating groups,
+$A_r$, ${}^2A_r$, $B_r$, $C_r$, $D_r$, ${}^2D_r$, $E_6$, $E_7$, $E_8$,
+$F_4$, $G_2$, ${}^3D_4$, ${}^2B_2$, and ${}^2G_2$, over their explicitly
+stated simple parameter ranges. The sixteen sporadic constructions are
+$M_{11},M_{12},M_{22},M_{23},M_{24}$, $\Co_1,\Co_2,\Co_3$,
+$\mathrm{McL},\mathrm{HS},\Suz,J_2$, $\Fi_{22},\Fi_{23},\Fi_{24}'$,
+and $\mathrm{Ru}$. The Tits group ${}^2F_4(2)'$ is a separate exceptional
+entry. The models arise from codes, lattices, forms, algebras, finite
+geometries, and integral Chevalley root operators. They retain natural
+actions, stabilizers, central quotients, and comparison maps.
+For the thirty entries preceding the addition of $E_6,E_7,E_8$, a
+comparison theorem determines isomorphism precisely by normalized labels;
+involution classes and Sylow-subgroup centers separate the exceptional
+equal-order pairs. Further equivalences identify several Chevalley and
+earlier geometric models. The construction and comparison proofs are
+formalized in Lean without assuming the exhaustiveness theorem of the
+classification. We state the completed results, the boundaries of the
+comparison theorems, and the scope of the latest independent verification.
+
+\end{abstract}
+
+\smallskip
+\noindent\textit{Public release:}
+\mbox{\url{https://github.com/Moonshine-in-Kansas/atlas}}.\par
+\noindent\textit{Development source:}
+\mbox{\url{https://github.com/Moonshine-in-Kansas/atlas_draft}}
+(private). This note describes the development snapshot of 25 October;
+its full contents are not asserted to be in the public release.
+
+\section{Introduction}
+
+The construction side of finite simple group theory asks for concrete
+models together with proofs of their orders, simplicity, and
+characteristic structure. Codes, lattices, algebras, forms, and finite
+geometries provide such models and retain natural actions, stabilizers,
+central quotients, and maps between related objects. The \atlas\ project
+organizes these constructions into a structural library, with proofs
+formalized in Lean~\cite{Lean4} using Mathlib~\cite{Mathlib}.
+
+The catalogue reported here records the development snapshot of
+25 October 2026: sixteen family packages, sixteen sporadic constructions,
+and the exceptional derived Tits group, giving thirty-three completed
+entries. Formalization results~\ref{thm:families}, \ref{thm:sporadics},
+\ref{thm:additions}, and~\ref{thm:rudvalis-tits} state their orders and
+parameter ranges. These are construction packages, not thirty-three
+disjoint isomorphism classes.
+
+The classical models come from linear, Hermitian, symplectic, and
+quadratic spaces. The split octonion and Albert algebras give $G_2$ and
+$F_4$; explicit twisted root matrices give Suzuki, triality, and small
+Ree groups. The uniform integral Chevalley construction supplies
+$E_6,E_7,E_8$, and further realizations of the untwisted families already
+present. Codes, lattices, and the Conway--Parker algebra give the sporadic
+models, with the Conway--Wales lattice also supplying Rudvalis and the
+derived Tits group. Both the defining objects and their structural maps
+are retained.
+
+The comparison layer has two complementary achievements. Explicit maps
+relate different geometric constructions and the exceptional small
+isomorphisms, including $\PSU_4(2)\cong\PSp_4(3)$. For the earlier
+thirty-entry registry, an unconditional theorem also decides isomorphism
+by normalized labels. Its converse uses a classification of the relevant
+order formula coincidences and group-theoretic obstructions when equal
+orders do not imply isomorphism. The three new $E$-series entries are
+outside that theorem's present domain.
+
+
+Classification has two complementary components: constructing the
+groups on the list and proving that every finite simple group occurs
+there. \atlas\ develops the first component without assuming the
+exhaustiveness theorem of the classification of finite simple groups
+(CFSG). Construction, recognition, and exhaustiveness remain distinct
+obligations. The actions, stabilizers, and comparison maps retained
+here are intended as inputs to subsequent structure and recognition
+theorems; Section~\ref{sec:contract} states the conditional recognition
+questions precisely.
+
+The mathematical sources combine established constructions with the
+author's companion work. The Hall--Janko preprint~\cite{HallJankoNote}
+and the Conway--Parker algebra manuscript~\cite{FischerAlgebra}
+supply source mathematics for the corresponding entries. The present
+article describes the models, their order and simplicity arguments,
+and the structural relationships preserved in their formal
+realization. The direct Monster-order work with
+Seysen~\cite{MonsterOrder} supplies a starting point for future
+formalization, not a completed entry in this release. Companion work
+on integral Albert algebras and the rank-26 lattice and Cayley-plane
+design develops the arithmetic and geometric direction
+\cite{AlbertMassNote,CayleyPlaneNote}.
+
+A broader objective is to explain why sporadic symmetries arise.
+Vertex operator algebras (VOAs) provide a principal direction,
+illustrated by the public Monster work in Section~\ref{sec:monster}
+and by joint work with Lam on a VOA construction of the Fischer
+groups~\cite{FischerVOA}, currently in preparation.
+Retaining the mathematical objects is essential for this purpose:
+the Fischer construction, for example, keeps its algebra, rays, and
+incidence geometry together with the arguments determining the group
+and its order. Formal verification makes these arguments and their
+structural maps available for checked reuse.
+
+The name recalls the \emph{Atlas of Finite Groups}~\cite{ATLAS85}.
+Our initial scope is constructions and structural theorems; complete
+character tables and maximal-subgroup lists are longer-term projects.
+Section~\ref{sec:v12} describes the added geometric families, Rudvalis,
+and Tits. Sections~\ref{sec:elementary}--\ref{sec:fischer} develop the
+linear, quadratic, Chevalley, octonion, small Ree, and earlier sporadic
+constructions.
+Section~\ref{sec:classical} also records the classical conventions
+and comparison results. Sections~\ref{sec:monster}
+and~\ref{sec:programme} distinguish further mathematical goals from
+the completed catalogue. Related formalization projects are discussed
+in Section~\ref{sec:related}. Technical implementation, declaration
+interfaces, logical foundations, and verification records are collected
+in Appendices~\ref{sec:libraries}--\ref{app:provenance}, including the
+complete per-group source-line dependency table.
+
+\section{The mathematical content of an entry}\label{sec:contract}
+
+For a family label $X$, let $\mathcal A_X$ be an explicitly specified
+parameter domain. An entry consists of a defined group $G_X(\lambda)$,
+for $\lambda\in\mathcal A_X$, and proofs of
+\begin{equation}\label{eq:entry}
+ \lvert G_X(\lambda)\rvert=N_X(\lambda),\qquad
+ G_X(\lambda)\text{ is simple},\qquad
+ P_X\bigl(G_X(\lambda)\bigr),
+\end{equation}
+together with finiteness and, for the nonabelian entries, explicit
+noncommutativity. Here $P_X$ describes independently defined mathematical
+structure: an action, a code, a lattice, an algebra, or specified maps
+between such objects. Neither $\mathcal A_X$ nor $P_X$ may incorporate the
+desired order or simplicity assertion as an unproved premise. For cyclic
+groups of prime order, commutativity is part of the intended conclusion.
+
+For some entries, we also compute $k_2(G)$, the number of conjugacy
+classes of nonidentity involutions, to distinguish nonisomorphic groups
+of the same order; see Section~\ref{sec:equalorder}.
+
+Here \emph{construction} refers to a specified mathematical model and
+proofs of its properties. The development uses classical mathematics in
+Lean, including classical choice; it need not provide an executable
+enumeration of every group element.
+
+\subsection{The chosen object and its full symmetry group}
+
+For a symmetry-group model, equality between a generated subgroup and
+the full automorphism group is a mathematical theorem. In a code or
+lattice construction, generation or a stabilizer argument establishes
+this equality before the order and simplicity assertions are attached
+to the full group.
+
+Central quotients come with their maps and kernels. Thus $\Co_0$ is
+distinguished from $\Co_1$, and a Hermitian isometry group from its
+scalar quotient. A different distinction is that between $\Fi_{24}$
+and its derived subgroup $\Fi_{24}'$. Abstract group isomorphisms,
+subgroup equalities, and equivariant identifications of actions are
+recorded with the corresponding data.
+
+\subsection{Conditional recognition and comparison}
+
+Conditional on CFSG, order determines a finite simple group up to
+isomorphism except for the pairs
+$\{\Alt_8\cong\PSL_4(2),\PSL_3(4)\}$ and
+$\{B_r(q),C_r(q)\}$ with $r\geq3$ and $q$ odd~\cite{OrderRecognition}.
+These pairs are distinguished by the number $k_2(G)$ of conjugacy
+classes of nonidentity involutions: the first has values $2$ and $1$,
+and the second $r$ and $\lfloor r/2\rfloor+1$~\cite{Taylor,BorovikInvolutions}.
+Consequently, assuming CFSG, the pair $(|G|,k_2(G))$ determines the
+isomorphism type of a finite simple group. The formal
+$B/C$ counts and both nonisomorphism results are described in
+Section~\ref{sec:equalorder}; the general recognition theorem and the
+$\Alt_8/\PSL_3(4)$ involution counts are proposed work.
+This conditional recognition question is distinct from the unconditional
+comparison theorem for the specified models in
+Section~\ref{sec:catalogue-comparison}.
+
+For construction proofs, the relevant independence question concerns
+the hypotheses and dependency graph of each theorem. Background results
+and earlier constructions can be reused. A classification argument can
+also be non-circular when the property being deduced was not used in
+that argument, for example when it concerns smaller groups.
+The Monster order illustrates why precise attribution matters:
+Griess--Meierfrankenfeld--Segev, Corollary~3.7.3, uses substantial
+information about other sporadic groups~\cite{GMS}, whereas
+H\"ohn--Seysen~\cite{MonsterOrder} gives a direct computational
+determination of the Monster and Baby Monster orders in the
+Leech-lattice setting. The former dependency is more specific than an
+invocation of the entire CFSG.
+
+Recognition through an action or local geometry offers a natural
+interface: a classification argument produces the structure, and a
+comparison theorem identifies it with a constructed model. The actions,
+stabilizers, and maps retained here are intended to support such theorems.
+
+\section{Current constructions}\label{sec:inventory}
+
+The development catalogue records sixteen completed family packages, sixteen
+sporadic constructions and the exceptional derived Tits group~\cite{AtlasSoftware}. In this article,
+\emph{completed} means that the stated order, simplicity, and structural
+results have the recorded proofs for the specified parameter
+domains; it does not mean that every property of the groups has been
+formalized. The verification scope is described in
+Appendix~\ref{sec:workflow}. Family labels count construction packages
+and can overlap up to isomorphism. Section~\ref{sec:classical} records
+the status of the comparison maps.
+
+\Needspace{6\baselineskip}
+\begin{formalization}[Family packages]\label{thm:families}
+The following eight packages formed version 1.0; the eight additional families in the current development are stated in Section~\ref{sec:v12}. Here $n$ is the degree of
+an alternating group or the matrix dimension of $\PSL_n$; $r$ denotes
+Dynkin rank in the $B,C,D$ families.
+For each finite field $F$ below, put $q=|F|$.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item For every prime $p$, the cyclic group $C_p$ has order $p$ and is
+simple and commutative.
+\item For every $n\geq5$, the alternating group $\Alt_n$ is nonabelian
+simple and has order $n!/2$.
+\item Let $F$ be any finite field, put $q=|F|$, and let $n\geq2$.
+The central quotient
+$\PSL_n(F)=\SL_n(F)/Z(\SL_n(F))$ has order
+\begin{equation}\label{eq:pslorder}
+ |\PSL_n(F)|=
+ \frac{q^{n(n-1)/2}\prod_{i=2}^{n}(q^i-1)}{\gcd(n,q-1)}.
+\end{equation}
+It is simple if and only if
+$(n,q)\notin\{(2,2),(2,3)\}$. For those admissible parameters it is
+also nonabelian.
+\item For every finite field $F$ and rank $r\geq1$, the projective
+quadratic model $B_r(F)$ has the order in~\eqref{eq:bcorder}.
+It is simple exactly outside $(r,q)=(1,2),(1,3),(2,2)$, and
+nonabelian at the simple parameters. The full nonsimple model at
+$(r,q)=(2,2)$ and its derived subgroup are distinguished.
+\item For every finite field $F$ and rank $r\geq1$, the symplectic
+quotient $C_r(F)=\PSp_{2r}(F)$ has the order in~\eqref{eq:bcorder}.
+It is simple exactly outside $(r,q)=(1,2),(1,3),(2,2)$, and
+nonabelian at the simple parameters. The full nonsimple model at
+$(r,q)=(2,2)$ and its derived subgroup are distinguished. The
+symplectic rank-zero model is trivial.
+\item For every finite field $F$ and $r\geq4$, the projective
+split-orthogonal model $D_r(F)$ has the order in~\eqref{eq:dorder}
+with $\varepsilon=1$ and is nonabelian simple in every characteristic,
+including $D_4(2)$.
+
+\item For every finite field $F$, with $q=|F|$, let
+$G_2(F)=\Aut_F(\mathbb O_{\mathrm{split}}(F))$ be the full group of
+multiplication-preserving linear automorphisms of the constructed
+split octonion algebra. Then
+\begin{equation}\label{eq:g2order}
+ |G_2(F)|=q^6(q^6-1)(q^2-1).
+\end{equation}
+It is simple if and only if $q>2$, and noncommutativity is proved
+for every $q$. At $q=2$, an explicitly defined normal subgroup has
+order $6048$ and index two; its own simplicity and identification
+with $\PSU_3(3)$ are not included in this result.
+\item Let $F$ be a finite field of characteristic three with
+$|F|=q=3^{2m+1}$, where $m\geq1$. The group $ {}^2G_2(F,m)$ generated
+by the Tits-twisted matrices in $\GL_7(F)$ is nonabelian
+simple and has order
+\begin{equation}\label{eq:reeorder}
+ |{}^2G_2(F,m)|=q^3(q^3+1)(q-1).
+\end{equation}
+It acts faithfully and doubly transitively on a constructed set of
+$q^3+1$ points. The full point stabilizer is the soluble Borel subgroup
+of order $q^3(q-1)$. Field transport and an injective homomorphism into
+the split-octonion group $G_2(F)$ are proved. The parameter $q=3$
+and a graph-automorphism fixed-point characterization are not part of
+this assertion.
+\end{enumerate}
+\end{formalization}
+
+The orthogonal packages retain intrinsic kernels, full centers,
+root generation, singular-line geometry, and field transport. Their
+domains include comparison models outside the primary label ranges in
+Table~\ref{tab:classical}. For type $A$ and $G_2$, finite-field witnesses
+give existence at every admissible prime power; for the small Ree
+groups, a canonical field witness is supplied for every $m\geq1$.
+The notation $ {}^2G_2(F,m)$ follows the Lean model's explicit twist
+parameter; $|F|=3^{2m+1}$ determines $m$ uniquely.
+
+Cyclic and alternating entries reuse Mathlib's principal order and
+simplicity results. The remaining packages combine general library
+theorems with the constructions described below. Mathieu parameters
+such as a dodecad or marked coordinates select objects in constructed
+finite structures; standard choices are supplied.
+
+\begin{formalization}[Sporadic packages]\label{thm:sporadics}
+The development contains finite nonabelian simple groups with the
+constructions and orders in Table~\ref{tab:sporadic}. These entries include
+the specified code, lattice, stabilizer, scalar-quotient, or algebraic interfaces.
+\end{formalization}
+
+\begin{table}[!htbp]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{@{}l r X@{}}
+\toprule
+Group & Order & Chosen construction\\
+\midrule
+$M_{11}$ & $7\,920$ & Point stabilizer in the dodecad model of $M_{12}$\\
+$M_{12}$ & $95\,040$ & Golay dodecad stabilizer\\
+$M_{22}$ & $443\,520$ & Pointwise stabilizer of two Golay coordinates\\
+$M_{23}$ & $10\,200\,960$ & Stabilizer of one Golay coordinate\\
+$M_{24}$ & $244\,823\,040$ & Full binary Golay code automorphism group\\
+\addlinespace
+$\Co_1$ & $4\,157\,776\,806\,543\,360\,000$ & Leech isometry group modulo $\{\pm I\}$\\
+$\Co_2$ & $42\,305\,421\,312\,000$ & Stabilizer of a Leech vector of squared norm $4$\\
+$\Co_3$ & $495\,766\,656\,000$ & Stabilizer of a Leech vector of squared norm $6$\\
+$\mathrm{McL}$ & $898\,128\,000$ & Pointwise stabilizer of a Leech $2$--$2$--$3$ triangle\\
+$\mathrm{HS}$ & $44\,352\,000$ & Pointwise stabilizer of a Leech $2$--$3$--$3$ triangle\\
+\addlinespace
+$\Suz$ & $448\,345\,497\,600$ & Full Eisenstein Hermitian group modulo six scalars\\
+$J_2$ & $604\,800$ & Full icosian Hermitian group modulo two signs\\
+\addlinespace
+$\Fi_{22}$ & $64\,561\,751\,654\,400$ & Common centralizer of two marked commuting involutions modulo their subgroup\\
+$\Fi_{23}$ & $4\,089\,470\,473\,293\,004\,800$ & Centralizer of a marked involution modulo that involution\\
+$\Fi_{24}'$ & $1\,255\,205\,709\,190\,661\,721\,292\,800$ & Parity kernel in the constructed Fischer ray group\\
+\addlinespace
+$\mathrm{Ru}$ & $145\,926\,144\,000$ & Full Gaussian Conway--Wales lattice group modulo four scalar units\\
+\bottomrule
+\end{tabularx}
+\caption{The sixteen completed sporadic constructions. A triangle label records half the three squared edge lengths.
+The groups are stabilizers of vectors or configurations, with the
+pointwise and setwise distinctions retained.}
+\label{tab:sporadic}
+\end{table}
+
+The auxiliary groups, notably $\Co_0$ and the retained scalar covers,
+are not counted as additional simple groups. Nor are small isomorphisms
+between family members counted as new entries. The ten sporadics outside the version 1.2 completed catalogue are
+$J_1,J_3,J_4,\mathrm{He},\mathrm{O}'\mathrm{N},
+\mathrm{HN},\mathrm{Ly},\mathrm{Th},B$, and the Monster.
+The classical extension is discussed in Section~\ref{sec:classical},
+and the remaining uniform Lie-type programme in Section~\ref{sec:programme}. The Tits group is a separate exceptional Lie-type entry,
+not an additional sporadic group.
+
+
+\section{The enlarged development catalogue}\label{sec:v12}
+Small derived subgroups at exceptional field sizes are not counted as additional catalogue entries when their expected isomorphism types already occur in the families. The Tits group retains its separate exceptional entry.
+
+Relative to the eight families and fifteen sporadic constructions of
+version 1.0, the current development adds eight families, Rudvalis, and
+the derived Tits group. The assertions below concern the actual models
+and their completed construction checkpoints. The independent checks of
+24--25 October and their remaining limits are recorded separately in
+Appendix~\ref{sec:verification}; they do not constitute publication of a
+new release.
+
+
+\begin{formalization}[Eight additional families]\label{thm:additions}
+For each permitted finite field size $q$, the retained concrete models have the
+following orders and are nonabelian simple in the stated ranges.
+\begin{enumerate}
+\item The Hermitian matrix quotient $\PSU_d(q)$, with $d\geq2$, has order
+\[
+ q^{d(d-1)/2}\prod_{i=2}^{d}(q^i-(-1)^i)/\gcd(d,q+1).
+\]
+Its exact nonsimple cases are $(d,q)=(2,2),(2,3),(3,2)$.
+Here the catalogue label is $ {}^2A_{d-1}(q)$.
+\item The minus quadratic-form model $\POm^-_{2n}(q)$ has order
+\[
+ q^{n(n-1)}(q^n+1)\prod_{i=1}^{n-1}(q^{2i}-1)/\gcd(4,q^n+1).
+\]
+Order and simplicity are proved for all $n\geq2$. The stable public package
+uses $n\geq4$, supplemented by actual rank-two $\PSL_2(q^2)$ and
+rank-three $\PSU_4(q)$ comparisons.
+\item The Suzuki matrix group $ {}^2B_2(q)$, $q=2^{2m+1}$, has order
+$q^2(q^2+1)(q-1)$ for $m\geq0$ and is simple exactly for $m\geq1$.
+Its $q=2$ model has order $20$ and is not simple.
+\item The triality matrix group $ {}^3D_4(q)$ has order
+$q^{12}(q^8+q^4+1)(q^6-1)(q^2-1)$ and is simple for every $q\geq2$.
+\item The full split-Albert norm-and-unit stabilizer $F_4(q)$ has order
+$q^{24}(q^{12}-1)(q^8-1)(q^6-1)(q^2-1)$ and is simple for every $q\geq2$,
+including characteristics two and three.
+\item For $\Phi=E_6,E_7,E_8$, the elementary adjoint Chevalley group
+$G_\Phi(q)$ is centerless and nonabelian simple over every finite field,
+including $q=2,3$. Its order is
+\[
+ |G_\Phi(q)|=\frac{q^{N_\Phi}\prod_{d\in D_\Phi}(q^d-1)}{c_\Phi(q)},
+\]
+with the data in Table~\ref{tab:eorders}. The separately constructed
+selected weight-companion cover has the numerator as its order and full
+center of order $c_\Phi(q)$; quotienting by that center gives $G_\Phi(q)$.
+\end{enumerate}
+\end{formalization}
+The unitary construction retains the full norm-one scalar center and field
+transport. The minus family uses the actual quadratic models in every
+characteristic. Suzuki and triality retain their explicit twisted root matrices,
+normal forms, actions and field transport; no separate full graph--field
+fixed-point comparison is asserted for triality or Suzuki. The $F_4$ proof
+uses the split Albert algebra, its root groups and geometric stabilizers,
+with separate order and simplicity audit scopes. The Chevalley construction,
+the $E$-series order data, and comparisons with earlier models are described
+in Section~\ref{sec:chevalley}.
+
+\subsection{Hermitian and minus-quadratic constructions}
+
+For a finite quadratic extension $K/F$, conjugation $a\mapsto a^q$,
+where $q=|F|$, defines the standard Hermitian matrix groups $U_d(K/F)$
+and $\mathrm{SU}_d(K/F)$. The projective model is the quotient of the actual
+$\mathrm{SU}_d$ by its full center: scalar matrices $aI$ satisfying
+$a^{q+1}=a^d=1$. Witt bases, norm-one stabilizers, isotropic lines,
+and transvections give the counting and generation arguments. The
+faithful primitive isotropic-line action and perfectness give simplicity
+in the stated range. The binary induction includes an actual $\mathrm{SU}_4(2)$
+base; a proper nontrivial normal subgroup in the projective group proves
+the $\PSU_3(2)$ exception.
+The package retains the $\mathrm{SU}_2/\SL_2$ and $\PSU_2/\PSL_2$ maps, compatible
+field transport, and a graph--field fixed-subgroup description inside
+$\SL_d(K)$.
+
+The minus-orthogonal form is the orthogonal sum of $n-1$ hyperbolic
+planes and the anisotropic norm plane of $K/F$.
+Siegel transformations generate an elementary subgroup, identified with
+the determinant/spinor kernel in odd characteristic and the Dickson
+kernel in characteristic two. Its scalar quotient is the retained
+$\POm^-_{2n}$ model. The stable order and simplicity arguments for
+$n\geq4$ use its own singular-line geometry and do not depend on unitary
+simplicity. Rank two is compared with $\PSL_2(K)$, over the extension
+field. In rank three the exterior square of $K^4$, with its semilinear
+Hodge involution, gives a six-dimensional fixed $F$-space carrying the
+minus quadratic form. The $\mathrm{SU}_4$ action descends to this space; its
+projective kernel is exactly the full scalar center. Independent orders
+then make the resulting injection from $\PSU_4$ surjective. This proves
+the low-rank simplicity statements without changing the stable proof.
+
+\subsection{Suzuki and triality geometry}
+
+The Suzuki model is the subgroup of $\mathrm{Sp}_4(F)$ generated by its explicit
+root, torus, and Weyl matrices. For $q=2^{2m+1}$ the twist
+$t\mapsto t^{2^{m+1}}$ squares to Frobenius. Unique disjoint matrix cells
+$UH$ and $UwHU$ give $|U|=q^2$, $|H|=q-1$, and the displayed order.
+The full stabilizer of infinity in the projective ovoid of size $q^2+1$
+is the split solvable group $U\rtimes H$. Torus commutators and explicit
+Weyl words establish perfectness for $m\geq1$; the faithful doubly
+transitive action then gives simplicity. At $m=0$ the same order-$20$
+model has a proper nontrivial normal Sylow $5$-subgroup. Field transport
+commutes with the embedding in $\mathrm{Sp}_4$.
+
+For triality, take a finite cubic extension $K/F$. Four Frobenius-folded
+positive and negative simple-root families generate the actual subgroup
+of the split eight-dimensional quadratic isometry group over $K$.
+Positive-root coordinates $K^3\times F^3$ give $|U|=q^{12}$; the faithful
+torus is $K^\times\times F^\times$. The relative Weyl quotient is
+dihedral of order $12$, and twelve disjoint Bruhat cells give the order.
+The two maximal parabolics have indices
+$(q^3+1)(q^8+q^4+1)$ and $(q+1)(q^8+q^4+1)$.
+A short-root $\SL_2(K)$ image, the surjective cubic trace commutator,
+and Weyl conjugation prove perfectness in every characteristic. The
+faithful primitive long-parabolic action and its solvable local radical
+give simplicity independently of the whole-group order. The scalar
+intersection is trivial, giving an injection into projective elementary
+split $D_4(K)$. A comparison with a separately defined full graph--field
+fixed group remains an additional obligation.
+
+\subsection{The split Albert construction of \texorpdfstring{$F_4$}{F4}}
+
+The model is the full linear stabilizer of the cubic norm polynomial and
+unit on the marked $27$-dimensional split Albert algebra. Preservation
+is an identity of polynomials, which is stronger than agreement of
+their values on a small finite field. There is no further scalar quotient.
+The $48$ actual root groups generate this full stabilizer.
+
+The trace-zero rank-one lines form a faithful primitive permutation
+space of size
+\[
+ \frac{(q^{12}-1)(q^4+1)}{q-1}.
+\]
+Coordinate reconstruction gives the full point stabilizer $P=RL$ with
+unique factors. Its radical has order $q^{15}$, central additive
+seven-space, and additive eight-space quotient. The Levi quotient is
+the actual $\mathrm{SO}_{B_3}(F)$ image, with scalar kernel $F^\times$; hence
+\[
+ |L|=(q-1)q^9(q^2-1)(q^4-1)(q^6-1).
+\]
+Orbit--stabilizer gives the order in Formalization
+result~\ref{thm:additions}. Root generation, same-length $A_2$
+commutators with coefficients $\pm1$, and finite stabilizer-move chains
+give perfectness and primitivity, including characteristics two and
+three. The conjugates of the local solvable radical normally generate
+the full group, so the solvable-radical Iwasawa criterion proves
+simplicity without using the final $F_4$ order theorem.
+
+\subsection{Rudvalis and the derived Tits group}
+
+\begin{formalization}[Rudvalis and Tits]\label{thm:rudvalis-tits}
+The scalar quotient of the full Gaussian automorphism group of the constructed
+Conway--Wales lattice is nonabelian simple of order $145\,926\,144\,000$.
+The literal derived subgroup of its retained cross stabilizer is nonabelian
+simple of order $17\,971\,200$ and embeds in the Rudvalis model with index
+$8\,120$. This is the retained Tits construction $ {}^2F_4(2)'$.
+\end{formalization}
+The companion source is now available as~\cite{RudvalisHohn}. The Rudvalis construction preserves the lattice, frame geometry, scalar kernel,
+primitive action and exact frame sequences. The Tits package uses the inherited
+cross stabilizer, transfer and kernel identification, and a faithful action on
+$1\,755$ neighbours. Neither result is obtained by recognition from its order.
+The governing Rudvalis formalization source remains the archived Version 33
+manuscript; the subsequently published paper is a bibliographic successor,
+not an assertion that every revision has been compared with the formalization.
+
+The full Gaussian lattice group has order $583\,704\,576\,000$ and
+center exactly its four scalar units. Its quotient acts faithfully and
+primitively on $4\,060$ minimal crosses. The projective frame stabilizer
+is perfect of order $344\,064$ and, together with the glue involution,
+generates the quotient. Its retained exact sequences have outer quotient
+$\GL_3(2)$ and kernel of order $2^{11}$; within that kernel the
+matrix-space quotient $M_3(\F_2)/\langle I\rangle$ has order $2^8$ and
+the projected Hamming sign kernel has order $2^3$. Primitivity and these
+local subgroups give Rudvalis simplicity without order recognition.
+
+Write $J$ for the actual Rudvalis cross stabilizer, of order
+$35\,942\,400$. It acts faithfully and primitively on $1\,755$
+orthogonal neighbours, with subdegrees $1,10,80,640,1024$.
+The computed transfer character $\nu$ has image $\{1,-1\}$, and the
+literal derived subgroup $T=J'$ is proved equal to $\ker\nu$.
+Thus $[J:T]=2$. Local normal-subgroup arguments and the nonsquare
+order of $T$ prove its simplicity. This argument uses the Rudvalis
+construction and order but not global Rudvalis simplicity. The restricted
+$T$ action is faithful and transitive; its primitivity is not asserted.
+Nor is a splitting of $J/T$ or an identification with the derived group
+of a separately constructed binary Ree model asserted.
+
+\paragraph{Scope still open.}
+The unfinished family labels are twisted $E_6$ and large Ree ${}^2F_4$;
+the remaining ten sporadics are listed in Section~\ref{sec:inventory}.
+The audited twisted-$E_6$ fixed groups and central projection are genuine
+construction progress, but their order, full center, and simplicity are
+not yet proved. Large Ree and $J_1$ also have partial audited results.
+Section~\ref{sec:programme} states the boundaries. The order-$6\,048$
+and order-$504$ derived-group comparisons remain unfinished.
+
+
+\paragraph{Dependency diagrams and line counts.}
+The latest source-bound catalogue check, on 20 October, validated
+$1\,167$ declaration references. The $E$-series integration supplied the
+three additional completed entries and their separate property audits;
+the later $A/B/C/D$ registration supplied additional identified
+realizations. Neither changes the default carriers of earlier entries.
+This catalogue check is distinct from independent proof replay.
+
+
+The development catalogue links a self-contained HTML explorer for each completed
+entry, offering directed graph, shared-branch tree, exact reused declarations,
+and named source-theorem counts. Intrinsic lines count the union of source spans
+of the order and simplicity dependencies before crossing the documented reused-group
+boundaries. Total lines continue through all ATLAS prerequisites. Both omit
+Lean/Mathlib, count overlaps once per entry, and include comments and blank lines
+inside declaration ranges. Intrinsic does not mean mathematically exclusive:
+generic support and designated shared construction packages can occur in several
+entries. File/theorem counts count whole expanded files, while line counts count
+only reached declaration ranges. The development report of 18 October records the 66 principal roots,
+audits, source hashes and unmapped compiler declarations. Generating these reports
+runs no new Lean proof check. All 3,138 recorded source hashes still match this revision; no reached project declaration is unmapped.
+
+% BEGIN ATLAS12 COUNTS
+\begingroup\small
+\begin{longtable}{@{}lrrrr@{}}
+\caption{Development dependency footprints for all 33 completed entries,
+measured on 18 October 2026.}\label{tab:current-footprints}\\
+\toprule Group & Files & Theorems & Intrinsic lines & Total lines\\\midrule
+\endfirsthead
+\toprule Group & Files & Theorems & Intrinsic lines & Total lines\\\midrule
+\endhead
+$C_p$ & 1 & 18 & 12 & 12\\
+$\Alt_n$ & 1 & 20 & 7 & 7\\
+$\PSL_d(q)$ & 8 & 82 & 379 & 379\\
+$\PSU_d(q)$ & 82 & 382 & 4313 & 4658\\
+$B_r(q)$ & 139 & 549 & 5653 & 8013\\
+$C_r(q)$ & 39 & 177 & 1747 & 1747\\
+$D_r(q)$ & 130 & 538 & 5408 & 5408\\
+${}^2D_r(q)$ & 133 & 556 & 5966 & 5966\\
+$E_6(q)$ & 499 & 5962 & 37707 & 37768\\
+$E_7(q)$ & 511 & 6236 & 38713 & 38774\\
+$E_8(q)$ & 518 & 6321 & 39417 & 39478\\
+$F_4(q)$ & 257 & 1185 & 11416 & 12312\\
+$G_2(q)$ & 44 & 290 & 2708 & 2836\\
+${}^3D_4(q)$ & 83 & 445 & 3471 & 3494\\
+${}^2B_2(q)$ & 33 & 139 & 1136 & 1137\\
+${}^2G_2(q)$ & 46 & 178 & 2239 & 2250\\
+${}^2F_4(2)'$ & 60 & 392 & 3080 & 19591\\
+$M_{11}$ & 5 & 40 & 393 & 5868\\
+$M_{12}$ & 18 & 89 & 855 & 5961\\
+$M_{22}$ & 20 & 67 & 780 & 5351\\
+$M_{23}$ & 5 & 34 & 397 & 4495\\
+$M_{24}$ & 77 & 581 & 4183 & 4585\\
+$\Co_1$ & 148 & 766 & 7488 & 12346\\
+$\Co_2$ & 40 & 167 & 1809 & 14072\\
+$\Co_3$ & 85 & 341 & 3827 & 16423\\
+$\mathrm{McL}$ & 50 & 173 & 2083 & 16377\\
+$\mathrm{HS}$ & 31 & 146 & 1213 & 14776\\
+$\Suz$ & 212 & 963 & 11283 & 21374\\
+$J_2$ & 185 & 803 & 8034 & 8184\\
+$\Fi_{22}$ & 36 & 115 & 1328 & 34250\\
+$\Fi_{23}$ & 36 & 115 & 1327 & 34249\\
+$\Fi_{24}'$ & 640 & 2509 & 28275 & 33397\\
+$\mathrm{Ru}$ & 306 & 1777 & 16069 & 16631\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+% END ATLAS12 COUNTS
+
+\section{Cyclic and alternating groups}\label{sec:elementary}
+
+\subsection{Cyclic groups of prime order}
+
+For each prime $p$, the cyclic entry is the standard group $C_p$ of
+order $p$. Its order, simplicity, and commutativity are the first
+assertions of Formalization result~\ref{thm:families}. The construction
+reuses Mathlib's cyclic-group results; the declaration interfaces are
+recorded in Appendix~\ref{sec:libraries}. These are the commutative
+entries of the catalogue, kept separate from the nonabelian families.
+
+\subsection{Alternating groups}
+
+For every $n\geq5$, the alternating entry is $\Alt_n$, with its natural
+permutation action, order $n!/2$, and nonabelian simplicity. Here again
+the principal order and simplicity results are supplied by Mathlib.
+The degree convention and range are those of Formalization
+result~\ref{thm:families}; low-degree groups outside that range are
+not additional entries. The comparison maps with classical groups,
+including $\Alt_5$, $\Alt_6$, and $\Alt_8$, are treated in
+Section~\ref{sec:classical} after the classical models have been
+introduced.
+
+\section{The classical series \texorpdfstring{$A_r(q)$}{Ar(q)}: projective special linear groups}
+\label{sec:psl}
+
+For $A_r(q)=\PSL_{r+1}(q)$, write $n=r+1$ for the matrix dimension.
+The projective linear construction starts from matrix groups and
+central quotients, followed by parameterized generation and
+simplicity arguments. Its Mathlib inputs are recorded in
+Appendix~\ref{sec:libraries}.
+
+\subsection{Order and the determinant quotient}
+
+The starting point is the standard count of ordered bases,
+\[
+ |\GL_n(q)|=\prod_{i=0}^{n-1}(q^n-q^i).
+\]
+The scalar center of $\GL_n(q)$ has order $q-1$. The center of
+$\SL_n(q)$ consists of the scalar matrices $\lambda I$ with
+$\lambda^n=1$ and therefore has order $d=\gcd(n,q-1)$, by cyclicity
+of $\F_q^{\times}$. These counts give~\eqref{eq:pslorder}.
+The development also proves a divisibility-safe identity
+\[
+ |\PSL_n(q)|(q-1)d=\prod_{i=0}^{n-1}(q^n-q^i),
+\]
+so that the natural-number division in the displayed order formula is
+known to be exact.
+
+The determinant gives a stronger structural result. Over any field $F$
+and in positive dimension there is an isomorphism
+\begin{equation}\label{eq:detquot}
+ \PGL_n(F)/\PSL_n(F)\ \cong\ F^{\times}/(F^{\times})^n,
+\end{equation}
+where $\PSL_n(F)$ on the left denotes its canonical image in $\PGL_n(F)$.
+Scaling a matrix changes its determinant by an $n$th power, so the map
+is well defined. If $\det(g)=u^n$, then $u^{-1}g$ has determinant one
+and represents the same projective transformation; this identifies the
+kernel. Surjectivity follows from that of the determinant.
+The formalized equivalence includes compatibility with matrix
+representatives. It is consequently usable independently of the finite
+order calculation.
+
+\subsection{Generation and simplicity}
+
+Elementary transvections are written $x_{ij}(a)=I+aE_{ij}$.
+The diagonal/transvection reduction available in Mathlib is completed
+by explicit two-coordinate identities, giving generation of $\SL_n(F)$
+by transvections. For distinct $i,j,k$, the commutator identity
+\begin{equation}\label{eq:comm}
+ [x_{ik}(a),x_{kj}(b)]=x_{ij}(ab),
+ \qquad [g,h]=ghg^{-1}h^{-1},
+\end{equation}
+proves perfectness when $n\geq3$. Generation and perfectness pass to
+the projective quotient.
+
+For a line $L=Fv$, consider the subgroup of transformations
+\[
+ u_{\varphi}(x)=x+\varphi(x)v,\qquad \varphi(v)=0.
+\]
+It is abelian, is normal in the stabilizer of $L$, and transforms
+covariantly under conjugation. Its projective images, as $L$ varies,
+generate $\PSL_n(F)$. Together with the faithful primitive projective
+action, these facts fit the following criterion.
+
+\begin{proposition}[Iwasawa criterion]\label{prop:iwasawa}
+Let a nontrivial perfect group $G$ act faithfully and primitively on a
+set $\Omega$ with at least two points. Suppose that for some
+$\alpha\in\Omega$, the stabilizer $G_\alpha$ has an abelian normal
+subgroup $A$ whose conjugates generate $G$. Then $G$ is nonabelian simple.
+\end{proposition}
+
+\begin{proof}
+Let $1\ne N\lhd G$. The $N$-orbits form a $G$-invariant partition.
+Faithfulness excludes the partition into singleton orbits for such $N$,
+and primitivity therefore makes $N$ transitive. Hence $G=NG_\alpha$.
+In $G/N$, the image of every conjugate of $A$ is consequently the image
+of $A$ itself, because $A\lhd G_\alpha$. The conjugates generate $G$,
+so $G/N$ is abelian. Perfectness implies $G/N=1$, and $N=G$.
+A nontrivial perfect group cannot be abelian.
+\end{proof}
+
+The existing formal criterion and projective-action infrastructure are
+reused. The added general-rank generation and perfectness arguments
+discharge its hypotheses. This proves simplicity for every field in
+dimension at least three. For finite fields in dimension two, the
+existing Mathlib theorem supplies simplicity when $q\geq4$.
+The two exceptional cases are proved nonsimple using their projective
+actions and orders. The final family statement gives the exact exception set. Numerical
+examples follow by specialization.
+
+\section{The classical series \texorpdfstring{$B,C,D$}{B, C, D} and comparison isomorphisms}\label{sec:classical}
+
+The untwisted families $A,B,C,D$ have completed packages. Following
+the type-$A$ construction in Section~\ref{sec:psl}, we describe the
+$B,C,D$ models in that order before giving their comparisons.
+Throughout, $q=|F|=p^f$ for a finite field $F$, and $r$ denotes
+\emph{Dynkin rank}, not matrix dimension. We write $\Alt_m$ for an
+alternating group to distinguish it from the Lie-type symbol $A_r(q)$.
+
+\subsection{The odd-dimensional quadratic series \texorpdfstring{$B_r(q)$}{Br(q)}}\label{sec:type-b}
+
+The quadratic construction starts from
+\[
+ Q_B(x,y,z)=\sum_{i=1}^{r}x_i y_i+z^2.
+\]
+It constructs the subgroup generated by Siegel transformations and
+divides by its scalar subgroup, proved to be its full center. In the
+completed parameter ranges, the elementary subgroup is identified in
+odd characteristic with the determinant/spinor kernel. In
+characteristic two it is the full quadratic isometry group: the
+odd-dimensional space has one-dimensional polar radical, and its
+symplectic comparison is proved.
+
+The geometric package has a faithful singular-line action in every
+positive rank, transitivity over finite fields, and primitivity from
+rank two. Its order is the $B_r(q)$ formula in~\eqref{eq:bcorder};
+the exact simplicity exceptions are those in Formalization
+result~\ref{thm:families}. The odd-characteristic $B_2$ construction
+uses its symplectic $C_2$ image, and the geometric proof uses transport
+through a $B_1$ complement. Thus the maps $B_1\cong A_1$ and
+$B_2\cong C_2$ are part of the construction, even though the
+symplectic series is presented next.
+
+\subsection{The symplectic series \texorpdfstring{$C_r(q)$}{Cr(q)}}\label{sec:type-c}
+
+The model is the symplectic central quotient $C_r(F)=\PSp_{2r}(F)$.
+Its order agrees with that of $B_r(F)$, as in~\eqref{eq:bcorder}.
+For positive rank it is simple exactly outside
+$(r,q)=(1,2),(1,3),(2,2)$ and is nonabelian at the simple parameters;
+the rank-zero model is trivial. The full nonsimple rank-two binary
+model is kept distinct from its derived subgroup.
+
+The retained comparisons identify the rank-one model with
+$\PSL_2(F)$, the rank-two model with $B_2(F)$ over every finite
+field, and the higher-rank models with $B_r(F)$ in characteristic
+two. In odd characteristic and rank at least three, the same order
+does not give an isomorphism: Section~\ref{sec:equalorder} separates
+the two series by their involution-class counts.
+
+\subsection{The split-orthogonal series \texorpdfstring{$D_r(q)$}{Dr(q)}}\label{sec:type-d}
+
+The split quadratic construction starts from
+\[
+ Q_D(x,y)=\sum_{i=1}^{r}x_i y_i.
+\]
+As in type $B$, the subgroup generated by Siegel transformations is
+divided by its scalar subgroup, proved to be its full center. In the
+completed parameter ranges it is the determinant/spinor kernel in
+odd characteristic and the intrinsic Dickson kernel in characteristic
+two. The model retains a faithful primitive singular-line action in
+rank at least four, together with root generation and field transport.
+
+For every finite field and $r\geq4$, the projective group has the
+order in~\eqref{eq:dorder} with $\varepsilon=1$ and is nonabelian
+simple, including $D_4(2)$. The auxiliary models $D_2,D_3$ are
+retained for the product and exterior-square comparisons below;
+they are not additional primary family labels.
+
+\subsection{Rank conventions and order formulae}
+
+The unitary $ {}^2A$ and minus-orthogonal $ {}^2D$ families are completed,
+as described in Section~\ref{sec:v12}. The common Chevalley framework
+and its additional realizations are described in Section~\ref{sec:chevalley}.
+The superscript in $ {}^2A_r$ denotes twisting; it is not a power of
+$A_r$. In twisted notation, $q$ is the size of the fixed field:
+$ {}^2A_r(q)=\PSU_{r+1}(q)$ is constructed using a Hermitian space over
+$\F_{q^2}$. References writing $ {}^2A_r(q^2)$ denote the same family
+with a different field convention. We use the fixed-field convention
+also for $ {}^2D_r(q)$, $ {}^2E_6(q)$, and $ {}^3D_4(q)$.
+
+\begin{table}[!htbp]
+\centering\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}l l l X@{}}
+\toprule
+Type & Classical model & Rank range & Exclusions for simplicity\\
+\midrule
+$A_r(q)$ & $\PSL_{r+1}(q)$ & $r\geq1$ & $(r,q)=(1,2),(1,3)$\\
+$B_r(q)$ & $\POm_{2r+1}(q)$ & $r\geq2$ & $(r,q)=(2,2)$\\
+$C_r(q)$ & $\PSp_{2r}(q)$ & $r\geq3$ & None in this rank range\\
+$D_r(q)$ & $\POm^+_{2r}(q)$ & $r\geq4$ & None in this rank range\\
+$ {}^2A_r(q)$ & $\PSU_{r+1}(q)$ & $r\geq2$ & $(r,q)=(2,2)$\\
+$ {}^2D_r(q)$ & $\POm^-_{2r}(q)$ & $r\geq4$ & None in this rank range\\
+\bottomrule
+\end{tabularx}
+\caption{Completed classical families and conventional primary rank ranges,
+not the full implemented parameter domains. Lower ranks are retained for
+comparison, and the catalogue also exposes $C_2$. The even-characteristic
+$B/C$ comparison is proved for the actual models.}
+\label{tab:classical}
+\end{table}
+
+The symbols denote central quotients. Exceptional small parameters
+require conventions for $\Omega$ as in
+Taylor~\cite[Chapters~8, 10--12]{Taylor}.
+
+The conventional primary ranges $r\geq1,2,3,4$ for $A,B,C,D$ remove
+low-rank repetitions while keeping the comparison models in the
+library. In particular, $B,C$ include all positive ranks, and $D_2,D_3$
+are available. Even-characteristic $B/C$ isomorphisms and isolated
+coincidences still give overlaps between primary labels.
+
+For reference, the classical order formulae are
+\begin{align}
+ |A_r(q)|&=\frac{q^{r(r+1)/2}}{(r+1,q-1)}
+             \prod_{i=2}^{r+1}(q^i-1),\notag\\
+ |B_r(q)|=|C_r(q)|&=\frac{q^{r^2}}{(2,q-1)}
+             \prod_{i=1}^{r}(q^{2i}-1),\label{eq:bcorder}\\
+ |D_r^{\varepsilon}(q)|&=
+       \frac{q^{r(r-1)}(q^r-\varepsilon)}{(4,q^r-\varepsilon)}
+             \prod_{i=1}^{r-1}(q^{2i}-1),\label{eq:dorder}\\
+ |{}^2A_r(q)|&=\frac{q^{r(r+1)/2}}{(r+1,q+1)}
+             \prod_{i=2}^{r+1}(q^i-(-1)^i).\notag
+\end{align}
+Here $(a,b)=\gcd(a,b)$, $D_r^+=D_r$, and
+$D_r^-={}^2D_r$~\cite{Taylor,Wilson}. All displayed formulae are proved
+for the actual models in the ranges stated above. The minus formula
+also holds at ranks two and three; the split rank-two product and
+rank-three exterior-square models have their separate comparisons.
+
+\subsection{Uniform coincidences and low ranks}
+
+Table~\ref{tab:uniform-isos} records the uniform identifications of
+central quotients, including auxiliary models below the primary rank
+ranges. Here $ {}^2A_1$ abbreviates $\PSU_2$; type $A_1$ has no
+nontrivial Dynkin-diagram twist.
+
+\begin{table}[!htbp]
+\centering\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{@{}p{0.52\textwidth} >{\raggedright\arraybackslash}X@{}}
+\toprule
+Isomorphism & Parameters and formalization status\\
+\midrule
+$A_1(q)\cong B_1(q)\cong C_1(q)\cong\PSU_2(q)$
+& $B_1\cong A_1$ and $C_1\cong A_1$ over every field;
+  $\PSU_2(K/F)\cong\PSL_2(F)$ for every finite quadratic extension.
+  All links proved; simple for $q\geq4$.\\
+$B_2(q)\cong C_2(q)$
+ & Proved over every finite field, including the nonsimple $q=2$ case.\\
+$D_2(q)\cong A_1(q)\times A_1(q)$
+ & Proved over every field; the split rank-two model is not a simple entry.\\
+$D_3(q)\cong A_3(q)$
+ & Proved over every finite field for the split six-dimensional model.\\
+$ {}^2D_2(q)\cong A_1(q^2)$
+ & Proved for every finite quadratic extension $K/F$: the target is $\PSL_2(K)$, where $|K|=q^2$.\\
+$ {}^2D_3(q)\cong{}^2A_3(q)$
+ & Proved for every finite quadratic extension, through the descended exterior-square representation of $\mathrm{SU}_4(K/F)$.\\
+$B_r(2^f)\cong C_r(2^f)$
+ & Proved for $r\geq1$, $f\geq1$; primary-label overlaps persist for $r\geq3$.\\
+\bottomrule
+\end{tabularx}
+\caption{Uniform identifications and their current proof status.
+For $D_2(2)$ we retain the central quotient of the two $\SL_2(2)$
+factors, not a possibly different derived-full-orthogonal convention.
+The table includes comparison models outside the primary rank ranges.}
+\label{tab:uniform-isos}
+\end{table}
+
+The exterior-square representation produces the six-dimensional
+orthogonal model from a four-dimensional linear space. Related
+Klein-correspondence arguments give low-rank comparisons. In
+characteristic two, quotienting the polar radical of an odd-dimensional
+quadratic space gives a symplectic space. Over a finite field this has
+a converse lift~\cite[Chapters~11--12]{Taylor}. The completed untwisted
+comparisons implement these constructions; the minus rank-three map additionally uses semilinear Hodge descent as described in Section~\ref{sec:v12}.
+
+\subsection{Isolated coincidences across the classification list}
+
+Table~\ref{tab:exceptional-isos} lists the isolated alternating and
+Lie-type coincidences, including simple derived groups at small
+parameters~\cite{ATLAS85,Wilson,ATLASOnline}. Its last column distinguishes
+proved maps from known isomorphisms awaiting formal comparison.
+
+\begin{table}[!htbp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{@{}r >{\raggedright\arraybackslash}p{0.43\textwidth} >{\raggedright\arraybackslash}X@{}}
+\toprule
+Order & Isomorphic simple groups & Status of comparison maps\\
+\midrule
+$60$ & $\Alt_5\cong A_1(4)\cong A_1(5)$ &
+Both links with $\Alt_5$ proved.\\
+\addlinespace
+$168$ & $A_1(7)\cong A_2(2)$ & Proved through a common eight-point action.\\
+\addlinespace
+$360$ & $\Alt_6\cong A_1(9)$\newline
+$\phantom{\Alt_6}\cong B_2(2)'\cong C_2(2)'$ &
+All displayed links proved; the derived-group maps are explicitly exported.\\
+\addlinespace
+$504$ & $A_1(8)\cong{}^2G_2(3)'$ &
+The $q=3$ derived-subgroup package and this comparison remain to be formalized.\\
+\addlinespace
+$6\,048$ & $ {}^2A_2(3)\cong G_2(2)'$ &
+An index-two normal subgroup of $G_2(2)$ of order $6048$ is constructed;
+its simplicity and the unitary comparison remain open in Lean.\\
+\addlinespace
+$20\,160$ & $\Alt_8\cong A_3(2)$ & Proved through the binary deleted permutation quadratic module.\\
+\addlinespace
+$25\,920$ & $ {}^2A_3(2)\cong B_2(3)\cong C_2(3)$ &
+All displayed links proved, including the unitary map through the integral $E_6$ Weyl representation; also ${}^2D_3(2)$.\\
+\bottomrule
+\end{tabularx}
+\caption{Isolated cross-series coincidences and their formal status,
+up to the uniform identifications in Table~\ref{tab:uniform-isos}.
+A prime denotes the derived subgroup. The status column records the
+available comparison maps.}
+\label{tab:exceptional-isos}
+\end{table}
+
+The binary quadratic construction gives $B_2(2)\cong\Sym_6$ and
+$B_2(2)'\cong\Alt_6$.
+The full group has order $720$ and its derived group order $360$.
+The proved $B_2/C_2$ map identifies the full binary
+symplectic model, and its restriction to the derived subgroups
+is exported. The separate $\PSL_2(9)\cong\Alt_6$ comparison uses
+the projective line and the ten partitions of six letters into two
+triples. Composing these proved maps completes the order-$360$
+row.
+
+The order-$25\,920$ comparison uses two reductions of the same integral
+$E_6$ root lattice. Its $72$ roots and reflection words give
+$W(E_6)\cong O^-_6(2)$, with determinant parity corresponding to Dickson
+parity. The determinant-one subgroup $W^+$ therefore identifies with
+the existing $\POm^-_6(2)\cong\PSU_4(2)$ model. Reduction modulo three,
+followed by quotienting the one-dimensional radical, gives a concrete
+five-dimensional quadratic action. Perfectness puts its image in
+$B_2(3)$; a checked nonidentity image and simplicity give injectivity.
+The independently proved orders then give surjectivity. Composing with
+$B_2(3)\cong C_2(3)$ produces the actual $\PSU_4(2)\cong\PSp_4(3)$
+equivalence and its transported versions. Equality of orders is used
+after the homomorphism and injectivity have been established. The map
+concerns projective groups: $\mathrm{Sp}_4(3)$ itself is a double cover of order
+$51\,840$.
+
+For the other small parameters, $G_2(2)'$ has index two in $G_2(2)$,
+and $ {}^2G_2(3)'$ has index three in $ {}^2G_2(3)$.
+The Tits group $ {}^2F_4(2)'$ has index two in $ {}^2F_4(2)$ but gives
+no further coincidence in the table. The 26 sporadic groups supply no
+additional coincidences with each other or with the alternating and
+Lie-type simple groups~\cite{ATLAS85,Wilson,ATLASOnline}.
+Prime cyclic groups are separate; $\Alt_3\cong C_3$ lies outside the
+chosen alternating range. These tables do not classify nonsimple
+groups or central covers. The comparison theorem below proves
+exhaustiveness only within its specified registry of completed simple
+models; it does not include the unfinished small derived-group packages.
+
+\subsection{Equal orders and proved nonisomorphisms}\label{sec:equalorder}
+
+The order collisions in Section~\ref{sec:contract} require
+\emph{nonisomorphism} certificates, not additional comparison
+isomorphisms. Write $k_2(G)$ for the number of conjugacy classes of
+nonidentity involutions, not the number of involutions themselves.
+For every finite field of odd order and every positive rank, the
+formalized involution-class theorems give
+\begin{equation}\label{eq:k2bc}
+ k_2(B_r(q))=r,\qquad
+ k_2(C_r(q))=\lfloor r/2\rfloor+1.
+\end{equation}
+Consequently, for $r\geq3$ the constructed models satisfy
+\[
+ |B_r(q)|=|C_r(q)|,
+ \qquad B_r(q)\not\cong C_r(q).
+\]
+The nonisomorphism follows from the isomorphism invariance of $k_2$.
+
+\begin{table}[!htbp]
+\centering\small
+\begin{tabularx}{\textwidth}{@{}l l X@{}}
+\toprule
+Equal-order pair & $k_2$ values & Formal status\\
+\midrule
+$B_r(q),\ C_r(q)$ & $r,\ \lfloor r/2\rfloor+1$ &
+Order equality and nonisomorphism proved for odd $q$, $r\geq3$.\\
+\addlinespace
+$\Alt_8,\ \PSL_3(4)$ & $2,\ 1$ &
+Nonisomorphism proved via Sylow $2$-subgroup centers;
+these $k_2$ counts are not certified.\\
+\bottomrule
+\end{tabularx}
+\caption{The exceptional equal-order pairs. In the second row, the
+$k_2$ values are known mathematically, while the formal nonisomorphism
+uses a different invariant. Conditional
+on CFSG these two kinds exhaust the nonisomorphic simple-group
+order collisions~\cite{OrderRecognition,Taylor,BorovikInvolutions}.}
+\label{tab:noniso}
+\end{table}
+
+The proved order-$20\,160$ obstruction constructs the upper
+unitriangular subgroups in $\SL_4(2)$ and $\SL_3(4)$ and embeds them
+in the corresponding projective groups. Both images have order $64$
+and are Sylow $2$-subgroups; symbolic commutation formulas show that
+their centers have orders $2$ and $4$, respectively. An isomorphism
+of the ambient groups would preserve this invariant. Transport through
+the independently proved $\PSL_4(2)\cong\Alt_8$ map gives the
+alternating-group obstruction.
+The optional involution-class counts remain separate: $\Alt_8$ has
+the two even cycle types $2^2 1^4$ and $2^4$, whereas $\PSL_3(4)$
+has one involution class~\cite[Chapter~4]{Taylor}.
+Both nonisomorphism routes are unconditional. Together with the proved
+order arithmetic and explicit equivalences, they now support the
+registry comparison theorem below. The conditional recognition theorem
+for arbitrary finite simple groups from $(|G|,k_2(G))$ remains separate.
+
+\subsection{A complete comparison theorem for the earlier registry}
+\label{sec:catalogue-comparison}
+
+Let $\mathcal E$ be the typed registry of the thirteen families preceding
+$E_6,E_7,E_8$, the sixteen sporadic constructions, and the derived Tits
+group. An entry retains the actual field or field extension and its
+chosen concrete group, not just a numerical order. Its family ranges
+are: prime $p$ for $C_p$; $n\geq5$ for $\Alt_n$; $d\geq2$ for
+$\PSL_d$ excluding $(2,2),(2,3)$; $d\geq3$ for $\PSU_d$ excluding
+$(3,2)$; $r\geq2$ for $B_r,C_r$ excluding $(2,2)$; $r\geq4$ for
+both signs of $D_r$; $q\geq3$ for $G_2$; every finite field for $F_4$
+and triality; and $m\geq1$ for Suzuki and small Ree.
+
+Write $G_e$ for the actual model of $e\in\mathcal E$ and $\ell(e)$
+for its family label and numerical parameters. Normalization identifies
+the proved patterns
+\[
+\begin{gathered}
+ \PSL_2(4),\PSL_2(5)\longmapsto\Alt_5,\qquad
+ \PSL_3(2)\longmapsto\PSL_2(7),\qquad
+ \PSL_2(9)\longmapsto\Alt_6,\\
+ \PSL_4(2)\longmapsto\Alt_8,\qquad
+ \PSU_4(2)\longmapsto C_2(3),\qquad
+ B_2(q)\longmapsto C_2(q),\\
+ B_r(q)\longmapsto C_r(q)\quad(q\text{ even},\ r\geq3).
+\end{gathered}
+\]
+These rules are restricted to the simple parameters of the registry.
+All other labels are left unchanged.
+
+\begin{formalization}[Comparison within the typed registry]
+\label{thm:catalogue-comparison}
+For every $e,f\in\mathcal E$,
+\[
+ G_e\cong G_f
+ \quad\Longleftrightarrow\quad
+ \operatorname{nf}(\ell(e))=\operatorname{nf}(\ell(f)).
+\]
+In particular, distinct normalized labels imply nonisomorphic groups,
+including the exceptional equal-order pairs.
+\end{formalization}
+
+The forward implication first uses invariance of order. The proved
+arithmetic classification of the registry's order formulae leaves equal
+normalized labels or the two collision patterns in
+Section~\ref{sec:equalorder}. The involution-class and Sylow-center
+obstructions exclude the latter. Conversely, the explicit exceptional
+maps and compatible field-transport maps give multiplicative equivalences
+whenever the normalized labels agree. No CFSG hypothesis or assumed
+recognition certificate occurs in this theorem.
+
+This is a result about the thirty specified construction entries, with
+their infinite parameter ranges. It does not assert recognition of an
+arbitrary group from its order. The new $E_6,E_7,E_8$ carriers and the
+additional Chevalley realizations are not constructors of $\mathcal E$.
+They retain their separate order, simplicity, and comparison results;
+the theorem does not silently extend to them.
+
+\subsection{Comparison maps and remaining targets}
+
+The comparisons marked as proved in Tables~\ref{tab:uniform-isos}
+and~\ref{tab:exceptional-isos} are actual multiplication-preserving maps
+with proved inverses. Field isomorphisms induce compatible maps of the
+linear, Hermitian, and quadratic models, with extension data retained
+where required. The order-$60$ argument also proves an elementary
+recognition theorem for nonabelian simple groups of that order.
+
+The order-$6\,048$ and order-$504$ derived-group bridges remain open.
+For $G_2(2)$, the constructed normal subgroup of order $6\,048$ and
+index two is not yet identified with the derived subgroup or with
+$\PSU_3(3)$. The small Ree boundary at $q=3$ likewise lacks the completed
+derived-group comparison with $\PSL_2(8)$. Comparison of central covers
+or actions requires the corresponding kernels and equivariance, beyond
+an equivalence of the projective groups.
+
+\section{Uniform Chevalley constructions and the exceptional
+\texorpdfstring{$E$}{E} series}\label{sec:chevalley}
+
+\subsection{Integral root operators and central forms}
+
+The uniform construction covers $A,B,C,D,E_6,E_7,E_8,F_4,G_2$ over
+arbitrary finite fields. Starting from integral root data and the Geck
+root operators~\cite{Geck}, it forms the positive and negative
+simple-root unipotents by integral divided powers before changing
+coefficients to the field. Thus the construction includes characteristics
+two and three; it does not divide by their images in the field.
+The adjoint model $G_\Phi(F)$ is the actual subgroup generated by these
+operators, with faithful adjoint linear action.
+
+The selected weight-companion group $\widetilde G_\Phi(F)$ is constructed
+separately on the adjoint and selected weight blocks. The actual
+projection onto $G_\Phi(F)$ is surjective, its kernel is its full center,
+and the quotient equivalence is proved. These distinctions are essential:
+the root-generated elementary adjoint group is not asserted to be the
+full rational-point group of an adjoint algebraic group. Nor does the
+description of the cover's center claim a universal central extension
+or compute a Schur multiplier.
+
+\subsection{The completed \texorpdfstring{$E_6,E_7,E_8$}{E6, E7, E8} families}
+
+For these three families the same carrier has the order stated in
+Formalization result~\ref{thm:additions}, with the following data.
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{@{}lrl l@{}}
+\toprule
+$\Phi$ & $N_\Phi$ & $D_\Phi$ & $c_\Phi(q)$\\
+\midrule
+$E_6$ & $36$ & $2,5,6,8,9,12$ & $\gcd(3,q-1)$\\
+$E_7$ & $63$ & $2,6,8,10,12,14,18$ & $\gcd(2,q-1)$\\
+$E_8$ & $120$ & $2,8,12,14,18,20,24,30$ & $1$\\
+\bottomrule
+\end{tabular}
+\caption{Order and cover-center data for the completed $E$-series models.}
+\label{tab:eorders}
+\end{table}
+
+The selected companion has order
+$q^{N_\Phi}\prod_{d\in D_\Phi}(q^d-1)$, and its full center has order
+$c_\Phi(q)$. The adjoint catalogue carrier is centerless. It is
+nonabelian simple for every finite field, including all six cases
+$\Phi=E_6,E_7,E_8$ with $q=2,3$.
+
+The order argument counts actual positive-root coordinates and disjoint
+Bruhat cells. Its Weyl products use the $D_5$ parabolic and $27$-weight
+orbit for $E_6$, the $E_6$ parabolic and $56$-weight orbit for $E_7$,
+and the $E_7$ parabolic and $240$-root orbit for $E_8$.
+The simplicity argument uses actual normal-subgroup structure, Cartan
+connectivity, the core-free solvable Borel, and independently proved
+perfectness. Its audited dependencies exclude the whole-group order
+and the simplicity of an earlier realization. The paused Curtis--Tits
+construction is not an input. Separate property scopes tie construction,
+order, center, and simplicity to the same carriers and group operations.
+
+\subsection{Comparisons with the earlier models}
+
+The uniform construction supplies additional models of already completed
+families. Table~\ref{tab:chevalley-comparisons} records actual comparisons;
+equal order and simplicity by themselves give no identification.
+
+\begin{table}[!htbp]
+\centering\small
+\begin{tabularx}{\textwidth}{@{}l l X@{}}
+\toprule
+Type & Earlier model & Range and status\\
+\midrule
+$A_r$ & $\PSL_{r+1}(F)$ & Every finite field, $r\geq1$; companion
+identified with $\SL_{r+1}(F)$, and adjoint quotient with $\PSL$.\\
+$B_r$ & Odd quadratic $B_r(F)$ & Every finite field, $r\geq2$,
+including $B_2(2)$; spin-vector map is onto with full-center kernel.\\
+$C_r$ & $\PSp_{2r}(F)$ & Every finite field, $r\geq2$,
+including $C_2(2)$; companion identified with $\mathrm{Sp}_{2r}(F)$.\\
+$D_r$ & Split quadratic $D_r(F)$ & Every finite field, $r\geq4$;
+natural representation and projective quotient compared explicitly.\\
+$G_2$ & Full split-octonion group & Every finite field, including $q=2$;
+marked equivalence and ten full dependency scopes passed.\\
+$F_4$ & Full split-Albert group & Both models have proved order and
+simplicity; their equivalence remains unfinished.\\
+\bottomrule
+\end{tabularx}
+\caption{Comparison of the root-operator models with the earlier concrete groups.}
+\label{tab:chevalley-comparisons}
+\end{table}
+
+The $A,B,C,D$ maps preserve both signs of the marked simple-root
+generators and are registered as additional realizations. The $B$ and
+$C$ comparisons do not use either model's simplicity and therefore
+include the nonsimple binary rank-two case. For $D$, the natural
+representation supplies the map; new-model simplicity gives injectivity
+and independent orders give surjectivity, without old-model simplicity.
+The scalar-character kernel of the vector representation is kept
+distinct from the full kernel of the projective quotient.
+
+For $G_2$, an integral $14$-dimensional Geck module is embedded in the
+endomorphisms of the existing eight-dimensional octonion space, with an
+integral left inverse. Explicit root conjugation gives a homomorphism
+from a subgroup of the old model onto the new one. The independent
+order formulae force that subgroup to be the full old group and make
+the map bijective. This works at $q=2$ without a simplicity assumption.
+The actual equivalence and ten full audits have passed; final
+preservation, indexing, and realization registration remain pending.
+The analogous $F_4$ comparison has not reached a completed theorem.
+
+
+\section{The exceptional family \texorpdfstring{$G_2(q)$}{G2(q)} from split octonions}\label{sec:g2}
+
+The first completed exceptional Lie-type family is constructed directly
+from the split octonion algebra. The formal model retains the algebra,
+its full linear automorphism group, and its singular-point geometry;
+see~\cite[Chapter~4]{Wilson} for the classical background.
+The uniform proof includes characteristics two and three.
+
+\subsection{The algebra and its full automorphism group}
+
+Write $\mathbb O_{\mathrm{split}}(F)=\bigoplus_{i=1}^{8}F x_i$.
+The multiplication is the bilinear extension of the fixed integral
+split-octonion table used in the construction. In these coordinates,
+for $a=\sum a_i x_i$,
+\[
+ 1=x_4+x_5,\qquad \operatorname{tr}(a)=a_4+a_5,\qquad
+ N(a)=a_1a_8+a_2a_7+a_3a_6+a_4a_5.
+\]
+Conjugation is $\bar a=\operatorname{tr}(a)1-a$. The formal development
+proves both identity laws, bilinearity, the quadratic identity
+$a^2-\operatorname{tr}(a)a+N(a)1=0$, the conjugate-product identities,
+norm multiplicativity, and reversal of products under conjugation.
+These are polynomial identities over arbitrary commutative rings.
+The same algebra therefore applies in characteristic two.
+
+The group $G_2(F)$ is the full subgroup of $\GL(\mathbb O_{\mathrm{split}}(F))$
+preserving multiplication. Preservation of the identity, trace, norm,
+and conjugation is proved from this definition. For example,
+surjectivity forces the identity to be fixed; for a nonscalar $a$,
+comparison of its quadratic identity before and after applying an
+automorphism forces the trace and norm coefficients to agree.
+Thus the invariants follow from preservation of multiplication. The natural eight-dimensional representation
+is faithful, and coefficientwise field isomorphisms transport the
+group and its action.
+
+\subsection{Explicit subgroups, full stabilizers, and order}
+
+Six root transformations are defined and verified directly from the
+multiplication table. Their additive laws and parameter injectivity
+are proved. Ordered products give a bijection $F^6\longrightarrow U$
+with explicit multiplication and inverse formulas. The diagonal torus
+$T$ is identified with $F^{\times}\times F^{\times}$, normalizes $U$,
+and intersects it trivially. Consequently,
+\[
+ |U|=q^6,\qquad |T|=(q-1)^2,\qquad |UT|=q^6(q-1)^2.
+\]
+Together with explicit Weyl transformations, these maps are proved
+to generate the full octonion automorphism group.
+
+The singular vectors are the nonzero $a$ with
+$\operatorname{tr}(a)=N(a)=0$. Their number is $q^6-1$.
+Indeed, after eliminating one coordinate using the trace equation,
+the count reduces to pairs of three-vectors and a scalar satisfying
+$u\cdot v=t^2$: for each $u\ne0$ and each $t$, the $v$-fibre has
+$q^2$ elements; for $u=0$, one has $t=0$ and $q^3$ choices of $v$.
+Including zero gives $q^6$ vectors. The projective singular-point set
+$\mathcal P$ therefore has size
+\[
+ |\mathcal P|=\frac{q^6-1}{q-1}.
+\]
+
+Coordinate reductions prove transitivity and determine the full
+stabilizers. The pointwise stabilizer of the opposite vectors $x_1,x_8$
+is isomorphic to $\SL_2(F)$; the stabilizer of $x_1$ has a parameter
+bijection with $F^5\times\SL_2(F)$. The full stabilizer $P$ of the
+line $Fx_1$ is the explicit parabolic, with a bijection
+\[
+ F^{\times}\times F^5\times\SL_2(F)\ \longrightarrow\ P.
+\]
+This bijection is a parameterization of the stabilizer. Since $|\SL_2(F)|=q(q^2-1)$, orbit--stabilizer gives
+\[
+ |G_2(F)|=\frac{q^6-1}{q-1}\,(q-1)q^5\,q(q^2-1),
+\]
+which is~\eqref{eq:g2order}. The order proof is independent of
+perfectness, simplicity, and the binary exception.
+
+\subsection{Singular-point geometry and simplicity}
+
+The action on $\mathcal P$ is faithful. Its point stabilizer has four
+orbits, with lengths
+\begin{equation}\label{eq:g2subdegrees}
+ 1,\qquad q(q+1),\qquad q^3(q+1),\qquad q^5.
+\end{equation}
+Coordinate reductions identify these strata as orbits. Their geometry
+also proves primitivity in every characteristic,
+including $q=2$. The block-size argument leaves only the projective
+points of $W=\langle x_1,x_2,x_3\rangle$ as a possible nontrivial
+proper block. But the linear span of products $W\cdot W$ is the
+distinguished line $Fx_1$. Any automorphism stabilizing $W$ must
+therefore fix that point, contradicting transitivity of a block
+stabilizer on a nontrivial block.
+
+At $Fx_1$, a pair of commuting root groups gives an abelian subgroup
+$R_0\cong(F^2,+)$ of order $q^2$, normal in the full point stabilizer.
+Transport defines such a subgroup at every singular point, with
+independence of the chosen transporter and covariance under $G_2(F)$.
+For $q>2$, explicit root and Weyl relations show that their conjugates
+generate the full group. The argument chooses a field element distinct
+from $0$ and $1$ and applies also when $q=3$. Torus commutators then
+give perfectness. The faithful primitive action and these local
+abelian groups satisfy Proposition~\ref{prop:iwasawa}, proving simplicity.
+Noncommutativity is established separately by two explicit root maps,
+even at $q=2$. The positive simplicity proof does not use the numerical
+order of $G_2(F)$.
+
+\subsection{The binary exception}
+
+For $F=\F_2$, let $H$ be the normal closure of the long-root
+groups. The construction produces a second geometry: the
+two-dimensional singular subspaces on which all products vanish.
+There are exactly $63$ such zero-product planes. The count comes from
+an exhaustive check of $64\times64$ binary coordinate pairs; the
+group acting is still the full octonion automorphism group.
+
+Two root involutions fix respectively $7$ and $9$ of these planes,
+so their permutation signs are $(-1)^{28}=1$ and $(-1)^{27}=-1$.
+The resulting sign homomorphism is surjective and contains $H$ in
+its kernel. Independently, primitivity of the singular-point action
+makes the nontrivial normal subgroup $H$ transitive, and the explicit
+point-stabilizer generators give $[G_2(2):H]\leq2$. It follows that
+$H$ is exactly the sign kernel. Using the already proved order,
+\[
+ |G_2(2)|=12096,\qquad [G_2(2):H]=2,\qquad |H|=6048.
+\]
+Field transport gives the same conclusion for every field of
+cardinality two. This proves the negative case in the exact simplicity
+theorem. The present package does not prove $H=G_2(2)'$, simplicity
+of $H$, or its identification with $\PSU_3(3)$; the conventional
+derived-group coincidence in Table~\ref{tab:exceptional-isos} remains
+a separate comparison target.
+
+
+\section{Small Ree groups from twisted matrices}\label{sec:ree}
+
+Let $F$ be a finite field of characteristic three with
+$q=|F|=3^{2m+1}$ and $m\geq1$. The model is the subgroup of $\GL_7(F)$ generated
+by three explicit root maps, a diagonal torus, and a Weyl involution.
+The coordinates follow B\"a\"arnhielm's explicit matrix model
+\cite[Section~3]{BaarnhielmRee}; the geometric and simplicity arguments
+draw on Wilson's elementary constructions~\cite{WilsonRee,WilsonReeAlgebra}.
+Its order and simplicity are proved
+for this generated group, without an abstract Ree-group theorem or
+recognition by order.
+
+\subsection{Field twists and the root group}
+
+The twisting maps are the iterated Frobenius automorphisms
+\[
+ \theta(x)=x^{3^m},\qquad \sigma(x)=x^{3^{m+1}}.
+\]
+The finite-field identity $x^{3^{2m+1}}=x$ gives
+$\theta\sigma=\sigma\theta=\mathrm{id}$ and
+$\sigma^2(x)=x^3$. These identities, their compatibility with field
+equivalences, and the bound $q\geq27$ are proved before the group
+arguments.
+
+Write $S(a,b,c)$ for the product of the three root matrices in their
+specified order. Its entries recover $a,b,c$, and direct matrix
+multiplication gives
+\begin{align*}
+ S(a,b,c)S(d,e,f)
+  =S\bigl(&a+d,\ b+e-a\theta(d)^3,\\[-2pt]
+          &c+f-db+a\theta(d)^3d-a^2\theta(d)^3\bigr).
+\end{align*}
+Together with the inverse formula, this identifies the root
+subgroup $U$ with the parameter set $F^3$, so $|U|=q^3$.
+Projection to the first parameter has abelian image and abelian kernel,
+and hence $U$ is soluble. The diagonal subgroup $H\cong F^\times$
+normalizes $U$, with conjugation on parameters
+\[
+ (a,b,c)\longmapsto
+ \left(\frac{a\theta(\lambda)^3}{\lambda^2},
+       \frac{b\lambda}{\theta(\lambda)^3},\frac{c}{\lambda}\right).
+\]
+Unique factorization in $B=UH$, the equality $U\cap H=1$, and the
+split projection $B\to H$ with kernel $U$ prove that $B$ is soluble
+and has order $q^3(q-1)$.
+
+\subsection{The point geometry and the full stabilizer}
+
+The Ree--Tits point set consists of a point at infinity and the
+projective classes of the first rows of the matrices $S(a,b,c)$.
+Projective parameter injectivity gives $q^3+1$ points, and $U$ acts
+regularly on the affine points. The matrix convention uses row vectors;
+inverse right multiplication supplies the corresponding left action.
+
+The main geometric step is to prove preservation by the Weyl element
+and to identify the full stabilizer of infinity. Seven exterior-kernel
+relations and seven Tits-twisted bilinear equations characterize the
+point chart. Their invariance under negative coordinate reversal proves
+Weyl preservation. They also imply that the last affine coordinate
+vanishes only at the affine origin. The generated group is consequently
+doubly transitive.
+
+Every generator preserves an explicit alternating cross product and the
+twisted bilinear relation. At infinity the relation recovers a distinguished
+two-dimensional subspace, and the cross product recovers the full flag.
+A matrix fixing infinity must therefore be triangular. Applying the
+opposite flag at the affine origin shows that the two-point stabilizer
+is diagonal; the invariant tensors force it to be exactly $H$.
+Regularity of $U$ then gives the full one-point stabilizer $B$.
+This proves faithfulness as well as the order formula
+\eqref{eq:reeorder} by orbit--stabilizer. The stabilizer calculation completes the order proof.
+
+\subsection{Perfectness, simplicity, and comparison with octonions}
+
+For $q\geq27$, torus commutators place all three root maps in the
+derived subgroup. Short characteristic-three matrix identities then
+place the Weyl involution and the minus-one torus element there.
+Weyl inversion supplies all torus squares. Since $q\equiv3\pmod4$,
+every nonzero scalar is a square or the negative of a square, so the
+whole torus lies in the derived subgroup. The group is therefore perfect.
+
+Simplicity uses a separately proved general criterion: a nontrivial
+perfect group with a faithful quasiprimitive action and a soluble point
+stabilizer is simple. Indeed, any nontrivial normal subgroup $N$ is
+transitive, so the stabilizer surjects onto $G/N$. This quotient is both
+soluble and perfect and is therefore trivial. The Ree action is
+primitive, and its full stabilizer is the soluble subgroup $B$.
+Explicit noncommuting root elements supply noncommutativity. This
+simplicity argument does not use the numerical group-order theorem.
+
+Entrywise field equivalence induces a group isomorphism of
+the models. A separate comparison embeds the group into the
+split-octonion $G_2(F)$ of Section~\ref{sec:g2}. In the fixed
+seven-coordinate basis, the scalar--vector identification with the
+eight-coordinate octonions is
+\[
+ (t,v)\longmapsto
+ (v_0,v_1,v_2,t-v_3,t+v_3,-v_4,-v_5,-v_6).
+\]
+In characteristic three the octonion product becomes
+\[
+ (s,v)(t,w)=(st-B(v,w),\ sw+tv+v\mathbin{\times}w),
+\]
+where $B$ is the preserved symmetric form and $\times$ the preserved
+cross product. Extending inverse row multiplication while fixing the
+scalar coordinate thus gives an injective homomorphism into the full
+octonion automorphism group. This uses structural octonion results,
+not the order or simplicity of $G_2(F)$. No equality with the fixed
+points of an exceptional graph automorphism is asserted.
+
+Specializations of the uniform order theorem at $q=27,243,2187$
+give, respectively,
+\[
+10\,073\,444\,472,\quad
+49\,825\,657\,439\,340\,552,\quad
+239\,189\,910\,264\,352\,349\,332\,632.
+\]
+These values specialize the uniform theorem to constructed finite fields. The public family excludes
+$q=3$; the derived-group comparison with $\PSL_2(8)$ in
+Table~\ref{tab:exceptional-isos} remains a separate task.
+
+\section{Sporadic groups from retained structures}\label{sec:sporadic}
+
+The sporadic branch follows connected constructions. The code used to
+construct the Mathieu groups is retained in the Leech lattice, and the
+resulting lattice and its full symmetry group are retained in later
+stabilizer and scalar-centralizer constructions. Standard background
+for these relationships is provided by~\cite{CS}; the formal models and
+recorded completion results are those of the \atlas\ development
+\cite{AtlasSoftware}. We first specify the shared objects, then describe
+the individual groups in the order of Table~\ref{tab:sporadic}.
+Their order and simplicity assertions are those of Formalization
+result~\ref{thm:sporadics}.
+
+\subsection{Shared code data: trio code, hexacode, and Golay code}\label{sec:golay-data}
+
+The initial construction passes from a quadratic alphabet and its trio
+code to the additive Kleinian hexacode, and then to the binary Golay code
+by two explicit twists. The coordinate organization
+\[
+ 3\ \longrightarrow\ 3\times2\ \longrightarrow\ (3\times2)\times4
+\]
+is retained along with markings, partitions, and recovery maps. The
+quadratic functions on the intermediate alphabets are part of the data.
+Any comparison with an $\F_4$-linear hexacode is a separate mathematical
+statement.
+
+The constructed binary code $C$ is a doubly even self-dual
+$[24,12,8]$ code. Its weight-eight supports give the Witt design
+$S(5,8,24)$. Write $\mathcal A=\Aut(C)$ for its full coordinate
+automorphism group. Fix a dodecad $D$, a point $d\in D$, and two
+distinct coordinates $i,j$; standard choices are supplied by the
+construction. A subscript $D$ denotes a setwise dodecad stabilizer,
+whereas coordinate subscripts denote pointwise stabilizers.
+
+\subsection{The Mathieu groups}
+
+\paragraph{\texorpdfstring{$M_{11}$}{M11}.}
+The model is $(\mathcal A_D)_d$, the stabilizer of a point in the
+dodecad stabilizer. It has order $7\,920$. Thus the entry is specified
+directly by the marked Golay data; equivalently, it is the point
+stabilizer in the dodecad model of $M_{12}$.
+
+\paragraph{\texorpdfstring{$M_{12}$}{M12}.}
+The model is $\mathcal A_D$, the setwise stabilizer of the chosen
+dodecad, with its retained action on that dodecad. Its order is
+$95\,040$.
+
+\paragraph{\texorpdfstring{$M_{22}$}{M22}.}
+The model is $\mathcal A_{i,j}$, fixing the two marked coordinates
+individually, and has order $443\,520$. It is kept distinct from
+the larger setwise stabilizer of the coordinate pair.
+
+\paragraph{\texorpdfstring{$M_{23}$}{M23}.}
+The model is $\mathcal A_i$, the stabilizer of one marked Golay
+coordinate, and has order $10\,200\,960$.
+
+\paragraph{\texorpdfstring{$M_{24}$}{M24}.}
+The model is the full coordinate automorphism group $\mathcal A$.
+Equality with the automorphism group of the octad design is proved
+in the same ambient symmetric group. Sextet geometry supplies local
+structure: every tetrad has a unique sextet completion, there are
+$1771$ sextets, and the full sextet stabilizer has order $138240$.
+The subsequent global action arguments give order $244823040$,
+five-transitivity, and simplicity.
+
+The actions on complements or dodecads, the corresponding residual
+designs, and the embeddings relating the marked choices are retained
+for the smaller Mathieu groups. Their catalogue order above does not
+replace the common Golay construction by an induction from smaller
+groups.
+
+\subsection{Shared lattice data: the Leech lattice and its full isometry group}\label{sec:leech-data}
+
+The retained Golay code defines an integral lattice $\Lambda$.
+Its rank $24$, evenness, positive definiteness, unimodularity, minimum
+squared norm $4$, and generation by minimal vectors are proved from the
+construction. The group $\Co_0$ is its full linear isometry group.
+
+The shell counts for squared norms $4,6,8$ are respectively
+\[
+ 196560,\qquad 16773120,\qquad 398034000.
+\]
+They arise from exhaustive coordinate descriptions of lattice vectors.
+The global order proof uses minimal vectors and orthogonal
+pairs. An explicitly constructed nonmonomial isometry, together with
+the full monomial subgroup, generates $\Co_0$. The resulting order is
+\[
+ |\Co_0|=8\,315\,553\,613\,086\,720\,000.
+\]
+The action on the $8292375$ intrinsic crosses, and its primitivity,
+follow from the minimal-vector and orthogonal-pair analysis.
+
+\subsection{The Conway groups}
+
+\paragraph{\texorpdfstring{$\Co_1$}{Co1}.}
+The simple model is the scalar quotient
+\[
+ \Co_1=\Co_0/\langle -I\rangle.
+\]
+It has order $4\,157\,776\,806\,543\,360\,000$. Finiteness and the
+relevant kernel are proved before the final simplicity argument,
+so the full lattice isometry group and its simple quotient remain
+distinct objects.
+
+\paragraph{\texorpdfstring{$\Co_2$}{Co2}.}
+The model is the stabilizer in $\Co_0$ of a Leech vector of squared
+norm $4$. Its order is $42\,305\,421\,312\,000$.
+
+\paragraph{\texorpdfstring{$\Co_3$}{Co3}.}
+The model is the stabilizer in $\Co_0$ of a Leech vector of squared
+norm $6$. Its order is $495\,766\,656\,000$; additional retained
+geometry includes its $276$-point action.
+
+\subsection{The McLaughlin and Higman--Sims groups}
+
+\paragraph{\texorpdfstring{$\mathrm{McL}$}{McL}.}
+The model is the pointwise stabilizer of a Leech $2$--$2$--$3$
+triangle and has order $898\,128\,000$. As in
+Table~\ref{tab:sporadic}, the triangle label records half the
+three squared edge lengths.
+
+\paragraph{\texorpdfstring{$\mathrm{HS}$}{HS}.}
+The model is the pointwise stabilizer of a Leech $2$--$3$--$3$
+triangle and has order $44\,352\,000$. Its retained geometry
+includes the rank-three $100$-point graph action.
+
+The vector and triangle stabilizers retain their embeddings in the
+lattice isometry group. Their lattice representations and stabilizer
+descriptions allow these groups to be reused without reconstructing
+unrelated permutation models.
+
+\subsection{The Suzuki sporadic group \texorpdfstring{$\Suz$}{Suz}}
+
+The constructions of $\Suz$ and $J_2$ enrich the same Leech lattice with
+additional scalar structure. They illustrate why integral comparison
+maps matter: a rational isometry between two ambient spaces must be
+shown to map the lattices onto one another. The documented
+comparisons prove both integral containments.
+
+For $\Suz$, a constructed fixed-point-free isometry $\rho$ satisfies
+\[
+ \rho^3=I,\qquad \rho^2+\rho+I=0.
+\]
+Its full centralizer $C_E=C_{\Co_0}(\rho)$ is identified with the full
+Hermitian isometry group of the corresponding Eisenstein lattice.
+Its center consists of six scalar isometries. The constructed simple
+quotient has order
+\[
+ |C_E|/6=2\,690\,072\,985\,600/6=448\,345\,497\,600.
+\]
+The action on $232960$ intrinsic frames and the thirteen suborbits of
+a frame stabilizer are proved from the lattice. The sign quotient
+$C_E/\{\pm I\}$ embeds into $\Co_1$ and maps onto $\Suz$ with central
+kernel of order three. This keeps the embedded triple extension
+distinct from its simple quotient.
+
+\subsection{The Hall--Janko group \texorpdfstring{$J_2$}{J2}}
+
+For $J_2$, let $\mathcal I$ be the constructed icosian order over
+$\Z[(1+\sqrt5)/2]$, and let $C_H$ be the full quaternion-linear
+Hermitian isometry group of the associated rank-three congruence
+lattice. The underlying integral lattice is identified with the
+retained Leech lattice. The $120$ norm-one icosian units act by right
+scalars, and $C_H$ is their full centralizer in $\Co_0$.
+The scalar action and the center of $C_H$ are separate objects.
+
+There are $37800$ vectors of quaternionic Hermitian norm two, and
+each associated right quaternionic line contains exactly $120$ of them.
+Thus there are $315$ root lines. Each is orthogonal to ten others,
+and every orthogonal pair has a unique completing root line. This
+gives an intrinsic count of frames,
+\[
+ \frac{315\cdot10}{6}=525.
+\]
+The full coordinate-frame stabilizer has order $2304$. Explicit
+quaternionic reflections generate the full group and prove frame
+transitivity, whence
+\begin{equation}\label{eq:j2order}
+ |C_H|=525\cdot2304=1209600,\qquad
+ |C_H/\{\pm I\}|=604800.
+\end{equation}
+The point stabilizer has suborbits of sizes
+$1,10,32,32,80,160$. Their proved geometry yields primitivity.
+Reflection relations yield perfectness, and the cyclic subgroup
+generated by a point reflection supplies the abelian normal subgroup
+in Proposition~\ref{prop:iwasawa}. The sign quotient is therefore
+nonabelian simple. This example exhibits the chain from arithmetic and
+local geometry to a full symmetry group, its order, and its simplicity.
+
+\section{The Fischer constructions}\label{sec:fischer}
+
+The development contains concrete models and proofs of order, simplicity,
+finiteness, and noncommutativity for $\Fi_{22}$, $\Fi_{23}$,
+and $\Fi_{24}'$. Their construction packages also retain the algebra,
+reflecting rays, and residue geometry described below. All three
+entries use one ambient ray group constructed from the algebra;
+the order of presentation is not an inductive construction from the
+smaller Fischer groups.
+
+\subsection{The common algebra and ray group}
+
+The starting point is the explicit Conway--Parker coordinate
+algebra constructed from Golay and Parker data~\cite{FischerAlgebra}. The algebra has dimension $783$ over
+$E=\mathbb Q(\omega)$, where $\omega$ is a primitive cube root of unity;
+its coordinate index is the disjoint union of the 24 Golay coordinates
+and the 759 octads. A proved tensor identity supplies the reflecting
+automorphisms. Its normalized $\mu_3$-rays are three-element scalar orbits.
+Let $F$ be the subgroup of permutations of the displayed reflecting
+rays generated by the constructed root involutions.
+
+The finite-algebra construction produces three families of rays of sizes
+\[
+ 24,\qquad 759\cdot2^5,\qquad \binom{24}{2}2^{10},
+\]
+whose sum is $306936$. Frame geometry determines the full ray group,
+which has a primitive rank-three action with subdegrees
+$1,31671,275264$.
+
+For marked commuting basic involutions $t_i$, a residue is obtained
+from the centralizer of the marked set by dividing by the subgroup
+it generates. The chosen marked involutions are part of the
+construction. The order and simplicity assertions below are proved
+for the resulting defined models; neither assertion is supplied
+as a hypothesis.
+
+\subsection{\texorpdfstring{$\Fi_{22}$}{Fi22}}
+
+For two marked commuting basic involutions, the model is
+\[
+ G_{22}=C_F(t_i,t_j)/\langle t_i,t_j\rangle\quad(i\ne j).
+\]
+The quotient kernel has order four. The group has a faithful primitive
+rank-three action on $3510$ points and proved order
+\[
+ |\Fi_{22}|=2^{17}3^9 5^2\,7\,11\,13.
+\]
+The construction retains the residue projection and its surjectivity,
+generation by distinguished involutions, and perfectness, together
+with the simplicity proof for this quotient.
+
+\subsection{\texorpdfstring{$\Fi_{23}$}{Fi23}}
+
+For one marked basic involution, the model is
+\[
+ G_{23}=C_F(t_i)/\langle t_i\rangle.
+\]
+The quotient kernel has order two. The group has a faithful primitive
+rank-three action on $31671$ points and proved order
+\[
+ |\Fi_{23}|=2^{18}3^{13}5^2\,7\,11\,13\,17\,23.
+\]
+Here too the residue projection, its surjectivity, generation by
+distinguished involutions, and perfectness are retained, together
+with simplicity. The subdegrees of the two residue actions are
+\[
+\begin{array}{c|r|rrr}
+ & \text{degree} & \multicolumn{3}{c}{\text{subdegrees}}\\
+ G_{22} & 3510 & 1 & 693 & 2816\\
+ G_{23} & 31671 & 1 & 3510 & 28160
+\end{array}
+\]
+The completion record also retains the nonsplit central double cover
+of $G_{22}$ inside $G_{23}$.
+
+\subsection{\texorpdfstring{$\Fi_{24}'$}{Fi24 prime}}
+
+The full three-transposition ray group $F$ is denoted $\Fi_{24}$.
+The simple model $\Fi_{24}'$ is the kernel of its parity
+homomorphism. This kernel is proved equal to $F'$, with $[F:F']=2$,
+and has order
+\[
+ |\Fi_{24}'|=2^{21}3^{16}5^2 7^3\,11\,13\,17\,23\,29.
+\]
+The factor of two between $|\Fi_{24}|$ and $|\Fi_{24}'|$ is therefore
+part of the derived-subgroup analysis. The proved action of the
+simple group on the same $306936$ rays is faithful and transitive;
+the recorded result does not include a rank-three assertion for
+this subgroup.
+
+The retained perfect central triple cover of $\Fi_{24}'$ acts
+faithfully on the $783$-dimensional $E$-algebra. The quotient's
+action is projective; no ordinary representation of the same degree
+is inferred for it. In the full semilinear group, odd symmetries
+invert the cubic scalars, so that scalar kernel is not central.
+Thus the full ray group, its simple derived subgroup, and the
+central triple cover remain distinct objects.
+
+\section{The Monster and vertex operator algebras}\label{sec:monster}
+
+H\"ohn--Seysen~\cite{MonsterOrder} determines the Monster and Baby
+Monster orders directly from computations with axes in the
+$196884$-dimensional Griess algebra, using Seysen's
+\code{mmgroup} implementation~\cite{SeysenImplementation}. The Monster
+is generated by a subgroup of shape $2^{1+24}_{+}.\mathrm{Co}_1$ and a
+triality element. Orbit and stabilizer calculations use the Golay code,
+Leech lattice, and Conway groups.
+
+VOA arguments complement these calculations. The axes correspond, after
+normalization, to Ising vectors in the Moonshine module $V^{\natural}$.
+Orbifold and fusion arguments control involutions and their
+centralizers, while the framed VOA structure identifies
+$\operatorname{Aut}(V^{\natural})$ with the automorphisms of the Griess
+algebra preserving its invariant bilinear form. Combining the computed
+order with results of Carnahan and Borcherds, the paper proves that the
+constructed Monster is this full automorphism group and has exactly two
+conjugacy classes of involutions~\cite[Sections~2 and~5]{MonsterOrder}.
+These are public mathematical results supporting future formalization;
+the Monster and Baby Monster are among the outstanding \atlas\ entries.
+
+This work continues the Moonshine programme of
+Borcherds~\cite{BorcherdsVA} and Frenkel--Lepowsky--Meurman~\cite{FLM}.
+Borcherds's proof of the Monstrous Moonshine conjectures
+\cite{BorcherdsMoonshine} is a longer-term formalization goal, not a
+result of the present development. The Baby Monster vertex operator
+superalgebra provides a related source of sporadic symmetry
+\cite{BabyVOA}. Further examples include the $10$-dimensional quadratic
+space over $\F_2$ recovered from the modules of $V_{\sqrt2 E_8}^{+}$ in
+Shimakura's treatment, with automorphism group $O_{10}^{+}(2)$
+\cite[Theorem~4.5]{Shimakura}, and Griess--Lam's VOA existence proof of
+the Monster~\cite{GriessLam}.
+
+A VOA construction of the Fischer groups is being developed in
+joint work with Lam~\cite{FischerVOA}. This manuscript in preparation
+is separate from the Conway--Parker coordinate-algebra source
+\cite{FischerAlgebra} used in Section~\ref{sec:fischer}.
+The latter underlies the completed Fischer formalization; the VOA
+construction is not included in the present release.
+
+\section{Further development}\label{sec:programme}
+
+Completion of the full sporadic catalogue is a longer-term objective.
+The remaining ten sporadic groups in Section~\ref{sec:inventory}
+call for geometric constructions or verified computational arguments;
+structural and comparison theorems for completed entries are a separate
+continuing task.
+The Hall--Janko, Fischer, Albert-algebra, and Cayley-plane source
+manuscripts develop the geometric direction. For O'Nan's group,
+Lee's 2025 account records the absence at that time of a computer-free
+construction~\cite{LeeComputations}; Jansen--Wilson give explicit
+modular constructions~\cite{ONan}. Formalizing such arguments requires
+proofs of the algorithms and checks of the finite data they use.
+
+The common Chevalley framework is now available, with completed
+$E_6,E_7,E_8$ entries and the model comparisons in
+Section~\ref{sec:chevalley}. Steinberg~\cite{Steinberg} and the pinned
+version of Geck~\cite{Geck} provide mathematical sources. The remaining
+family targets are ${}^2E_6$ and ${}^2F_4(2^{2m+1})$; neither is counted
+as completed.
+
+For twisted $E_6$, the diagram action has been lifted to the actual
+selected simply connected companion using the two dual $27$-weight
+blocks. Over a finite quadratic extension $K/F$, composing it with
+$q$-Frobenius, $q=|F|$, gives the involution
+$x_i(t)\mapsto x_{\delta(i)}(t^q)$ on marked roots. The fixed subgroup
+and its surjective projection to the adjoint fixed subgroup are proved,
+including characteristics two and three. The restricted kernel is
+central of exponent dividing three, and quotienting by this actual
+kernel gives the adjoint fixed group. Its equality with the full center,
+its exact size, generation, order, and simplicity remain open. The
+foundations and graph lift have passed fourteen full scopes covering
+$184$ declarations in $24$ modules.
+
+The large Ree construction retains actual root groups, torus, Weyl
+group, local Suzuki and linear subgroups, and a positive-root normal
+form of order $q^{12}$. Its eight affine charts give
+$(q^6+1)(q^3+1)(q+1)$ special projective points, including $1\,755$ at
+$q=2$. Full stabilizer identification, full-group order, and simplicity
+are not yet proved. The Tits group is already constructed through
+Rudvalis geometry; identification with a separately defined binary Ree
+derived group remains unclaimed. The partial $J_1$ development has an
+actual octonion subgroup and audited perfectness, but no claimed order
+or simplicity theorem.
+
+The unfinished $F_4$ model comparison, the small derived-group bridges,
+and separate graph--field fixed-point descriptions for Suzuki, triality,
+and small Ree are further comparison tasks. None is an assumption of
+the completed construction statements.
+
+
+For integration with classification arguments, priorities include
+centralizers of prime-order elements, Sylow and local subgroups, outer
+automorphisms, central extensions, and recognition geometries. The
+comparison maps of Section~\ref{sec:classical} allow these results to
+pass between the models encountered in different proofs.
+
+Formalizing the Monster and Baby Monster results discussed in
+Section~\ref{sec:monster} requires both verified finite computations and
+infrastructure for graded spaces, vertex operations, lattice extensions,
+and the relevant subalgebras or commutants. These developments would
+connect the finite-group constructions to their vertex-algebraic
+sources.
+
+\section{Related formalization projects}\label{sec:related}
+
+The Odd Order project of Gonthier and collaborators formalized the
+Feit--Thompson theorem in Coq (now Rocq), using Mathematical
+Components~\cite{OddOrder}. Completed in 2012 and described in 2013,
+it proves that finite groups of odd order are soluble and supplies
+extensive reusable finite-group and representation theory.
+Mathlib supplies the cyclic, alternating, and rank-two PSL results
+used here, together with group-action and simplicity
+infrastructure~\cite{Mathlib,MathlibGroups}.
+
+The Qiuzhen-CFSG project and FormaTheoria workflow report a Lean
+development whose public README lists the Odd Order and Bender--Suzuki
+theorems as completed~\cite{FormaTheoria}. Their reconstruction of
+interdependent theories from the literature complements the construction
+work here. This account follows the authors' public description and does
+not report an independent rebuild of their project.
+
+Independently, Yawara Ishida's \code{odd-order} project reports a
+Lean 4/Mathlib formalization of the Feit--Thompson theorem, developed
+from the textbooks of Isaacs, Bender--Glauberman, and P\'eterfalvi,
+together with an extensive supporting finite-group and character-theory
+library~\cite{IshidaOddOrder}. Its focus is the Odd Order Theorem and
+its prerequisites rather than a catalogue of explicit simple-group
+constructions. This description follows the public repository and does
+not report an independent rebuild.
+
+Two Utrecht theses from 2024 precede this work: Roxy van de Kuilen's
+partial formalization of the first Janko group~\cite{Kuilen} and Erik
+van der Plas's study of the Conway groups in Lean~\cite{Plas}.
+Their precise declaration interfaces merit comparison with the
+constructions presented here.
+
+The public repository \nolinkurl{KitaKen1/finite-simple-groups-lean}
+reports kernel-checked order and simplicity certificates for fourteen
+sporadic permutation groups~\cite{KitaKen}:
+\[
+ M_{11},M_{12},M_{22},M_{23},M_{24},\mathrm{HS},J_2,J_1,
+ \mathrm{McL},\Co_3,\Suz,\Co_2,\Fi_{22},\mathrm{He}.
+\]
+Its README also lists nine individual Lie-type groups, including
+$G_2(4)$ and $\PSL_3(4)$. External programs generate candidate
+certificates whose required properties are checked in Lean. This
+description follows the public repository consulted on 18 September
+2026, without an independent audit of its proofs.
+
+Parameterized families require constructions and proofs for all
+admissible ranks and fields. Root-group or geometric arguments provide
+one route; a uniformly verified algorithm could provide another.
+For individual groups, comparison isomorphisms could connect the
+permutation models with the code, lattice, and algebra models here,
+allowing their structural results to be combined.
+
+\FloatBarrier
+
+\appendix
+\section{Lean implementation and mathematical interfaces}\label{sec:libraries}
+
+\subsection{Lean and Mathlib inputs}
+
+Lean supplies dependent type theory, elaboration, and the proof kernel;
+Mathlib supplies mathematical definitions, theorems, and proof-producing
+automation. In particular, \code{Group}, \code{Nat.card}, and
+\code{IsSimpleGroup} are defined in
+\leanname{Mathlib.Algebra.Group.Defs},
+\leanname{Mathlib.SetTheory.Cardinal.Finite}, and
+\leanname{Mathlib.GroupTheory.Subgroup.Simple}.
+Appendix~\ref{sec:foundations} records their interpretation and the
+logical axioms used.
+
+Table~\ref{tab:Mathlib} lists representative mathematical inputs.
+Declaration dependencies identify the portion used by a particular
+proof; file imports make a broader interface available.
+
+\begin{table}[!htbp]
+\centering\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.60\textwidth} X@{}}
+\toprule
+Representative modules (prefix \code{Mathlib.} omitted) & Mathematical input\\
+\midrule
+\leanname{Data.Fintype.Card}\newline
+\leanname{SetTheory.Cardinal.Finite}\newline
+\leanname{GroupTheory.Index}
+& Finite types, cardinalities, subgroup indices, and counting identities.\\
+\addlinespace
+\leanname{GroupTheory.QuotientGroup.Basic}\newline
+\leanname{GroupTheory.Subgroup.Centralizer}\newline
+\leanname{GroupTheory.Commutator.Basic}
+& Quotient groups, centralizers, commutators, and the maps used in central and derived-group constructions.\\
+\addlinespace
+\leanname{GroupTheory.GroupAction.Primitive}\newline
+\leanname{GroupTheory.GroupAction.MultipleTransitivity}\newline
+\leanname{GroupTheory.GroupAction.Iwasawa}
+& Primitive and multiply transitive actions and the Iwasawa simplicity criterion.\\
+\addlinespace
+\leanname{GroupTheory.SpecificGroups.Cyclic}\newline
+\leanname{GroupTheory.SpecificGroups.Alternating}\newline
+\leanname{GroupTheory.SpecificGroups.Alternating.Simple}
+& Existing cyclic and alternating group theory, including principal order and simplicity results.\\
+\addlinespace
+\leanname{Data.ZMod.Basic}\newline
+\leanname{FieldTheory.Finite.GaloisField}
+& Modular arithmetic and finite fields of prime-power order.\\
+\addlinespace
+\leanname{LinearAlgebra.Matrix.GeneralLinearGroup.Card}\newline
+\leanname{LinearAlgebra.Matrix.SpecialLinearGroup}\newline
+\leanname{LinearAlgebra.Matrix.Transvection}
+& Matrix groups, general-linear-group cardinalities, and elementary matrices.\\
+\addlinespace
+\leanname{LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup}\newline
+\leanname{LinearAlgebra.Projectivization.Action}\newline
+\leanname{LinearAlgebra.Projectivization.PSL.PSL2}
+& Projective groups and actions, including the existing dimension-two simplicity theorem.\\
+\addlinespace
+\leanname{LinearAlgebra.Basis.Basic}\newline
+\leanname{LinearAlgebra.BilinearForm.DualLattice}\newline
+\leanname{LinearAlgebra.QuadraticForm.Basic}\newline
+\leanname{Algebra.Quaternion}
+& Bases, bilinear and quadratic forms, dual lattices, and quaternion arithmetic underlying the geometric constructions.\\
+\bottomrule
+\end{tabularx}
+\caption{Representative mathematical inputs from the pinned Mathlib
+dependency; they are
+not an exhaustive or minimal import list.}
+\label{tab:Mathlib}
+\end{table}
+
+The cyclic entry uses \leanname{ZMod.card} and
+\leanname{isSimpleGroup_of_prime_card}; the alternating entry uses
+\leanname{nat_card_alternatingGroup} and
+\leanname{alternatingGroup.isSimpleGroup}.
+For PSL, the existing \code{rank\_two\_simple} theorem and
+\leanname{MulAction.IwasawaStructure.isSimpleGroup} support the
+general-rank arguments in Section~\ref{sec:psl}.
+\atlas\ develops the octonion multiplication and stabilizers,
+Golay--Leech structures, and Conway--Parker algebra on this foundation.
+Automation such as \code{ring} and \code{norm\_num} produces proof
+terms checked by the kernel.
+
+Shared mathematics can occur below public group interfaces. For example,
+McL and HS use \leanname{Atlas.Sporadic.Conway3.card}, while the Fischer
+entries share algebra and residue lemmas even when another Fischer
+group's principal wrapper is absent from their dependencies.
+The source-line footprints in Appendix~\ref{app:provenance} count
+\atlas\ declarations; their derivations also use Lean and Mathlib.
+The pinned environment is recorded there.
+
+\subsection{Principal declaration interfaces}\label{app:interfaces}
+
+The following identifiers connect the mathematical models described in
+Sections~\ref{sec:elementary}--\ref{sec:fischer} to their formal
+statements. They are collected here to keep the construction arguments
+independent of implementation-level notation. The maintained
+\leanname{docs/catalogue/catalogue.json} and its realization profiles give
+the complete model/order/simplicity index for all thirty-three entries;
+the generated catalogue resolves the added $E$-series anchors.
+
+\paragraph{Additional family and individual interfaces.}
+The unitary model is \leanname{Atlas.Unitary.PSU}, with
+\leanname{Atlas.Unitary.card_psu_factor} and
+\leanname{Atlas.Unitary.simple_of_good}. The stable minus family uses
+\leanname{Atlas.Orthogonal.DMinus} and
+\leanname{Atlas.Orthogonal.Minus.family_order},
+\leanname{Atlas.Orthogonal.Minus.family_simple}; the low-rank supplement
+is in \leanname{Atlas/LinearGroups/Orthogonal/Minus/AllRanks.lean}.
+The model and principal theorems for Suzuki are
+\leanname{Atlas.SuzukiFamily.Group}, \code{card\_group}, and
+\code{simple\_of\_large} in the same namespace; those for triality are
+\leanname{Atlas.Triality.Group}, \code{card\_group}, and \code{simple}.
+For the Albert model the corresponding declarations are
+\leanname{Atlas.F4.Model}, \code{card\_Model}, and \code{isSimple}.
+The Rudvalis wrappers are in \leanname{Atlas.Sporadic.Rudvalis}; the
+derived Tits model and principal results are \leanname{Atlas.Tits.Model},
+\leanname{Atlas.Tits.card}, and \leanname{Atlas.Tits.isSimpleGroup}.
+
+\paragraph{Chevalley interfaces.}
+The carrier \leanname{Atlas.Chevalley.Model} takes the root-data tag and
+field. Under \leanname{Atlas.Chevalley.Catalogue}, the $E_6$ catalogue
+anchors are \code{E6}, \code{E6\_order}, and \code{E6\_simple}, with the
+corresponding \code{E7} and \code{E8} names. The typed finite-field domain
+introduces no order or simplicity assumption. Construction, full-center,
+quotient, and comparison declarations have separate evidence profiles.
+The actual octonion comparison is
+\mbox{\leanname{Atlas.Chevalley.Comparison.G2.octonionEquiv}}.
+
+\paragraph{Classical comparisons.}
+The comparisons in Tables~\ref{tab:uniform-isos}
+and~\ref{tab:exceptional-isos} are Lean \code{MulEquiv} objects:
+multiplication-preserving maps with proved inverses. The classical index
+exports \code{b1EquivA1}, \code{b2EquivC2}, \code{d2EquivProduct},
+\code{d3EquivA3}, and \code{evenBEquivC} under
+\leanname{Atlas.Comparisons.Classical}.
+The symplectic rank-one map is
+\leanname{Atlas.Symplectic.rankOnePSL}; field equivalences induce
+\code{bFieldEquiv} and \code{dFieldEquiv}.
+The binary comparisons are
+\leanname{Atlas.Orthogonal.b2BinaryEquivSymmetric} and
+\leanname{Atlas.Orthogonal.b2BinaryDerivedEquivAlternating}.
+The theorem
+\leanname{Atlas.Comparisons.Classical.oddB_same_order_nonisomorphic_C}
+records equal order and the nonexistence of a \code{MulEquiv}, using
+the conjugacy-class invariance of $k_2$.
+The order-$25\,920$ interface is
+\leanname{Atlas.Comparisons.Exceptional.psu4Card2EquivPSp4Card3}.
+The aggregate theorem is
+\leanname{Atlas.Comparisons.Catalogue.isomorphic_iff_normalized_label_eq},
+with corollary
+\leanname{Atlas.Comparisons.Catalogue.not_isomorphic_of_normalized_label_ne}.
+Both take actual values of \leanname{Atlas.Comparisons.Catalogue.Entry};
+their scope is exactly that of Formalization
+result~\ref{thm:catalogue-comparison}.
+
+\paragraph{Split octonions.}
+The model \leanname{Atlas.G2.Model} uses a generic construction of
+multiplication-preserving linear automorphisms that requires no
+associativity assumption.
+The principal declarations in \leanname{Atlas.G2} are
+\code{card\_Model}, \code{isSimple}, and \code{isSimple\_iff},
+with \code{exists\_mul\_ne\_mul} for noncommutativity. The public
+\leanname{Atlas.typeG2_construction} package collects the results for
+the concrete model, and \leanname{Atlas.typeG2_prime_power} supplies
+finite fields for every prime power. The corresponding
+existence endpoints retain the concrete model as their witness.
+The evidence for order, positive simplicity, the binary exception,
+and the complete interface is separately scoped in
+Appendix~\ref{sec:workflow}.
+The exhaustive binary coordinate-pair check in
+Section~\ref{sec:g2} uses ordinary kernel reduction.
+
+\paragraph{Small Ree groups.}
+The model is \leanname{Atlas.ReeG2.Model F m}.
+The principal declarations are \leanname{Atlas.ReeG2.order} and
+\leanname{Atlas.ReeG2.simple}. The public package
+\leanname{Atlas.typeReeG2_construction} and existence theorem
+\leanname{Atlas.exists_typeReeG2_parameter} use the same model.
+
+\paragraph{Fischer groups.}
+The declaration \leanname{Atlas.Fischer.rootGeneratedRayGroup}
+defines the ray group $F$ of Section~\ref{sec:fischer}. The
+\code{derived} and \code{index} theorems identify the parity kernel
+with $F'$ and prove $[F:F']=2$.
+For each Fischer entry, the public declarations \code{card}, \code{simple}, \code{finite}, and
+\code{exists\_mul\_ne\_mul} establish the corresponding basic assertions.
+The expanded signatures contain no supplied order or simplicity
+hypothesis. The namespaces under \code{Atlas.Sporadic} are
+\code{Fischer22}, \code{Fischer23}, and \code{Fischer24Prime}.
+Construction and existence interfaces accompany these results.
+The retained extension statements have their own statement and
+dependency certificates.
+
+\FloatBarrier
+
+\section{Formal statements and logical foundations}\label{sec:foundations}
+
+For a constructed carrier $G$, \code{Group G} supplies operations and
+proofs of the group laws. Subgroups and quotients obtain these from
+their ambient groups and proved normality. On finite types,
+\code{Nat.card G} is the number of elements; it is zero on infinite
+types. Finiteness is also exported as \code{Finite G}.
+\code{IsSimpleGroup G} asserts nontriviality and that every normal
+subgroup is trivial or the whole group. For the nonabelian entries,
+noncommutativity is proved separately.
+
+For example, the fixed model \leanname{Atlas.Sporadic.Fischer22.Model}
+is the centralizer quotient $G_{22}$ of Section~\ref{sec:fischer}.
+Its public statements are
+\[
+\begin{array}{ll}
+ \code{finite}: & \code{Finite}\ G_{22},\\
+ \code{card}: & \code{Nat.card}\ G_{22}=64561751654400,\\
+ \code{simple}: & \code{IsSimpleGroup}\ G_{22},\\
+ \code{exists\_mul\_ne\_mul}: & \exists x,y\in G_{22},\ xy\ne yx.
+\end{array}
+\]
+All four declarations lie in \code{Atlas.Sporadic.Fischer22}; the
+display suppresses printer-level universe and typeclass arguments.
+
+The recorded dependency audits report only \code{propext}
+(propositional extensionality), \code{Classical.choice}, and
+\code{Quot.sound} (equality of related quotient representatives).
+They exclude \code{sorryAx}, project-specific mathematical axioms, and
+native-evaluator trust shortcuts. The proofs have been accepted by
+Lean's standard kernel and, for the exported declarations specified in
+Appendix~\ref{sec:verification}, by the independently implemented Nanoda
+checker. The latest draft replay has a substantially broader scope than
+the historical release selection. These checks still
+rely on the foundations, the checking implementations, the export
+pipeline, and the host system. The axiom report must be read together
+with the full theorem type and the definitions of its carrier,
+parameters, and instances: an axiom check alone does not establish
+that the statement expresses the intended mathematics
+\cite{LeanValidation,Soundness}.
+
+\section{Development and recorded verification}\label{sec:workflow}
+
+\subsection{Mathematical specification and implementation}
+
+The author specifies the objects, theorems, proof architecture, and
+permitted dependencies. Codex, OpenAI's coding agent, searches the
+pinned library and implements and repairs proofs against Lean's
+elaborator and kernel. The author used ChatGPT, including
+GPT-6 Pro, for mathematical discussion and specifications, and Codex
+with GPT-6 Astra for Lean implementation. These names identify the
+development tools used; they are not a controlled comparison of
+models or a measurement of autonomous performance.
+
+The author directs and maintains \atlas\ and is responsible for its
+mathematical claims and formal specifications. Generative AI also
+assisted the drafting and revision of this article; the author is
+responsible for its final wording and mathematical content. Mathematical sources
+and joint work are credited where used. Compiled statements and
+dependency reports support review of the results; reproducing the
+AI's search is unnecessary for checking the resulting proof terms.
+
+\subsection{Recorded verification}\label{sec:verification}
+
+The latest evidence concerns the local draft source snapshot, rather than
+an automatically updated public release. An incremental build, a full
+compiled-statement and dependency audit, an independent Nanoda replay,
+and a Comparator reference check address different questions. Their
+counts therefore need not agree.
+
+\paragraph{Build and full dependency audits.}
+The latest retained normal root build passed $8\,543$ Lake jobs at the
+twisted-$E_6$ graph-lift checkpoint. The catalogue check validated
+$1\,167$ declaration references. The $E_6,E_7,E_8$ integration has
+$21$ separate full property scopes, with $84$ root occurrences and
+$28$ distinct declarations. The additional $A/B/C/D$ realizations have
+$32$ full registration scopes covering $78$ distinct declarations.
+These checks inspect complete types, instances, definitions, and
+transitive proof dependencies; they are not merely axiom lists.
+
+The aggregate comparison theorem has a separate full audit of
+$58$ roots and $79\,697$ dependency nodes, completed on 12 October.
+Its statement has the exact thirty-entry scope in
+Section~\ref{sec:catalogue-comparison}. The construction audits retain
+their mathematical dependency restrictions: for example, the $G_2$,
+small Ree, Albert $F_4$, and $E$-series simplicity scopes exclude their
+whole-group order theorems where specified. The Tits scopes exclude
+global Rudvalis simplicity. These are local proof-independence claims,
+not claims that every construction is independent of all earlier groups.
+
+\paragraph{Independent Nanoda replay: 24 October.}
+The export covers $4\,934$ project modules in the normal
+\code{import Atlas} closure and $23$ additional built modules. It selected
+$69\,383$ kernel declarations: $59\,500$ project theorems and $9\,883$
+other declarations. Including their dependencies, Nanoda checked
+\textbf{$139\,617$ declarations with zero typechecker errors} and exited
+with status zero. The only permitted axioms were the three logical
+axioms in Appendix~\ref{sec:foundations}.
+
+The initial export also selected $45$ compiler-generated partial
+implementation records; those were excluded from the kernel input,
+with all selected mathematical theorem roots retained and coverage
+checked. Fourteen source modules without successful compiled artifacts,
+all outside the normal root import, remain outside this certification.
+This is not a claim to have checked every experimental source file or
+all of Mathlib.
+
+The run took about $86$ minutes and reached $8.26$ GiB of owned resident
+memory plus swap. After successful typechecking, the axiom-list pretty
+printer emitted a warning because it had no output destination. The
+original wrapper marked the run incomplete; that receipt is preserved.
+The supplemental \leanname{KERNEL_RESULT.json} records the successful
+checker exit, zero typechecker errors, unchanged source/export/binary
+hashes, and this reporting warning.
+
+\paragraph{Comparator: 25 October.}
+The serial run selected all $45$ existing targets in $44$ harnesses.
+\textbf{Forty-two targets passed; three remain incomplete.}
+Every pass includes comparison with its reference statement, the
+allowed-axiom check, fresh replay by Lean's standard kernel, and the
+quotient post-check. Comparator is not a second independent kernel
+implementation; Nanoda provides that separate check.
+
+\begin{table}[!htbp]
+\centering\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.43\textwidth}>{\raggedright\arraybackslash}X@{}}
+\toprule Scope & Result\\
+\midrule
+Nine Chevalley contracts: $A,B,C,D,E_6,E_7,E_8,F_4,G_2$
+& All nine passed.\\
+Thirty earlier existence contracts
+& Twenty-nine passed; the full Albert-model $F_4$ contract stopped at
+the $9$ GiB resource cap.\\
+Four strengthened discriminator contracts
+& All passed: the $B/C$ involution and $\Alt_8/\PSL_3(4)$ Sylow-center
+discriminators.\\
+Two aggregate isomorphism/nonisomorphism statements
+& Both incomplete: their shared harness stopped at the $9$ GiB cap.\\
+\bottomrule
+\end{tabularx}
+\caption{Latest Comparator outcomes. Resource stops are neither passes
+nor proof rejections.}
+\label{tab:comparator-current}
+\end{table}
+
+The $43$ existence/discriminator targets use reviewed references whose
+imports are restricted to Mathlib. The two aggregate targets instead
+share the concrete model registry and normalization definitions with the
+solution; this is the explicit reference boundary for those statements.
+Passing an existence contract alone does not establish external
+recognition of a named model. Basic existence challenges no longer add
+a separate noncommutativity conjunct; the internal Lean theorems remain,
+as does cyclic commutativity. No proof rejection was reported for the
+three resource-stopped targets, and no full Comparator pass is claimed.
+
+\paragraph{Historical version 1.0 evidence.}
+The frozen 18 September release record remains unchanged. It reports
+a $5\,677$-job build, a full audit of $911$ roots and $70\,266$ nodes,
+Nanoda acceptance of $70\,891$ exported declarations, and Comparator
+acceptance of the same $911$ targets ($869$ theorems and $42$
+non-theorem equality wrappers). That older Comparator Challenge and
+Solution imported the same frozen release; it checked agreement with
+that formal reference, not an independently authored mathematical
+specification. The current reference contracts above are a separate run.
+The older source-footprint measurement in Table~\ref{tab:footprint}
+likewise retains its date and its $46$-root, $23$-entry scope.
+
+
+\subsection{Repository and checking instructions}\label{sec:release}
+
+The public release is at
+\url{https://github.com/Moonshine-in-Kansas/atlas}; its maintained registry
+is \leanname{catalogue/catalogue.json}. The private development repository
+is \url{https://github.com/Moonshine-in-Kansas/atlas_draft}; it uses
+\leanname{docs/catalogue/catalogue.json}, with separate realization and
+comparison profiles. The generated \code{CATALOGUE.md} gives the effective
+completion inventory. The project guide \leanname{atlas_project.tex}
+describes the development workflow and requirements for new constructions.
+
+The draft's \leanname{verification/WORKFLOWS.md} and checkpoint manifests
+describe full statement/dependency checks. The release's \code{AUDIT.md}
+and \leanname{verification/MAINTENANCE.md} describe its separate acceptance
+gate. Appendix~\ref{app:provenance} identifies the exact sources, tools,
+and receipts behind the verification claims in this note.
+
+The release's default license is the \emph{ATLAS Research and Attribution
+License 1.0}, with third-party rights preserved. The license and
+third-party notices accompany the source. This document revision changes
+neither the release nor its evidence or licensing.
+
+
+\section{Source state and reproducibility}\label{app:provenance}
+
+The current draft has principal checkout commit
+\leanname{95c13b57b188b350503fe3a5d6aace5f0a79047b} together with the
+working-tree files identified by the checker records. The commit alone
+does not identify all checked sources: the exact source hashes in each
+run are authoritative. The Nanoda and Comparator receipts report the
+checked mathematical sources and checker binaries unchanged at completion.
+
+This note was revised on 25 October from the maintained catalogue,
+completion ledgers, comparison declarations, source-bound dependency
+maps, and the latest checker receipts. Its preparation involved document
+validation and typesetting, not another Lean build or proof replay.
+The development results are not automatically claims about a public
+release export.
+
+The historical version 1.0 evidence concerns release commit
+\leanname{935474b0c3678e053e1152a49ed6593bd8ad44c9}
+(18 September 2026). All $2\,299$ recorded project-source and toolchain
+files matched that checked snapshot when its final Comparator and
+statement-inspection results were recorded. The older line measurements
+in Table~\ref{tab:footprint} concern the development snapshot of
+17 September, 07:34:33 UTC, and are not current source totals.
+
+
+\subsection{Source inventory}
+
+The 25 October working tree contains $4\,970$ Lean files under
+\code{Atlas/}, with $363\,433$ physical lines. Of these, $4\,875$ files
+and $355\,710$ lines are tracked; $95$ files and $7\,723$ lines are
+untracked development sources. The root \code{Atlas.lean} adds $1\,850$
+lines. These counts include comments and blank lines and do not certify
+every source file. In particular, the independent replay has the
+compiled-module scope stated in Appendix~\ref{sec:verification}.
+
+Table~\ref{tab:current-footprints} is the separate compiler-derived
+measurement of the order and simplicity dependencies of all $33$
+completed entries, generated on 18 October. Its $66$ roots, source
+hashes, and group boundaries are recorded in
+\leanname{verification/dependency-maps/development/EVIDENCE.json}, with
+the row data in \leanname{COUNTS.json} in the same directory. All $3\,138$
+source hashes still match; the later extra realizations are not
+silently substituted for the default models in that table. Rows share
+dependencies and must not be summed as disjoint contributions.
+
+For comparison, the 17 September inventory contained $2\,295$ tracked
+Lean files under \code{Atlas/}, with $161\,772$ lines, plus the
+$706$-line root driver: $162\,478$ lines in $2\,296$ files. This is the
+historical physical inventory associated with the version 1.0 discussion,
+distinct from either current counts or declaration-span footprints.
+
+
+\subsection{Build and dependency audit}
+
+The environment is pinned to Lean \code{leanprover/lean4:v4.34.0-rc2},
+compiler commit
+\leanname{6a10ac8c22beadecabdbb0919c2b50214762f91d}, and Mathlib revision
+\leanname{85e3a25e006c35636f0e53b0e9296caca2685bc0}.
+From the release root, with that toolchain installed, run
+\begin{verbatim}
+lake exe cache get
+LEAN_NUM_THREADS=2 lake build
+LEAN_NUM_THREADS=2 ruby verification/check.rb
+\end{verbatim}
+The first command fetches the pinned dependency cache. The remaining
+commands build the configured \atlas\ targets and run the release
+audit; they do not invoke Nanoda or Comparator. Preserve
+\code{lean-toolchain}, \code{lakefile.toml}, and \code{lake-manifest.json}.
+The release catalogue \leanname{catalogue/catalogue.json} maps claims
+to declarations and evidence, and \code{AUDIT.md} documents the build
+and dependency checks.
+
+The historical version 1.0 build/audit driver ran from 05:43:04 to
+05:52:59 UTC on 18 September 2026. This is the final driver's elapsed
+interval, not the time for a source rebuild from scratch. A preceding
+attempt had a process exit with status 137. The affected target was
+then built successfully on its own, and the final full driver passed.
+
+\subsection{Replay records and checker revisions}\label{app:replays}
+
+\paragraph{Current draft receipts.}
+The Nanoda run directory is
+\leanname{claude/nanoda-draft-20261024/filtered-20261024T144223/}.
+Its \leanname{KERNEL_RESULT.json}, \leanname{SCOPE.json},
+\leanname{SOURCE_HASHES.json}, \leanname{EXPORT_COVERAGE.json}, and
+\leanname{EXCLUDED_IMPLEMENTATIONS.json} bind the successful kernel
+result to its scope and source/export hashes. The original
+\leanname{RESULT.json} and checker log preserve the reporting warning.
+The checker ran from 14:43:51 to 16:10:14 UTC on 24 October, with peak
+owned resident memory plus swap of $8\,868\,655\,104$ bytes.
+
+The Comparator directory is
+\leanname{claude/comparator-draft-20261025/run-20261025T000133/}.
+Its \leanname{RESULT.json} records the complete queue, each harness's
+status, the resource stops, and unchanged source and binary hashes.
+The serial run lasted from 00:01:33 to 04:34:01 UTC on 25 October.
+The $F_4$ stop concerns the Albert-model existence target; the distinct
+Chevalley $F_4$ target passed. Both aggregate targets remain incomplete.
+
+The $E$-series scopes are recorded in
+\leanname{verification/chevalley/integration/20261018T121057-e-series-catalogue/};
+the latest catalogue evidence is
+\leanname{verification/runs/catalogue/20261020T020405-224/}.
+The full aggregate comparison audit is
+\leanname{verification/runs/comparison-catalogue-isomorphism/20261012T065332-1260019/}.
+These are dated evidence records, not instructions to relabel earlier
+memory stops or widen a successful run's scope.
+
+\paragraph{Nanoda revision and historical replay.}
+The checker revision is
+\leanname{4c544ed4099c8227f07d5de77ad1e69fb0740a27}.
+This same checker revision was used for the current draft. The historical release run checked 70\,891 exported declarations, exited with status zero,
+and finished at 06:40:26 UTC on 18 September. Checking took
+31 minutes 0.82 seconds on one thread, with maximum resident memory
+5\,375\,116 KiB (about 5.13 GiB); export took 93.66 seconds.
+The exported data occupied 936\,181\,371 bytes.
+
+\paragraph{Comparator revisions and historical replay.}
+Both the historical and current runs used Comparator revision
+\leanname{2312244ac716564a61cc0bf4e107d9abf1757a61}, exporter revision
+\leanname{cacf989bd75f608700820f6afc595f32e7a99a4d}, and the Landrun sandbox
+at revision \leanname{811cfff51ceaf3d9843708aa6d22e9b84ccac8b4}.
+The historical version 1.0 run exited with status zero after 41 minutes 35.542 seconds of service
+runtime. Its formal-reference qualification is stated in
+Appendix~\ref{sec:verification}.
+
+\paragraph{Statement inspections.}
+The actual carrier applications were inspected in addition to the
+weaker automatic test for the presence of model declarations in type
+dependencies.
+
+\subsection{Per-group declaration footprints}\label{app:footprints}
+
+Table~\ref{tab:footprint} preserves the historical version 1.0 measurement
+of the selected order and simplicity declarations for its $23$ entries.
+Its global deduplicated \atlas\ footprint is \textbf{88\,856 lines}.
+The current $33$-entry table is Table~\ref{tab:current-footprints}; the
+two selections and dates must not be conflated. This measures
+source dependencies, not proof-term size, model-token usage, or the
+amount of new mathematics.
+
+
+Each column counts physical source lines in compiler-recorded
+declaration ranges reached through the selected theorem's transitive
+type and proof dependencies, including interior comments and blank
+lines. Generated helpers use the recorded enclosing declaration's
+range; a final position at column zero excludes that line. Ranges are
+merged by file, so column and row totals overlap. Lean core and external
+libraries are excluded.
+
+For $\PSL_n(q)$, $n$ is matrix dimension; $r$ is rank for $B,C,D$.
+The type-$A$, symplectic, type-$B$, and $G_2$ simplicity roots are
+exact-range equivalences including their exceptional cases. The Ree
+root applies for $q=3^{2m+1}$, $m\geq1$. Isomorphic construction
+families have separate rows.
+
+The 46-root footprint audit has 65\,676 nodes, complete graph references,
+and resolved source ranges for every project dependency. The broader
+911-declaration release audit is a separate verification scope.
+
+\begin{table}[!htbp]
+\centering\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Group or family & Order footprint & Simplicity footprint & Union \\
+\midrule
+$C_p$ & 5 & 12 & 12 \\
+$\Alt_n$ & 4 & 4 & 7 \\
+$\PSL_n(q)$ & 168 & 322 & 379 \\
+$B_r(q)$ & 4\,121 & 7\,898 & 8\,009 \\
+$C_r(q)$ & 708 & 2\,203 & 2\,203 \\
+$D_r(q)$ & 4\,290 & 2\,466 & 5\,408 \\
+$G_2(q)$ & 1\,237 & 3\,287 & 3\,568 \\
+${}^2G_2(q)$ & 1\,570 & 2\,225 & 2\,250 \\
+$\mathrm{M}_{11}$ & 5\,479 & 5\,866 & 5\,868 \\
+$\mathrm{M}_{12}$ & 4\,924 & 5\,959 & 5\,961 \\
+$\mathrm{M}_{22}$ & 4\,183 & 5\,348 & 5\,351 \\
+$\mathrm{M}_{23}$ & 4\,119 & 4\,492 & 4\,495 \\
+$\mathrm{M}_{24}$ & 3\,477 & 4\,582 & 4\,585 \\
+$\mathrm{Co}_{1}$ & 10\,826 & 12\,334 & 12\,346 \\
+$\mathrm{Co}_{2}$ & 10\,825 & 14\,070 & 14\,072 \\
+$\mathrm{Co}_{3}$ & 12\,137 & 16\,423 & 16\,423 \\
+$\mathrm{McL}$ & 13\,704 & 16\,375 & 16\,377 \\
+$\mathrm{HS}$ & 13\,447 & 14\,771 & 14\,776 \\
+$\mathrm{Suz}$ & 19\,727 & 21\,320 & 21\,374 \\
+$\mathrm{J}_{2}$ & 6\,989 & 7\,954 & 8\,184 \\
+$\mathrm{Fi}_{22}$ & 31\,955 & 34\,248 & 34\,250 \\
+$\mathrm{Fi}_{23}$ & 31\,950 & 34\,247 & 34\,249 \\
+$\mathrm{Fi}_{24}'$ & 31\,813 & 33\,396 & 33\,397 \\
+\midrule
+\textbf{Global deduplicated union} & & & \textbf{88\,856} \\
+\bottomrule
+\end{tabular}
+\caption{Historical 17 September 2026 compiler-derived \atlas\ source-line dependency footprints for
+46 principal order and simplicity declarations: eight families and
+fifteen sporadic constructions. Shared source lines are counted once
+within each union; different rows need not have disjoint dependencies.}
+\label{tab:footprint}
+\end{table}
+
+\FloatBarrier
+
+\begingroup\small
+\begin{thebibliography}{99}
+\interlinepenalty=10000
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+
+\bibitem{BaarnhielmRee}
+H. B\"a\"arnhielm, Recognising the small Ree groups in their natural
+representations, \emph{Journal of Algebra} \textbf{416} (2014), 139--166.
+\href{https://doi.org/10.1016/j.jalgebra.2014.06.017}{doi:10.1016/j.jalgebra.2014.06.017};
+\href{https://arxiv.org/abs/1206.0411}{arXiv:1206.0411}.
+
+\bibitem{BorcherdsVA}
+R.~E. Borcherds,
+Vertex algebras, Kac--Moody algebras, and the Monster,
+\emph{Proceedings of the National Academy of Sciences USA}
+\textbf{83} (1986), 3068--3071.
+\href{https://doi.org/10.1073/pnas.83.10.3068}{doi:10.1073/pnas.83.10.3068}.
+
+\bibitem{BorcherdsMoonshine}
+R.~E. Borcherds,
+Monstrous moonshine and monstrous Lie superalgebras,
+\emph{Inventiones Mathematicae} \textbf{109} (1992), 405--444.
+\href{https://doi.org/10.1007/BF01232032}{doi:10.1007/BF01232032}.
+
+\bibitem{BorovikInvolutions}
+A.~V. Borovik, \emph{Orthogonal and symplectic black box groups,
+revisited}, 2001, Sections~2.5--2.6.
+\href{https://arxiv.org/abs/math/0110234}{arXiv:math/0110234}.
+
+\bibitem{ATLAS85}
+J.~H. Conway, R.~T. Curtis, S.~P. Norton, R.~A. Parker, and R.~A. Wilson,
+\emph{Atlas of Finite Groups: Maximal Subgroups and Ordinary Characters
+for Simple Groups}, Clarendon Press, Oxford, 1985.
+
+\bibitem{CS}
+J.~H. Conway and N.~J.~A. Sloane,
+\emph{Sphere Packings, Lattices and Groups}, 3rd ed., Grundlehren der
+mathematischen Wissenschaften 290, Springer, New York, 1999.
+\href{https://doi.org/10.1007/978-1-4757-6568-7}{doi:10.1007/978-1-4757-6568-7}.
+
+\bibitem{FLM}
+I. Frenkel, J. Lepowsky, and A. Meurman,
+\emph{Vertex Operator Algebras and the Monster},
+Pure and Applied Mathematics 134, Academic Press, 1988.
+
+\bibitem{Geck}
+M. Geck, \emph{A Course on Lie algebras and Chevalley groups},
+2024; revised version~3, 2 October 2025.
+\href{https://arxiv.org/abs/2404.11472v3}{arXiv:2404.11472v3}.
+
+\bibitem{OddOrder}
+G. Gonthier et al., A machine-checked proof of the Odd Order Theorem,
+in \emph{Interactive Theorem Proving}, LNCS 7998, Springer, 2013,
+pp.~163--179.
+\href{https://doi.org/10.1007/978-3-642-39634-2_14}{doi:10.1007/978-3-642-39634-2\_14}.
+Source: \url{https://github.com/math-comp/odd-order}.
+
+\bibitem{GriessLam}
+R.~L. Griess, Jr. and C.~H. Lam,
+A new existence proof of the Monster by VOA theory,
+\emph{Michigan Mathematical Journal} \textbf{61} (2012), 555--573.
+\href{https://doi.org/10.1307/mmj/1347040259}{doi:10.1307/mmj/1347040259};
+\href{https://arxiv.org/abs/1103.1414}{arXiv:1103.1414}.
+
+\bibitem{GMS}
+R.~L. Griess, Jr., U. Meierfrankenfeld, and Y. Segev,
+A uniqueness proof for the Monster,
+\emph{Annals of Mathematics} \textbf{130} (1989), 567--602.
+
+\bibitem{AtlasSoftware}
+G. H\"ohn, \emph{ATLAS: constructive finite simple groups in Lean}.
+Public version 1.0 source snapshot, commit \code{935474b},
+18 September 2026:
+\url{https://github.com/Moonshine-in-Kansas/atlas}.
+Version 1.2 development snapshot, 25 October 2026, principal checkout
+\code{95c13b5} with recorded working-tree hashes:
+\url{https://github.com/Moonshine-in-Kansas/atlas_draft} (private).
+Source identification and exact checking scopes are given in
+Appendix~\ref{app:provenance}.
+
+
+\bibitem{FischerAlgebra}
+G. H\"ohn,
+\emph{The Conway--Parker algebra and the largest Fischer group},
+preprint, September 2026; mathematical source for
+the completed Fischer algebra formalization.
+
+\bibitem{HallJankoNote}
+G. H\"ohn,
+\emph{The Hall--Janko Simple Group and the Icosian Leech Lattice},
+preprint, 2026.
+\href{https://arxiv.org/abs/2609.22842}{arXiv:2609.22842}.
+
+\bibitem{AlbertMassNote}
+G. H\"ohn,
+\emph{Definite integral Albert algebras: arithmetic and finite geometry},
+preprint, 2026.
+\href{https://arxiv.org/abs/2609.27550}{arXiv:2609.27550}.
+
+\bibitem{BabyVOA}
+G. H\"ohn, \emph{Selbstduale Vertexoperatorsuperalgebren und das
+Babymonster}, Bonner Mathematische Schriften 286, 1996.
+\href{https://arxiv.org/abs/0706.0236}{arXiv:0706.0236}.
+
+\bibitem{CayleyPlaneNote}
+G. H\"ohn,
+\emph{The unique extremal threemodular lattice of rank 26, the
+generalized hexagon $(2,8)$, and the tight Cayley-plane $5$-design},
+preprint, 2026.
+\href{https://arxiv.org/abs/2609.25086}{arXiv:2609.25086}.
+
+\bibitem{FischerVOA}
+G. H\"ohn and C.-H. Lam,
+\emph{A vertex operator algebra construction of the Fischer groups},
+working title; manuscript in preparation.
+
+\bibitem{MonsterOrder}
+G. H\"ohn and M. Seysen,
+\emph{The Order of the Monster Finite Simple Group}, 2025.
+\href{https://arxiv.org/abs/2508.01037}{arXiv:2508.01037}.
+
+\bibitem{IshidaOddOrder}
+Y. Ishida,
+\emph{odd-order: The Feit--Thompson Odd Order Theorem in Lean 4},
+software repository and README, 2026; consulted 24 September 2026.
+\url{https://github.com/yawara/odd-order}.
+
+\bibitem{ONan}
+C. Jansen and R.~A. Wilson, Two new constructions of the O'Nan group,
+\emph{Journal of the London Mathematical Society} \textbf{56} (1997),
+579--583.
+\href{https://doi.org/10.1112/S0024610798005742}{doi:10.1112/S0024610798005742}.
+
+\bibitem{OrderRecognition}
+W. Kimmerle, R. Lyons, R. Sandling, and D.~N. Teague,
+Composition factors from the group ring and Artin's theorem on orders
+of simple groups, \emph{Proceedings of the London Mathematical Society}
+(3) \textbf{60} (1990), 89--122.
+\href{https://doi.org/10.1112/plms/s3-60.1.89}{doi:10.1112/plms/s3-60.1.89}.
+
+\bibitem{KitaKen}
+KitaKen1,
+\emph{FiniteSimpleGroups: Lean/mathlib formalizations of finite simple
+groups}, software repository and README, consulted 18 September 2026.
+\url{https://github.com/KitaKen1/finite-simple-groups-lean}.
+
+\bibitem{Kuilen}
+R. van de Kuilen, \emph{The first Janko group $J_1$: simplicity and
+formalization}, bachelor's thesis, Utrecht University, 2024.
+\url{https://studenttheses.uu.nl/items/7f8263cb-453b-4e78-99e0-35135037c33e}.
+
+\bibitem{LeeComputations}
+M. Lee, Computation and the sporadic simple groups,
+in \emph{Computational Group Theory}, Oberwolfach Report 27/2025,
+pp.~1411--1413.
+\url{https://publications.mfo.de/bitstream/handle/mfo/4340/OWR_2025_27.pdf}.
+
+\bibitem{Mathlib}
+The mathlib Community,
+The Lean mathematical library,
+in \emph{Proceedings of the 9th ACM SIGPLAN International Conference
+on Certified Programs and Proofs (CPP 2020)}, ACM, 2020,
+pp.~367--381.
+\href{https://doi.org/10.1145/3372885.3373824}{doi:10.1145/3372885.3373824};
+\href{https://arxiv.org/abs/1910.09336}{arXiv:1910.09336}.
+
+\bibitem{MathlibGroups}
+The mathlib Community, \emph{Mathlib group-theory documentation},
+including alternating groups and projective special linear groups.
+\url{https://leanprover-community.github.io/mathlib4_docs/Mathlib/GroupTheory/SpecificGroups/Alternating.html}.
+
+\bibitem{LeanValidation}
+The Lean development team,
+\emph{Validating a Lean Proof}, Lean Language Reference,
+online documentation, consulted 18 September 2026.
+\url{https://lean-lang.org/doc/reference/latest/ValidatingProofs/}.
+
+\bibitem{Soundness}
+L. de Moura,
+\href{https://leodemoura.github.io/blog/2026-8-24-postmortem-for-the-kernel-soundness-bug-hunt/}{\emph{Postmortem for the Kernel Soundness Bug Hunt}},
+24 August 2026, online article.
+
+\bibitem{Lean4}
+L. de Moura and S. Ullrich,
+The Lean 4 theorem prover and programming language,
+in \emph{Automated Deduction---CADE 28}, Lecture Notes in Computer
+Science 12699, Springer, 2021, pp.~625--635.
+\href{https://doi.org/10.1007/978-3-030-79876-5_37}{doi:10.1007/978-3-030-79876-5\_37}.
+
+\bibitem{FormaTheoria}
+T. Nie, A. Zhang, Y. Tang, D. Testa, S.-T. Yau, P. Li, and Y. Zhou,
+\emph{FormaTheoria: Constructing Large-Scale Lean Theories from
+Mathematical Literature---Toward the Formalization of the Classification
+of Finite Simple Groups}, 2026.
+\href{https://arxiv.org/abs/2608.10894}{arXiv:2608.10894}.
+Source and project-status description:
+\url{https://github.com/Qiuzhen-CFSG/CFSG}, consulted 18 September 2026.
+
+\bibitem{Plas}
+E. van der Plas, \emph{Formalisation of the Finite Simple Conway Groups
+in Lean}, bachelor's thesis, Utrecht University, 2024.
+\url{https://studenttheses.uu.nl/handle/20.500.12932/46756}.
+
+\bibitem{SeysenImplementation}
+M. Seysen,
+A fast implementation of the Monster group: The Monster has been tamed,
+\emph{Journal of Computational Algebra} \textbf{9} (2024), Article 100012.
+\href{https://doi.org/10.1016/j.jaca.2024.100012}{doi:10.1016/j.jaca.2024.100012}.
+
+\bibitem{Shimakura}
+H. Shimakura,
+The automorphism group of the vertex operator algebra $V_L^+$ for an
+even lattice $L$ without roots,
+\emph{Journal of Algebra} \textbf{280} (2004), 29--57.
+\href{https://doi.org/10.1016/j.jalgebra.2004.05.018}{doi:10.1016/j.jalgebra.2004.05.018};
+\href{https://arxiv.org/abs/math/0311141}{arXiv:math/0311141}.
+
+\bibitem{Steinberg}
+R. Steinberg, \emph{Lectures on Chevalley Groups},
+University Lecture Series 66, American Mathematical Society, 2016;
+original Yale lecture notes, 1967--1968.
+
+\bibitem{Taylor}
+D.~E. Taylor, \emph{The Geometry of the Classical Groups},
+Sigma Series in Pure Mathematics 9, Heldermann Verlag, Berlin, 1992.
+Author's corrected text:
+\url{https://www.maths.usyd.edu.au/u/don/papers/gcg.pdf}.
+
+\bibitem{WilsonReeAlgebra}
+R.~A. Wilson, Another new approach to the small Ree groups,
+\emph{Archiv der Mathematik} \textbf{94} (2010), 501--510.
+\href{https://doi.org/10.1007/s00013-010-0130-4}{doi:10.1007/s00013-010-0130-4}.
+
+\bibitem{WilsonRee}
+R.~A. Wilson, A new construction of the Ree groups of type ${}^2G_2$,
+\emph{Proceedings of the Edinburgh Mathematical Society}
+\textbf{53} (2010), 531--542.
+\href{https://doi.org/10.1017/S001309150800028X}{doi:10.1017/S001309150800028X}.
+Author's text:
+\url{https://webspace.maths.qmul.ac.uk/r.a.wilson/pubs_files/ReeG2.pdf}.
+
+\bibitem{Wilson}
+R.~A. Wilson,
+\emph{The Finite Simple Groups}, Graduate Texts in Mathematics 251,
+Springer, London, 2009.
+\href{https://doi.org/10.1007/978-1-84800-988-2}{doi:10.1007/978-1-84800-988-2}.
+
+\bibitem{ATLASOnline}
+R.~A. Wilson and collaborators,
+\emph{ATLAS of Finite Group Representations}, online database;
+classical and exceptional small-group identifications consulted
+15 September 2026.
+\url{https://brauer.maths.qmul.ac.uk/Atlas/}.
+
+\bibitem{RudvalisHohn}
+G.~H\"ohn, \emph{The Conway--Wales lattice and the Rudvalis and Tits groups}, 2026.
+\href{https://arxiv.org/abs/2610.10553}{arXiv:2610.10553}.
+
+\end{thebibliography}
+\endgroup
+\end{document}

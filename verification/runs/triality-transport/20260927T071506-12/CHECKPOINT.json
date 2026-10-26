@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "triality-transport",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Triality.FieldTransport",
+    "Atlas.LinearGroups.Triality.CubicFieldTransport",
+    "Atlas.LinearGroups.Triality.StructuralTransport",
+    "Atlas.LinearGroups.Triality.ActionTransport"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Triality.baseFieldEquiv",
+      "module": "Atlas.LinearGroups.Triality.CubicFieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.compatibleCubicEquiv_exists",
+      "module": "Atlas.LinearGroups.Triality.CubicFieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.cubicFieldEquiv",
+      "module": "Atlas.LinearGroups.Triality.CubicFieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.cubicFieldEquiv_compatible",
+      "module": "Atlas.LinearGroups.Triality.CubicFieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv",
+      "module": "Atlas.LinearGroups.Triality.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_borel",
+      "module": "Atlas.LinearGroups.Triality.StructuralTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_borelWord",
+      "module": "Atlas.LinearGroups.Triality.StructuralTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_differenceRoot",
+      "module": "Atlas.LinearGroups.Triality.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_generated",
+      "module": "Atlas.LinearGroups.Triality.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_highLongRoot",
+      "module": "Atlas.LinearGroups.Triality.StructuralTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_highestRoot",
+      "module": "Atlas.LinearGroups.Triality.StructuralTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_longNegativeRoot",
+      "module": "Atlas.LinearGroups.Triality.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_longParabolic",
+      "module": "Atlas.LinearGroups.Triality.StructuralTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_longRoot",
+      "module": "Atlas.LinearGroups.Triality.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_longWeyl",
+      "module": "Atlas.LinearGroups.Triality.StructuralTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_mem_parabolic",
+      "module": "Atlas.LinearGroups.Triality.ActionTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_middleRoot",
+      "module": "Atlas.LinearGroups.Triality.StructuralTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_negativeSumRoot",
+      "module": "Atlas.LinearGroups.Triality.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_nextShortRoot",
+      "module": "Atlas.LinearGroups.Triality.StructuralTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_pinnedNegativeRoot",
+      "module": "Atlas.LinearGroups.Triality.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_pinnedRoot",
+      "module": "Atlas.LinearGroups.Triality.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_positiveMatrix",
+      "module": "Atlas.LinearGroups.Triality.StructuralTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_shortNegativeRoot",
+      "module": "Atlas.LinearGroups.Triality.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_shortParabolic",
+      "module": "Atlas.LinearGroups.Triality.StructuralTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_shortRoot",
+      "module": "Atlas.LinearGroups.Triality.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_shortWeyl",
+      "module": "Atlas.LinearGroups.Triality.StructuralTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_sigma",
+      "module": "Atlas.LinearGroups.Triality.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_sumRoot",
+      "module": "Atlas.LinearGroups.Triality.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_torusMap",
+      "module": "Atlas.LinearGroups.Triality.StructuralTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.fieldEquiv_val",
+      "module": "Atlas.LinearGroups.Triality.ActionTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.parabolicPointsEquiv",
+      "module": "Atlas.LinearGroups.Triality.ActionTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.parabolicPointsEquiv_smul",
+      "module": "Atlas.LinearGroups.Triality.ActionTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.transportParameters",
+      "module": "Atlas.LinearGroups.Triality.StructuralTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.transportTorus",
+      "module": "Atlas.LinearGroups.Triality.StructuralTransport",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "triality-transport-independence",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Triality.Order",
+        "Atlas.LinearGroups.Triality.Perfect",
+        "Atlas.LinearGroups.Triality.Simplicity"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.Triality.card_group",
+        "Atlas.Triality.simple",
+        "Atlas.Triality.fixedPointEquiv"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "id": "tits-order",
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas.Tits.TransferKernelConsequences",
+    "Atlas.Tits.Order"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Tits.ambient_normal_classification_of_transfer_alpha",
+      "module": "Atlas.Tits.TransferKernelConsequences",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.ambient_normal_contains_derived",
+      "module": "Atlas.Tits.TransferKernelConsequences",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.card",
+      "module": "Atlas.Tits.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.derived_eq_transferKernel",
+      "module": "Atlas.Tits.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.derived_eq_transferKernel_of_transfer_alpha",
+      "module": "Atlas.Tits.TransferKernelConsequences",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.derived_index_two_of_transfer_alpha",
+      "module": "Atlas.Tits.TransferKernelConsequences",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.derived_ne_bot",
+      "module": "Atlas.Tits.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.index_derived",
+      "module": "Atlas.Tits.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.model_order_of_transfer_alpha",
+      "module": "Atlas.Tits.TransferKernelConsequences",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.normal_subgroups",
+      "module": "Atlas.Tits.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.transfer_nontrivial",
+      "module": "Atlas.Tits.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.transfer_nontrivial_of_alpha",
+      "module": "Atlas.Tits.TransferKernelConsequences",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.transfer_range_order",
+      "module": "Atlas.Tits.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Tits.transfer_range_order_of_alpha",
+      "module": "Atlas.Tits.TransferKernelConsequences",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independent-of-global-rudvalis-simplicity",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.Rudvalis.ProjectiveSimplicity",
+        "Atlas.Sporadic.Rudvalis",
+        "Atlas.Tits.Simplicity"
+      ]
+    }
+  ]
+}

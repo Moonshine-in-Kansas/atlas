@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas.LinearGroups.ReeG2.Simplicity"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "ree-g2-simplicity",
+  "targets": [
+    {
+      "declaration": "Atlas.ReeG2.perfect",
+      "module": "Atlas.LinearGroups.ReeG2.Perfect",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.simple",
+      "module": "Atlas.LinearGroups.ReeG2.Simplicity",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "simplicity-independent-of-order-and-G2",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.G2.",
+        "Atlas.ReeG2.order"
+      ],
+      "forbid_modules": []
+    }
+  ]
+}

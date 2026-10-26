@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "minus-orthogonal-rank-three-kernel",
+  "imports": [
+    "Atlas.LinearGroups.Orthogonal.Minus.RankThreeImage",
+    "Atlas.LinearGroups.Orthogonal.Minus.RankThreeKernel"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Orthogonal.Minus.hodgeFixedOrthogonalHom",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeImage",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreeElementaryHom",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeImage",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreeFullHom",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeImage",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreeFullHom_apply",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeImage",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreeFullHom_eq_one_iff_scalar",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeKernel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreeFullHom_intertwine",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeImage",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreeFullHom_mem_elementary",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeImage",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreeFullHom_scalar_iff",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeKernel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreePSUHom",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeKernel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreePSUHom_injective",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeKernel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreeProjectiveHom",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeImage",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreeProjectiveHom_eq_one_iff_center",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeKernel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Orthogonal.Minus.rankThreeProjectiveHom_kernel",
+      "module": "Atlas.LinearGroups.Orthogonal.Minus.RankThreeKernel",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "kernel-independence",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Orthogonal.Minus.Simplicity",
+        "Atlas.LinearGroups.Orthogonal.Minus.RankThreeSimplicity",
+        "Atlas.LinearGroups.Unitary.Simplicity",
+        "Atlas.LinearGroups.Unitary.SimplicityThree",
+        "Atlas.LinearGroups.Unitary.SimplicityHigher"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.Unitary.simple_of_good",
+        "Atlas.Unitary.noncommutative_of_good",
+        "Atlas.Orthogonal.Minus.family_simple",
+        "Atlas.Unitary.binary_projective_simple",
+        "Atlas.Unitary.binary_projective_noncommutative"
+      ]
+    }
+  ]
+}

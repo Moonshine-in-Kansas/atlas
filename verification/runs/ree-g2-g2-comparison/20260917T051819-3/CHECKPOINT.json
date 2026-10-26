@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas.LinearGroups.ReeG2.OctonionCoordinates",
+    "Atlas.LinearGroups.ReeG2.G2Embedding"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "ree-g2-g2-comparison",
+  "targets": [
+    {
+      "declaration": "Atlas.ReeG2.bilinear",
+      "module": "Atlas.LinearGroups.ReeG2.OctonionCoordinates",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.g2Embedding",
+      "module": "Atlas.LinearGroups.ReeG2.G2Embedding",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.g2Embedding_injective",
+      "module": "Atlas.LinearGroups.ReeG2.G2Embedding",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.generated_preserves_bilinear",
+      "module": "Atlas.LinearGroups.ReeG2.OctonionCoordinates",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.octonionAutomorphism",
+      "module": "Atlas.LinearGroups.ReeG2.G2Embedding",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.octonionAutomorphism_coordinates",
+      "module": "Atlas.LinearGroups.ReeG2.G2Embedding",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.octonionCoordinates",
+      "module": "Atlas.LinearGroups.ReeG2.OctonionCoordinates",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.octonionCoordinates_mul",
+      "module": "Atlas.LinearGroups.ReeG2.OctonionCoordinates",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.octonionLinear",
+      "module": "Atlas.LinearGroups.ReeG2.G2Embedding",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.octonionLinear_coordinates",
+      "module": "Atlas.LinearGroups.ReeG2.G2Embedding",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "comparison-structural-only",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.ReeG2.order",
+        "Atlas.ReeG2.simple",
+        "Atlas.ReeG2.perfect"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.G2.Order",
+        "Atlas.LinearGroups.G2.Simplicity",
+        "Atlas.LinearGroups.G2.Perfectness"
+      ]
+    }
+  ]
+}

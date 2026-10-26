@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "triality-normal-forms",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Triality.InversionSubgroup",
+    "Atlas.LinearGroups.Triality.InversionCard",
+    "Atlas.LinearGroups.Triality.BruhatNormalForm",
+    "Atlas.LinearGroups.Triality.WeylDihedral",
+    "Atlas.LinearGroups.Triality.SplitBorel"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Triality.CellParameters",
+      "module": "Atlas.LinearGroups.Triality.BruhatNormalForm",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.InversionParameters",
+      "module": "Atlas.LinearGroups.Triality.InversionSubgroup",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.WeylQuotient",
+      "module": "Atlas.LinearGroups.Triality.WeylDihedral",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.borelProjection",
+      "module": "Atlas.LinearGroups.Triality.SplitBorel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.borelProjection_kernel",
+      "module": "Atlas.LinearGroups.Triality.SplitBorel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.borelProjection_section",
+      "module": "Atlas.LinearGroups.Triality.SplitBorel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.borelSection",
+      "module": "Atlas.LinearGroups.Triality.SplitBorel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.borelTorusCoordinate",
+      "module": "Atlas.LinearGroups.Triality.SplitBorel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.borelTorusCoordinate_word",
+      "module": "Atlas.LinearGroups.Triality.SplitBorel",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.bruhatNormalEquiv",
+      "module": "Atlas.LinearGroups.Triality.BruhatNormalForm",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.bruhatNormalMap",
+      "module": "Atlas.LinearGroups.Triality.BruhatNormalForm",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.bruhatNormalMap_bijective",
+      "module": "Atlas.LinearGroups.Triality.BruhatNormalForm",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.bruhatNormalMap_injective",
+      "module": "Atlas.LinearGroups.Triality.BruhatNormalForm",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.card_inversionParameters",
+      "module": "Atlas.LinearGroups.Triality.InversionCard",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.cellEquiv",
+      "module": "Atlas.LinearGroups.Triality.BruhatNormalForm",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.dihedralToWeyl",
+      "module": "Atlas.LinearGroups.Triality.WeylDihedral",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.dihedralWeylEquiv",
+      "module": "Atlas.LinearGroups.Triality.WeylDihedral",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.indexDihedral",
+      "module": "Atlas.LinearGroups.Triality.WeylDihedral",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.indexDihedralEquiv",
+      "module": "Atlas.LinearGroups.Triality.WeylDihedral",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.indexDihedral_injective",
+      "module": "Atlas.LinearGroups.Triality.WeylDihedral",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.indexDihedral_mul",
+      "module": "Atlas.LinearGroups.Triality.WeylDihedral",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.inversionCoordinates",
+      "module": "Atlas.LinearGroups.Triality.InversionCard",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.inversionMonoid",
+      "module": "Atlas.LinearGroups.Triality.InversionSubgroup",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.inversionMonoid_inv_mem",
+      "module": "Atlas.LinearGroups.Triality.InversionSubgroup",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.inversionParameters_collect",
+      "module": "Atlas.LinearGroups.Triality.InversionSubgroup",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.inversionSubgroup",
+      "module": "Atlas.LinearGroups.Triality.InversionSubgroup",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.inversion_surviving_zero",
+      "module": "Atlas.LinearGroups.Triality.InversionSubgroup",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.weylClass",
+      "module": "Atlas.LinearGroups.Triality.WeylDihedral",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.weylClass_injective",
+      "module": "Atlas.LinearGroups.Triality.WeylDihedral",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.weylClass_mul",
+      "module": "Atlas.LinearGroups.Triality.WeylDihedral",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.weylLift_mul_index",
+      "module": "Atlas.LinearGroups.Triality.WeylDihedral",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.weylListIndex",
+      "module": "Atlas.LinearGroups.Triality.WeylDihedral",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.weylList_torus_index",
+      "module": "Atlas.LinearGroups.Triality.WeylDihedral",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.weylProductIndex",
+      "module": "Atlas.LinearGroups.Triality.WeylDihedral",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.weylRepresentative",
+      "module": "Atlas.LinearGroups.Triality.WeylDihedral",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "triality-normal-forms-independence",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Triality.Order",
+        "Atlas.LinearGroups.Triality.Perfect",
+        "Atlas.LinearGroups.Triality.Simplicity"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.Triality.card_group",
+        "Atlas.Triality.simple",
+        "Atlas.Triality.fixedPointEquiv"
+      ]
+    }
+  ]
+}

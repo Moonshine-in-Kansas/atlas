@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "id": "rudvalis-v33-order",
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas.GroupTheory.InvariantOrbitDivisibility",
+    "Atlas.GroupTheory.OneSuborbitPrimitivity",
+    "Atlas.GroupTheory.PerfectSimpleQuotient",
+    "Atlas.GroupTheory.PrimitivePerfectFrameSimplicity",
+    "Atlas.Rudvalis.FourActiveLabelAction",
+    "Atlas.Rudvalis.FourSuborbitDivisibility",
+    "Atlas.Rudvalis.FrameLinearSimplicity",
+    "Atlas.Rudvalis.FrameTranslationCommutators",
+    "Atlas.Rudvalis.NonorthogonalSuborbits",
+    "Atlas.Rudvalis.ProjectiveFrameEmbedding",
+    "Atlas.Rudvalis.ProjectiveFrameFiltration",
+    "Atlas.Rudvalis.ProjectiveMatrixFiltration",
+    "Atlas.Rudvalis.ProjectivePrimitivity",
+    "Atlas.Rudvalis.ProjectiveSignFiltration",
+    "Atlas.Rudvalis.ProjectiveSimplicity",
+    "Atlas.Rudvalis.ReferenceLinearLifts",
+    "Atlas.Sporadic.Rudvalis"
+  ],
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Rudvalis.full_gaussian_order",
+      "module": "Atlas.Rudvalis.GaussianGroupOrder",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Rudvalis.rudvalisGroup_order",
+      "module": "Atlas.Rudvalis.ScalarQuotient",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Sporadic.Rudvalis.card",
+      "module": "Atlas.Sporadic.Rudvalis",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Sporadic.Rudvalis.linear_card",
+      "module": "Atlas.Sporadic.Rudvalis",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Sporadic.Rudvalis.order",
+      "module": "Atlas.Sporadic.Rudvalis",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "order-independent-of-simplicity",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.ConwayWales.",
+        "Atlas.Fischer.",
+        "Atlas.Mathieu."
+      ],
+      "forbid_modules": [
+        "Atlas.Rudvalis.FullIsometry",
+        "Atlas.Rudvalis.Simplicity",
+        "Mathlib.GroupTheory.GroupAction.Iwasawa",
+        "Atlas.Rudvalis.ProjectiveSimplicity",
+        "Atlas.Rudvalis.ProjectivePrimitivity",
+        "Atlas.Rudvalis.FrameTranslationCommutators",
+        "Atlas.GroupTheory.PrimitivePerfectFrameSimplicity"
+      ],
+      "module_allowlists": [
+        {
+          "prefix": "Atlas.Conway.",
+          "modules": [
+            "Atlas.Conway.RationalPrimeOrder"
+          ]
+        },
+        {
+          "prefix": "Atlas.Sporadic.",
+          "modules": [
+            "Atlas.Sporadic.Rudvalis"
+          ]
+        }
+      ]
+    }
+  ]
+}

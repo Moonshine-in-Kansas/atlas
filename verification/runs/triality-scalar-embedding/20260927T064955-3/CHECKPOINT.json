@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "triality-scalar-embedding",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Triality.ProjectiveEmbedding"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Triality.intoProjective",
+      "module": "Atlas.LinearGroups.Triality.ProjectiveEmbedding",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.intoProjective_injective",
+      "module": "Atlas.LinearGroups.Triality.ProjectiveEmbedding",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.scalar_commutes",
+      "module": "Atlas.LinearGroups.Triality.ScalarIntersection",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.scalar_eq_one",
+      "module": "Atlas.LinearGroups.Triality.ScalarIntersection",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Triality.scalar_mem_borel",
+      "module": "Atlas.LinearGroups.Triality.ScalarIntersection",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "triality-scalar-embedding-independence",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Triality.Order",
+        "Atlas.LinearGroups.Triality.Perfect",
+        "Atlas.LinearGroups.Triality.Simplicity"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.Triality.card_group",
+        "Atlas.Triality.simple",
+        "Atlas.Triality.fixedPointEquiv"
+      ]
+    }
+  ]
+}

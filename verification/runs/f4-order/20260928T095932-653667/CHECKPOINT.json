@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "f4-order",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.F4.Order",
+    "Atlas.LinearGroups.F4.OrderChecks"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.F4.OrderChecks.binary_order",
+      "module": "Atlas.LinearGroups.F4.OrderChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.OrderChecks.eight_order",
+      "module": "Atlas.LinearGroups.F4.OrderChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.OrderChecks.five_order",
+      "module": "Atlas.LinearGroups.F4.OrderChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.OrderChecks.four_order",
+      "module": "Atlas.LinearGroups.F4.OrderChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.OrderChecks.ternary_order",
+      "module": "Atlas.LinearGroups.F4.OrderChecks",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.card_Model",
+      "module": "Atlas.LinearGroups.F4.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.card_oppositePairStabilizer",
+      "module": "Atlas.LinearGroups.F4.Order",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.F4.card_parabolic",
+      "module": "Atlas.LinearGroups.F4.Order",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "actual-full-Albert-group-order-without-F4-simplicity",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.F4.simple",
+        "Atlas.G2.order",
+        "Atlas.G2.simple",
+        "Atlas.Fischer.",
+        "Atlas.ReeG2.",
+        "Atlas.F4.isSimple",
+        "Atlas.F4.isPerfect",
+        "Atlas.G2.card_Model",
+        "Atlas.G2.isSimple"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.G2.Order",
+        "Atlas.LinearGroups.G2.Simplicity",
+        "Mathlib.GroupTheory.GroupAction.Iwasawa",
+        "Atlas.GroupTheory.SolvableStabilizerSimplicity",
+        "Atlas.GroupTheory.IwasawaSolvableRadical"
+      ]
+    }
+  ]
+}
