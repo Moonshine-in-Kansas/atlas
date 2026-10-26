@@ -17,9 +17,9 @@ Read the [catalogue](CATALOGUE.md), the
 [construction and identification guide](catalogue/REALIZATIONS.md), and the
 [research note (PDF)](atlas_research_note.pdf) ([TeX](atlas_research_note.tex)).
 The guide has three themes: isomorphisms between different models, exceptional isomorphisms,
-and non-isomorphisms of all other cases by order or a further invariant, within the
-[comparison theorem's scope](COMPARISON.md#scope-and-definitions). Each result has
-separate links to its Lean statement and verification certificate.
+and non-isomorphisms of all other cases by order or a further invariant. Each result
+has separate links to its Lean statement and verification certificate, with the
+exact model and parameter hypotheses retained.
 The research note is the unchanged, dated 25 October development account:
 its broader local source inventory is distinguished from this filtered export.
 It is not a claim that every local draft module is included or release-accepted.
@@ -30,11 +30,10 @@ explicit audited equivalences with linked Lean proof definitions and compiled
 types. The G₂ and F₄ comparisons retain their separately stated scopes.
 
 This is a construction library, not a proof of classification exhaustiveness.
-Equality of orders is not used as a substitute for an isomorphism. The typed
-combined group-registry theorem covers 13 families and 17 individual groups.
-The numerical order-comparison theorem also covers E₆/E₇/E₈; their proved group
-orders supply the same separation argument, with [separate statement and audit
-links](catalogue/REALIZATIONS.md#e-series-order).
+Equality of orders is not used as a substitute for an isomorphism. The comparison
+proofs combine the individual group orders with the numerical order classification,
+explicit exceptional isomorphisms and the two structural invariants.
+See the [Lean statements and verification certificates](catalogue/REALIZATIONS.md).
 
 ## Build and check
 

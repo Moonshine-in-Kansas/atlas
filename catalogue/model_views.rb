@@ -187,6 +187,15 @@ module AtlasModelViews
         part.fetch('entries').map { |r|[r.fetch('id'),part.fetch('evidence').fetch('directory')] }
       end.to_h
     end
+    def model_order_audit
+      directory=read_json('verification/current.json').fetch('supplemental_cache_audit').fetch('directory')
+      result=read_json(directory+'/RESULT.json')
+      raise 'Model audit not passed' unless result['status']=='passed-source-bound-cache-audit'
+      names=File.readlines(@root+'/'+directory+'/declarations.jsonl').map { |line|JSON.parse(line).fetch('declaration') }
+      orders=registry.fetch('entries').map { |e|e.dig('roles','order','declaration') }
+      raise 'Model audit omits catalogue orders' unless (orders-names).empty?
+      "[Compiled model audit (26 Oct)](../#{directory}/RESULT.json)"
+    end
     def comparison_links(ids)
       rows=ids.map { |id|comparison_rows.find { |r|r['id']==id } || (raise "Unknown comparison #{id}") }
       labels={'b1-a1'=>'B₁','c1-a1'=>'C₁','psu2-a1'=>'PSU₂',
@@ -299,14 +308,10 @@ module AtlasModelViews
     
         ## 3. Non-isomorphisms of all other cases
     
-        **Order separation includes E₆, E₇ and E₈.** The numerical order-comparison
-        theorem covers their formulas as well as the earlier family and sporadic
-        formulas. Together with the proved orders of the constructed models, it
-        separates differently labelled groups by order, except for the exceptional
-        isomorphisms in Theme 2 and the two invariant obstructions below.
-        The older combined group-registry certificate has a narrower domain:
-        [13 families, 16 sporadic groups and Tits](../COMPARISON.md#scope-and-definitions).
-        The E-series order argument is given separately in the table.
+        After the exceptional isomorphisms in Theme 2, the remaining distinct
+        normalized labels are separated by unequal orders or one of the two
+        invariants below. The order argument combines the proved cardinalities
+        of the constructed models with the uniform numerical classification.
     
         | Non-isomorphism result and reason | Lean statements | Verification certificates |
         |---|---|---|
@@ -314,17 +319,8 @@ module AtlasModelViews
       general='Atlas.Comparisons.Catalogue.not_isomorphic_of_normalized_label_ne'
       order='Atlas.OrderArithmetic.catalogue_order_eq_iff'
       generic='Atlas.Comparisons.not_isomorphic_of_card_ne'
-      text<<"| **Combined registry certificate:** distinct normalized labels give nonisomorphic groups; its current domain is the 13-family group registry | #{theorem_ref(general,'Atlas/Comparisons.lean','statement')} | #{audit_link(AGGREGATE_AUDIT,[general])} |\n"
-      text<<"| **By order, including E₆/E₇/E₈:** outside the listed isomorphisms and the two patterns below, orders differ. The numerical classification is uniform, with no bound on rank or field size. | #{theorem_ref(order,'Atlas/OrderArithmetic/Classification.lean','order classification')} · #{theorem_ref('Atlas.OrderArithmetic.catalogue_order_ne','Atlas/OrderArithmetic/Classification.lean','unequal orders')} · #{theorem_ref(generic,'Atlas/Comparisons/Cardinality.lean','unequal orders imply nonisomorphism')} | #{audit_link(AGGREGATE_AUDIT,[order,'Atlas.OrderArithmetic.catalogue_order_ne',generic])} |\n"
-      e_orders=[];e_audits=[]
-      %w[E6 E7 E8].each do |type|
-        record=overlay.fetch('candidates').find { |c|c['entry']=='family.'+type && c['realization']=='chevalley' }
-        property=record.fetch('property_evidence').fetch('order')
-        ref=property.fetch('theorem')
-        e_orders<<statement(ref,type+'_order')
-        e_audits<<audit_link(property.dig('binding','directory'),[ref.fetch('declaration')],type+' order audit')
-      end
-      text<<"| <a id=\"e-series-order\"></a> **Actual E₆/E₇/E₈ groups:** their proved cardinalities are the formulas in the preceding row. Distinct family/field-size labels therefore give unequal orders and nonisomorphism. | #{e_orders.join(' · ')} | #{e_audits.join(' · ')} |\n"
+      text<<"| **Combined comparison theorem:** distinct normalized labels give nonisomorphic groups within its [specified registry](../COMPARISON.md#scope-and-definitions) | #{theorem_ref(general,'Atlas/Comparisons.lean','statement')} | #{audit_link(AGGREGATE_AUDIT,[general])} |\n"
+      text<<"| <a id=\"order-certificates\"></a><a id=\"e-series-order\"></a> **By order:** outside the listed isomorphisms and the two patterns below, orders differ. The numerical classification is uniform, with no bound on rank or field size. | [Model orders](../THEOREM_STATEMENTS.md) · #{theorem_ref(order,'Atlas/OrderArithmetic/Classification.lean','order classification')} · #{theorem_ref('Atlas.OrderArithmetic.catalogue_order_ne','Atlas/OrderArithmetic/Classification.lean','unequal orders')} · #{theorem_ref(generic,'Atlas/Comparisons/Cardinality.lean','unequal orders imply nonisomorphism')} | #{model_order_audit} · #{audit_link(AGGREGATE_AUDIT,[order,'Atlas.OrderArithmetic.catalogue_order_ne',generic])} |\n"
       counts='Atlas.Comparisons.Classical.oddB_C_involution_counts'
       bc_proofs,bc_audit=comparison_links(%w[odd-b-c-order odd-b-c-distinct])
       text<<"| **Equal order, different involution-class counts:** Bₙ(q) and Cₙ(q), odd q and n ≥ 3; counts n and ⌊n/2⌋ + 1 | #{bc_proofs} · #{theorem_ref(counts,'Atlas/Comparisons/Classical/OrthogonalInvolutions.lean','counts')} | #{bc_audit} · [B invariant replay](../verification/existence/2026-10-25-draft/AtlasDistinguished-typeB/RESULT.json) · [C invariant replay](../verification/existence/2026-10-25-draft/AtlasDistinguished-typeC/RESULT.json) |\n"
@@ -335,21 +331,14 @@ module AtlasModelViews
         A normalized label is the family and parameter label after the proved
         exceptional identifications. The 16 completed sporadic groups and Tits are
         separated from one another and from all admissible values of the 16 completed
-        families, including E₆/E₇/E₈, by order. The four invariant replays passed separately. The
+        families by order. The four invariant replays passed separately. The
         [two aggregate Comparator replays](../verification/existence/2026-10-25-draft/Catalogue-isomorphism/RESULT.json)
         remain memory-stopped; the passed full audits above do not assert a replay pass.
     
         <a id="comparison-scope"></a>
     
-        **Registry scope versus order-proof scope:** E₆/E₇/E₈ are present in the
-        numerical labels and their admissibility conditions. Their labels are unchanged
-        by normalization and occur in neither exceptional equal-order pattern.
-        Thus their order separation is already covered. The older concrete group
-        registry has no E-series constructors, so its single combined corollary does
-        not yet package this argument for them. The table links the existing E-series
-        order proofs, numerical comparison theorem and general nonisomorphism lemma;
-        the certificates for this argument are therefore linked separately.
-
+        The linked statements retain their exact model and parameter hypotheses.
+        The combined theorem's registry is specified in the [technical description](../COMPARISON.md#scope-and-definitions).
         For G₂/F₄ the registry uses the Octonion/Albert models; the comparisons to
         their Chevalley models have the status in Theme 1. The unfinished derived-group
         bridges in Theme 2 remain separate. [Exact theorem and compiled statements](../COMPARISON.md).
@@ -401,7 +390,7 @@ module AtlasModelViews
         end
         text<<"\n"
       end
-      text<<"All 40 comparison interfaces are retained. The numerical order theorem also includes E₆/E₇/E₈; their [actual group orders and verification certificates](REALIZATIONS.md#e-series-order) are linked separately because those carriers are not yet constructors of the older combined group registry. [Independent replay status](REALIZATIONS.md#remaining-pairs) remains explicit.\n"
+      text<<"All 40 comparison interfaces are retained. The [model-order statements](../THEOREM_STATEMENTS.md) and [verification records](../AUDIT.md) supply the group cardinalities used in the order argument. [Independent replay status](REALIZATIONS.md#remaining-pairs) remains explicit.\n"
       text
     end
     def isomorphism_page(statements)

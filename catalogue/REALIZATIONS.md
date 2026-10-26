@@ -350,41 +350,29 @@ retains all compositions, canonical-field wrappers and full hypotheses.
 
 ## 3. Non-isomorphisms of all other cases
 
-**Order separation includes E₆, E₇ and E₈.** The numerical order-comparison
-theorem covers their formulas as well as the earlier family and sporadic
-formulas. Together with the proved orders of the constructed models, it
-separates differently labelled groups by order, except for the exceptional
-isomorphisms in Theme 2 and the two invariant obstructions below.
-The older combined group-registry certificate has a narrower domain:
-[13 families, 16 sporadic groups and Tits](../COMPARISON.md#scope-and-definitions).
-The E-series order argument is given separately in the table.
+After the exceptional isomorphisms in Theme 2, the remaining distinct
+normalized labels are separated by unequal orders or one of the two
+invariants below. The order argument combines the proved cardinalities
+of the constructed models with the uniform numerical classification.
 
 | Non-isomorphism result and reason | Lean statements | Verification certificates |
 |---|---|---|
-| **Combined registry certificate:** distinct normalized labels give nonisomorphic groups; its current domain is the 13-family group registry | [statement](../Atlas/Comparisons.lean#L59 "Atlas.Comparisons.Catalogue.not_isomorphic_of_normalized_label_ne") | [Passed audit (12 Oct)](../verification/runs/comparison-catalogue-isomorphism/20261012T065332-1260019/CERTIFICATE.md) |
-| **By order, including E₆/E₇/E₈:** outside the listed isomorphisms and the two patterns below, orders differ. The numerical classification is uniform, with no bound on rank or field size. | [order classification](../Atlas/OrderArithmetic/Classification.lean#L43 "Atlas.OrderArithmetic.catalogue_order_eq_iff") · [unequal orders](../Atlas/OrderArithmetic/Classification.lean#L64 "Atlas.OrderArithmetic.catalogue_order_ne") · [unequal orders imply nonisomorphism](../Atlas/Comparisons/Cardinality.lean#L9 "Atlas.Comparisons.not_isomorphic_of_card_ne") | [Passed audit (12 Oct)](../verification/runs/comparison-catalogue-isomorphism/20261012T065332-1260019/CERTIFICATE.md) |
-| <a id="e-series-order"></a> **Actual E₆/E₇/E₈ groups:** their proved cardinalities are the formulas in the preceding row. Distinct family/field-size labels therefore give unequal orders and nonisomorphism. | [E6_order](../Atlas/LinearGroups/Chevalley/Catalogue/ESeriesOrder.lean#L10 "Atlas.Chevalley.Catalogue.E6_order") · [E7_order](../Atlas/LinearGroups/Chevalley/Catalogue/ESeriesOrder.lean#L18 "Atlas.Chevalley.Catalogue.E7_order") · [E8_order](../Atlas/LinearGroups/Chevalley/Catalogue/ESeriesOrder.lean#L26 "Atlas.Chevalley.Catalogue.E8_order") | [E6 order audit](../verification/runs/chevalley-catalogue-e6-order/20261018T121655-9/CERTIFICATE.md) · [E7 order audit](../verification/runs/chevalley-catalogue-e7-order/20261018T122351-9/CERTIFICATE.md) · [E8 order audit](../verification/runs/chevalley-catalogue-e8-order/20261018T123141-9/CERTIFICATE.md) |
+| **Combined comparison theorem:** distinct normalized labels give nonisomorphic groups within its [specified registry](../COMPARISON.md#scope-and-definitions) | [statement](../Atlas/Comparisons.lean#L59 "Atlas.Comparisons.Catalogue.not_isomorphic_of_normalized_label_ne") | [Passed audit (12 Oct)](../verification/runs/comparison-catalogue-isomorphism/20261012T065332-1260019/CERTIFICATE.md) |
+| <a id="order-certificates"></a><a id="e-series-order"></a> **By order:** outside the listed isomorphisms and the two patterns below, orders differ. The numerical classification is uniform, with no bound on rank or field size. | [Model orders](../THEOREM_STATEMENTS.md) · [order classification](../Atlas/OrderArithmetic/Classification.lean#L43 "Atlas.OrderArithmetic.catalogue_order_eq_iff") · [unequal orders](../Atlas/OrderArithmetic/Classification.lean#L64 "Atlas.OrderArithmetic.catalogue_order_ne") · [unequal orders imply nonisomorphism](../Atlas/Comparisons/Cardinality.lean#L9 "Atlas.Comparisons.not_isomorphic_of_card_ne") | [Compiled model audit (26 Oct)](../verification/2026-10-26-cache-audit/RESULT.json) · [Passed audit (12 Oct)](../verification/runs/comparison-catalogue-isomorphism/20261012T065332-1260019/CERTIFICATE.md) |
 | **Equal order, different involution-class counts:** Bₙ(q) and Cₙ(q), odd q and n ≥ 3; counts n and ⌊n/2⌋ + 1 | [equal order](../Atlas/Comparisons/Classical/OrthogonalOrder.lean#L10 "Atlas.Comparisons.Classical.oddB_card_eq_C") · [nonisomorphism](../Atlas/Comparisons/Classical/OrthogonalInvolutions.lean#L21 "Atlas.Comparisons.Classical.oddB_not_equiv_C") · [counts](../Atlas/Comparisons/Classical/OrthogonalInvolutions.lean#L15 "Atlas.Comparisons.Classical.oddB_C_involution_counts") | [Passed audit (15 Sep)](../verification/runs/orthogonal-comparison-contracts/20260915T124053-3/CERTIFICATE.md) · [B invariant replay](../verification/existence/2026-10-25-draft/AtlasDistinguished-typeB/RESULT.json) · [C invariant replay](../verification/existence/2026-10-25-draft/AtlasDistinguished-typeC/RESULT.json) |
 | **Equal order, different Sylow-2 centers:** A₈ ≃ PSL₄(2) versus PSL₃(4), both order 20,160; center sizes 2 and 4 | [equal order](../Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean#L31 "Atlas.Comparisons.Exceptional.alt8_card_eq_psl3Card4") · [A₈ nonisomorphism](../Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean#L22 "Atlas.Comparisons.Exceptional.alt8_not_equiv_psl3Card4") · [PSL₄ nonisomorphism](../Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean#L13 "Atlas.Comparisons.Exceptional.psl4Two_not_equiv_psl3Card4") | [Passed audit (15 Sep)](../verification/runs/orthogonal-comparison-contracts/20260915T124053-3/CERTIFICATE.md) · [A₈ invariant replay](../verification/existence/2026-10-25-draft/AtlasDistinguished-alternating8/RESULT.json) · [PSL₃(4) invariant replay](../verification/existence/2026-10-25-draft/AtlasDistinguished-psl3Four/RESULT.json) |
 
 A normalized label is the family and parameter label after the proved
 exceptional identifications. The 16 completed sporadic groups and Tits are
 separated from one another and from all admissible values of the 16 completed
-families, including E₆/E₇/E₈, by order. The four invariant replays passed separately. The
+families by order. The four invariant replays passed separately. The
 [two aggregate Comparator replays](../verification/existence/2026-10-25-draft/Catalogue-isomorphism/RESULT.json)
 remain memory-stopped; the passed full audits above do not assert a replay pass.
 
 <a id="comparison-scope"></a>
 
-**Registry scope versus order-proof scope:** E₆/E₇/E₈ are present in the
-numerical labels and their admissibility conditions. Their labels are unchanged
-by normalization and occur in neither exceptional equal-order pattern.
-Thus their order separation is already covered. The older concrete group
-registry has no E-series constructors, so its single combined corollary does
-not yet package this argument for them. The table links the existing E-series
-order proofs, numerical comparison theorem and general nonisomorphism lemma;
-the certificates for this argument are therefore linked separately.
-
+The linked statements retain their exact model and parameter hypotheses.
+The combined theorem's registry is specified in the [technical description](../COMPARISON.md#scope-and-definitions).
 For G₂/F₄ the registry uses the Octonion/Albert models; the comparisons to
 their Chevalley models have the status in Theme 1. The unfinished derived-group
 bridges in Theme 2 remain separate. [Exact theorem and compiled statements](../COMPARISON.md).

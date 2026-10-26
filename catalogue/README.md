@@ -13,9 +13,6 @@ The [complete statement index](COMPARISONS.md) follows the same three themes and
 retains all 40 comparison interfaces with their full parameter hypotheses.
 The 39-model inventory is an expandable reference list within the first theme;
 full model descriptions, orders and simplicity domains remain in the catalogue.
-The numerical order-comparison theorem includes E₆/E₇/E₈. Their actual order
-proofs and audits are linked in Theme 3; the older concrete group-registry
-corollary has not yet been extended to those carriers.
 
 The generated views display all 39 models of the 33 entries. Six entries retain
 both original and Chevalley constructions. [ISOMORPHISMS.md](ISOMORPHISMS.md)

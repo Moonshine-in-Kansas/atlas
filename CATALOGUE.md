@@ -1087,8 +1087,6 @@ The [construction and identification guide](catalogue/REALIZATIONS.md) separates
 [comparisons between models](catalogue/REALIZATIONS.md#same-group),
 [exceptional isomorphisms](catalogue/REALIZATIONS.md#between-families), and
 [nonisomorphism by orders or invariants](catalogue/REALIZATIONS.md#remaining-pairs).
-One general certificate covers all distinct normalized labels within the
-[combined group-registry theorem's scope](COMPARISON.md#scope-and-definitions).
-The numerical order theorem also covers E₆/E₇/E₈; their [group-order proofs and
-comparison evidence](catalogue/REALIZATIONS.md#e-series-order) are linked separately.
-The [registry and order-proof scopes](catalogue/REALIZATIONS.md#comparison-scope) are distinguished explicitly.
+Each result links its Lean statement and verification certificate.
+The [model-order statements](THEOREM_STATEMENTS.md) and [verification records](AUDIT.md)
+provide the cardinalities used in the order argument.

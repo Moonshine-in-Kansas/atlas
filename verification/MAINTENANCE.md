@@ -69,8 +69,8 @@ necessary; a JSON receipt and its hashes are not execution attestations.
 
 The format-2 [registry](existence/registry.json) binds every actual model to its
 reviewed reference, solution and configuration in the original dated bundle.
-Albert F₄ and Chevalley F₄ are distinct witnesses. E₆/E₇/E₈ use their completed
-Chevalley anchors. Missing or substituted defaults are rejected.
+Albert F₄ and Chevalley F₄ are distinct witnesses. Every contract uses its
+registered construction. Missing or substituted defaults are rejected.
 
 To prepare a portable harness without running a checker:
 

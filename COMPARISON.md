@@ -14,9 +14,7 @@ their normalized labels agree.** Consequently, different normalized labels give 
 groups, including the cases where their orders agree. All remaining pairs in
 this scope have different orders, except for odd-q Bᵣ/Cᵣ at r≥3 and
 A₈/PSL₃(4); those pairs are separated by involution-class counts and Sylow-2
-center sizes, respectively. The statement covers all 16 completed sporadic groups
-and Tits. Its concrete group registry does not yet include E₆/E₇/E₈;
-the numerical order-comparison theorem already includes all three.
+center sizes, respectively.
 
 The declaration is
 `Atlas.Comparisons.Catalogue.isomorphic_iff_normalized_label_eq`.
@@ -35,23 +33,12 @@ split D, minus D, G₂, F₄, triality ³D₄, Suzuki ²B₂ and small Ree ²G�
 It also covers M₁₁, M₁₂, M₂₂, M₂₃, M₂₄, Co₁, Co₂, Co₃, McL, HS, Suz, J₂,
 Fi₂₂, Fi₂₃, Fi₂₄′, Ru and Tits.
 
-There are two distinct registries. The concrete group registry above has not yet
-been extended with E₆/E₇/E₈ carriers. The numerical
-[RawEntry and Admissible definitions](Atlas/OrderArithmetic/Parameters.lean)
-already include all three, for every prime-power q. Consequently the unrestricted
-[order-comparison theorem](Atlas/OrderArithmetic/Classification.lean) applies to
-their formulas. Normalization leaves E₆/E₇/E₈ unchanged, and neither exceptional
-equal-order pattern contains them.
-
-The actual [E₆/E₇/E₈ group-order theorems](Atlas/LinearGroups/Chevalley/Catalogue/ESeriesOrder.lean)
-prove precisely those formulas (with the finite products expanded). Combining them
-with the numerical comparison and
-[unequal orders imply nonisomorphism](Atlas/Comparisons/Cardinality.lean)
-therefore separates their distinct family/field-size labels from one another
-and from the other admissible labels. The [guide links these statements and their
-passed audit certificates](catalogue/REALIZATIONS.md#e-series-order).
-The absence of E-series constructors from the older combined group theorem is
-an interface limitation, not a gap in the order-comparison proof.
+The numerical [order-comparison theorem](Atlas/OrderArithmetic/Classification.lean)
+is stated for [admissible numerical labels](Atlas/OrderArithmetic/Parameters.lean).
+For constructed groups, combine their [proved cardinalities](THEOREM_STATEMENTS.md)
+with that theorem and [unequal orders imply nonisomorphism](Atlas/Comparisons/Cardinality.lean).
+The [catalogue](CATALOGUE.md) and [verification records](AUDIT.md) provide the
+individual model statements, parameter ranges and evidence.
 
 The family entries use the canonical simple parameter ranges and retain the
 actual finite fields and field extensions. Different presentations of fields
