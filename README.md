@@ -1,15 +1,13 @@
 # A constructive ATLAS of finite simple groups in Lean
 
-**Version 1.2 review candidate — branch `v1.2-review`.** The public default remains the preserved
-[Version 1.0](https://github.com/Moonshine-in-Kansas/atlas/releases/tag/v1.0)
-until the owner has reviewed this candidate and the release requirements are met.
-Uploading this review branch does not change `main`, publish a final v1.2 release
-or deploy the website. The source-bound compiled audit
+**Version 1.2 is the current, editable version on `main`.** It can receive further
+updates. The immutable [Version 1.0 release](https://github.com/Moonshine-in-Kansas/atlas/releases/tag/v1.0)
+remains available at its permanent version link. The source-bound compiled audit
 covers all 1,207 selected declarations; three Comparator targets remain open.
-See [verification status](AUDIT.md).
+See [verification status](AUDIT.md) for the exact evidence and outstanding checks.
 
 ATLAS constructs explicit finite groups and proves their orders, simplicity and
-structural properties. This candidate contains **16 completed families,
+structural properties. Version 1.2 contains **16 completed families,
 16 sporadic constructions and the Tits group**, with their full parameter ranges
 and exceptions. The stable entry point is `import Atlas`.
 
@@ -21,7 +19,7 @@ and non-isomorphisms of all other cases by order or a further invariant. Each re
 has separate links to its Lean statement and verification certificate, with the
 exact model and parameter hypotheses retained.
 The research note reports the 25 October development snapshot, with editorial
-clarifications dated 26 October. Its broader local source inventory and dated
+clarifications dated 27 October. Its broader local source inventory and dated
 verification results are distinguished from this filtered export.
 
 A, B, C, D, F₄ and G₂ each retain both their original model and a Chevalley

@@ -393,7 +393,7 @@ The isomorphism between the Chevalley and full split-Albert models remains unfin
 
 ## family.G2: comparison scope
 
-The research note records a marked Chevalley–octonion equivalence with ten passed local audit scopes, but its final preservation/registration and source export are outside this review snapshot. This review therefore supplies both model contracts, without claiming that their isomorphism certificate is included.
+The research note records a marked Chevalley–octonion equivalence with ten passed local audit scopes, but its final preservation/registration and source export are outside this version. This version therefore supplies both model contracts, without claiming that their isomorphism certificate is included.
 
 [Both constructions](../CATALOGUE.md#family-g2).
 

@@ -22,4 +22,4 @@ receipts; `sync.rb check` checks consistency without editing files.
 Preserve each witness and its full parameter range. The Chevalley F₄ contract
 does not replace the Albert-model contract. A successful existence check
 establishes its formal statement, not an external recognition theorem.
-Exact-export publication acceptance remains separate; see [maintenance](../MAINTENANCE.md).
+Exact-export acceptance for a frozen release remains separate; see [maintenance](../MAINTENANCE.md).

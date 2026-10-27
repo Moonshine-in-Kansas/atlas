@@ -10,7 +10,7 @@
     "AtlasComparison.nonisomorphic",
     "AtlasExistence.F4"
   ],
-  "deferral_note": "Owner request: leave these three Comparator targets open; continue other release jobs subject to resource limits. No pass or publication waiver is implied.",
+  "deferral_note": "The three Comparator targets remain open and are not counted as passed. The owner authorized editable Version 1.2 publication on main on 27 October 2026; frozen-release acceptance remains separate.",
   "checks": {
     "build_audit": null,
     "nanoda": null,
@@ -24,5 +24,31 @@
     "directory": "verification/nanoda/2026-10-24-draft",
     "bundle_sha256": "d9e395904bbdd5bba5c695cc0c347b252cb7bd81e7ccde41aabbc390cdb1a7c6"
   },
-  "prior_accepted_release_sha256": "3ddc6d496bc784d342c708ca6ae4d46b50e2b7c65d2b56a909d2476e49d52a48"
+  "prior_accepted_release_sha256": "3ddc6d496bc784d342c708ca6ae4d46b50e2b7c65d2b56a909d2476e49d52a48",
+  "working_publication": {
+    "format": 1,
+    "version": "1.2",
+    "branch": "main",
+    "mutable": true,
+    "authorized_on": "2026-10-27",
+    "owner_decision": "Make version v1.2 the main working (modifable) version. Preserve immutable v1.0. Keep the outstanding checks open and leave v1.2 unfrozen.",
+    "bindings": {
+      "verification/release-candidate/SOURCE_HASHES.json": "e1dd7c464e00ceee5d6051ea69fc2d63fa6831a5a3709b8c5d098123b9e0fe19",
+      "verification/roots.json": "063e4d2f12380a07737a301b7a95336a52e2042f018c7ab58c4854d860df289e",
+      "verification/existence/registry.json": "63246830310d0bf043dfd3f279ea4d1d329dff39d6a89d0e79feacde0e79b458",
+      "verification/release-candidate/V1_BASELINE.json": "3ddc6d496bc784d342c708ca6ae4d46b50e2b7c65d2b56a909d2476e49d52a48",
+      "verification/2026-10-26-cache-audit/BUNDLE.json": "9944b10ecd41e33aea4d1e814358264f335fb44cce8d2972b02c72b4330ea9fc",
+      "verification/nanoda/2026-10-24-draft/BUNDLE.json": "d9e395904bbdd5bba5c695cc0c347b252cb7bd81e7ccde41aabbc390cdb1a7c6"
+    },
+    "allowed_pending_checks": [
+      "build_audit",
+      "nanoda",
+      "interface_comparator"
+    ],
+    "allowed_open_contracts": [
+      "AtlasComparison.main",
+      "AtlasComparison.nonisomorphic",
+      "AtlasExistence.F4"
+    ]
+  }
 }

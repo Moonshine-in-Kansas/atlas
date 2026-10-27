@@ -120,7 +120,7 @@ realizations and their marked maps are now [registered and separately audited](c
 Both the Chevalley and octonion/Albert models of G₂/F₄ are displayed with their
 own proof references. The research note records ten passed local scopes for the
 marked G₂ equivalence, but its final preservation/registration and source export
-are outside this review snapshot. The F₄ equivalence remains unfinished.
+are outside this version. The F₄ equivalence remains unfinished.
 Their precise comparison scopes are retained in the [certificate inventory](catalogue/ISOMORPHISMS.md).
 
 ## Proof architecture

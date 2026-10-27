@@ -57,8 +57,8 @@
 \hypersetup{pdfauthor={Gerald H\"ohn},
   pdfsubject={Constructions, orders, simplicity, and structural comparisons of finite simple groups},
   pdfkeywords={finite simple groups, sporadic groups, classical groups, octonions, Lean, formal verification}}
-\date{25 October 2026 --- version 1.2 development draft\\
-  \small Editorial revision: 26 October 2026}
+\date{25 October 2026 --- version 1.2\\
+  \small Editorial revision: 27 October 2026}
 \begin{document}
 \maketitle
 
@@ -2207,7 +2207,7 @@ They exclude \code{sorryAx}, project-specific mathematical axioms, and
 native-evaluator trust shortcuts. The proofs have been accepted by
 Lean's standard kernel and, for the exported declarations specified in
 Appendix~\ref{sec:verification}, by the independently implemented Nanoda
-checker. The latest draft replay has a substantially broader scope than
+checker. The latest dated replay has a substantially broader scope than
 the historical release selection. These checks still
 rely on the foundations, the checking implementations, the export
 pipeline, and the host system. The axiom report must be read together
@@ -2239,8 +2239,8 @@ AI's search is unnecessary for checking the resulting proof terms.
 
 \subsection{Recorded verification}\label{sec:verification}
 
-The latest evidence concerns the local draft source snapshot, rather than
-an automatically updated public release. An incremental build, a full
+The dated checker evidence concerns the source snapshot identified in each
+receipt. Publication of version 1.2 does not change the scope of those checks. An incremental build, a full
 compiled-statement and dependency audit, an independent Nanoda replay,
 and a Comparator reference check address different questions. Their
 counts therefore need not agree.
@@ -2345,8 +2345,11 @@ likewise retains its date and its $46$-root, $23$-entry scope.
 
 \subsection{Repository and checking instructions}\label{sec:release}
 
-The public release is at
-\url{https://github.com/Moonshine-in-Kansas/atlas}; its maintained registry
+Version 1.2 is maintained on the editable \code{main} branch at
+\url{https://github.com/Moonshine-in-Kansas/atlas}. The immutable version 1.0
+release remains available at
+\url{https://github.com/Moonshine-in-Kansas/atlas/releases/tag/v1.0}.
+The maintained registry
 is \leanname{catalogue/catalogue.json}. The private development repository
 is \url{https://github.com/Moonshine-in-Kansas/atlas_draft}; it uses
 \leanname{docs/catalogue/catalogue.json}, with separate realization and
@@ -2354,7 +2357,7 @@ comparison profiles. The generated \code{CATALOGUE.md} gives the effective
 completion inventory. The project guide \leanname{atlas_project.tex}
 describes the development workflow and requirements for new constructions.
 
-The draft's \leanname{verification/WORKFLOWS.md} and checkpoint manifests
+The development repository's \leanname{verification/WORKFLOWS.md} and checkpoint manifests
 describe full statement/dependency checks. The release's \code{AUDIT.md}
 and \leanname{verification/MAINTENANCE.md} describe its separate acceptance
 gate. Appendix~\ref{app:provenance} identifies the exact sources, tools,
@@ -2368,7 +2371,7 @@ neither the release nor its evidence or licensing.
 
 \section{Source state and reproducibility}\label{app:provenance}
 
-The current draft has principal checkout commit
+The 25 October development snapshot has principal checkout commit
 \leanname{95c13b57b188b350503fe3a5d6aace5f0a79047b} together with the
 working-tree files identified by the checker records. The commit alone
 does not identify all checked sources: the exact source hashes in each
@@ -2446,7 +2449,7 @@ then built successfully on its own, and the final full driver passed.
 
 \subsection{Replay records and checker revisions}\label{app:replays}
 
-\paragraph{Current draft receipts.}
+\paragraph{Dated development receipts.}
 The Nanoda run directory is
 \leanname{claude/nanoda-draft-20261024/filtered-20261024T144223/}.
 Its \leanname{KERNEL_RESULT.json}, \leanname{SCOPE.json},
@@ -2477,7 +2480,7 @@ memory stops or widen a successful run's scope.
 \paragraph{Nanoda revision and historical replay.}
 The checker revision is
 \leanname{4c544ed4099c8227f07d5de77ad1e69fb0740a27}.
-This same checker revision was used for the current draft. The historical release run checked 70\,891 exported declarations, exited with status zero,
+This same checker revision was used for the 24 October development replay. The historical release run checked 70\,891 exported declarations, exited with status zero,
 and finished at 06:40:26 UTC on 18 September. Checking took
 31 minutes 0.82 seconds on one thread, with maximum resident memory
 5\,375\,116 KiB (about 5.13 GiB); export took 93.66 seconds.

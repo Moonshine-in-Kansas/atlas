@@ -1,63 +1,73 @@
-# Maintaining Version 1.2 metadata
+# Maintaining Version 1.2
 
-This is a prepared candidate with pending publication acceptance. All 33
-catalogue defaults, six additional model contracts, four strengthened contracts
-and two aggregate comparison contracts are indexed. The three deferred targets
-remain open; preparation does not retry them or count them as passed.
+Version 1.2 is the editable version on `main`. The owner authorized this working
+publication on 27 October 2026 with the outstanding checks disclosed. Version 1.0
+remains an immutable release. A frozen Version 1.2 release requires the separate
+acceptance checks below; updating `main` does not freeze the version.
 
-## Local preparation
+All 33 catalogue defaults, six additional model contracts, four strengthened
+contracts and two aggregate comparison contracts are indexed. Albert-model F₄
+and the two aggregate Comparator targets remain open after memory stops.
+Publication does not retry these targets or count them as passed.
+
+## Metadata and editable publication
 
 ```sh
 ruby verification/release_metadata.rb refresh
 ruby verification/release_metadata.rb check-preparation
+ruby verification/release_metadata.rb check-working
+git config core.hooksPath verification/hooks
 ```
 
 Refresh generates the catalogue pages, 66 primary and eight additional-model
-order/simplicity statements, two uniform-range supplements, four compiled construction-isomorphism certificates,
-Comparator result table and YAML result index, AUDIT.md and complete manifests.
-The read-only preparation check verifies exact source and pin hashes, all 1,207
-audit roots across the catalogue and realization/comparison registries,
-immutable checker bundles, 33 diagram measurements, reader links and every
-distributed file. It accepts explicitly pending verification as a preparation
-state. It launches no proof checker and grants no publication acceptance.
+order/simplicity statements, two uniform-range supplements, four compiled
+construction-isomorphism certificates, Comparator results, the YAML index,
+AUDIT.md and complete manifests. Preparation validation checks source and pin
+hashes, all 1,207 audit roots, immutable checker bundles, 33 diagram measurements,
+reader links and every distributed file. These commands run no proof checker.
+
+`check-working` also validates the owner-authorized publication scope in
+`verification/current.json`: Version 1.2 on `main`, the exact mathematical source,
+target and evidence bindings, and the explicitly allowed outstanding checks.
+Documentation can be revised without changing those mathematical bindings.
+A changed proof source, dependency pin, target selection or evidence bundle
+requires updated applicable verification and publication metadata. No new failure
+or unlisted open contract is implicitly authorized by the working-version policy.
+
+The pre-push hook requires `check-working` for `main`. The retained `v1.2-review`
+branch uses preparation validation; tags and every other branch use strict
+acceptance. A mixed push uses the strictest gate. Every pushed commit must match
+the checked HEAD, the checkout must be clean, and ref deletions are refused.
+The Pages workflow validates the working-publication scope before deployment.
+Local hooks are safeguards, not a server policy; recorded authorization and
+hashes are not mathematical verification or cryptographic attestations of consent.
 
 `RELEASE_MANIFEST.json` covers every distributed file except the three manifests
 themselves. `SHA256SUMS` additionally covers that JSON manifest;
 `verification/release-candidate/PACKAGE_SHA256SUMS` additionally covers
-`SHA256SUMS`. Only the final package checksum file excludes itself. Ignored local
-Git metadata, Lake caches and `verification/results/` outputs are not distributed.
+`SHA256SUMS`. Only the final package checksum file excludes itself. Local Git
+metadata, Lake caches and `verification/results/` outputs are not distributed.
+These metadata commands never push or change repository visibility.
 
-## Publication gate
+## Acceptance before a frozen release
 
 ```sh
 ruby verification/release_metadata.rb check
-git config core.hooksPath verification/hooks
 ```
 
-`check` repeats preparation validation and refuses outstanding acceptance.
-The owner has separately authorized uploading the candidate to `v1.2-review`
-while keeping `main` at Version 1.0 for review. Only that review branch uses
-`check-preparation` in the pre-push hook. Main, version tags and every other
-branch still require `check`. Every pushed commit must match the checked HEAD,
-and the checkout must be clean. Mixed pushes containing a main/tag update use
-the strict gate for the whole push. The Pages workflow always uses the strict
-gate and deploys automatically only for main. A review upload creates no final
-release tag and does not change the default branch or deploy Pages.
-
-Local hooks are safeguards, not a server policy. Owner review and completion of
-acceptance remain prerequisites for promoting Version 1.2 to main.
-These commands never push, enable Pages or change repository visibility.
+`check` repeats all metadata validation and refuses outstanding acceptance.
+The exact export still needs accepted project proof rechecking with a complete
+dependency audit, Nanoda replay and interface Comparator evidence. The three
+deferred mathematical contracts must also be resolved under a later assignment.
+The working-publication authorization does not satisfy these requirements.
 
 `current.json` separates the supplemental cache audit and dated checker records
-from current-export acceptance. The cache audit is a successful fresh root
-elaboration and full compiled dependency inspection. It is not a fresh rebuild
+from current-export acceptance. The cache audit freshly elaborates the root
+imports and inspects complete compiled dependencies. It is not a fresh rebuild
 of every project proof or an independent kernel replay. Its two false scope flags
-are checked, and its success cannot fill an independent-checker acceptance slot.
+are checked; its success cannot fill an independent-checker acceptance slot.
 
-Before promotion, the exact export still needs accepted project proof rechecking,
-a complete dependency audit, Nanoda and interface Comparator evidence. The three
-deferred mathematical contracts must also be resolved under a later assignment.
-Existing 42/45 outcomes stay immutable. New acceptance uses separate dated
+Existing 42/45 outcomes remain immutable. New acceptance uses separate dated
 evidence, exact source/pin and root maps, a hashed bundle, original process
 receipts and an explicit `ACCEPTANCE.json`; old results must not be relabelled.
 An accepted receipt declares its check kind, allowed axioms, unchanged inputs
@@ -84,7 +94,7 @@ Only local Lake paths and package metadata are adapted; reviewed Lean/config
 bytes are copied exactly. Follow [the checker guide](INDEPENDENT_CHECKERS.md)
 for an actual replay. No previous pass is promoted by harness preparation.
 
-Run lightweight regression checks with an output directory outside the candidate:
+Run lightweight regression checks with an output directory outside the export:
 
 ```sh
 ruby verification/test_metadata.rb /absolute/path/to/new-test-output
@@ -101,8 +111,8 @@ are dated declaration-span counts, with exact roots, sources and diagrams bound
 by `catalogue/measurement.json`; they are not a new recount or proof check.
 
 The research-note TeX/PDF reports the dated 25 October development account,
-with editorial clarifications dated 26 October; README records its broader local scope. Construction jobs and internal progress
-notes are excluded. Version 1.0's immutable release and original public history
-must be rechecked before any promotion. The prepared Pages workflow preserves
-old unversioned URLs and separate `v1.0/` and `v1.2/` views; the root becomes the
-Version 1.2 view only after the strict gate and publication succeed.
+with editorial changes dated 27 October; README records its broader local scope.
+Construction jobs and internal progress notes are excluded. Preserve Version 1.0's
+immutable tag, release assets and original public history through every update.
+The website root selects Version 1.2. Separate `v1.0/` and `v1.2/` views coexist;
+old unversioned diagram URLs continue to show Version 1.0.

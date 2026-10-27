@@ -1,7 +1,7 @@
 # Independent-checker reproduction
 
 [Nanoda on 24 October](nanoda/2026-10-24-draft/README.md) passed 139,617 declarations
-with zero typechecker errors and a pretty-printer warning. Its excluded draft
+with zero typechecker errors and a pretty-printer warning. Its excluded incomplete
 modules and 45 generated partial implementations are explicit in the bundle.
 [Comparator on 25 October](existence/RESULTS.md) passed 42 of 45 targets; three
 stopped at the memory cap. Neither result is a fresh check of this filtered export.

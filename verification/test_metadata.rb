@@ -34,7 +34,32 @@ end
 gate=lambda { |overrides={}|AtlasReleaseMetadata::Gate.new(root,reader:TestInputs.new(root,overrides)) }
 g=gate.call;g.validate_sources!;g.validate_measurement!;g.validate_cache!;g.validate_history!;g.validate_acceptance!
 raise 'Current pending requirements disappeared' unless g.blockers.size==6 && g.contracts[:open]==AtlasContracts::DEFERRED
-results<<{test:'Unchanged candidate validates and retains six explicit acceptance requirements',result:'passed'}
+results<<{test:'Unchanged export validates and retains six explicit acceptance requirements',result:'passed'}
+g.validate_working_publication!
+raise 'Working publication changed pending acceptance' unless g.blockers.size==6
+results<<{test:'Authorized editable publication preserves every outstanding acceptance requirement',result:'passed'}
+working=lambda do |overrides|
+  x=gate.call(overrides)
+  x.instance_variable_set(:@contracts,g.contracts)
+  x.validate_working_publication!
+end
+o=change.call('verification/current.json') { |j|j.delete('working_publication') }
+reject.call('Missing editable-publication authorization',/Missing working-publication authorization/) { working.call(o) }
+{'version'=>'1.3','branch'=>'v1.2','mutable'=>false}.each do |key,value|
+  o=change.call('verification/current.json') { |j|j['working_publication'][key]=value }
+  reject.call("Changed working-publication #{key}",/Wrong working-publication scope/) { working.call(o) }
+end
+o=change.call('verification/current.json') { |j|j['working_publication']['bindings'].delete(j['sources']) }
+reject.call('Missing mathematical binding',/binding changed/) { working.call(o) }
+%w[verification/release-candidate/SOURCE_HASHES.json verification/roots.json verification/existence/registry.json].each do |p|
+  reject.call("Changed authorized binding #{p}",/binding changed/) { working.call(p=>base.read(p)+"\n") }
+end
+%w[allowed_pending_checks allowed_open_contracts].each do |key|
+  o=change.call('verification/current.json') { |j|j['working_publication'][key]<<'unreviewed' }
+  reject.call("Broadened #{key}",/Wrong allowed/) { working.call(o) }
+end
+x=gate.call;x.instance_variable_set(:@contracts,g.contracts.merge(open:g.contracts[:open]+['unreviewed']))
+reject.call('New open target outside authorization',/Unapproved open contracts/) { x.validate_working_publication! }
 source='Atlas/Families/Cyclic/Basic.lean'
 reject.call('Changed proof source',/Sources or dependency pins changed/) { gate.call(source=>base.read(source)+"\n").validate_sources! }
 reject.call('Changed toolchain pin',/Sources or dependency pins changed/) { gate.call('lean-toolchain'=>"leanprover/lean4:v0.0.0\n").validate_sources! }

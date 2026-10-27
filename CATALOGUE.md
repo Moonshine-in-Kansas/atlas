@@ -4,7 +4,7 @@
 The 33 completed entries comprise 16 families, 16 sporadic constructions and the
 Tits group. They describe explicit models and their stated parameter ranges.
 See [verification status](AUDIT.md), [constructions and identification certificates](catalogue/REALIZATIONS.md)
-and [the comparison theorem](COMPARISON.md). Release acceptance remains pending.
+and [the comparison theorem](COMPARISON.md). Version 1.2 is maintained on `main`; outstanding checks are recorded in the audit summary.
 
 In the Lie-type rows, q is the base-field size and n is Lie rank:
 Aₙ(q)=PSLₙ₊₁(q), ²Aₙ(q)=PSUₙ₊₁(q). In Aₙ, n is the permutation degree.
@@ -649,7 +649,7 @@ This contract proves order and simplicity of this explicit witness for q > 2 for
 
 ### Isomorphism between these constructions
 
-The research note records a marked Chevalley–octonion equivalence with ten passed local audit scopes, but its final preservation/registration and source export are outside this review snapshot. This review therefore supplies both model contracts, without claiming that their isomorphism certificate is included.
+The research note records a marked Chevalley–octonion equivalence with ten passed local audit scopes, but its final preservation/registration and source export are outside this version. This version therefore supplies both model contracts, without claiming that their isomorphism certificate is included.
 
 The existing order/simplicity dependency diagram and line counts describe the split-octonion model. They are not counts for both constructions combined.
 

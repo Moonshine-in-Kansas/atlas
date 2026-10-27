@@ -137,7 +137,7 @@ module AtlasModelViews
       when 'family.F4'
         'The isomorphism between the Chevalley and full split-Albert models remains unfinished. No certificate identifying them is claimed.'
       when 'family.G2'
-        'The research note records a marked Chevalley–octonion equivalence with ten passed local audit scopes, but its final preservation/registration and source export are outside this review snapshot. This review therefore supplies both model contracts, without claiming that their isomorphism certificate is included.'
+        'The research note records a marked Chevalley–octonion equivalence with ten passed local audit scopes, but its final preservation/registration and source export are outside this version. This version therefore supplies both model contracts, without claiming that their isomorphism certificate is included.'
       else
         'No registered isomorphism certificate between these models is present in this snapshot.'
       end

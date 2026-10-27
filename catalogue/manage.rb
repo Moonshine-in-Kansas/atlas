@@ -53,7 +53,7 @@ text=<<~MD
   The 33 completed entries comprise 16 families, 16 sporadic constructions and the
   Tits group. They describe explicit models and their stated parameter ranges.
   See [verification status](AUDIT.md), [constructions and identification certificates](catalogue/REALIZATIONS.md)
-  and [the comparison theorem](COMPARISON.md). Release acceptance remains pending.
+  and [the comparison theorem](COMPARISON.md). Version 1.2 is maintained on `main`; outstanding checks are recorded in the audit summary.
 
   In the Lie-type rows, q is the base-field size and n is Lie rank:
   Aₙ(q)=PSLₙ₊₁(q), ²Aₙ(q)=PSUₙ₊₁(q). In Aₙ, n is the permutation degree.
@@ -176,7 +176,8 @@ out['catalogue/current-verification.json']=JSON.pretty_generate({
   construction_isomorphism_certificates:model_views.comparisons.map { |c|c.dig('witness','declaration') },
   checked_references:load_json('verification/roots.json').size,compiled_audit:audit,
   prior_catalogue_check:'verification/catalogue/2026-10-19/original-current-verification.json',
-  publication_acceptance:'pending; see verification/current.json and AUDIT.md'
+  working_publication:'owner-authorized editable Version 1.2 on main',
+  frozen_release_acceptance:'pending; see verification/current.json and AUDIT.md'
 })+"\n"
 out.each do |p,s|
   if mode=='refresh'

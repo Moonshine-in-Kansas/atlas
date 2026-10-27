@@ -16,13 +16,14 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - name: Check release evidence and metadata
-        run: ruby verification/release_metadata.rb check
+      - name: Check working-version evidence and publication scope
+        run: ruby verification/release_metadata.rb check-working
       - uses: actions/configure-pages@v5
       - name: Stage current and preserved Version 1.0 diagrams
         run: ruby verification/dependency-maps/build_site.rb "$RUNNER_TEMP/atlas-diagram-site"
