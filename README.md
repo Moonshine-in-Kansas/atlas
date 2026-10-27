@@ -1,11 +1,5 @@
 # A constructive ATLAS of finite simple groups in Lean
 
-**Version 1.2 is the current, editable version on `main`.** It can receive further
-updates. The immutable [Version 1.0 release](https://github.com/Moonshine-in-Kansas/atlas/releases/tag/v1.0)
-remains available at its permanent version link. The source-bound compiled audit
-covers all 1,207 selected declarations; three Comparator targets remain open.
-See [verification status](AUDIT.md) for the exact evidence and outstanding checks.
-
 ATLAS constructs explicit finite groups and proves their orders, simplicity and
 structural properties. Version 1.2 contains **16 completed families,
 16 sporadic constructions and the Tits group**, with their full parameter ranges
@@ -32,6 +26,12 @@ Equality of orders is not used as a substitute for an isomorphism. The compariso
 proofs combine the individual group orders with the numerical order classification,
 explicit exceptional isomorphisms and the two structural invariants.
 See the [Lean statements and verification certificates](catalogue/REALIZATIONS.md).
+
+**Version 1.2 is the current, editable version on `main`.** It can receive further
+updates. The immutable [Version 1.0 release](https://github.com/Moonshine-in-Kansas/atlas/releases/tag/v1.0)
+remains available at its permanent version link. The source-bound compiled audit
+covers all 1,207 selected declarations; three Comparator targets remain open.
+See [verification status](AUDIT.md) for the exact evidence and outstanding checks.
 
 ## Build and check
 
