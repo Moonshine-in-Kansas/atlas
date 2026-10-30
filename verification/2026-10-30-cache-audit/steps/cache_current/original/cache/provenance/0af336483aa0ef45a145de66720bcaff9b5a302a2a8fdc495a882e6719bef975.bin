@@ -1,0 +1,78 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["24e6ea4f5026e402.olean"],
+  "m": false,
+  "i": "ea4b4f7940f66636.ilean",
+  "c": "376c57662fe32b2c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/AdjointWeylBraidA2.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/AdjointWeylBraidA2.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/AdjointWeylBraidA2.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/AdjointWeylBraidA2.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/AdjointWeylBraidA2.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/AdjointWeylBraidA2.lean:18:0: `a2_chain_outer` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/AdjointWeylBraidA2.lean:18:0: `a2_chain_outer` does not use the following hypothesis in its type outside of proofs:\n  • [Fintype ι] (#4) (used in type, but only in a proof)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/AdjointWeylBraidA2.lean:28:0: `a2_chain_middle` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/AdjointWeylBraidA2.lean:28:0: `a2_chain_middle` does not use the following hypothesis in its type outside of proofs:\n  • [Fintype ι] (#4) (used in type, but only in a proof)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/AdjointWeylBraidA2.lean:48:38: This simp argument is unused:\n  mul_assoc\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [mul_comm, mul_left_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/AdjointWeylBraidA2.lean:58:11: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/AdjointWeylBraidA2.lean:68:56: This simp argument is unused:\n  Function.comp_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rootVector, RootPairing.GeckConstruction.v, Pi.single_apply, h]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/AdjointWeylBraidA2.lean:68:75: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rootVector, RootPairing.GeckConstruction.v, Function.comp_def, h]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/AdjointWeylBraidA2.lean:72:58: This simp argument is unused:\n  Function.comp_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [cartanVector, RootPairing.GeckConstruction.u, Pi.single_apply, h]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/AdjointWeylBraidA2.lean:72:77: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [cartanVector, RootPairing.GeckConstruction.u, Function.comp_def, h]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.RootData.RootStringReflectionTransport transitive imports (legacy)",
+       "1661c9aaf716b991"],
+      ["Atlas.LinearGroups.Chevalley.RootData.RootStringReflectionTransport:importAllArts",
+       "263383806c9256e3"],
+      ["Atlas.LinearGroups.Chevalley.WeylRootActionComplete transitive imports (legacy)",
+       "5e7ad2c5cbce948e"],
+      ["Atlas.LinearGroups.Chevalley.WeylRootActionComplete:importAllArts",
+       "aad81ee955c839bf"],
+      ["Mathlib.Tactic.Module transitive imports (legacy)", "b5f83df3ed43bfc6"],
+      ["Mathlib.Tactic.Module:importAllArts", "0733868e493644a5"],
+      ["Mathlib.Tactic.NormNum transitive imports (legacy)",
+       "25b08131da11d03f"],
+      ["Mathlib.Tactic.NormNum:importAllArts", "22901c8b4e0cbec0"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/AdjointWeylBraidA2.lean",
+   "f906783e9a371106"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.AdjointWeylBraidA2",
+   "bc28e56cccc8a51f"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "a51eb2137c185e9e"}

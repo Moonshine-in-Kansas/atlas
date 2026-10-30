@@ -1,0 +1,142 @@
+{
+  "id": "staged-FixedSimpleRoots",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleNode_moved_cartan",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleX_diagram_commute",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleY_diagram_commute",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionTwist_X_conjugation",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionTwist_Y_conjugation",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleX_base_fixed",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleY_base_fixed",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleX_parameter_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleY_parameter_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleX_fixed_iff",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleY_fixed_iff",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleX_pair_fixed",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleY_pair_fixed",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedPairXHom",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedPairYHom",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedPairXHom_val",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedPairYHom_val",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleWeyl",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionTwist_simpleWeyl",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleWeyl_diagram_commute",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleWeyl_fixed",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleWeyl_pair_fixed",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedSimpleRoots"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-FixedSimpleRoots-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

@@ -83,7 +83,7 @@ Every row below is restricted to the admissible simple parameters above.
 
 Both constructions are displayed directly in the [catalogue](CATALOGUE.md) and
 [model inventory](catalogue/REALIZATIONS.md). The [Lean certificate page](catalogue/ISOMORPHISMS.md)
-contains the actual A/B/C/D proof definitions, complete compiled types, endpoint
+contains the actual A/B/C/D/G₂/F₄ proof definitions, complete compiled types, endpoint
 carriers, parameter maps and full dependency audits:
 
 | Family | Constructions | Actual Lean equivalence |
@@ -92,6 +92,8 @@ carriers, parameter maps and full dependency audits:
 | B | Chevalley and odd quadratic forms | [B_identification](catalogue/ISOMORPHISMS.md#chevalley-b-to-legacy-v1) |
 | C | Chevalley and projective symplectic matrices | [C_identification](catalogue/ISOMORPHISMS.md#chevalley-c-to-legacy-v1) |
 | D | Chevalley and split even quadratic forms | [D_identification](catalogue/ISOMORPHISMS.md#chevalley-d-to-legacy-v1) |
+| G₂ | Chevalley and split-octonion models | [G2_identification](catalogue/ISOMORPHISMS.md#chevalley-g2-to-legacy-v1) |
+| F₄ | Chevalley and full split-Albert models | [F4_identification](catalogue/ISOMORPHISMS.md#chevalley-f4-to-albert-v1) |
 
 The root-operator Chevalley constructions coexist with the earlier matrix and
 algebra models. The marked type-A comparison identifies its selected companion
@@ -115,13 +117,12 @@ its kernel is the full center, and the simple-root markings are preserved.
 Neither old nor new simplicity is used.
 
 These are additional concrete equivalences; they do not replace the existing
-registry carriers or extend the normalized-label theorem. The four A/B/C/D
-realizations and their marked maps are now [registered and separately audited](catalogue/REALIZATIONS.md).
-Both the Chevalley and octonion/Albert models of G₂/F₄ are displayed with their
-own proof references. The research note records ten passed local scopes for the
-marked G₂ equivalence, but its final preservation/registration and source export
-are outside this version. The F₄ equivalence remains unfinished.
-Their precise comparison scopes are retained in the [certificate inventory](catalogue/ISOMORPHISMS.md).
+registry carriers or extend the normalized-label theorem. The six A/B/C/D/G₂/F₄
+pairs and their marked maps are [registered and separately audited](catalogue/REALIZATIONS.md).
+The G₂ Chevalley–octonion and F₄ Chevalley–Albert identifications hold over
+every finite field, including characteristics two and three. Each model retains
+its own order and simplicity references. Their precise comparison domains,
+proof definitions and compiled evidence are in the [certificate inventory](catalogue/ISOMORPHISMS.md).
 
 ## Proof architecture
 

@@ -1,0 +1,96 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["856e6849d27828e5.olean"],
+  "m": false,
+  "i": "d97aeebe5407f071.ilean",
+  "c": "683e89d3d6a24267.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/GeckExponential.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/GeckExponential.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/GeckExponential.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/GeckExponential.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:30:1: 'theorem raisingDividedOver_eq_zero (i : b.support) (n : ℕ) (hn : 4 ≤ n) : raisingDividedOver P b R i n = 0 := by\n  simp [raisingDividedOver,\n    raisingDividedPower_eq_zero P b i n\n        hn]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:34:1: 'theorem raisingDividedOver_mul (i : b.support) (k l : ℕ) :\n    raisingDividedOver P b R i k * raisingDividedOver P b R i l =\n      (((k + l).choose l : ℕ) : R) • raisingDividedOver P b R i (k + l) :=\n  by\n  change\n    (Int.castRingHom R).mapMatrix (raisingDividedPower P b i k) *\n        (Int.castRingHom R).mapMatrix (raisingDividedPower P b i l) =\n      _\n  rw [← map_mul, raisingDividedPower_mul]\n  ext row col\n  change ((((((k + l).choose l : ℕ) : ℤ) • raisingDividedPower P b i (k + l)) row col) : R) = _\n  rw [Matrix.smul_apply]\n  simp [raisingDividedOver,\n    smul_eq_mul]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:50:1: 'theorem raisingExponential_expansion (i : b.support) (t : R) :\n    raisingExponential P b R i t =\n      raisingDividedOver P b R i 0 + t • raisingDividedOver P b R i 1 + t ^ 2 • raisingDividedOver P b R i 2 +\n        t ^ 3 • raisingDividedOver P b R i 3 :=\n  by\n  simp [raisingExponential,\n    Finset.sum_range_succ]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:60:1: 'theorem raisingExponential_add (i : b.support) (s t : R) :\n    raisingExponential P b R i (s + t) = raisingExponential P b R i s * raisingExponential P b R i t :=\n  by\n  rw [raisingExponential_expansion, raisingExponential_expansion, raisingExponential_expansion]\n  simp only [add_mul, mul_add, smul_mul_assoc, mul_smul_comm, smul_smul, raisingDividedOver_mul]\n  norm_num [raisingDividedOver_eq_zero, Nat.choose]\n  ext row col\n  simp only [Matrix.add_apply, Matrix.smul_apply, smul_eq_mul]\n  ring' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:72:1: 'theorem raisingExponential_mul_neg (i : b.support) (t : R) :\n    raisingExponential P b R i t * raisingExponential P b R i (-t) = 1 := by\n  rw [← raisingExponential_add, add_neg_cancel,\n    raisingExponential_zero]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:76:1: 'theorem raisingExponential_neg_mul (i : b.support) (t : R) :\n    raisingExponential P b R i (-t) * raisingExponential P b R i t = 1 := by\n  rw [← raisingExponential_add, neg_add_cancel,\n    raisingExponential_zero]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:100:1: 'theorem raisingDividedPower_parameter_entry (i : b.support) (n : ℕ) :\n    let := P.indexNeg\n    raisingDividedPower P b i n (.inl i) (.inr (-i.val)) = if n = 1 then 1 else 0 :=\n  by\n  let := P.indexNeg\n  dsimp only\n  have h1 := congrFun (raising_negative_simple P b i) (.inl i)\n  have h2 := congrFun (raising_sq_negative_simple P b i) (.inl i)\n  have h3 := congrFun (raising_cube_negative_simple P b i) (.inl i)\n  simp only [v, u, Matrix.mulVec_single_one, Matrix.col_apply, Pi.single_eq_same, Pi.smul_apply,\n    Pi.single_eq_of_ne (Sum.inl_ne_inr), smul_zero, Pi.zero_apply] at h1 h2 h3\n  by_cases hn : n < 4\n  · interval_cases n\n    · simp\n    · simpa using h1\n    · simp only [raisingDividedPower, h2]\n      norm_num\n    · simp only [raisingDividedPower, h3]\n      norm_num\n  · rw [raisingDividedPower_eq_zero P b i n (by omega)]\n    simp [show n ≠ 1 by omega]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:121:1: 'theorem raisingExponential_parameter_entry (i : b.support) (t : R) :\n    let := P.indexNeg\n    raisingExponential P b R i t (.inl i) (.inr (-i.val)) = t :=\n  by\n  let := P.indexNeg\n  dsimp only\n  simp only [raisingExponential_expansion, Matrix.add_apply, Matrix.smul_apply, smul_eq_mul, raisingDividedOver,\n    Matrix.map_apply, raisingDividedPower_parameter_entry]\n  norm_num' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:131:1: 'theorem raisingExponential_injective (i : b.support) : Function.Injective (raisingExponential P b R i) :=\n  by\n  let := P.indexNeg\n  intro s t h\n  have hst := congrArg (fun A => A (.inl i) (.inr (-i.val))) h\n  simpa only [raisingExponential_parameter_entry] using\n    hst' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:138:1: 'theorem raisingRootElement_injective (i : b.support) : Function.Injective (raisingRootElement P b R i) :=\n  by\n  intro s t h\n  exact\n    raisingExponential_injective P b R i\n      (congrArg Units.val h)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:159:0: `oppositionOver_raisingOver` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:176:1: 'theorem loweringRootElement_add (i : b.support) (s t : R) :\n    loweringRootElement P b R i (s + t) = loweringRootElement P b R i s * loweringRootElement P b R i t :=\n  by\n  have h : raisingRootElement P b R i (s + t) = raisingRootElement P b R i s * raisingRootElement P b R i t :=\n    Units.ext (raisingExponential_add P b R i s t)\n  simp only [loweringRootElement, h]\n  simp only [mul_assoc,\n    inv_mul_cancel_left]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:185:1: 'theorem loweringRootElement_injective (i : b.support) : Function.Injective (loweringRootElement P b R i) :=\n  by\n  intro s t h\n  apply raisingRootElement_injective P b R i\n  exact\n    mul_left_cancel\n      (mul_right_cancel h)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:212:1: 'theorem factorial_smul_loweringDividedPower (i : b.support) (n : ℕ) :\n    (n.factorial : ℤ) • loweringDividedPower P b i n = lowering P b i ^ n :=\n  by\n  dsimp only [loweringDividedPower]\n  rw [← smul_mul_assoc, ← mul_smul_comm, factorial_smul_raisingDividedPower,\n    opposition_raising_pow]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:226:1: 'theorem loweringDividedPower_eq_zero (i : b.support) (n : ℕ) (hn : 4 ≤ n) : loweringDividedPower P b i n = 0 := by\n  simp [loweringDividedPower,\n    raisingDividedPower_eq_zero P b i n\n        hn]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:237:1: 'theorem loweringRootElement_val (i : b.support) (t : R) :\n    (loweringRootElement P b R i t).val = loweringExponential P b R i t :=\n  by\n  change oppositionOver P b R * raisingExponential P b R i t * oppositionOver P b R = _\n  simp only [raisingExponential, loweringExponential, Finset.mul_sum, Finset.sum_mul]\n  apply Finset.sum_congr rfl\n  intro k hk\n  rw [mul_smul_comm, smul_mul_assoc]\n  congr 1\n  change\n    (Int.castRingHom R).mapMatrix (ω b) * (Int.castRingHom R).mapMatrix (raisingDividedPower P b i k) *\n        (Int.castRingHom R).mapMatrix (ω b) =\n      (Int.castRingHom R).mapMatrix (ω b * raisingDividedPower P b i k * ω b)\n  simp only [map_mul]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:251:1: 'theorem loweringExponential_add (i : b.support) (s t : R) :\n    loweringExponential P b R i (s + t) = loweringExponential P b R i s * loweringExponential P b R i t := by\n  simpa only [Units.val_mul, loweringRootElement_val] using\n    congrArg Units.val\n      (loweringRootElement_add P b R i s\n        t)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean:257:1: 'theorem loweringExponential_injective (i : b.support) : Function.Injective (loweringExponential P b R i) :=\n  by\n  intro s t h\n  apply loweringRootElement_injective P b R i\n  apply Units.ext\n  simpa only [loweringRootElement_val] using\n    h' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.Integral.GeckDividedPowers transitive imports (legacy)",
+       "a114e151dd4694a7"],
+      ["Atlas.LinearGroups.Chevalley.Integral.GeckDividedPowers:importAllArts",
+       "187d53e4744339b6"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/GeckExponential.lean",
+   "6175254a63858fec"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Integral.GeckExponential",
+   "b77c8da632213201"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "724fe09b650eeb47"}

@@ -1,0 +1,59 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["f7d42f53d4295320.olean"],
+  "m": false,
+  "i": "34b7f074ef23eb20.ilean",
+  "c": "553890c76774e30b.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Mathieu/SextetReconstruction.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Mathieu/SextetReconstruction.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Mathieu/SextetReconstruction.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Mathieu/SextetReconstruction.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Mathieu/SextetReconstruction.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Mathieu/SextetReconstruction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetReconstruction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetReconstruction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nReconstruction of the entire fixed code from any of its unordered sextets. -/\ntheorem sextet_marked_reconstruction (S : UnorderedSextet) :\n    ∃ σ : Equiv.Perm Omega, CodePreserving σ ∧ permuteSextetParts σ S.val = distinguishedUnorderedSextet.val :=\n  by\n  obtain ⟨t, g, hg⟩ := tetradCode_equivalent (sextetCode S) (sextetCode_properties S)\n  let ψ := affinePermutation 0 g * affinePermutation t 1\n  let σ := ψ * (sextetCoordinates S)⁻¹\n  refine ⟨σ, ?_, ?_⟩\n  · intro w\n    have he := hg (coordinatePermutation (sextetCoordinates S)⁻¹ w)\n    change\n      coordinatePermutation (sextetCoordinates S) (coordinatePermutation (sextetCoordinates S)⁻¹ w) ∈ golay ↔ _ at he\n    rw [← coordinatePermutation_mul, mul_inv_cancel, coordinatePermutation_one] at he\n    exact he\n  · have hs : permuteSextetParts (sextetCoordinates S)⁻¹ S.val = distinguishedUnorderedSextet.val := by\n      rw [← sextetCoordinates_parts S, ← permuteSextetParts_mul, inv_mul_cancel, permuteSextetParts_one]\n    rw [show σ = ψ * (sextetCoordinates S)⁻¹ from rfl, permuteSextetParts_mul, hs]\n    rw [show ψ = affinePermutation 0 g * affinePermutation t 1 from rfl, permuteSextetParts_mul,\n      affinePermutation_preserves_parts, affinePermutation_preserves_parts]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetReconstruction.lean:27:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetReconstruction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe reconstruction witness is an element of the full, previously defined automorphism group. -/\ntheorem sextet_equivalent_distinguished (S : UnorderedSextet) :\n    ∃ g : Mathieu24CodeModel, g • S = distinguishedUnorderedSextet :=\n  by\n  obtain ⟨σ, hσ, hS⟩ := sextet_marked_reconstruction S\n  exact ⟨⟨σ, hσ⟩, Subtype.ext hS⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetReconstruction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetReconstruction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Mathieu.SextetRecoveredCode transitive imports (legacy)",
+       "25a7f7197757cc35"],
+      ["Atlas.Mathieu.SextetRecoveredCode:importAllArts",
+       "29082ee16afee869"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Mathieu/SextetReconstruction.lean",
+   "10142275cf3e35a1"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Mathieu.SextetReconstruction", "a24dc4e52a4eb000"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "ac9c1398b9a0769a"}

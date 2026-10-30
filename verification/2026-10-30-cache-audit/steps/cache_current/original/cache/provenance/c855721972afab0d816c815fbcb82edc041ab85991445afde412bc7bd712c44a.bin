@@ -1,0 +1,143 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["64110685953438b8.olean"],
+  "m": false,
+  "i": "6f7cd196676d70c6.ilean",
+  "c": "bacf5d4cbf872a9c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/ProjectiveFrameEmbedding.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ProjectiveFrameEmbedding.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ProjectiveFrameEmbedding.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ProjectiveFrameEmbedding.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ProjectiveFrameEmbedding.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def codeProjectiveHom : codeGroup →* RudvalisGroup :=\n  (QuotientGroup.mk' gaussianScalarSubgroup).comp codeGaussianHom`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeProjectiveHom_kernel : codeProjectiveHom.ker = GaussianUnits :=\n  by\n  ext g\n  change (QuotientGroup.mk (codeGaussianHom g) : RudvalisGroup) = 1 ↔ g ∈ GaussianUnits\n  rw [QuotientGroup.eq_one_iff]\n  constructor\n  · rintro ⟨u, hu, he⟩\n    exact codeGaussianHom_injective he ▸ hu\n  · intro hg\n    exact ⟨g, hg, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def projectiveCodeHom : ProjectiveCodeGroup →* RudvalisGroup :=\n  QuotientGroup.lift GaussianUnits codeProjectiveHom codeProjectiveHom_kernel.symm.le`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveCodeHom_injective : Function.Injective projectiveCodeHom :=\n  (QuotientGroup.injective_lift_iff _ _ _).mpr codeProjectiveHom_kernel.symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def projectiveFrameGroup : Subgroup RudvalisGroup :=\n  projectiveCodeHom.range`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def projectiveFrameEquiv :\n    ProjectiveCodeGroup ≃* projectiveFrameGroup :=\n  MonoidHom.ofInjective projectiveCodeHom_injective`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveFrameGroup_order : Nat.card projectiveFrameGroup = 344064 :=\n  by rw [← Nat.card_congr projectiveFrameEquiv.toEquiv, projectiveCodeGroup_order]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveFrameGroup_index : projectiveFrameGroup.index = 424125 :=\n  by\n  have h := projectiveFrameGroup.index_mul_card\n  rw [projectiveFrameGroup_order, rudvalisGroup_order] at h\n  exact Nat.eq_of_mul_eq_mul_right (by decide : 0 < 344064) h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def projectiveReflection : RudvalisGroup :=\n  QuotientGroup.mk rudvalisReflection`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveReflection_square : projectiveReflection ^ 2 = 1 :=\n  by\n  change (QuotientGroup.mk' gaussianScalarSubgroup) rudvalisReflection ^ 2 = 1\n  rw [← map_pow, ← rudvalisReflection_order, pow_orderOf_eq_one, map_one]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveFrameGroup_reflection_generate :\n    projectiveFrameGroup ⊔ Subgroup.zpowers projectiveReflection = ⊤ :=\n  by\n  apply top_unique\n  intro q _\n  induction q using QuotientGroup.induction_on with\n  | H\n    g =>\n    refine\n      generatedGaussianGroup_induction (P := fun a =>\n        (QuotientGroup.mk a : RudvalisGroup) ∈ projectiveFrameGroup ⊔ Subgroup.zpowers projectiveReflection) ?_ ?_ ?_ ?_\n        ?_ g (full_gaussian_mem_generated g)\n    · intro k\n      apply Subgroup.mem_sup_left\n      exact ⟨QuotientGroup.mk k, rfl⟩\n    · exact Subgroup.mem_sup_right (Subgroup.mem_zpowers _)\n    · exact Subgroup.one_mem _\n    · intro a b ha hb\n      exact Subgroup.mul_mem _ ha hb\n    · intro a ha\n      exact Subgroup.inv_mem _ ha`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:51:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveFrameGroup_mem_iff (q : RudvalisGroup) :\n    q ∈ projectiveFrameGroup ↔ ∀ c, c ∈ coordinateFrame ↔ q • c ∈ coordinateFrame :=\n  by\n  constructor\n  · rintro ⟨k, rfl⟩\n    induction k using QuotientGroup.induction_on with\n    | H k =>\n      change ∀ c, c ∈ coordinateFrame ↔ codeGaussianHom k • c ∈ coordinateFrame\n      exact (gaussian_frame_stabilizer _).mpr ⟨k, rfl⟩\n  ·\n    induction q using QuotientGroup.induction_on with\n    | H g =>\n      intro hg\n      obtain ⟨k, hk⟩ := (gaussian_frame_stabilizer g).mp hg\n      refine ⟨QuotientGroup.mk k, ?_⟩\n      change (QuotientGroup.mk (codeGaussianHom k) : RudvalisGroup) = QuotientGroup.mk g\n      rw [hk]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveFrameGroup_index_odd : Odd projectiveFrameGroup.index :=\n  by\n  rw [projectiveFrameGroup_index]\n  exact ⟨212062, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rudvalisGroup_nontrivial : Nontrivial RudvalisGroup :=\n  Finite.one_lt_card_iff_nontrivial.mp (by rw [rudvalisGroup_order]; decide)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameEmbedding.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.ProjectiveCrossFaithful transitive imports (legacy)",
+       "5dff3b1d6b53c367"],
+      ["Atlas.Rudvalis.ProjectiveCrossFaithful:importAllArts",
+       "bd9815266c36872e"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/ProjectiveFrameEmbedding.lean",
+   "5cfd42a4275899f5"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.ProjectiveFrameEmbedding", "5a129ad97fdc8cda"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "699832c75349b569"}

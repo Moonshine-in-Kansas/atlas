@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "id": "j1-whitelaw-invariance-j1whitelawseedtransport",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "ComparisonWork.J1WhitelawSeedTransport"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Janko1.WhitelawSTransport",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelaw_S_link_0_3",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelaw_S_link_0_4",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelaw_S_link_0_5",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelaw_S_link_0_6",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelaw_S_link_3_1",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelaw_S_link_3_2",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelaw_S_link_3_7",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelaw_S_link_3_8",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelaw_S_link_3_9",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelawSTransport_seed_mem_orbit",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelawSeed_generatedOrbit_eq_zero",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelawVector_seed_two_coordinates",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelawPoint_mem_orbit_two",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelawPoint_mem",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelawOrbit_subset_generatedOrbit",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelawSeed_generatedOrbit_eq",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelawSet_subset_generatedOrbit",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelawSet_pair_transport",
+      "module": "ComparisonWork.J1WhitelawSeedTransport",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "j1whitelawseedtransport-actual-geometry-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Janko1.isPerfect",
+        "Atlas.Janko1.isSimpleGroup",
+        "Atlas.Sporadic.Janko1.card",
+        "Atlas.Sporadic.Janko1.isSimpleGroup",
+        "Atlas.G2.card_Model",
+        "Atlas.G2.isSimpleGroup"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.G2.Order",
+        "Atlas.LinearGroups.G2.Simplicity",
+        "Atlas.Sporadic.Janko1.Order",
+        "Atlas.Sporadic.Janko1.Simplicity",
+        "Atlas.Sporadic.Janko1.Perfectness",
+        "Atlas.Sporadic.Janko1.WhitelawPointCount",
+        "Atlas.Sporadic.Janko1.WhitelawPointStabilizer",
+        "Atlas.Sporadic.Janko1.WhitelawSextics",
+        "Atlas.Sporadic.Janko1.PSL2Embedding",
+        "Atlas.Sporadic.Janko1.SexticStabilizer",
+        "Atlas.OrderArithmetic.FixedTables.J1",
+        "ComparisonWork.G2Order",
+        "ComparisonWork.G2Simplicity",
+        "ComparisonWork.J1Order",
+        "ComparisonWork.J1Simplicity",
+        "ComparisonWork.J1Perfectness",
+        "ComparisonWork.J1WhitelawPointCount",
+        "ComparisonWork.J1WhitelawPointStabilizer",
+        "ComparisonWork.J1WhitelawSextics",
+        "ComparisonWork.J1PSL2Embedding",
+        "ComparisonWork.J1SexticStabilizer"
+      ],
+      "module_allowlists": [
+        {
+          "prefix": "Atlas.Sporadic.Janko1.",
+          "modules": [
+            "Atlas.Sporadic.Janko1.OctonionBasis",
+            "Atlas.Sporadic.Janko1.Imaginary",
+            "Atlas.Sporadic.Janko1.GeneratorMatrices",
+            "Atlas.Sporadic.Janko1.GeneratorChecks",
+            "Atlas.Sporadic.Janko1.Generators",
+            "Atlas.Sporadic.Janko1.GeneratorActions",
+            "Atlas.Sporadic.Janko1.CoordinateRepresentation",
+            "Atlas.Sporadic.Janko1.Relations"
+          ]
+        },
+        {
+          "prefix": "Atlas.LinearGroups.G2.",
+          "modules": [
+            "Atlas.LinearGroups.G2.Basic"
+          ]
+        },
+        {
+          "prefix": "ComparisonWork.",
+          "modules": [
+            "ComparisonWork.J1SignCoordinates",
+            "ComparisonWork.J1SignGroup",
+            "ComparisonWork.J1SignConjugation",
+            "ComparisonWork.J1SignNormalizer",
+            "ComparisonWork.J1PQComplement",
+            "ComparisonWork.J1Local168",
+            "ComparisonWork.J1ProjectiveGeometry",
+            "ComparisonWork.J1WhitelawPoints",
+            "ComparisonWork.J1WhitelawFirstOrbit",
+            "ComparisonWork.J1WhitelawSquareRows",
+            "ComparisonWork.J1WhitelawOrbitRigidity",
+            "ComparisonWork.J1WhitelawExactCount",
+            "ComparisonWork.J1WhitelawSNormalizer",
+            "ComparisonWork.J1WhitelawSeedTransport"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "schema_version": 1,
+  "id": "batch-008-large-ree",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "boundaries": [],
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas.LinearGroups.ReeF4.ChartLongConjugate0",
+    "Atlas.LinearGroups.ReeF4.ChartLongConjugate1",
+    "Atlas.LinearGroups.ReeF4.ChartLongConjugate2",
+    "Atlas.LinearGroups.ReeF4.ChartLongConjugate3",
+    "Atlas.LinearGroups.ReeF4.ChartPositiveConjugates",
+    "Atlas.LinearGroups.ReeF4.ChartShortConjugate0",
+    "Atlas.LinearGroups.ReeF4.ChartShortConjugate1",
+    "Atlas.LinearGroups.ReeF4.ChartShortConjugate2",
+    "Atlas.LinearGroups.ReeF4.ChartTerminalEndpoints",
+    "Atlas.LinearGroups.ReeF4.PositiveRootChartTransitivity",
+    "Atlas.LinearGroups.ReeF4.PositiveRootOppositeTransitivity",
+    "Atlas.LinearGroups.ReeF4.PositiveRootPointAction",
+    "Atlas.LinearGroups.ReeF4.SpecialOppositeAction",
+    "Atlas.LinearGroups.ReeF4.SpecialOppositePairCount",
+    "Atlas.LinearGroups.ReeF4.SpecialOppositePairs",
+    "Atlas.LinearGroups.ReeF4.SpecialOppositePoints"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.ReeF4.AbsoluteUnitriangular.fixes_lowestRoot",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootPointAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.AbsoluteUnitriangular.preserves_highestCoefficient",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootPointAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.OppositeFiber",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePairCount",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.OppositeSpecialPoints",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePoints",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.SpecialOpposite",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePoints",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.SpecialOppositePairs",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePairs",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.baseSpecialOppositePair",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePairs",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.card_oppositeFiber",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePairCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.card_oppositeSpecialPoints",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.card_specialOppositePairs",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePairCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.carrierConjugate",
+      "module": "Atlas.LinearGroups.ReeF4.ChartPositiveConjugates",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chart9ToOpposite",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePoints",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chart9ToOpposite_equivariant",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootOppositeTransitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chart9ToOpposite_injective",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chart9ToOpposite_surjective",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chart9_transport_exists",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootChartTransitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartFinalWeyl_root",
+      "module": "Atlas.LinearGroups.ReeF4.ChartTerminalEndpoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartLongConjugate",
+      "module": "Atlas.LinearGroups.ReeF4.ChartPositiveConjugates",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartLongConjugate_eq_positive_0",
+      "module": "Atlas.LinearGroups.ReeF4.ChartLongConjugate0",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartLongConjugate_eq_positive_1",
+      "module": "Atlas.LinearGroups.ReeF4.ChartLongConjugate1",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartLongConjugate_eq_positive_2",
+      "module": "Atlas.LinearGroups.ReeF4.ChartLongConjugate2",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartLongConjugate_eq_positive_3",
+      "module": "Atlas.LinearGroups.ReeF4.ChartLongConjugate3",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartLongConjugate_formula_0",
+      "module": "Atlas.LinearGroups.ReeF4.ChartLongConjugate0",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartLongConjugate_formula_1",
+      "module": "Atlas.LinearGroups.ReeF4.ChartLongConjugate1",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartLongConjugate_formula_2",
+      "module": "Atlas.LinearGroups.ReeF4.ChartLongConjugate2",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartLongConjugate_formula_3",
+      "module": "Atlas.LinearGroups.ReeF4.ChartLongConjugate3",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartLongConjugate_val",
+      "module": "Atlas.LinearGroups.ReeF4.ChartPositiveConjugates",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartLongPermutation",
+      "module": "Atlas.LinearGroups.ReeF4.ChartPositiveConjugates",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartLongPrefix",
+      "module": "Atlas.LinearGroups.ReeF4.ChartPositiveConjugates",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartLongPrefix_compatible",
+      "module": "Atlas.LinearGroups.ReeF4.ChartPositiveConjugates",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartShortConjugate",
+      "module": "Atlas.LinearGroups.ReeF4.ChartPositiveConjugates",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartShortConjugate_eq_positive_0",
+      "module": "Atlas.LinearGroups.ReeF4.ChartShortConjugate0",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartShortConjugate_eq_positive_1",
+      "module": "Atlas.LinearGroups.ReeF4.ChartShortConjugate1",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartShortConjugate_eq_positive_2",
+      "module": "Atlas.LinearGroups.ReeF4.ChartShortConjugate2",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartShortConjugate_formula_0",
+      "module": "Atlas.LinearGroups.ReeF4.ChartShortConjugate0",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartShortConjugate_formula_1",
+      "module": "Atlas.LinearGroups.ReeF4.ChartShortConjugate1",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartShortConjugate_formula_2",
+      "module": "Atlas.LinearGroups.ReeF4.ChartShortConjugate2",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartShortConjugate_val",
+      "module": "Atlas.LinearGroups.ReeF4.ChartPositiveConjugates",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartShortPermutation",
+      "module": "Atlas.LinearGroups.ReeF4.ChartPositiveConjugates",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartShortPrefix",
+      "module": "Atlas.LinearGroups.ReeF4.ChartPositiveConjugates",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartShortPrefix_compatible",
+      "module": "Atlas.LinearGroups.ReeF4.ChartPositiveConjugates",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartTerminalWord_inverse_root",
+      "module": "Atlas.LinearGroups.ReeF4.ChartTerminalEndpoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartTransportProduct",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootChartTransitivity",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartTransportProduct_factorization",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootChartTransitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartUnipotentWord",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootChartTransitivity",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartUnipotentWord_mem",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootChartTransitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.elementary_oppositePair_to_base",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootOppositeTransitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.elementary_specialOppositePair_transitive",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootOppositeTransitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.firstRoot_polar_coordinate",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.first_opposite_specialOpposite",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePairs",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.fullOppositePairStabilizer",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePairCount",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelConjugate_formula",
+      "module": "Atlas.LinearGroups.ReeF4.ChartPositiveConjugates",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.model_oppositePair_to_base",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootOppositeTransitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.model_order_of_fullPairStabilizer_order",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePairCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.model_order_oppositePair_factorization",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePairCount",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.model_preserves_polar",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositeAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.model_specialOppositePairs_pretransitive",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootOppositeTransitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositeFiberEquiv",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePairCount",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositeSpecialPointsEquivChart9",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePoints",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.polar_nonzero_mk_reps_iff",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.polar_nonzero_units_smul_iff",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootNormalizedHighestAction",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootPointAction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootNormalizedHighestAction_val",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootPointAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootOppositeAction",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootOppositeTransitivity",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootOppositeAction_val",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootOppositeTransitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootSubgroup_fixes_firstSpecialPoint",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootPointAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootSubgroup_fixes_lowestRoot",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootPointAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootSubgroup_preserves_highestCoefficient",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootPointAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRoot_chart9_orbit",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootChartTransitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRoot_chart9_transitive",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootChartTransitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRoot_oppositePoint_pretransitive",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootOppositeTransitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRoot_oppositePoint_transitive",
+      "module": "Atlas.LinearGroups.ReeF4.PositiveRootOppositeTransitivity",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.specialOppositePairsAction",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePairs",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.specialOppositePairsEquivSigma",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePairCount",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.specialOpposite_first_iff",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.specialOpposite_irrefl",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.specialOpposite_mk_iff",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePoints",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.specialOpposite_model_iff",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositeAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.specialOpposite_symm",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialOppositePoints",
+      "kind": "theorem"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["d5e9d645e4971a7c.olean"],
+  "m": false,
+  "i": "869519d002a6f8e7.ilean",
+  "c": "8975893e41d14924.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Combinatorics/BiregularIncidence.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Combinatorics/BiregularIncidence.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Combinatorics/BiregularIncidence.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Combinatorics/BiregularIncidence.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Combinatorics/BiregularIncidence.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Combinatorics/BiregularIncidence.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/BiregularIncidence.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Combinatorics`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/BiregularIncidence.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/BiregularIncidence.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/BiregularIncidence.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/BiregularIncidence.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nDouble-count a finite relation whose two families of fibres have constant sizes. -/\ntheorem uniform_incidence_card {A B : Type*} [Finite A] [Finite B] (r : A → B → Prop) (a b : ℕ)\n    (ha : ∀ x : A, Nat.card { y : B // r x y } = a) (hb : ∀ y : B, Nat.card { x : A // r x y } = b) :\n    Nat.card A * a = Nat.card B * b := by\n  classical\n  let : Fintype A := Fintype.ofFinite A\n  let : Fintype B := Fintype.ofFinite B\n  let e : (Σ x : A, { y : B // r x y }) ≃ Σ y : B, { x : A // r x y } :=\n    { toFun := fun z => ⟨z.2.val, z.1, z.2.prop⟩\n      invFun := fun z => ⟨z.2.val, z.1, z.2.prop⟩\n      left_inv := fun _ => rfl\n      right_inv := fun _ => rfl }\n  have h := Nat.card_congr e\n  rw [Nat.card_sigma, Nat.card_sigma] at h\n  simp_rw [ha, hb] at h\n  simpa only [Finset.sum_const, Finset.card_univ, smul_eq_mul, Nat.card_eq_fintype_card] using h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/BiregularIncidence.lean:10:10: missing space in the source\n\nThis part of the code\n  'A→B→Prop)'\nshould be written as\n  'A → B'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/BiregularIncidence.lean:11:11: missing space in the source\n\nThis part of the code\n  '∀x : A,Nat.card'\nshould be written as\n  '∀ x :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/BiregularIncidence.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/BiregularIncidence.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Combinatorics`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/BiregularIncidence.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/BiregularIncidence.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Mathlib.Data.Fintype.Sigma transitive imports (legacy)",
+       "e9110d21bb9464ed"],
+      ["Mathlib.Data.Fintype.Sigma:importAllArts", "aec4902cbd4841db"],
+      ["Mathlib.SetTheory.Cardinal.Finite transitive imports (legacy)",
+       "0f22d33fdd3e21f3"],
+      ["Mathlib.SetTheory.Cardinal.Finite:importAllArts", "6f293d32afda3c7c"],
+      ["Mathlib.Algebra.Module.NatInt transitive imports (legacy)",
+       "350f837e27d002ed"],
+      ["Mathlib.Algebra.Module.NatInt:importAllArts", "c21748fe484c8fe4"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Combinatorics/BiregularIncidence.lean",
+   "305cd5ffeeb969e1"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Combinatorics.BiregularIncidence", "5a676f0e76a0aaaa"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "e212f2155b1bc4fd"}

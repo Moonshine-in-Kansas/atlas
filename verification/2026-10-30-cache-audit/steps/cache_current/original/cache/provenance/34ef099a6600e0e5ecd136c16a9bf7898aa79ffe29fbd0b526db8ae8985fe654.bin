@@ -1,0 +1,171 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["ca96760dd5398eee.olean"],
+  "m": false,
+  "i": "7a9da416693400a5.ilean",
+  "c": "3e2b3f1e33bf1a20.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateLocalOrbits.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateLocalOrbits.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateLocalOrbits.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateLocalOrbits.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateLocalOrbits.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateCross_row_of_eq {i j : Coordinate}\n    (h : coordinateCross i = coordinateCross j) : i.1 = j.1 :=\n  by\n  rcases (coordinateCross_eq_iff i j).mp h with h | h\n  · exact congrArg Prod.fst h\n  · simpa only [codeI_coordinate] using congrArg Prod.fst h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:7:26: missing space in the source\n\nThis part of the code\n  'i=coordinateCross'\nshould be written as\n  'i = coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateCross_stabilizer_row (p : Point) (x : E)\n    (g : MulAction.stabilizer codeGroup (coordinateCross (p, x))) : codeBlockLinearHom g.val p.val = p.val :=\n  by\n  have h := g.prop\n  change g.val • coordinateCross (p, x) = coordinateCross (p, x) at h\n  rw [coordinateCross_action] at h\n  rw [codeBlockLinear_coordinates g.val (p, x)]\n  exact congrArg Subtype.val (coordinateCross_row_of_eq h)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:13:60: missing space in the source\n\nThis part of the code\n  '(p,x)))'\nshould be written as\n  '(p, x)))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateCross_stabilizer_row_mem (p : Point) (x : E)\n    (g : MulAction.stabilizer codeGroup (coordinateCross (p, x))) (c : MinimalCross) (hc : c ∈ coordinateRowFrame p) :\n    g • c ∈ coordinateRowFrame p := by\n  obtain ⟨z, rfl⟩ := hc\n  change g.val • coordinateCross (p, z) ∈ coordinateRowFrame p\n  rw [coordinateCross_action]\n  have hr : (g.val.val.right (p, z)).1 = p := by\n    apply Subtype.ext\n    rw [← codeBlockLinear_coordinates, coordinateCross_stabilizer_row]\n  refine ⟨(g.val.val.right (p, z)).2, ?_⟩\n  exact congrArg coordinateCross (Prod.ext hr.symm rfl)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:22:60: missing space in the source\n\nThis part of the code\n  '(p,x)))'\nshould be written as\n  '(p, x)))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:23:30: missing space in the source\n\nThis part of the code\n  'c∈coordinateRowFrame'\nshould be written as\n  'c ∈ coordinateRowFrame'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateCross_same_row_orbit (p : Point) (x y : E)\n    (hy : coordinateCross (p, y) ≠ coordinateCross (p, x)) :\n    MulAction.orbit (MulAction.stabilizer codeGroup (coordinateCross (p, x))) (coordinateCross (p, y)) =\n      coordinateRowFrame p \\ {coordinateCross (p, x)} :=\n  by\n  apply Set.ext\n  intro c\n  constructor\n  · intro hc\n    obtain ⟨g, rfl⟩ := MulAction.mem_orbit_iff.mp hc\n    refine ⟨coordinateCross_stabilizer_row_mem p x g _ ⟨y, rfl⟩, ?_⟩\n    intro he\n    have hg : g • coordinateCross (p, x) = coordinateCross (p, x) := g.prop\n    exact hy (MulAction.injective g (he.trans hg.symm))\n  · rintro ⟨⟨z, rfl⟩, hz⟩\n    exact MulAction.mem_orbit_iff.mpr (coordinateCross_same_row_transitive p x y z hy hz)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:36:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:35:29: missing space in the source\n\nThis part of the code\n  '(p,y)≠coordinateCross'\nshould be written as\n  '(p, y) ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:35:31: missing space in the source\n\nThis part of the code\n  '(p,y)≠coordinateCross'\nshould be written as\n  'y) ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:35:51: missing space in the source\n\nThis part of the code\n  '(p,x)) :'\nshould be written as\n  '(p, x))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateCross_same_row_orbit_card (p : Point) (x y : E)\n    (hy : coordinateCross (p, y) ≠ coordinateCross (p, x)) :\n    Nat.card (MulAction.orbit (MulAction.stabilizer codeGroup (coordinateCross (p, x))) (coordinateCross (p, y))) = 3 :=\n  by\n  rw [coordinateCross_same_row_orbit p x y hy]\n  classical\n  let e :\n    ↥(coordinateRowFrame p \\ {coordinateCross (p, x)}) ≃\n      { c : coordinateRowFrame p // CrossOrthogonal (coordinateCross (p, x)) c.val } :=\n    { toFun := fun c =>\n        ⟨⟨c.val, c.prop.1⟩,\n          (coordinateFrame_orthogonal_iff _ _ (coordinateCross_mem _) (coordinateRowFrame_subset p c.prop.1)).mpr\n            (Ne.symm c.prop.2)⟩\n      invFun := fun c =>\n        ⟨c.val.val, c.val.prop, by\n          intro h\n          exact crossOrthogonal_irrefl _ (h ▸ c.prop)⟩\n      left_inv := fun _ => rfl\n      right_inv := fun _ => rfl }\n  rw [Nat.card_congr e]\n  exact coordinateRowFrame_orthogonal_card p ⟨coordinateCross (p, x), ⟨x, rfl⟩⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:59:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:51:29: missing space in the source\n\nThis part of the code\n  '(p,y)≠coordinateCross'\nshould be written as\n  '(p, y) ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:51:31: missing space in the source\n\nThis part of the code\n  '(p,y)≠coordinateCross'\nshould be written as\n  'y) ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:51:51: missing space in the source\n\nThis part of the code\n  '(p,x)) :'\nshould be written as\n  '(p, x))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinate_same_row_pair_stabilizer_order (p : Point) (x y : E)\n    (hy : coordinateCross (p, y) ≠ coordinateCross (p, x)) :\n    Nat.card (MulAction.stabilizer (MulAction.stabilizer codeGroup (coordinateCross (p, x))) (coordinateCross (p, y))) =\n      16384 :=\n  by\n  have h :=\n    Nat.card_congr\n      (MulAction.orbitProdStabilizerEquivGroup (MulAction.stabilizer codeGroup (coordinateCross (p, x)))\n        (coordinateCross (p, y)))\n  rw [Nat.card_prod, coordinateCross_same_row_orbit_card p x y hy,\n    coordinateCross_stabilizer_order _ (coordinateCross_mem _)] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:70:29: missing space in the source\n\nThis part of the code\n  '(p,y)≠coordinateCross'\nshould be written as\n  '(p, y) ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:70:31: missing space in the source\n\nThis part of the code\n  '(p,y)≠coordinateCross'\nshould be written as\n  'y) ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:70:51: missing space in the source\n\nThis part of the code\n  '(p,x)) :'\nshould be written as\n  '(p, x))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateCross_other_rows_orbit (p q : Point) (hpq : p ≠ q) (x y : E) :\n    MulAction.orbit (MulAction.stabilizer codeGroup (coordinateCross (p, x))) (coordinateCross (q, y)) =\n      coordinateFrame \\ coordinateRowFrame p :=\n  by\n  have hn : coordinateCross (q, y) ∉ coordinateRowFrame p :=\n    by\n    rintro ⟨z, hz⟩\n    exact hpq (coordinateCross_row_of_eq hz)\n  apply Set.ext\n  intro c\n  constructor\n  · intro hc\n    obtain ⟨g, rfl⟩ := MulAction.mem_orbit_iff.mp hc\n    refine ⟨coordinateFrame_code_stable g.val _ (coordinateCross_mem _), ?_⟩\n    intro h\n    have ht := coordinateCross_stabilizer_row_mem p x g⁻¹ _ h\n    exact hn (by simpa using ht)\n  · rintro ⟨hc, hnc⟩\n    obtain ⟨⟨r, z⟩, rfl⟩ := coordinateFrame_rep c hc\n    have hpr : p ≠ r := by\n      intro he\n      subst r\n      exact hnc ⟨z, rfl⟩\n    exact MulAction.mem_orbit_iff.mpr (coordinateCross_other_rows_transitive p q r hpq hpr x y z)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:80:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:79:63: missing space in the source\n\nThis part of the code\n  'p≠q) (x'\nshould be written as\n  'p ≠ q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateCross_other_rows_orbit_card (p q : Point) (hpq : p ≠ q)\n    (x y : E) :\n    Nat.card (MulAction.orbit (MulAction.stabilizer codeGroup (coordinateCross (p, x))) (coordinateCross (q, y))) =\n      24 :=\n  by\n  rw [coordinateCross_other_rows_orbit p q hpq x y]\n  let e : ↥(coordinateFrame \\ coordinateRowFrame p) ≃ { c : coordinateFrame // c.val ∉ coordinateRowFrame p } :=\n    { toFun := fun c => ⟨⟨c.val, c.prop.1⟩, c.prop.2⟩\n      invFun := fun c => ⟨c.val.val, c.val.prop, c.prop⟩\n      left_inv := fun _ => rfl\n      right_inv := fun _ => rfl }\n  rw [Nat.card_congr e]\n  exact coordinateFrame_outside_row_card p`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:102:68: missing space in the source\n\nThis part of the code\n  'p≠q) (x'\nshould be written as\n  'p ≠ q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinate_different_row_pair_stabilizer_order (p q : Point)\n    (hpq : p ≠ q) (x y : E) :\n    Nat.card (MulAction.stabilizer (MulAction.stabilizer codeGroup (coordinateCross (p, x))) (coordinateCross (q, y))) =\n      2048 :=\n  by\n  have h :=\n    Nat.card_congr\n      (MulAction.orbitProdStabilizerEquivGroup (MulAction.stabilizer codeGroup (coordinateCross (p, x)))\n        (coordinateCross (q, y)))\n  rw [Nat.card_prod, coordinateCross_other_rows_orbit_card p q hpq x y,\n    coordinateCross_stabilizer_order _ (coordinateCross_mem _)] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:115:77: missing space in the source\n\nThis part of the code\n  'p≠q) (x'\nshould be written as\n  'p ≠ q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateLocalOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateCrossLocalAction transitive imports (legacy)",
+       "d8f5d85b21f8df9d"],
+      ["Atlas.Rudvalis.CoordinateCrossLocalAction:importAllArts",
+       "dfab4e3f37e4feea"],
+      ["Atlas.Rudvalis.CoordinateCrossStabilizer transitive imports (legacy)",
+       "fe67978918f9ab10"],
+      ["Atlas.Rudvalis.CoordinateCrossStabilizer:importAllArts",
+       "55e3d9d6b765bce4"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateLocalOrbits.lean",
+   "5d69a3896bf955d7"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateLocalOrbits", "944e7a8da2418f08"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "a22e4efdb22812a9"}

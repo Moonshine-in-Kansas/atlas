@@ -17,9 +17,16 @@ clarifications dated 27 October. Its broader local source inventory and dated
 verification results are distinguished from this filtered export.
 
 A, B, C, D, F₄ and G₂ each retain both their original model and a Chevalley
-root-operator model. The catalogue displays both constructions. A/B/C/D have
-explicit audited equivalences with linked Lean proof definitions and compiled
-types. The G₂ and F₄ comparisons retain their separately stated scopes.
+root-operator model. All six pairs have explicit audited equivalences, with
+linked Lean proof definitions, compiled types and marked-generator formulas.
+The G₂ and F₄ identifications hold over every finite field, including the
+small characteristics.
+
+[Completed mathematical checkpoints](catalogue/CHECKPOINTS.md) also record the
+simply connected ²E₆ order, the large Ree ²F₄ order and parabolic structure,
+the J₁ local subgroup and 1,596-point orbit, and prerequisites for the two
+remaining exceptional comparisons. Each checkpoint states its precise scope
+and the conclusions that remain open.
 
 This is a construction library, not a proof of classification exhaustiveness.
 Equality of orders is not used as a substitute for an isomorphism. The comparison
@@ -30,7 +37,7 @@ See the [Lean statements and verification certificates](catalogue/REALIZATIONS.m
 **Version 1.2 is the current, editable version on `main`.** It can receive further
 updates. The immutable [Version 1.0 release](https://github.com/Moonshine-in-Kansas/atlas/releases/tag/v1.0)
 remains available at its permanent version link. The source-bound compiled audit
-covers all 1,207 selected declarations; three Comparator targets remain open.
+covers all 1,313 selected declarations; three Comparator targets remain open.
 See [verification status](AUDIT.md) for the exact evidence and outstanding checks.
 
 ## Build and check

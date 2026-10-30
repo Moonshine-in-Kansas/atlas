@@ -1,0 +1,100 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["2ed5952913133728.olean"],
+  "m": false,
+  "i": "dfd19670115f9169.ilean",
+  "c": "af31491ef8dd25b7.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FramePerfectLinearAlgebra.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FramePerfectLinearAlgebra.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FramePerfectLinearAlgebra.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FramePerfectLinearAlgebra.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FramePerfectLinearAlgebra.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nReuse elementary generation and commutators of the already verified special linear family. -/\ntheorem binaryLinearGroup_perfect : Group.IsPerfect (E ≃ₗ[Bit] E) :=\n  by\n  let : Group.IsPerfect (Matrix.SpecialLinearGroup (Fin 3) Bit) := Atlas.sl_perfect 3 (by decide)\n  exact Group.IsPerfect.ofSurjective binarySLToLinear_surjective`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def affineRowSign (a : Bit) (v : E) : Point → Bit := fun p => a + dot v p.val`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem affineRowSign_mem (a : Bit) (v : E) :\n    affineRowSign a v ∈ hammingSignCode :=\n  by\n  change rowMoment (affineRowSign a v) = 0\n  decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def affineRowSignLinear : (Bit × E) →ₗ[Bit] hammingSignCode\n    where\n  toFun z := ⟨affineRowSign z.1 z.2, affineRowSign_mem z.1 z.2⟩\n  map_add' z\n    w := by\n    apply Subtype.ext\n    funext p\n    change (z.1 + w.1) + dot (z.2 + w.2) p.val = (z.1 + dot z.2 p.val) + (w.1 + dot w.2 p.val)\n    rw [dot_add_left]\n    abel\n  map_smul' a\n    z := by\n    apply Subtype.ext\n    funext p\n    change a * z.1 + dot (a • z.2) p.val = a * (z.1 + dot z.2 p.val)\n    simp [dot, Finset.mul_sum, mul_add, mul_assoc]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem affineRowSign_injective : Function.Injective affineRowSignLinear :=\n  by\n  intro z w h\n  have hh : affineRowSign z.1 z.2 = affineRowSign w.1 w.2 := congrArg Subtype.val h\n  have cert : ∀ a b : Bit, ∀ v w : E, affineRowSign a v = affineRowSign b w → a = b ∧ v = w := by decide +kernel\n  exact Prod.ext (cert _ _ _ _ hh).1 (cert _ _ _ _ hh).2`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem affineRowSign_surjective : Function.Surjective affineRowSignLinear :=\n  by\n  apply (Nat.bijective_iff_injective_and_card _).mpr ⟨affineRowSign_injective, ?_⟩ |>.2\n  rw [hammingSignCode_card, Nat.card_prod]\n  norm_num [Nat.card_eq_fintype_card, Bit, ZMod.card, card_E]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FramePerfectLinearAlgebra.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CodeRowExact transitive imports (legacy)",
+       "558f711ac86ce6b5"],
+      ["Atlas.Rudvalis.CodeRowExact:importAllArts", "1735337b8c862313"],
+      ["Mathlib.GroupTheory.IsPerfect transitive imports (legacy)",
+       "093ad11f09698378"],
+      ["Mathlib.GroupTheory.IsPerfect:importAllArts", "810186d88dbf5b0a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FramePerfectLinearAlgebra.lean",
+   "75190c2180f330fa"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FramePerfectLinearAlgebra", "479a543ee58f21c5"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "3d802e7ee0bd0c76"}

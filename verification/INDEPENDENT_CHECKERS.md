@@ -49,7 +49,7 @@ final solution acceptance. One driver runs at a time; retain the recorded
 The exact [recorded driver](existence/2026-10-25-draft/driver.rb) and
 [monitor](existence/2026-10-25-draft/monitor.rb) document the original invocation.
 
-The separate frozen-interface comparison must cover all 1,207 current audit roots.
+The separate frozen-interface comparison must cover all 1,313 current audit roots.
 Its new reference/solution wrappers and target map require review against a
 successful current-export build before replay. The old Version 1.0 harness covers
 an older selection and cannot serve as Version 1.2 acceptance. No new interface

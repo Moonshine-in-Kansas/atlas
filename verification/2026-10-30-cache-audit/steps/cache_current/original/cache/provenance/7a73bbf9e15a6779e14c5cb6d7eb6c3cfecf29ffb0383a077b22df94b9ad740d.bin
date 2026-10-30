@@ -1,0 +1,187 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["9600a490b406cc5a.olean"],
+  "m": false,
+  "i": "9106d3549b90713d.ilean",
+  "c": "5980cb60e7ce303d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/ProjectiveMatrixFiltration.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ProjectiveMatrixFiltration.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ProjectiveMatrixFiltration.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ProjectiveMatrixFiltration.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ProjectiveMatrixFiltration.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `set_option maxRecDepth 2048`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def projectiveRowProjection : codeRowKernel →* projectiveRowKernel\n    where\n  toFun g := ⟨QuotientGroup.mk' GaussianUnits g.val, g.prop⟩\n  map_one' := Subtype.ext (map_one _)\n  map_mul' g h := Subtype.ext (map_mul (QuotientGroup.mk' GaussianUnits) g.val h.val)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveRowProjection_surjective :\n    Function.Surjective projectiveRowProjection := by\n  intro a\n  obtain ⟨g, hg⟩ := QuotientGroup.mk'_surjective GaussianUnits a.val\n  have hp : g ∈ codeRowKernel :=\n    by\n    change projectiveCodeBlockHom (QuotientGroup.mk' GaussianUnits g) = 1\n    rw [hg]\n    exact a.prop\n  exact ⟨⟨g, hp⟩, Subtype.ext hg⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveRowProjection_kernel (g : codeRowKernel) :\n    g ∈ projectiveRowProjection.ker ↔ g.val ∈ GaussianUnits :=\n  by\n  change projectiveRowProjection g = 1 ↔ _\n  rw [Subtype.ext_iff]\n  exact QuotientGroup.eq_one_iff g.val`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def matrixScalarLine : Submodule Bit BinaryMatrix :=\n  Submodule.span Bit {(1 : BinaryMatrix)}`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable abbrev ProjectiveTranslationModule :=\n  BinaryMatrix ⧸ matrixScalarLine`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def rowMatrixQuotientHom :\n    codeRowKernel →* Multiplicative ProjectiveTranslationModule :=\n  matrixScalarLine.mkQ.toAddMonoidHom.toMultiplicative.comp codeRowMatrixHom`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def rowGaussianI : codeRowKernel :=\n  ⟨codeI, codeI_blockLinear⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rowGaussianI_matrix :\n    codeRowMatrixHom rowGaussianI = Multiplicative.ofAdd 1 :=\n  by\n  apply binaryTranslationEquiv.injective\n  change binaryTranslationEquiv (binaryTranslationEquiv.symm (codeRowTranslationHom rowGaussianI)) = _\n  rw [binaryTranslationEquiv.apply_symm_apply]\n  apply Subtype.ext\n  exact codeI_translation_identity`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rowGaussianI_matrixQuotient : rowMatrixQuotientHom rowGaussianI = 1 :=\n  by\n  change Multiplicative.ofAdd (matrixScalarLine.mkQ (codeRowMatrixHom rowGaussianI).toAdd) = 1\n  rw [rowGaussianI_matrix]\n  change matrixScalarLine.mkQ (1 : BinaryMatrix) = 0\n  exact (Submodule.Quotient.mk_eq_zero matrixScalarLine).mpr (Submodule.subset_span (Set.mem_singleton 1))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:50:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rowMatrixQuotientHom_kills_scalars :\n    projectiveRowProjection.ker ≤ rowMatrixQuotientHom.ker :=\n  by\n  intro g hg\n  obtain ⟨k, hk⟩ := Subgroup.mem_zpowers_iff.mp ((projectiveRowProjection_kernel g).mp hg)\n  have he : g = rowGaussianI ^ k := Subtype.ext hk.symm\n  change rowMatrixQuotientHom g = 1\n  rw [he, map_zpow, rowGaussianI_matrixQuotient, one_zpow]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def projectiveRowMatrixHom :\n    projectiveRowKernel →* Multiplicative ProjectiveTranslationModule :=\n  (QuotientGroup.lift projectiveRowProjection.ker rowMatrixQuotientHom rowMatrixQuotientHom_kills_scalars).comp\n    (QuotientGroup.quotientKerEquivOfSurjective projectiveRowProjection\n        projectiveRowProjection_surjective).symm.toMonoidHom`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveRowMatrixHom_projection (g : codeRowKernel) :\n    projectiveRowMatrixHom (projectiveRowProjection g) = rowMatrixQuotientHom g :=\n  by\n  change\n    QuotientGroup.lift projectiveRowProjection.ker rowMatrixQuotientHom rowMatrixQuotientHom_kills_scalars\n        ((QuotientGroup.quotientKerEquivOfSurjective projectiveRowProjection projectiveRowProjection_surjective).symm\n          (projectiveRowProjection g)) =\n      _\n  rw [show\n      (QuotientGroup.quotientKerEquivOfSurjective projectiveRowProjection projectiveRowProjection_surjective).symm\n          (projectiveRowProjection g) =\n        QuotientGroup.mk' projectiveRowProjection.ker g\n      from\n      (QuotientGroup.quotientKerEquivOfSurjective _ _).symm_apply_apply\n        (QuotientGroup.mk' projectiveRowProjection.ker g)]\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:69:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:70:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rowMatrixQuotientHom_surjective :\n    Function.Surjective rowMatrixQuotientHom := by\n  intro a\n  obtain ⟨M, hM⟩ := matrixScalarLine.mkQ_surjective a.toAdd\n  obtain ⟨g, hg⟩ := codeRowMatrixHom_surjective (Multiplicative.ofAdd M)\n  refine ⟨g, ?_⟩\n  change Multiplicative.ofAdd (matrixScalarLine.mkQ (codeRowMatrixHom g).toAdd) = a\n  rw [hg]\n  change Multiplicative.ofAdd (matrixScalarLine.mkQ M) = a\n  rw [hM]\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveRowMatrixHom_surjective :\n    Function.Surjective projectiveRowMatrixHom := by\n  intro a\n  obtain ⟨g, hg⟩ := rowMatrixQuotientHom_surjective a\n  exact ⟨projectiveRowProjection g, (projectiveRowMatrixHom_projection g).trans hg⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem matrixScalarLine_finrank : Module.finrank Bit matrixScalarLine = 1 :=\n  by\n  apply finrank_span_singleton\n  intro h\n  have he := congrArg (fun M : BinaryMatrix => M 0 0) h\n  simp at he`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveTranslationModule_finrank :\n    Module.finrank Bit ProjectiveTranslationModule = 8 :=\n  by\n  have h := matrixScalarLine.finrank_quotient_add_finrank\n  rw [matrixScalarLine_finrank] at h\n  have hm : Module.finrank Bit BinaryMatrix = 9 := by simp [BinaryMatrix, Module.finrank_matrix]\n  rw [hm] at h\n  change Module.finrank Bit ProjectiveTranslationModule + 1 = 9 at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveTranslationModule_card :\n    Nat.card ProjectiveTranslationModule = 256 :=\n  by\n  rw [Module.natCard_eq_pow_finrank (K := Bit), projectiveTranslationModule_finrank]\n  norm_num [Bit, Nat.card_eq_fintype_card, ZMod.card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveRowMatrixHom_kernel_order :\n    Nat.card projectiveRowMatrixHom.ker = 8 :=\n  by\n  have h := projectiveRowMatrixHom.ker.card_mul_index\n  rw [Subgroup.index_ker, MonoidHom.range_eq_top.mpr projectiveRowMatrixHom_surjective, Subgroup.card_top,\n    projectiveCodeBlockHom_kernel_order] at h\n  have ht : Nat.card (Multiplicative ProjectiveTranslationModule) = 256 := projectiveTranslationModule_card\n  rw [ht] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:117:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveMatrixFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.ProjectiveFrameFiltration transitive imports (legacy)",
+       "d129543b9301adf5"],
+      ["Atlas.Rudvalis.ProjectiveFrameFiltration:importAllArts",
+       "44b3aa852cbd55f6"],
+      ["Mathlib.LinearAlgebra.Quotient.Defs transitive imports (legacy)",
+       "49e97af53ba5d020"],
+      ["Mathlib.LinearAlgebra.Quotient.Defs:importAllArts",
+       "7dc3ee449667f2b9"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/ProjectiveMatrixFiltration.lean",
+   "b3dc02f41321a239"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.ProjectiveMatrixFiltration",
+   "8cc68dd7f820d54d"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "eeb6a6fada49adb0"}

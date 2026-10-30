@@ -1,0 +1,165 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["98fe8ca5f04d7934.olean"],
+  "m": false,
+  "i": "66a7e57b05b16f22.ilean",
+  "c": "214c405926566c79.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Unitary/ThreeStabilizer.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Unitary/ThreeStabilizer.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Unitary/ThreeStabilizer.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Unitary/ThreeStabilizer.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Unitary/ThreeStabilizer.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:8: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [h00, h10, h20] at h02 h01 h12 h22\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:35:55: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [mul_zero, zero_mul, add_zero, sub_zero] at hd\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:59:6: This simp argument is unused:\n  ht\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rootThreeMatrix, fullTorusThreeMatrix, Matrix.mul_diagonal, a, b, map_mul, conjugation_conjugation hdeg,\n    h00, h10, h20, h21, hdiag, h11, htop, hbt]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:59:34: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:59:15: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h02`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:28:2: `have hdiag : g 2 2 = (conjugation F K t)⁻¹ :=\n  by\n  have he := congrArg (conjugation F K) h02\n  simp only [map_mul, conjugation_conjugation hdeg, map_one] at he\n  apply mul_left_cancel₀ hbt\n  simpa only [mul_inv_cancel₀ hbt] using he`\nuses `h02`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h02`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:33:2: `have h11 : g 1 1 = conjugation F K t / t :=\n  by\n  rw [Matrix.det_fin_three, h10, h20, h21, h00, hdiag] at hd\n  simp only [mul_zero, zero_mul, add_zero, sub_zero, zero_add] at hd\n  apply (eq_div_iff ht).mpr\n  have he := congrArg (fun x : K => x * conjugation F K t) hd\n  field_simp at he\n  linear_combination he`\nuses `h02`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h01`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:33:2: `have h11 : g 1 1 = conjugation F K t / t :=\n  by\n  rw [Matrix.det_fin_three, h10, h20, h21, h00, hdiag] at hd\n  simp only [mul_zero, zero_mul, add_zero, sub_zero, zero_add] at hd\n  apply (eq_div_iff ht).mpr\n  have he := congrArg (fun x : K => x * conjugation F K t) hd\n  field_simp at he\n  linear_combination he`\nuses `h01`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h12`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:33:2: `have h11 : g 1 1 = conjugation F K t / t :=\n  by\n  rw [Matrix.det_fin_three, h10, h20, h21, h00, hdiag] at hd\n  simp only [mul_zero, zero_mul, add_zero, sub_zero, zero_add] at hd\n  apply (eq_div_iff ht).mpr\n  have he := congrArg (fun x : K => x * conjugation F K t) hd\n  field_simp at he\n  linear_combination he`\nuses `h12`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h22`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:33:2: `have h11 : g 1 1 = conjugation F K t / t :=\n  by\n  rw [Matrix.det_fin_three, h10, h20, h21, h00, hdiag] at hd\n  simp only [mul_zero, zero_mul, add_zero, sub_zero, zero_add] at hd\n  apply (eq_div_iff ht).mpr\n  have he := congrArg (fun x : K => x * conjugation F K t) hd\n  field_simp at he\n  linear_combination he`\nuses `h22`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h12`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:40:2: `have htop : g 0 1 = -conjugation F K t * conjugation F K (g 1 2) :=\n  by\n  rw [h21, h11, hdiag] at h12\n  simp only [map_inv₀, conjugation_conjugation hdeg, zero_mul, add_zero] at h12\n  field_simp at h12\n  linear_combination h12`\nuses `h12`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h22`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:40:2: `have htop : g 0 1 = -conjugation F K t * conjugation F K (g 1 2) :=\n  by\n  rw [h21, h11, hdiag] at h12\n  simp only [map_inv₀, conjugation_conjugation hdeg, zero_mul, add_zero] at h12\n  field_simp at h12\n  linear_combination h12`\nuses `h22`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h01`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:40:2: `have htop : g 0 1 = -conjugation F K t * conjugation F K (g 1 2) :=\n  by\n  rw [h21, h11, hdiag] at h12\n  simp only [map_inv₀, conjugation_conjugation hdeg, zero_mul, add_zero] at h12\n  field_simp at h12\n  linear_combination h12`\nuses `h01`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h02`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:40:2: `have htop : g 0 1 = -conjugation F K t * conjugation F K (g 1 2) :=\n  by\n  rw [h21, h11, hdiag] at h12\n  simp only [map_inv₀, conjugation_conjugation hdeg, zero_mul, add_zero] at h12\n  field_simp at h12\n  linear_combination h12`\nuses `h02`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h02`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:45:2: `let a := g 1 2 * conjugation F K t`\nuses `h02`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h01`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:45:2: `let a := g 1 2 * conjugation F K t`\nuses `h01`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h12`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:45:2: `let a := g 1 2 * conjugation F K t`\nuses `h12`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h22`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:45:2: `let a := g 1 2 * conjugation F K t`\nuses `h22`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h12`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:46:2: `let b := g 0 2 * conjugation F K t`\nuses `h12`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h01`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:46:2: `let b := g 0 2 * conjugation F K t`\nuses `h01`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h02`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:46:2: `let b := g 0 2 * conjugation F K t`\nuses `h02`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h22`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:46:2: `let b := g 0 2 * conjugation F K t`\nuses `h22`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:26:2: `simp [Pi.single_apply, h00, h10, h20] at h02 h01 h12 h22` is a flexible tactic modifying `h22`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:47:2: `have hab : rootThreeCondition (F := F) a b := by\n  rw [hdiag] at h22\n  simp only [map_inv₀, conjugation_conjugation hdeg] at h22\n  dsimp [rootThreeCondition, a, b]\n  simp only [map_mul, conjugation_conjugation hdeg]\n  field_simp at h22\n  linear_combination h22`\nuses `h22`, which was modified by the flexible tactic `simp` on line 26!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreeStabilizer.lean:59:34: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Unitary.ThreeBruhat transitive imports (legacy)",
+       "b1130dfd4adb8500"],
+      ["Atlas.LinearGroups.Unitary.ThreeBruhat:importAllArts",
+       "69f3e4c9691d2513"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Unitary/ThreeStabilizer.lean",
+   "f4056714250d2408"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Unitary.ThreeStabilizer",
+   "3ba75844cfce5592"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "a63585ee983aa0bf"}

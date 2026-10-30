@@ -1,0 +1,63 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["868bbab3319276aa.olean"],
+  "m": false,
+  "i": "eccec3545fa0d54a.ilean",
+  "c": "6246e0231f2fbc26.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Codes/HexacodeLocalSimple.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/HexacodeLocalSimple.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/HexacodeLocalSimple.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Codes/HexacodeLocalSimple.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Codes/HexacodeLocalSimple.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Codes/HexacodeLocalSimple.lean:27:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeLocalSimple.lean:29:33: This simp argument is unused:\n  Nat.card_eq_fintype_card\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Fintype.card_unique] at *\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeLocalSimple.lean:35:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeLocalSimple.lean:37:33: This simp argument is unused:\n  Nat.card_eq_fintype_card\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Fintype.card_unique] at *\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeLocalSimple.lean:73:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeLocalSimple.lean:74:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeLocalSimple.lean:57:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Codes.HexacodeKernelTransitivity transitive imports (legacy)",
+       "de80801486dd0bf1"],
+      ["Atlas.Codes.HexacodeKernelTransitivity:importAllArts",
+       "2c9c9469e4257514"],
+      ["Atlas.Families.Alternating.Stabilizers transitive imports (legacy)",
+       "6f3b5fea51d3cc25"],
+      ["Atlas.Families.Alternating.Stabilizers:importAllArts",
+       "be4c08d0d79e2f7f"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Codes/HexacodeLocalSimple.lean",
+   "cfcb7d5c4c0d67f6"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Codes.HexacodeLocalSimple", "fc5cef2d7318f0f1"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "3ac5718b751ab75c"}

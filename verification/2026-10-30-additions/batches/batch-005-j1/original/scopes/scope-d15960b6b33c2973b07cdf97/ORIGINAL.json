@@ -1,0 +1,117 @@
+{
+  "id": "staged-J1SignNormalizer",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "ComparisonWork.J1SignNormalizer"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Janko1.signElement_add",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    },
+    {
+      "declaration": "Atlas.Janko1.signElement_nsmul",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    },
+    {
+      "declaration": "Atlas.Janko1.signElement_mem_signSubgroup",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    },
+    {
+      "declaration": "Atlas.Janko1.signParameters_decompose",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    },
+    {
+      "declaration": "Atlas.Janko1.signElement_basis_one",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    },
+    {
+      "declaration": "Atlas.Janko1.signElement_basis_two",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    },
+    {
+      "declaration": "Atlas.Janko1.signElement_factorization",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    },
+    {
+      "declaration": "Atlas.Janko1.R_mem_signSubgroup",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    },
+    {
+      "declaration": "Atlas.Janko1.signSubgroup_le_iff",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    },
+    {
+      "declaration": "Atlas.Janko1.signSubgroup_eq_closure_three",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    },
+    {
+      "declaration": "Atlas.Janko1.signSubgroup_le_H",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    },
+    {
+      "declaration": "Atlas.Janko1.signSubgroup_le_generated",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    },
+    {
+      "declaration": "Atlas.Janko1.P_mem_signSubgroup_normalizer",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    },
+    {
+      "declaration": "Atlas.Janko1.Q_mem_signSubgroup_normalizer",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    },
+    {
+      "declaration": "Atlas.Janko1.H_le_signSubgroup_normalizer",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    },
+    {
+      "declaration": "Atlas.Janko1.signSubgroup_normal_in_H",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    },
+    {
+      "declaration": "Atlas.Janko1.signSubgroup_eq_closure_conjugates",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignNormalizer"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-J1SignNormalizer-structural-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.G2.Order",
+        "Atlas.LinearGroups.G2.Simplicity",
+        "Atlas.Sporadic.Janko1.Order",
+        "Atlas.Sporadic.Janko1.Simplicity",
+        "Atlas.Sporadic.Janko1.Perfectness"
+      ]
+    }
+  ]
+}

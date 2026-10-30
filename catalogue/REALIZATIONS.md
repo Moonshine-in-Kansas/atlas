@@ -11,17 +11,18 @@ Lie ranks, and PSL/PSU subscripts are dimensions. A_m denotes an alternating gro
 
 | Models and domain | Lean statement | Verification certificate |
 |---|---|---|
-| Aₙ(q): Matrix ≃ Chevalley; n ≥ 1, every finite q | [A_identification](ISOMORPHISMS.md#chevalley-a-to-legacy-v1 "Atlas.Chevalley.Catalogue.A_identification") | [Passed audit (18 Oct)](../verification/runs/chevalley-a-to-legacy-v1/20261018T160827-105/CERTIFICATE.md) |
-| Bₙ(q): Quadratic ≃ Chevalley; n ≥ 2, every finite q | [B_identification](ISOMORPHISMS.md#chevalley-b-to-legacy-v1 "Atlas.Chevalley.Catalogue.B_identification") | [Passed audit (18 Oct)](../verification/runs/chevalley-b-to-legacy-v1/20261018T165216-105/CERTIFICATE.md) |
-| Cₙ(q): Symplectic ≃ Chevalley; n ≥ 2, every finite q | [C_identification](ISOMORPHISMS.md#chevalley-c-to-legacy-v1 "Atlas.Chevalley.Catalogue.C_identification") | [Passed audit (18 Oct)](../verification/runs/chevalley-c-to-legacy-v1/20261018T162154-105/CERTIFICATE.md) |
-| Dₙ(q): Quadratic ≃ Chevalley; n ≥ 4, every finite q | [D_identification](ISOMORPHISMS.md#chevalley-d-to-legacy-v1 "Atlas.Chevalley.Catalogue.D_identification") | [Passed audit (18 Oct)](../verification/runs/chevalley-d-to-legacy-v1/20261018T163507-105/CERTIFICATE.md) |
+| Aₙ(q): Matrix ≃ Chevalley; K an arbitrary finite field; q = Nat.card K; r >= 1; every finite characteristic | [A_identification](ISOMORPHISMS.md#chevalley-a-to-legacy-v1 "Atlas.Chevalley.Catalogue.A_identification") | [Passed audit (18 Oct)](../verification/runs/chevalley-a-to-legacy-v1/20261018T160827-105/CERTIFICATE.md) |
+| Bₙ(q): Quadratic ≃ Chevalley; K an arbitrary finite field; q = Nat.card K; n : Nat, rank r = n+1 >= 2; every finite characteristic, including B2(F2) | [B_identification](ISOMORPHISMS.md#chevalley-b-to-legacy-v1 "Atlas.Chevalley.Catalogue.B_identification") | [Passed audit (18 Oct)](../verification/runs/chevalley-b-to-legacy-v1/20261018T165216-105/CERTIFICATE.md) |
+| Cₙ(q): Symplectic ≃ Chevalley; K an arbitrary finite field; q = Nat.card K; r >= 2; every finite characteristic | [C_identification](ISOMORPHISMS.md#chevalley-c-to-legacy-v1 "Atlas.Chevalley.Catalogue.C_identification") | [Passed audit (18 Oct)](../verification/runs/chevalley-c-to-legacy-v1/20261018T162154-105/CERTIFICATE.md) |
+| Dₙ(q): Quadratic ≃ Chevalley; K an arbitrary finite field; q = Nat.card K; r >= 4; every finite characteristic | [D_identification](ISOMORPHISMS.md#chevalley-d-to-legacy-v1 "Atlas.Chevalley.Catalogue.D_identification") | [Passed audit (18 Oct)](../verification/runs/chevalley-d-to-legacy-v1/20261018T163507-105/CERTIFICATE.md) |
+| G₂(q): Octonion ≃ Chevalley; K an arbitrary finite field; q = Nat.card K; fixed rank 2; every finite characteristic, including q=2 and q=3 | [G2_identification](ISOMORPHISMS.md#chevalley-g2-to-legacy-v1 "Atlas.Chevalley.Catalogue.G2_identification") | [Passed audit (30 Oct)](../verification/2026-10-30-additions/batches/batch-004-g2-comparison/original/scopes/scope-27d24b073003646aad6901a1/CERTIFICATE.md) |
+| F₄(q): Albert ≃ Chevalley; K an arbitrary finite field; q=Nat.card K; fixed rank 4; every characteristic, including q=2 and q=3. | [F4_identification](ISOMORPHISMS.md#chevalley-f4-to-albert-v1 "Atlas.Chevalley.Catalogue.F4_identification") | [Passed audit (30 Oct)](../verification/2026-10-30-additions/batches/batch-001-f4/original/scopes/scope-554991387ce2dbcd74585255/CERTIFICATE.md) |
 | Same family and parameters over different finite fields or extension presentations of the same sizes; within the comparison registry | [statement](../Atlas/Comparisons/CatalogueSameLabel.lean#L14 "Atlas.Comparisons.Catalogue.same_label_equiv") | [Passed audit (12 Oct)](../verification/runs/comparison-catalogue-isomorphism/20261012T065332-1260019/CERTIFICATE.md) |
 
 The A/B/C/D maps also cover nonsimple parameters in the stated domains.
-**G₂:** the Chevalley–Octonion map has ten passed local audit scopes, but its
-final preservation/registration and source export are outside this snapshot.
-**F₄:** the Chevalley–Albert map remains unfinished. Neither is presented as
-an included identification certificate. Each sporadic entry currently has
+The table includes G₂/F₄ only when their actual comparison certificates
+are registered and present in the source-bound compiled evidence.
+Each sporadic entry currently has
 one advertised construction; the comparison registry fixes the Mathieu markings.
 
 <a id="construction-inventory"></a>
@@ -156,7 +157,7 @@ Definitions and full parameter ranges are retained in the [catalogue](../CATALOG
 - Albert: [`Atlas.F4.Model`](../Atlas/LinearGroups/F4/Basic.lean#L8)
 <a id="family-f4-chevalley"></a>
 
-- Chevalley: [`Atlas.Chevalley.Model .F4`](../Atlas/LinearGroups/Chevalley/Models.lean)
+- Chevalley: [`Atlas.Chevalley.Catalogue.F4`](../Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean#L10)
 
 <a id="exceptional-tits"></a>
 
@@ -175,7 +176,7 @@ Definitions and full parameter ranges are retained in the [catalogue](../CATALOG
 - Octonion: [`Atlas.G2.Model`](../Atlas/LinearGroups/G2/Basic.lean#L8)
 <a id="family-g2-chevalley"></a>
 
-- Chevalley: [`Atlas.Chevalley.Model .G2`](../Atlas/LinearGroups/Chevalley/Models.lean)
+- Chevalley: [`Atlas.Chevalley.Catalogue.G2`](../Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean#L11)
 
 <a id="family-reeg2"></a>
 
@@ -358,7 +359,7 @@ of the constructed models with the uniform numerical classification.
 | Non-isomorphism result and reason | Lean statements | Verification certificates |
 |---|---|---|
 | **Combined comparison theorem:** distinct normalized labels give nonisomorphic groups within its [specified registry](../COMPARISON.md#scope-and-definitions) | [statement](../Atlas/Comparisons.lean#L59 "Atlas.Comparisons.Catalogue.not_isomorphic_of_normalized_label_ne") | [Passed audit (12 Oct)](../verification/runs/comparison-catalogue-isomorphism/20261012T065332-1260019/CERTIFICATE.md) |
-| <a id="order-certificates"></a><a id="e-series-order"></a> **By order:** outside the listed isomorphisms and the two patterns below, orders differ. The numerical classification is uniform, with no bound on rank or field size. | [Model orders](../THEOREM_STATEMENTS.md) · [order classification](../Atlas/OrderArithmetic/Classification.lean#L43 "Atlas.OrderArithmetic.catalogue_order_eq_iff") · [unequal orders](../Atlas/OrderArithmetic/Classification.lean#L64 "Atlas.OrderArithmetic.catalogue_order_ne") · [unequal orders imply nonisomorphism](../Atlas/Comparisons/Cardinality.lean#L9 "Atlas.Comparisons.not_isomorphic_of_card_ne") | [Compiled model audit (26 Oct)](../verification/2026-10-26-cache-audit/RESULT.json) · [Passed audit (12 Oct)](../verification/runs/comparison-catalogue-isomorphism/20261012T065332-1260019/CERTIFICATE.md) |
+| <a id="order-certificates"></a><a id="e-series-order"></a> **By order:** outside the listed isomorphisms and the two patterns below, orders differ. The numerical classification is uniform, with no bound on rank or field size. | [Model orders](../THEOREM_STATEMENTS.md) · [order classification](../Atlas/OrderArithmetic/Classification.lean#L43 "Atlas.OrderArithmetic.catalogue_order_eq_iff") · [unequal orders](../Atlas/OrderArithmetic/Classification.lean#L64 "Atlas.OrderArithmetic.catalogue_order_ne") · [unequal orders imply nonisomorphism](../Atlas/Comparisons/Cardinality.lean#L9 "Atlas.Comparisons.not_isomorphic_of_card_ne") | [Source-bound compiled model audit](../verification/2026-10-30-cache-audit/RESULT.json) · [Passed audit (12 Oct)](../verification/runs/comparison-catalogue-isomorphism/20261012T065332-1260019/CERTIFICATE.md) |
 | **Equal order, different involution-class counts:** Bₙ(q) and Cₙ(q), odd q and n ≥ 3; counts n and ⌊n/2⌋ + 1 | [equal order](../Atlas/Comparisons/Classical/OrthogonalOrder.lean#L10 "Atlas.Comparisons.Classical.oddB_card_eq_C") · [nonisomorphism](../Atlas/Comparisons/Classical/OrthogonalInvolutions.lean#L21 "Atlas.Comparisons.Classical.oddB_not_equiv_C") · [counts](../Atlas/Comparisons/Classical/OrthogonalInvolutions.lean#L15 "Atlas.Comparisons.Classical.oddB_C_involution_counts") | [Passed audit (15 Sep)](../verification/runs/orthogonal-comparison-contracts/20260915T124053-3/CERTIFICATE.md) · [B invariant replay](../verification/existence/2026-10-25-draft/AtlasDistinguished-typeB/RESULT.json) · [C invariant replay](../verification/existence/2026-10-25-draft/AtlasDistinguished-typeC/RESULT.json) |
 | **Equal order, different Sylow-2 centers:** A₈ ≃ PSL₄(2) versus PSL₃(4), both order 20,160; center sizes 2 and 4 | [equal order](../Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean#L31 "Atlas.Comparisons.Exceptional.alt8_card_eq_psl3Card4") · [A₈ nonisomorphism](../Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean#L22 "Atlas.Comparisons.Exceptional.alt8_not_equiv_psl3Card4") · [PSL₄ nonisomorphism](../Atlas/Comparisons/Exceptional/Order20160Nonisomorphism.lean#L13 "Atlas.Comparisons.Exceptional.psl4Two_not_equiv_psl3Card4") | [Passed audit (15 Sep)](../verification/runs/orthogonal-comparison-contracts/20260915T124053-3/CERTIFICATE.md) · [A₈ invariant replay](../verification/existence/2026-10-25-draft/AtlasDistinguished-alternating8/RESULT.json) · [PSL₃(4) invariant replay](../verification/existence/2026-10-25-draft/AtlasDistinguished-psl3Four/RESULT.json) |
 

@@ -1,0 +1,143 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["1dcfa14a5581c2bf.olean"],
+  "m": false,
+  "i": "3e4cb17893be9ba0.ilean",
+  "c": "b44c4715cff48234.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinatePlaneSlices.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinatePlaneSlices.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinatePlaneSlices.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinatePlaneSlices.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinatePlaneSlices.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def coordinatePlaneSlice (p a : Point) (δ : Bit) : Set MinimalCross :=\n  {c | ∃ x : E, dot a.val x = δ ∧ coordinateCross (p, x) = c}`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinatePlaneSlice_subset (p a : Point) (δ : Bit) :\n    coordinatePlaneSlice p a δ ⊆ coordinateRowFrame p :=\n  by\n  rintro c ⟨x, _, rfl⟩\n  exact ⟨x, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinatePlaneSlice_mem (p a : Point) (hap : dot a.val p.val = 0)\n    (δ : Bit) (x : E) : coordinateCross (p, x) ∈ coordinatePlaneSlice p a δ ↔ dot a.val x = δ :=\n  by\n  constructor\n  · rintro ⟨y, hy, he⟩\n    rcases (coordinateCross_eq_iff _ _).mp he with he | he\n    · have h := congrArg Prod.snd he\n      change y = x at h\n      rwa [h] at hy\n    · rw [codeI_coordinate] at he\n      have h := congrArg Prod.snd he\n      change y + p.val = x at h\n      rw [← h, dot_add_right, hap, add_zero]\n      exact hy\n  · intro h\n    exact ⟨x, h, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:13:69: missing space in the source\n\nThis part of the code\n  'p.val=0) (δ'\nshould be written as\n  'p.val = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateRowFrame_disjoint {p q : Point} (hpq : p ≠ q) :\n    Disjoint (coordinateRowFrame p) (coordinateRowFrame q) :=\n  by\n  apply Set.disjoint_left.mpr\n  rintro c ⟨x, rfl⟩ ⟨y, hy⟩\n  rcases (coordinateCross_eq_iff _ _).mp hy with h | h\n  · exact hpq (congrArg Prod.fst h).symm\n  · rw [codeI_coordinate] at h\n    exact hpq (congrArg Prod.fst h).symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:29:58: missing space in the source\n\nThis part of the code\n  'p≠q) :'\nshould be written as\n  'p ≠ q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def coordinateRowSliceEquiv (p a : Point) (δ : Bit) :\n    { c : coordinateRowFrame p // c.val ∈ coordinatePlaneSlice p a δ } ≃ coordinatePlaneSlice p a δ\n    where\n  toFun c := ⟨c.val.val, c.prop⟩\n  invFun c := ⟨⟨c.val, coordinatePlaneSlice_subset p a δ c.prop⟩, c.prop⟩\n  left_inv _ := rfl\n  right_inv _ := rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:39:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinatePlaneSlice_card (p a : Point) (hap : dot a.val p.val = 0)\n    (δ : Bit) : Nat.card (coordinatePlaneSlice p a δ) = 2 :=\n  by\n  have hc := coordinateRow_predicate_card p (fun c => c ∈ coordinatePlaneSlice p a δ)\n  rw [Nat.card_congr (Equiv.subtypeEquivRight (coordinatePlaneSlice_mem p a hap δ)),\n    Nat.card_congr (coordinateRowSliceEquiv p a δ)] at hc\n  have hd : Nat.card { x : E // dot a.val x = δ } = 4 :=\n    by\n    rw [Nat.card_eq_fintype_card]\n    obtain ⟨r, rfl⟩ := rowLabel_bijective.2 a\n    have cert : ∀ r : Fin 7, ∀ b : Bit, Fintype.card { x : E // dot (rowLabel r).val x = b } = 4 := by decide +kernel\n    exact cert r δ\n  rw [hd] at hc\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:53:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:45:70: missing space in the source\n\nThis part of the code\n  'p.val=0) (δ'\nshould be written as\n  'p.val = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def coordinatePlaneQuartet (p q a : Point) (δ ε : Bit) : Set MinimalCross :=\n  coordinatePlaneSlice p a δ ∪ coordinatePlaneSlice q a ε`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinatePlaneQuartet_card (p q a : Point) (hpq : p ≠ q)\n    (hap : dot a.val p.val = 0) (haq : dot a.val q.val = 0) (δ ε : Bit) :\n    (coordinatePlaneQuartet p q a δ ε).ncard = 4 :=\n  by\n  have hd : Disjoint (coordinatePlaneSlice p a δ) (coordinatePlaneSlice q a ε) :=\n    (coordinateRowFrame_disjoint hpq).mono (coordinatePlaneSlice_subset p a δ) (coordinatePlaneSlice_subset q a ε)\n  rw [coordinatePlaneQuartet, Set.ncard_union_eq hd]\n  have h1 := coordinatePlaneSlice_card p a hap δ\n  have h2 := coordinatePlaneSlice_card q a haq ε\n  change Nat.card (coordinatePlaneSlice p a δ) + Nat.card (coordinatePlaneSlice q a ε) = 4\n  rw [h1, h2]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:65:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:61:60: missing space in the source\n\nThis part of the code\n  'p≠q)\n '\nshould be written as\n  'p ≠ q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:62:26: missing space in the source\n\nThis part of the code\n  'p.val=0) (haq'\nshould be written as\n  'p.val = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:62:52: missing space in the source\n\nThis part of the code\n  'q.val=0) (δ'\nshould be written as\n  'q.val = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinatePlaneQuartet_subset (p q a : Point) (δ ε : Bit) :\n    coordinatePlaneQuartet p q a δ ε ⊆ coordinateFrame :=\n  by\n  rintro c (h | h)\n  · exact coordinateRowFrame_subset p (coordinatePlaneSlice_subset p a δ h)\n  · exact coordinateRowFrame_subset q (coordinatePlaneSlice_subset q a ε h)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinatePlaneQuartet_pairwise (p q a : Point) (δ ε : Bit) :\n    (coordinatePlaneQuartet p q a δ ε).Pairwise CrossOrthogonal :=\n  by\n  intro x hx y hy hxy\n  exact\n    (coordinateFrame_orthogonal_iff _ _ (coordinatePlaneQuartet_subset p q a δ ε hx)\n          (coordinatePlaneQuartet_subset p q a δ ε hy)).mpr\n      hxy`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinatePlaneSlices.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateRowQuartets transitive imports (legacy)",
+       "c4b882c174a20e9c"],
+      ["Atlas.Rudvalis.CoordinateRowQuartets:importAllArts",
+       "7514c00fd62443ac"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinatePlaneSlices.lean",
+   "529c39e42749b1eb"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinatePlaneSlices", "ac1ab9579f4c8446"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "f64be4b66f7ad144"}

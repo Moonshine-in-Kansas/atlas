@@ -1,0 +1,95 @@
+{
+  "id": "staged-FixedInversionOrder",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.FixedInversionOrder"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6CellInversionLabelEquiv",
+      "kind": "definition",
+      "module": "FamilyWork.FixedInversionOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6CellInversionLabels_card",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedInversionOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedInversionProduct",
+      "kind": "definition",
+      "module": "FamilyWork.FixedInversionOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedInversionProduct_val",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedInversionOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedInversionProduct_injective",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedInversionOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedInversionProduct_surjective",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedInversionOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedInversionProductEquiv",
+      "kind": "definition",
+      "module": "FamilyWork.FixedInversionOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedInversionProductEquiv_apply",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedInversionOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6CellInversionFixedSubgroup_card",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedInversionOrder"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-FixedInversionOrder-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-FixedInversionOrder-no-inherited-factor-count",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.selectedWeightCompanionPositive_card",
+        "Atlas.Chevalley.positiveWitnessedWeightCompanionSubgroup_card",
+        "Atlas.Chevalley.positiveRootSubsetSubgroup_card",
+        "Atlas.Chevalley.positiveWitnessed_doubleCell_card",
+        "Atlas.Chevalley.TwistedE6.companionPositiveFixedSubgroup_card",
+        "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.fixedFunctions_card",
+        "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.card_fixedLabel",
+        "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.card_pairLabel"
+      ],
+      "forbid_modules": [
+        "FamilyWork.FixedBorel",
+        "FamilyWork.FixedTorusOrder",
+        "FamilyWork.FoldedWeylGeneration"
+      ]
+    }
+  ]
+}

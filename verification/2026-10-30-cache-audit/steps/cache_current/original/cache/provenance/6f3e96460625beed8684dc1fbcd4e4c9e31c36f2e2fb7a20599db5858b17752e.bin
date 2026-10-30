@@ -1,0 +1,104 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["84e562c1305f89e6.olean"],
+  "m": false,
+  "i": "0b50fdff212b24e5.ilean",
+  "c": "19635f5e304f6453.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Families/Alternating/Construction.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Families/Alternating/Construction.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Families/Alternating/Construction.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Families/Alternating/Construction.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Families/Alternating/Construction.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Families.Alternating`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `structure Construction (n : ℕ) : Prop where\n  finite : Finite (Model n)\n  card : Nat.card (Model n) = order n\n  simple : IsSimpleGroup (Model n)\n  noncommuting : ∃ a b : Model n, a * b ≠ b * a\n  normal : (alternatingGroup (Fin n)).Normal\n  index : (alternatingGroup (Fin n)).index = 2\n  faithful : FaithfulSMul (Model n) (Fin n)\n  generation : Subgroup.closure {g : Equiv.Perm (Fin n) | g.IsThreeCycle} = alternatingGroup (Fin n)\n  transitivity : ∀ k, k ≤ n - 2 → MulAction.IsMultiplyPretransitive (Model n) (Fin n) k\n  not_transitivity : ¬MulAction.IsMultiplyPretransitive (Model n) (Fin n) (n - 1)\n  stabilizer : ∀ k (e : Fin k ↪ Fin n), Nonempty (PointwiseStabilizer e ≃* Model (n - k))\n  stabilizer_card : ∀ k (e : Fin k ↪ Fin n), Nat.card (PointwiseStabilizer e) = order (n - k)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem construction (n : ℕ) (hn : IsAdmissible n) : Construction n\n    where\n  finite := finite n\n  card := card n\n  simple := isSimpleGroup n hn\n  noncommuting := exists_mul_ne_mul n (le_trans (by decide) hn)\n  normal := normal n\n  index := index n (le_trans (by decide) hn)\n  faithful := faithful n\n  generation := generation n\n  transitivity := multiply_transitive n\n  not_transitivity := not_multiply_transitive n hn\n  stabilizer := fun _ e => ⟨stabilizerEquiv e⟩\n  stabilizer_card := fun _ e => stabilizer_card e`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem exists_model (n : ℕ) (hn : IsAdmissible n) :\n    ∃ (G : Type) (_ : Group G),\n      Nonempty (G ≃* Model n) ∧\n        Finite G ∧ Nat.card G = order n ∧ IsSimpleGroup G ∧ (∃ a b : G, a * b ≠ b * a) ∧ Construction n :=\n  by\n  exact\n    ⟨Model n, inferInstance, ⟨MulEquiv.refl _⟩, finite n, card n, isSimpleGroup n hn,\n      exists_mul_ne_mul n (le_trans (by decide) hn), construction n hn⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem checks_five : Nat.card (Model 5) = 60 ∧ Construction 5 := by\n  exact ⟨by rw [card_factorial 5 (by decide)]; decide, construction 5 (by exact le_rfl)⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem checks_six : Nat.card (Model 6) = 360 ∧ Construction 6 := by\n  exact ⟨by rw [card_factorial 6 (by decide)]; decide, construction 6 (by change 5 ≤ 6; decide)⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem checks_seven : Nat.card (Model 7) = 2520 ∧ Construction 7 := by\n  exact ⟨by rw [card_factorial 7 (by decide)]; decide, construction 7 (by change 5 ≤ 7; decide)⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem checks_eight : Nat.card (Model 8) = 20160 ∧ Construction 8 := by\n  exact ⟨by rw [card_factorial 8 (by decide)]; decide, construction 8 (by change 5 ≤ 8; decide)⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem checks_small :\n    (Nat.card (Model 0) = 1 ∧ ¬IsSimpleGroup (Model 0)) ∧\n      (Nat.card (Model 1) = 1 ∧ ¬IsSimpleGroup (Model 1)) ∧\n        (Nat.card (Model 2) = 1 ∧ ¬IsSimpleGroup (Model 2)) ∧\n          (Nat.card (Model 3) = 3 ∧ IsSimpleGroup (Model 3)) ∧ (Nat.card (Model 4) = 12 ∧ ¬IsSimpleGroup (Model 4)) :=\n  by\n  refine\n    ⟨⟨?_, not_simple_small 0 (by decide)⟩, ⟨?_, not_simple_small 1 (by decide)⟩, ⟨?_, not_simple_small 2 (by decide)⟩,\n      ⟨?_, simple_three⟩, ⟨?_, not_simple_four⟩⟩\n  all_goals rw [card]; norm_num [order, Nat.factorial]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Families.Alternating`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Families/Alternating/Construction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Families.Alternating.Action transitive imports (legacy)",
+       "a919ad47ea1ac297"],
+      ["Atlas.Families.Alternating.Action:importAllArts",
+       "e69a2aa88eecbd0f"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Families/Alternating/Construction.lean",
+   "8a3bb0ddc942ee3b"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Families.Alternating.Construction", "a33ceabad386e692"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "650d24bb350a035b"}

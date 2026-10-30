@@ -1,0 +1,134 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["f1d46c37b92487aa.olean"],
+  "m": false,
+  "i": "26de70178b46bf53.ilean",
+  "c": "ec6ad39ca00e3971.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/LocalStabilizerOrders.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LocalStabilizerOrders.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LocalStabilizerOrders.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LocalStabilizerOrders.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LocalStabilizerOrders.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem full_gaussian_cross_transitive :\n    MulAction.IsPretransitive gaussianLatticeGroup MinimalCross :=\n  by\n  let := rudvalis_generated_cross_transitive\n  constructor\n  intro a b\n  obtain ⟨g, hg⟩ := MulAction.exists_smul_eq generatedGaussianGroup a b\n  exact ⟨g.val, hg⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:6:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem full_gaussian_orthogonal_pairs_transitive :\n    MulAction.IsPretransitive gaussianLatticeGroup OrthogonalPairs :=\n  by\n  let := rudvalis_generated_orthogonal_pairs_transitive\n  constructor\n  intro a b\n  obtain ⟨g, hg⟩ := MulAction.exists_smul_eq generatedGaussianGroup a b\n  exact ⟨g.val, hg⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem full_point_stabilizer_card_equation (x : MinimalCross) :\n    4060 * Nat.card (MulAction.stabilizer gaussianLatticeGroup x) = Nat.card gaussianLatticeGroup :=\n  by\n  let := full_gaussian_cross_transitive\n  have h := Nat.card_congr (MulAction.orbitProdStabilizerEquivGroup gaussianLatticeGroup x)\n  rw [Nat.card_prod, MulAction.orbit_eq_univ, Nat.card_univ, rudvalisLattice_minimal_cross_card] at h\n  exact h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def referenceCoupleOrdered : OrthogonalPairs :=\n  ⟨(localReferenceCross, referenceSecondCross), reference_crosses_orthogonal⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceCoupleOrdered_stabilizer :\n    MulAction.stabilizer gaussianLatticeGroup referenceCoupleOrdered = coupleFusionGroup :=\n  by\n  rw [coupleFusionGroup_eq_pair_stabilizer]\n  ext g\n  change\n    (g • referenceCoupleOrdered = referenceCoupleOrdered) ↔\n      (g • localReferenceCross = localReferenceCross ∧ g • referenceSecondCross = referenceSecondCross)\n  rw [Subtype.ext_iff]\n  exact Prod.ext_iff`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem full_pair_stabilizer_card_equation :\n    7125300 * Nat.card coupleFusionGroup = Nat.card gaussianLatticeGroup :=\n  by\n  let := full_gaussian_orthogonal_pairs_transitive\n  have h := Nat.card_congr (MulAction.orbitProdStabilizerEquivGroup gaussianLatticeGroup referenceCoupleOrdered)\n  rw [Nat.card_prod, MulAction.orbit_eq_univ, Nat.card_univ, rudvalis_ordered_orthogonal_pairs_card,\n    referenceCoupleOrdered_stabilizer] at h\n  exact h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:43:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The stabilizer of every actual minimal cross has this exact order. -/\ntheorem full_point_stabilizer_order (x : MinimalCross) :\n    Nat.card (MulAction.stabilizer gaussianLatticeGroup x) = 143769600 :=\n  by\n  have h := full_point_stabilizer_card_equation x\n  rw [full_gaussian_order] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localFusionGroup_order : Nat.card localFusionGroup = 143769600 :=\n  by\n  rw [localFusionGroup_eq_point_stabilizer]\n  exact full_point_stabilizer_order _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The concrete group A is the full pointwise reference-couple stabilizer. -/\ntheorem coupleFusionGroup_order : Nat.card coupleFusionGroup = 81920 :=\n  by\n  have h := full_pair_stabilizer_card_equation\n  rw [full_gaussian_order] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe stabilizer of every actual ordered orthogonal pair has this exact order. -/\ntheorem full_orthogonal_pair_stabilizer_order (z : OrthogonalPairs) :\n    Nat.card (MulAction.stabilizer gaussianLatticeGroup z) = 81920 :=\n  by\n  let := full_gaussian_orthogonal_pairs_transitive\n  have h := Nat.card_congr (MulAction.orbitProdStabilizerEquivGroup gaussianLatticeGroup z)\n  rw [Nat.card_prod, MulAction.orbit_eq_univ, Nat.card_univ, rudvalis_ordered_orthogonal_pairs_card,\n    full_gaussian_order] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem full_pointwise_couple_stabilizer_order (x y : MinimalCross)\n    (hxy : CrossOrthogonal x y) :\n    Nat.card\n        (MulAction.stabilizer gaussianLatticeGroup x ⊓ MulAction.stabilizer gaussianLatticeGroup y :\n          Subgroup gaussianLatticeGroup) =\n      81920 :=\n  by\n  have he :\n    MulAction.stabilizer gaussianLatticeGroup (⟨(x, y), hxy⟩ : OrthogonalPairs) =\n      MulAction.stabilizer gaussianLatticeGroup x ⊓ MulAction.stabilizer gaussianLatticeGroup y :=\n    by\n    ext g\n    change (g • (⟨(x, y), hxy⟩ : OrthogonalPairs) = (⟨(x, y), hxy⟩ : OrthogonalPairs)) ↔ (g • x = x ∧ g • y = y)\n    rw [Subtype.ext_iff]\n    exact Prod.ext_iff\n  rw [← he]\n  exact full_orthogonal_pair_stabilizer_order _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:79:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalStabilizerOrders.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FullPointStabilizer transitive imports (legacy)",
+       "702b78b7ee455941"],
+      ["Atlas.Rudvalis.FullPointStabilizer:importAllArts", "1f8d18c38aeb1c36"],
+      ["Atlas.Rudvalis.GaussianGroupOrder transitive imports (legacy)",
+       "1cf83b49acd7e6a9"],
+      ["Atlas.Rudvalis.GaussianGroupOrder:importAllArts",
+       "a9c9d18eca5c29fd"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/LocalStabilizerOrders.lean",
+   "b6f6b335a127f8d3"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.LocalStabilizerOrders", "17b802054c716640"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "4bc1cf3060cfa8ec"}

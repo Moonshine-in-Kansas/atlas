@@ -1,0 +1,105 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["a5a5e5532ba2cfb9.olean"],
+  "m": false,
+  "i": "db491b0355ab1302.ilean",
+  "c": "edb6b96c6e9e3424.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Graphs/HexadExtensionGraph.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Graphs/HexadExtensionGraph.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Graphs/HexadExtensionGraph.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Graphs/HexadExtensionGraph.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Graphs/HexadExtensionGraph.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:41:0: `hexad_extension_pred_card` does not use the following hypothesis in its type:\n  • [Fintype V] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:54:0: automatically included section variable(s) unused in theorem `Atlas.Graphs.block_subtype_pred_card`:\n  [Fintype V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:54:0: `block_subtype_pred_card` does not use the following hypothesis in its type:\n  • [Fintype V] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:63:0: automatically included section variable(s) unused in theorem `Atlas.Graphs.point_subtype_mem_card`:\n  [Fintype V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:63:0: `point_subtype_mem_card` does not use the following hypothesis in its type:\n  • [Fintype V] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:66:55: Variable name `a` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _a\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:67:65: Variable name `a` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _a\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:67:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:69:0: `hexad_extension_neighbor_card` does not use the following hypothesis in its type:\n  • [Fintype V] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:74:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:75:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:101:48: This simp argument is unused:\n  point_subtype_mem_card\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hexadExtensionGraph, hexadExtensionAdj, h.size y.val y.prop]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:92:0: `hexad_extension_base_common` does not use the following hypothesis in its type:\n  • [Fintype V] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:103:0: `hexad_extension_points_common` does not use the following hypothesis in its type:\n  • [Fintype V] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:128:8: `if_pos` has been deprecated: Use `ite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:138:8: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:124:51: This simp argument is unused:\n  true_and\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [hexadExtensionGraph, hexadExtensionAdj, and_false, false_and, ite_false, nat_card_false, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:118:0: `hexad_extension_point_block_common` does not use the following hypothesis in its type:\n  • [Fintype V] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:151:4: This simp argument is unused:\n  nat_card_false\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [hexadExtensionGraph, hexadExtensionAdj, false_and, ite_false, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:144:0: `hexad_extension_blocks_common` does not use the following hypothesis in its type:\n  • [Fintype V] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionGraph.lean:155:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Combinatorics.HexadIntersectionCounts transitive imports (legacy)",
+       "4f2bbdda2fb16338"],
+      ["Atlas.Combinatorics.HexadIntersectionCounts:importAllArts",
+       "21dd85ba96e1ee4c"],
+      ["Mathlib.Combinatorics.SimpleGraph.StronglyRegular transitive imports (legacy)",
+       "5b3173b6ebcda795"],
+      ["Mathlib.Combinatorics.SimpleGraph.StronglyRegular:importAllArts",
+       "bd375a0979a2eeb0"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Graphs/HexadExtensionGraph.lean",
+   "8603dfb0010d0cd9"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Graphs.HexadExtensionGraph", "40cf98c3cf37f676"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "dcfc4e04050a39ac"}

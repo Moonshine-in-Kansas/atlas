@@ -1,0 +1,58 @@
+{
+  "status": "process-passed",
+  "command": [
+    "/home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean",
+    "-j1",
+    "-M8704",
+    "-Dpp.unicode.fun=true",
+    "-DrelaxedAutoImplicit=false",
+    "-Dweak.linter.mathlibStandardSet=true",
+    "-DmaxSynthPendingDepth=3",
+    "--root=/home/gerald/atlas/claude/release-update-v1.2-20261030/candidate",
+    "-o",
+    "/home/gerald/atlas/claude/release-update-v1.2-20261030/candidate/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/PositiveLineKernelEmbedding.olean",
+    "-i",
+    "/home/gerald/atlas/claude/release-update-v1.2-20261030/candidate/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/PositiveLineKernelEmbedding.ilean",
+    "/home/gerald/atlas/claude/release-update-v1.2-20261030/candidate/Atlas/LinearGroups/ReeF4/PositiveLineKernelEmbedding.lean"
+  ],
+  "cwd": "/home/gerald/atlas/claude/release-update-v1.2-20261030/candidate",
+  "environment": {
+    "LEAN_NUM_THREADS": "2",
+    "LEAN_PATH": "/home/gerald/atlas/claude/release-update-v1.2-20261030/candidate/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean"
+  },
+  "started_utc": "2026-10-30T07:15:03Z",
+  "exit_code": 0,
+  "signal": null,
+  "guard_stop": null,
+  "policy": "Single serial lease; Lean allocation8704MiB; owned RSS<=9GiB; combined worker RSS<two-thirds physicalRAM; actual availableRAM>=1GiB; at most4 Lean workers; bounded2GiB swap credit.",
+  "owned_rss_cap": 9663676416,
+  "peak_owned_rss": 3631947776,
+  "peak_owned_rss_and_swap": 3631947776,
+  "peak_combined_worker_rss": 3982503936,
+  "peak_lean_workers": 1,
+  "proof_diagnostic_errors": false,
+  "combined_worker_rss_cap": 10938288810,
+  "pid": 414019,
+  "log_plain_sha256": "d58a3e800705913d89faa2a4e8af5d908b3246f487b9f3ea49f2815676b66e7d",
+  "log_compressed_sha256": "a84fa033ef02b09a3beb465608e15ff0eeb5529474da6ee4ef739e6b8691f5cb",
+  "log_recovery_verified": true,
+  "finished_utc": "2026-10-30T07:15:09Z",
+  "final_memory": {
+    "MemTotal": 16407433216,
+    "MemAvailable": 5955338240,
+    "SwapFree": 9117052928
+  },
+  "log_sha256": "d58a3e800705913d89faa2a4e8af5d908b3246f487b9f3ea49f2815676b66e7d",
+  "adaptation": {
+    "schema_version": 1,
+    "original_receipt": {
+      "path": "original/process.json",
+      "sha256": "dca1cc16de96b7bd54fb513752c41134fc261535b9560ac7125ff83b2164a2f9"
+    },
+    "alias": {
+      "log_sha256": "log_plain_sha256"
+    },
+    "decompressed_log_verified": true,
+    "original_compressed_sha256": "a84fa033ef02b09a3beb465608e15ff0eeb5529474da6ee4ef739e6b8691f5cb"
+  }
+}

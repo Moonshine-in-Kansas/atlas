@@ -1,0 +1,99 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["904d39ea7de342ed.olean"],
+  "m": false,
+  "i": "ccc17ab3164c1c2b.ilean",
+  "c": "0013805506c3f8c9.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyCoupleComplementOrbit.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyCoupleComplementOrbit.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyCoupleComplementOrbit.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyCoupleComplementOrbit.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def heavySemiCoupleNeighbours : Set MinimalCross :=\n  {c | ReferenceCoupleSemiOrthogonal c ∧ ∃ w : HeavyCrosses, shellPieceCrossMap heavyShellPiece w = c}`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyCoupleNeighbours_subset_coordinateNeighbours :\n    heavyCoupleNeighbours ⊆ heavyCoordinateNeighbours (rowLabel 0) :=\n  by\n  rintro c ⟨hc, hw⟩\n  exact ⟨localReferenceCross_eq ▸ hc.1, hw⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavySemiCoupleNeighbours_eq_difference :\n    heavySemiCoupleNeighbours = heavyCoordinateNeighbours (rowLabel 0) \\ heavyCoupleNeighbours :=\n  by\n  ext c\n  simp only [heavySemiCoupleNeighbours, heavyCoordinateNeighbours, heavyCoupleNeighbours, ReferenceCoupleSemiOrthogonal,\n    ReferenceCoupleOrthogonal, Set.mem_ofPred_eq, Set.mem_sdiff, localReferenceCross_eq]\n  tauto`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavySemiCoupleNeighbours_card :\n    Nat.card heavySemiCoupleNeighbours = 1024 :=\n  by\n  rw [heavySemiCoupleNeighbours_eq_difference]\n  change (heavyCoordinateNeighbours (rowLabel 0) \\ heavyCoupleNeighbours).ncard = 1024\n  rw [Set.ncard_sdiff heavyCoupleNeighbours_subset_coordinateNeighbours]\n  change Nat.card (heavyCoordinateNeighbours (rowLabel 0)) - Nat.card heavyCoupleNeighbours = 1024\n  rw [heavyCoordinateNeighbours_card, heavyCoupleNeighbours_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyCross_semi_couple_stabilizer_orbit (w : HeavyCrosses)\n    (hw : ReferenceCoupleSemiOrthogonal (shellPieceCrossMap heavyShellPiece w)) :\n    MulAction.orbit codeCoupleStabilizer (shellPieceCrossMap heavyShellPiece w) = heavySemiCoupleNeighbours :=\n  by\n  ext c\n  constructor\n  · intro hc\n    obtain ⟨g, rfl⟩ := MulAction.mem_orbit_iff.mp hc\n    constructor\n    · have h0 := (crossOrthogonal_codeGroup g.val _ _).mpr hw.1\n      have h2 := (crossOrthogonal_codeGroup g.val _ _).not.mpr hw.2\n      rw [g.prop.1] at h0\n      rw [g.prop.2] at h2\n      exact ⟨h0, h2⟩\n    · exact shellPieceCross_range_stable heavyShellPiece g.val _ ⟨w, rfl⟩\n  · rintro ⟨hc, ⟨v, rfl⟩⟩\n    obtain ⟨g, hg⟩ := heavyCross_semi_couple_stabilizer_transitive w v hw hc\n    exact MulAction.mem_orbit_iff.mpr ⟨g, hg⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:30:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyCross_semi_couple_stabilizer_orbit_card (w : HeavyCrosses)\n    (hw : ReferenceCoupleSemiOrthogonal (shellPieceCrossMap heavyShellPiece w)) :\n    Nat.card (MulAction.orbit codeCoupleStabilizer (shellPieceCrossMap heavyShellPiece w)) = 1024 := by\n  rw [heavyCross_semi_couple_stabilizer_orbit w hw, heavySemiCoupleNeighbours_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:48:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.HeavyCoupleComplement transitive imports (legacy)",
+       "ec34168541329038"],
+      ["Atlas.Rudvalis.HeavyCoupleComplement:importAllArts",
+       "eef355cc24f21bb7"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/HeavyCoupleComplementOrbit.lean",
+   "25b897c512a141a2"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.HeavyCoupleComplementOrbit",
+   "e120c6cc9e2c6b61"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "140a67ef834bfa53"}

@@ -1,0 +1,87 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["938d405052ac420c.olean"],
+  "m": false,
+  "i": "5b33e9fac29d76d2.ilean",
+  "c": "80711b48b2c08743.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/G2/BinarySign.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/BinarySign.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/BinarySign.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/BinarySign.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/BinarySign.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinarySign.lean:10:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinarySign.lean:8:1: 'theorem lineSign_rootA_one : lineSign (rootA (1 : K)) = 1 := by\n  classical\n  letI := Fintype.ofFinite Line\n  have hp : (rootA (1 : K)) ^ 2 = 1 := by rw [pow_two, rootA_add, show (1 : K) + 1 = 0 by decide, rootA_zero]\n  change Equiv.Perm.sign (MulAction.toPermHom (Model K) Line (rootA 1)) = 1\n  rw [Atlas.GroupTheory.action_sign_involution _ hp, card_Line, card_fixed_rootA]\n  norm_num' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinarySign.lean:17:1: 'theorem lineSign_rootA (a : K) : lineSign (rootA a) = 1 :=\n  by\n  have h : ∀ a : ZMod 2, a = 0 ∨ a = 1 := by decide\n  rcases h a with rfl | rfl\n  · rw [rootA_zero, map_one]\n  · exact lineSign_rootA_one' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinarySign.lean:17:26: missing space in the source\n\nThis part of the code\n  '(a:K) :'\nshould be written as\n  '(a : K)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinarySign.lean:25:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinarySign.lean:23:1: 'theorem lineSign_rootF_one : lineSign (rootF (1 : K)) = -1 := by\n  classical\n  letI := Fintype.ofFinite Line\n  have hp : (rootF (1 : K)) ^ 2 = 1 := BinaryException.F_sq\n  change Equiv.Perm.sign (MulAction.toPermHom (Model K) Line (rootF 1)) = -1\n  rw [Atlas.GroupTheory.action_sign_involution _ hp, card_Line, card_fixed_rootF]\n  norm_num' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinarySign.lean:31:1: 'theorem lineSign_surjective : Function.Surjective lineSign :=\n  by\n  intro u\n  rcases Int.units_eq_one_or u with rfl | rfl\n  · exact ⟨1, map_one _⟩\n  · exact ⟨rootF 1, lineSign_rootF_one⟩' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinarySign.lean:41:1: 'theorem H_proper : H ≠ ⊤ :=\n  H_proper_of_character Binary.lineSign Binary.lineSign_rootA\n    Binary.lineSign_rootF_one' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinarySign.lean:43:1: 'theorem index_H : H.index = 2 :=\n  index_two_of_character Binary.lineSign Binary.lineSign_rootA\n    Binary.lineSign_rootF_one' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinarySign.lean:45:1: 'theorem card_H : Nat.card H = 6048 :=\n  order_of_character Binary.lineSign Binary.lineSign_rootA\n    Binary.lineSign_rootF_one' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinarySign.lean:47:1: 'theorem lineSign_kernel : Binary.lineSign.ker = H :=\n  ker_eq_H_of_character Binary.lineSign Binary.lineSign_rootA\n    Binary.lineSign_rootF_one' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinarySign.lean:49:1: 'theorem not_simple : ¬IsSimpleGroup (Model K) :=\n  not_simple_of_character Binary.lineSign Binary.lineSign_rootA\n    Binary.lineSign_rootF_one' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinarySign.lean:54:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinarySign.lean:59:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.G2.BinaryHexagon transitive imports (legacy)",
+       "aa5dc855849c1e5b"],
+      ["Atlas.LinearGroups.G2.BinaryHexagon:importAllArts", "07f9dd0df7c1b349"],
+      ["Atlas.LinearGroups.G2.BinaryExceptionFromCharacter transitive imports (legacy)",
+       "86e8bf67aed1c2e5"],
+      ["Atlas.LinearGroups.G2.BinaryExceptionFromCharacter:importAllArts",
+       "f2ddd660dffb059c"],
+      ["Atlas.GroupTheory.ActionInvolutionSign transitive imports (legacy)",
+       "b406f6fe67ccc918"],
+      ["Atlas.GroupTheory.ActionInvolutionSign:importAllArts",
+       "96e27a87f22ed6ae"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/G2/BinarySign.lean",
+   "ff55b3add70543bb"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.G2.BinarySign", "965d917dfd8fdbcd"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "ccbe58ed85373ae3"}

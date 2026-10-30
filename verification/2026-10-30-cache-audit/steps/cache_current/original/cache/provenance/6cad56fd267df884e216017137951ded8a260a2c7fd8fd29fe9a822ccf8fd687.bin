@@ -1,0 +1,93 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["fd1c4301715b2990.olean"],
+  "m": false,
+  "i": "30bdf11404141b99.ilean",
+  "c": "a5c6205bfcfa6c67.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateCrossLocalAction.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateCrossLocalAction.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateCrossLocalAction.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateCrossLocalAction.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateCrossLocalAction.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem binaryCoordinate_same_row (p d e : Point) (hpd : p ≠ d) (hpe : p ≠ e)\n    (x : E) : ∃ g : binaryPermutationGroup, g.val (p, x) = (p, x) ∧ g.val (p, x + d.val) = (p, x + e.val) :=\n  by\n  obtain ⟨A, hAp, hAd⟩ := point_pair_linearEquiv p d p e hpd hpe\n  choose t ht using section_difference_origin A\n  let g := binarySectionGroupLift A t ht\n  have hr : linearPointEquiv A p = p := Subtype.ext hAp\n  obtain ⟨k, hk⟩ := point_has_one p\n  let u := (basisPoint k).val\n  have hu : dot u p.val = 1 := by rw [dot_basisPoint]; exact hk\n  let B := outerMatrix (x + A (x + t p)) u\n  have hB : matrixAt B p.val = x + A (x + t p) := by rw [matrixAt_outer, hu, one_smul]\n  refine ⟨⟨coordinateTranslation B, coordinateTranslation_mem B⟩ * g, ?_, ?_⟩\n  · change (linearPointEquiv A p, A (x + t p) + matrixAt B (linearPointEquiv A p).val) = (p, x)\n    rw [hr, hB]\n    congr 1\n    calc\n      A (x + t p) + (x + A (x + t p)) = x + (A (x + t p) + A (x + t p)) := by abel\n      _ = x := by rw [vector_add_self, add_zero]\n  · change (linearPointEquiv A p, A (x + d.val + t p) + matrixAt B (linearPointEquiv A p).val) = (p, x + e.val)\n    rw [hr, hB, show x + d.val + t p = (x + t p) + d.val by abel, map_add, hAd]\n    congr 1\n    calc\n      A (x + t p) + e.val + (x + A (x + t p)) = (x + e.val) + (A (x + t p) + A (x + t p)) := by abel\n      _ = x + e.val := by rw [vector_add_self, add_zero]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:5:58: missing space in the source\n\nThis part of the code\n  'p≠d) (hpe'\nshould be written as\n  'p ≠ d)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:5:70: missing space in the source\n\nThis part of the code\n  'p≠e) (x'\nshould be written as\n  'p ≠ e)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateCross_same_row_transitive (p : Point) (x y z : E)\n    (hy : coordinateCross (p, y) ≠ coordinateCross (p, x)) (hz : coordinateCross (p, z) ≠ coordinateCross (p, x)) :\n    ∃ g : MulAction.stabilizer codeGroup (coordinateCross (p, x)),\n      g.val • coordinateCross (p, y) = coordinateCross (p, z) :=\n  by\n  have diff (y : E) (h : coordinateCross (p, y) ≠ coordinateCross (p, x)) : y + x ≠ 0 ∧ y + x ≠ p.val :=\n    by\n    constructor\n    · intro he\n      have hyx : y = x := by\n        calc\n          y = (y + x) + x := by simp [add_assoc, vector_add_self]\n          _ = x := by rw [he, zero_add]\n      exact h (by rw [hyx])\n    · intro he\n      have hyx : y = x + p.val := by\n        calc\n          y = (y + x) + x := by simp [add_assoc, vector_add_self]\n          _ = x + p.val := by rw [he, add_comm]\n      apply h\n      rw [hyx]\n      simpa only [codeI_coordinate] using coordinateCross_I (p, x)\n  obtain ⟨hy0, hyp⟩ := diff y hy\n  obtain ⟨hz0, hzp⟩ := diff z hz\n  let d : Point := ⟨y + x, hy0⟩\n  let e : Point := ⟨z + x, hz0⟩\n  have hpd : p ≠ d := by intro h; exact hyp (congrArg Subtype.val h).symm\n  have hpe : p ≠ e := by intro h; exact hzp (congrArg Subtype.val h).symm\n  obtain ⟨b, hb, hc⟩ := binaryCoordinate_same_row p d e hpd hpe x\n  have hyx : x + d.val = y := by change x + (y + x) = y; rw [add_comm y x, ← add_assoc, vector_add_self, zero_add]\n  have hzx : x + e.val = z := by change x + (z + x) = z; rw [add_comm z x, ← add_assoc, vector_add_self, zero_add]\n  rw [hyx, hzx] at hc\n  obtain ⟨g, hg⟩ := codePermutationHom_surjective b\n  have he : g.val.right = b.val := congrArg Subtype.val hg\n  have hfix : g ∈ MulAction.stabilizer codeGroup (coordinateCross (p, x)) :=\n    by\n    change g • coordinateCross (p, x) = coordinateCross (p, x)\n    rw [coordinateCross_action, he, hb]\n  refine ⟨⟨g, hfix⟩, ?_⟩\n  rw [coordinateCross_action, he, hc]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:30:29: missing space in the source\n\nThis part of the code\n  '(p,y)≠coordinateCross'\nshould be written as\n  '(p, y) ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:30:31: missing space in the source\n\nThis part of the code\n  '(p,y)≠coordinateCross'\nshould be written as\n  'y) ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:30:51: missing space in the source\n\nThis part of the code\n  '(p,x))\n'\nshould be written as\n  '(p, x))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:31:29: missing space in the source\n\nThis part of the code\n  '(p,z)≠coordinateCross'\nshould be written as\n  '(p, z) ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:31:31: missing space in the source\n\nThis part of the code\n  '(p,z)≠coordinateCross'\nshould be written as\n  'z) ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:31:51: missing space in the source\n\nThis part of the code\n  '(p,x)) :'\nshould be written as\n  '(p, x))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCrossLocalAction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateCrossAction transitive imports (legacy)",
+       "d4a58c3b33ac8cc0"],
+      ["Atlas.Rudvalis.CoordinateCrossAction:importAllArts",
+       "8f5b7a82d887e404"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateCrossLocalAction.lean",
+   "a3d980fab1af89f9"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateCrossLocalAction",
+   "60636f4cff3a0a98"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "8fc2c955e32ccc03"}

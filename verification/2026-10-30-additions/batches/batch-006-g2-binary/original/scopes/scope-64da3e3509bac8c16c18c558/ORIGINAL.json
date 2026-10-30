@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "comparison-g2-binary-quadratic-transitivity",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.basePoint",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.baseVector",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.exists_word_to_point",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.longRoot_quadraticPoint_transitive",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.markedVector",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.markedWord",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.marking_complete",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.step",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.stepElement",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.stepElement_apply",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.stepElement_mem",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.wordAction",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.wordElement",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.wordElement_apply",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.wordElement_mem",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independence-from-target-comparison",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Unitary.",
+        "Atlas.ReeG2.",
+        "Atlas.G2.card_Model",
+        "Atlas.G2.BinaryException.card_H",
+        "Atlas.G2.BinaryException.H_simple"
+      ]
+    }
+  ]
+}

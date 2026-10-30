@@ -1,0 +1,150 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["9231c52232cf9379.olean"],
+  "m": false,
+  "i": "eae27092d65a3762.ilean",
+  "c": "b58228a5ed88dd41.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Chevalley.Integral`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open RootPairing.GeckConstruction`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `variable {ι M N : Type*} [Fintype ι] [DecidableEq ι] [AddCommGroup M]\n  [AddCommGroup N] (P : RootPairing ι ℤ M N) [P.IsCrystallographic] [P.IsReduced] (b : P.Base)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The actual rectangular inclusion matrix for a complete root string. -/\ndef geckStringMatrix (i : b.support) (j : ι) (h : LinearIndependent ℤ ![P.root i, P.root j]) :\n    Matrix (b.support ⊕ ι) (Fin (geckStringLength P i j + 1)) ℤ :=\n  LinearMap.toMatrix Finsupp.basisSingleOne (Pi.basisFun ℤ _) (geckStringMap P b i j h)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `omit [P.IsReduced] in\ntheorem geckStringMatrix_entry (i : b.support) (j : ι) (h : LinearIndependent ℤ ![P.root i, P.root j])\n    (row : b.support ⊕ ι) (k : Fin (geckStringLength P i j + 1)) :\n    geckStringMatrix P b i j h row k = v b (geckStringIndex P i j h k) row :=\n  by\n  rw [geckStringMatrix, LinearMap.toMatrix_apply]\n  change geckStringMap P b i j h (Finsupp.single k 1) row = _\n  rw [geckStringMap_single, one_smul]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:26:36: missing space in the source\n\nThis part of the code\n  'j+1)) :'\nshould be written as\n  'j + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem geckStringMatrix_divided (i : b.support) (j : ι)\n    (h : LinearIndependent ℤ ![P.root i, P.root j]) (n : ℕ) :\n    raisingDividedPower P b i n * geckStringMatrix P b i j h =\n      geckStringMatrix P b i j h * stringDividedMatrix (geckStringLength P i j) n :=\n  by\n  have hl :\n    (raisingDividedPower P b i n).mulVecLin.comp (geckStringMap P b i j h) =\n      (geckStringMap P b i j h).comp (stringDividedPower (geckStringLength P i j) n) :=\n    LinearMap.ext (geckString_dividedPower P b i j h n)\n  have hm := congrArg (LinearMap.toMatrix Finsupp.basisSingleOne (Pi.basisFun ℤ (b.support ⊕ ι))) hl\n  rw [LinearMap.toMatrix_comp Finsupp.basisSingleOne (Pi.basisFun ℤ _) (Pi.basisFun ℤ _),\n    LinearMap.toMatrix_comp Finsupp.basisSingleOne Finsupp.basisSingleOne (Pi.basisFun ℤ _)] at hm\n  simpa only [geckStringMatrix, LinearMap.toMatrix_eq_toMatrix', ← Matrix.toLin'_apply', LinearMap.toMatrix'_toLin',\n    ← stringDividedMatrix_eq_toMatrix] using hm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `variable (R : Type*) [CommRing R]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Scalar reduction of the actual integral root-string inclusion. -/\ndef geckStringMatrixOver (i : b.support) (j : ι) (h : LinearIndependent ℤ ![P.root i, P.root j]) :\n    Matrix (b.support ⊕ ι) (Fin (geckStringLength P i j + 1)) R :=\n  (geckStringMatrix P b i j h).map (Int.castRingHom R)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem geckStringMatrixOver_divided (i : b.support) (j : ι)\n    (h : LinearIndependent ℤ ![P.root i, P.root j]) (n : ℕ) :\n    raisingDividedOver P b R i n * geckStringMatrixOver P b R i j h =\n      geckStringMatrixOver P b R i j h * stringDividedMatrix (geckStringLength P i j) n :=\n  by\n  have hm := congrArg (fun A => A.map (Int.castRingHom R)) (geckStringMatrix_divided P b i j h n)\n  simpa only [Matrix.map_mul, stringDividedMatrix_map, raisingDividedOver, geckStringMatrixOver] using hm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem stringDividedMatrix_eq_zero_of_lt (n k : ℕ) (hk : n < k) :\n    (stringDividedMatrix n k : Matrix _ _ R) = 0 := by\n  ext i j\n  have h : i.val ≠ j.val + k := by omega\n  simp [stringDividedMatrix, h]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem stringExponential_eq_sum_four (n : ℕ) (hn : n ≤ 3) (t : R) :\n    stringExponential n t = ∑ k ∈ Finset.range 4, t ^ k • stringDividedMatrix n k :=\n  by\n  rw [stringExponential_eq_sum]\n  apply Finset.sum_subset\n  · exact Finset.range_mono (by omega)\n  · intro k hk hk'\n    have hn' : n < k := by simp only [Finset.mem_range] at hk'; omega\n    rw [stringDividedMatrix_eq_zero_of_lt R n k hn', smul_zero]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Actual Geck root exponentials intertwine with the already checked binomial\nstring exponentials, over every commutative coefficient ring. -/\ntheorem geckStringMatrixOver_exponential (i : b.support) (j : ι) (h : LinearIndependent ℤ ![P.root i, P.root j])\n    (t : R) :\n    raisingExponential P b R i t * geckStringMatrixOver P b R i j h =\n      geckStringMatrixOver P b R i j h * stringExponential (geckStringLength P i j) t :=\n  by\n  rw [raisingExponential, stringExponential_eq_sum_four R _ (geckStringLength_le_three P i j)]\n  simp only [Matrix.sum_mul, Matrix.mul_sum, Matrix.smul_mul, Matrix.mul_smul]\n  apply Finset.sum_congr rfl\n  intro k hk\n  rw [geckStringMatrixOver_divided]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Chevalley.Integral`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.Integral.RootString transitive imports (legacy)",
+       "85ad81347b8a4676"],
+      ["Atlas.LinearGroups.Chevalley.Integral.RootString:importAllArts",
+       "ca852964f8047de1"],
+      ["Atlas.LinearGroups.Chevalley.RankOne transitive imports (legacy)",
+       "2ab87e0690cdd626"],
+      ["Atlas.LinearGroups.Chevalley.RankOne:importAllArts",
+       "f93b07a61b7151a8"],
+      ["Atlas.LinearGroups.Chevalley.Integral.StringWeyl transitive imports (legacy)",
+       "ce89e271da1bdcd5"],
+      ["Atlas.LinearGroups.Chevalley.Integral.StringWeyl:importAllArts",
+       "a75a7ee4cfa64f16"],
+      ["Atlas.LinearGroups.Chevalley.Integral.GeckExponential transitive imports (legacy)",
+       "db5908ee810e2e3d"],
+      ["Atlas.LinearGroups.Chevalley.Integral.GeckExponential:importAllArts",
+       "7d2dee8d048e3a5b"],
+      ["Mathlib.LinearAlgebra.Matrix.Reindex transitive imports (legacy)",
+       "eb3a6006e32769c8"],
+      ["Mathlib.LinearAlgebra.Matrix.Reindex:importAllArts",
+       "ba19b1d9f56ba3af"],
+      ["Mathlib.Data.Fin.Rev transitive imports (legacy)", "d396b3674f3d0838"],
+      ["Mathlib.Data.Fin.Rev:importAllArts", "c5b877263ee34726"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/RootStringExponential.lean",
+   "6e96871c0fd44518"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Integral.RootStringExponential",
+   "bcadb5d493719ee0"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "bbee224d64ac942f"}

@@ -1,0 +1,82 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["8c179c364ded18b4.olean"],
+  "m": false,
+  "i": "712b4ab1b077334b.ilean",
+  "c": "bcf03650b6e5ff73.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.lean:11:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.lean:18:0: `rationalRootCoordinates_zsmul_add_iff` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.lean:42:0: `rationalRootCoordinates_combination_weyl` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.lean:62:0: `positiveIntegralRootCone_of_root_eq` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.lean:70:0: `positiveIntegralRootCone_iff_root_eq` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.lean:82:0: automatically included section variable(s) unused in theorem `Atlas.Chevalley.RootData.positiveIntegralRootCone_comm`:\n  [DecidableEq ι]\n  [P.IsCrystallographic]\n  [P.IsReduced]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq ι] [P.IsCrystallographic] [P.IsReduced] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.lean:82:0: `positiveIntegralRootCone_comm` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.lean:88:0: `positiveIntegralRootCone_weyl` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.lean:97:0: `positiveIntegralRootCone_weyl_iff` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.lean:110:0: `positiveIntegralRootCone_height_gt` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.lean:125:0: `positiveIntegralRootCone_isPos` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.lean:130:0: `positiveIntegralRootCone_weyl_height_gt` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.RootData.RationalRootWeylLinear transitive imports (legacy)",
+       "f49a66b81a37b75a"],
+      ["Atlas.LinearGroups.Chevalley.RootData.RationalRootWeylLinear:importAllArts",
+       "0d336c26858b2f64"],
+      ["Atlas.LinearGroups.Chevalley.RootData.RootHeightCombination transitive imports (legacy)",
+       "23ad4062c9a6ade5"],
+      ["Atlas.LinearGroups.Chevalley.RootData.RootHeightCombination:importAllArts",
+       "41b90b689f9437ec"],
+      ["Mathlib.Tactic.Linarith transitive imports (legacy)",
+       "d397c62b82750220"],
+      ["Mathlib.Tactic.Linarith:importAllArts", "c70641f01b514bb2"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/RootData/PositiveIntegralRootCone.lean",
+   "ce0d781415050766"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.RootData.PositiveIntegralRootCone",
+   "5e6c36f66848d06a"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "8b0b1b029e3d227d"}

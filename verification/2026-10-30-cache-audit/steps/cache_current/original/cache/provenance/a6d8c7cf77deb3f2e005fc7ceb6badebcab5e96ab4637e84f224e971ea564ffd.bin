@@ -1,0 +1,85 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["cd2b2b89c410bead.olean"],
+  "m": false,
+  "i": "0d5338c9f1ae0efb.ilean",
+  "c": "71309cc1d183a2fa.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/GroupTheory/SuborbitDivisibility.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/GroupTheory/SuborbitDivisibility.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/GroupTheory/SuborbitDivisibility.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/GroupTheory/SuborbitDivisibility.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/GroupTheory/SuborbitDivisibility.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/GroupTheory/SuborbitDivisibility.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/SuborbitDivisibility.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/SuborbitDivisibility.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/SuborbitDivisibility.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nRestricting an action embeds its point stabilizer into the ambient point stabilizer. -/\ndef subgroupStabilizerHom {G X : Type*} [Group G] [MulAction G X] (H : Subgroup G) (x : X) :\n    MulAction.stabilizer H x →* MulAction.stabilizer G x\n    where\n  toFun g := ⟨g.val.val, g.prop⟩\n  map_one' := rfl\n  map_mul' _ _ := rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/SuborbitDivisibility.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/SuborbitDivisibility.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem subgroupStabilizerHom_injective {G X : Type*} [Group G] [MulAction G X]\n    (H : Subgroup G) (x : X) : Function.Injective (subgroupStabilizerHom H x) :=\n  by\n  intro g h he\n  have hh : g.val.val = h.val.val := congrArg (fun u : MulAction.stabilizer G x => u.val) he\n  exact Subtype.ext (Subtype.ext hh)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/SuborbitDivisibility.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/SuborbitDivisibility.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nA stabilizer bound yields divisibility of each restricted orbit, without transitivity assumptions. -/\ntheorem suborbit_card_divisible {G X : Type*} [Group G] [Finite G] [MulAction G X] (H : Subgroup G) (x : X) (n : ℕ)\n    (hcard : Nat.card H = n * Nat.card (MulAction.stabilizer G x)) : n ∣ Nat.card (MulAction.orbit H x) :=\n  by\n  have hd := Subgroup.card_dvd_of_injective (subgroupStabilizerHom H x) (subgroupStabilizerHom_injective H x)\n  obtain ⟨k, hk⟩ := hd\n  have ho := Nat.card_congr (MulAction.orbitProdStabilizerEquivGroup H x)\n  rw [Nat.card_prod, hcard, hk] at ho\n  refine ⟨k, ?_⟩\n  apply Nat.mul_right_cancel (Nat.card_pos (α := MulAction.stabilizer H x))\n  calc\n    Nat.card (MulAction.orbit H x) * Nat.card (MulAction.stabilizer H x) =\n        n * (Nat.card (MulAction.stabilizer H x) * k) :=\n      ho\n    _ = (n * k) * Nat.card (MulAction.stabilizer H x) := by ring`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/SuborbitDivisibility.lean:20:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/SuborbitDivisibility.lean:23:23: missing space in the source\n\nThis part of the code\n  'H=n*Nat.card'\nshould be written as\n  'H = n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/SuborbitDivisibility.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/SuborbitDivisibility.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/SuborbitDivisibility.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/SuborbitDivisibility.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Mathlib.GroupTheory.GroupAction.Quotient transitive imports (legacy)",
+       "12c117c0cbb742c4"],
+      ["Mathlib.GroupTheory.GroupAction.Quotient:importAllArts",
+       "18f601f87743d6bf"],
+      ["Mathlib.GroupTheory.Coset.Card transitive imports (legacy)",
+       "81f183e8b0e86bc5"],
+      ["Mathlib.GroupTheory.Coset.Card:importAllArts", "538bfb73c9064128"],
+      ["Mathlib.Tactic.Ring transitive imports (legacy)", "13811e8f7c4fbd99"],
+      ["Mathlib.Tactic.Ring:importAllArts", "b089480788eddaa1"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/GroupTheory/SuborbitDivisibility.lean",
+   "cf467988d08e3d7c"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.GroupTheory.SuborbitDivisibility", "8982c7e18eb4bb27"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "6362904ebe5a765c"}

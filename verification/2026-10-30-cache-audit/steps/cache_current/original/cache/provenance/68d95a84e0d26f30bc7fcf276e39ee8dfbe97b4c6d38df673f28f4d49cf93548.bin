@@ -1,0 +1,167 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["c7d205e8d426eae7.olean"],
+  "m": false,
+  "i": "e133c419b60d400b.ilean",
+  "c": "1af14101411be9ee.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoupleQuartetOrbit.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleQuartetOrbit.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleQuartetOrbit.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleQuartetOrbit.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleQuartetOrbit.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `private theorem reference_pair_eq (s : CoordinateRowPair) (p : Point)\n    (hp : p ≠ rowLabel 0) (h0 : rowLabel 0 ∈ s.val) (hps : p ∈ s.val) : s.val = {rowLabel 0, p} := by\n  classical\n  symm\n  apply Finset.eq_of_subset_of_card_le\n  · intro q hq\n    rcases Finset.mem_insert.mp hq with rfl | hq\n    · exact h0\n    · exact Finset.mem_singleton.mp hq ▸ hps\n  · rw [s.prop]\n    simp [Ne.symm hp]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:5:77: missing space in the source\n\nThis part of the code\n  'p≠rowLabel'\nshould be written as\n  'p ≠ rowLabel'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:6:20: missing space in the source\n\nThis part of the code\n  '0∈s.val)'\nshould be written as\n  '0 ∈ s.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:6:36: missing space in the source\n\nThis part of the code\n  'p∈s.val)'\nshould be written as\n  'p ∈ s.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referencePlane_unique_through_cross\n    (v w : CoordinatePlaneQuartetParameters) (hv : ReferencePlaneParameters v) (hw : ReferencePlaneParameters w)\n    (p : Point) (hp : p ≠ rowLabel 0) (x : E) (hxv : coordinateCross (p, x) ∈ coordinatePlaneQuartetFromParameters v)\n    (hxw : coordinateCross (p, x) ∈ coordinatePlaneQuartetFromParameters w) : v = w :=\n  by\n  have hpv : p ∈ v.1.val := (coordinatePlaneQuartetFromParameters_rows v p).mp ⟨_, hxv, x, rfl⟩\n  have hpw : p ∈ w.1.val := (coordinatePlaneQuartetFromParameters_rows w p).mp ⟨_, hxw, x, rfl⟩\n  have hs : v.1 = w.1 :=\n    Subtype.ext ((reference_pair_eq v.1 p hp hv.choose hpv).trans (reference_pair_eq w.1 p hp hw.choose hpw).symm)\n  rcases v with ⟨s, f⟩\n  rcases w with ⟨t, h⟩\n  dsimp only at hs\n  subst t\n  congr 1\n  funext q\n  have hq : q.val = rowLabel 0 ∨ q.val = p :=\n    by\n    have h : q.val ∈ ({rowLabel 0, p} : Finset Point) :=\n      Finset.mem_of_subset (le_of_eq (reference_pair_eq s p hp hv.choose hpv)) q.prop\n    simpa only [Finset.mem_insert, Finset.mem_singleton] using h\n  rcases hq with hq | hq\n  · have he : q = ⟨rowLabel 0, hv.choose⟩ := Subtype.ext hq\n    rw [he]\n    exact hv.choose_spec.2.trans hw.choose_spec.2.symm\n  · have he : q = ⟨p, hpv⟩ := Subtype.ext hq\n    rw [he]\n    exact\n      ((coordinatePlaneQuartetFromParameters_mem s f ⟨p, hpv⟩ x).mp hxv).trans\n        ((coordinatePlaneQuartetFromParameters_mem s h ⟨p, hpv⟩ x).mp hxw).symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:25:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:17:1: 'theorem referencePlane_unique_through_cross (v w : CoordinatePlaneQuartetParameters) (hv : ReferencePlaneParameters v)\n    (hw : ReferencePlaneParameters w) (p : Point) (hp : p ≠ rowLabel 0) (x : E)\n    (hxv : coordinateCross (p, x) ∈ coordinatePlaneQuartetFromParameters v)\n    (hxw : coordinateCross (p, x) ∈ coordinatePlaneQuartetFromParameters w) : v = w :=\n  by\n  have hpv : p ∈ v.1.val := (coordinatePlaneQuartetFromParameters_rows v p).mp ⟨_, hxv, x, rfl⟩\n  have hpw : p ∈ w.1.val := (coordinatePlaneQuartetFromParameters_rows w p).mp ⟨_, hxw, x, rfl⟩\n  have hs : v.1 = w.1 :=\n    Subtype.ext ((reference_pair_eq v.1 p hp hv.choose hpv).trans (reference_pair_eq w.1 p hp hw.choose hpw).symm)\n  rcases v with ⟨s, f⟩\n  rcases w with ⟨t, h⟩\n  dsimp only at hs\n  subst t\n  congr 1\n  funext q\n  have hq : q.val = rowLabel 0 ∨ q.val = p :=\n    by\n    have h : q.val ∈ ({rowLabel 0, p} : Finset Point) :=\n      Finset.mem_of_subset (le_of_eq (reference_pair_eq s p hp hv.choose hpv)) q.prop\n    simpa only [Finset.mem_insert, Finset.mem_singleton] using h\n  rcases hq with hq | hq\n  · have he : q = ⟨rowLabel 0, hv.choose⟩ := Subtype.ext hq\n    rw [he]\n    exact hv.choose_spec.2.trans hw.choose_spec.2.symm\n  · have he : q = ⟨p, hpv⟩ := Subtype.ext hq\n    rw [he]\n    exact\n      ((coordinatePlaneQuartetFromParameters_mem s f ⟨p, hpv⟩ x).mp hxv).trans\n        ((coordinatePlaneQuartetFromParameters_mem s h ⟨p, hpv⟩ x).mp\n            hxw).symm' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:19:23: missing space in the source\n\nThis part of the code\n  'p≠rowLabel'\nshould be written as\n  'p ≠ rowLabel'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:20:30: missing space in the source\n\nThis part of the code\n  '(p,x)∈coordinatePlaneQuartetFromParameters'\nshould be written as\n  '(p, x) ∈'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:20:32: missing space in the source\n\nThis part of the code\n  '(p,x)∈coordinatePlaneQuartetFromParameters'\nshould be written as\n  'x) ∈ coordinatePlaneQuartetFromParameters'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:21:30: missing space in the source\n\nThis part of the code\n  '(p,x)∈coordinatePlaneQuartetFromParameters'\nshould be written as\n  '(p, x) ∈'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:21:32: missing space in the source\n\nThis part of the code\n  '(p,x)∈coordinatePlaneQuartetFromParameters'\nshould be written as\n  'x) ∈ coordinatePlaneQuartetFromParameters'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceCoordinateQuartet_unique_outside_row (Q R : Set MinimalCross)\n    (hQ : IsQuartet Q) (hR : IsQuartet R) (hQF : Q ⊆ coordinateFrame) (hRF : R ⊆ coordinateFrame)\n    (hcQ : referenceCouple ⊆ Q) (hcR : referenceCouple ⊆ R) (c : MinimalCross)\n    (hc : c ∉ coordinateRowFrame (rowLabel 0)) (hcq : c ∈ Q) (hcr : c ∈ R) : Q = R :=\n  by\n  obtain ⟨⟨p, x⟩, rfl⟩ := coordinateFrame_rep c (hQF hcq)\n  have hp : p ≠ rowLabel 0 := by intro h; subst p; exact hc ⟨x, rfl⟩\n  have plane (S : Set MinimalCross) (hS : IsQuartet S) (hSF : S ⊆ coordinateFrame) (hcS : referenceCouple ⊆ S)\n    (hcs : coordinateCross (p, x) ∈ S) :\n    ∃ v : CoordinatePlaneQuartetParameters, S = coordinatePlaneQuartetFromParameters v :=\n    by\n    obtain ⟨v, rfl⟩ := coordinateQuartet_classification S hS hSF\n    cases v with\n    | inl q =>\n      have hq := referenceCouple_subset_row_iff q |>.mp hcS\n      exact False.elim (hc (hq ▸ hcs))\n    | inr v => exact ⟨v, rfl⟩\n  obtain ⟨v, rfl⟩ := plane Q hQ hQF hcQ hcq\n  obtain ⟨w, rfl⟩ := plane R hR hRF hcR hcr\n  exact\n    congrArg coordinatePlaneQuartetFromParameters\n      (referencePlane_unique_through_cross v w ((referencePlaneParameters_iff v).mp hcQ)\n        ((referencePlaneParameters_iff w).mp hcR) p hp x hcq hcr)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:45:1: 'theorem referenceCoordinateQuartet_unique_outside_row (Q R : Set MinimalCross) (hQ : IsQuartet Q) (hR : IsQuartet R)\n    (hQF : Q ⊆ coordinateFrame) (hRF : R ⊆ coordinateFrame) (hcQ : referenceCouple ⊆ Q) (hcR : referenceCouple ⊆ R)\n    (c : MinimalCross) (hc : c ∉ coordinateRowFrame (rowLabel 0)) (hcq : c ∈ Q) (hcr : c ∈ R) : Q = R :=\n  by\n  obtain ⟨⟨p, x⟩, rfl⟩ := coordinateFrame_rep c (hQF hcq)\n  have hp : p ≠ rowLabel 0 := by intro h; subst p; exact hc ⟨x, rfl⟩\n  have plane (S : Set MinimalCross) (hS : IsQuartet S) (hSF : S ⊆ coordinateFrame) (hcS : referenceCouple ⊆ S)\n    (hcs : coordinateCross (p, x) ∈ S) :\n    ∃ v : CoordinatePlaneQuartetParameters, S = coordinatePlaneQuartetFromParameters v :=\n    by\n    obtain ⟨v, rfl⟩ := coordinateQuartet_classification S hS hSF\n    cases v with\n    | inl q =>\n      have hq := referenceCouple_subset_row_iff q |>.mp hcS\n      exact False.elim (hc (hq ▸ hcs))\n    | inr v => exact ⟨v, rfl⟩\n  obtain ⟨v, rfl⟩ := plane Q hQ hQF hcQ hcq\n  obtain ⟨w, rfl⟩ := plane R hR hRF hcR hcr\n  exact\n    congrArg coordinatePlaneQuartetFromParameters\n      (referencePlane_unique_through_cross v w ((referencePlaneParameters_iff v).mp hcQ)\n        ((referencePlaneParameters_iff w).mp hcR) p hp x hcq\n        hcr)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:46:50: missing space in the source\n\nThis part of the code\n  'Q⊆coordinateFrame)'\nshould be written as\n  'Q ⊆ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:46:76: missing space in the source\n\nThis part of the code\n  'R⊆coordinateFrame)'\nshould be written as\n  'R ⊆ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:47:26: missing space in the source\n\nThis part of the code\n  'referenceCouple⊆Q) (hcR'\nshould be written as\n  'referenceCouple ⊆ Q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:47:52: missing space in the source\n\nThis part of the code\n  'referenceCouple⊆R)\n '\nshould be written as\n  'referenceCouple ⊆ R)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:48:30: missing space in the source\n\nThis part of the code\n  'c∉coordinateRowFrame'\nshould be written as\n  'c ∉ coordinateRowFrame'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:48:72: missing space in the source\n\nThis part of the code\n  'c∈Q) (hcr'\nshould be written as\n  'c ∈ Q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:48:84: missing space in the source\n\nThis part of the code\n  'c∈R) :'\nshould be written as\n  'c ∈ R)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceCoordinateQuartet_outside_row (Q : Set MinimalCross)\n    (hQ : IsQuartet Q) (hne : Q ≠ coordinateRowFrame (rowLabel 0)) : ∃ c ∈ Q, c ∉ coordinateRowFrame (rowLabel 0) := by\n  classical\n  by_contra hn\n  push Not at hn\n  apply hne\n  apply Set.eq_of_subset_of_ncard_le hn\n  · change Nat.card (coordinateRowFrame (rowLabel 0)) ≤ Q.ncard\n    rw [coordinateRowFrame_card, hQ.1]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:68:1: 'theorem referenceCoordinateQuartet_outside_row (Q : Set MinimalCross) (hQ : IsQuartet Q)\n    (hne : Q ≠ coordinateRowFrame (rowLabel 0)) : ∃ c ∈ Q, c ∉ coordinateRowFrame (rowLabel 0) := by\n  classical\n  by_contra hn\n  push Not at hn\n  apply hne\n  apply Set.eq_of_subset_of_ncard_le hn\n  · change Nat.card (coordinateRowFrame (rowLabel 0)) ≤ Q.ncard\n    rw [coordinateRowFrame_card, hQ.1]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:69:12: missing space in the source\n\nThis part of the code\n  'Q≠coordinateRowFrame'\nshould be written as\n  'Q ≠ coordinateRowFrame'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe four non-row coordinate quartets through the reference couple form one actual stabilizer orbit. -/\ntheorem referenceCoordinateQuartets_nonrow_transitive (Q R : Set MinimalCross) (hQ : IsQuartet Q) (hR : IsQuartet R)\n    (hQF : Q ⊆ coordinateFrame) (hRF : R ⊆ coordinateFrame) (hcQ : referenceCouple ⊆ Q) (hcR : referenceCouple ⊆ R)\n    (hneQ : Q ≠ coordinateRowFrame (rowLabel 0)) (hneR : R ≠ coordinateRowFrame (rowLabel 0)) :\n    ∃ g : codeCoupleStabilizer, (fun c : MinimalCross => g.val • c) '' Q = R :=\n  by\n  obtain ⟨c, hc, hcn⟩ := referenceCoordinateQuartet_outside_row Q hQ hneQ\n  obtain ⟨d, hd, hdn⟩ := referenceCoordinateQuartet_outside_row R hR hneR\n  have hcD : c ∈ referenceCoordinateDozen := reference_quartet_coordinate_member_in_dozen Q hQ hcQ c hc (hQF hc)\n  have hdD : d ∈ referenceCoordinateDozen := reference_quartet_coordinate_member_in_dozen R hR hcR d hd (hRF hd)\n  obtain ⟨g, hg⟩ := couple_coordinate_dozen_other_rows_transitive c d ⟨hcD, hcn⟩ ⟨hdD, hdn⟩\n  refine ⟨g, ?_⟩\n  let S := (fun c : MinimalCross => g.val • c) '' Q\n  have hS : IsQuartet S := by\n    simpa only [S, gaussianImage, codeGaussianHom_cross] using\n      (isQuartet_gaussianImage (codeGaussianHom g.val) Q).mpr hQ\n  have hSF : S ⊆ coordinateFrame := by\n    rintro z ⟨w, hw, rfl⟩\n    exact coordinateFrame_code_stable g.val w (hQF hw)\n  have hcS : referenceCouple ⊆ S := by\n    intro z hz\n    refine ⟨z, hcQ hz, ?_⟩\n    rcases hz with rfl | rfl\n    · exact g.prop.1\n    · exact g.prop.2\n  exact referenceCoordinateQuartet_unique_outside_row S R hS hR hSF hRF hcS hcR d hdn ⟨c, hc, hg⟩ hd`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:78:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:80:50: missing space in the source\n\nThis part of the code\n  'Q⊆coordinateFrame)'\nshould be written as\n  'Q ⊆ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:80:76: missing space in the source\n\nThis part of the code\n  'R⊆coordinateFrame)'\nshould be written as\n  'R ⊆ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:81:26: missing space in the source\n\nThis part of the code\n  'referenceCouple⊆Q) (hcR'\nshould be written as\n  'referenceCouple ⊆ Q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:81:52: missing space in the source\n\nThis part of the code\n  'referenceCouple⊆R)\n '\nshould be written as\n  'referenceCouple ⊆ R)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:82:13: missing space in the source\n\nThis part of the code\n  'Q≠coordinateRowFrame'\nshould be written as\n  'Q ≠ coordinateRowFrame'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:82:56: missing space in the source\n\nThis part of the code\n  'R≠coordinateRowFrame'\nshould be written as\n  'R ≠ coordinateRowFrame'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoupleCoordinateOrbitSets transitive imports (legacy)",
+       "1b382c51139fdbf3"],
+      ["Atlas.Rudvalis.CoupleCoordinateOrbitSets:importAllArts",
+       "505e936908e931ae"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoupleQuartetOrbit.lean",
+   "eea7e428df3a214d"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoupleQuartetOrbit", "6693feb541099b99"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "4ba720ca865e0d5a"}

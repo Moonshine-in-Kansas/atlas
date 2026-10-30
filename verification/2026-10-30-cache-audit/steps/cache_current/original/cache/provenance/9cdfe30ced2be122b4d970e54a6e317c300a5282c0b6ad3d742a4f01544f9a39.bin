@@ -1,0 +1,64 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["34d25156de5a98c2.olean"],
+  "m": false,
+  "i": "a9c498d0b24cf175.ilean",
+  "c": "54cdcf3d55b7e697.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Codes/HexacodeAutomorphismPackage.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/HexacodeAutomorphismPackage.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/HexacodeAutomorphismPackage.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Codes/HexacodeAutomorphismPackage.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Codes/HexacodeAutomorphismPackage.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Codes/HexacodeAutomorphismPackage.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeAutomorphismPackage.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def hexEvenZ : HexEvenAutomorphisms :=\n  ⟨hexZ, hexSign_Z⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeAutomorphismPackage.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem hexEvenZ_order : orderOf hexEvenZ = 3 :=\n  by\n  apply orderOf_eq_prime\n  · apply Subtype.ext; exact hexZ_cube\n  · intro h; exact hexZ_ne_one (congrArg Subtype.val h)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeAutomorphismPackage.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem hexEvenCoordinate_kernel :\n    hexEvenCoordinate.ker = Subgroup.zpowers hexEvenZ :=\n  by\n  apply le_antisymm\n  · intro g hg\n    have hp : hexCoordinateSixHom g.val = 1 := congrArg Subtype.val hg\n    rcases hex_kernel_trichotomy g.val ((hexSix_eq_one _).mp hp) with h | h | h\n    · have hh : g = 1 := Subtype.ext h\n      rw [hh]; exact Subgroup.one_mem _\n    · have hh : g = hexEvenZ := Subtype.ext h\n      rw [hh]; exact Subgroup.mem_zpowers _\n    · have hh : g = hexEvenZ ^ 2 := Subtype.ext h\n      rw [hh]; exact Subgroup.pow_mem _ (Subgroup.mem_zpowers _) _\n  · apply Subgroup.zpowers_le.mpr\n    apply Subtype.ext\n    exact hexZ_six`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeAutomorphismPackage.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem hexEven_kernel_card : Nat.card hexEvenCoordinate.ker = 3 := by\n  rw [hexEvenCoordinate_kernel, Nat.card_zpowers, hexEvenZ_order]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeAutomorphismPackage.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nConclusions about the actual full monomial stabilizer of the existing hexacode. -/\nstructure HexacodeAutomorphismPackage : Prop where\n  faithful : Function.Injective hexAction\n  coordinate_surjective : Function.Surjective hexCoordinateSixHom\n  coordinate_kernel : hexCoordinateSixHom.ker = Subgroup.zpowers hexZ\n  kernel_order : orderOf hexZ = 3\n  kernel_cardinality : Nat.card hexCoordinateHom.ker = 3\n  generation : Subgroup.closure hexGeneratingSet = ⊤\n  order : Nat.card HexAutomorphisms = 2160\n  even_conjugation : ∀ g, hexSign g = 1 → g * hexZ * g⁻¹ = hexZ\n  odd_conjugation : ∀ g, hexSign g = -1 → g * hexZ * g⁻¹ = hexZ⁻¹\n  even_order : Nat.card HexEvenAutomorphisms = 1080\n  even_surjective : Function.Surjective hexEvenCoordinate\n  even_kernel : hexEvenCoordinate.ker = Subgroup.zpowers hexEvenZ\n  even_kernel_central : ∀ (g : HexEvenAutomorphisms) (k : hexCoordinateSixHom.ker), Commute g.val k.val\n  even_nonsplit : ¬∃ s : alternatingGroup (Fin 6) →* HexEvenAutomorphisms, hexEvenCoordinate.comp s = MonoidHom.id _\n  nonsplit : ¬∃ s : Equiv.Perm (Fin 6) →* HexAutomorphisms, hexCoordinateSixHom.comp s = MonoidHom.id _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeAutomorphismPackage.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem hexacode_automorphism_package : HexacodeAutomorphismPackage\n    where\n  faithful := hexAction_injective\n  coordinate_surjective := hexCoordinateSix_surjective\n  coordinate_kernel := hexCoordinateSix_kernel\n  kernel_order := hexZ_order\n  kernel_cardinality := hex_kernel_card\n  generation := hexAutomorphisms_generated\n  order := hexAutomorphisms_card\n  even_conjugation := hex_conjugation_even\n  odd_conjugation := hex_conjugation_odd\n  even_order := hexEven_card\n  even_surjective := hexEvenCoordinate_surjective\n  even_kernel := hexEvenCoordinate_kernel\n  even_kernel_central := hex_even_kernel_central\n  even_nonsplit := hexEven_no_section\n  nonsplit := hex_no_section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeAutomorphismPackage.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeAutomorphismPackage.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Codes.HexacodeNonsplit transitive imports (legacy)",
+       "aec695646f930930"],
+      ["Atlas.Codes.HexacodeNonsplit:importAllArts", "fae4e428a597cce4"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Codes/HexacodeAutomorphismPackage.lean",
+   "a185ffeebeae4ca6"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Codes.HexacodeAutomorphismPackage", "bc7a7feb8a4c5469"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "8e67db7122a1c77a"}

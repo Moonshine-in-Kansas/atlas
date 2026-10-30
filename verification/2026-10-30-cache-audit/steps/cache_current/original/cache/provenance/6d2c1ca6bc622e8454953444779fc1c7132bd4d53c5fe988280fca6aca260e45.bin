@@ -1,0 +1,134 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["ad51a8240633a4af.olean"],
+  "m": false,
+  "i": "21e28fc68fc6d979.ilean",
+  "c": "2199f8a7f4427903.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Conway/OrthogonalPairStabilizer.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/OrthogonalPairStabilizer.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/OrthogonalPairStabilizer.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Conway/OrthogonalPairStabilizer.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Conway/OrthogonalPairStabilizer.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Conway`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes Atlas.Lattices`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def orthogonalPairStabilizer (e : Fin 2 ↪ Omega) :\n    Subgroup LeechIsometryGroup :=\n  (fixingSubgroup (leech ≃ₗ[ℤ] leech) ({minimumPairPlus (e 0) (e 1), minimumPairMinus (e 0) (e 1)} : Set leech)).comap\n    leechIsometries.subtype`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem orthogonalPairStabilizer_mem (e : Fin 2 ↪ Omega)\n    (g : LeechIsometryGroup) :\n    g ∈ orthogonalPairStabilizer e ↔\n      g.val (minimumPairPlus (e 0) (e 1)) = minimumPairPlus (e 0) (e 1) ∧\n        g.val (minimumPairMinus (e 0) (e 1)) = minimumPairMinus (e 0) (e 1) :=\n  by\n  change\n    g.val ∈\n        fixingSubgroup (leech ≃ₗ[ℤ] leech) ({minimumPairPlus (e 0) (e 1), minimumPairMinus (e 0) (e 1)} : Set leech) ↔\n      _\n  rw [mem_fixingSubgroup_iff]\n  simp`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem orthogonalPairStabilizer_le_monomial (e : Fin 2 ↪ Omega) :\n    orthogonalPairStabilizer e ≤ monomialSubgroup := by\n  intro g hg\n  obtain ⟨hp, hm⟩ := (orthogonalPairStabilizer_mem e g).mp hg\n  exact minimumPair_fixer_mem_monomial g _ _ hp hm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def pairLatticeEmbedding (e : Fin 2 ↪ Omega) :\n    GolayPairMonomialGroup e →* LeechIsometryGroup :=\n  monomialEmbedding.comp (pairMonomialInclusion e)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem pairLatticeEmbedding_injective (e : Fin 2 ↪ Omega) :\n    Function.Injective (pairLatticeEmbedding e) :=\n  monomialEmbedding_injective.comp (pairMonomialInclusion_injective e)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem pairLatticeEmbedding_range (e : Fin 2 ↪ Omega) :\n    (pairLatticeEmbedding e).range = orthogonalPairStabilizer e :=\n  by\n  ext g\n  constructor\n  · rintro ⟨m, rfl⟩\n    rw [orthogonalPairStabilizer_mem, minimumPair_fixed_iff_axes]\n    change\n      (monomialEmbedding (pairMonomialInclusion e m)).val (coordinateEight (e 0)) = _ ∧\n        (monomialEmbedding (pairMonomialInclusion e m)).val (coordinateEight (e 1)) = _\n    rw [monomial_axis_fixed_iff, monomial_axis_fixed_iff]\n    have h0 := congrArg Prod.fst m.left.toAdd.prop\n    have h1 := congrArg Prod.snd m.left.toAdd.prop\n    exact ⟨⟨orderedPair_fixes e m.right 0, h0⟩, ⟨orderedPair_fixes e m.right 1, h1⟩⟩\n  · intro hg\n    obtain ⟨m, hm⟩ := orthogonalPairStabilizer_le_monomial e hg\n    subst g\n    rw [orthogonalPairStabilizer_mem, minimumPair_fixed_iff_axes, monomial_axis_fixed_iff,\n      monomial_axis_fixed_iff] at hg\n    let c : GolayPairKernel e := ⟨m.left.toAdd, Prod.ext hg.1.2 hg.2.2⟩\n    let p : orderedPointStabilizer e :=\n      ⟨m.right, by\n        apply (mem_fixingSubgroup_iff Mathieu24CodeModel).mpr\n        rintro i ⟨k, rfl⟩\n        fin_cases k\n        · exact hg.1.1\n        · exact hg.2.1⟩\n    refine ⟨⟨Multiplicative.ofAdd c, p⟩, ?_⟩\n    apply congrArg monomialEmbedding\n    apply SemidirectProduct.ext <;> rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def orthogonalPairStabilizerEquiv (e : Fin 2 ↪ Omega) :\n    GolayPairMonomialGroup e ≃* orthogonalPairStabilizer e :=\n  (MonoidHom.ofInjective (pairLatticeEmbedding_injective e)).trans\n    (MulEquiv.subgroupCongr (pairLatticeEmbedding_range e))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem orthogonalPairStabilizerEquiv_compatible (e : Fin 2 ↪ Omega)\n    (m : GolayPairMonomialGroup e) : (orthogonalPairStabilizerEquiv e m).val = pairLatticeEmbedding e m :=\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem orthogonalPairStabilizer_order (e : Fin 2 ↪ Omega) :\n    Nat.card (orthogonalPairStabilizer e) = 1024 * 443520 :=\n  by\n  rw [← Nat.card_congr (orthogonalPairStabilizerEquiv e).toEquiv]\n  exact golayPairMonomialGroup_order e`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem orthogonalPairStabilizer_le_overgroup (e : Fin 2 ↪ Omega)\n    (H : Subgroup LeechIsometryGroup) (hH : monomialSubgroup ≤ H) : orthogonalPairStabilizer e ≤ H :=\n  (orthogonalPairStabilizer_le_monomial e).trans hH`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem orthogonalPairStabilizer_overgroup_order (e : Fin 2 ↪ Omega)\n    (H : Subgroup LeechIsometryGroup) (hH : monomialSubgroup ≤ H) :\n    Nat.card ((orthogonalPairStabilizer e).subgroupOf H) = 1024 * 443520 :=\n  by\n  rw [Nat.card_congr (Subgroup.subgroupOfEquivOfLe (orthogonalPairStabilizer_le_overgroup e H hH)).toEquiv]\n  exact orthogonalPairStabilizer_order e`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Conway`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/OrthogonalPairStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Conway.OrthogonalPairGeometry transitive imports (legacy)",
+       "283d24d33a10c806"],
+      ["Atlas.Conway.OrthogonalPairGeometry:importAllArts",
+       "60265b1bc71dfbaa"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Conway/OrthogonalPairStabilizer.lean",
+   "3b4a59bbfe103b33"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Conway.OrthogonalPairStabilizer", "3e96a2139873ce56"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "7a2cae8396087b84"}

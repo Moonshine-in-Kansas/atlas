@@ -1,0 +1,70 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["0248cdcae6db314c.olean"],
+  "m": false,
+  "i": "77731a3be760479a.ilean",
+  "c": "0667c9a26ea5ccd7.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Codes/IcosianDeterminantRows.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/IcosianDeterminantRows.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/IcosianDeterminantRows.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Codes/IcosianDeterminantRows.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Codes/IcosianDeterminantRows.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Codes/IcosianDeterminantRows.lean:20:11: missing space in the source\n\nThis part of the code\n  'y≠0) (h1'\nshould be written as\n  'y ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/IcosianDeterminantRows.lean:20:24: missing space in the source\n\nThis part of the code\n  '1=0) :'\nshould be written as\n  '1 = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/IcosianDeterminantRows.lean:27:30: missing space in the source\n\nThis part of the code\n  'y≠0) (d'\nshould be written as\n  'y ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/IcosianDeterminantRows.lean:51:8: `simp [icosianDetRowParameter,h1]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/IcosianDeterminantRows.lean:51:8: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta]",
+   "level": "info"},
+  {"message":
+   "Atlas/Codes/IcosianDeterminantRows.lean:52:8: `apply (div_eq_iff h1).mpr`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 51!",
+   "level": "info"},
+  {"message":
+   "Atlas/Codes/IcosianDeterminantRows.lean:56:8: `simp [icosianDetRowParameter,h1]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/IcosianDeterminantRows.lean:56:8: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/Codes/IcosianDeterminantRows.lean:57:8: `apply (div_eq_iff h0).mpr`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 56!",
+   "level": "info"},
+  {"message":
+   "Atlas/Codes/IcosianDeterminantRows.lean:36:30: missing space in the source\n\nThis part of the code\n  'y≠0) (d'\nshould be written as\n  'y ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/IcosianDeterminantRows.lean:63:30: missing space in the source\n\nThis part of the code\n  'y≠0) (d'\nshould be written as\n  'y ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Codes.IcosianMatrixGlue transitive imports (legacy)",
+       "de296044af7d27d2"],
+      ["Atlas.Codes.IcosianMatrixGlue:importAllArts", "d724b1dd10db26f2"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Codes/IcosianDeterminantRows.lean",
+   "6e5a0e933f86ffe0"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Codes.IcosianDeterminantRows", "3e7f2d0da738fbc7"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "bfc278d03b06582a"}

@@ -1,0 +1,85 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["31323b1b842decb2.olean"],
+  "m": false,
+  "i": "7a3652afe1f13bda.ilean",
+  "c": "33e8c639eef48c6d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/HeavyCoupleFibre.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyCoupleFibre.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyCoupleFibre.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyCoupleFibre.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyCoupleFibre.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleFibre.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleFibre.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleFibre.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavy_pair_signedLift_row_transitive (c p : Point) (hpc : p ≠ c)\n    (v w : HeavyAvoidingPair c p 0) (a : SignedLift quaternaryCode (fixedHeavyWord c v.val))\n    (b : SignedLift quaternaryCode (fixedHeavyWord c w.val)) :\n    ∃ g : codeGroup,\n      (∀ x : E, g • coordinateCross (p, x) = coordinateCross (p, x)) ∧ monomialHom g.val a.val.val = b.val.val :=\n  by\n  obtain ⟨A, hAp, hA⟩ := heavy_pair_fixing_translation c p hpc v w\n  obtain ⟨g, hg⟩ := codePermutationHom_surjective (coordinateTranslationHom (Multiplicative.ofAdd A))\n  have hgr : g.val.right = coordinateTranslation A := congrArg Subtype.val hg\n  have hgs : g.val.right.symm = coordinateTranslation A := by rw [hgr]; rfl\n  have hfix (x : E) : g • coordinateCross (p, x) = coordinateCross (p, x) :=\n    by\n    rw [coordinateCross_action, hgr]\n    exact (translation_fixes_coordinateCross_iff A p x).mpr hAp\n  let a' : SignedLift quaternaryCode (fixedHeavyWord c w.val) :=\n    ⟨⟨monomialHom g.val a.val.val, (g.prop _).mp a.val.prop⟩,\n      by\n      change reduce (monomialAction g.val a.val.val) = fixedHeavyWord c w.val\n      rw [monomialAction_reduce, a.prop.1, hgs]\n      exact hA.symm, monomial_no_twos g.val a.val.val a.prop.2⟩\n  have hd : hasNonzeroQuadraticPart (fixedHeavyWord c w.val) := ⟨(w.val.2.val, w.val.1.val, c.val), c.prop, rfl⟩\n  obtain ⟨k, hkr, hk⟩ := heavy_signedLift_sign_transitive (fixedHeavyWord c w.val) hd w.val.2.prop a' b\n  refine ⟨k * g, ?_, ?_⟩\n  · intro x\n    rw [mul_smul, hfix]\n    exact codeGroup_sign_fixes_coordinateCross k hkr (p, x)\n  · change monomialHom (k.val * g.val) a.val.val = b.val.val\n    rw [map_mul]\n    exact hk`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleFibre.lean:29:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleFibre.lean:9:67: missing space in the source\n\nThis part of the code\n  'p≠c)\n '\nshould be written as\n  'p ≠ c)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleFibre.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleFibre.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.HeavyPairTranslation transitive imports (legacy)",
+       "889aa29f11026c5c"],
+      ["Atlas.Rudvalis.HeavyPairTranslation:importAllArts", "c1b9928c498b828b"],
+      ["Atlas.Rudvalis.HeavySignTransitivity transitive imports (legacy)",
+       "ce6e20d9f8d8b4d0"],
+      ["Atlas.Rudvalis.HeavySignTransitivity:importAllArts",
+       "46cdd04d5f742af2"],
+      ["Atlas.Rudvalis.HeavyCommonPerpendicular transitive imports (legacy)",
+       "7abb3d4b18f6620f"],
+      ["Atlas.Rudvalis.HeavyCommonPerpendicular:importAllArts",
+       "e67591c575d8733e"],
+      ["Atlas.Rudvalis.CoupleMonomialGenerators transitive imports (legacy)",
+       "0b39bdc1b50d1395"],
+      ["Atlas.Rudvalis.CoupleMonomialGenerators:importAllArts",
+       "1255eaaa31e991ad"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/HeavyCoupleFibre.lean",
+   "ab2ebaff31517c0f"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.HeavyCoupleFibre", "6f055687718166e6"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "848dd972247a2e92"}

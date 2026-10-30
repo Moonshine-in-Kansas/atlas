@@ -1,0 +1,85 @@
+{
+  "id": "staged-FixedOrbitNormalForm",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.TwistedE6.FixedOrbitNormalForm"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionPositiveFixedSubgroup",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedOrbitNormalForm"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6OrbitLiftFactor_product_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedOrbitNormalForm"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6OrbitLiftProduct_fixed_iff",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedOrbitNormalForm"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedOrbitProduct",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedOrbitNormalForm"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedOrbitProduct_val",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedOrbitNormalForm"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedOrbitProduct_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedOrbitNormalForm"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedOrbitProduct_surjective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedOrbitNormalForm"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedOrbitProductEquiv",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedOrbitNormalForm"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionPositiveFixedSubgroup_card_of_compatible_lifts",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedOrbitNormalForm"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-FixedOrbitNormalForm-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-FixedOrbitNormalForm-no-inherited-positive-order",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.selectedWeightCompanionPositive_card",
+        "Atlas.Chevalley.positiveWitnessedWeightCompanionSubgroup_card"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

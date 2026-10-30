@@ -1,0 +1,148 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["150877545f5feb25.olean"],
+  "m": false,
+  "i": "20fd387f42e07dfd.ilean",
+  "c": "3dcfb936b0cbbbaf.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CommonPerpendicularSpectrum.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CommonPerpendicularSpectrum.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CommonPerpendicularSpectrum.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CommonPerpendicularSpectrum.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CommonPerpendicularSpectrum.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Classical`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:5:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinatePiece_condition_card (P : MinimalCross → Prop) :\n    Nat.card { c : CoordinateCrosses // P (shellPieceCrossMap coordinateShellPiece c) } =\n      Nat.card { c : coordinateFrame // P c.val } :=\n  by\n  let e : CoordinateCrosses ≃ coordinateFrame := Equiv.ofInjective _ (shellPieceCrossMap_injective coordinateShellPiece)\n  exact Nat.card_congr (Equiv.subtypeEquiv e (fun _ => Iff.rfl))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:7:56: missing space in the source\n\nThis part of the code\n  'MinimalCross→Prop)'\nshould be written as\n  'MinimalCross → Prop)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_coordinate_energy_two_card :\n    Nat.card { c : coordinateFrame // ReferenceCoupleOrthogonal c.val ∧ crossRowEnergy referenceDozenRows c.val = 2 } =\n      0 :=\n  by\n  let :\n    IsEmpty { c : coordinateFrame // ReferenceCoupleOrthogonal c.val ∧ crossRowEnergy referenceDozenRows c.val = 2 } :=\n    ⟨fun c => by\n      have h := c.prop.2\n      rw [coordinateFrame_energy] at h\n      split_ifs at h <;> norm_num at h⟩\n  exact Nat.card_of_isEmpty`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_four_energy_four_card :\n    Nat.card\n        { c : FourBlockCrosses //\n          ReferenceCoupleOrthogonal (shellPieceCrossMap fourShellPiece c) ∧\n            crossRowEnergy referenceDozenRows (shellPieceCrossMap fourShellPiece c) = 4 } =\n      0 :=\n  by\n  let :\n    IsEmpty\n      { c : FourBlockCrosses //\n        ReferenceCoupleOrthogonal (shellPieceCrossMap fourShellPiece c) ∧\n          crossRowEnergy referenceDozenRows (shellPieceCrossMap fourShellPiece c) = 4 } :=\n    ⟨fun c => by\n      have h := c.prop.2\n      rcases fourCouple_energy_cases c.val c.prop.1 with h0 | h0 <;> rw [h0] at h <;> norm_num at h⟩\n  exact Nat.card_of_isEmpty`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:25:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:27:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_heavy_energy_card (k : ℚ) :\n    Nat.card\n        { c : HeavyCrosses //\n          ReferenceCoupleOrthogonal (shellPieceCrossMap heavyShellPiece c) ∧\n            crossRowEnergy referenceDozenRows (shellPieceCrossMap heavyShellPiece c) = k } =\n      if k = 2 then 512 else 0 :=\n  by\n  by_cases hk : k = 2\n  · subst k\n    simp only [↓reduceIte]\n    have he :\n      Nat.card\n          { c : HeavyCrosses //\n            ReferenceCoupleOrthogonal (shellPieceCrossMap heavyShellPiece c) ∧\n              crossRowEnergy referenceDozenRows (shellPieceCrossMap heavyShellPiece c) = 2 } =\n        Nat.card { c : HeavyCrosses // ReferenceCoupleOrthogonal (shellPieceCrossMap heavyShellPiece c) } :=\n      by\n      apply Nat.card_congr\n      exact Equiv.subtypeEquiv (Equiv.refl _) (fun c => ⟨And.left, fun h => ⟨h, heavyCouple_cross_energy c h⟩⟩)\n    rw [he]\n    exact heavyCommonPerpendicularCrosses_card\n  · rw [ite_eq_right_iff.mpr (fun h => False.elim (hk h))]\n    let :\n      IsEmpty\n        { c : HeavyCrosses //\n          ReferenceCoupleOrthogonal (shellPieceCrossMap heavyShellPiece c) ∧\n            crossRowEnergy referenceDozenRows (shellPieceCrossMap heavyShellPiece c) = k } :=\n      ⟨fun c => hk (c.prop.2.symm.trans (heavyCouple_cross_energy c.val c.prop.1))⟩\n    exact Nat.card_of_isEmpty`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:40:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:42:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:44:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:48:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe selected-row projection decomposes the common perpendicular shell as10+80+640. -/\ntheorem reference_common_energy_counts :\n    Nat.card { c : MinimalCross // ReferenceCoupleOrthogonal c ∧ crossRowEnergy referenceDozenRows c = 4 } = 10 ∧\n      Nat.card { c : MinimalCross // ReferenceCoupleOrthogonal c ∧ crossRowEnergy referenceDozenRows c = 0 } = 80 ∧\n        Nat.card { c : MinimalCross // ReferenceCoupleOrthogonal c ∧ crossRowEnergy referenceDozenRows c = 2 } = 640 :=\n  by\n  constructor\n  · rw [crossPiece_condition_card,\n      coordinatePiece_condition_card (fun c => ReferenceCoupleOrthogonal c ∧ crossRowEnergy referenceDozenRows c = 4),\n      reference_coordinate_energy_four_card, reference_four_energy_four_card, reference_heavy_energy_card]\n    norm_num\n  constructor\n  · rw [crossPiece_condition_card,\n      coordinatePiece_condition_card (fun c => ReferenceCoupleOrthogonal c ∧ crossRowEnergy referenceDozenRows c = 0),\n      reference_coordinate_energy_zero_card, fourCouple_energy_zero_card, reference_heavy_energy_card]\n    norm_num\n  · rw [crossPiece_condition_card,\n      coordinatePiece_condition_card (fun c => ReferenceCoupleOrthogonal c ∧ crossRowEnergy referenceDozenRows c = 2),\n      reference_coordinate_energy_two_card, fourCouple_energy_two_card, reference_heavy_energy_card]\n    norm_num`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:55:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:56:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:57:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:59:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:60:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:63:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:66:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_common_energy_cases (c : MinimalCross)\n    (hc : ReferenceCoupleOrthogonal c) :\n    crossRowEnergy referenceDozenRows c = 4 ∨\n      crossRowEnergy referenceDozenRows c = 0 ∨ crossRowEnergy referenceDozenRows c = 2 :=\n  by\n  rcases minimalCross_piece_cases c with ⟨a, ha⟩ | ⟨a, ha⟩ | ⟨a, ha⟩\n  · have hm : c ∈ coordinateFrame := ha ▸ ⟨a, rfl⟩\n    have h := coordinateFrame_energy referenceDozenRows ⟨c, hm⟩\n    split_ifs at h with he\n    · exact Or.inl h\n    · exact Or.inr (Or.inl h)\n  · rw [← ha] at hc ⊢\n    exact Or.inr (fourCouple_energy_cases a hc)\n  · rw [← ha] at hc ⊢\n    exact Or.inr (Or.inr (heavyCouple_cross_energy a hc))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.ReferenceProjectionSpectrum transitive imports (legacy)",
+       "bbc209344b000b0b"],
+      ["Atlas.Rudvalis.ReferenceProjectionSpectrum:importAllArts",
+       "67f3fd0e8e1c5397"],
+      ["Atlas.Rudvalis.CommonPerpendicularCount transitive imports (legacy)",
+       "2502fd9f4683b7f4"],
+      ["Atlas.Rudvalis.CommonPerpendicularCount:importAllArts",
+       "36105abc767a2551"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CommonPerpendicularSpectrum.lean",
+   "5c2e42b471bcf0c3"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CommonPerpendicularSpectrum",
+   "e373ac67679ade11"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "2696c9553d61ec11"}

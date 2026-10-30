@@ -1,0 +1,202 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["6321c5ae9791f164.olean"],
+  "m": false,
+  "i": "cc2eebfd7757ea76.ilean",
+  "c": "c784d7a80277f512.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateQuartetClassification.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateQuartetClassification.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateQuartetClassification.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateQuartetClassification.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateQuartetClassification.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `private theorem equal_row_constructed (i j k l : Coordinate) (hr : i.1 = j.1)\n    (hij : coordinateCross i ≠ coordinateCross j) (hkl : coordinateCross k ≠ coordinateCross l)\n    (hQ : IsQuartet {coordinateCross i, coordinateCross j, coordinateCross k, coordinateCross l}) :\n    {coordinateCross i, coordinateCross j, coordinateCross k, coordinateCross l} ∈\n      Set.range coordinateQuartetConstruction :=\n  by\n  rcases i with ⟨p, x⟩\n  rcases j with ⟨q, y⟩\n  rcases k with ⟨r, z⟩\n  rcases l with ⟨s, t⟩\n  change p = q at hr\n  subst q\n  exact coordinateQuartet_repeated_row p r s x y z t hij hkl hQ`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:9:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:6:70: missing space in the source\n\nThis part of the code\n  'i.1=j.1)'\nshould be written as\n  'i.1 = j.1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:7:28: missing space in the source\n\nThis part of the code\n  'i≠coordinateCross'\nshould be written as\n  'i ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:7:72: missing space in the source\n\nThis part of the code\n  'k≠coordinateCross'\nshould be written as\n  'k ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `private theorem four_set_permute (a b c d : MinimalCross) :\n    ({ a, c, b, d } : Set MinimalCross) = { a, b, c, d } ∧\n      ({ a, d, b, c } : Set MinimalCross) = { a, b, c, d } ∧\n        ({ b, c, a, d } : Set MinimalCross) = { a, b, c, d } ∧\n          ({ b, d, a, c } : Set MinimalCross) = { a, b, c, d } ∧ ({ c, d, a, b } : Set MinimalCross) = { a, b, c, d } :=\n  by refine ⟨?_, ?_, ?_, ?_, ?_⟩ <;> ext x <;> simp only [Set.mem_insert_iff, Set.mem_singleton_iff] <;> tauto`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:24:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateQuartet_constructed_or_distinct_rows (i j k l : Coordinate)\n    (hij : coordinateCross i ≠ coordinateCross j) (hik : coordinateCross i ≠ coordinateCross k)\n    (hil : coordinateCross i ≠ coordinateCross l) (hjk : coordinateCross j ≠ coordinateCross k)\n    (hjl : coordinateCross j ≠ coordinateCross l) (hkl : coordinateCross k ≠ coordinateCross l)\n    (hQ : IsQuartet {coordinateCross i, coordinateCross j, coordinateCross k, coordinateCross l}) :\n    {coordinateCross i, coordinateCross j, coordinateCross k, coordinateCross l} ∈\n        Set.range coordinateQuartetConstruction ∨\n      Function.Injective (![i.1, j.1, k.1, l.1] : Fin 4 → Point) :=\n  by\n  have hs := four_set_permute (coordinateCross i) (coordinateCross j) (coordinateCross k) (coordinateCross l)\n  by_cases h01 : i.1 = j.1\n  · exact Or.inl (equal_row_constructed i j k l h01 hij hkl hQ)\n  by_cases h02 : i.1 = k.1\n  · left\n    have h := equal_row_constructed i k j l h02 hik hjl (by rwa [hs.1])\n    rwa [hs.1] at h\n  by_cases h03 : i.1 = l.1\n  · left\n    have h := equal_row_constructed i l j k h03 hil hjk (by rwa [hs.2.1])\n    rwa [hs.2.1] at h\n  by_cases h12 : j.1 = k.1\n  · left\n    have h := equal_row_constructed j k i l h12 hjk hil (by rwa [hs.2.2.1])\n    rwa [hs.2.2.1] at h\n  by_cases h13 : j.1 = l.1\n  · left\n    have h := equal_row_constructed j l i k h13 hjl hik (by rwa [hs.2.2.2.1])\n    rwa [hs.2.2.2.1] at h\n  by_cases h23 : k.1 = l.1\n  · left\n    have h := equal_row_constructed k l i j h23 hkl hij (by rwa [hs.2.2.2.2])\n    rwa [hs.2.2.2.2] at h\n  right\n  intro a b h\n  fin_cases a <;> fin_cases b <;> simp_all`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:31:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:33:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:27:28: missing space in the source\n\nThis part of the code\n  'i≠coordinateCross'\nshould be written as\n  'i ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:27:72: missing space in the source\n\nThis part of the code\n  'i≠coordinateCross'\nshould be written as\n  'i ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:28:28: missing space in the source\n\nThis part of the code\n  'i≠coordinateCross'\nshould be written as\n  'i ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:28:72: missing space in the source\n\nThis part of the code\n  'j≠coordinateCross'\nshould be written as\n  'j ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:29:28: missing space in the source\n\nThis part of the code\n  'j≠coordinateCross'\nshould be written as\n  'j ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:29:72: missing space in the source\n\nThis part of the code\n  'k≠coordinateCross'\nshould be written as\n  'k ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateFourSet_range (i j k l : Coordinate) :\n    ({coordinateCross i, coordinateCross j, coordinateCross k, coordinateCross l} : Set MinimalCross) =\n      Set.range (fun n : Fin 4 => coordinateCross (![i.1, j.1, k.1, l.1] n, ![i.2, j.2, k.2, l.2] n)) :=\n  by\n  ext c\n  constructor\n  · intro h\n    simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at h\n    rcases h with rfl | rfl | rfl | rfl\n    · exact ⟨0, rfl⟩\n    · exact ⟨1, rfl⟩\n    · exact ⟨2, rfl⟩\n    · exact ⟨3, rfl⟩\n  · rintro ⟨n, rfl⟩\n    fin_cases n <;> simp`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nPure multiplicity assembly, with the four-distinct-row obstruction explicit. -/\ntheorem coordinateQuartet_classification_of_four_row_obstruction\n    (hfour :\n      ∀ (Q : Set MinimalCross),\n        IsQuartet Q →\n          ∀ (p : Fin 4 → Point) (x : Fin 4 → E),\n            Function.Injective p → Q = Set.range (fun i => coordinateCross (p i, x i)) → False)\n    (Q : Set MinimalCross) (hQ : IsQuartet Q) (hF : Q ⊆ coordinateFrame) :\n    Q ∈ Set.range coordinateQuartetConstruction :=\n  by\n  obtain ⟨a, b, c, d, hab, hac, had, hbc, hbd, hcd, hQeq⟩ := Set.ncard_eq_four.mp hQ.1\n  have ha : a ∈ coordinateFrame := hF (by rw [hQeq]; simp)\n  have hb : b ∈ coordinateFrame := hF (by rw [hQeq]; simp)\n  have hc : c ∈ coordinateFrame := hF (by rw [hQeq]; simp)\n  have hd : d ∈ coordinateFrame := hF (by rw [hQeq]; simp)\n  obtain ⟨i, rfl⟩ := coordinateFrame_rep a ha\n  obtain ⟨j, rfl⟩ := coordinateFrame_rep b hb\n  obtain ⟨k, rfl⟩ := coordinateFrame_rep c hc\n  obtain ⟨l, rfl⟩ := coordinateFrame_rep d hd\n  subst Q\n  rcases coordinateQuartet_constructed_or_distinct_rows i j k l hab hac had hbc hbd hcd hQ with h | h\n  · exact h\n  · exact False.elim (hfour _ hQ _ _ h (coordinateFourSet_range i j k l))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:77:14: missing space in the source\n\nThis part of the code\n  '∀(Q :'\nshould be written as\n  '∀ (Q :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:77:37: missing space in the source\n\nThis part of the code\n  'MinimalCross),IsQuartet'\nshould be written as\n  'MinimalCross),\n   '\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:77:52: missing space in the source\n\nThis part of the code\n  '∀(p :'\nshould be written as\n  '∀ (p :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:77:62: missing space in the source\n\nThis part of the code\n  '4→Point)(x'\nshould be written as\n  '4 → Point)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:77:69: missing space in the source\n\nThis part of the code\n  '4→Point)(x :'\nshould be written as\n  'Point) (x :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:77:79: missing space in the source\n\nThis part of the code\n  '4→E),\n'\nshould be written as\n  '4 → E),'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:78:30: missing space in the source\n\nThis part of the code\n  'Q=Set.range'\nshould be written as\n  'Q = Set.range'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:78:72: missing space in the source\n\nThis part of the code\n  'i,x i))'\nshould be written as\n  'i, x i))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:79:53: missing space in the source\n\nThis part of the code\n  'Q⊆coordinateFrame)'\nshould be written as\n  'Q ⊆ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def CoordinateQuartets : Set (Set MinimalCross) :=\n  {Q | IsQuartet Q ∧ Q ⊆ coordinateFrame}`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateQuartetConstruction_subset\n    (v : Point ⊕ CoordinatePlaneQuartetParameters) : coordinateQuartetConstruction v ⊆ coordinateFrame := by\n  cases v with\n  | inl p => exact coordinateRowFrame_subset p\n  | inr v =>\n    rintro c ⟨p, hp⟩\n    exact coordinateRowFrame_subset p.val (coordinatePlaneSlice_subset _ _ _ hp)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nExhaustive intrinsic classification of the quartets contained in the coordinate frame. -/\ntheorem coordinateQuartet_classification (Q : Set MinimalCross) (hQ : IsQuartet Q) (hF : Q ⊆ coordinateFrame) :\n    Q ∈ Set.range coordinateQuartetConstruction :=\n  coordinateQuartet_classification_of_four_row_obstruction coordinateQuartet_not_four_distinct_rows Q hQ hF`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:109:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:108:11: missing space in the source\n\nThis part of the code\n  'Q⊆coordinateFrame)'\nshould be written as\n  'Q ⊆ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateQuartets_eq_constructed :\n    CoordinateQuartets = Set.range coordinateQuartetConstruction :=\n  by\n  ext Q\n  constructor\n  · rintro ⟨hQ, hF⟩\n    exact coordinateQuartet_classification Q hQ hF\n  · rintro ⟨v, rfl⟩\n    exact ⟨coordinateQuartetConstruction_isQuartet v, coordinateQuartetConstruction_subset v⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:111:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- There are exactly91 intrinsic quartets in the original coordinate frame. -/\ntheorem coordinateQuartets_card : Nat.card CoordinateQuartets = 91 :=\n  by\n  rw [coordinateQuartets_eq_constructed]\n  exact coordinateQuartetConstruction_card`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Every coordinate cross lies in exactly13 intrinsic coordinate quartets. -/\ntheorem coordinateQuartets_through_cross_card (c : coordinateFrame) :\n    Nat.card { Q : CoordinateQuartets // c.val ∈ Q.val } = 13 :=\n  by\n  obtain ⟨i, hi⟩ := coordinateFrame_rep c.val c.prop\n  rw [← hi, coordinateQuartets_eq_constructed]\n  exact coordinateConstructedQuartets_through_cross_card i.1 i.2`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateFourRowObstruction transitive imports (legacy)",
+       "3bec9baffad5ce4b"],
+      ["Atlas.Rudvalis.CoordinateFourRowObstruction:importAllArts",
+       "69a044fbdbf444e7"],
+      ["Atlas.Rudvalis.CoordinateQuartetRepeatedRow transitive imports (legacy)",
+       "18a83e225fe4cb3f"],
+      ["Atlas.Rudvalis.CoordinateQuartetRepeatedRow:importAllArts",
+       "e79c5496bab6082b"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateQuartetClassification.lean",
+   "3917d63f4c708e80"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateQuartetClassification",
+   "62a47d173cf0adf9"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "32c8e53b10387b15"}

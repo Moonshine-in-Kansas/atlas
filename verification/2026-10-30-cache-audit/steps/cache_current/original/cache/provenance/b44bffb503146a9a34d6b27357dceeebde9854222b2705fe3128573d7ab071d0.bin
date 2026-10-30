@@ -1,0 +1,90 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["63e11268adf8b57d.olean"],
+  "m": false,
+  "i": "c623cb9a3fcb71e5.ilean",
+  "c": "1b2c30de0a361a8b.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/GroupTheory/OneSuborbitPrimitivity.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/GroupTheory/OneSuborbitPrimitivity.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/GroupTheory/OneSuborbitPrimitivity.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/GroupTheory/OneSuborbitPrimitivity.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/GroupTheory/OneSuborbitPrimitivity.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/GroupTheory/OneSuborbitPrimitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/OneSuborbitPrimitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.GroupTheory`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/OneSuborbitPrimitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/OneSuborbitPrimitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open MulAction`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/OneSuborbitPrimitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/OneSuborbitPrimitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped Pointwise`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/OneSuborbitPrimitivity.lean:78:65: This simp argument is unused:\n  Fintype.card_ofIsEmpty\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [he, Nat.card_eq_fintype_card (α := ↥(∅ : Set X)), add_zero] at hc\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/OneSuborbitPrimitivity.lean:78:88: This simp argument is unused:\n  add_zero\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [he, Nat.card_eq_fintype_card (α := ↥(∅ : Set X)), Fintype.card_ofIsEmpty] at hc\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/OneSuborbitPrimitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/OneSuborbitPrimitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nOne distinguished suborbit and divisible remaining orbits obstruct nontrivial blocks. -/\ntheorem primitive_of_one_suborbit_divisible_rest {G K X : Type*} [Group G] [Group K] [MulAction G X] [MulAction K X]\n    [Finite X] [IsPretransitive G X] (x : X) (φ : K →* G) (hact : ∀ k : K, ∀ y : X, φ k • y = k • y)\n    (hfix : ∀ k : K, k • x = x) (O : Set X) (hxO : x ∉ O) (hOstable : ∀ k : K, ∀ y : X, k • y ∈ O ↔ y ∈ O)\n    (hOtrans : ∀ a ∈ O, ∀ b ∈ O, ∃ g : G, g • x = x ∧ g • a = b) (n : ℕ)\n    (hdiv : ∀ y : X, y ≠ x → y ∉ O → n ∣ Nat.card (orbit K y))\n    (harith :\n      ∀ d m : ℕ, ∀ e : Bool, d = 1 + (if e then Nat.card O else 0) + n * m → d ∣ Nat.card X → d = 1 ∨ d = Nat.card X) :\n    IsPreprimitive G X := by\n  classical\n  apply IsPreprimitive.of_isTrivialBlock_base x\n  intro B hx hB\n  have hb (k : K) (y : X) (hy : y ∈ B) : k • y ∈ B :=\n    by\n    have hkg : φ k ∈ stabilizer G x := by change φ k • x = x; rw [hact, hfix]\n    have he := hB.stabilizer_le hx hkg\n    rw [← hact, ← he, Set.smul_mem_smul_set_iff]\n    exact hy\n  let T : Set X := {y | y ∈ B ∧ y ≠ x ∧ y ∉ O}\n  have ht : n ∣ Nat.card T :=\n    invariant_card_dvd_of_orbits T (Set.toFinite _)\n      (by\n        intro k y hy\n        refine ⟨hb k y hy.1, ?_, ?_⟩\n        · intro he\n          have h := congrArg (fun z : X => k⁻¹ • z) he\n          rw [inv_smul_smul, hfix] at h\n          exact hy.2.1 h\n        · exact fun he => hy.2.2 ((hOstable k y).mp he))\n      n (fun y hy => hdiv y hy.2.1 hy.2.2)\n  obtain ⟨m, hm⟩ := ht\n  have hpart : B = ({ x } ∪ (B ∩ O)) ∪ T := by\n    ext y\n    constructor\n    · intro hy\n      by_cases he : y = x\n      · exact Or.inl (Or.inl he)\n      by_cases ho : y ∈ O\n      · exact Or.inl (Or.inr ⟨hy, ho⟩)\n      · exact Or.inr ⟨hy, he, ho⟩\n    · rintro ((he | hy) | hy)\n      · exact (show y = x from he).symm ▸ hx\n      · exact hy.1\n      · exact hy.1\n  have hd1 : Disjoint ({ x } : Set X) (B ∩ O) := by rw [Set.disjoint_left]; intro y hy hz; have he : y = x := hy;\n    subst y; exact hxO hz.2\n  have hd2 : Disjoint ({ x } ∪ (B ∩ O)) T := by\n    rw [Set.disjoint_left]\n    intro y hy hz\n    rcases hy with hy | hy\n    · exact hz.2.1 hy\n    · exact hz.2.2 hy.2\n  have hc : Nat.card B = 1 + Nat.card ↥(B ∩ O) + n * m :=\n    by\n    change B.ncard = 1 + (B ∩ O).ncard + n * m\n    conv_lhs => rw [hpart, Set.ncard_union_eq hd2, Set.ncard_union_eq hd1, Set.ncard_singleton]\n    change 1 + Nat.card ↥(B ∩ O) + Nat.card T = _\n    rw [hm]\n    rfl\n  have hO : B ∩ O = ∅ ∨ B ∩ O = O := by\n    by_cases he : B ∩ O = ∅\n    · exact Or.inl he\n    right\n    obtain ⟨a, ha⟩ := Set.nonempty_iff_ne_empty.mpr he\n    apply Set.Subset.antisymm Set.inter_subset_right\n    intro b hbO\n    obtain ⟨g, hgx, hga⟩ := hOtrans a ha.2 b hbO\n    refine ⟨?_, hbO⟩\n    have heq := hB.stabilizer_le hx hgx\n    rw [← hga, ← heq, Set.smul_mem_smul_set_iff]\n    exact ha.1\n  have hc' : Nat.card B = 1 ∨ Nat.card B = Nat.card X :=\n    by\n    rcases hO with he | he\n    · simp only [he, Nat.card_eq_fintype_card (α := ↥(∅ : Set X)), Fintype.card_ofIsEmpty, add_zero] at hc\n      exact harith _ m false (by simpa using hc) (hB.ncard_dvd_card ⟨x, hx⟩)\n    · rw [he] at hc\n      exact harith _ m true hc (hB.ncard_dvd_card ⟨x, hx⟩)\n  rcases hc' with he | he\n  · exact Or.inl (B.ncard_le_one_iff_subsingleton.mp (by change Nat.card B ≤ 1; omega))\n  · exact Or.inr (B.eq_univ_iff_ncard.mpr he)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/OneSuborbitPrimitivity.lean:78:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/OneSuborbitPrimitivity.lean:12:34: missing space in the source\n\nThis part of the code\n  '∀k : K,∀y'\nshould be written as\n  '∀ k :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/OneSuborbitPrimitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/OneSuborbitPrimitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.GroupTheory`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/OneSuborbitPrimitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/OneSuborbitPrimitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.GroupTheory.InvariantOrbitDivisibility transitive imports (legacy)",
+       "dadc096bbaae63d2"],
+      ["Atlas.GroupTheory.InvariantOrbitDivisibility:importAllArts",
+       "3969d1bfcf5eeb63"],
+      ["Mathlib.GroupTheory.GroupAction.Primitive transitive imports (legacy)",
+       "17c146842311f0d0"],
+      ["Mathlib.GroupTheory.GroupAction.Primitive:importAllArts",
+       "92f47e5f5ce60415"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/GroupTheory/OneSuborbitPrimitivity.lean",
+   "c8d2fdca36071826"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.GroupTheory.OneSuborbitPrimitivity", "f723d8a639c7a5f5"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "0621841ed9e54967"}

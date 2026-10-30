@@ -1,0 +1,45 @@
+{
+  "status": "process-passed",
+  "command": [
+    "/home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean",
+    "-j1",
+    "-M8704",
+    "-Dpp.unicode.fun=true",
+    "-DrelaxedAutoImplicit=false",
+    "-Dweak.linter.mathlibStandardSet=true",
+    "-DmaxSynthPendingDepth=3",
+    "--root=/home/gerald/atlas/claude/release-update-v1.2-20261030/candidate",
+    "-o",
+    "/home/gerald/atlas/claude/release-update-v1.2-20261030/candidate/.lake/build/lib/lean/Atlas/Comparisons/Exceptional/G2Binary/Simplicity.olean",
+    "-i",
+    "/home/gerald/atlas/claude/release-update-v1.2-20261030/candidate/.lake/build/lib/lean/Atlas/Comparisons/Exceptional/G2Binary/Simplicity.ilean",
+    "/home/gerald/atlas/claude/release-update-v1.2-20261030/candidate/Atlas/Comparisons/Exceptional/G2Binary/Simplicity.lean"
+  ],
+  "cwd": "/home/gerald/atlas/claude/release-update-v1.2-20261030/candidate",
+  "environment": {
+    "LEAN_NUM_THREADS": "2",
+    "LEAN_PATH": "/home/gerald/atlas/claude/release-update-v1.2-20261030/candidate/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean"
+  },
+  "started_utc": "2026-10-30T07:33:13Z",
+  "exit_code": 0,
+  "signal": null,
+  "guard_stop": null,
+  "policy": "Single serial lease; Lean allocation8704MiB; owned RSS<=9GiB; combined worker RSS<two-thirds physicalRAM; actual availableRAM>=1GiB; at most4 Lean workers; bounded2GiB swap credit.",
+  "owned_rss_cap": 9663676416,
+  "peak_owned_rss": 3500969984,
+  "peak_owned_rss_and_swap": 3500969984,
+  "peak_combined_worker_rss": 3849175040,
+  "peak_lean_workers": 1,
+  "proof_diagnostic_errors": false,
+  "combined_worker_rss_cap": 10938288810,
+  "pid": 424336,
+  "log_plain_sha256": "b2378ab1948778b38faecef8384790403eea6b136f05b75f942c993b8ae043f8",
+  "log_compressed_sha256": "d6099a73c482b497727dd5a697af1350887e60e198965856830624a1846ed3b5",
+  "log_recovery_verified": true,
+  "finished_utc": "2026-10-30T07:33:16Z",
+  "final_memory": {
+    "MemTotal": 16407433216,
+    "MemAvailable": 5634121728,
+    "SwapFree": 9164623872
+  }
+}

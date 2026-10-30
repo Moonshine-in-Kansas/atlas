@@ -1,0 +1,161 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["54e0f7fd5e3c90ba.olean"],
+  "m": false,
+  "i": "a63b51b116ef5923.ilean",
+  "c": "e22c8d326f45e2ad.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/SelectedCoordinateRows.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/SelectedCoordinateRows.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/SelectedCoordinateRows.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/SelectedCoordinateRows.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/SelectedCoordinateRows.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def selectedCoordinateRows (s : Set Point) : Set MinimalCross :=\n  {c | ∃ p ∈ s, c ∈ coordinateRowFrame p}`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem selectedCoordinateRows_subset (s : Set Point) :\n    selectedCoordinateRows s ⊆ coordinateFrame :=\n  by\n  rintro c ⟨p, hp, hc⟩\n  exact coordinateRowFrame_subset p hc`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:8:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem selectedCoordinateRowFrames_disjoint (p q : Point) (hpq : p ≠ q) :\n    Disjoint (coordinateRowFrame p) (coordinateRowFrame q) :=\n  by\n  apply Set.disjoint_left.mpr\n  rintro c ⟨x, hx⟩ ⟨y, hy⟩\n  exact hpq (coordinateCross_row_of_eq (hx.trans hy.symm))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:12:67: missing space in the source\n\nThis part of the code\n  'p≠q) :'\nshould be written as\n  'p ≠ q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def selectedCoordinateRowsEquiv (s : Set Point) :\n    (Σ p : s, coordinateRowFrame p.val) ≃ selectedCoordinateRows s :=\n  Equiv.ofBijective (fun a => ⟨a.2.val, a.1.val, a.1.prop, a.2.prop⟩)\n    (by\n      constructor\n      · intro a b h\n        obtain ⟨⟨p, hp⟩, c⟩ := a\n        obtain ⟨⟨q, hq⟩, d⟩ := b\n        have hc : c.val = d.val := congrArg Subtype.val h\n        have hpq : p = q := by\n          obtain ⟨x, hx⟩ := c.prop\n          obtain ⟨y, hy⟩ := d.prop\n          exact coordinateCross_row_of_eq (hx.trans (hc.trans hy.symm))\n        subst q\n        have hcd : c = d := Subtype.ext hc\n        subst d\n        rfl\n      · rintro ⟨c, p, hp, hc⟩\n        exact ⟨⟨⟨p, hp⟩, ⟨c, hc⟩⟩, rfl⟩)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem selectedCoordinateRows_card (s : Set Point) :\n    Nat.card (selectedCoordinateRows s) = Nat.card s * 4 := by\n  classical\n  let : Fintype s := Fintype.ofFinite _\n  rw [← Nat.card_congr (selectedCoordinateRowsEquiv s), Nat.card_sigma]\n  simp_rw [coordinateRowFrame_card]\n  simp [Nat.card_eq_fintype_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def referenceDozenRows : Set Point :=\n  {p | dot (binaryLabel 1) p.val = 0}`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def referenceCoordinateDozen : Set MinimalCross :=\n  selectedCoordinateRows referenceDozenRows`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:47:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceDozenRows_card : Nat.card referenceDozenRows = 3 :=\n  by\n  change Nat.card { p : Point // dot (binaryLabel 1) p.val = 0 } = 3\n  rw [Nat.card_eq_fintype_card]\n  decide +kernel`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceCoordinateDozen_card :\n    Nat.card referenceCoordinateDozen = 12 := by\n  rw [referenceCoordinateDozen, selectedCoordinateRows_card, referenceDozenRows_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceCoordinateDozen_subset :\n    referenceCoordinateDozen ⊆ coordinateFrame :=\n  selectedCoordinateRows_subset _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceCross_mem_dozen :\n    localReferenceCross ∈ referenceCoordinateDozen :=\n  by\n  rw [localReferenceCross_eq]\n  exact ⟨rowLabel 0, by change dot (binaryLabel 1) (rowLabel 0).val = 0; decide +kernel, 0, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceSecondCross_mem_dozen :\n    referenceSecondCross ∈ referenceCoordinateDozen :=\n  by\n  rw [referenceSecondCross_eq]\n  exact ⟨rowLabel 0, by change dot (binaryLabel 1) (rowLabel 0).val = 0; decide +kernel, binaryLabel 2, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:66:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceCoordinateDozen_outside_card :\n    Nat.card ↥(coordinateFrame \\ referenceCoordinateDozen) = 16 :=\n  by\n  change (coordinateFrame \\ referenceCoordinateDozen).ncard = 16\n  rw [Set.ncard_sdiff referenceCoordinateDozen_subset]\n  change Nat.card coordinateFrame - Nat.card referenceCoordinateDozen = 16\n  rw [coordinateFrame_card, referenceCoordinateDozen_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:68:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceCoordinateDozen_complement_pair_card :\n    Nat.card ↥((referenceCoordinateDozen \\ { localReferenceCross }) \\ { referenceSecondCross }) = 10 :=\n  by\n  change ((referenceCoordinateDozen \\ { localReferenceCross }) \\ { referenceSecondCross }).ncard = 10\n  rw [Set.ncard_sdiff_singleton_of_mem\n      (show referenceSecondCross ∈ referenceCoordinateDozen \\ { localReferenceCross } from\n        ⟨referenceSecondCross_mem_dozen, Ne.symm reference_crosses_ne⟩),\n    Set.ncard_sdiff_singleton_of_mem referenceCross_mem_dozen]\n  change Nat.card referenceCoordinateDozen - 1 - 1 = 10\n  rw [referenceCoordinateDozen_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateCross_mem_selectedRows_iff (s : Set Point) (i : Coordinate) :\n    coordinateCross i ∈ selectedCoordinateRows s ↔ i.1 ∈ s :=\n  by\n  constructor\n  · rintro ⟨p, hp, z, hz⟩\n    have he := coordinateCross_row_of_eq hz\n    exact he ▸ hp\n  · intro h\n    exact ⟨i.1, h, i.2, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SelectedCoordinateRows.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateCommonPerpendicular transitive imports (legacy)",
+       "440fcc9a328e0733"],
+      ["Atlas.Rudvalis.CoordinateCommonPerpendicular:importAllArts",
+       "dd68ba840817fba7"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/SelectedCoordinateRows.lean",
+   "a39b7e8bafc55066"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.SelectedCoordinateRows", "5f48ae9e633d71a1"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "78e12540f5511fcd"}

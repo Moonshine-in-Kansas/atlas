@@ -1,0 +1,95 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["f8f83137a44ed03b.olean"],
+  "m": false,
+  "i": "799d153f8948a80e.ilean",
+  "c": "96b93a5779fe2542.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean:12:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean:19:0: automatically included section variable(s) unused in theorem `Atlas.Chevalley.RootData.rationalRootPairSpan_finrank_le_two`:\n  [DecidableEq ι]\n  [P.IsCrystallographic]\n  [P.IsReduced]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq ι] [P.IsCrystallographic] [P.IsReduced] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean:26:10: This simp argument is unused:\n  Fin.exists_fin_succ\n\nHint: Omit it from the simp argument list.\n  [apply] simp [eq_comm, or_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean:26:31: This simp argument is unused:\n  eq_comm\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Fin.exists_fin_succ, or_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean:19:0: `rationalRootPairSpan_finrank_le_two` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean:32:0: automatically included section variable(s) unused in theorem `Atlas.Chevalley.RootData.rationalRootCoordinates_pair_independent`:\n  [DecidableEq ι]\n  [P.IsCrystallographic]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq ι] [P.IsCrystallographic] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean:30:0: `rationalRootCoordinates_pair_independent` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean:61:10: This simp argument is unused:\n  Fin.exists_fin_succ\n\nHint: Omit it from the simp argument list.\n  [apply] simp [eq_comm, or_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean:61:31: This simp argument is unused:\n  eq_comm\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Fin.exists_fin_succ, or_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean:54:0: `rationalRootPairSpan_finrank_eq_two` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean:95:6: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean:81:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean:86:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean:113:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean:142:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.RootData.RationalZeroRootSupport transitive imports (legacy)",
+       "48f7e1b347ebb189"],
+      ["Atlas.LinearGroups.Chevalley.RootData.RationalZeroRootSupport:importAllArts",
+       "5c8a54391e233a8b"],
+      ["Mathlib.LinearAlgebra.Dimension.Constructions transitive imports (legacy)",
+       "275e90ea2b1fbb96"],
+      ["Mathlib.LinearAlgebra.Dimension.Constructions:importAllArts",
+       "19d0212c07b83d6b"],
+      ["Mathlib.LinearAlgebra.LinearIndependent.BaseChange transitive imports (legacy)",
+       "13e3c7fa812979b3"],
+      ["Mathlib.LinearAlgebra.LinearIndependent.BaseChange:importAllArts",
+       "607c676cb8446751"],
+      ["Mathlib.Tactic.FinCases transitive imports (legacy)",
+       "f18b1ae860a37612"],
+      ["Mathlib.Tactic.FinCases:importAllArts", "3dc63b7526333b29"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/RootData/RationalRootPairLevi.lean",
+   "b2837f075e6d3c94"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.RootData.RationalRootPairLevi",
+   "9fcf34d78496f9b0"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "4d6da22dd7fb6666"}

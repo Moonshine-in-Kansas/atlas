@@ -1,0 +1,235 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["cbee6f34dc97cf74.olean"],
+  "m": false,
+  "i": "8980b1683aab502c.ilean",
+  "c": "1b55c1ff58ec6af8.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoupleFusionOrbits.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleFusionOrbits.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleFusionOrbits.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleFusionOrbits.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleFusionOrbits.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `private theorem coupleFusion_orbit_union (S T U : Set MinimalCross)\n    (a b : MinimalCross) (hS : MulAction.orbit codeCoupleStabilizer a = S)\n    (hT : MulAction.orbit codeCoupleStabilizer b = T) (hU : U = S ∪ T) (hb : b ∈ MulAction.orbit coupleFusionGroup a)\n    (hstable : ∀ g : coupleFusionGroup, ∀ c ∈ U, g.val • c ∈ U) : MulAction.orbit coupleFusionGroup a = U :=\n  by\n  have ha : a ∈ U := by rw [hU, ← hS]; exact Or.inl (MulAction.mem_orbit_self _)\n  ext c\n  constructor\n  · intro hc\n    obtain ⟨g, rfl⟩ := MulAction.mem_orbit_iff.mp hc\n    exact hstable g a ha\n  · intro hc\n    rw [hU] at hc\n    rcases hc with hc | hc\n    · exact codeCoupleOrbit_subset_coupleFusionOrbit a (hS.symm ▸ hc)\n    · have he : MulAction.orbit coupleFusionGroup b = MulAction.orbit coupleFusionGroup a :=\n        MulAction.orbit_eq_iff.mpr hb\n      rw [← he]\n      exact codeCoupleOrbit_subset_coupleFusionOrbit b (hT.symm ▸ hc)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:8:48: missing space in the source\n\nThis part of the code\n  'a=S)\n '\nshould be written as\n  'a = S)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:9:48: missing space in the source\n\nThis part of the code\n  'b=T)\n '\nshould be written as\n  'b = T)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:10:11: missing space in the source\n\nThis part of the code\n  'U=S∪T) (hb'\nshould be written as\n  'U = S'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:10:24: missing space in the source\n\nThis part of the code\n  'b∈MulAction.orbit'\nshould be written as\n  'b ∈ MulAction.orbit'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:11:16: missing space in the source\n\nThis part of the code\n  '∀g : coupleFusionGroup,∀c∈U,g.val'\nshould be written as\n  '∀ g :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `private theorem coupleFusion_t_mem (c : MinimalCross) :\n    localFusionT • c ∈ MulAction.orbit coupleFusionGroup c :=\n  MulAction.mem_orbit_iff.mpr ⟨⟨localFusionT, localFusionT_mem_coupleFusionGroup⟩, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionTen_base_orbit :\n    MulAction.orbit coupleFusionGroup localThirdCross = coupleFusionTen :=\n  by\n  apply\n    coupleFusion_orbit_union coupleCoordinateTwo coupleCoordinateEight coupleFusionTen localThirdCross\n      (localFusionT • localThirdCross) (coupleCoordinateTwo_orbit _ localThirdCross_mem_coupleCoordinateTwo)\n      (coupleCoordinateEight_orbit _ localFusionT_third_mem_coupleCoordinateEight) coupleFusionTen_decomposition\n      (coupleFusion_t_mem _)\n  exact coupleFusionTen_stable`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:33:1: 'theorem coupleFusionTen_base_orbit : MulAction.orbit coupleFusionGroup localThirdCross = coupleFusionTen :=\n  by\n  apply\n    coupleFusion_orbit_union coupleCoordinateTwo coupleCoordinateEight coupleFusionTen localThirdCross\n      (localFusionT • localThirdCross) (coupleCoordinateTwo_orbit _ localThirdCross_mem_coupleCoordinateTwo)\n      (coupleCoordinateEight_orbit _ localFusionT_third_mem_coupleCoordinateEight) coupleFusionTen_decomposition\n      (coupleFusion_t_mem _)\n  exact coupleFusionTen_stable' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionEighty_base_orbit :\n    MulAction.orbit coupleFusionGroup (coordinateCross localOutsideCoordinate) = coupleFusionEighty :=\n  by\n  apply\n    coupleFusion_orbit_union coupleCoordinateSixteen (coupleFourEnergyPiece 0) coupleFusionEighty\n      (coordinateCross localOutsideCoordinate) localFourBridgeCross\n      (coupleCoordinateSixteen_orbit _ localOutsideCoordinate_mem_coupleCoordinateSixteen)\n      (coupleFourEnergyPiece_orbit 0 _\n        ⟨localFourBridgeCross_common, localFourBridgeCross_energy, localFourBridgeCross_four⟩)\n      coupleFusionEighty_decomposition (coupleFusion_t_mem _)\n  exact coupleFusionEighty_stable`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:43:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:44:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:47:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:42:1: 'theorem coupleFusionEighty_base_orbit :\n    MulAction.orbit coupleFusionGroup (coordinateCross localOutsideCoordinate) = coupleFusionEighty :=\n  by\n  apply\n    coupleFusion_orbit_union coupleCoordinateSixteen (coupleFourEnergyPiece 0) coupleFusionEighty\n      (coordinateCross localOutsideCoordinate) localFourBridgeCross\n      (coupleCoordinateSixteen_orbit _ localOutsideCoordinate_mem_coupleCoordinateSixteen)\n      (coupleFourEnergyPiece_orbit 0 _\n        ⟨localFourBridgeCross_common, localFourBridgeCross_energy, localFourBridgeCross_four⟩)\n      coupleFusionEighty_decomposition (coupleFusion_t_mem _)\n  exact coupleFusionEighty_stable' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionSixForty_base_orbit :\n    MulAction.orbit coupleFusionGroup shiftedSeedCross = coupleFusionSixForty :=\n  by\n  have hH : MulAction.orbit codeCoupleStabilizer localHeavyBridgeCross = heavyCoupleNeighbours :=\n    by\n    obtain ⟨w, hw⟩ := localHeavyBridgeCross_heavy\n    rw [← hw]\n    exact heavyCross_couple_stabilizer_orbit w (hw.symm ▸ localHeavyBridgeCross_common)\n  apply\n    coupleFusion_orbit_union (coupleFourEnergyPiece 2) heavyCoupleNeighbours coupleFusionSixForty shiftedSeedCross\n      localHeavyBridgeCross\n      (coupleFourEnergyPiece_orbit 2 _ ⟨shiftedSeedCross_common, shiftedSeedCross_energy, shiftedSeedCross_four⟩) hH\n      coupleFusionSixForty_decomposition (coupleFusion_t_mem _)\n  exact coupleFusionSixForty_stable`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:57:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:59:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:51:1: 'theorem coupleFusionSixForty_base_orbit : MulAction.orbit coupleFusionGroup shiftedSeedCross = coupleFusionSixForty :=\n  by\n  have hH : MulAction.orbit codeCoupleStabilizer localHeavyBridgeCross = heavyCoupleNeighbours :=\n    by\n    obtain ⟨w, hw⟩ := localHeavyBridgeCross_heavy\n    rw [← hw]\n    exact heavyCross_couple_stabilizer_orbit w (hw.symm ▸ localHeavyBridgeCross_common)\n  apply\n    coupleFusion_orbit_union (coupleFourEnergyPiece 2) heavyCoupleNeighbours coupleFusionSixForty shiftedSeedCross\n      localHeavyBridgeCross\n      (coupleFourEnergyPiece_orbit 2 _ ⟨shiftedSeedCross_common, shiftedSeedCross_energy, shiftedSeedCross_four⟩) hH\n      coupleFusionSixForty_decomposition (coupleFusion_t_mem _)\n  exact coupleFusionSixForty_stable' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `private theorem orbit_eq_from_base (S : Set MinimalCross) (a c : MinimalCross)\n    (ha : MulAction.orbit coupleFusionGroup a = S) (hc : c ∈ S) : MulAction.orbit coupleFusionGroup c = S :=\n  (MulAction.orbit_eq_iff.mpr (ha.symm ▸ hc)).trans ha`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:64:45: missing space in the source\n\nThis part of the code\n  'a=S) (hc'\nshould be written as\n  'a = S)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:64:56: missing space in the source\n\nThis part of the code\n  'c∈S) :'\nshould be written as\n  'c ∈ S)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionTen_orbit (c : MinimalCross) (hc : c ∈ coupleFusionTen) :\n    MulAction.orbit coupleFusionGroup c = coupleFusionTen :=\n  orbit_eq_from_base _ _ c coupleFusionTen_base_orbit hc`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:68:1: 'theorem coupleFusionTen_orbit (c : MinimalCross) (hc : c ∈ coupleFusionTen) :\n    MulAction.orbit coupleFusionGroup c = coupleFusionTen :=\n  orbit_eq_from_base _ _ c coupleFusionTen_base_orbit\n    hc' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:68:57: missing space in the source\n\nThis part of the code\n  'c∈coupleFusionTen)'\nshould be written as\n  'c ∈ coupleFusionTen)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionEighty_orbit (c : MinimalCross)\n    (hc : c ∈ coupleFusionEighty) : MulAction.orbit coupleFusionGroup c = coupleFusionEighty :=\n  orbit_eq_from_base _ _ c coupleFusionEighty_base_orbit hc`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:72:1: 'theorem coupleFusionEighty_orbit (c : MinimalCross) (hc : c ∈ coupleFusionEighty) :\n    MulAction.orbit coupleFusionGroup c = coupleFusionEighty :=\n  orbit_eq_from_base _ _ c coupleFusionEighty_base_orbit\n    hc' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:72:60: missing space in the source\n\nThis part of the code\n  'c∈coupleFusionEighty)'\nshould be written as\n  'c ∈ coupleFusionEighty)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionSixForty_orbit (c : MinimalCross)\n    (hc : c ∈ coupleFusionSixForty) : MulAction.orbit coupleFusionGroup c = coupleFusionSixForty :=\n  orbit_eq_from_base _ _ c coupleFusionSixForty_base_orbit hc`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:76:1: 'theorem coupleFusionSixForty_orbit (c : MinimalCross) (hc : c ∈ coupleFusionSixForty) :\n    MulAction.orbit coupleFusionGroup c = coupleFusionSixForty :=\n  orbit_eq_from_base _ _ c coupleFusionSixForty_base_orbit\n    hc' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:76:62: missing space in the source\n\nThis part of the code\n  'c∈coupleFusionSixForty)'\nshould be written as\n  'c ∈ coupleFusionSixForty)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionThousand_orbit (c : MinimalCross)\n    (hc : c ∈ coupleFusionThousand) : MulAction.orbit coupleFusionGroup c = coupleFusionThousand :=\n  by\n  have hH : MulAction.orbit codeCoupleStabilizer c = coupleFusionThousand :=\n    by\n    rw [coupleFusionThousand_decomposition] at hc ⊢\n    obtain ⟨w, hw⟩ := hc.2\n    rw [← hw]\n    exact heavyCross_semi_couple_stabilizer_orbit w (hw.symm ▸ hc.1)\n  ext d\n  constructor\n  · intro hd\n    obtain ⟨g, rfl⟩ := MulAction.mem_orbit_iff.mp hd\n    exact coupleFusionThousand_stable g c hc\n  · intro hd\n    exact codeCoupleOrbit_subset_coupleFusionOrbit c (hH.symm ▸ hd)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:80:1: 'theorem coupleFusionThousand_orbit (c : MinimalCross) (hc : c ∈ coupleFusionThousand) :\n    MulAction.orbit coupleFusionGroup c = coupleFusionThousand :=\n  by\n  have hH : MulAction.orbit codeCoupleStabilizer c = coupleFusionThousand :=\n    by\n    rw [coupleFusionThousand_decomposition] at hc ⊢\n    obtain ⟨w, hw⟩ := hc.2\n    rw [← hw]\n    exact heavyCross_semi_couple_stabilizer_orbit w (hw.symm ▸ hc.1)\n  ext d\n  constructor\n  · intro hd\n    obtain ⟨g, rfl⟩ := MulAction.mem_orbit_iff.mp hd\n    exact coupleFusionThousand_stable g c hc\n  · intro hd\n    exact\n      codeCoupleOrbit_subset_coupleFusionOrbit c\n        (hH.symm ▸ hd)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:80:62: missing space in the source\n\nThis part of the code\n  'c∈coupleFusionThousand)'\nshould be written as\n  'c ∈ coupleFusionThousand)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusion_referenceSecond_orbit :\n    MulAction.orbit coupleFusionGroup referenceSecondCross = { referenceSecondCross } :=\n  by\n  ext c\n  constructor\n  · intro hc\n    obtain ⟨g, rfl⟩ := MulAction.mem_orbit_iff.mp hc\n    exact (coupleFusionGroup_fix g).2\n  · rintro rfl\n    exact MulAction.mem_orbit_self _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:95:1: 'theorem coupleFusion_referenceSecond_orbit :\n    MulAction.orbit coupleFusionGroup referenceSecondCross = { referenceSecondCross } :=\n  by\n  ext c\n  constructor\n  · intro hc\n    obtain ⟨g, rfl⟩ := MulAction.mem_orbit_iff.mp hc\n    exact (coupleFusionGroup_fix g).2\n  · rintro rfl\n    exact MulAction.mem_orbit_self _' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusion_nontrivial_orbit_cards :\n    (∀ c ∈ coupleFusionTen, Nat.card (MulAction.orbit coupleFusionGroup c) = 10) ∧\n      (∀ c ∈ coupleFusionEighty, Nat.card (MulAction.orbit coupleFusionGroup c) = 80) ∧\n        (∀ c ∈ coupleFusionSixForty, Nat.card (MulAction.orbit coupleFusionGroup c) = 640) ∧\n          (∀ c ∈ coupleFusionThousand, Nat.card (MulAction.orbit coupleFusionGroup c) = 1024) :=\n  by\n  refine ⟨?_, ?_, ?_, ?_⟩\n  · intro c hc; rw [coupleFusionTen_orbit c hc, coupleFusionTen_card]\n  · intro c hc; rw [coupleFusionEighty_orbit c hc, coupleFusionEighty_card]\n  · intro c hc; rw [coupleFusionSixForty_orbit c hc, coupleFusionSixForty_card]\n  · intro c hc; rw [coupleFusionThousand_orbit c hc, coupleFusionThousand_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:105:1: 'theorem coupleFusion_nontrivial_orbit_cards :\n    (∀ c ∈ coupleFusionTen, Nat.card (MulAction.orbit coupleFusionGroup c) = 10) ∧\n      (∀ c ∈ coupleFusionEighty, Nat.card (MulAction.orbit coupleFusionGroup c) = 80) ∧\n        (∀ c ∈ coupleFusionSixForty, Nat.card (MulAction.orbit coupleFusionGroup c) = 640) ∧\n          (∀ c ∈ coupleFusionThousand, Nat.card (MulAction.orbit coupleFusionGroup c) = 1024) :=\n  by\n  refine ⟨?_, ?_, ?_, ?_⟩\n  · intro c hc; rw [coupleFusionTen_orbit c hc, coupleFusionTen_card]\n  · intro c hc; rw [coupleFusionEighty_orbit c hc, coupleFusionEighty_card]\n  · intro c hc; rw [coupleFusionSixForty_orbit c hc, coupleFusionSixForty_card]\n  · intro c hc;\n    rw [coupleFusionThousand_orbit c hc,\n      coupleFusionThousand_card]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nExhaustion of the 1755 neighbours of the first cross by the five actual A-orbits. -/\ntheorem coupleFusion_neighbour_partition (c : MinimalCross) (hc : CrossOrthogonal localReferenceCross c) :\n    c = referenceSecondCross ∨\n      c ∈ coupleFusionTen ∨ c ∈ coupleFusionEighty ∨ c ∈ coupleFusionSixForty ∨ c ∈ coupleFusionThousand :=\n  by\n  classical\n  by_cases he : c = referenceSecondCross\n  · exact Or.inl he\n  by_cases hy : CrossOrthogonal referenceSecondCross c\n  · have hcommon : ReferenceCoupleOrthogonal c := ⟨hc, hy⟩\n    rcases reference_common_energy_cases c hcommon with h4 | h0 | h2\n    · exact Or.inr (Or.inl ((coupleFusionTen_energy c).mpr ⟨hcommon, h4⟩))\n    · exact Or.inr (Or.inr (Or.inl ((coupleFusionEighty_energy c).mpr ⟨hcommon, h0⟩)))\n    · exact Or.inr (Or.inr (Or.inr (Or.inl ((coupleFusionSixForty_energy c).mpr ⟨hcommon, h2⟩))))\n  · exact Or.inr (Or.inr (Or.inr (Or.inr ⟨⟨hc, hy⟩, he⟩)))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusion_referenceSecond_orbit_card :\n    Nat.card (MulAction.orbit coupleFusionGroup referenceSecondCross) = 1 :=\n  by\n  rw [coupleFusion_referenceSecond_orbit]\n  simp`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:134:1: 'theorem coupleFusion_referenceSecond_orbit_card :\n    Nat.card (MulAction.orbit coupleFusionGroup referenceSecondCross) = 1 :=\n  by\n  rw [coupleFusion_referenceSecond_orbit]\n  simp' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusion_neighbour_orbit_sizes (c : MinimalCross)\n    (hc : CrossOrthogonal localReferenceCross c) :\n    Nat.card (MulAction.orbit coupleFusionGroup c) = 1 ∨\n      Nat.card (MulAction.orbit coupleFusionGroup c) = 10 ∨\n        Nat.card (MulAction.orbit coupleFusionGroup c) = 80 ∨\n          Nat.card (MulAction.orbit coupleFusionGroup c) = 640 ∨\n            Nat.card (MulAction.orbit coupleFusionGroup c) = 1024 :=\n  by\n  rcases coupleFusion_neighbour_partition c hc with rfl | h | h | h | h\n  · exact Or.inl coupleFusion_referenceSecond_orbit_card\n  · exact Or.inr (Or.inl (coupleFusion_nontrivial_orbit_cards.1 c h))\n  · exact Or.inr (Or.inr (Or.inl (coupleFusion_nontrivial_orbit_cards.2.1 c h)))\n  · exact Or.inr (Or.inr (Or.inr (Or.inl (coupleFusion_nontrivial_orbit_cards.2.2.1 c h))))\n  · exact Or.inr (Or.inr (Or.inr (Or.inr (coupleFusion_nontrivial_orbit_cards.2.2.2 c h))))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:139:1: 'theorem coupleFusion_neighbour_orbit_sizes (c : MinimalCross) (hc : CrossOrthogonal localReferenceCross c) :\n    Nat.card (MulAction.orbit coupleFusionGroup c) = 1 ∨\n      Nat.card (MulAction.orbit coupleFusionGroup c) = 10 ∨\n        Nat.card (MulAction.orbit coupleFusionGroup c) = 80 ∨\n          Nat.card (MulAction.orbit coupleFusionGroup c) = 640 ∨\n            Nat.card (MulAction.orbit coupleFusionGroup c) = 1024 :=\n  by\n  rcases coupleFusion_neighbour_partition c hc with rfl | h | h | h | h\n  · exact Or.inl coupleFusion_referenceSecond_orbit_card\n  · exact Or.inr (Or.inl (coupleFusion_nontrivial_orbit_cards.1 c h))\n  · exact Or.inr (Or.inr (Or.inl (coupleFusion_nontrivial_orbit_cards.2.1 c h)))\n  · exact Or.inr (Or.inr (Or.inr (Or.inl (coupleFusion_nontrivial_orbit_cards.2.2.1 c h))))\n  ·\n    exact\n      Or.inr\n        (Or.inr\n          (Or.inr\n            (Or.inr\n              (coupleFusion_nontrivial_orbit_cards.2.2.2 c\n                h))))' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionOrbits.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoupleFusionInvariance transitive imports (legacy)",
+       "e4dac51192a73222"],
+      ["Atlas.Rudvalis.CoupleFusionInvariance:importAllArts",
+       "c6cf016e2f325d44"],
+      ["Atlas.Rudvalis.CoupleCoordinateBridgeMembership transitive imports (legacy)",
+       "379f105ae85bb0c9"],
+      ["Atlas.Rudvalis.CoupleCoordinateBridgeMembership:importAllArts",
+       "a5bea9bb9857c8c4"],
+      ["Atlas.Rudvalis.LocalBridgeCommonEnergy transitive imports (legacy)",
+       "28a7191c0b158730"],
+      ["Atlas.Rudvalis.LocalBridgeCommonEnergy:importAllArts",
+       "27c550000d3527d2"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoupleFusionOrbits.lean",
+   "c99d3a298d54e1eb"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoupleFusionOrbits", "e7cdeb31da63b47a"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "5f170ef9541955e4"}

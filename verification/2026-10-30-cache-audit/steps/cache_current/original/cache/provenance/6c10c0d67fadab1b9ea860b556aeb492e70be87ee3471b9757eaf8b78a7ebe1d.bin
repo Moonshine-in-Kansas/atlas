@@ -1,0 +1,132 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["f7d12c4c20c8afd5.olean"],
+  "m": false,
+  "i": "ab1dc5312101b4be.ilean",
+  "c": "3c4ba3f8e011fdda.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FrameMatrixDifferences.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FrameMatrixDifferences.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FrameMatrixDifferences.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FrameMatrixDifferences.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FrameMatrixDifferences.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def binaryMatrixUnit (i j : Fin 3) : BinaryMatrix :=\n  Pi.single i (Pi.single j 1)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def binaryElementaryMatrix (i j : Fin 3) : BinaryMatrix :=\n  1 + binaryMatrixUnit i j`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def binaryMatrixDifference (i j : Fin 3) (A : BinaryMatrix) : BinaryMatrix :=\n  binaryElementaryMatrix i j * A * binaryElementaryMatrix i j - A`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem binaryElementaryMatrix_square (i j : Fin 3) (hij : i ≠ j) :\n    binaryElementaryMatrix i j * binaryElementaryMatrix i j = 1 := by decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:13:60: missing space in the source\n\nThis part of the code\n  'i≠j) :'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem binaryMatrixDifference_offdiagonal (i j : Fin 3) (hij : i ≠ j) :\n    binaryMatrixDifference i j (binaryMatrixUnit j j) = binaryMatrixUnit i j := by decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:17:65: missing space in the source\n\nThis part of the code\n  'i≠j) :'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem binaryMatrixDifference_diagonal (i j : Fin 3) (hij : i ≠ j) :\n    binaryMatrixDifference i j (binaryMatrixUnit j i) =\n      binaryMatrixUnit i i + binaryMatrixUnit j j + binaryMatrixUnit i j :=\n  by decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:21:62: missing space in the source\n\nThis part of the code\n  'i≠j) :'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem binaryMatrixDifference_trace (i j : Fin 3) (hij : i ≠ j)\n    (A : BinaryMatrix) : Matrix.trace (binaryMatrixDifference i j A) = 0 :=\n  by\n  rw [binaryMatrixDifference, Matrix.trace_sub, Matrix.trace_mul_cycle]\n  rw [binaryElementaryMatrix_square i j hij, Matrix.one_mul, sub_self]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:26:59: missing space in the source\n\nThis part of the code\n  'i≠j) (A'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nConjugation differences and the scalar identity span every three-by-three binary matrix. -/\ntheorem binaryMatrix_differences_scalar_span (W : Submodule Bit BinaryMatrix) (hI : (1 : BinaryMatrix) ∈ W)\n    (hD : ∀ i j : Fin 3, i ≠ j → ∀ A : BinaryMatrix, binaryMatrixDifference i j A ∈ W) : W = ⊤ :=\n  by\n  have hoff (i j : Fin 3) (hij : i ≠ j) : binaryMatrixUnit i j ∈ W :=\n    by\n    rw [← binaryMatrixDifference_offdiagonal i j hij]\n    exact hD i j hij _\n  have hdiag (i j : Fin 3) (hij : i ≠ j) : binaryMatrixUnit i i + binaryMatrixUnit j j ∈ W :=\n    by\n    have h := W.add_mem (hD i j hij (binaryMatrixUnit j i)) (hoff i j hij)\n    have hz : binaryMatrixUnit i j + binaryMatrixUnit i j = 0 := by ext r s; exact CharTwo.add_self_eq_zero _\n    rw [binaryMatrixDifference_diagonal i j hij, add_assoc, hz, add_zero] at h\n    exact h\n  have hunit (i j : Fin 3) : binaryMatrixUnit i j ∈ W :=\n    by\n    by_cases hij : i = j\n    · subst j\n      obtain ⟨j, hji⟩ := exists_ne i\n      obtain ⟨k, hki, hkj⟩ := Fin.exists_ne_and_ne_of_two_lt i j (by decide)\n      have he :\n        binaryMatrixUnit i i =\n          1 + (binaryMatrixUnit i i + binaryMatrixUnit j j) + (binaryMatrixUnit i i + binaryMatrixUnit k k) :=\n        by\n        have cert :\n          ∀ i j k : Fin 3,\n            j ≠ i →\n              k ≠ i →\n                k ≠ j →\n                  binaryMatrixUnit i i =\n                    1 + (binaryMatrixUnit i i + binaryMatrixUnit j j) + (binaryMatrixUnit i i + binaryMatrixUnit k k) :=\n          by decide +kernel\n        exact cert i j k hji hki hkj\n      rw [he]\n      exact W.add_mem (W.add_mem hI (hdiag i j hji.symm)) (hdiag i k hki.symm)\n    · exact hoff i j hij\n  apply Submodule.eq_top_iff'.mpr\n  intro M\n  rw [← binaryMatrix_single_expansion M]\n  exact W.sum_mem (fun i _ => W.sum_mem (fun j _ => W.smul_mem _ (hunit i j)))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:33:28: missing space in the source\n\nThis part of the code\n  'BinaryMatrix)∈W)\n '\nshould be written as\n  'BinaryMatrix) ∈ W)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:34:11: missing space in the source\n\nThis part of the code\n  '∀i j :'\nshould be written as\n  '∀ i j'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameMatrixDifferences.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FramePerfectLinearAlgebra transitive imports (legacy)",
+       "e1f62aec153cb7cc"],
+      ["Atlas.Rudvalis.FramePerfectLinearAlgebra:importAllArts",
+       "d5c0e07595fea4b2"],
+      ["Mathlib.LinearAlgebra.Matrix.Trace transitive imports (legacy)",
+       "15a4d5eda92e1c1b"],
+      ["Mathlib.LinearAlgebra.Matrix.Trace:importAllArts",
+       "9f6fa1027a9e0c28"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FrameMatrixDifferences.lean",
+   "603fed86eef1509d"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FrameMatrixDifferences", "1fe1b211b42cb112"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "f8a0ea49d9867136"}

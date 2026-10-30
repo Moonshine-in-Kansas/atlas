@@ -1,0 +1,76 @@
+{
+  "id": "staged-InvariantSimpleDescent",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.InvariantSimpleDescent"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.RootData.rootWeyl_exists_simple_descent_of_ne_one",
+      "kind": "theorem",
+      "module": "FamilyWork.InvariantSimpleDescent"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6RootWeyl",
+      "kind": "definition",
+      "module": "FamilyWork.InvariantSimpleDescent"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6RootSimpleReflection",
+      "kind": "definition",
+      "module": "FamilyWork.InvariantSimpleDescent"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6_rootDiagram_isPos_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.InvariantSimpleDescent"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6_rootDiagram_baseIndex",
+      "kind": "theorem",
+      "module": "FamilyWork.InvariantSimpleDescent"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6RootWeyl_simpleDescent_diagram_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.InvariantSimpleDescent"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6RootWeyl_exists_simpleDescent_orbit",
+      "kind": "theorem",
+      "module": "FamilyWork.InvariantSimpleDescent"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6RootWeyl_length_pair_descent",
+      "kind": "theorem",
+      "module": "FamilyWork.InvariantSimpleDescent"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.foldedWeylInN_rootAction_commute_diagram",
+      "kind": "theorem",
+      "module": "FamilyWork.InvariantSimpleDescent"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-InvariantSimpleDescent-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ]
+}

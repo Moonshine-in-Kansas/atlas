@@ -1,0 +1,86 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["5f738c6e2d9ae105.olean"],
+  "m": false,
+  "i": "f5814270289a2c97.ilean",
+  "c": "7eba7eb3f8bbec4c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/ProjectionOrthogonality.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ProjectionOrthogonality.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ProjectionOrthogonality.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ProjectionOrthogonality.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ProjectionOrthogonality.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/ProjectionOrthogonality.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectionOrthogonality.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectionOrthogonality.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectionOrthogonality.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Classical`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectionOrthogonality.lean:4:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectionOrthogonality.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectionOrthogonality.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateRowEnergy_zero_iff (s : Set Point) (v : RationalSpace) :\n    coordinateRowEnergy s v = 0 ↔ ∀ i : Coordinate, i.1 ∈ s → v i = 0 :=\n  by\n  rw [coordinateRowEnergy, rationalDot_self_eq_zero]\n  constructor\n  · intro h i hi\n    have he := congrFun h i\n    simpa only [coordinateRowProjection_apply, hi, ↓reduceIte, Pi.zero_apply] using he\n  · intro h\n    ext i\n    by_cases hi : i.1 ∈ s\n    · simp only [coordinateRowProjection_apply, hi, ↓reduceIte, Pi.zero_apply, h i hi]\n    · simp only [coordinateRowProjection_apply, hi, ↓reduceIte, Pi.zero_apply]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectionOrthogonality.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectionOrthogonality.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem crossRowEnergy_zero_iff (s : Set Point) (c : MinimalCross) :\n    crossRowEnergy s c = 0 ↔ ∀ z ∈ selectedCoordinateRows s, CrossOrthogonal z c := by\n  induction c using Quotient.inductionOn with\n  | h\n    v =>\n    change coordinateRowEnergy s v.val.val = 0 ↔ ∀ z ∈ selectedCoordinateRows s, CrossOrthogonal z (minimalCross v)\n    rw [coordinateRowEnergy_zero_iff]\n    constructor\n    · intro h z hz\n      obtain ⟨p, hp, x, rfl⟩ := hz\n      change CrossOrthogonal (minimalCross (coordinateShellLift ((p, x), true))) (minimalCross v)\n      rw [crossOrthogonal_mk]\n      change HermitianOrthogonal (coordinateMinimum (p, x)) v.val.val\n      exact (coordinate_hermitianOrthogonal_pair p x v.val.val).mpr ⟨h (p, x) hp, h (p, x + p.val) hp⟩\n    · intro h i hi\n      have he := h (coordinateCross i) ⟨i.1, hi, i.2, rfl⟩\n      rw [coordinateCross, crossOrthogonal_mk] at he\n      change HermitianOrthogonal (coordinateMinimum i) v.val.val at he\n      exact ((coordinate_hermitianOrthogonal_pair i.1 i.2 v.val.val).mp he).1`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectionOrthogonality.lean:23:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectionOrthogonality.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectionOrthogonality.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe80-element common part is exactly the shell perpendicular to the selected dozen. -/\ntheorem reference_dozen_perpendicular_card :\n    Nat.card { c : MinimalCross // ∀ z ∈ referenceCoordinateDozen, CrossOrthogonal z c } = 80 :=\n  by\n  have he (c : MinimalCross) :\n    (ReferenceCoupleOrthogonal c ∧ crossRowEnergy referenceDozenRows c = 0) ↔\n      ∀ z ∈ referenceCoordinateDozen, CrossOrthogonal z c :=\n    by\n    rw [crossRowEnergy_zero_iff]\n    constructor\n    · exact And.right\n    · intro h\n      exact ⟨⟨h _ referenceCross_mem_dozen, h _ referenceSecondCross_mem_dozen⟩, h⟩\n  rw [← Nat.card_congr (Equiv.subtypeEquivRight he)]\n  exact reference_common_energy_counts.2.1`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectionOrthogonality.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectionOrthogonality.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectionOrthogonality.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectionOrthogonality.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CommonPerpendicularSpectrum transitive imports (legacy)",
+       "c3035359615032e7"],
+      ["Atlas.Rudvalis.CommonPerpendicularSpectrum:importAllArts",
+       "40f4915c882bdacd"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/ProjectionOrthogonality.lean",
+   "8bff08a96824e0f2"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.ProjectionOrthogonality", "d51d25d12bea1377"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "d0196361b7f44014"}

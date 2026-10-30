@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "staged-ree-f4-seven-pivot-factorization",
+  "imports": [
+    "Atlas.GroupTheory.SevenPivotFactorization"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.GroupTheory.sevenPivotFactorization",
+      "source": "Atlas/GroupTheory/SevenPivotFactorization.lean",
+      "kind": "theorem",
+      "module": "Atlas.GroupTheory.SevenPivotFactorization"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.sevenPivotFactorizationInverse",
+      "source": "Atlas/GroupTheory/SevenPivotFactorization.lean",
+      "kind": "theorem",
+      "module": "Atlas.GroupTheory.SevenPivotFactorization"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independent-mathematical-scope",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.ReeF4.",
+        "Atlas.SuzukiFamily.",
+        "Atlas.F4.",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis."
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.SuzukiFamily.Simplicity",
+        "Atlas.LinearGroups.SuzukiFamily.ExactSimplicity"
+      ]
+    }
+  ],
+  "original_manifest": {
+    "path": "verification/checkpoints/ree-f4-seven-pivot-factorization.json",
+    "sha256": "c1281818398fd11a21af010429c6e7dba65d24663869c16c4c022ae7c79566b7"
+  }
+}

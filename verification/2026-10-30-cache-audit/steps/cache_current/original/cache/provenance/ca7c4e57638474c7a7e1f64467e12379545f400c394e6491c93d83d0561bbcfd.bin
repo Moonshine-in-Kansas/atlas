@@ -1,0 +1,108 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["a15920ccfc4e5468.olean"],
+  "m": false,
+  "i": "16d3cfcb0b792849.ilean",
+  "c": "bde69ab61debebef.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/ReferenceProjectionSpectrum.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ReferenceProjectionSpectrum.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ReferenceProjectionSpectrum.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ReferenceProjectionSpectrum.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ReferenceProjectionSpectrum.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Classical`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:5:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateFrame_energy (s : Set Point) (c : coordinateFrame) :\n    crossRowEnergy s c.val = if c.val ∈ selectedCoordinateRows s then 4 else 0 :=\n  by\n  obtain ⟨i, hi⟩ := coordinateFrame_rep c.val c.prop\n  rw [← hi, crossRowEnergy_coordinateCross, coordinateCross_mem_selectedRows_iff]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_coordinate_energy_four_iff (c : coordinateFrame) :\n    ReferenceCoupleOrthogonal c.val ∧ crossRowEnergy referenceDozenRows c.val = 4 ↔\n      c.val ∈ (referenceCoordinateDozen \\ { localReferenceCross }) \\ { referenceSecondCross } :=\n  by\n  have hx := coordinateCross_mem (localFusionSourceCoordinate 0)\n  have hy := coordinateCross_mem (localFusionSourceCoordinate 1)\n  rw [ReferenceCoupleOrthogonal, coordinateFrame_orthogonal_iff _ _ hx c.prop,\n    coordinateFrame_orthogonal_iff _ _ hy c.prop, coordinateFrame_energy]\n  change (_ ∧ _) ∧ (if c.val ∈ referenceCoordinateDozen then (4 : ℚ) else 0) = 4 ↔ _\n  simp only [Set.mem_sdiff, Set.mem_singleton_iff]\n  by_cases h : c.val ∈ referenceCoordinateDozen\n  · simp only [h, ite_true, ne_eq, true_and, and_true]\n    tauto\n  · norm_num only [h, ite_false, and_false, false_and]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_coordinate_energy_zero_iff (c : coordinateFrame) :\n    ReferenceCoupleOrthogonal c.val ∧ crossRowEnergy referenceDozenRows c.val = 0 ↔ c.val ∉ referenceCoordinateDozen :=\n  by\n  rw [coordinateFrame_energy]\n  change _ ∧ (if c.val ∈ referenceCoordinateDozen then (4 : ℚ) else 0) = 0 ↔ _\n  by_cases h : c.val ∈ referenceCoordinateDozen\n  · simp [h]\n  · have hcx : localReferenceCross ≠ c.val := fun he => h (he ▸ referenceCross_mem_dozen)\n    have hcy : referenceSecondCross ≠ c.val := fun he => h (he ▸ referenceSecondCross_mem_dozen)\n    have hc : ReferenceCoupleOrthogonal c.val :=\n      ⟨(coordinateFrame_orthogonal_iff _ _ (coordinateCross_mem _) c.prop).mpr hcx,\n        (coordinateFrame_orthogonal_iff _ _ (coordinateCross_mem _) c.prop).mpr hcy⟩\n    simp [h, hc]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_coordinate_energy_four_card :\n    Nat.card { c : coordinateFrame // ReferenceCoupleOrthogonal c.val ∧ crossRowEnergy referenceDozenRows c.val = 4 } =\n      10 :=\n  by\n  let e :\n    { c : coordinateFrame // ReferenceCoupleOrthogonal c.val ∧ crossRowEnergy referenceDozenRows c.val = 4 } ≃\n      ↥((referenceCoordinateDozen \\ { localReferenceCross }) \\ { referenceSecondCross }) :=\n    { toFun := fun c => ⟨c.val.val, (reference_coordinate_energy_four_iff c.val).mp c.prop⟩\n      invFun := fun c =>\n        ⟨⟨c.val, referenceCoordinateDozen_subset c.prop.1.1⟩, (reference_coordinate_energy_four_iff _).mpr c.prop⟩\n      left_inv := fun _ => rfl\n      right_inv := fun _ => rfl }\n  rw [Nat.card_congr e]\n  exact referenceCoordinateDozen_complement_pair_card`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_coordinate_energy_zero_card :\n    Nat.card { c : coordinateFrame // ReferenceCoupleOrthogonal c.val ∧ crossRowEnergy referenceDozenRows c.val = 0 } =\n      16 :=\n  by\n  let e :\n    { c : coordinateFrame // ReferenceCoupleOrthogonal c.val ∧ crossRowEnergy referenceDozenRows c.val = 0 } ≃\n      ↥(coordinateFrame \\ referenceCoordinateDozen) :=\n    { toFun := fun c => ⟨c.val.val, c.val.prop, (reference_coordinate_energy_zero_iff c.val).mp c.prop⟩\n      invFun := fun c => ⟨⟨c.val, c.prop.1⟩, (reference_coordinate_energy_zero_iff _).mpr c.prop.2⟩\n      left_inv := fun _ => rfl\n      right_inv := fun _ => rfl }\n  rw [Nat.card_congr e]\n  exact referenceCoordinateDozen_outside_card`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:59:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyCouple_cross_energy (c : HeavyCrosses)\n    (hc : ReferenceCoupleOrthogonal (shellPieceCrossMap heavyShellPiece c)) :\n    crossRowEnergy referenceDozenRows (shellPieceCrossMap heavyShellPiece c) = 2 := by\n  induction c using Quotient.inductionOn with\n  | h v => exact heavyCouple_shell_energy ⟨v, hc⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceProjectionSpectrum.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FourCoupleProjection transitive imports (legacy)",
+       "e297619c1685ad2d"],
+      ["Atlas.Rudvalis.FourCoupleProjection:importAllArts", "b3f27b2baf40c5e7"],
+      ["Atlas.Rudvalis.HeavyCoupleProjection transitive imports (legacy)",
+       "8c7f61d3e5d9a048"],
+      ["Atlas.Rudvalis.HeavyCoupleProjection:importAllArts",
+       "8272ec98e964d02d"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/ReferenceProjectionSpectrum.lean",
+   "57b8d13dc6391945"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.ReferenceProjectionSpectrum",
+   "3b020918197a5e2c"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "2469356b6dd1ef3e"}

@@ -1,0 +1,61 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["b2070e859c5ff6cc.olean"],
+  "m": false,
+  "i": "fb73e0350c707cca.ilean",
+  "c": "ee9490665e564afc.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/RootString.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/RootString.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/RootString.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/RootString.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/RootString.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootString.lean:15:0: `geckStringBottom_independent` does not use the following hypothesis in its type outside of proofs:\n  • [Fintype ι] (#4) (used in type, but only in a proof)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootString.lean:25:0: `geckStringBottom_coeff` does not use the following hypothesis in its type outside of proofs:\n  • [Fintype ι] (#4) (used in type, but only in a proof)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootString.lean:84:0: `geckStringIndex_bot` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootString.lean:193:50: missing space in the source\n\nThis part of the code\n  '(n+1)) (z'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootString.lean:230:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/RootString.lean:278:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.Integral.GeckDividedPowers transitive imports (legacy)",
+       "a114e151dd4694a7"],
+      ["Atlas.LinearGroups.Chevalley.Integral.GeckDividedPowers:importAllArts",
+       "187d53e4744339b6"],
+      ["Atlas.LinearGroups.Chevalley.Integral.DividedPowers transitive imports (legacy)",
+       "86a0c1518a589f31"],
+      ["Atlas.LinearGroups.Chevalley.Integral.DividedPowers:importAllArts",
+       "cad312ee58121cab"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/RootString.lean",
+   "8143b90827b7cb24"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Integral.RootString",
+   "25e6330f602718f5"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "8da0f21ed55ed7a6"}

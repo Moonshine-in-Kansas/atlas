@@ -1,0 +1,55 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["82836018e0248530.olean"],
+  "m": false,
+  "i": "9ad0b28b9b25aff4.ilean",
+  "c": "036e9e72fa1a044d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Lattices/LeechTwoFourCounts.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/LeechTwoFourCounts.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/LeechTwoFourCounts.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/LeechTwoFourCounts.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/LeechTwoFourCounts.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Lattices/LeechTwoFourCounts.lean:34:43: `dif_pos` has been deprecated: Use `dite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechTwoFourCounts.lean:34:58: `dif_neg` has been deprecated: Use `dite_eq_right` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechTwoFourCounts.lean:39:43: `dif_pos` has been deprecated: Use `dite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechTwoFourCounts.lean:39:58: `dif_neg` has been deprecated: Use `dite_eq_right` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechTwoFourCounts.lean:108:33: This simp argument is unused:\n  Fintype.card_fun\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Nat.card_eq_fintype_card, ZMod.card]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Lattices.LeechTwoFour transitive imports (legacy)",
+       "8e4e989bbc0d3ceb"],
+      ["Atlas.Lattices.LeechTwoFour:importAllArts", "09f914bc9dc6413a"],
+      ["Atlas.Codes.BinaryCounting transitive imports (legacy)",
+       "596d2bd18a25a1c3"],
+      ["Atlas.Codes.BinaryCounting:importAllArts", "bba0f13fcf64b649"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Lattices/LeechTwoFourCounts.lean",
+   "8e0b53a95d2a80b4"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Lattices.LeechTwoFourCounts", "51faf80be04f5405"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "d6ac1a2d0565ae9b"}

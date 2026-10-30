@@ -1,0 +1,71 @@
+{
+  "id": "staged-E6OrderPolynomial",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.TwistedE6.E6OrderPolynomial"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.ClosedOrder.weightedWeylPolynomial",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.E6OrderPolynomial"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.ClosedOrder.weightedWeylPolynomial_torus",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.E6OrderPolynomial"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.ClosedOrder.weightedWeylPolynomial_bruhat",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.E6OrderPolynomial"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-E6OrderPolynomial-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-E6OrderPolynomial-structural-identification-before-count",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.TwistedE6.companionFixedSubgroup_card",
+        "Atlas.Chevalley.TwistedE6.companionFixedWeylCell_card",
+        "Atlas.Chevalley.F4B3.rootWeylPoincareEval_F4",
+        "Atlas.Chevalley.RootData.rootWeylPoincareEval"
+      ],
+      "forbid_modules": [
+        "FamilyWork.PositiveFixedOrder",
+        "FamilyWork.FixedTorusOrder",
+        "FamilyWork.FixedBorel",
+        "FamilyWork.FixedInversionOrder",
+        "FamilyWork.FixedCellCoordinates",
+        "FamilyWork.FixedWeylCell",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveFixedOrder",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedTorusOrder",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedBorel",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedInversionOrder",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedCellCoordinates",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedWeylCell"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

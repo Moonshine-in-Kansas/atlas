@@ -1,0 +1,64 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["e13d497d906b0ded.olean"],
+  "m": false,
+  "i": "14997ba1380ade7c.ilean",
+  "c": "58b1983dead55209.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/F4/HalfRootCentralLayer.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/F4/HalfRootCentralLayer.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/F4/HalfRootCentralLayer.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/F4/HalfRootCentralLayer.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/F4/HalfRootCentralLayer.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/F4/HalfRootCentralLayer.lean:27:68: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/HalfRootCentralLayer.lean:27:68: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/HalfRootCentralLayer.lean:33:61: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [halfRootCentralApply]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/HalfRootCentralLayer.lean:59:38: This simp argument is unused:\n  LinearEquiv.mul_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [centralSevenCoordinates, halfRootCentralApply, oppositeLowerCoordinates, halfRootIndex, halfRootSign,\n    shortRootL, shortRootQ, shortRootPosition, cycleCoefficient, shortRootFirstCoefficient, shortRootQuadraticLinear,\n    shortRootQuadraticApply, Atlas.Albert.shortRootLinear, Atlas.Albert.shortRootFormula,\n    Atlas.Albert.coordinateCycleEquiv, Atlas.Albert.coordinateCycle, Atlas.SplitOctonion.mul,\n    Atlas.SplitOctonion.conjugate, Atlas.SplitOctonion.trace, Atlas.SplitOctonion.unit, Atlas.SplitOctonion.basisVector,\n    Matrix.vecHead, Matrix.vecTail, halfCentral_symm_mul_apply, pow_succ]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/HalfRootCentralLayer.lean:41:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 4000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/HalfRootCentralLayer.lean:56:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/HalfRootCentralLayer.lean:59:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.F4.ShortRadicalLayer transitive imports (legacy)",
+       "1128b201cf5cf9eb"],
+      ["Atlas.LinearGroups.F4.ShortRadicalLayer:importAllArts",
+       "a346a2a46fc95d92"],
+      ["Atlas.LinearGroups.F4.CentralSevenFormula transitive imports (legacy)",
+       "d6ec4fa0495fd9cd"],
+      ["Atlas.LinearGroups.F4.CentralSevenFormula:importAllArts",
+       "e37f9fa936855557"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/F4/HalfRootCentralLayer.lean",
+   "4ea4db60716a1eab"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.F4.HalfRootCentralLayer",
+   "31d166b28ff84060"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "7dc73a82726f1c00"}

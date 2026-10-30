@@ -1,0 +1,82 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["6b00599f0bfbd475.olean"],
+  "m": false,
+  "i": "64fe5d299f118deb.ilean",
+  "c": "05026cdc7c8ed184.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/OctadTetradPairedBasis.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/OctadTetradPairedBasis.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/OctadTetradPairedBasis.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/OctadTetradPairedBasis.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/OctadTetradPairedBasis.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/OctadTetradPairedBasis.lean:42:4: `simp [octadTetradPairedLabel,octadTetradCosetLabel_support,\n      octadTetradComplementLabel_support] at h` is a flexible tactic modifying `h`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadTetradPairedBasis.lean:42:4: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Prod.mk.injEq, and_true] at h",
+   "level": "info"},
+  {"message":
+   "Atlas/Fischer/OctadTetradPairedBasis.lean:44:4: `exact Prod.ext (Subtype.ext h) rfl`\nuses `h`, which was modified by the flexible tactic `simp` on line 42!",
+   "level": "info"},
+  {"message":
+   "Atlas/Fischer/OctadTetradPairedBasis.lean:42:4: `simp [octadTetradPairedLabel,octadTetradCosetLabel_support,\n      octadTetradComplementLabel_support] at h` is a flexible tactic modifying `h`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadTetradPairedBasis.lean:42:4: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one, Prod.mk.injEq, zero_ne_one, and_false] at h",
+   "level": "info"},
+  {"message":
+   "Atlas/Fischer/OctadTetradPairedBasis.lean:45:4: `exact (hcross E F h).elim`\nuses `h`, which was modified by the flexible tactic `simp` on line 42!",
+   "level": "info"},
+  {"message":
+   "Atlas/Fischer/OctadTetradPairedBasis.lean:42:4: `simp [octadTetradPairedLabel,octadTetradCosetLabel_support,\n      octadTetradComplementLabel_support] at h` is a flexible tactic modifying `h`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadTetradPairedBasis.lean:42:4: Try this:\n  [apply] simp only [Fin.mk_one, Fin.isValue, Prod.mk.injEq, and_true] at h",
+   "level": "info"},
+  {"message":
+   "Atlas/Fischer/OctadTetradPairedBasis.lean:47:4: `have he : (octadTetradFlipEquiv O T hTO hT) E = (octadTetradFlipEquiv O T hTO hT) F := Subtype.ext h`\nuses `h`, which was modified by the flexible tactic `simp` on line 42!",
+   "level": "info"},
+  {"message":
+   "Atlas/Fischer/OctadTetradPairedBasis.lean:71:39: This simp argument is unused:\n  ↓reduceIte\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [octadTetradPairedFamily]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadTetradPairedBasis.lean:77:39: This simp argument is unused:\n  ↓reduceIte\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [octadTetradPairedFamily]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadTetradPairedBasis.lean:82:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Fischer.OctadTetradPairedLabels transitive imports (legacy)",
+       "0f5648aaef10a8a0"],
+      ["Atlas.Fischer.OctadTetradPairedLabels:importAllArts",
+       "ff3bbc406d95521e"],
+      ["Atlas.Fischer.OctadScalarBlockGeometry transitive imports (legacy)",
+       "c9aaf021233e7b52"],
+      ["Atlas.Fischer.OctadScalarBlockGeometry:importAllArts",
+       "fb3ca008ab9975cc"],
+      ["Atlas.Fischer.SignedCoordinateIndependence transitive imports (legacy)",
+       "c05d8ca18879d6e4"],
+      ["Atlas.Fischer.SignedCoordinateIndependence:importAllArts",
+       "e96ac08b076a7783"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/OctadTetradPairedBasis.lean",
+   "eec80e2470cdd04e"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.OctadTetradPairedBasis", "a190257e80249039"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "f9a1cfdc06864335"}

@@ -1,0 +1,163 @@
+{
+  "id": "staged-BinarySpecialPointFaithfulness",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.ReeF4.BinaryDerivedPointFaithfulness"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.ReeF4.isSpecialVector_root_of_perpendicular_phi",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialRootRigidity",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/SpecialRootRigidity.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isSpecialVector_root_zero_two",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialRootRigidity",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/SpecialRootRigidity.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isSpecialVector_root_zero_five",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialRootRigidity",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/SpecialRootRigidity.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isSpecialVector_root_two_zero",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialRootRigidity",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/SpecialRootRigidity.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isSpecialVector_root_two_one",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialRootRigidity",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/SpecialRootRigidity.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.model_fixes_root_of_cross_sum",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialRootRigidity",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/SpecialRootRigidity.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.model_eq_one_of_fix_six_special_roots",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialRootRigidity",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/SpecialRootRigidity.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.binary_specialPoints_unit_eq_one",
+      "module": "Atlas.LinearGroups.ReeF4.BinarySpecialPointFaithfulness",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/BinarySpecialPointFaithfulness.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.binaryModel_fixes_vector_of_fixes_specialPoint",
+      "module": "Atlas.LinearGroups.ReeF4.BinarySpecialPointFaithfulness",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/BinarySpecialPointFaithfulness.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.binaryModel_eq_one_of_fix_specialPoints",
+      "module": "Atlas.LinearGroups.ReeF4.BinarySpecialPointFaithfulness",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/BinarySpecialPointFaithfulness.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.binarySpecialPoints_faithfulSMul",
+      "module": "Atlas.LinearGroups.ReeF4.BinarySpecialPointFaithfulness",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/BinarySpecialPointFaithfulness.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.binarySpecialPoints_toPermHom_injective",
+      "module": "Atlas.LinearGroups.ReeF4.BinarySpecialPointFaithfulness",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/BinarySpecialPointFaithfulness.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.binarySpecialPoints_toPermHom_ker_eq_bot",
+      "module": "Atlas.LinearGroups.ReeF4.BinarySpecialPointFaithfulness",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/BinarySpecialPointFaithfulness.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.binarySubgroup_specialPoints_faithful",
+      "module": "Atlas.LinearGroups.ReeF4.BinaryDerivedPointFaithfulness",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/BinaryDerivedPointFaithfulness.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.binaryDerived_specialPoints_faithful",
+      "module": "Atlas.LinearGroups.ReeF4.BinaryDerivedPointFaithfulness",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/BinaryDerivedPointFaithfulness.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.binaryDerived_specialPoints_toPermHom_eq_restrict",
+      "module": "Atlas.LinearGroups.ReeF4.BinaryDerivedPointFaithfulness",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/BinaryDerivedPointFaithfulness.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.binaryDerived_specialPoints_toPermHom_injective",
+      "module": "Atlas.LinearGroups.ReeF4.BinaryDerivedPointFaithfulness",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/BinaryDerivedPointFaithfulness.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.binaryDerived_specialPoints_toPermHom_ker_eq_bot",
+      "module": "Atlas.LinearGroups.ReeF4.BinaryDerivedPointFaithfulness",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/BinaryDerivedPointFaithfulness.lean"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "draft-binary-special-points-faithfulness-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis.",
+        "Atlas.F4.",
+        "Atlas.ReeF4.card_Model",
+        "Atlas.ReeF4.card_specialPoints",
+        "Atlas.ReeF4.elementarySubgroup_eq_top",
+        "Atlas.ReeF4.model_isPerfect",
+        "Atlas.ReeF4.simple_of_large",
+        "Atlas.ReeF4.model_specialPoint_transitive"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.ReeF4.Order",
+        "Atlas.LinearGroups.ReeF4.Generation",
+        "Atlas.LinearGroups.ReeF4.SpecialPointCount",
+        "Atlas.LinearGroups.ReeF4.SpecialOppositePairCount",
+        "Atlas.LinearGroups.ReeF4.SpecialPointTransitivity",
+        "Atlas.LinearGroups.ReeF4.OppositePairRecognition",
+        "Atlas.LinearGroups.ReeF4.OppositePairStabilizer",
+        "F4Work.BinaryDerivedAction",
+        "F4Work.ReeFullOrder",
+        "F4Work.ReeFullGeneration",
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood",
+        "Atlas.LinearGroups.ReeF4.BinaryDerivedAction",
+        "Atlas.LinearGroups.ReeF4.ReeFullOrder",
+        "Atlas.LinearGroups.ReeF4.OppositePairStabilizerOrder",
+        "Atlas.LinearGroups.ReeF4.ReeFullGeneration"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

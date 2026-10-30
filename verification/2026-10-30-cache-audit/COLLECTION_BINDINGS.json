@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "selection_sha256": "d70abfeb64c957a5b6c291afc48e3e43fab2efc195a08964bc566d70efc8cda1",
+  "original_results": {
+    "cache_current": {
+      "result": {
+        "path": "verification-runs/20261030T090722-cache-current-current/RESULT.json",
+        "sha256": "000cd072c33c4b33c165ea194ed0486a18b2e97f6871b7d3c786d13457fb6c15"
+      },
+      "inventory_sha256": "fa8be7a105933c64a3604ab768fe53ab09b8cf672a23a632f136b2c88d3a7edc"
+    },
+    "atlas_root": {
+      "result": {
+        "path": "verification-runs/20261030T074013-root-Atlas/RESULT.json",
+        "sha256": "841dd5bfa2274d03125d6694c3b0ac96d47945e645ffe8636b4930c38e360f24"
+      },
+      "inventory_sha256": "ecfd8d9d9426c0a286f5baab53bf02d2cfbe954a17e11686ff3c466240fad623"
+    },
+    "audit_root": {
+      "result": {
+        "path": "verification-runs/20261030T074153-root-Atlas.Audit/RESULT.json",
+        "sha256": "87e8d59a7b42bc2222740cdddff207d5b21532be4335977af95c1e81bc2a0ff1"
+      },
+      "inventory_sha256": "1c7022af656d201c9b051d77ccf7bb19a25df7a90854d8887f46f6b45e069cef"
+    },
+    "public_audit": {
+      "result": {
+        "path": "verification-runs/20261030T102358-audit-public-whole-public-roots/RESULT.json",
+        "sha256": "cad6a574e6c42fac8ac696a4ca69390832a64566f3e701f9025fa4519a5c6fd6"
+      },
+      "inventory_sha256": "8f63a27e35a6a82f322065cb95844568eae6c1ca610357c4a0e311380d46c97e"
+    }
+  },
+  "inputs": {
+    "source_hashes": {
+      "path": "candidate/verification/release-candidate/SOURCE_HASHES.json",
+      "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+    },
+    "roots": {
+      "path": "candidate/verification/roots.json",
+      "sha256": "9274712b657aea7c70ec1cb77490585752a8c568bd955c20985fdd238363cb67"
+    },
+    "object_bindings": {
+      "path": "OBJECT_BINDINGS.json",
+      "sha256": "e44ac2fbe0d187cdc11b3bbc7ab5327ddcd725c1e777cbe8fd3ffbed8da1033d"
+    },
+    "public_registry": {
+      "path": "PUBLIC_AUDIT_REGISTRY.json",
+      "sha256": "a483bd42ef08a522aaeabb2e5fbd10b7331b55a7398a82ecc16d99e13ea07701"
+    },
+    "merged_sources": {
+      "path": "MERGED_SOURCES.json",
+      "sha256": "4be8f0ac8efef36f0092fcb810259e1f5f9bae0d97d493316d58a2a210e82986"
+    }
+  },
+  "interfaces": {
+    "receipt_adapter": {
+      "path": "publication-tools/cache-anchor-successor/verify_receipt_adapter.rb",
+      "sha256": "51c6f74bd1c36e16a44b34383be629644b8fcabf1afa5a999b82c7a0627d6301"
+    },
+    "parent_receipts": {
+      "path": "publication-tools/cache-anchor-successor/successor/verification/parent_receipts.rb",
+      "sha256": "e2e8f1239765c67fa1e369daa8101aeae6a43c0b30b7aef02f83f45db85a658f"
+    },
+    "release_evidence": {
+      "path": "publication-tools/transport-fix-proposal/successor/verification/release_evidence.rb",
+      "sha256": "e094fb541c79939516f86b66a71f1f5e23676b5fcabcaa9c96a5ee3ccc78d165"
+    },
+    "release_metadata": {
+      "path": "publication-tools/follow-up/successor/verification/release_metadata.rb",
+      "sha256": "d47d79090bff98cf64a390df8daf19ca2f8ef0bbf3d12e2771aaa8da3f66cc95"
+    }
+  },
+  "collector_sha256": "1c53f85b03ddd828cec1c60bbb73421e55d6fed17da0efd08e2ad1b51e7d670b",
+  "compression_rule": "One original SHA-verified gzip graph; no plaintext graph export; private originals unchanged."
+}

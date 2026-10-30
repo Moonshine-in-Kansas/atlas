@@ -1,0 +1,110 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["86abcdcae598d873.olean"],
+  "m": false,
+  "i": "cc04e210cfe9ca1d.ilean",
+  "c": "11f84dd85954e09b.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/LocalTransitivity.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LocalTransitivity.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LocalTransitivity.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LocalTransitivity.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LocalTransitivity.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_four_cross_transitive (v w : FourBlockCrosses)\n    (hv : CrossOrthogonal localReferenceCross (shellPieceCrossMap fourShellPiece v))\n    (hw : CrossOrthogonal localReferenceCross (shellPieceCrossMap fourShellPiece w)) :\n    ∃ g : codeReferenceStabilizer, g.val • shellPieceCrossMap fourShellPiece v = shellPieceCrossMap fourShellPiece w :=\n  by\n  rw [localReferenceCross_eq] at hv hw\n  obtain ⟨g, hg, h⟩ := fourLocal_crosses_transitive v w hv hw\n  refine ⟨⟨g, ?_⟩, h⟩\n  change g • localReferenceCross = localReferenceCross\n  rw [localReferenceCross_eq]\n  exact hg`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:10:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localFusion_orbit_sizes :\n    Nat.card (MulAction.orbit localFusionGroup localThirdCross) = 27 ∨\n      Nat.card (MulAction.orbit localFusionGroup localThirdCross) = 219 ∨\n        Nat.card (MulAction.orbit localFusionGroup localThirdCross) = 1563 ∨\n          Nat.card (MulAction.orbit localFusionGroup localThirdCross) = 1755 :=\n  localFusion_orbit_sizes_of_piece_transitivity reference_four_cross_transitive reference_heavy_cross_transitive`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:23:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The actual local group is transitive on the complete orthogonal shell,\nwith all geometric hypotheses discharged. -/\ntheorem localFusionGroup_orthogonal_orbit :\n    MulAction.orbit localFusionGroup localThirdCross = {c : MinimalCross | CrossOrthogonal localReferenceCross c} :=\n  localFusionGroup_full_orthogonal_orbit localFusion_orbit_sizes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rudvalis_generated_cross_transitive :\n    MulAction.IsPretransitive generatedGaussianGroup MinimalCross :=\n  generated_cross_pretransitive localFusion_orbit_sizes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rudvalis_orthogonal_degree (x : MinimalCross) :\n    Nat.card (OrthogonalCrosses x) = 1755 :=\n  generated_uniform_orthogonal_degree localFusion_orbit_sizes x`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rudvalis_generated_orthogonal_pairs_transitive :\n    MulAction.IsPretransitive generatedGaussianGroup OrthogonalPairs :=\n  generated_orthogonal_pairs_pretransitive localFusion_orbit_sizes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rudvalis_ordered_orthogonal_pairs_card :\n    Nat.card OrthogonalPairs = 7125300 :=\n  generated_ordered_orthogonal_pairs_card localFusion_orbit_sizes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTransitivity.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.ReferenceHeavyOrbit transitive imports (legacy)",
+       "abdab0fb1af13e19"],
+      ["Atlas.Rudvalis.ReferenceHeavyOrbit:importAllArts", "f0c2aa6321ddb576"],
+      ["Atlas.Rudvalis.FourLocalCrossOrbit transitive imports (legacy)",
+       "30ec0269dfee237f"],
+      ["Atlas.Rudvalis.FourLocalCrossOrbit:importAllArts", "0fce0fb261cca641"],
+      ["Atlas.Rudvalis.ConditionalGlobalTransitivity transitive imports (legacy)",
+       "8005a14eda4ecb1b"],
+      ["Atlas.Rudvalis.ConditionalGlobalTransitivity:importAllArts",
+       "ccf1f22424c64f9b"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/LocalTransitivity.lean",
+   "c47101b5ee595d4a"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.LocalTransitivity", "21bc3a47b98947dc"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "0d727ace8c81bd9e"}

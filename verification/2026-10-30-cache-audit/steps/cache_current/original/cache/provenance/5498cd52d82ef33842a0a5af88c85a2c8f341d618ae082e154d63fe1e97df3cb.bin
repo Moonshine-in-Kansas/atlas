@@ -1,0 +1,156 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["bc2e2cb65f25ad9e.olean"],
+  "m": false,
+  "i": "58a10f8025a0da11.ilean",
+  "c": "7ab37520aa7b059e.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeG2/OctonionCoordinates.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeG2/OctonionCoordinates.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeG2/OctonionCoordinates.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeG2/OctonionCoordinates.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:32:22: `simp` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:32:22: Try this:\n  [apply] simp only [Fin.isValue, cons_val_zero, cons_val_one, cons_val, neg_neg, Fin.reduceFinMk]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:32:31: `apply sub_eq_zero.mp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 32!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:35:20: `simp` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:35:20: Try this:\n  [apply] simp only [Fin.isValue, cons_val_zero, cons_val_one, cons_val, neg_add_rev, neg_neg, Nat.succ_eq_add_one,\n    Nat.reduceAdd, Fin.reduceFinMk]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:35:29: `apply sub_eq_zero.mp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 35!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:35:20: `simp` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:35:20: Try this:\n  [apply] simp only [Fin.isValue, cons_val_zero, cons_val_one, cons_val, neg_add_rev, neg_neg, Nat.succ_eq_add_one,\n    Nat.reduceAdd, Fin.reduceFinMk]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:35:29: `apply sub_eq_zero.mp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 35!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:32:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:32:52: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:32:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:45:0: automatically included section variable(s) unused in theorem `Atlas.ReeG2.octonionCoordinates_mul`:\n  [Finite F]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Finite F] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:4: `simp [octonionCoordinates,Atlas.SplitOctonion.mul,bilinear,formMatrix,Matrix.vecHead,Matrix.vecTail,\n      crossProduct,wedgeCoordinate,Matrix.mulVec,dotProduct,Fin.sum_univ_succ]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:4: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:52:4: `apply sub_eq_zero.mp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 50!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:4: `simp [octonionCoordinates,Atlas.SplitOctonion.mul,bilinear,formMatrix,Matrix.vecHead,Matrix.vecTail,\n      crossProduct,wedgeCoordinate,Matrix.mulVec,dotProduct,Fin.sum_univ_succ]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:4: Try this:\n  [apply] simp only [Fin.mk_one, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:52:4: `apply sub_eq_zero.mp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 50!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:4: `simp [octonionCoordinates,Atlas.SplitOctonion.mul,bilinear,formMatrix,Matrix.vecHead,Matrix.vecTail,\n      crossProduct,wedgeCoordinate,Matrix.mulVec,dotProduct,Fin.sum_univ_succ]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:4: Try this:\n  [apply] simp only [Fin.reduceFinMk, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:52:4: `apply sub_eq_zero.mp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 50!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:4: `simp [octonionCoordinates,Atlas.SplitOctonion.mul,bilinear,formMatrix,Matrix.vecHead,Matrix.vecTail,\n      crossProduct,wedgeCoordinate,Matrix.mulVec,dotProduct,Fin.sum_univ_succ]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:4: Try this:\n  [apply] simp only [Fin.reduceFinMk, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:52:4: `apply sub_eq_zero.mp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 50!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:4: `simp [octonionCoordinates,Atlas.SplitOctonion.mul,bilinear,formMatrix,Matrix.vecHead,Matrix.vecTail,\n      crossProduct,wedgeCoordinate,Matrix.mulVec,dotProduct,Fin.sum_univ_succ]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:4: Try this:\n  [apply] simp only [Fin.reduceFinMk, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:52:4: `apply sub_eq_zero.mp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 50!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:4: `simp [octonionCoordinates,Atlas.SplitOctonion.mul,bilinear,formMatrix,Matrix.vecHead,Matrix.vecTail,\n      crossProduct,wedgeCoordinate,Matrix.mulVec,dotProduct,Fin.sum_univ_succ]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:4: Try this:\n  [apply] simp only [Fin.reduceFinMk, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:52:4: `apply sub_eq_zero.mp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 50!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:4: `simp [octonionCoordinates,Atlas.SplitOctonion.mul,bilinear,formMatrix,Matrix.vecHead,Matrix.vecTail,\n      crossProduct,wedgeCoordinate,Matrix.mulVec,dotProduct,Fin.sum_univ_succ]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:4: Try this:\n  [apply] simp only [Fin.reduceFinMk, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:52:4: `apply sub_eq_zero.mp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 50!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:4: `simp [octonionCoordinates,Atlas.SplitOctonion.mul,bilinear,formMatrix,Matrix.vecHead,Matrix.vecTail,\n      crossProduct,wedgeCoordinate,Matrix.mulVec,dotProduct,Fin.sum_univ_succ]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:4: Try this:\n  [apply] simp only [Fin.reduceFinMk, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:52:4: `apply sub_eq_zero.mp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 50!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean:50:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.ReeG2.CrossProductGroup transitive imports (legacy)",
+       "79b9b32ed83ce946"],
+      ["Atlas.LinearGroups.ReeG2.CrossProductGroup:importAllArts",
+       "84873b2193447094"],
+      ["Atlas.LinearGroups.G2.Basic transitive imports (legacy)",
+       "db73fe590486cdd5"],
+      ["Atlas.LinearGroups.G2.Basic:importAllArts", "8b0a82c3b514bd7a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/ReeG2/OctonionCoordinates.lean",
+   "3d896124174b0516"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.ReeG2.OctonionCoordinates",
+   "9b1c058bcb0c6499"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "e5f0c5e3b0ea4a85"}

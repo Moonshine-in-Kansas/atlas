@@ -1,0 +1,157 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["1556c1cde932c5c1.olean"],
+  "m": false,
+  "i": "04548e7b7f5db61c.ilean",
+  "c": "9913ec241ee1ba77.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/G2/FieldTransport.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/FieldTransport.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/FieldTransport.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/FieldTransport.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/FieldTransport.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.SplitOctonion`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `variable {F K : Type*} [Field F] [Field K]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def mapCoefficients (e : F ≃+* K) (x : Carrier F) : Carrier K := fun i =>\n  e (x i)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `@[simp]\ntheorem mapCoefficients_add (e : F ≃+* K) (x y : Carrier F) :\n    mapCoefficients e (x + y) = mapCoefficients e x + mapCoefficients e y := by ext i; exact e.map_add _ _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `@[simp]\ntheorem mapCoefficients_smul (e : F ≃+* K) (r : F) (x : Carrier F) :\n    mapCoefficients e (r • x) = e r • mapCoefficients e x := by ext i; exact e.map_mul _ _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `@[simp]\ntheorem mapCoefficients_symm (e : F ≃+* K) (x : Carrier K) : mapCoefficients e (mapCoefficients e.symm x) = x := by\n  ext i; exact e.apply_symm_apply _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `@[simp]\ntheorem mapCoefficients_symm' (e : F ≃+* K) (x : Carrier F) : mapCoefficients e.symm (mapCoefficients e x) = x := by\n  ext i; exact e.symm_apply_apply _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `@[simp]\ntheorem mapCoefficients_mul (e : F ≃+* K) (x y : Carrier F) :\n    mapCoefficients e (mul x y) = mul (mapCoefficients e x) (mapCoefficients e y) := by ext i;\n  fin_cases i <;> simp [mapCoefficients, mul]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Conjugating linear automorphisms by coefficientwise field transport. -/\ndef transportLinear (e : F ≃+* K) (g : Carrier F ≃ₗ[F] Carrier F) : Carrier K ≃ₗ[K] Carrier K\n    where\n  toFun x := mapCoefficients e (g (mapCoefficients e.symm x))\n  invFun x := mapCoefficients e (g.symm (mapCoefficients e.symm x))\n  left_inv x := by simp\n  right_inv x := by simp\n  map_add' x y := by simp\n  map_smul' r x := by simp`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `@[simp]\ntheorem transportLinear_apply (e : F ≃+* K) (g : Carrier F ≃ₗ[F] Carrier F) (x : Carrier K) :\n    transportLinear e g x = mapCoefficients e (g (mapCoefficients e.symm x)) :=\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Transport of the full multiplication-preserving automorphism group. -/\ndef transportAutomorphism (e : F ≃+* K) (g : Automorphism F) : Automorphism K :=\n  ⟨transportLinear e g.val, by\n    intro x y\n    change mapCoefficients e (g.val (mapCoefficients e.symm (mul x y))) = _\n    rw [mapCoefficients_mul, automorphism_mul, mapCoefficients_mul]\n    rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `@[simp]\ntheorem transportAutomorphism_apply (e : F ≃+* K) (g : Automorphism F) (x : Carrier K) :\n    (transportAutomorphism e g).val x = mapCoefficients e (g.val (mapCoefficients e.symm x)) :=\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.SplitOctonion`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.G2`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.SplitOctonion`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `variable {F K : Type*} [Field F] [Field K]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The actual octonion automorphism models are transported coefficientwise. -/\ndef fieldEquiv (e : F ≃+* K) : Model F ≃* Model K\n    where\n  toFun := transportAutomorphism e\n  invFun := transportAutomorphism e.symm\n  left_inv\n    g := by\n    apply Atlas.Algebra.MultiplicativeLinearAut.ext\n    intro x\n    change mapCoefficients e.symm (mapCoefficients e (g.val (mapCoefficients e.symm (mapCoefficients e x)))) = g.val x\n    simp\n  right_inv\n    g := by\n    apply Atlas.Algebra.MultiplicativeLinearAut.ext\n    intro x\n    change mapCoefficients e (mapCoefficients e.symm (g.val (mapCoefficients e (mapCoefficients e.symm x)))) = g.val x\n    simp\n  map_mul' g\n    h := by\n    apply Atlas.Algebra.MultiplicativeLinearAut.ext\n    intro x\n    change\n      mapCoefficients e (g.val (h.val (mapCoefficients e.symm x))) =\n        mapCoefficients e (g.val (mapCoefficients e.symm (mapCoefficients e (h.val (mapCoefficients e.symm x)))))\n    simp`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe comparison intertwines the actual actions through coefficient transport. -/\n@[simp]\ntheorem fieldEquiv_action (e : F ≃+* K) (g : Model F) (x : Carrier F) :\n    (fieldEquiv e g).val (mapCoefficients e x) = mapCoefficients e (g.val x) :=\n  by\n  change mapCoefficients e (g.val (mapCoefficients e.symm (mapCoefficients e x))) = _\n  simp`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.G2`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/FieldTransport.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.G2.Basic transitive imports (legacy)",
+       "db73fe590486cdd5"],
+      ["Atlas.LinearGroups.G2.Basic:importAllArts", "8b0a82c3b514bd7a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/G2/FieldTransport.lean",
+   "495859a23bdf82ac"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.G2.FieldTransport", "a7004386412f3535"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "85dfe9b8fdff95c4"}

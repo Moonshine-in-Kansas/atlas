@@ -1,0 +1,85 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["d88a6ac28ba24de7.olean"],
+  "m": false,
+  "i": "7559cca4bbbf2f57.ilean",
+  "c": "b17adc375328d2d9.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.lean:8:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.lean:11:42: missing space in the source\n\nThis part of the code\n  '(n+2)) (hij'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.lean:11:55: missing space in the source\n\nThis part of the code\n  'i≠j) :'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.lean:22:10: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hij, Ne.symm hij]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.lean:22:27: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Pi.single_apply, Ne.symm hij]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.lean:25:12: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hij, Ne.symm hij]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.lean:26:12: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hki, hkj, Ne.symm hki, Ne.symm hkj]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.lean:26:34: This simp argument is unused:\n  hkj\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Pi.single_apply, hki, Ne.symm hki, Ne.symm hkj]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.lean:15:54: missing space in the source\n\nThis part of the code\n  '(n+2)) (hij'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.lean:15:67: missing space in the source\n\nThis part of the code\n  'i≠j) :'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.lean:28:55: missing space in the source\n\nThis part of the code\n  '(n+2) →'\nshould be written as\n  '(n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.lean:29:17: missing space in the source\n\nThis part of the code\n  '(n+2)) (hij'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.lean:29:30: missing space in the source\n\nThis part of the code\n  'i≠j) :'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.lean:56:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.Integral.MinusculeDCore transitive imports (legacy)",
+       "c0923b532ace16aa"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeDCore:importAllArts",
+       "483064f21517124c"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeDParity transitive imports (legacy)",
+       "121b131a9fa7cc85"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeDParity:importAllArts",
+       "1b63c42a993495be"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/MinusculeDOrbit.lean",
+   "51717eaac6437d07"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Integral.MinusculeDOrbit",
+   "e29c3ff68fef9e9b"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "ca7139c97f4b62a7"}

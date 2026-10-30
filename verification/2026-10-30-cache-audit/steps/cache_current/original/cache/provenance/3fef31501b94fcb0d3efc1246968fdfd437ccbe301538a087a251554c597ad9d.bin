@@ -1,0 +1,87 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["1e2bb3572e30b4b8.olean"],
+  "m": false,
+  "i": "3d719ee1cd67bd13.ilean",
+  "c": "0a4f9cfc1f312b0d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CommonPerpendicularCount.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CommonPerpendicularCount.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CommonPerpendicularCount.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CommonPerpendicularCount.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CommonPerpendicularCount.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_common_perpendicular_card :\n    Nat.card (CommonPerpendicularCrosses localReferenceCross referenceSecondCross) = 730 :=\n  by\n  change\n    Nat.card { c : MinimalCross // CrossOrthogonal localReferenceCross c ∧ CrossOrthogonal referenceSecondCross c } =\n      730\n  rw [crossPiece_condition_card, coordinate_common_perpendicular_card, four_common_perpendicular_card,\n    heavyCommonPerpendicularCrosses_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularCount.lean:8:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def commonPerpendicularTransport (g : gaussianLatticeGroup)\n    (x y : MinimalCross) : CommonPerpendicularCrosses x y ≃ CommonPerpendicularCrosses (g • x) (g • y) :=\n  Equiv.subtypeEquiv (MulAction.toPerm g)\n    (fun c => and_congr (crossOrthogonal_gaussian g x c).symm (crossOrthogonal_gaussian g y c).symm)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem common_perpendicular_card (x y : MinimalCross)\n    (hxy : CrossOrthogonal x y) : Nat.card (CommonPerpendicularCrosses x y) = 730 :=\n  by\n  let := rudvalis_generated_orthogonal_pairs_transitive\n  let a : OrthogonalPairs := ⟨(localReferenceCross, referenceSecondCross), reference_crosses_orthogonal⟩\n  let b : OrthogonalPairs := ⟨(x, y), hxy⟩\n  obtain ⟨g, hg⟩ := MulAction.exists_smul_eq generatedGaussianGroup a b\n  have hx : g.val • localReferenceCross = x := congrArg (fun z : OrthogonalPairs => z.val.1) hg\n  have hy : g.val • referenceSecondCross = y := congrArg (fun z : OrthogonalPairs => z.val.2) hg\n  rw [← hx, ← hy, ← Nat.card_congr (commonPerpendicularTransport g.val localReferenceCross referenceSecondCross)]\n  exact reference_common_perpendicular_card`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularCount.lean:20:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularCount.lean:25:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CommonPerpendicularCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FourCommonPerpendicular transitive imports (legacy)",
+       "6ac676cb08801728"],
+      ["Atlas.Rudvalis.FourCommonPerpendicular:importAllArts",
+       "1c5318d770ab6ea2"],
+      ["Atlas.Rudvalis.HeavyCommonPerpendicular transitive imports (legacy)",
+       "7abb3d4b18f6620f"],
+      ["Atlas.Rudvalis.HeavyCommonPerpendicular:importAllArts",
+       "e67591c575d8733e"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CommonPerpendicularCount.lean",
+   "1c10a378e25efdab"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CommonPerpendicularCount", "fb05c360bb6df0dc"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "368a614866fda6d1"}

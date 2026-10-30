@@ -1,0 +1,41 @@
+{
+  "id": "staged-F4IntegralBasisInjection",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.Comparison.F4.IntegralBasisInjection"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.readCoordinates_basis",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.IntegralBasisInjection"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-F4IntegralBasisInjection-integral-before-group-comparison",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.selectedWeightCompanion_F4_card",
+        "Atlas.F4.card_Model"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood",
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "F4Work.F4AlbertMatrixInterface",
+        "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

@@ -5,6 +5,7 @@ require 'digest'
 require 'zlib'
 require 'set'
 require_relative 'model_views'
+require_relative '../verification/release_evidence'
 ROOT=File.expand_path('..',__dir__)
 Dir.chdir(ROOT)
 mode=ARGV.fetch(0,'check')
@@ -27,6 +28,9 @@ overlay=load_json('catalogue/realizations.json')
 comparison_data=load_json('catalogue/comparisons.json')
 comparison_rows=comparison_data.fetch('entries')+comparison_data.fetch('supplements').flat_map { |s|s.fetch('entries') }
 model_views=AtlasModelViews::View.new(ROOT)
+current=load_json('verification/current.json')
+evidence_files=AtlasContracts::Index.new(ROOT)
+checkpoints=AtlasReleaseEvidence.checkpoints(evidence_files,current)
 model_views.render_diagrams(mode)
 diagrams={}
 entries.each do |e|
@@ -79,11 +83,12 @@ text<< <<~MD
 
   All six additional Chevalley constructions are displayed alongside the original
   A/B/C/D/F₄/G₂ models. [Explicit Lean certificates](catalogue/ISOMORPHISMS.md)
-  identify the registered A/B/C/D pairs. The G₂ and F₄ comparison scopes are stated
-  separately. The table counts and diagrams describe the original default models;
+  identify the registered model pairs on their stated domains. The table counts
+  and diagrams describe the original default models;
   multiple constructions do not increase the number of families.
 
 MD
+text<<"[Completed mathematical checkpoints](catalogue/CHECKPOINTS.md) record additional proved statements and their remaining limits, separately from the 33 completed entries.\n\n" unless checkpoints.empty?
 entries.each do |e|
   text<<"<a id=\"#{anchor(e)}\"></a>\n\n## #{label(e)}\n\n"
   text<<"Exceptions: #{e['exceptions']}\n\n" unless e.fetch('exceptions','').empty? || e['exceptions']==e['parameters']
@@ -109,33 +114,11 @@ cmp=model_views.comparison_interfaces
 out['catalogue/COMPARISONS.md']=cmp
 
 # Recover verbatim compiled principal signatures, never synthesize them from source.
-wanted=(entries.flat_map { |e|%w[order simple].map { |r|e.dig('roles',r,'declaration') } }+model_views.extra_statement_names+model_views.supplemental_statement_names).to_set
-statements={}
-current=load_json('verification/current.json')
+wanted=(entries.flat_map { |e|%w[order simple].map { |r|e.dig('roles',r,'declaration') } }+model_views.extra_statement_names+model_views.supplemental_statement_names+
+  checkpoints.flat_map { |e|e.fetch('selected_refs').map { |r|r.fetch('declaration') } }).to_set
 audit=current.fetch('supplemental_cache_audit')
-bundle_path=audit.fetch('directory')+'/BUNDLE.json'
-raise 'Changed compiled-statement bundle' unless Digest::SHA256.file(bundle_path).hexdigest==audit.fetch('bundle_sha256')
-log_name='full-dependency-extraction.log.gz'
-logs=[audit.fetch('directory')+'/'+log_name]
-raise 'Changed compiled-statement log' unless Digest::SHA256.file(logs.first).hexdigest==load_json(bundle_path).fetch('files').fetch(log_name)
-logs.each do |p|
-  io=p.end_with?('.gz') ? Zlib::GzipReader.open(p) : File.open(p)
-  name=nil;lines=[]
-  flush=lambda { statements[name]||={text:lines.join,path:p} if name && !lines.empty? }
-  io.each_line do |l|
-    if l.match?(/\A(?:STATEMENT|DEFINITION|SHARED EXTRACTION|AXIOMS)\b/)
-      flush.call;lines=[]
-      n=l[/\ASTATEMENT (\S+) SOURCE /,1]
-      name=wanted.include?(n) ? n : nil
-    elsif name
-      lines<<l
-    end
-  end
-  flush.call;io.close
-end
-missing=wanted-statements.keys.to_set
-raise "Missing compiled signatures: #{missing.to_a.join(', ')}" unless missing.empty?
-sig="# Principal compiled theorem statements\n\nThese signatures are copied verbatim from the source-bound 26 October compiled\naudit, with implicit parameters and instances visible. See [verification status](AUDIT.md)\nfor the distinction between this cached-artifact audit and a fresh proof rebuild.\n\n"
+statements=AtlasReleaseEvidence.statements(evidence_files,current,wanted)
+sig="# Principal compiled theorem statements\n\nThese signatures are copied verbatim from the current source-bound compiled\naudit scopes, with implicit parameters and instances visible. See [verification status](AUDIT.md)\nfor the distinction between this cached-artifact audit and a fresh proof rebuild.\n\n"
 entries.each do |e|
   sig<<"<a id=\"#{anchor(e)}\"></a>\n\n## #{label(e)}\n\n"
   sig<<"Primary construction: #{model_views.models.fetch(e['id']).first['label']}.\n\n"
@@ -164,6 +147,20 @@ entries.each do |e|
 end
 out['THEOREM_STATEMENTS.md']=sig
 out['catalogue/ISOMORPHISMS.md']=model_views.isomorphism_page(statements)
+unless checkpoints.empty?
+  page=AtlasReleaseEvidence.checkpoint_page(evidence_files,current,statements)
+  before="Each signature\nis copied from the exact-export full dependency evidence in the current index."
+  after="Each statement links to its Lean source, exact compiled signature and full\ndependency audit. The complete signatures remain in the linked evidence."
+  raise 'Unexpected checkpoint introduction' unless page.sub!(before,after)
+  checkpoints.each do |entry|
+    entry.fetch('selected_refs').each do |ref|
+      signature=statements.fetch(ref.fetch('declaration')).fetch(:text).rstrip
+      raise 'Missing inline checkpoint signature' unless page.sub!("\n```lean\n#{signature}\n```\n",'')
+    end
+  end
+  raise 'Unexpected inline checkpoint signature remains' if page.include?('```lean')
+  out['catalogue/CHECKPOINTS.md']=page
+end
 out['catalogue/current-verification.json']=JSON.pretty_generate({
   format:2,scope:'Current-source-bound compiled declaration audit; not a fresh full rebuild or independent replay',
   registry_sha256:Digest::SHA256.file('catalogue/catalogue.json').hexdigest,
@@ -174,7 +171,9 @@ out['catalogue/current-verification.json']=JSON.pretty_generate({
   completed_families:16,completed_sporadics:16,completed_exceptional:1,
   displayed_models:model_views.models.values.sum(&:size),multiple_model_entries:model_views.multiple.keys,
   construction_isomorphism_certificates:model_views.comparisons.map { |c|c.dig('witness','declaration') },
-  checked_references:load_json('verification/roots.json').size,compiled_audit:audit,
+  checked_references:load_json('verification/roots.json').size,compiled_audit:current.fetch('supplemental_cache_audit'),
+  completed_checkpoints:checkpoints.map { |e|e.fetch('id') },
+  completed_checkpoints_sha256:current['completed_checkpoints'] && evidence_files.sha(current['completed_checkpoints']),
   prior_catalogue_check:'verification/catalogue/2026-10-19/original-current-verification.json',
   working_publication:'owner-authorized editable Version 1.2 on main',
   frozen_release_acceptance:'pending; see verification/current.json and AUDIT.md'

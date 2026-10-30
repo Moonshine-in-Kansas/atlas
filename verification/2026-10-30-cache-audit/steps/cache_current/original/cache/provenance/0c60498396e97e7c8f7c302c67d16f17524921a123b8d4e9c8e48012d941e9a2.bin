@@ -1,0 +1,312 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["1114a2aaa7da6309.olean"],
+  "m": false,
+  "i": "94c8fd367b9b0efd.ilean",
+  "c": "e380a46cd95d7b1b.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/G2/BlockArithmetic.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/BlockArithmetic.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/BlockArithmetic.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/BlockArithmetic.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/BlockArithmetic.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:6:12: missing space in the source\n\nThis part of the code\n  'k*d < n)'\nshould be written as\n  'k * d'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:6:33: missing space in the source\n\nThis part of the code\n  '(k+1)*d)'\nshould be written as\n  '(k + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:6:36: missing space in the source\n\nThis part of the code\n  '(k+1)*d) :'\nshould be written as\n  '1) * d)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:39:30: missing space in the source\n\nThis part of the code\n  '2*s) :'\nshould be written as\n  '2 * s)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `hdiv`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.reduceFinMk, Finset.sum_mk, Multiset.map_coe, List.map_cons,\n    List.map_nil, Multiset.sum_coe, List.sum_cons, List.sum_nil, add_zero] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:60:12: `first\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); tauto)\n| (repeat' apply Or.inr; ring)`\nuses `hdiv`, which was modified by the flexible tactic `simp` on line 59!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.reduceFinMk, Finset.sum_mk, Multiset.map_coe, List.map_cons,\n    List.map_nil, Multiset.sum_coe, List.sum_cons, List.sum_nil, add_zero] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:60:12: `first\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); tauto)\n| (repeat' apply Or.inr; ring)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 59!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Finset.sum_mk, Multiset.map_coe,\n    List.map_cons, List.map_nil, Multiset.sum_coe, List.sum_cons, List.sum_nil, add_zero] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:60:12: `first\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); tauto)\n| (repeat' apply Or.inr; ring)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 59!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `hdiv`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Finset.sum_mk, Multiset.map_coe,\n    List.map_cons, List.map_nil, Multiset.sum_coe, List.sum_cons, List.sum_nil, add_zero] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:60:12: `first\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); tauto)\n| (repeat' apply Or.inr; ring)`\nuses `hdiv`, which was modified by the flexible tactic `simp` on line 59!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `hdiv`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.reduceFinMk, Finset.sum_mk, Multiset.map_coe, List.map_cons,\n    List.map_nil, Multiset.sum_coe, List.sum_cons, List.sum_nil, add_zero] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:60:12: `first\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); tauto)\n| (repeat' apply Or.inr; ring)`\nuses `hdiv`, which was modified by the flexible tactic `simp` on line 59!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.reduceFinMk, Finset.sum_mk, Multiset.map_coe, List.map_cons,\n    List.map_nil, Multiset.sum_coe, List.sum_cons, List.sum_nil, add_zero] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:60:12: `first\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); tauto)\n| (repeat' apply Or.inr; ring)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 59!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `hdiv`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Finset.sum_mk, Multiset.map_coe,\n    List.map_cons, List.map_nil, Multiset.sum_coe, List.sum_cons, List.sum_nil, add_zero] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:60:12: `first\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); tauto)\n| (repeat' apply Or.inr; ring)`\nuses `hdiv`, which was modified by the flexible tactic `simp` on line 59!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Finset.sum_mk, Multiset.map_coe,\n    List.map_cons, List.map_nil, Multiset.sum_coe, List.sum_cons, List.sum_nil, add_zero] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:60:12: `first\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); tauto)\n| (repeat' apply Or.inr; ring)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 59!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.reduceFinMk, Finset.sum_mk, Multiset.map_coe, List.map_cons,\n    List.map_nil, Multiset.sum_coe, List.sum_cons, List.sum_nil, add_zero] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:60:12: `first\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); tauto)\n| (repeat' apply Or.inr; ring)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 59!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `hdiv`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.reduceFinMk, Finset.sum_mk, Multiset.map_coe, List.map_cons,\n    List.map_nil, Multiset.sum_coe, List.sum_cons, List.sum_nil, add_zero] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:60:12: `first\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); tauto)\n| (repeat' apply Or.inr; ring)`\nuses `hdiv`, which was modified by the flexible tactic `simp` on line 59!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Finset.sum_mk, Multiset.map_coe,\n    List.map_cons, List.map_nil, Multiset.sum_coe, List.sum_cons, List.sum_nil, add_zero] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:60:12: `first\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); tauto)\n| (repeat' apply Or.inr; ring)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 59!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `hdiv`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:59:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Finset.sum_mk, Multiset.map_coe,\n    List.map_cons, List.map_nil, Multiset.sum_coe, List.sum_cons, List.sum_nil, add_zero] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:60:12: `first\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); tauto)\n| (repeat' apply Or.inr; ring)`\nuses `hdiv`, which was modified by the flexible tactic `simp` on line 59!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:64:6: Unused tactic linter: `(repeat' apply Or.inr; ring)` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:51:48: missing space in the source\n\nThis part of the code\n  'q^5+q^4+q^3+q^2+q+1) :'\nshould be written as\n  'q ^ 5'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:64:6: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Multiset.coe_singleton] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:80:12: `first\n| decide\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); exfalso; nlinarith)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 79!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `hdiv`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Multiset.coe_singleton] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:80:12: `first\n| decide\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); exfalso; nlinarith)`\nuses `hdiv`, which was modified by the flexible tactic `simp` on line 79!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:80:12: `first\n| decide\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); exfalso; nlinarith)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 79!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `hdiv`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:80:12: `first\n| decide\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); exfalso; nlinarith)`\nuses `hdiv`, which was modified by the flexible tactic `simp` on line 79!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `hdiv`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.reduceFinMk] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:80:12: `first\n| decide\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); exfalso; nlinarith)`\nuses `hdiv`, which was modified by the flexible tactic `simp` on line 79!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.reduceFinMk] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:80:12: `first\n| decide\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); exfalso; nlinarith)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 79!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one, Fin.reduceFinMk] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:80:12: `first\n| decide\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); exfalso; nlinarith)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 79!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `hdiv`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one, Fin.reduceFinMk] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:80:12: `first\n| decide\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); exfalso; nlinarith)`\nuses `hdiv`, which was modified by the flexible tactic `simp` on line 79!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `hdiv`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.reduceFinMk] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:80:12: `first\n| decide\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); exfalso; nlinarith)`\nuses `hdiv`, which was modified by the flexible tactic `simp` on line 79!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.reduceFinMk] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:80:12: `first\n| decide\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); exfalso; nlinarith)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 79!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `hdiv`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one, Fin.reduceFinMk] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:80:12: `first\n| decide\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); exfalso; nlinarith)`\nuses `hdiv`, which was modified by the flexible tactic `simp` on line 79!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one, Fin.reduceFinMk] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:80:12: `first\n| decide\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); exfalso; nlinarith)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 79!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.reduceFinMk] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:80:12: `first\n| decide\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); exfalso; nlinarith)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 79!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `hdiv`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.reduceFinMk] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:80:12: `first\n| decide\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); exfalso; nlinarith)`\nuses `hdiv`, which was modified by the flexible tactic `simp` on line 79!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one, Fin.reduceFinMk] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:80:12: `first\n| decide\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); exfalso; nlinarith)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 79!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: `simp [singularSubdegree] at hzero hdiv ⊢` is a flexible tactic modifying `hdiv`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:79:18: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue, Fin.mk_one, Fin.reduceFinMk] at hzero hdiv ⊢",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:80:12: `first\n| decide\n| exact False.elim (hm hdiv)\n| exact False.elim (ht (by simpa [Nat.add_assoc] using hdiv))\n| (have h := divisor_eq_of_large hdiv (by nlinarith) (by nlinarith); exfalso; nlinarith)`\nuses `hdiv`, which was modified by the flexible tactic `simp` on line 79!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/G2/BlockArithmetic.lean:72:48: missing space in the source\n\nThis part of the code\n  'q^5+q^4+q^3+q^2+q+1) :'\nshould be written as\n  'q ^ 5'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Mathlib.Tactic transitive imports (legacy)", "ec156eb4c1db663c"],
+      ["Mathlib.Tactic:importAllArts", "49193de2eba247db"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/G2/BlockArithmetic.lean",
+   "ec383c13d2c9f869"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.G2.BlockArithmetic", "41b8f2446b9d431d"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "6b85571ede2afc1e"}

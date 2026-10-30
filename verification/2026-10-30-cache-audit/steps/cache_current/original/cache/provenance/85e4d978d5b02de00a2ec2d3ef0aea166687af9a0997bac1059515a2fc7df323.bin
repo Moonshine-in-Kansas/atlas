@@ -1,0 +1,56 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["3b5d8a76e381120d.olean"],
+  "m": false,
+  "i": "4ec1a30044f1b87b.ilean",
+  "c": "f67881862c4ec724.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/SecondFrameGlueProjection.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/SecondFrameGlueProjection.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/SecondFrameGlueProjection.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/SecondFrameGlueProjection.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/SecondFrameGlueProjection.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/SecondFrameGlueProjection.lean:15:56: missing space in the source\n\nThis part of the code\n  'FrameGlueCoordinate→ℚ) (i'\nshould be written as\n  'FrameGlueCoordinate → ℚ)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SecondFrameGlueProjection.lean:47:62: missing space in the source\n\nThis part of the code\n  'FrameGlueCoordinate→ℚ) :'\nshould be written as\n  'FrameGlueCoordinate → ℚ)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SecondFrameGlueProjection.lean:75:19: missing space in the source\n\nThis part of the code\n  '∀w : RationalSpace,MemSecondFrameGlue'\nshould be written as\n  '∀ w :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SecondFrameGlueProjection.lean:96:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SecondFrameGlueProjection.lean:91:19: missing space in the source\n\nThis part of the code\n  '∀w : RationalSpace,MemSecondFrameGlue'\nshould be written as\n  '∀ w :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.SecondFrameGlueDual transitive imports (legacy)",
+       "51e94f8f2d0d9df2"],
+      ["Atlas.Rudvalis.SecondFrameGlueDual:importAllArts", "2114cc002fabc5d0"],
+      ["Atlas.Rudvalis.SecondFrameProjection transitive imports (legacy)",
+       "180c0bc41e494cfd"],
+      ["Atlas.Rudvalis.SecondFrameProjection:importAllArts",
+       "bc6e9c0845fc23a2"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/SecondFrameGlueProjection.lean",
+   "add57701b34fb34c"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.SecondFrameGlueProjection", "59e529a6ba95eab8"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "4af02bc7c14c9466"}

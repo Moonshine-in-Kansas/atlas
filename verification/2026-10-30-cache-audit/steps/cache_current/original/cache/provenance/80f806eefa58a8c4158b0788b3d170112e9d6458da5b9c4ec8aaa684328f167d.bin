@@ -1,0 +1,70 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["f44c78f92f56a755.olean"],
+  "m": false,
+  "i": "ff077fa5a4ce693c.ilean",
+  "c": "6cc1a86afb61f5bf.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Orthogonal/OddSiegelCoordinates.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Orthogonal/OddSiegelCoordinates.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Orthogonal/OddSiegelCoordinates.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Orthogonal/OddSiegelCoordinates.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Orthogonal/OddSiegelCoordinates.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/OddSiegelCoordinates.lean:15:39: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [-QuadraticMap.polarBilin_apply_apply, polarB_apply, e, f, polarD_apply, Pi.single_apply, Ne.symm hij]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/OddSiegelCoordinates.lean:41:45: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/OddSiegelCoordinates.lean:59:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/OddSiegelCoordinates.lean:60:9: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/OddSiegelCoordinates.lean:77:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/OddSiegelCoordinates.lean:78:9: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/OddSiegelCoordinates.lean:105:29: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [oddShortUpper_apply, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/OddSiegelCoordinates.lean:114:29: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [oddShortLower_apply, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/OddSiegelCoordinates.lean:114:46: This simp argument is unused:\n  eq_comm\n\nHint: Omit it from the simp argument list.\n  [apply] simp [oddShortLower_apply, Pi.single_apply]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Orthogonal.ElementaryNormal transitive imports (legacy)",
+       "a694589f6a01b6fa"],
+      ["Atlas.LinearGroups.Orthogonal.ElementaryNormal:importAllArts",
+       "bfb68784c71096eb"],
+      ["Atlas.LinearGroups.Orthogonal.Radical transitive imports (legacy)",
+       "9c7ed7d84d251cf5"],
+      ["Atlas.LinearGroups.Orthogonal.Radical:importAllArts",
+       "98aee150974673aa"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Orthogonal/OddSiegelCoordinates.lean",
+   "b5607e2013a118d0"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Orthogonal.OddSiegelCoordinates",
+   "698614b850e4948e"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "05fdd8d92c6e5abb"}

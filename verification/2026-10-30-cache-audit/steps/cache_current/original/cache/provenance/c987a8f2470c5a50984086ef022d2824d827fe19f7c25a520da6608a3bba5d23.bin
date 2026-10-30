@@ -1,0 +1,124 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["33d57c0cfe0ccdae.olean"],
+  "m": false,
+  "i": "583e658895fd77df.ilean",
+  "c": "025062bdf36a9196.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateCommonPerpendicular.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateCommonPerpendicular.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateCommonPerpendicular.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateCommonPerpendicular.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateCommonPerpendicular.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable abbrev referenceSecondCross : MinimalCross :=\n  coordinateCross (localFusionSourceCoordinate 1)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceSecondCoordinate_eq :\n    localFusionSourceCoordinate 1 = (rowLabel 0, binaryLabel 2) := by decide +kernel`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:9:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceSecondCross_eq :\n    referenceSecondCross = coordinateCross (rowLabel 0, binaryLabel 2) :=\n  congrArg coordinateCross referenceSecondCoordinate_eq`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `abbrev CommonPerpendicularCrosses (x y : MinimalCross) :=\n  { c : MinimalCross // CrossOrthogonal x c ∧ CrossOrthogonal y c }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_crosses_ne : localReferenceCross ≠ referenceSecondCross :=\n  by\n  intro h\n  rcases (coordinateCross_eq_iff _ _).mp h with h | h\n  · exact (by decide +kernel : localFusionSourceCoordinate 0 ≠ localFusionSourceCoordinate 1) h\n  · rw [codeI_coordinate, localReferenceCoordinate_eq, referenceSecondCoordinate_eq] at h\n    exact (by decide +kernel : (rowLabel 0, (0 : E) + (rowLabel 0).val) ≠ (rowLabel 0, binaryLabel 2)) h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_crosses_orthogonal :\n    CrossOrthogonal localReferenceCross referenceSecondCross :=\n  (coordinateFrame_orthogonal_iff _ _ (coordinateCross_mem _) (coordinateCross_mem _)).mpr reference_crosses_ne`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:26:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateFrame_common_orthogonal_card (x y : coordinateFrame)\n    (hxy : x ≠ y) :\n    Nat.card { c : coordinateFrame // CrossOrthogonal x.val c.val ∧ CrossOrthogonal y.val c.val } = 26 := by\n  classical\n  have hxy' : x.val ≠ y.val := fun h => hxy (Subtype.ext h)\n  let e :\n    { c : coordinateFrame // CrossOrthogonal x.val c.val ∧ CrossOrthogonal y.val c.val } ≃\n      ↥((coordinateFrame \\ { x.val }) \\ { y.val }) :=\n    { toFun := fun c =>\n        ⟨c.val.val, ⟨c.val.prop, by intro he; exact crossOrthogonal_irrefl _ (he ▸ c.prop.1)⟩, by intro he;\n          exact crossOrthogonal_irrefl _ (he ▸ c.prop.2)⟩\n      invFun := fun c =>\n        ⟨⟨c.val, c.prop.1.1⟩, (coordinateFrame_orthogonal_iff _ _ x.prop c.prop.1.1).mpr (Ne.symm c.prop.1.2),\n          (coordinateFrame_orthogonal_iff _ _ y.prop c.prop.1.1).mpr (Ne.symm c.prop.2)⟩\n      left_inv := fun _ => rfl\n      right_inv := fun _ => rfl }\n  rw [Nat.card_congr e]\n  change ((coordinateFrame \\ { x.val }) \\ { y.val }).ncard = 26\n  rw [Set.ncard_sdiff_singleton_of_mem (show y.val ∈ coordinateFrame \\ { x.val } from ⟨y.prop, Ne.symm hxy'⟩),\n    Set.ncard_sdiff_singleton_of_mem x.prop]\n  change Nat.card coordinateFrame - 1 - 1 = 26\n  rw [coordinateFrame_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:29:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:44:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:28:79: missing space in the source\n\nThis part of the code\n  'x≠y) :'\nshould be written as\n  'x ≠ y)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinate_common_perpendicular_card :\n    Nat.card\n        { c : CoordinateCrosses //\n          CrossOrthogonal localReferenceCross (shellPieceCrossMap coordinateShellPiece c) ∧\n            CrossOrthogonal referenceSecondCross (shellPieceCrossMap coordinateShellPiece c) } =\n      26 :=\n  by\n  let e : CoordinateCrosses ≃ coordinateFrame := Equiv.ofInjective _ (shellPieceCrossMap_injective coordinateShellPiece)\n  rw [Nat.card_congr\n      (Equiv.subtypeEquiv e (fun _ => Iff.rfl) (p := fun c =>\n        CrossOrthogonal localReferenceCross (shellPieceCrossMap coordinateShellPiece c) ∧\n          CrossOrthogonal referenceSecondCross (shellPieceCrossMap coordinateShellPiece c))\n        (q := fun c => CrossOrthogonal localReferenceCross c.val ∧ CrossOrthogonal referenceSecondCross c.val))]\n  exact\n    coordinateFrame_common_orthogonal_card ⟨localReferenceCross, coordinateCross_mem _⟩\n      ⟨referenceSecondCross, coordinateCross_mem _⟩ (fun h => reference_crosses_ne (congrArg Subtype.val h))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:58:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCommonPerpendicular.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.LocalTransitivity transitive imports (legacy)",
+       "f1f6d4efc29fc69f"],
+      ["Atlas.Rudvalis.LocalTransitivity:importAllArts", "2970be4858e65974"],
+      ["Mathlib.Data.Set.Card transitive imports (legacy)", "f518aecfeca8ad54"],
+      ["Mathlib.Data.Set.Card:importAllArts", "172d844ffcaeaaf1"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateCommonPerpendicular.lean",
+   "4235b9fe7f530b20"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateCommonPerpendicular",
+   "56a7e3b5ae22ad91"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "151dcbc0a324cb3f"}

@@ -1,0 +1,63 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["afd55455058569a5.olean"],
+  "m": false,
+  "i": "b6c403f641f6f2d9.ilean",
+  "c": "c7a94acc60452da8.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/G2/BinaryExceptionFromCharacter.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/BinaryExceptionFromCharacter.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/BinaryExceptionFromCharacter.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/BinaryExceptionFromCharacter.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/BinaryExceptionFromCharacter.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryExceptionFromCharacter.lean:7:1: 'theorem H_le_ker_of_long_root (φ : Model K →* Units ℤ) (hA : ∀ a : K, φ (rootA a) = 1) : H ≤ φ.ker :=\n  by\n  apply Subgroup.normalClosure_le_normal\n  rintro g ⟨p, rfl⟩\n  change φ (rootA p.toAdd.1 * rootB p.toAdd.2) = 1\n  rw [map_mul, hA, one_mul]\n  have h := congrArg φ (weylR_rootA p.toAdd.2)\n  simpa only [map_mul, map_inv, hA, mul_one, mul_inv_cancel] using\n    h.symm' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryExceptionFromCharacter.lean:16:1: 'theorem H_proper_of_character (φ : Model K →* Units ℤ) (hA : ∀ a : K, φ (rootA a) = 1) (hF : φ (rootF 1) = -1) :\n    H ≠ ⊤ := by\n  intro he\n  have hh := H_le_ker_of_long_root φ hA\n  have hm := hh (he ▸ Subgroup.mem_top (rootF 1))\n  change φ (rootF 1) = 1 at hm\n  rw [hF] at hm\n  norm_num at hm' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryExceptionFromCharacter.lean:25:1: 'theorem index_two_of_character (φ : Model K →* Units ℤ) (hA : ∀ a : K, φ (rootA a) = 1) (hF : φ (rootF 1) = -1) :\n    H.index = 2 := by\n  have hlt := H.one_lt_index_of_ne_top (H_proper_of_character φ hA hF)\n  have hle := index_le_two\n  omega' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryExceptionFromCharacter.lean:31:1: 'theorem order_of_character (φ : Model K →* Units ℤ) (hA : ∀ a : K, φ (rootA a) = 1) (hF : φ (rootF 1) = -1) :\n    Nat.card H = 6048 := by\n  have hc := H.card_mul_index\n  rw [index_two_of_character φ hA hF, OrderChecks.binary_order] at hc\n  omega' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryExceptionFromCharacter.lean:40:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryExceptionFromCharacter.lean:37:1: 'theorem not_simple_of_character (φ : Model K →* Units ℤ) (hA : ∀ a : K, φ (rootA a) = 1) (hF : φ (rootF 1) = -1) :\n    ¬IsSimpleGroup (Model K) := by\n  intro hs\n  letI := hs\n  rcases (inferInstance : H.Normal).eq_bot_or_eq_top with h | h\n  · exact H_ne_bot h\n  ·\n    exact\n      H_proper_of_character φ hA hF h' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryExceptionFromCharacter.lean:45:1: 'theorem ker_eq_H_of_character (φ : Model K →* Units ℤ) (hA : ∀ a : K, φ (rootA a) = 1) (hF : φ (rootF 1) = -1) :\n    φ.ker = H :=\n  by\n  have hproper : φ.ker ≠ ⊤ := by\n    intro h\n    have hf : rootF 1 ∈ φ.ker := h ▸ Subgroup.mem_top _\n    change φ (rootF 1) = 1 at hf\n    rw [hF] at hf\n    norm_num at hf\n  have hi := φ.ker.one_lt_index_of_ne_top hproper\n  have hc := φ.ker.card_mul_index\n  rw [OrderChecks.binary_order] at hc\n  have hcard : Nat.card φ.ker ≤ 6048 := by nlinarith\n  symm\n  apply Subgroup.eq_of_le_of_card_ge (H_le_ker_of_long_root φ hA)\n  rw [order_of_character φ hA hF]\n  exact hcard' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.G2.BinaryIndex transitive imports (legacy)",
+       "9b6ec2b242ce2065"],
+      ["Atlas.LinearGroups.G2.BinaryIndex:importAllArts", "043281dbe68ec95d"],
+      ["Atlas.LinearGroups.G2.OrderChecks transitive imports (legacy)",
+       "90090bcca2cb070d"],
+      ["Atlas.LinearGroups.G2.OrderChecks:importAllArts",
+       "88cd877579f22b3e"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/G2/BinaryExceptionFromCharacter.lean",
+   "0e3c4cf12f499b8a"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.G2.BinaryExceptionFromCharacter",
+   "f2c8983bbcd026a0"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "cb27e7a6fe354667"}

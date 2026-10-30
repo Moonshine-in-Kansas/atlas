@@ -1,0 +1,101 @@
+{
+  "id": "staged-FoldedWeylRepresentatives",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.FoldedWeylRepresentatives"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.reflect_simpleRoot_coordinates",
+      "kind": "theorem",
+      "module": "FamilyWork.FoldedWeylRepresentatives"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.CompanionNormalizer",
+      "kind": "definition",
+      "module": "FamilyWork.FoldedWeylRepresentatives"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionNormalizerRootAction",
+      "kind": "definition",
+      "module": "FamilyWork.FoldedWeylRepresentatives"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.latticeSimpleWeylInN",
+      "kind": "definition",
+      "module": "FamilyWork.FoldedWeylRepresentatives"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.latticeSimpleWeylInN_val",
+      "kind": "theorem",
+      "module": "FamilyWork.FoldedWeylRepresentatives"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.latticeSimpleWeylInN_rootAction",
+      "kind": "theorem",
+      "module": "FamilyWork.FoldedWeylRepresentatives"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.foldedWeylInN",
+      "kind": "definition",
+      "module": "FamilyWork.FoldedWeylRepresentatives"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.foldedWeylInN_rootAction",
+      "kind": "theorem",
+      "module": "FamilyWork.FoldedWeylRepresentatives"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.foldedWeylWordInN",
+      "kind": "definition",
+      "module": "FamilyWork.FoldedWeylRepresentatives"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.foldedWeylWordInN_rootAction",
+      "kind": "theorem",
+      "module": "FamilyWork.FoldedWeylRepresentatives"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.foldedWeylWordInN_representative",
+      "kind": "theorem",
+      "module": "FamilyWork.FoldedWeylRepresentatives"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.foldedWeylInN_fixed",
+      "kind": "theorem",
+      "module": "FamilyWork.FoldedWeylRepresentatives"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.foldedWeylWordInN_fixed",
+      "kind": "theorem",
+      "module": "FamilyWork.FoldedWeylRepresentatives"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.exists_fixed_normalizer_root_representative",
+      "kind": "theorem",
+      "module": "FamilyWork.FoldedWeylRepresentatives"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-FoldedWeylRepresentatives-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ]
+}

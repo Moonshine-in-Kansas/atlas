@@ -20,10 +20,11 @@ git config core.hooksPath verification/hooks
 ```
 
 Refresh generates the catalogue pages, 66 primary and eight additional-model
-order/simplicity statements, two uniform-range supplements, four compiled
-construction-isomorphism certificates, Comparator results, the YAML index,
-AUDIT.md and complete manifests. Preparation validation checks source and pin
-hashes, all 1,207 audit roots, immutable checker bundles, 33 diagram measurements,
+order/simplicity statements, two uniform-range supplements, six compiled
+construction-isomorphism certificates, supplementary mathematical checkpoints,
+Comparator results, the YAML index, AUDIT.md and complete manifests. Preparation
+validation checks source and pin hashes, all 1,313 public audit roots,
+immutable checker bundles, 33 diagram measurements,
 reader links and every distributed file. These commands run no proof checker.
 
 `check-working` also validates the owner-authorized publication scope in
@@ -116,3 +117,85 @@ Construction jobs and internal progress notes are excluded. Preserve Version 1.0
 immutable tag, release assets and original public history through every update.
 The website root selects Version 1.2. Separate `v1.0/` and `v1.2/` views coexist;
 old unversioned diagram URLs continue to show Version 1.0.
+
+## Source-bound mathematical additions
+
+A source update retains the 33 catalogue defaults, all 45 dated existence and
+comparison contracts (42 passes, three open), the original checker bundles and
+the immutable Version 1.0 baseline. The dated research note is historical;
+when registered, current supplementary results have a separate generated index
+at `catalogue/CHECKPOINTS.md`.
+Checkpoint completion does not assert completion of its containing family.
+
+The optional `completed_checkpoints` field in `verification/current.json` names
+`catalogue/checkpoints.json`. Its registry uses `schema_version: 1`,
+`kind: supplementary-mathematical-results`, a bound `as_of` date, entries and an
+evidence map. Entries have an id, title, classification, `status: verified-checkpoint`,
+parameter domain, proved scope, unproved conclusions and `selected_refs` with
+concrete declaration/source/module/kind/evidence references. Pending proposals
+are not accepted as verified entries. Evidence binds the actual full result,
+manifest, source map and compiled statement output, with independent replay
+explicitly separate and unclaimed for this update.
+The public references join the audit roots; `catalogue/manage.rb` links each
+checkpoint to its verbatim compiled type, normal proof receipts and full policy audits.
+Detailed helper targets and policies belong under `verification/`.
+
+`source_update` identifies byte-preserved copies of the published `d2dca87`
+current index and release manifest, the owner's update instruction and a separately
+bound `proof_evidence` bundle. `ADDITIONS.json` in that bundle selects original
+normal proof records covering every new Lean file and full audit scopes covering
+every new public reference. Each scope retains its original checkpoint, result,
+process receipt, log, declarations and full type/value dependency graph. Missing,
+stopped, stale, mismatched or incomplete evidence is refused. The unchanged
+historical results are never rewritten to refer to new sources.
+
+An additions bundle also binds a complete required-policy inventory. Every
+successor policy and every original source-transported policy must be applied
+separately with its original target selection and manifest hash. Per-scope
+policy outcomes must cover that inventory exactly. Full extractions can be
+individual or shared batches: the latter print the complete union of types and
+definitions once, with scoped receipts linking the original common process and
+an exact dependency-closure slice. The gate recomputes each slice and all policy
+outcomes; shared execution cannot drop an original scope or broaden its roots.
+Graphs are loaded one extraction at a time. A missing required-policy entry
+cannot be inferred from a graph: the parent must freeze the complete inventory
+from the canonical lane handoffs before forming batches.
+
+The four-step supplemental cache-audit schema remains supported for a single
+whole-root run. For a source update its before/after source maps, exact cache
+source map, portable before/after cache artifact inventories and original process
+logs are required. Alternatively a format-2 supplemental pointer selects
+`CACHE_AUDIT.json` with the same cache and two import-root checks followed by a
+complete union of full audit scopes. Every public root must be covered; overlapping
+graphs are counted as node occurrences, not unique dependency nodes. Both routes
+retain `fresh_project_rebuild: false` and `independent_replay: false` and leave all
+strict frozen-release requirements in force. The additions bundle is required
+with either route. The publication bindings also cover all three registries,
+the optional checkpoint index, the previous index/manifest and the additions bundle.
+
+For a portable full checkpoint replay, first prepare and validate the pinned
+compiled cache and retain the separate normal source proof receipts. The runner
+requires the coordinator's **existing shared lease**; every verification driver
+on the host must use that same lease. Then, from the candidate root:
+
+```sh
+ATLAS_VERIFICATION_LEASE=/absolute/path/to/existing/shared-lease \
+  LEAN_NUM_THREADS=2 LAKE=lake \
+  ruby verification/replay_checkpoint.rb \
+  verification/checkpoints/CHECKPOINT.json /absolute/path/to/NEW_OUTPUT_DIRECTORY
+```
+
+The runner uses the existing extractor with full mode and definition bodies,
+the supplied canonical targets and all boundary policies. It checks pinned Lean
+and package revisions, requires local nonsymlinked project cache files, records
+original process/log and before/after input bindings, and preserves failed attempts.
+It does not build missing sources, download dependencies, replace normal source
+checks or create independent replay acceptance. Its Linux memory guard enforces
+8704 MiB Lean allocation, 9 GiB aggregate RSS, combined owned RSS plus swap below
+two-thirds of physical RAM, at least 1 GiB actual available RAM and at most four
+compute processes. The serial lease is mandatory, not an optional optimization.
+
+The source-only implementation and its synthetic tests do not themselves certify
+the runner on this host. Actual coordinator runs, logs, memory behavior and
+mathematical scope require review before any new evidence is accepted. Evidence
+hashes establish applicability, not execution or authorization attestations.

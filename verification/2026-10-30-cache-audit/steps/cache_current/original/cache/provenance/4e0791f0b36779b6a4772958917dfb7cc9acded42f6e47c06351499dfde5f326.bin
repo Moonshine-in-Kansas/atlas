@@ -1,0 +1,91 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["a90a34b2f2edb25d.olean"],
+  "m": false,
+  "i": "c2509ad82026620e.ilean",
+  "c": "b2340ad1264a82ba.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Adjoint.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Adjoint.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Adjoint.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Adjoint.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Adjoint.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Adjoint.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Adjoint.lean:29:1: 'theorem raising_mem_adjoint (i : b.support) (t : R) : raisingRootElement P b R i t ∈ adjointSubgroup P b R :=\n  Subgroup.subset_closure\n    (Or.inl ⟨i, t, rfl⟩)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Adjoint.lean:33:1: 'theorem lowering_mem_adjoint (i : b.support) (t : R) : loweringRootElement P b R i t ∈ adjointSubgroup P b R :=\n  Subgroup.subset_closure\n    (Or.inr ⟨i, t, rfl⟩)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Adjoint.lean:45:1: 'theorem adjointX_add (i : b.support) (s t : R) : adjointX P b R i (s + t) = adjointX P b R i s * adjointX P b R i t :=\n  by\n  apply Subtype.ext\n  exact\n    Units.ext\n      (raisingExponential_add P b R i s\n        t)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Adjoint.lean:50:1: 'theorem adjointY_add (i : b.support) (s t : R) : adjointY P b R i (s + t) = adjointY P b R i s * adjointY P b R i t :=\n  by\n  apply Subtype.ext\n  exact\n    loweringRootElement_add P b R i s t' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Adjoint.lean:55:1: 'theorem adjointX_injective (i : b.support) : Function.Injective (adjointX P b R i) :=\n  by\n  intro s t h\n  exact\n    raisingRootElement_injective P b R i\n      (congrArg Subtype.val h)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Adjoint.lean:59:1: 'theorem adjointY_injective (i : b.support) : Function.Injective (adjointY P b R i) :=\n  by\n  intro s t h\n  exact\n    loweringRootElement_injective P b R i\n      (congrArg Subtype.val h)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Adjoint.lean:81:48: missing space in the source\n\nThis part of the code\n  '(g*h))\n'\nshould be written as\n  '(g * h))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Adjoint.lean:131:1: 'theorem adjointLinearRepresentation_injective : Function.Injective (adjointLinearRepresentation P b R) :=\n  by\n  intro g h he\n  exact\n    Subtype.ext\n      (Matrix.GeneralLinearGroup.toLin.injective\n        he)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Adjoint.lean:157:1: 'theorem adjointUnitsMap_raising (φ : R →+* S) (i : b.support) (t : R) :\n    adjointUnitsMap P b φ (raisingRootElement P b R i t) = raisingRootElement P b S i (φ t) :=\n  by\n  apply Units.ext\n  exact\n    raisingExponential_map P b φ i t' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Adjoint.lean:163:1: 'theorem adjointUnitsMap_lowering (φ : R →+* S) (i : b.support) (t : R) :\n    adjointUnitsMap P b φ (loweringRootElement P b R i t) = loweringRootElement P b S i (φ t) :=\n  by\n  apply Units.ext\n  change ((loweringRootElement P b R i t).val).map φ = _\n  rw [loweringRootElement_val, loweringRootElement_val]\n  exact\n    loweringExponential_map P b φ i t' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Adjoint.lean:171:1: 'theorem adjointUnitsMap_mem (φ : R →+* S) {g} (hg : g ∈ adjointSubgroup P b R) :\n    adjointUnitsMap P b φ g ∈ adjointSubgroup P b S :=\n  by\n  have h : adjointSubgroup P b R ≤ (adjointSubgroup P b S).comap (adjointUnitsMap P b φ) :=\n    by\n    rw [adjointSubgroup_le_iff]\n    constructor\n    · intro i t\n      change adjointUnitsMap P b φ _ ∈ adjointSubgroup P b S\n      rw [adjointUnitsMap_raising]\n      exact raising_mem_adjoint P b S i (φ t)\n    · intro i t\n      change adjointUnitsMap P b φ _ ∈ adjointSubgroup P b S\n      rw [adjointUnitsMap_lowering]\n      exact lowering_mem_adjoint P b S i (φ t)\n  exact h hg' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Adjoint.lean:193:1: 'theorem adjointMap_injective (φ : R →+* S) (hφ : Function.Injective φ) : Function.Injective (adjointMap P b φ) :=\n  by\n  intro g h he\n  apply Subtype.ext\n  apply Units.ext\n  ext row col\n  apply hφ\n  exact\n    congrArg (fun a : Adjoint P b S => a.val.val row col)\n      he' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Adjoint.lean:216:1: 'theorem adjointMap_comp (φ : R →+* S) (ψ : S →+* T) :\n    adjointMap P b (ψ.comp φ) = (adjointMap P b ψ).comp (adjointMap P b φ) :=\n  by\n  ext g : 1\n  apply Subtype.ext\n  apply Units.ext\n  rfl' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Adjoint.lean:253:1: 'theorem adjointEquiv_trans (φ : R ≃+* S) (ψ : S ≃+* T) :\n    adjointEquiv P b (φ.trans ψ) = (adjointEquiv P b φ).trans (adjointEquiv P b ψ) :=\n  by\n  ext g : 1\n  apply Subtype.ext\n  apply Units.ext\n  rfl' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.Integral.GeckExponential transitive imports (legacy)",
+       "db5908ee810e2e3d"],
+      ["Atlas.LinearGroups.Chevalley.Integral.GeckExponential:importAllArts",
+       "7d2dee8d048e3a5b"],
+      ["Mathlib.Algebra.Group.Subgroup.Basic transitive imports (legacy)",
+       "f009d281e65f4a7f"],
+      ["Mathlib.Algebra.Group.Subgroup.Basic:importAllArts",
+       "a0b155b4cf3f58d3"],
+      ["Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs transitive imports (legacy)",
+       "02abd460cfcb8e3a"],
+      ["Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs:importAllArts",
+       "a4789c9bc5de5b64"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Adjoint.lean",
+   "90df9f3a1d22aaa8"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Adjoint", "b116f012f14c5573"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "1554d39b5fe7ad57"}

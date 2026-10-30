@@ -1,0 +1,67 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["781b0fb2da50abd2.olean"],
+  "m": false,
+  "i": "ee94877c57eb6954.ilean",
+  "c": "a8b4c3da70892732.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/TorsionMinimum.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/TorsionMinimum.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/TorsionMinimum.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/TorsionMinimum.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/TorsionMinimum.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/TorsionMinimum.lean:11:2: `simp [rowWord, ite_mul] at h` is a flexible tactic modifying `h`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/TorsionMinimum.lean:12:2: `exact (Atlas.Codes.even_weight_iff _).mpr h`\nuses `h`, which was modified by the flexible tactic `simp` on line 11!",
+   "level": "info"},
+  {"message":
+   "Atlas/Rudvalis/TorsionMinimum.lean:45:48: This simp argument is unused:\n  Finset.sum_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [matrixAt, outerMatrix, dot, Finset.mul_sum, mul_assoc, mul_comm, mul_left_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/TorsionMinimum.lean:45:63: This simp argument is unused:\n  mul_assoc\n\nHint: Omit it from the simp argument list.\n  [apply] simp [matrixAt, outerMatrix, dot, Finset.mul_sum, Finset.sum_mul, mul_comm, mul_left_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/TorsionMinimum.lean:50:41: missing space in the source\n\nThis part of the code\n  '(r,x) ='\nshould be written as\n  '(r, x) ='\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/TorsionMinimum.lean:98:16: This simp argument is unused:\n  hrp\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hpq, hrq, Ne.symm hrp, Ne.symm hrq] at hs\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/TorsionMinimum.lean:98:20: This simp argument is unused:\n  hrq\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hpq, hrp, Ne.symm hrp, Ne.symm hrq] at hs\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/TorsionMinimum.lean:126:6: `simp at ha` is a flexible tactic modifying `ha`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/TorsionMinimum.lean:126:6: Try this:\n  [apply] simp only [ge_iff_le] at ha",
+   "level": "info"},
+  {"message":
+   "Atlas/Rudvalis/TorsionMinimum.lean:127:6: `exact (hne ha).elim`\nuses `ha`, which was modified by the flexible tactic `simp` on line 126!",
+   "level": "info"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.BinaryWeightEight transitive imports (legacy)",
+       "03b242170eff8309"],
+      ["Atlas.Rudvalis.BinaryWeightEight:importAllArts",
+       "ac2e978b0774379b"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/TorsionMinimum.lean", "a135847afffc7ce5"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.TorsionMinimum", "52af69eddd567592"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "98a0c6150b0473a9"}

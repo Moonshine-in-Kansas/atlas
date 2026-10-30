@@ -1,0 +1,59 @@
+{
+  "id": "geck-operators-split-F4GeckOperatorsRoot2",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "F4Work.F4GeckOperatorsRoot2"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.E_numeric_table_root2",
+      "module": "F4Work.F4GeckOperatorsRoot2",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-F4GeckOperators-structural-before-whole-group-order",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis.",
+        "Atlas.F4.card_Model",
+        "Atlas.Chevalley.model_F4_card",
+        "Atlas.Chevalley.selectedWeightCompanion_F4_card",
+        "Atlas.Chevalley.Comparison.F4.independent_orders_equal",
+        "Atlas.Chevalley.Comparison.F4.albertLiftSubgroup_eq_top",
+        "Atlas.Chevalley.Comparison.F4.albertToChevalley",
+        "Atlas.Chevalley.Comparison.F4.albertEquiv",
+        "Atlas.LinearAlgebra.faithfulConjugationLiftEquiv",
+        "Atlas.LinearAlgebra.conjugationLiftEquiv",
+        "Atlas.GroupTheory.subgroupSurjectionEquiv",
+        "Atlas.GroupTheory.subgroup_eq_top_and_bijective_of_surjective_of_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityIffGood",
+        "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrices",
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelBruhatOrder",
+        "Atlas.LinearGroups.Chevalley.ModelDegreeOrder",
+        "Atlas.LinearGroups.Chevalley.WeightCompanionBruhatOrder",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightCompanionBruhatOrder",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightCompanionDegreeOrder",
+        "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertEquiv",
+        "F4Work.F4AlbertEquiv"
+      ]
+    }
+  ]
+}

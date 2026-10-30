@@ -1,0 +1,76 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["054170a434d383a7.olean"],
+  "m": false,
+  "i": "1bea8f9eb23cbec7.ilean",
+  "c": "db26a218fff0c7ea.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.lean:9:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.lean:14:0: automatically included section variable(s) unused in theorem `Atlas.Chevalley.Integral.Minuscule.weightReflection_a2_braid`:\n  [Fintype ι]\n  [DecidableEq ι]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype ι] [DecidableEq ι] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.lean:14:0: `weightReflection_a2_braid` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.lean:14:0: `weightReflection_a2_braid` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.lean:39:0: automatically included section variable(s) unused in theorem `Atlas.Chevalley.Integral.Minuscule.weightOrbit_weyl_one_single_signed`:\n  [Fintype ι]\n  [DecidableEq ι]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype ι] [DecidableEq ι] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.lean:37:0: `weightOrbit_weyl_one_single_signed` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.lean:37:0: `weightOrbit_weyl_one_single_signed` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.lean:58:0: `weightOrbit_weylEquiv_a2_braid` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.lean:58:0: `weightOrbit_weylEquiv_a2_braid` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.lean:103:0: `weightOrbit_weylMatrixUnit_a2_braid` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.lean:103:0: `weightOrbit_weylMatrixUnit_a2_braid` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.Integral.MinusculeOpposite transitive imports (legacy)",
+       "5335279d73c066cc"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeOpposite:importAllArts",
+       "ae0577d2680da049"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeTorusConjugation transitive imports (legacy)",
+       "59f03b83438c1cb9"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeTorusConjugation:importAllArts",
+       "b1c9c7701f99b93d"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylBraidA2.lean",
+   "e43f744cdbf33972"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Integral.MinusculeWeylBraidA2",
+   "12d04c2cbfdcf5de"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "27d7aa3bd242e427"}

@@ -1,0 +1,59 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["f44e76ff08c767c3.olean"],
+  "m": false,
+  "i": "92a82a15fe0671c5.ilean",
+  "c": "6ef35c5aa20e979e.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean -M8704 -j1 /home/gerald/atlas/Atlas/OrderArithmetic/ClassicalInvariantClassification.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/OrderArithmetic/ClassicalInvariantClassification.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/OrderArithmetic/ClassicalInvariantClassification.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/OrderArithmetic/ClassicalInvariantClassification.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/OrderArithmetic/ClassicalInvariantClassification.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/OrderArithmetic/ClassicalInvariantClassification.lean:116:6: Unused tactic linter: `(\n  rename_i k\n  have he : k = 2 := by omega\n  subst k\n  norm_num at ha)` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/OrderArithmetic/ClassicalInvariantClassification.lean:116:6: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/OrderArithmetic/ClassicalInvariantClassification.lean:224:58: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/OrderArithmetic/ClassicalInvariantClassification.lean:229:58: `if_pos` has been deprecated: Use `ite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/OrderArithmetic/ClassicalInvariantClassification.lean:241:16: Unused tactic linter: `omega` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/OrderArithmetic/ClassicalInvariantClassification.lean:241:16: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.OrderArithmetic.SecondIndexBounds transitive imports (legacy)",
+       "0fff05f195d3b9ce"],
+      ["Atlas.OrderArithmetic.SecondIndexBounds:importAllArts",
+       "bb2a9d2249d263bc"],
+      ["Mathlib.Tactic.Ring transitive imports (legacy)", "13811e8f7c4fbd99"],
+      ["Mathlib.Tactic.Ring:importAllArts", "b089480788eddaa1"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/OrderArithmetic/ClassicalInvariantClassification.lean",
+   "046ea9617e455e17"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.OrderArithmetic.ClassicalInvariantClassification",
+   "494de06ce120ceef"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "4d7893127d8a79e3"}

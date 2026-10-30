@@ -1,0 +1,74 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["49ab4e66dbc05290.olean"],
+  "m": false,
+  "i": "d3b94bafafca84fe.ilean",
+  "c": "924cd0c331ad7915.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FourCommonPerpendicular.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourCommonPerpendicular.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourCommonPerpendicular.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourCommonPerpendicular.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourCommonPerpendicular.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FourCommonPerpendicular.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCommonPerpendicular.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCommonPerpendicular.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCommonPerpendicular.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourCross_coordinate_orthogonal_same_row (c : FourBlockCrosses)\n    (p : Point) (x y : E) :\n    CrossOrthogonal (coordinateCross (p, x)) (shellPieceCrossMap fourShellPiece c) ↔\n      CrossOrthogonal (coordinateCross (p, y)) (shellPieceCrossMap fourShellPiece c) :=\n  by\n  induction c using Quotient.inductionOn with\n  | h v =>\n    obtain ⟨w, hw⟩ := v.prop\n    change\n      CrossOrthogonal (coordinateCross (p, x)) (minimalCross v.val) ↔\n        CrossOrthogonal (coordinateCross (p, y)) (minimalCross v.val)\n    rw [← hw]\n    exact (fourWord_coordinate_orthogonal_iff w p x).trans (fourWord_coordinate_orthogonal_iff w p y).symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCommonPerpendicular.lean:14:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCommonPerpendicular.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCommonPerpendicular.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem four_common_perpendicular_card :\n    Nat.card\n        { c : FourBlockCrosses //\n          CrossOrthogonal localReferenceCross (shellPieceCrossMap fourShellPiece c) ∧\n            CrossOrthogonal referenceSecondCross (shellPieceCrossMap fourShellPiece c) } =\n      192 :=\n  by\n  rw [localReferenceCross_eq, referenceSecondCross_eq]\n  have he (c : FourBlockCrosses) :\n    (CrossOrthogonal (coordinateCross (rowLabel 0, 0)) (shellPieceCrossMap fourShellPiece c) ∧\n        CrossOrthogonal (coordinateCross (rowLabel 0, binaryLabel 2)) (shellPieceCrossMap fourShellPiece c)) ↔\n      CrossOrthogonal (coordinateCross (rowLabel 0, 0)) (shellPieceCrossMap fourShellPiece c) :=\n    ⟨And.left, fun h => ⟨h, (fourCross_coordinate_orthogonal_same_row c _ _ _).mp h⟩⟩\n  rw [Nat.card_congr (Equiv.subtypeEquivRight he)]\n  exact fourOrthogonalCrosses_card _ _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCommonPerpendicular.lean:23:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCommonPerpendicular.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCommonPerpendicular.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCommonPerpendicular.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCommonPerpendicular.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateCommonPerpendicular transitive imports (legacy)",
+       "440fcc9a328e0733"],
+      ["Atlas.Rudvalis.CoordinateCommonPerpendicular:importAllArts",
+       "dd68ba840817fba7"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FourCommonPerpendicular.lean",
+   "dc631c1384a6b617"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FourCommonPerpendicular", "6e784e27ab9c3467"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "bf62ea3db6a3ab14"}

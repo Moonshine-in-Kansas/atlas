@@ -1,0 +1,69 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["9ed705b116343a29.olean"],
+  "m": false,
+  "i": "54d68c0ad24d7bae.ilean",
+  "c": "29d77ed687deec7e.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Algebra/FiniteFieldSignSquares.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Algebra/FiniteFieldSignSquares.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Algebra/FiniteFieldSignSquares.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Algebra/FiniteFieldSignSquares.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Algebra/FiniteFieldSignSquares.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Algebra/FiniteFieldSignSquares.lean:9:0: automatically included section variable(s) unused in theorem `Atlas.units_square_iff_field_square`:\n  [Finite F]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Finite F] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/FiniteFieldSignSquares.lean:29:8: `if_pos` has been deprecated: Use `ite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/FiniteFieldSignSquares.lean:34:8: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/FiniteFieldSignSquares.lean:44:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/FiniteFieldSignSquares.lean:58:24: `if_pos` has been deprecated: Use `ite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/FiniteFieldSignSquares.lean:60:24: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/FiniteFieldSignSquares.lean:66:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/FiniteFieldSignSquares.lean:81:8: `if_pos` has been deprecated: Use `ite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/FiniteFieldSignSquares.lean:84:8: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic transitive imports (legacy)",
+       "2a19594b1b885c91"],
+      ["Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic:importAllArts",
+       "467a5ab8eefcea95"],
+      ["Mathlib.RingTheory.RootsOfUnity.Basic transitive imports (legacy)",
+       "5fbea4a45423efeb"],
+      ["Mathlib.RingTheory.RootsOfUnity.Basic:importAllArts",
+       "23d682faa02528be"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Algebra/FiniteFieldSignSquares.lean",
+   "c57156bca40187ce"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Algebra.FiniteFieldSignSquares", "dc66ef63f4b47c7b"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "c863b6f379af652d"}

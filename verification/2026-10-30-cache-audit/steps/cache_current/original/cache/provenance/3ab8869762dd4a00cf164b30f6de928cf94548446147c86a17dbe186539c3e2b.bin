@@ -1,0 +1,104 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["da76786eb6b5aee8.olean"],
+  "m": false,
+  "i": "44d2279d5bb18926.ilean",
+  "c": "c065e130bbc6b069.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:17:0: automatically included section variable(s) unused in theorem `Atlas.Chevalley.RootData.not_isPos_reflection_simple`:\n  [Fintype ι]\n  [DecidableEq ι]\n  [P.IsCrystallographic]\n  [P.IsReduced]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype ι] [DecidableEq ι] [P.IsCrystallographic] [P.IsReduced] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:16:0: `not_isPos_reflection_simple` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:16:0: `not_isPos_reflection_simple` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:26:0: `positive_reflection_negative_iff` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:26:0: `positive_reflection_negative_iff` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:42:8: automatically included section variable(s) unused in theorem `Atlas.Chevalley.RootData.simpleReflectionWord_nil`:\n  [Fintype ι]\n  [DecidableEq ι]\n  [P.IsCrystallographic]\n  [P.IsReduced]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype ι] [DecidableEq ι] [P.IsCrystallographic] [P.IsReduced] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:42:0: `simpleReflectionWord_nil` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:42:0: `simpleReflectionWord_nil` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:45:8: automatically included section variable(s) unused in theorem `Atlas.Chevalley.RootData.simpleReflectionWord_cons`:\n  [Fintype ι]\n  [DecidableEq ι]\n  [P.IsCrystallographic]\n  [P.IsReduced]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype ι] [DecidableEq ι] [P.IsCrystallographic] [P.IsReduced] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:45:0: `simpleReflectionWord_cons` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:45:0: `simpleReflectionWord_cons` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:50:8: automatically included section variable(s) unused in theorem `Atlas.Chevalley.RootData.simpleReflectionWord_append`:\n  [Fintype ι]\n  [DecidableEq ι]\n  [P.IsCrystallographic]\n  [P.IsReduced]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype ι] [DecidableEq ι] [P.IsCrystallographic] [P.IsReduced] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:50:0: `simpleReflectionWord_append` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:50:0: `simpleReflectionWord_append` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:55:0: `simpleReflectionWord_conjugate` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:55:0: `simpleReflectionWord_conjugate` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:69:0: `positive_to_negative_word_split` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:69:0: `positive_to_negative_word_split` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:90:0: `simpleReflectionWord_exchange` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean:90:0: `simpleReflectionWord_exchange` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.RootData.SimpleReflectionGeneration transitive imports (legacy)",
+       "e5c9b709f348664c"],
+      ["Atlas.LinearGroups.Chevalley.RootData.SimpleReflectionGeneration:importAllArts",
+       "37c7f8de6e20949b"],
+      ["Mathlib.Tactic.Group transitive imports (legacy)", "5281fcc8f5b2e3ec"],
+      ["Mathlib.Tactic.Group:importAllArts", "1dcc2ff3b5655d63"],
+      ["Mathlib.Tactic.NormNum transitive imports (legacy)",
+       "25b08131da11d03f"],
+      ["Mathlib.Tactic.NormNum:importAllArts", "22901c8b4e0cbec0"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/RootData/SimpleReflectionExchange.lean",
+   "1b3b8e6ad1040434"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.RootData.SimpleReflectionExchange",
+   "5bc09d5d6c0f6e0f"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "2ae5d9fb8d785f1e"}

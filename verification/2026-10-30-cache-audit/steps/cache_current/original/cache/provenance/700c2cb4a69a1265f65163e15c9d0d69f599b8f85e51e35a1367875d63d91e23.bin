@@ -1,0 +1,132 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["a433e86ff0884dc0.olean"],
+  "m": false,
+  "i": "ff7d98a2080459c3.ilean",
+  "c": "9bcf1399ba15c5bd.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/HeavyBlockTransport.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyBlockTransport.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyBlockTransport.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyBlockTransport.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyBlockTransport.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def codeRowImage (g : codeGroup) (p : Point) : Point :=\n  binaryBlockPermutation (codePermutationHom g) p`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeRowImage_coordinates (g : codeGroup) (z : Coordinate) :\n    (g.val.right z).1 = codeRowImage g z.1 :=\n  binaryBlockPermutation_coordinates (codePermutationHom g) z`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def codeInnerEquiv (g : codeGroup) (p : Point) : Equiv.Perm E :=\n  Equiv.ofBijective (fun x => (g.val.right (p, x)).2)\n    (by\n      have hi : Function.Injective (fun x : E => (g.val.right (p, x)).2) :=\n        by\n        intro x y h\n        have hh : g.val.right (p, x) = g.val.right (p, y) :=\n          Prod.ext ((codeRowImage_coordinates g (p, x)).trans (codeRowImage_coordinates g (p, y)).symm) h\n        exact congrArg Prod.snd (g.val.right.injective hh)\n      exact ⟨hi, Finite.surjective_of_injective hi⟩)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:19:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeInnerEquiv_coordinates (g : codeGroup) (p : Point) (x : E) :\n    g.val.right (p, x) = (codeRowImage g p, codeInnerEquiv g p x) :=\n  Prod.ext (codeRowImage_coordinates g _) rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeAction_row_weight (g : codeGroup) (w : QuaternaryWord) (p : Point) :\n    hammingNorm (fun x => reduce (monomialHom g.val w) (codeRowImage g p, x)) =\n      hammingNorm (fun x => reduce w (p, x)) :=\n  by\n  classical\n  have he (x : E) : reduce (monomialHom g.val w) (codeRowImage g p, codeInnerEquiv g p x) = reduce w (p, x) :=\n    by\n    rw [← codeInnerEquiv_coordinates]\n    change reduce (monomialAction g.val w) (g.val.right (p, x)) = _\n    rw [monomialAction_reduce]\n    exact congrArg (reduce w) (g.val.right.symm_apply_apply _)\n  simp only [Atlas.Codes.hammingNorm_eq_sum]\n  rw [← Equiv.sum_comp (codeInnerEquiv g p)]\n  simp only [he]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:31:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyWord_action_exists (g : codeGroup) (w : HeavyMinimumWords) :\n    ∃ u : HeavyMinimumWords, monomialHom g.val w.val.val = u.val.val :=\n  by\n  let u : MinimumWords := g • heavyMinimumWord w\n  have hu : hasNonzeroQuadraticPart (reduce u.val.val) :=\n    by\n    rcases quaternary_minimum_support_cases u.val.val u.val.prop u.prop with h | h\n    · have hc := codeAction_activeBlocks_card g w.val.val\n      change (activeBlocks (reduce u.val.val)).card = (activeBlocks (reduce w.val.val)).card at hc\n      rw [heavy_activeBlocks_card _ w.prop.2, four_minimum_activeBlocks_card _ u.val.prop u.prop h] at hc\n      omega\n    · exact h\n  exact ⟨⟨u.val, u.prop, hu⟩, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:47:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe quadratic heavy label is exactly the unique row of residue weight four. -/\ntheorem heavyWord_label_transport (g : codeGroup) (v w : HeavyMinimumWords) (c d : Point) (a : FixedHeavyParameters c)\n    (b : FixedHeavyParameters d) (hv : reduce v.val.val = fixedHeavyWord c a)\n    (hw : reduce w.val.val = fixedHeavyWord d b) (h : monomialHom g.val v.val.val = w.val.val) : codeRowImage g c = d :=\n  by\n  have hc := codeAction_row_weight g v.val.val c\n  rw [h, hv, hw, fixedHeavyWord_row_weight, fixedHeavyWord_row_weight, ite_eq_left rfl] at hc\n  by_contra hn\n  rw [ite_eq_right hn] at hc\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:55:26: missing space in the source\n\nThis part of the code\n  'v.val.val=fixedHeavyWord'\nshould be written as\n  'v.val.val = fixedHeavyWord'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:55:69: missing space in the source\n\nThis part of the code\n  'w.val.val=fixedHeavyWord'\nshould be written as\n  'w.val.val = fixedHeavyWord'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:56:36: missing space in the source\n\nThis part of the code\n  'v.val.val=w.val.val)'\nshould be written as\n  'v.val.val = w.val.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleCodeBeta_rowImage (r : Fin 7) :\n    codeRowImage coupleCodeBeta (rowLabel r) = rowLabel (coupleBetaRow r) :=\n  by\n  have h := coupleCodeBeta_row r 0\n  rw [codeRowImage_coordinates] at h\n  exact h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyBlockTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.HeavySelectedRowWeights transitive imports (legacy)",
+       "5e92a880b6e85e20"],
+      ["Atlas.Rudvalis.HeavySelectedRowWeights:importAllArts",
+       "dd803d15edaff089"],
+      ["Atlas.Rudvalis.CoupleMonomialGenerators transitive imports (legacy)",
+       "0b39bdc1b50d1395"],
+      ["Atlas.Rudvalis.CoupleMonomialGenerators:importAllArts",
+       "1255eaaa31e991ad"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/HeavyBlockTransport.lean",
+   "c8fdee5d5017c9dc"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.HeavyBlockTransport", "45ff2c2289dbb570"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "47327d9c5e8b1727"}

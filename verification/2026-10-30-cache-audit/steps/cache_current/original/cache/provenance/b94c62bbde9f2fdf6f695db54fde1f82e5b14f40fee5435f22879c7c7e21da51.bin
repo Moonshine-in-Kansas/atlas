@@ -1,0 +1,284 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["02ec194fe6e5d437.olean"],
+  "m": false,
+  "i": "ff1d672d90a05a4e.ilean",
+  "c": "80430fbc30bab1b8.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean -M8704 -j1 /home/gerald/atlas/Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:13:47: missing space in the source\n\nThis part of the code\n  'F=2^(2*m+1))'\nshould be written as\n  'F = 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:13:52: missing space in the source\n\nThis part of the code\n  'F=2^(2*m+1)) (u'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:16:54: missing space in the source\n\nThis part of the code\n  'F=2^(2*m+1))'\nshould be written as\n  'F = 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:16:59: missing space in the source\n\nThis part of the code\n  'F=2^(2*m+1)) (u'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:19:60: missing space in the source\n\nThis part of the code\n  'F=2^(2*m+1))'\nshould be written as\n  'F = 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:19:65: missing space in the source\n\nThis part of the code\n  'F=2^(2*m+1))\n'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:20:39: missing space in the source\n\nThis part of the code\n  '2≠0) :'\nshould be written as\n  '2 ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:25:8: automatically included section variable(s) unused in theorem `_private.Atlas.LinearGroups.ReeF4.SpecialNegativeA2Pivot.0.Atlas.ReeF4.negativeA2_sparse_reconstruct`:\n  [Finite F]\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Finite F] [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:53:37: This simp argument is unused:\n  smul_eq_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rootVector, h0, h1, ht]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:56:23: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rootVector, smul_eq_mul, h0, h1, h3, h5, h6, h7, h8, h9, h13, h14, h15, h16, h17, h19, h21, h22, h23,\n    h24, h25]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:56:51: This simp argument is unused:\n  h0\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rootVector, Pi.single_apply, smul_eq_mul, h1, h3, h5, h6, h7, h8, h9, h13, h14, h15, h16, h17, h19, h21,\n    h22, h23, h24, h25]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:56:54: This simp argument is unused:\n  h1\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rootVector, Pi.single_apply, smul_eq_mul, h0, h3, h5, h6, h7, h8, h9, h13, h14, h15, h16, h17, h19, h21,\n    h22, h23, h24, h25]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:27:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:56:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:26:16: missing space in the source\n\nThis part of the code\n  'j∉({2,4,10,11,12,18,20}'\nshould be written as\n  'j ∉ ({'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:26:83: missing space in the source\n\nThis part of the code\n  'j=0) :'\nshould be written as\n  'j = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:60:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:83:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:59:16: missing space in the source\n\nThis part of the code\n  'j∉({2,4,10,11,12,18,20}'\nshould be written as\n  'j ∉ ({'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:59:83: missing space in the source\n\nThis part of the code\n  'j=0) :'\nshould be written as\n  'j = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:93:21: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rootVector, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:99:51: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [isotropyCoordinates, rootVector, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:87:16: missing space in the source\n\nThis part of the code\n  'j∉({2,4,10,11,12,18,20}'\nshould be written as\n  'j ∉ ({'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:87:83: missing space in the source\n\nThis part of the code\n  'j=0) :'\nshould be written as\n  'j = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:135:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:135:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:139:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:139:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:143:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:143:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:147:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:147:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:151:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:151:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:155:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:155:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:159:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:159:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:163:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:163:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:167:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:167:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:171:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:171:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:175:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:175:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:179:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:179:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:183:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:183:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:187:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:187:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:191:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:191:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:195:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:195:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:199:136: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:199:154: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [longSL2Formula, Matrix.cons_val, hz0, hz1, hz5, hz6, hz7, hz8, hz9, hz13, hz14, hz15, hz16, hz17,\n    hz21, hz22, hz23, hz24, hz25, ht, mul_zero, zero_mul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:135:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:139:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:143:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:147:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:151:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:155:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:159:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:163:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:167:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:171:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:175:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:179:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:183:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:187:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:191:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:195:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:199:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:104:23: missing space in the source\n\nThis part of the code\n  'F=2^(2*m+1))'\nshould be written as\n  'F = 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:104:28: missing space in the source\n\nThis part of the code\n  'F=2^(2*m+1)) {u'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:105:88: missing space in the source\n\nThis part of the code\n  'j=0)\n '\nshould be written as\n  'j = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean:106:21: missing space in the source\n\nThis part of the code\n  '2≠0) :'\nshould be written as\n  '2 ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.ReeF4.SpecialNegativeC3Pivot transitive imports (legacy)",
+       "fa25588fdc9b01e4"],
+      ["Atlas.LinearGroups.ReeF4.SpecialNegativeC3Pivot:importAllArts",
+       "c842d66c96dde103"],
+      ["Atlas.LinearGroups.ReeF4.SpecialLeadingReductionFramework transitive imports (legacy)",
+       "129d0231d86d5a84"],
+      ["Atlas.LinearGroups.ReeF4.SpecialLeadingReductionFramework:importAllArts",
+       "47c6a73869d76aa9"],
+      ["Atlas.LinearGroups.ReeF4.WeylSupport transitive imports (legacy)",
+       "35e522c52bd73236"],
+      ["Atlas.LinearGroups.ReeF4.WeylSupport:importAllArts",
+       "db9f20c86b93c4f2"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/ReeF4/SpecialNegativeA2Pivot.lean",
+   "40b0dc49631016e5"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.ReeF4.SpecialNegativeA2Pivot",
+   "00fbf1e3c285f863"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "2ec92b331932d880"}

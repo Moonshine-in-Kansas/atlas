@@ -1,0 +1,155 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["6782e83e86523f12.olean"],
+  "m": false,
+  "i": "3daeea1dbe3c8f0b.ilean",
+  "c": "8bea6bbdfbad41d1.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean -M8704 -j1 /home/gerald/atlas/Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.ReeF4`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Albert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `variable {F : Type*} [CommRing F] [CharP F 2]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:23:39: This simp argument is unused:\n  CharTwo.two_eq_zero\n\nHint: Omit it from the simp argument list.\n  [apply] simp [CharTwo.ofNat_eq_mod]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem special_suzuki_ovoid_raw_identity (x y : Fin 26 → F) (hx : x 9 = 0) :\n    x 24 * x 25 * isotropyRawStar x y 25 + x 25 ^ 2 * isotropyRawStar x y 16 + x 17 * x 16 * isotropyRawStar x y 25 +\n        x 17 ^ 2 * isotropyRawStar x y 17 =\n      (x 23 * x 25 + x 15 * x 17) * isotropyRawStar x y 9 + x 17 * x 25 * isotropyCross x y 9 +\n            (x 25 * y 17 + x 17 * y 25) * specialAdjoint9 x +\n          x 25 * y 9 * specialAdjoint17 x +\n        x 17 * y 9 * fullAdjointRoot25 x :=\n  by\n  simp only [isotropyRawStar, isotropyCross, specialAdjoint9, specialAdjoint17, fullAdjointRoot25, Matrix.cons_val, hx,\n    mul_zero, zero_mul, add_zero, zero_add]\n  apply CharTwo.add_eq_zero.mp\n  ring_nf\n  all_goals simp [CharTwo.ofNat_eq_mod, CharTwo.two_eq_zero]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:11:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 1200000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `section FiniteField`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `variable {K : Type*} [Field K] [Finite K] [CharP K 2]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem IsSpecialVector.suzuki_block_ovoid {m : ℕ}\n    (hcard : Nat.card K = 2 ^ (2 * m + 1)) {u : TraceZero K} (hu : IsSpecialVector m u) (hA4 : u.val.2 0 7 = 0) :\n    u.val.2 2 6 * u.val.2 2 7 * theta K m (u.val.2 2 7) + (u.val.2 2 7) ^ 2 * theta K m (u.val.2 1 6) +\n          u.val.2 1 7 * u.val.2 1 6 * theta K m (u.val.2 2 7) +\n        (u.val.2 1 7) ^ 2 * theta K m (u.val.2 1 7) =\n      0 :=\n  by\n  have ha := hu.specialAdjoint9_zero\n  have hb := hu.specialAdjoint17_zero\n  have hz : fullAdjointRoot25 (isotropyCoordinates u) = 0 :=\n    by\n    rw [← fullAdjointRoot25_actual, hu.adjoint_zero]\n    rfl\n  obtain ⟨_, v, hd, he⟩ := hu\n  have hr : isotropyRawStar (isotropyCoordinates u) (isotropyCoordinates v) 9 = 0 :=\n    by\n    rw [fixedStar_coordinate_theta hcard u v hd he 9]\n    change theta K m (u.val.2 0 7) = 0\n    rw [hA4, _root_.map_zero]\n  have hc : isotropyCross (isotropyCoordinates u) (isotropyCoordinates v) 9 = 0 :=\n    by\n    rw [← isotropyCross_actual, hd.2, _root_.map_zero]\n    rfl\n  have hi :=\n    special_suzuki_ovoid_raw_identity (isotropyCoordinates u) (isotropyCoordinates v)\n      (show isotropyCoordinates u 9 = 0 from hA4)\n  rw [fixedStar_coordinate_theta hcard u v hd he 25, fixedStar_coordinate_theta hcard u v hd he 16,\n    fixedStar_coordinate_theta hcard u v hd he 17] at hi\n  simp only [hr, hc, ha, hb, hz, mul_zero, add_zero] at hi\n  exact hi`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:29:27: missing space in the source\n\nThis part of the code\n  '2^(2*m+1))'\nshould be written as\n  '2 ^ (2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:29:30: missing space in the source\n\nThis part of the code\n  '2^(2*m+1)) {u'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `private theorem theta_ne_zero {m : ℕ} {a : K} (ha : a ≠ 0) : theta K m a ≠ 0 :=\n  by\n  intro h\n  apply ha\n  apply (theta K m).injective\n  simpa only [_root_.map_zero] using h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- If A4 and C4 vanish, the next root B4 is excluded by the actual special\ncondition, not by an asserted leading-root classification. -/\ntheorem IsSpecialVector.B4_zero_of_A4_C4_zero {m : ℕ} (hcard : Nat.card K = 2 ^ (2 * m + 1)) {u : TraceZero K}\n    (hu : IsSpecialVector m u) (hA4 : u.val.2 0 7 = 0) (hC4 : u.val.2 2 7 = 0) : u.val.2 1 7 = 0 :=\n  by\n  have h := hu.suzuki_block_ovoid hcard hA4\n  simp only [hC4, _root_.map_zero, zero_pow (by decide : 2 ≠ 0), mul_zero, zero_mul, zero_add] at h\n  by_contra hd\n  exact (mul_ne_zero (pow_ne_zero 2 hd) (theta_ne_zero hd)) h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:65:27: missing space in the source\n\nThis part of the code\n  '2^(2*m+1))'\nshould be written as\n  '2 ^ (2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:65:30: missing space in the source\n\nThis part of the code\n  '2^(2*m+1)) {u'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Applying the same structural equation to the actual Weyl reverse excludes\nB3 as well. No point transitivity theorem is used. -/\ntheorem IsSpecialVector.B3_zero_of_A4_C4_zero {m : ℕ} (hcard : Nat.card K = 2 ^ (2 * m + 1)) {u : TraceZero K}\n    (hu : IsSpecialVector m u) (hA4 : u.val.2 0 7 = 0) (hC4 : u.val.2 2 7 = 0) : u.val.2 1 6 = 0 :=\n  by\n  have hB4 := hu.B4_zero_of_A4_C4_zero hcard hA4 hC4\n  let g : Model K m := ⟨weylRho, weylOperator_mem_modelSubgroup m 0⟩\n  have hv := hu.map_model g\n  have htop : (g.val u).val.2 0 7 = 0 := hA4\n  have h := hv.suzuki_block_ovoid hcard htop\n  change\n    u.val.2 2 7 * u.val.2 2 6 * theta K m (u.val.2 2 6) + (u.val.2 2 6) ^ 2 * theta K m (u.val.2 1 7) +\n          u.val.2 1 6 * u.val.2 1 7 * theta K m (u.val.2 2 6) +\n        (u.val.2 1 6) ^ 2 * theta K m (u.val.2 1 6) =\n      0 at h\n  simp only [hC4, hB4, _root_.map_zero, mul_zero, zero_mul, zero_add] at h\n  by_contra he\n  exact (mul_ne_zero (pow_ne_zero 2 he) (theta_ne_zero he)) h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:77:27: missing space in the source\n\nThis part of the code\n  '2^(2*m+1))'\nshould be written as\n  '2 ^ (2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:77:30: missing space in the source\n\nThis part of the code\n  '2^(2*m+1)) {u'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end FiniteField`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.ReeF4`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.ReeF4.SpecialAdjoint transitive imports (legacy)",
+       "706c9503b88fce80"],
+      ["Atlas.LinearGroups.ReeF4.SpecialAdjoint:importAllArts",
+       "c8460ed07b67290f"],
+      ["Atlas.LinearGroups.ReeF4.SpecialSecondPivotVanishing transitive imports (legacy)",
+       "4220b6a06345ee82"],
+      ["Atlas.LinearGroups.ReeF4.SpecialSecondPivotVanishing:importAllArts",
+       "dbf7e67b70cc3348"],
+      ["Atlas.LinearGroups.ReeF4.WeylModel transitive imports (legacy)",
+       "1d11c30b412249ed"],
+      ["Atlas.LinearGroups.ReeF4.WeylModel:importAllArts",
+       "31be7bb55330e874"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/ReeF4/SpecialSuzukiOvoid.lean",
+   "2007c0d122d127b5"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.ReeF4.SpecialSuzukiOvoid",
+   "0d10fa75f42e8e41"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "36707e56b4ef7f1f"}

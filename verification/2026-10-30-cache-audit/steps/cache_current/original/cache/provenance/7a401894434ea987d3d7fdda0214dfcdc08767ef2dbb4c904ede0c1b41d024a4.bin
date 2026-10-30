@@ -1,0 +1,106 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["34135f7f42122bbb.olean"],
+  "m": false,
+  "i": "d46d71b4af7b7ae5.ilean",
+  "c": "6c68fa7c8fde5a8d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean -M8704 -j1 /home/gerald/atlas/Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:18:65: missing space in the source\n\nThis part of the code\n  '2^(2*m+1))'\nshould be written as\n  '2 ^ (2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:18:68: missing space in the source\n\nThis part of the code\n  '2^(2*m+1)) :'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:25:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 1200000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:27:27: missing space in the source\n\nThis part of the code\n  '2^(2*m+1))'\nshould be written as\n  '2 ^ (2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:27:30: missing space in the source\n\nThis part of the code\n  '2^(2*m+1)) (t'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:43:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 1200000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:45:27: missing space in the source\n\nThis part of the code\n  '2^(2*m+1))'\nshould be written as\n  '2 ^ (2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:45:30: missing space in the source\n\nThis part of the code\n  '2^(2*m+1)) (t'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:66:35: This simp argument is unused:\n  Atlas.SuzukiFamily.h\n\nHint: Omit it from the simp argument list.\n  [apply] simp [suzukiLeviTorusDiagonal, thetaUnits, -Atlas.SuzukiFamily.theta_apply, theta, _root_.map_mul, map_inv₀,\n    mul_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:67:46: This simp argument is unused:\n  _root_.map_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [suzukiLeviTorusDiagonal, Atlas.SuzukiFamily.h, thetaUnits, -Atlas.SuzukiFamily.theta_apply, theta,\n    map_inv₀, mul_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:71:0: automatically included section variable(s) unused in theorem `Atlas.ReeF4.suzukiLeviExteriorMatrix_diagonal`:\n  [Finite F]\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Finite F] [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:77:60: This simp argument is unused:\n  Matrix.diagonal_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [suzukiLeviExteriorMatrix, suzukiLeviExteriorPair]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:70:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 800000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:79:64: missing space in the source\n\nThis part of the code\n  '2^(2*m+1))'\nshould be written as\n  '2 ^ (2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:79:67: missing space in the source\n\nThis part of the code\n  '2^(2*m+1))\n'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:92:0: automatically included section variable(s) unused in theorem `Atlas.ReeF4.torusEquiv_suzukiExterior_weight`:\n  [Finite F]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Finite F] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:102:67: missing space in the source\n\nThis part of the code\n  '2^(2*m+1))'\nshould be written as\n  '2 ^ (2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:102:70: missing space in the source\n\nThis part of the code\n  '2^(2*m+1))\n'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:113:0: automatically included section variable(s) unused in theorem `Atlas.ReeF4.torusEquiv_suzukiFixed`:\n  [Finite F]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Finite F] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:121:59: missing space in the source\n\nThis part of the code\n  '2^(2*m+1))'\nshould be written as\n  '2 ^ (2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean:121:62: missing space in the source\n\nThis part of the code\n  '2^(2*m+1)) (t'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.ReeF4.RootSuzukiLeviGenerators transitive imports (legacy)",
+       "074c5eb8804848b0"],
+      ["Atlas.LinearGroups.ReeF4.RootSuzukiLeviGenerators:importAllArts",
+       "9cc751cde1c5114a"],
+      ["Atlas.LinearGroups.ReeF4.RootGroupUnits transitive imports (legacy)",
+       "ff0ee6d5a8522172"],
+      ["Atlas.LinearGroups.ReeF4.RootGroupUnits:importAllArts",
+       "11cffaa086c17f19"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/ReeF4/RootSuzukiLeviTorus.lean",
+   "94d08de3ac56ed2a"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.ReeF4.RootSuzukiLeviTorus",
+   "370447c4c78d82e6"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "b7550748391656b1"}

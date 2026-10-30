@@ -1,0 +1,62 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["7c2ba838a91b866c.olean"],
+  "m": false,
+  "i": "1f63577a1f1c0ee3.ilean",
+  "c": "7fd2c14337767ff4.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/OctadicRootTransport.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/OctadicRootTransport.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/OctadicRootTransport.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/OctadicRootTransport.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/OctadicRootTransport.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/OctadicRootTransport.lean:26:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicRootTransport.lean:37:4: This simp argument is unused:\n  parkerCoordinateAction_calibratedHyperplane\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [octadicHyperplanePart, map_sum, map_smulₛₗ, RingEquiv.toRingHom_eq_coe, RingHom.coe_coe,\n    scalarParityAut_sign]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicRootTransport.lean:33:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicRootTransport.lean:53:4: This simp argument is unused:\n  parkerCoordinateAction_octadicAxisPart\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [map_smulₛₗ, map_add, RingEquiv.toRingHom_eq_coe, RingHom.coe_coe,\n    parkerCoordinateAction_octadicHyperplanePart, parkerCoordinateAction_signedOctad, map_mul, scalarParityAut_theta,\n    scalarParityAut_sign]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicRootTransport.lean:53:44: This simp argument is unused:\n  parkerCoordinateAction_octadicHyperplanePart\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [map_smulₛₗ, map_add, RingEquiv.toRingHom_eq_coe, RingHom.coe_coe,\n    parkerCoordinateAction_octadicAxisPart, parkerCoordinateAction_signedOctad, map_mul, scalarParityAut_theta,\n    scalarParityAut_sign]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicRootTransport.lean:54:4: This simp argument is unused:\n  parkerCoordinateAction_signedOctad\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [map_smulₛₗ, map_add, RingEquiv.toRingHom_eq_coe, RingHom.coe_coe,\n    parkerCoordinateAction_octadicAxisPart, parkerCoordinateAction_octadicHyperplanePart, map_mul,\n    scalarParityAut_theta, scalarParityAut_sign]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicRootTransport.lean:58:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Fischer.OctadicCalibrationTransport transitive imports (legacy)",
+       "8ee780303f7ef94a"],
+      ["Atlas.Fischer.OctadicCalibrationTransport:importAllArts",
+       "201723368ef98442"],
+      ["Atlas.Fischer.OctadicRootFibres transitive imports (legacy)",
+       "ed69fedde6d1107e"],
+      ["Atlas.Fischer.OctadicRootFibres:importAllArts", "a40c14f189ced2ea"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/OctadicRootTransport.lean",
+   "0a13c92d44429ec5"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.OctadicRootTransport", "332a86765637b939"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "d74bf0cbd329ee8c"}

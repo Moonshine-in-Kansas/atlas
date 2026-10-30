@@ -1,0 +1,73 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["60ad513a779c5bea.olean"],
+  "m": false,
+  "i": "e9ffca6d3ed7a322.ilean",
+  "c": "88ef5e797f790356.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Codes/HexacodeSystematic.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/HexacodeSystematic.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/HexacodeSystematic.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Codes/HexacodeSystematic.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Codes/HexacodeSystematic.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Codes/HexacodeSystematic.lean:11:0: Unscoped option maxHeartbeats is not allowed:\nPlease scope this to individual declarations, as in\n```\nset_option maxHeartbeats in\n-- comment explaining why this is necessary\nexample : ... := ...\n```\n\nNote: This linter can be disabled with `set_option linter.style.setOption false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeSystematic.lean:41:17: This simp argument is unused:\n  Pi.add_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Matrix.cons_val_zero, Matrix.cons_val_succ, Matrix.cons_val_zero', Matrix.cons_val_succ', map_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeSystematic.lean:41:31: This simp argument is unused:\n  Matrix.cons_val_zero\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Pi.add_apply, Matrix.cons_val_succ, Matrix.cons_val_zero', Matrix.cons_val_succ', map_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeSystematic.lean:41:53: This simp argument is unused:\n  Matrix.cons_val_succ\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Pi.add_apply, Matrix.cons_val_zero, Matrix.cons_val_zero', Matrix.cons_val_succ', map_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeSystematic.lean:48:17: This simp argument is unused:\n  Pi.smul_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Matrix.cons_val_zero, Matrix.cons_val_succ, Matrix.cons_val_zero', Matrix.cons_val_succ', map_smul,\n    smul_add, RingHom.id_apply]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeSystematic.lean:48:32: This simp argument is unused:\n  Matrix.cons_val_zero\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Pi.smul_apply, Matrix.cons_val_succ, Matrix.cons_val_zero', Matrix.cons_val_succ', map_smul,\n    smul_add, RingHom.id_apply]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeSystematic.lean:48:54: This simp argument is unused:\n  Matrix.cons_val_succ\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Pi.smul_apply, Matrix.cons_val_zero, Matrix.cons_val_zero', Matrix.cons_val_succ', map_smul,\n    smul_add, RingHom.id_apply]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeSystematic.lean:41:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeSystematic.lean:48:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeSystematic.lean:78:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Codes.MonomialIsometries transitive imports (legacy)",
+       "8705e050572b38e0"],
+      ["Atlas.Codes.MonomialIsometries:importAllArts", "a0df37697d9f0eee"],
+      ["Atlas.Codes.HexacodeCounting transitive imports (legacy)",
+       "3088bc3219a28466"],
+      ["Atlas.Codes.HexacodeCounting:importAllArts", "0fec2ab9a0e8eee2"],
+      ["Atlas.Codes.BinaryLift transitive imports (legacy)",
+       "181c5b79710e6f00"],
+      ["Atlas.Codes.BinaryLift:importAllArts", "5da92c3fcede929a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Codes/HexacodeSystematic.lean",
+   "0d6500d03506cb5a"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Codes.HexacodeSystematic", "61925356e7eb0681"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "737fec2cdc6a28a8"}

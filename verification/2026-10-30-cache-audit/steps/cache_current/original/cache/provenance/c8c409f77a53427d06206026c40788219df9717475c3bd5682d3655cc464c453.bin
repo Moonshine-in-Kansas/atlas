@@ -1,0 +1,96 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["891bf50c2a63773a.olean"],
+  "m": false,
+  "i": "52f52eb7235213bf.ilean",
+  "c": "bd53d31d47345b25.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/G2/ExceptionChecks.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/ExceptionChecks.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/ExceptionChecks.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/ExceptionChecks.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/ExceptionChecks.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.G2.ExceptionChecks`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem binary_not_simple : ¬IsSimpleGroup (Model (ZMod 2)) :=\n  not_simple_binary (by simp [Nat.card_eq_fintype_card])`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem binary_normal_order :\n    Nat.card (longRootNormalClosure (F := ZMod 2)) = 6048 :=\n  card_longRootNormalClosure_binary (by simp [Nat.card_eq_fintype_card])`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem binary_index : (longRootNormalClosure (F := ZMod 2)).index = 2 :=\n  index_longRootNormalClosure_binary (by simp [Nat.card_eq_fintype_card])`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem binary_exact_range : (IsSimpleGroup (Model (ZMod 2)) ↔ False) :=\n  by\n  rw [isSimple_iff]\n  norm_num [Nat.card_eq_fintype_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem ternary_exact_range : (IsSimpleGroup (Model (ZMod 3)) ↔ True) :=\n  by\n  rw [isSimple_iff]\n  norm_num [Nat.card_eq_fintype_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem four_exact_range : (IsSimpleGroup (Model (GaloisField 2 2)) ↔ True) :=\n  by\n  rw [isSimple_iff, GaloisField.card 2 2 (by decide)]\n  norm_num`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.G2.ExceptionChecks`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/ExceptionChecks.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.G2.BinaryException transitive imports (legacy)",
+       "23f69be6ff4a5f92"],
+      ["Atlas.LinearGroups.G2.BinaryException:importAllArts",
+       "2db69ed191cafa70"],
+      ["Atlas.LinearGroups.G2.SimplicityChecks transitive imports (legacy)",
+       "6ea0e089c9b8ef94"],
+      ["Atlas.LinearGroups.G2.SimplicityChecks:importAllArts",
+       "026e63ea5e37e87c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/G2/ExceptionChecks.lean",
+   "e9b12abcd84650cf"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.G2.ExceptionChecks", "3005bc8c229d066f"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "ba0a4fcc5b428a46"}

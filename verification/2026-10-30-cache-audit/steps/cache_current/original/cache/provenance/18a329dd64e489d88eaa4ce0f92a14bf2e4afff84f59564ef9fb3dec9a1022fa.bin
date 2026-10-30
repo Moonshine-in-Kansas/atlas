@@ -1,0 +1,61 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["1538923a948ca56a.olean"],
+  "m": false,
+  "i": "9a0c100479f41f91.ilean",
+  "c": "23b7903c101c7d03.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean -M8704 -j1 /home/gerald/atlas/Atlas/LinearGroups/ReeF4/LeadingWitnessCounterexample.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/LeadingWitnessCounterexample.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/LeadingWitnessCounterexample.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/LeadingWitnessCounterexample.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/LeadingWitnessCounterexample.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/LeadingWitnessCounterexample.lean:57:0: automatically included section variable(s) unused in theorem `Atlas.ReeF4.leadingWitnessExample_point_isotropic`:\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/LeadingWitnessCounterexample.lean:60:23: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [leadingWitnessExamplePoint, rootVector, traceZeroQuadratic, quadraticTrace, SplitOctonion.norm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/LeadingWitnessCounterexample.lean:62:0: automatically included section variable(s) unused in theorem `Atlas.ReeF4.leadingWitnessExample_witness_isotropic`:\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/LeadingWitnessCounterexample.lean:65:68: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [leadingWitnessExample, leadingWitnessExampleLow, leadingWitnessExampleHigh, rootVector,\n    traceZeroQuadratic, quadraticTrace, SplitOctonion.norm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/LeadingWitnessCounterexample.lean:68:0: automatically included section variable(s) unused in theorem `Atlas.ReeF4.leadingWitnessExample_top`:\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/LeadingWitnessCounterexample.lean:70:15: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [leadingWitnessExample, leadingWitnessExampleLow, leadingWitnessExampleHigh, rootVector]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.ReeF4.SpecialIsotropy transitive imports (legacy)",
+       "390d30e8c2d8afdb"],
+      ["Atlas.LinearGroups.ReeF4.SpecialIsotropy:importAllArts",
+       "7d7b9c4164b2da0d"],
+      ["Atlas.LinearGroups.ReeF4.RootProductTables transitive imports (legacy)",
+       "048cb86a95df322d"],
+      ["Atlas.LinearGroups.ReeF4.RootProductTables:importAllArts",
+       "fec7518410833ac7"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/ReeF4/LeadingWitnessCounterexample.lean",
+   "b9ef4c31fa28a3c8"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.ReeF4.LeadingWitnessCounterexample",
+   "28fa7167c0c3b10c"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "0b612aa2326c3cdc"}

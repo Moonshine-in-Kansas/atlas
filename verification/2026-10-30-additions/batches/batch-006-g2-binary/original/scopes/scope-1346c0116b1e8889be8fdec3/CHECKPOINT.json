@@ -1,0 +1,132 @@
+{
+  "id": "release-v1-2-j1-bridges-20261030-octonionwords",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.Comparisons.Exceptional.G2Binary.OctonionWords"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Matching6048.step4",
+      "kind": "definition",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.OctonionWords"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Matching6048.element4",
+      "kind": "definition",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.OctonionWords"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Matching6048.element4_apply",
+      "kind": "theorem",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.OctonionWords"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Matching6048.element4_mem",
+      "kind": "theorem",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.OctonionWords"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Matching6048.act4",
+      "kind": "definition",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.OctonionWords"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Matching6048.word4",
+      "kind": "definition",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.OctonionWords"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Matching6048.word4_apply",
+      "kind": "theorem",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.OctonionWords"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Matching6048.word4_mem",
+      "kind": "theorem",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.OctonionWords"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "OctonionWords-structural-independence-review-successor",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Unitary.card_psu",
+        "Atlas.Unitary.card_su",
+        "Atlas.Unitary.card_u",
+        "Atlas.G2.card_Model",
+        "Atlas.G2.OrderChecks.binary_order",
+        "Atlas.G2.BinaryException.card_H",
+        "Atlas.G2.BinaryException.order_of_character",
+        "Atlas.Comparisons.G2Binary.Final6048."
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Unitary.Order",
+        "Atlas.LinearGroups.Unitary.ProjectiveOrder",
+        "Atlas.LinearGroups.Unitary.OrderChecks",
+        "Atlas.LinearGroups.Unitary.ProjectiveOrderChecks",
+        "Atlas.LinearGroups.G2.Order",
+        "Atlas.LinearGroups.G2.OrderChecks",
+        "Atlas.LinearGroups.G2.BinaryExceptionFromCharacter",
+        "Atlas.LinearGroups.G2.BinarySign"
+      ],
+      "module_allowlists": [
+        {
+          "prefix": "ComparisonWork.",
+          "modules": [
+            "ComparisonWork.OctonionWords"
+          ]
+        },
+        {
+          "prefix": "Atlas.Sporadic.Janko1.",
+          "modules": [
+            "Atlas.Sporadic.Janko1.CoordinateRepresentation",
+            "Atlas.Sporadic.Janko1.GeneratorActions",
+            "Atlas.Sporadic.Janko1.GeneratorChecks",
+            "Atlas.Sporadic.Janko1.GeneratorMatrices",
+            "Atlas.Sporadic.Janko1.Generators",
+            "Atlas.Sporadic.Janko1.Imaginary",
+            "Atlas.Sporadic.Janko1.OctonionBasis",
+            "Atlas.Sporadic.Janko1.Perfectness",
+            "Atlas.Sporadic.Janko1.Relations",
+            "Atlas.Sporadic.Janko1.WordRelations"
+          ]
+        },
+        {
+          "prefix": "Atlas.Comparisons.Exceptional.G2Binary.",
+          "modules": [
+            "Atlas.Comparisons.Exceptional.G2Binary.Derived",
+            "Atlas.Comparisons.Exceptional.G2Binary.FieldNine",
+            "Atlas.Comparisons.Exceptional.G2Binary.FieldTransport",
+            "Atlas.Comparisons.Exceptional.G2Binary.OctonionWords",
+            "Atlas.Comparisons.Exceptional.G2Binary.QuadraticAction",
+            "Atlas.Comparisons.Exceptional.G2Binary.QuadraticFaithful",
+            "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+            "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+            "Atlas.Comparisons.Exceptional.G2Binary.Simplicity",
+            "Atlas.Comparisons.Exceptional.G2Binary.SplitExtension",
+            "Atlas.Comparisons.Exceptional.G2Binary.UnitaryLinesDraft",
+            "Atlas.Comparisons.Exceptional.G2Binary.UnitaryMarking"
+          ]
+        },
+        {
+          "prefix": "Atlas.Comparisons.Exceptional.ReeThree.",
+          "modules": [
+            "Atlas.Comparisons.Exceptional.ReeThree.FieldActionFaithful",
+            "Atlas.Comparisons.Exceptional.ReeThree.SemilinearTarget"
+          ]
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "environment": "verification/checkpoints/j1-bridges-20261030/environment.json"
+}

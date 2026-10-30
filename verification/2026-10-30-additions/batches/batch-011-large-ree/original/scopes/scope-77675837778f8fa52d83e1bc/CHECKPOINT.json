@@ -1,0 +1,90 @@
+{
+  "id": "staged-SuzukiLeviLineFixer",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.ReeF4.SuzukiLeviLineFixer"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.ReeF4.suzukiLeviHom_naturalBlock",
+      "module": "Atlas.LinearGroups.ReeF4.SuzukiLeviLineFixer",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/SuzukiLeviLineFixer.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiLeviBlockProject_secondRoot",
+      "module": "Atlas.LinearGroups.ReeF4.SuzukiLeviLineFixer",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/SuzukiLeviLineFixer.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiEmbedding_mem_positiveRootSubgroup_of_fix_secondRoot",
+      "module": "Atlas.LinearGroups.ReeF4.SuzukiLeviLineFixer",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/SuzukiLeviLineFixer.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiProduct_scalar_eq_one_of_positive_product_fix_firstRoot",
+      "module": "Atlas.LinearGroups.ReeF4.SuzukiLeviLineFixer",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/SuzukiLeviLineFixer.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiEmbedding_fix_second_of_positive_product_fix_second",
+      "module": "Atlas.LinearGroups.ReeF4.SuzukiLeviLineFixer",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/SuzukiLeviLineFixer.lean"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "draft-full-line-kernel-via-actual-point-parabolic",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis.",
+        "Atlas.F4.",
+        "Atlas.ReeF4.card_Model",
+        "Atlas.ReeF4.card_positiveRootSubgroup",
+        "Atlas.ReeF4.card_specialPoints",
+        "Atlas.ReeF4.elementarySubgroup_eq_top",
+        "Atlas.ReeF4.model_isPerfect",
+        "Atlas.ReeF4.simple_of_large",
+        "Atlas.ReeF4.model_specialPoint_transitive",
+        "Atlas.ReeF4.card_firstPointParabolic",
+        "Atlas.ReeF4.card_positiveRootTailSubgroup",
+        "Atlas.ReeF4.card_modelSuzukiProductSubgroup"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.ReeF4.Order",
+        "Atlas.LinearGroups.ReeF4.Generation",
+        "F4Work.BinarySpecialPointFaithfulness",
+        "F4Work.BinaryDerivedPointFaithfulness",
+        "F4Work.BinaryDerivedAction",
+        "F4Work.ReeFullOrder",
+        "F4Work.ReeFullGeneration",
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood",
+        "Atlas.LinearGroups.SuzukiFamily.Order",
+        "Atlas.LinearGroups.SuzukiFamily.Simplicity",
+        "Atlas.LinearGroups.ReeF4.BinarySpecialPointFaithfulness",
+        "Atlas.LinearGroups.ReeF4.BinaryDerivedPointFaithfulness",
+        "Atlas.LinearGroups.ReeF4.BinaryDerivedAction",
+        "Atlas.LinearGroups.ReeF4.ReeFullOrder",
+        "Atlas.LinearGroups.ReeF4.OppositePairStabilizerOrder",
+        "Atlas.LinearGroups.ReeF4.ReeFullGeneration"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

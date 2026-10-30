@@ -1,0 +1,94 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["efae47260d152f97.olean"],
+  "m": false,
+  "i": "ee2e4b5f0cc380e6.ilean",
+  "c": "865270117a53adb9.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearAlgebra/BooleanSpinOperators.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearAlgebra/BooleanSpinOperators.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearAlgebra/BooleanSpinOperators.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearAlgebra/BooleanSpinOperators.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearAlgebra/BooleanSpinOperators.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinOperators.lean:9:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinOperators.lean:30:8: automatically included section variable(s) unused in theorem `Atlas.BooleanSpin.parity_single`:\n  [LinearOrder I]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [LinearOrder I] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinOperators.lean:101:60: This simp argument is unused:\n  Ne.symm hne\n\nHint: Omit it from the simp argument list.\n  [apply] simp [creation, annihilation, step_single, hi, hj, hne, prefix_flip, hij, not_lt_of_ge (le_of_lt hij),\n    prefix_adjacent, bitSign, ← mul_assoc, prefix_mul_self]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinOperators.lean:102:19: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [creation, annihilation, step_single, hi, hj, hne, Ne.symm hne, prefix_flip, not_lt_of_ge (le_of_lt hij),\n    prefix_adjacent, bitSign, ← mul_assoc, prefix_mul_self]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinOperators.lean:104:29: This simp argument is unused:\n  Ne.symm hne\n\nHint: Omit it from the simp argument list.\n  [apply] simp [flip, hi, hj, hne]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinOperators.lean:93:15: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinOperators.lean:103:36: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinOperators.lean:115:55: This simp argument is unused:\n  hne\n\nHint: Omit it from the simp argument list.\n  [apply] simp [creation, annihilation, step_single, hi, hj, Ne.symm hne, prefix_flip, hij, not_lt_of_ge (le_of_lt hij),\n    prefix_adjacent, bitSign, ← mul_assoc, prefix_mul_self]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinOperators.lean:116:24: This simp argument is unused:\n  not_lt_of_ge (le_of_lt hij)\n\nHint: Omit it from the simp argument list.\n  [apply] simp [creation, annihilation, step_single, hi, hj, hne, Ne.symm hne, prefix_flip, hij, prefix_adjacent,\n    bitSign, ← mul_assoc, prefix_mul_self]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinOperators.lean:118:24: This simp argument is unused:\n  hne\n\nHint: Omit it from the simp argument list.\n  [apply] simp [flip, hi, hj, Ne.symm hne, Function.update_comm hne]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinOperators.lean:107:15: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinOperators.lean:117:36: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinOperators.lean:120:55: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinOperators.lean:126:36: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinOperators.lean:128:59: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinOperators.lean:134:36: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearAlgebra.BooleanSpinSigns transitive imports (legacy)",
+       "649bd57bdb79a4c8"],
+      ["Atlas.LinearAlgebra.BooleanSpinSigns:importAllArts",
+       "d8aabba122a4f915"],
+      ["Mathlib.LinearAlgebra.Finsupp.LinearCombination transitive imports (legacy)",
+       "9ad1598df66389fe"],
+      ["Mathlib.LinearAlgebra.Finsupp.LinearCombination:importAllArts",
+       "7ccc5557d9b3289a"],
+      ["Mathlib.LinearAlgebra.Matrix.ToLin transitive imports (legacy)",
+       "13e0dbdc1ba5233c"],
+      ["Mathlib.LinearAlgebra.Matrix.ToLin:importAllArts",
+       "c46126017ec29b8d"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearAlgebra/BooleanSpinOperators.lean",
+   "5b3870123ceb36ae"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearAlgebra.BooleanSpinOperators", "30333bb4e91e7d95"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "3958781f84599740"}

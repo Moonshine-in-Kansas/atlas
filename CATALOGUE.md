@@ -57,9 +57,11 @@ packaging the diagrams is not a new proof check. Download an HTML file to view i
 
 All six additional Chevalley constructions are displayed alongside the original
 A/B/C/D/F₄/G₂ models. [Explicit Lean certificates](catalogue/ISOMORPHISMS.md)
-identify the registered A/B/C/D pairs. The G₂ and F₄ comparison scopes are stated
-separately. The table counts and diagrams describe the original default models;
+identify the registered model pairs on their stated domains. The table counts
+and diagrams describe the original default models;
 multiple constructions do not increase the number of families.
+
+[Completed mathematical checkpoints](catalogue/CHECKPOINTS.md) record additional proved statements and their remaining limits, separately from the 33 completed entries.
 
 <a id="family-cyclic"></a>
 
@@ -557,23 +559,32 @@ Parameters: F is an arbitrary finite field, q=|F|; every prime power q>=2, inclu
 
 ### Chevalley root-operator model
 
-Root-generated adjoint operator group; same carrier at nonsimple parameters. The simply connected group is a separate related cover, not this realization.
+The existing root-generated adjoint operator group, with inherited operations and faithful adjoint action. The simply connected companion remains a separate cover.
 
 Parameters: K an arbitrary finite field; q = Nat.card K; rank = 4; every finite characteristic
 
 | Interface | Lean declaration and source |
 |---|---|
-| model | [`Atlas.Chevalley.Model .F4`](Atlas/LinearGroups/Chevalley/Models.lean) |
-| order | [`Atlas.Chevalley.model_F4_card`](Atlas/LinearGroups/Chevalley/ModelF4Order.lean#L24) |
-| simple | [`Atlas.Chevalley.model_isSimpleGroup_of_good`](Atlas/LinearGroups/Chevalley/ModelSimplicityGood.lean#L47) |
+| model | [`Atlas.Chevalley.Catalogue.F4`](Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean#L10) |
+| finite | [`Atlas.Chevalley.Catalogue.F4_finite`](Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean#L12) |
+| order | [`Atlas.Chevalley.Catalogue.F4_order`](Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean#L17) |
+| center | [`Atlas.Chevalley.Catalogue.F4_center`](Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean#L23) |
+| simple | [`Atlas.Chevalley.Catalogue.F4_simple`](Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean#L28) |
+| exceptions | [`Atlas.Chevalley.Catalogue.F4_exceptions`](Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean#L40) |
+
+Simplicity range: K an arbitrary finite field; q=Nat.card K; fixed rank 4; every characteristic, including q=2 and q=3..
+
+Separate property audits: [finite](verification/2026-10-30-additions/batches/batch-001-f4/original/scopes/scope-f03a98379a01112cdddc01cc) · [order](verification/2026-10-30-additions/batches/batch-001-f4/original/scopes/scope-f03a98379a01112cdddc01cc) · [center](verification/2026-10-30-additions/batches/batch-001-f4/original/scopes/scope-f03a98379a01112cdddc01cc) · [simple](verification/2026-10-30-additions/batches/batch-001-f4/original/scopes/scope-f03a98379a01112cdddc01cc) · [exceptions](verification/2026-10-30-additions/batches/batch-001-f4/original/scopes/scope-f03a98379a01112cdddc01cc).
 
 Dated concrete-model contract: [AtlasExistenceChevalley.F4](verification/existence/2026-10-25-draft/Chevalley-F4/Solution.lean) · [exact specification](verification/existence/2026-10-25-draft/Chevalley-F4/Challenge.lean) · [checker receipt](verification/existence/2026-10-25-draft/Chevalley-F4/RESULT.json).
 
-This contract proves order and simplicity of this explicit witness for every finite field, q ≥ 2.
-
 ### Isomorphism between these constructions
 
-The isomorphism between the Chevalley and full split-Albert models remains unfinished. No certificate identifying them is claimed.
+[`Atlas.Chevalley.Catalogue.F4_identification`](Atlas/LinearGroups/Chevalley/Catalogue/F4Identification.lean#L13) is the actual multiplicative equivalence.
+
+Domain: K an arbitrary finite field; q=Nat.card K; fixed rank 4; every characteristic, including q=2 and q=3..
+
+[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-f4-to-albert-v1) gives the verbatim compiled type, both carriers, the parameter map and [full dependency audit](verification/2026-10-30-additions/batches/batch-001-f4/original/scopes/scope-554991387ce2dbcd74585255).
 
 The existing order/simplicity dependency diagram and line counts describe the split-albert model. They are not counts for both constructions combined.
 
@@ -633,23 +644,32 @@ Parameters: F is an arbitrary finite field, q=|F|, including characteristics 2 a
 
 ### Chevalley root-operator model
 
-Root-generated adjoint operator group; same carrier at nonsimple parameters. The simply connected group is a separate related cover, not this realization.
+The literal root-generated adjoint elementary group, with inherited operations and faithful adjoint action. The full carrier is unchanged at q=2; the simply connected companion remains a separate cover.
 
 Parameters: K an arbitrary finite field; q = Nat.card K; rank = 2; every finite characteristic
 
 | Interface | Lean declaration and source |
 |---|---|
-| model | [`Atlas.Chevalley.Model .G2`](Atlas/LinearGroups/Chevalley/Models.lean) |
-| order | [`Atlas.Chevalley.model_G2_card`](Atlas/LinearGroups/Chevalley/ModelG2Order.lean#L22) |
-| simple | [`Atlas.Chevalley.model_isSimpleGroup_of_good`](Atlas/LinearGroups/Chevalley/ModelSimplicityGood.lean#L47) |
+| model | [`Atlas.Chevalley.Catalogue.G2`](Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean#L11) |
+| finite | [`Atlas.Chevalley.Catalogue.G2_finite`](Atlas/LinearGroups/Chevalley/Catalogue/G2Finite.lean#L7) |
+| order | [`Atlas.Chevalley.Catalogue.G2_order`](Atlas/LinearGroups/Chevalley/Catalogue/G2Order.lean#L8) |
+| center | [`Atlas.Chevalley.Catalogue.G2_center`](Atlas/LinearGroups/Chevalley/Catalogue/G2Center.lean#L8) |
+| simple | [`Atlas.Chevalley.Catalogue.G2_simple`](Atlas/LinearGroups/Chevalley/Catalogue/G2Simple.lean#L12) |
+| exceptions | [`Atlas.Chevalley.Catalogue.G2_exceptions`](Atlas/LinearGroups/Chevalley/Catalogue/G2Exceptions.lean#L8) |
+
+Simplicity range: K an arbitrary finite field of cardinality q>2; fixed rank 2; every characteristic; q=2 is excluded only from the positive simplicity domain.
+
+Separate property audits: [finite](verification/2026-10-30-additions/batches/batch-004-g2-comparison/original/scopes/scope-f087f3c2cbbbaa49adbb3220) · [order](verification/2026-10-30-additions/batches/batch-004-g2-comparison/original/scopes/scope-36e6c2fefec25b788b36623f) · [center](verification/2026-10-30-additions/batches/batch-004-g2-comparison/original/scopes/scope-32bdc1cd50b7c641aa62bffc) · [simple](verification/2026-10-30-additions/batches/batch-004-g2-comparison/original/scopes/scope-23443ac745c2725a968fa69a) · [exceptions](verification/2026-10-30-additions/batches/batch-004-g2-comparison/original/scopes/scope-a6a2e66157adfc8b6888db25).
 
 Dated concrete-model contract: [AtlasExistenceChevalley.G2](verification/existence/2026-10-25-draft/Chevalley-G2/Solution.lean) · [exact specification](verification/existence/2026-10-25-draft/Chevalley-G2/Challenge.lean) · [checker receipt](verification/existence/2026-10-25-draft/Chevalley-G2/RESULT.json).
 
-This contract proves order and simplicity of this explicit witness for q > 2 for simplicity (the same model exists at q = 2).
-
 ### Isomorphism between these constructions
 
-The research note records a marked Chevalley–octonion equivalence with ten passed local audit scopes, but its final preservation/registration and source export are outside this version. This version therefore supplies both model contracts, without claiming that their isomorphism certificate is included.
+[`Atlas.Chevalley.Catalogue.G2_identification`](Atlas/LinearGroups/Chevalley/Catalogue/G2Identification.lean#L15) is the actual multiplicative equivalence.
+
+Domain: K an arbitrary finite field; q = Nat.card K; fixed rank 2; every finite characteristic, including q=2 and q=3.
+
+[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-g2-to-legacy-v1) gives the verbatim compiled type, both carriers, the parameter map and [full dependency audit](verification/2026-10-30-additions/batches/batch-004-g2-comparison/original/scopes/scope-27d24b073003646aad6901a1).
 
 The existing order/simplicity dependency diagram and line counts describe the split-octonion model. They are not counts for both constructions combined.
 

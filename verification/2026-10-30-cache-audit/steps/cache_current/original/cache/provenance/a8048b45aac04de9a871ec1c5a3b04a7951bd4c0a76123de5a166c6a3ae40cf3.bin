@@ -1,0 +1,63 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["69a3103833d3c354.olean"],
+  "m": false,
+  "i": "3ca548ba3710bd2c.ilean",
+  "c": "881a3eb00c32e252.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearAlgebra/PolynomialSubstitution.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearAlgebra/PolynomialSubstitution.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearAlgebra/PolynomialSubstitution.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearAlgebra/PolynomialSubstitution.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearAlgebra/PolynomialSubstitution.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearAlgebra/PolynomialSubstitution.lean:14:8: automatically included section variable(s) unused in theorem `Atlas.PolynomialLinear.substitute_C`:\n  [DecidableEq ι]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq ι] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/PolynomialSubstitution.lean:14:0: `substitute_C` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#4)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/PolynomialSubstitution.lean:17:8: automatically included section variable(s) unused in theorem `Atlas.PolynomialLinear.substitute_X`:\n  [DecidableEq ι]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq ι] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/PolynomialSubstitution.lean:17:0: `substitute_X` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#4)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/PolynomialSubstitution.lean:29:0: `substitute_mul` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#4)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/PolynomialSubstitution.lean:47:0: `eval_substitute` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#4)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/PolynomialSubstitution.lean:66:0: `eval₂_substitute` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#4)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Mathlib.Algebra.MvPolynomial.Eval transitive imports (legacy)",
+       "0dfd66a69f7d1706"],
+      ["Mathlib.Algebra.MvPolynomial.Eval:importAllArts", "c8db526a10ae1565"],
+      ["Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs transitive imports (legacy)",
+       "02abd460cfcb8e3a"],
+      ["Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs:importAllArts",
+       "a4789c9bc5de5b64"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearAlgebra/PolynomialSubstitution.lean",
+   "c5458b1d2d3255d1"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearAlgebra.PolynomialSubstitution",
+   "558b7205618b9f98"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "ecc284c5b91e9b03"}

@@ -1,0 +1,77 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["c25840aac26c49b9.olean"],
+  "m": false,
+  "i": "a8e4d8d840f5e69f.ilean",
+  "c": "c0b66928b23fee9f.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/HeavyAvoidingCount.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyAvoidingCount.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyAvoidingCount.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyAvoidingCount.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyAvoidingCount.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/HeavyAvoidingCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyAvoidingCount.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyAvoidingCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyAvoidingCount.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyAvoidingCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyAvoidingCount.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def heavyAvoidingIncidenceEquiv (c p : Point) :\n    (Σ v : FixedHeavyParameters c, { x : E // fixedHeavyWord c v (p, x) = 0 ∧ fixedHeavyWord c v (p, x + p.val) = 0 }) ≃\n      Σ x : E, HeavyAvoidingPair c p x\n    where\n  toFun z := ⟨z.2.val, ⟨z.1, z.2.prop⟩⟩\n  invFun z := ⟨z.2.val, ⟨z.1, z.2.prop⟩⟩\n  left_inv _ := rfl\n  right_inv _ := rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyAvoidingCount.lean:7:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyAvoidingCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyAvoidingCount.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyAvoidingPair_card (c p : Point) (x : E) :\n    Nat.card (HeavyAvoidingPair c p x) = if p = c then 0 else 64 := by\n  classical\n  have hrow (v : FixedHeavyParameters c) :\n    Nat.card { y : E // fixedHeavyWord c v (p, y) = 0 ∧ fixedHeavyWord c v (p, y + p.val) = 0 } =\n      if p = c then 0 else 4 :=\n    by\n    rw [Nat.card_eq_fintype_card, Fintype.card_subtype]\n    exact fixedHeavy_row_pairs_card c p v\n  have hpos (y : E) : Nat.card (HeavyAvoidingPair c p y) = Nat.card (HeavyAvoidingPair c p 0) :=\n    (Nat.card_congr (heavyAvoidingPairEquiv c p y)).symm\n  have hh := Nat.card_congr (heavyAvoidingIncidenceEquiv c p)\n  rw [Nat.card_sigma, Nat.card_sigma] at hh\n  simp_rw [hrow, hpos] at hh\n  simp only [Finset.sum_const, Finset.card_univ, smul_eq_mul] at hh\n  rw [← Nat.card_eq_fintype_card, fixedHeavyParameters_card] at hh\n  have he : Fintype.card E = 8 := by decide\n  rw [he] at hh\n  rw [hpos]\n  split_ifs at hh ⊢ <;> omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyAvoidingCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyAvoidingCount.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyAvoidingCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyAvoidingCount.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.HeavyOrthogonalTranslations transitive imports (legacy)",
+       "4b7b5de0c62d1fd0"],
+      ["Atlas.Rudvalis.HeavyOrthogonalTranslations:importAllArts",
+       "3ca33c7f542c9c7a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/HeavyAvoidingCount.lean",
+   "a666ab60479672c5"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.HeavyAvoidingCount", "3bcad9f54b7fd69f"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "a088a34f8297924d"}

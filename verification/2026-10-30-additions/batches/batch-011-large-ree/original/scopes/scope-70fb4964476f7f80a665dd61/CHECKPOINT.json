@@ -1,0 +1,197 @@
+{
+  "id": "staged-TailRhoAction",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.ReeF4.TailRhoNormalization"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoData",
+      "kind": "definition",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoData.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_model",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoData",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoData.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_short",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoCarrierIdentities",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoCarrierIdentities.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_long",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoCarrierIdentities",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoCarrierIdentities.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.rho_positiveTailShort_conjugate",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoRootConjugation",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoRootConjugation.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.rho_positiveLong_conjugate",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoRootConjugation",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoRootConjugation.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveLongFactor_mem_tail",
+      "module": "Atlas.LinearGroups.ReeF4.TailRootMembership",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRootMembership.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveShortFactor_succ_mem_tail",
+      "module": "Atlas.LinearGroups.ReeF4.TailRootMembership",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRootMembership.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.rho_conjugate_mem_positiveRootTail",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoNormalization",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoNormalization.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.weylRhoModel_mem_tail_normalizer",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoNormalization",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoNormalization.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_short_0",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoShort0",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoShort0.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_short_1",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoShort1",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoShort1.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_short_2",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoShort2",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoShort2.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_long_0",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoLong0",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoLong0.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_long_1",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoLong1",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoLong1.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_long_2",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoLong2",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoLong2.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_long_3",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoLong3",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoLong3.lean"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.TailNormalizer.range_le_conj_comap_of_surjective_parameters",
+      "module": "Atlas.GroupTheory.TailNormalizerLemmas",
+      "kind": "theorem",
+      "source": "Atlas/GroupTheory/TailNormalizerLemmas.lean"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.TailNormalizer.subgroupListJoin_seven_le",
+      "module": "Atlas.GroupTheory.TailNormalizerLemmas",
+      "kind": "theorem",
+      "source": "Atlas/GroupTheory/TailNormalizerLemmas.lean"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.TailNormalizer.conjugate_mem_of_le_conj_comap",
+      "module": "Atlas.GroupTheory.TailNormalizerLemmas",
+      "kind": "theorem",
+      "source": "Atlas/GroupTheory/TailNormalizerLemmas.lean"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.TailNormalizer.mem_normalizer_of_inv_eq_self_of_conjugate_mem",
+      "module": "Atlas.GroupTheory.TailNormalizerLemmas",
+      "kind": "theorem",
+      "source": "Atlas/GroupTheory/TailNormalizerLemmas.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.rho_alternatingLongRange_le_tail_comap",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoRangeBounds",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoRangeBounds.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.rho_alternatingShortRange_le_tail_comap",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoRangeBounds",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoRangeBounds.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_le_rho_comap",
+      "module": "Atlas.LinearGroups.ReeF4.TailRhoRangeBounds",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/TailRhoRangeBounds.lean"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-TailRhoAction-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis.",
+        "Atlas.F4.",
+        "Atlas.ReeF4.simple_of_large",
+        "Atlas.ReeF4.model_isPerfect",
+        "Atlas.ReeF4.card_Model",
+        "Atlas.ReeF4.elementarySubgroup_eq_top"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-TailRhoAction-generic-before-model",
+      "roots": [
+        "Atlas.GroupTheory.TailNormalizer.range_le_conj_comap_of_surjective_parameters",
+        "Atlas.GroupTheory.TailNormalizer.subgroupListJoin_seven_le",
+        "Atlas.GroupTheory.TailNormalizer.conjugate_mem_of_le_conj_comap",
+        "Atlas.GroupTheory.TailNormalizer.mem_normalizer_of_inv_eq_self_of_conjugate_mem"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.ReeF4.",
+        "Atlas.Albert.",
+        "Atlas.F4."
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

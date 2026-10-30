@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "id": "release-v1-2-j1-bridges-20261030-j1projectivegeometry",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.Sporadic.Janko1.ProjectiveGeometry"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Janko1.imaginaryRepresentation",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.imaginaryRepresentation_apply",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.imaginaryRepresentation_norm",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.ProjV",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.projectiveAction",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.imaginaryCoordinateAction",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.imaginaryCoordinateAction_one",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.imaginaryCoordinateAction_mul",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.imaginaryCoordinateAction_pow",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.imaginaryCoordinateAction_generator",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.coordinateShift",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.coordinateDouble",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.imaginaryCoordinateAction_P",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.imaginaryCoordinateAction_Q",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.imaginaryCoordinateAction_sign",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.hCoordinateAction",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.imaginaryCoordinateAction_normalForm",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.coordinatePoint",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.coordinatePoint_eq_iff",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.coordinatePoint_smul",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.imaginaryNorm_smul",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.imaginaryNorm_unit_smul_iff",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.IsIsotropic",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.isIsotropic_mk",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.isIsotropic_coordinatePoint",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.isIsotropic_smul_iff",
+      "module": "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "j1projectivegeometry-actual-geometry-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Janko1.isPerfect",
+        "Atlas.Janko1.isSimpleGroup",
+        "Atlas.Sporadic.Janko1.card",
+        "Atlas.Sporadic.Janko1.isSimpleGroup",
+        "Atlas.G2.card_Model",
+        "Atlas.G2.isSimpleGroup"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.G2.Order",
+        "Atlas.LinearGroups.G2.Simplicity",
+        "Atlas.Sporadic.Janko1.Order",
+        "Atlas.Sporadic.Janko1.Simplicity",
+        "Atlas.Sporadic.Janko1.Perfectness",
+        "Atlas.Sporadic.Janko1.WhitelawPointCount",
+        "Atlas.Sporadic.Janko1.WhitelawPointStabilizer",
+        "Atlas.Sporadic.Janko1.WhitelawSextics",
+        "Atlas.Sporadic.Janko1.PSL2Embedding",
+        "Atlas.Sporadic.Janko1.SexticStabilizer",
+        "Atlas.OrderArithmetic.FixedTables.J1",
+        "ComparisonWork.G2Order",
+        "ComparisonWork.G2Simplicity",
+        "ComparisonWork.J1Order",
+        "ComparisonWork.J1Simplicity",
+        "ComparisonWork.J1Perfectness",
+        "ComparisonWork.J1WhitelawPointCount",
+        "ComparisonWork.J1WhitelawPointStabilizer",
+        "ComparisonWork.J1WhitelawSextics",
+        "ComparisonWork.J1PSL2Embedding",
+        "ComparisonWork.J1SexticStabilizer"
+      ],
+      "module_allowlists": [
+        {
+          "prefix": "Atlas.Sporadic.Janko1.",
+          "modules": [
+            "Atlas.Sporadic.Janko1.CoordinateRepresentation",
+            "Atlas.Sporadic.Janko1.GeneratorActions",
+            "Atlas.Sporadic.Janko1.GeneratorChecks",
+            "Atlas.Sporadic.Janko1.GeneratorMatrices",
+            "Atlas.Sporadic.Janko1.Generators",
+            "Atlas.Sporadic.Janko1.Imaginary",
+            "Atlas.Sporadic.Janko1.Local168",
+            "Atlas.Sporadic.Janko1.OctonionBasis",
+            "Atlas.Sporadic.Janko1.PQComplement",
+            "Atlas.Sporadic.Janko1.ProjectiveGeometry",
+            "Atlas.Sporadic.Janko1.Relations",
+            "Atlas.Sporadic.Janko1.SignConjugation",
+            "Atlas.Sporadic.Janko1.SignCoordinates",
+            "Atlas.Sporadic.Janko1.SignGroup",
+            "Atlas.Sporadic.Janko1.SignNormalizer"
+          ]
+        },
+        {
+          "prefix": "Atlas.LinearGroups.G2.",
+          "modules": [
+            "Atlas.LinearGroups.G2.Basic"
+          ]
+        },
+        {
+          "prefix": "ComparisonWork.",
+          "modules": [
+            "ComparisonWork.J1SignCoordinates",
+            "ComparisonWork.J1SignGroup",
+            "ComparisonWork.J1SignConjugation",
+            "ComparisonWork.J1SignNormalizer",
+            "ComparisonWork.J1PQComplement",
+            "ComparisonWork.J1Local168",
+            "ComparisonWork.J1ProjectiveGeometry"
+          ]
+        },
+        {
+          "prefix": "Atlas.Comparisons.Exceptional.G2Binary.",
+          "modules": [
+            "Atlas.Comparisons.Exceptional.G2Binary.Derived",
+            "Atlas.Comparisons.Exceptional.G2Binary.FieldNine",
+            "Atlas.Comparisons.Exceptional.G2Binary.FieldTransport",
+            "Atlas.Comparisons.Exceptional.G2Binary.QuadraticAction",
+            "Atlas.Comparisons.Exceptional.G2Binary.QuadraticFaithful",
+            "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+            "Atlas.Comparisons.Exceptional.G2Binary.QuadraticTransitivity",
+            "Atlas.Comparisons.Exceptional.G2Binary.Simplicity",
+            "Atlas.Comparisons.Exceptional.G2Binary.SplitExtension",
+            "Atlas.Comparisons.Exceptional.G2Binary.UnitaryLinesDraft",
+            "Atlas.Comparisons.Exceptional.G2Binary.UnitaryMarking"
+          ]
+        },
+        {
+          "prefix": "Atlas.Comparisons.Exceptional.ReeThree.",
+          "modules": [
+            "Atlas.Comparisons.Exceptional.ReeThree.FieldActionFaithful",
+            "Atlas.Comparisons.Exceptional.ReeThree.SemilinearTarget"
+          ]
+        }
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/j1-bridges-20261030/environment.json"
+}

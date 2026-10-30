@@ -1,0 +1,261 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["9299d3d33c5159f6.olean"],
+  "m": false,
+  "i": "b9be98aef620a73c.ilean",
+  "c": "7f48546eb7624f1d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoupleCoordinateOrbits.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleCoordinateOrbits.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleCoordinateOrbits.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleCoordinateOrbits.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleCoordinateOrbits.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `set_option maxRecDepth 16384`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem couple_other_row_translation (p : Point) (hp : p ≠ rowLabel 0)\n    (x y : E) : ∃ g : codeCoupleStabilizer, g.val • coordinateCross (p, x) = coordinateCross (p, y) :=\n  by\n  have hc : ∀ p q : Point, p ≠ q → ∃ u : E, dot u q.val = 0 ∧ dot u p.val = 1 := by decide +kernel\n  obtain ⟨u, hu0, hup⟩ := hc p (rowLabel 0) hp\n  let B := outerMatrix (x + y) u\n  have hB0 : matrixAt B (rowLabel 0).val = 0 := by rw [matrixAt_outer, hu0, zero_smul]\n  have hBp : matrixAt B p.val = x + y := by rw [matrixAt_outer, hup, one_smul]\n  obtain ⟨g, hg⟩ := codePermutationHom_surjective ⟨coordinateTranslation B, coordinateTranslation_mem B⟩\n  have hgr : g.val.right = coordinateTranslation B := congrArg Subtype.val hg\n  have hfix (z : E) : g • coordinateCross (rowLabel 0, z) = coordinateCross (rowLabel 0, z) :=\n    by\n    rw [coordinateCross_action, hgr]\n    change coordinateCross (rowLabel 0, z + matrixAt B (rowLabel 0).val) = _\n    rw [hB0, add_zero]\n  refine ⟨⟨g, ?_, ?_⟩, ?_⟩\n  · change g • localReferenceCross = localReferenceCross\n    rw [localReferenceCross_eq]; exact hfix _\n  · change g • referenceSecondCross = referenceSecondCross\n    rw [referenceSecondCross_eq]; exact hfix _\n  · change g • coordinateCross (p, x) = _\n    rw [coordinateCross_action, hgr]\n    change coordinateCross (p, x + matrixAt B p.val) = _\n    rw [hBp, ← add_assoc, vector_add_self, zero_add]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:15:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:7:1: 'theorem couple_other_row_translation (p : Point) (hp : p ≠ rowLabel 0) (x y : E) :\n    ∃ g : codeCoupleStabilizer, g.val • coordinateCross (p, x) = coordinateCross (p, y) :=\n  by\n  have hc : ∀ p q : Point, p ≠ q → ∃ u : E, dot u q.val = 0 ∧ dot u p.val = 1 := by decide +kernel\n  obtain ⟨u, hu0, hup⟩ := hc p (rowLabel 0) hp\n  let B := outerMatrix (x + y) u\n  have hB0 : matrixAt B (rowLabel 0).val = 0 := by rw [matrixAt_outer, hu0, zero_smul]\n  have hBp : matrixAt B p.val = x + y := by rw [matrixAt_outer, hup, one_smul]\n  obtain ⟨g, hg⟩ := codePermutationHom_surjective ⟨coordinateTranslation B, coordinateTranslation_mem B⟩\n  have hgr : g.val.right = coordinateTranslation B := congrArg Subtype.val hg\n  have hfix (z : E) : g • coordinateCross (rowLabel 0, z) = coordinateCross (rowLabel 0, z) :=\n    by\n    rw [coordinateCross_action, hgr]\n    change coordinateCross (rowLabel 0, z + matrixAt B (rowLabel 0).val) = _\n    rw [hB0, add_zero]\n  refine ⟨⟨g, ?_, ?_⟩, ?_⟩\n  · change g • localReferenceCross = localReferenceCross\n    rw [localReferenceCross_eq]; exact hfix _\n  · change g • referenceSecondCross = referenceSecondCross\n    rw [referenceSecondCross_eq]; exact hfix _\n  · change g • coordinateCross (p, x) = _\n    rw [coordinateCross_action, hgr]\n    change coordinateCross (p, x + matrixAt B p.val) = _\n    rw [hBp, ← add_assoc, vector_add_self,\n      zero_add]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:7:57: missing space in the source\n\nThis part of the code\n  'p≠rowLabel'\nshould be written as\n  'p ≠ rowLabel'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleBeta_row_coordinate (r : Fin 7) (x : E) :\n    (coupleCodeBeta.val.right (rowLabel r, x)).1 = rowLabel (coupleBetaRow r) :=\n  by\n  obtain ⟨k, hk⟩ := (seedInnerLabel_bijective r).surjective x\n  let j := signedPositionIndex k\n  have hj : signedPositionIndex j = k := by dsimp [j]; decide +kernel +revert\n  have hz : originalCoordinateEquiv (r, j) = (rowLabel r, x) :=\n    by\n    change (rowLabel r, seedInnerLabel r (signedPositionIndex j)) = _\n    rw [hj, hk]\n  rw [← hz]\n  exact coupleCodeBeta_row r j`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:31:1: 'theorem coupleBeta_row_coordinate (r : Fin 7) (x : E) :\n    (coupleCodeBeta.val.right (rowLabel r, x)).1 = rowLabel (coupleBetaRow r) :=\n  by\n  obtain ⟨k, hk⟩ := (seedInnerLabel_bijective r).surjective x\n  let j := signedPositionIndex k\n  have hj : signedPositionIndex j = k := by dsimp [j]; decide +kernel +revert\n  have hz : originalCoordinateEquiv (r, j) = (rowLabel r, x) :=\n    by\n    change (rowLabel r, seedInnerLabel r (signedPositionIndex j)) = _\n    rw [hj, hk]\n  rw [← hz]\n  exact coupleCodeBeta_row r j' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleBeta_pow_row_coordinate (n : ℕ) (r : Fin 7) (x : E) :\n    ((coupleCodeBeta ^ n).val.right (rowLabel r, x)).1 = rowLabel ((coupleBetaRow^[n]) r) := by\n  induction n with\n  | zero => rfl\n  | succ n ih =>\n    rw [pow_succ', Subgroup.coe_mul]\n    change (coupleCodeBeta.val.right ((coupleCodeBeta ^ n).val.right (rowLabel r, x))).1 = _\n    have hz :\n      (coupleCodeBeta ^ n).val.right (rowLabel r, x) =\n        (rowLabel ((coupleBetaRow^[n]) r), ((coupleCodeBeta ^ n).val.right (rowLabel r, x)).2) :=\n      Prod.ext ih rfl\n    rw [hz, coupleBeta_row_coordinate, Function.iterate_succ_apply']`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:50:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:42:1: 'theorem coupleBeta_pow_row_coordinate (n : ℕ) (r : Fin 7) (x : E) :\n    ((coupleCodeBeta ^ n).val.right (rowLabel r, x)).1 = rowLabel ((coupleBetaRow^[n]) r) := by\n  induction n with\n  | zero => rfl\n  | succ n ih =>\n    rw [pow_succ', Subgroup.coe_mul]\n    change (coupleCodeBeta.val.right ((coupleCodeBeta ^ n).val.right (rowLabel r, x))).1 = _\n    have hz :\n      (coupleCodeBeta ^ n).val.right (rowLabel r, x) =\n        (rowLabel ((coupleBetaRow^[n]) r), ((coupleCodeBeta ^ n).val.right (rowLabel r, x)).2) :=\n      Prod.ext ih rfl\n    rw [hz, coupleBeta_row_coordinate,\n      Function.iterate_succ_apply']' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleBeta_other_row_connected (r s : Fin 7) (hr : r ≠ 0) (hs : s ≠ 0)\n    (hclass : (r = 4 ∨ r = 5) ↔ (s = 4 ∨ s = 5)) : ∃ n : Fin 4, (coupleBetaRow^[n.val]) r = s := by\n  decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:53:1: 'theorem coupleBeta_other_row_connected (r s : Fin 7) (hr : r ≠ 0) (hs : s ≠ 0)\n    (hclass : (r = 4 ∨ r = 5) ↔ (s = 4 ∨ s = 5)) : ∃ n : Fin 4, (coupleBetaRow^[n.val]) r = s := by\n  decide +kernel +revert' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:53:61: missing space in the source\n\nThis part of the code\n  'r≠0) (hs'\nshould be written as\n  'r ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:53:72: missing space in the source\n\nThis part of the code\n  's≠0)\n '\nshould be written as\n  's ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:54:16: missing space in the source\n\nThis part of the code\n  '(r=4 ∨ r=5)'\nshould be written as\n  '(r = 4'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:54:22: missing space in the source\n\nThis part of the code\n  'r=5) ↔'\nshould be written as\n  'r = 5)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:54:30: missing space in the source\n\nThis part of the code\n  '(s=4 ∨ s=5))'\nshould be written as\n  '(s = 4'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:54:36: missing space in the source\n\nThis part of the code\n  's=5)) :'\nshould be written as\n  's = 5))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe pair stabilizer connects all coordinate crosses in either of its two other-row classes. -/\ntheorem couple_coordinate_other_rows_transitive (r s : Fin 7) (hr : r ≠ 0) (hs : s ≠ 0)\n    (hclass : (r = 4 ∨ r = 5) ↔ (s = 4 ∨ s = 5)) (x y : E) :\n    ∃ g : codeCoupleStabilizer, g.val • coordinateCross (rowLabel r, x) = coordinateCross (rowLabel s, y) :=\n  by\n  obtain ⟨n, hn⟩ := coupleBeta_other_row_connected r s hr hs hclass\n  let b : codeCoupleStabilizer := ⟨coupleCodeBeta ^ n.val, coupleBeta_pow_fix n.val⟩\n  let z := (b.val.val.right (rowLabel r, x)).2\n  have hb : b.val.val.right (rowLabel r, x) = (rowLabel s, z) :=\n    by\n    apply Prod.ext\n    · exact (coupleBeta_pow_row_coordinate n.val r x).trans (congrArg rowLabel hn)\n    · rfl\n  have hs0 : rowLabel s ≠ rowLabel 0 := fun h => hs (rowLabel_bijective.1 h)\n  obtain ⟨g, hg⟩ := couple_other_row_translation (rowLabel s) hs0 z y\n  refine ⟨g * b, ?_⟩\n  change (g.val * b.val) • coordinateCross (rowLabel r, x) = _\n  rw [mul_smul, coordinateCross_action, hb]\n  exact hg`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:61:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:59:69: missing space in the source\n\nThis part of the code\n  'r≠0) (hs'\nshould be written as\n  'r ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:59:80: missing space in the source\n\nThis part of the code\n  's≠0)\n '\nshould be written as\n  's ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:60:16: missing space in the source\n\nThis part of the code\n  '(r=4 ∨ r=5)'\nshould be written as\n  '(r = 4'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:60:22: missing space in the source\n\nThis part of the code\n  'r=5) ↔'\nshould be written as\n  'r = 5)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:60:30: missing space in the source\n\nThis part of the code\n  '(s=4 ∨ s=5))'\nshould be written as\n  '(s = 4'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:60:36: missing space in the source\n\nThis part of the code\n  's=5)) (x'\nshould be written as\n  's = 5))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinate_reference_row_four_cases (x : E) :\n    coordinateCross (rowLabel 0, x) = localReferenceCross ∨\n      coordinateCross (rowLabel 0, x) = referenceSecondCross ∨\n        coordinateCross (rowLabel 0, x) = coordinateCross (originalCoordinateEquiv (0, 4)) ∨\n          coordinateCross (rowLabel 0, x) = coordinateCross (originalCoordinateEquiv (0, 6)) :=\n  by\n  have hc :\n    ∀ x : E,\n      ∃ j : Fin 4,\n        (rowLabel 0, x) = originalCoordinateEquiv (0, (![1, 2, 4, 6] j)) ∨\n          (rowLabel 0, x + (rowLabel 0).val) = originalCoordinateEquiv (0, (![1, 2, 4, 6] j)) :=\n    by decide +kernel\n  obtain ⟨j, hj⟩ := hc x\n  have he : coordinateCross (rowLabel 0, x) = coordinateCross (originalCoordinateEquiv (0, (![1, 2, 4, 6] j))) :=\n    by\n    apply (coordinateCross_eq_iff _ _).mpr\n    simpa only [codeI_coordinate] using hj\n  fin_cases j\n  · exact Or.inl he\n  · exact Or.inr (Or.inl he)\n  · exact Or.inr (Or.inr (Or.inl he))\n  · exact Or.inr (Or.inr (Or.inr he))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:88:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleCodeR_swap_last_two :\n    codeR • coordinateCross (originalCoordinateEquiv (0, 4)) = coordinateCross (originalCoordinateEquiv (0, 6)) ∧\n      codeR • coordinateCross (originalCoordinateEquiv (0, 6)) = coordinateCross (originalCoordinateEquiv (0, 4)) :=\n  by constructor <;> rw [coordinateCross_action, codeR_right, original_congr_apply] <;> rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:98:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:99:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem couple_coordinate_reference_row_transitive (v w : MinimalCross)\n    (hv : v ∈ coordinateRowFrame (rowLabel 0)) (hw : w ∈ coordinateRowFrame (rowLabel 0))\n    (hvx : v ≠ localReferenceCross) (hvy : v ≠ referenceSecondCross) (hwx : w ≠ localReferenceCross)\n    (hwy : w ≠ referenceSecondCross) : ∃ g : codeCoupleStabilizer, g.val • v = w :=\n  by\n  obtain ⟨x, rfl⟩ := hv\n  obtain ⟨y, rfl⟩ := hw\n  have hx := (coordinate_reference_row_four_cases x).resolve_left hvx |>.resolve_left hvy\n  have hy := (coordinate_reference_row_four_cases y).resolve_left hwx |>.resolve_left hwy\n  let R : codeCoupleStabilizer := ⟨codeR, coupleCodeR_fixes_reference⟩\n  rcases hx with hx | hx <;> rcases hy with hy | hy\n  · exact ⟨1, by simpa only [Subgroup.coe_one, one_smul] using hx.trans hy.symm⟩\n  ·\n    exact\n      ⟨R, by change codeR • coordinateCross (rowLabel 0, x) = coordinateCross (rowLabel 0, y);\n        rw [hx, hy, coupleCodeR_swap_last_two.1]⟩\n  ·\n    exact\n      ⟨R, by change codeR • coordinateCross (rowLabel 0, x) = coordinateCross (rowLabel 0, y);\n        rw [hx, hy, coupleCodeR_swap_last_two.2]⟩\n  · exact ⟨1, by simpa only [Subgroup.coe_one, one_smul] using hx.trans hy.symm⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:114:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:115:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:103:11: missing space in the source\n\nThis part of the code\n  'v∈coordinateRowFrame'\nshould be written as\n  'v ∈ coordinateRowFrame'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:103:52: missing space in the source\n\nThis part of the code\n  'w∈coordinateRowFrame'\nshould be written as\n  'w ∈ coordinateRowFrame'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:104:12: missing space in the source\n\nThis part of the code\n  'v≠localReferenceCross)'\nshould be written as\n  'v ≠ localReferenceCross)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:104:42: missing space in the source\n\nThis part of the code\n  'v≠referenceSecondCross)'\nshould be written as\n  'v ≠ referenceSecondCross)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:105:12: missing space in the source\n\nThis part of the code\n  'w≠localReferenceCross)'\nshould be written as\n  'w ≠ localReferenceCross)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:105:42: missing space in the source\n\nThis part of the code\n  'w≠referenceSecondCross)'\nshould be written as\n  'w ≠ referenceSecondCross)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem couple_coordinate_outside_dozen_transitive (v w : MinimalCross)\n    (hv : v ∈ coordinateFrame \\ referenceCoordinateDozen) (hw : w ∈ coordinateFrame \\ referenceCoordinateDozen) :\n    ∃ g : codeCoupleStabilizer, g.val • v = w :=\n  by\n  obtain ⟨⟨p, x⟩, rfl⟩ := coordinateFrame_rep v hv.1\n  obtain ⟨⟨q, y⟩, rfl⟩ := coordinateFrame_rep w hw.1\n  obtain ⟨r, rfl⟩ := rowLabel_bijective.2 p\n  obtain ⟨s, rfl⟩ := rowLabel_bijective.2 q\n  have hr : ¬(r = 0 ∨ r = 4 ∨ r = 5) := by\n    simpa only [referenceCoordinateDozen, coordinateCross_mem_selectedRows_iff, referenceDozenRows_marking] using hv.2\n  have hs : ¬(s = 0 ∨ s = 4 ∨ s = 5) := by\n    simpa only [referenceCoordinateDozen, coordinateCross_mem_selectedRows_iff, referenceDozenRows_marking] using hw.2\n  exact couple_coordinate_other_rows_transitive r s (fun h => hr (Or.inl h)) (fun h => hs (Or.inl h)) (by tauto) x y`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:127:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:129:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:118:1: 'theorem couple_coordinate_outside_dozen_transitive (v w : MinimalCross)\n    (hv : v ∈ coordinateFrame \\ referenceCoordinateDozen) (hw : w ∈ coordinateFrame \\ referenceCoordinateDozen) :\n    ∃ g : codeCoupleStabilizer, g.val • v = w :=\n  by\n  obtain ⟨⟨p, x⟩, rfl⟩ := coordinateFrame_rep v hv.1\n  obtain ⟨⟨q, y⟩, rfl⟩ := coordinateFrame_rep w hw.1\n  obtain ⟨r, rfl⟩ := rowLabel_bijective.2 p\n  obtain ⟨s, rfl⟩ := rowLabel_bijective.2 q\n  have hr : ¬(r = 0 ∨ r = 4 ∨ r = 5) := by\n    simpa only [referenceCoordinateDozen, coordinateCross_mem_selectedRows_iff, referenceDozenRows_marking] using hv.2\n  have hs : ¬(s = 0 ∨ s = 4 ∨ s = 5) := by\n    simpa only [referenceCoordinateDozen, coordinateCross_mem_selectedRows_iff, referenceDozenRows_marking] using hw.2\n  exact\n    couple_coordinate_other_rows_transitive r s (fun h => hr (Or.inl h)) (fun h => hs (Or.inl h)) (by tauto) x\n      y' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:119:11: missing space in the source\n\nThis part of the code\n  'v∈coordinateFrame\\referenceCoordinateDozen)'\nshould be written as\n  'v ∈ coordinateFrame'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:119:27: missing space in the source\n\nThis part of the code\n  'v∈coordinateFrame\\referenceCoordinateDozen)'\nshould be written as\n  'coordinateFrame \\ referenceCoordinateDozen)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:120:11: missing space in the source\n\nThis part of the code\n  'w∈coordinateFrame\\referenceCoordinateDozen)'\nshould be written as\n  'w ∈ coordinateFrame'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:120:27: missing space in the source\n\nThis part of the code\n  'w∈coordinateFrame\\referenceCoordinateDozen)'\nshould be written as\n  'coordinateFrame \\ referenceCoordinateDozen)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem couple_coordinate_dozen_other_rows_transitive (v w : MinimalCross)\n    (hv : v ∈ referenceCoordinateDozen \\ coordinateRowFrame (rowLabel 0))\n    (hw : w ∈ referenceCoordinateDozen \\ coordinateRowFrame (rowLabel 0)) : ∃ g : codeCoupleStabilizer, g.val • v = w :=\n  by\n  obtain ⟨⟨p, x⟩, rfl⟩ := coordinateFrame_rep v (referenceCoordinateDozen_subset hv.1)\n  obtain ⟨⟨q, y⟩, rfl⟩ := coordinateFrame_rep w (referenceCoordinateDozen_subset hw.1)\n  obtain ⟨r, rfl⟩ := rowLabel_bijective.2 p\n  obtain ⟨s, rfl⟩ := rowLabel_bijective.2 q\n  have hr : r = 0 ∨ r = 4 ∨ r = 5 := by\n    simpa only [referenceCoordinateDozen, coordinateCross_mem_selectedRows_iff, referenceDozenRows_marking] using hv.1\n  have hs : s = 0 ∨ s = 4 ∨ s = 5 := by\n    simpa only [referenceCoordinateDozen, coordinateCross_mem_selectedRows_iff, referenceDozenRows_marking] using hw.1\n  have hr0 : r ≠ 0 := by intro h; subst r; exact hv.2 ⟨x, rfl⟩\n  have hs0 : s ≠ 0 := by intro h; subst s; exact hw.2 ⟨y, rfl⟩\n  exact couple_coordinate_other_rows_transitive r s hr0 hs0 (by tauto) x y`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:142:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:144:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:133:1: 'theorem couple_coordinate_dozen_other_rows_transitive (v w : MinimalCross)\n    (hv : v ∈ referenceCoordinateDozen \\ coordinateRowFrame (rowLabel 0))\n    (hw : w ∈ referenceCoordinateDozen \\ coordinateRowFrame (rowLabel 0)) : ∃ g : codeCoupleStabilizer, g.val • v = w :=\n  by\n  obtain ⟨⟨p, x⟩, rfl⟩ := coordinateFrame_rep v (referenceCoordinateDozen_subset hv.1)\n  obtain ⟨⟨q, y⟩, rfl⟩ := coordinateFrame_rep w (referenceCoordinateDozen_subset hw.1)\n  obtain ⟨r, rfl⟩ := rowLabel_bijective.2 p\n  obtain ⟨s, rfl⟩ := rowLabel_bijective.2 q\n  have hr : r = 0 ∨ r = 4 ∨ r = 5 := by\n    simpa only [referenceCoordinateDozen, coordinateCross_mem_selectedRows_iff, referenceDozenRows_marking] using hv.1\n  have hs : s = 0 ∨ s = 4 ∨ s = 5 := by\n    simpa only [referenceCoordinateDozen, coordinateCross_mem_selectedRows_iff, referenceDozenRows_marking] using hw.1\n  have hr0 : r ≠ 0 := by intro h; subst r; exact hv.2 ⟨x, rfl⟩\n  have hs0 : s ≠ 0 := by intro h; subst s; exact hw.2 ⟨y, rfl⟩\n  exact\n    couple_coordinate_other_rows_transitive r s hr0 hs0 (by tauto) x\n      y' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:134:11: missing space in the source\n\nThis part of the code\n  'v∈referenceCoordinateDozen\\coordinateRowFrame'\nshould be written as\n  'v ∈ referenceCoordinateDozen'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:134:36: missing space in the source\n\nThis part of the code\n  'v∈referenceCoordinateDozen\\coordinateRowFrame'\nshould be written as\n  'referenceCoordinateDozen \\ coordinateRowFrame'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:135:11: missing space in the source\n\nThis part of the code\n  'w∈referenceCoordinateDozen\\coordinateRowFrame'\nshould be written as\n  'w ∈ referenceCoordinateDozen'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:135:36: missing space in the source\n\nThis part of the code\n  'w∈referenceCoordinateDozen\\coordinateRowFrame'\nshould be written as\n  'referenceCoordinateDozen \\ coordinateRowFrame'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleCoordinateOrbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoupleFourSupportOrbit transitive imports (legacy)",
+       "f090c9a7c7dfea41"],
+      ["Atlas.Rudvalis.CoupleFourSupportOrbit:importAllArts",
+       "9444b6e3c31ef7b8"],
+      ["Atlas.Rudvalis.CoupleFusionGroup transitive imports (legacy)",
+       "517aa735777e2fd5"],
+      ["Atlas.Rudvalis.CoupleFusionGroup:importAllArts",
+       "fa505d00bbd00601"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoupleCoordinateOrbits.lean",
+   "71a1e88005ddd0eb"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoupleCoordinateOrbits", "21c2de8835fa0cf8"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "7cfb9baa421e50be"}

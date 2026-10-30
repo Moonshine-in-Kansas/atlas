@@ -1,0 +1,90 @@
+{
+  "id": "staged-TailRhoCoordinates",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "F4Work.TailRhoData",
+    "F4Work.TailRhoShort0",
+    "F4Work.TailRhoShort1",
+    "F4Work.TailRhoShort2",
+    "F4Work.TailRhoLong0",
+    "F4Work.TailRhoLong1",
+    "F4Work.TailRhoLong2",
+    "F4Work.TailRhoLong3"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier",
+      "module": "F4Work.TailRhoData",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_model",
+      "module": "F4Work.TailRhoData",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_short_0",
+      "module": "F4Work.TailRhoShort0",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_short_1",
+      "module": "F4Work.TailRhoShort1",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_short_2",
+      "module": "F4Work.TailRhoShort2",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_long_0",
+      "module": "F4Work.TailRhoLong0",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_long_1",
+      "module": "F4Work.TailRhoLong1",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_long_2",
+      "module": "F4Work.TailRhoLong2",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.tailRhoCarrier_long_3",
+      "module": "F4Work.TailRhoLong3",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-TailRhoCoordinates-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis.",
+        "Atlas.F4.",
+        "Atlas.ReeF4.simple_of_large",
+        "Atlas.ReeF4.model_isPerfect",
+        "Atlas.ReeF4.card_Model",
+        "Atlas.ReeF4.elementarySubgroup_eq_top"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ]
+}

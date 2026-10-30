@@ -16,9 +16,9 @@ full model descriptions, orders and simplicity domains remain in the catalogue.
 
 The generated views display all 39 models of the 33 entries. Six entries retain
 both original and Chevalley constructions. [ISOMORPHISMS.md](ISOMORPHISMS.md)
-exposes the four registered A/B/C/D equivalences with exact source proofs,
-compiled types and dependency certificates. G₂/F₄ retain their own model contracts
-and the stated scope of the comparisons between them. The same model inventory supplies the catalogue, CSV, statement pages,
+exposes the six registered A/B/C/D/G₂/F₄ equivalences with exact source proofs,
+compiled types and dependency certificates. Each model keeps its own order and
+simplicity evidence. The same model inventory supplies the catalogue, CSV, statement pages,
 comparison pages and navigation in every proof diagram.
 
 Run `ruby catalogue/manage.rb refresh` after a reviewed data edit, then
@@ -31,7 +31,13 @@ The independent existence specifications retain exact source-bound mathematical
 contracts. The full internal theorem inventory remains available in Lean and the
 verification target data.
 
-`current-verification.json` binds these three registries to the 1,207-root
-26 October compiled audit. The prior 1,167-reference catalogue check is preserved
+`checkpoints.json` records additional proved statements in continuing projects;
+[CHECKPOINTS.md](CHECKPOINTS.md) gives their compiled signatures, verification
+evidence and remaining mathematical limits. These statements do not increase
+the 33 completed catalogue entries or count as independent Comparator passes.
+
+`current-verification.json` binds the registries to the current 1,313-root
+compiled audit. The preceding [1,207-root audit](../verification/2026-10-26-cache-audit/RESULT.json)
+and the prior 1,167-reference catalogue check are preserved
 as [dated evidence](../verification/catalogue/2026-10-19/original-current-verification.json);
 its historical development paths and scope are not current release paths.

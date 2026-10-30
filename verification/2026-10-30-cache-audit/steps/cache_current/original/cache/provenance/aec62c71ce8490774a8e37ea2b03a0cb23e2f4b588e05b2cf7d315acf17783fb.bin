@@ -1,0 +1,170 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["6dedbc00726445c2.olean"],
+  "m": false,
+  "i": "6985945886860848.ilean",
+  "c": "7b18771e0c3c2ab1.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoupleFourTransitivity.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleFourTransitivity.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleFourTransitivity.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleFourTransitivity.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleFourTransitivity.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFourSupport_reference_zero (a : Fin 3) (m x : E) :\n    coupleFourSupport a m (rowLabel 0, x) = 0 :=\n  by\n  change\n    coupleFourConstants a m (rowLabel 0) +\n          dot (matrixAt (outerMatrix (coupleFourForm a) (coupleFourForm a)) (rowLabel 0).val) x +\n        theta (rowLabel 0) 0 x =\n      0\n  have hz : dot (coupleFourForm a) (rowLabel 0).val = 0 := by decide +kernel +revert\n  simp only [matrixAt_outer, hz, zero_smul, theta_zero_parameter, add_zero]\n  simpa [dot] using (coupleFourConstants_valid a m).1 (rowLabel 0) hz`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:7:1: 'theorem coupleFourSupport_reference_zero (a : Fin 3) (m x : E) : coupleFourSupport a m (rowLabel 0, x) = 0 :=\n  by\n  change\n    coupleFourConstants a m (rowLabel 0) +\n          dot (matrixAt (outerMatrix (coupleFourForm a) (coupleFourForm a)) (rowLabel 0).val) x +\n        theta (rowLabel 0) 0 x =\n      0\n  have hz : dot (coupleFourForm a) (rowLabel 0).val = 0 := by decide +kernel +revert\n  simp only [matrixAt_outer, hz, zero_smul, theta_zero_parameter, add_zero]\n  simpa [dot] using\n    (coupleFourConstants_valid a m).1 (rowLabel 0)\n      hz' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourCouple_word_parameters (w : FourMinimumWords)\n    (hz : ∀ x, reduce w.val.val (rowLabel 0, x) = 0) : ∃ a : Fin 3, ∃ m : E, reduce w.val.val = coupleFourSupport a m :=\n  by\n  obtain ⟨a, ε, hr, hε, hs⟩ := w.prop.2\n  have ha : dot a.val (rowLabel 0).val = 0 :=\n    by\n    have h := fourNormal_pair ε a.val (rowLabel 0) 0\n    rw [← hr, hz, hz, zero_add] at h\n    exact h.symm\n  have hc : ∀ a : Point, dot a.val (rowLabel 0).val = 0 → ∃ i : Fin 3, a.val = coupleFourForm i := by decide +kernel\n  obtain ⟨i, hi⟩ := hc a ha\n  rw [hi] at hr hε\n  obtain ⟨m, hm⟩ := coupleFourConstants_exhaustive i ε hε hs\n  exact ⟨i, m, by simpa only [hm, coupleFourSupport] using hr⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:17:11: missing space in the source\n\nThis part of the code\n  '∀x,reduce'\nshould be written as\n  '∀ x, reduce'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:17:13: missing space in the source\n\nThis part of the code\n  '∀x,reduce'\nshould be written as\n  'x, reduce'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:17:42: missing space in the source\n\nThis part of the code\n  '0,x)=0)'\nshould be written as\n  '0, x) ='\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:17:44: missing space in the source\n\nThis part of the code\n  '0,x)=0) :'\nshould be written as\n  'x) = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourCouple_same_class_words (a b : Fin 3) (m n : E)\n    (hab : a = 0 ↔ b = 0) (v w : QuaternaryWord) (hv : v ∈ quaternaryCode) (hw : w ∈ quaternaryCode)\n    (hv16 : euclideanWeight v = 16) (hw16 : euclideanWeight w = 16) (hrv : reduce v = coupleFourSupport a m)\n    (hrw : reduce w = coupleFourSupport b n) :\n    ∃ g : codeGroup,\n      g • localReferenceCross = localReferenceCross ∧\n        g • referenceSecondCross = referenceSecondCross ∧ monomialHom g.val v = w :=\n  by\n  obtain ⟨g, hgx, hgy, hgr⟩ := coupleFour_same_class_support_orbit a b m n hab v hrv\n  let u := monomialHom g.val v\n  have hu : u ∈ quaternaryCode := (g.prop v).mp hv\n  have hu16 : euclideanWeight u = 16 := (monomial_euclideanWeight _ _).trans hv16\n  have hur : reduce u = coupleFourSupport b n := hgr\n  have huf : admissibleFourSupport (reduce u) := hur.symm ▸ coupleFourSupport_admissible b n\n  have huz : ∀ x, reduce u (rowLabel 0, x) = 0 := by intro x; rw [hur]; exact coupleFourSupport_reference_zero b n x\n  obtain ⟨h, hh, hact⟩ := fourCouple_same_residue_transitive u w hu hw hu16 hw16 huf huz (hur.trans hrw.symm)\n  refine ⟨h * g, ?_, ?_, ?_⟩\n  · rw [mul_smul, hgx, localReferenceCross_eq]; exact hh 0\n  · rw [mul_smul, hgy, referenceSecondCross_eq]; exact hh _\n  · change monomialHom (h.val * g.val) v = w\n    rw [map_mul]\n    exact hact`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:46:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:32:12: missing space in the source\n\nThis part of the code\n  'a=0 ↔ b=0)'\nshould be written as\n  'a = 0'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:32:18: missing space in the source\n\nThis part of the code\n  'b=0) (v'\nshould be written as\n  'b = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:33:11: missing space in the source\n\nThis part of the code\n  'v∈quaternaryCode)'\nshould be written as\n  'v ∈ quaternaryCode)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:33:35: missing space in the source\n\nThis part of the code\n  'w∈quaternaryCode)'\nshould be written as\n  'w ∈ quaternaryCode)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:34:29: missing space in the source\n\nThis part of the code\n  'v=16) (hw16'\nshould be written as\n  'v = 16)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:34:59: missing space in the source\n\nThis part of the code\n  'w=16)\n'\nshould be written as\n  'w = 16)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:35:19: missing space in the source\n\nThis part of the code\n  'v=coupleFourSupport'\nshould be written as\n  'v = coupleFourSupport'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:35:58: missing space in the source\n\nThis part of the code\n  'w=coupleFourSupport'\nshould be written as\n  'w = coupleFourSupport'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourSupportNormal_couple (a : Fin 3) (m : E) :\n    fourSupportNormal ⟨coupleFourSupport a m, coupleFourSupport_admissible a m⟩ =\n      ⟨coupleFourForm a, coupleFourForm_ne_zero a⟩ :=\n  by\n  let aa : Point := ⟨coupleFourForm a, coupleFourForm_ne_zero a⟩\n  let ε : OddActiveConstants aa :=\n    ⟨⟨coupleFourConstants a m, (coupleFourConstants_valid a m).1⟩, (coupleFourConstants_valid a m).2⟩\n  have h : fourSupportEquiv ⟨aa, ε⟩ = ⟨coupleFourSupport a m, coupleFourSupport_admissible a m⟩ := rfl\n  unfold fourSupportNormal\n  rw [← h, Equiv.symm_apply_apply]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:54:1: 'theorem fourSupportNormal_couple (a : Fin 3) (m : E) :\n    fourSupportNormal ⟨coupleFourSupport a m, coupleFourSupport_admissible a m⟩ =\n      ⟨coupleFourForm a, coupleFourForm_ne_zero a⟩ :=\n  by\n  let aa : Point := ⟨coupleFourForm a, coupleFourForm_ne_zero a⟩\n  let ε : OddActiveConstants aa :=\n    ⟨⟨coupleFourConstants a m, (coupleFourConstants_valid a m).1⟩, (coupleFourConstants_valid a m).2⟩\n  have h : fourSupportEquiv ⟨aa, ε⟩ = ⟨coupleFourSupport a m, coupleFourSupport_admissible a m⟩ := rfl\n  unfold fourSupportNormal\n  rw [← h, Equiv.symm_apply_apply]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourCouple_parameter_energy (w : FourMinimumWords) (a : Fin 3) (m : E)\n    (hr : reduce w.val.val = coupleFourSupport a m) :\n    coordinateRowEnergy referenceDozenRows (minimumWordShellLift (fourMinimumWord w)).val.val =\n      if a = 0 then 0 else 2 :=\n  by\n  rw [fourWord_energy]\n  have he :\n    (⟨reduce w.val.val, w.prop.2⟩ : { d : BinaryWord // admissibleFourSupport d }) =\n      ⟨coupleFourSupport a m, coupleFourSupport_admissible a m⟩ :=\n    Subtype.ext hr\n  rw [he, fourSupportNormal_couple]\n  have hh : fourSelectedRows ⟨coupleFourForm a, coupleFourForm_ne_zero a⟩ = if a = 0 then 0 else 2 :=\n    by\n    have hall : ∀ a : Fin 3, fourSelectedRows ⟨coupleFourForm a, coupleFourForm_ne_zero a⟩ = if a = 0 then 0 else 2 :=\n      by\n      unfold fourSelectedRows referenceDozenRows\n      decide +kernel\n    exact hall a\n  rw [hh]\n  split_ifs <;> norm_num`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:64:1: 'theorem fourCouple_parameter_energy (w : FourMinimumWords) (a : Fin 3) (m : E)\n    (hr : reduce w.val.val = coupleFourSupport a m) :\n    coordinateRowEnergy referenceDozenRows (minimumWordShellLift (fourMinimumWord w)).val.val =\n      if a = 0 then 0 else 2 :=\n  by\n  rw [fourWord_energy]\n  have he :\n    (⟨reduce w.val.val, w.prop.2⟩ : { d : BinaryWord // admissibleFourSupport d }) =\n      ⟨coupleFourSupport a m, coupleFourSupport_admissible a m⟩ :=\n    Subtype.ext hr\n  rw [he, fourSupportNormal_couple]\n  have hh : fourSelectedRows ⟨coupleFourForm a, coupleFourForm_ne_zero a⟩ = if a = 0 then 0 else 2 :=\n    by\n    have hall : ∀ a : Fin 3, fourSelectedRows ⟨coupleFourForm a, coupleFourForm_ne_zero a⟩ = if a = 0 then 0 else 2 :=\n      by\n      unfold fourSelectedRows referenceDozenRows\n      decide +kernel\n    exact hall a\n  rw [hh]\n  split_ifs <;> norm_num' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:65:26: missing space in the source\n\nThis part of the code\n  'w.val.val=coupleFourSupport'\nshould be written as\n  'w.val.val = coupleFourSupport'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourCouple_shell_transitive (v w : fourShellPiece)\n    (hv : ReferenceCoupleOrthogonal (minimalCross v.val)) (hw : ReferenceCoupleOrthogonal (minimalCross w.val))\n    (he : coordinateRowEnergy referenceDozenRows v.val.val.val = coordinateRowEnergy referenceDozenRows w.val.val.val) :\n    ∃ g : codeGroup,\n      g • localReferenceCross = localReferenceCross ∧\n        g • referenceSecondCross = referenceSecondCross ∧ g • v.val = w.val :=\n  by\n  obtain ⟨a, ha⟩ := v.prop\n  obtain ⟨b, hb⟩ := w.prop\n  rw [← ha] at hv\n  rw [← hb] at hw\n  have hav := hv.1\n  have hbw := hw.1\n  rw [localReferenceCross_eq, fourWord_coordinate_orthogonal_iff] at hav hbw\n  obtain ⟨i, m, him⟩ := fourCouple_word_parameters a hav\n  obtain ⟨j, n, hjn⟩ := fourCouple_word_parameters b hbw\n  have he' : (if i = 0 then (0 : ℚ) else 2) = (if j = 0 then (0 : ℚ) else 2) :=\n    by\n    rw [← ha, ← hb, fourCouple_parameter_energy a i m him, fourCouple_parameter_energy b j n hjn] at he\n    exact he\n  have hij : i = 0 ↔ j = 0 := by by_cases hi : i = 0 <;> by_cases hj : j = 0 <;> simp_all\n  obtain ⟨g, hgx, hgy, hg⟩ :=\n    fourCouple_same_class_words i j m n hij a.val.val b.val.val a.val.prop b.val.prop a.prop.1 b.prop.1 him hjn\n  refine ⟨g, hgx, hgy, ?_⟩\n  rw [← ha, ← hb, ← minimumWordShellLift_equivariant]\n  apply congrArg minimumWordShellLift\n  exact Subtype.ext (Subtype.ext hg)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:84:1: 'theorem fourCouple_shell_transitive (v w : fourShellPiece) (hv : ReferenceCoupleOrthogonal (minimalCross v.val))\n    (hw : ReferenceCoupleOrthogonal (minimalCross w.val))\n    (he : coordinateRowEnergy referenceDozenRows v.val.val.val = coordinateRowEnergy referenceDozenRows w.val.val.val) :\n    ∃ g : codeGroup,\n      g • localReferenceCross = localReferenceCross ∧\n        g • referenceSecondCross = referenceSecondCross ∧ g • v.val = w.val :=\n  by\n  obtain ⟨a, ha⟩ := v.prop\n  obtain ⟨b, hb⟩ := w.prop\n  rw [← ha] at hv\n  rw [← hb] at hw\n  have hav := hv.1\n  have hbw := hw.1\n  rw [localReferenceCross_eq, fourWord_coordinate_orthogonal_iff] at hav hbw\n  obtain ⟨i, m, him⟩ := fourCouple_word_parameters a hav\n  obtain ⟨j, n, hjn⟩ := fourCouple_word_parameters b hbw\n  have he' : (if i = 0 then (0 : ℚ) else 2) = (if j = 0 then (0 : ℚ) else 2) :=\n    by\n    rw [← ha, ← hb, fourCouple_parameter_energy a i m him, fourCouple_parameter_energy b j n hjn] at he\n    exact he\n  have hij : i = 0 ↔ j = 0 := by by_cases hi : i = 0 <;> by_cases hj : j = 0 <;> simp_all\n  obtain ⟨g, hgx, hgy, hg⟩ :=\n    fourCouple_same_class_words i j m n hij a.val.val b.val.val a.val.prop b.val.prop a.prop.1 b.prop.1 him hjn\n  refine ⟨g, hgx, hgy, ?_⟩\n  rw [← ha, ← hb, ← minimumWordShellLift_equivariant]\n  apply congrArg minimumWordShellLift\n  exact Subtype.ext (Subtype.ext hg)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:87:62: missing space in the source\n\nThis part of the code\n  'v.val.val.val=\n  '\nshould be written as\n  'v.val.val.val = coordinateRowEnergy'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nActual couple-stabilizer transitivity on each of the 64- and 128-cross four-block pieces. -/\ntheorem fourCouple_crosses_transitive (v w : FourBlockCrosses)\n    (hv : ReferenceCoupleOrthogonal (shellPieceCrossMap fourShellPiece v))\n    (hw : ReferenceCoupleOrthogonal (shellPieceCrossMap fourShellPiece w))\n    (he :\n      crossRowEnergy referenceDozenRows (shellPieceCrossMap fourShellPiece v) =\n        crossRowEnergy referenceDozenRows (shellPieceCrossMap fourShellPiece w)) :\n    ∃ g : codeGroup,\n      g • localReferenceCross = localReferenceCross ∧\n        g • referenceSecondCross = referenceSecondCross ∧\n          g • shellPieceCrossMap fourShellPiece v = shellPieceCrossMap fourShellPiece w :=\n  by\n  induction v using Quotient.inductionOn with\n  | h v =>\n    induction w using Quotient.inductionOn with\n    | h w =>\n      obtain ⟨g, hgx, hgy, hg⟩ := fourCouple_shell_transitive v w hv hw he\n      refine ⟨g, hgx, hgy, ?_⟩\n      change g • minimalCross v.val = minimalCross w.val\n      rw [← minimalCross_smul, hg]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:116:81: missing space in the source\n\nThis part of the code\n  'v)=\n  '\nshould be written as\n  'v) =\n '\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourTransitivity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoupleFourSupportOrbit transitive imports (legacy)",
+       "f090c9a7c7dfea41"],
+      ["Atlas.Rudvalis.CoupleFourSupportOrbit:importAllArts",
+       "9444b6e3c31ef7b8"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoupleFourTransitivity.lean",
+   "740e216adfc0e590"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoupleFourTransitivity", "5599c8be80496f46"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "cfe0e25353136c42"}

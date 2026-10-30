@@ -1,0 +1,95 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["bf19a643367b89a0.olean"],
+  "m": false,
+  "i": "659ef8b1e004cb86.ilean",
+  "c": "5b6a4ceb4931388c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Orthogonal.B2Exterior`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `variable {F : Type*} [Field F]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe exact scalar-center kernel, proved through the actual exterior-square matrices. -/\ntheorem toOrthogonal_eq_one_iff_center (h2 : (2 : F) ≠ 0) (g : Atlas.Symplectic.Sp 2 F) :\n    toOrthogonal g = 1 ↔ g ∈ Subgroup.center (Atlas.Symplectic.Sp 2 F) :=\n  by\n  constructor\n  · intro hg\n    obtain ⟨c, _, hc⟩ := scalar_of_toOrthogonal_eq_one h2 g hg\n    exact Atlas.Symplectic.scalar_is_central g c (symplecticMatrix_scalar_action g c hc)\n  · exact toOrthogonal_eq_one_of_center g`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Equality of actual subgroups, not merely their orders. -/\ntheorem toOrthogonal_kernel (h2 : (2 : F) ≠ 0) :\n    (toOrthogonal (F := F)).ker = Subgroup.center (Atlas.Symplectic.Sp 2 F) :=\n  by\n  ext g\n  exact toOrthogonal_eq_one_iff_center h2 g`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe same exact kernel for the image in the intrinsic elementary orthogonal group. -/\ntheorem toElementary_kernel [Finite F] (h2 : (2 : F) ≠ 0) :\n    (toElementary (F := F) h2).ker = Subgroup.center (Atlas.Symplectic.Sp 2 F) :=\n  by\n  ext g\n  change toElementary h2 g = 1 ↔ g ∈ Subgroup.center (Atlas.Symplectic.Sp 2 F)\n  rw [← toOrthogonal_eq_one_iff_center h2 g]\n  exact ⟨fun h => congrArg Subtype.val h, fun h => Subtype.ext h⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Orthogonal.B2Exterior`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Orthogonal.B2ExteriorKernel transitive imports (legacy)",
+       "bc260eb532d31fd2"],
+      ["Atlas.LinearGroups.Orthogonal.B2ExteriorKernel:importAllArts",
+       "c5321536cd5982b0"],
+      ["Atlas.LinearGroups.Orthogonal.B2ExteriorScalar transitive imports (legacy)",
+       "bc260eb532d31fd2"],
+      ["Atlas.LinearGroups.Orthogonal.B2ExteriorScalar:importAllArts",
+       "c37116814c7e3db5"],
+      ["Atlas.LinearGroups.Orthogonal.B2ExteriorImage transitive imports (legacy)",
+       "db27922e14cc46ad"],
+      ["Atlas.LinearGroups.Orthogonal.B2ExteriorImage:importAllArts",
+       "6524e09d650733ef"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Orthogonal/B2ExteriorKernelExact.lean",
+   "abd9d39f4513735d"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Orthogonal.B2ExteriorKernelExact",
+   "da599a1c426e0403"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "f5ab04812f3561fe"}

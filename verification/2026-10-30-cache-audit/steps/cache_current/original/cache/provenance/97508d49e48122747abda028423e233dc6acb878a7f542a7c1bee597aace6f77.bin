@@ -1,0 +1,113 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["4413aaccbfb69b56.olean"],
+  "m": false,
+  "i": "0844385e532209cf.ilean",
+  "c": "da979697520f8f7a.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoupleQuartetTransport.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleQuartetTransport.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleQuartetTransport.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleQuartetTransport.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleQuartetTransport.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionGroup_preserves_intrinsicDozen (g : coupleFusionGroup) :\n    gaussianImage g.val (intrinsicDozen referenceCouple) = intrinsicDozen referenceCouple := by\n  rw [intrinsicDozen_gaussianImage, coupleFusionGroup_preserves_referenceCouple]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusion_intrinsicDozen_iff (g : coupleFusionGroup)\n    (c : MinimalCross) : g.val • c ∈ intrinsicDozen referenceCouple ↔ c ∈ intrinsicDozen referenceCouple := by\n  simpa only [coupleFusionGroup_preserves_intrinsicDozen g] using\n    gaussianImage_mem g.val (intrinsicDozen referenceCouple) c`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusion_orbit_avoids_intrinsicDozen (c : MinimalCross)\n    (hc : c ∉ intrinsicDozen referenceCouple) :\n    ∀ z ∈ MulAction.orbit coupleFusionGroup c, z ∉ intrinsicDozen referenceCouple :=\n  by\n  intro z hz\n  obtain ⟨g, rfl⟩ := MulAction.mem_orbit_iff.mp hz\n  exact fun h => hc ((coupleFusion_intrinsicDozen_iff g c).mp h)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:16:11: missing space in the source\n\nThis part of the code\n  'c∉intrinsicDozen'\nshould be written as\n  'c ∉ intrinsicDozen'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem outside_coordinate_not_intrinsicDozen (z : MinimalCross)\n    (hzF : z ∈ coordinateFrame) (hzD : z ∉ referenceCoordinateDozen) : z ∉ intrinsicDozen referenceCouple :=\n  reference_no_quartet_through_outside_coordinate z hzF hzD`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:23:12: missing space in the source\n\nThis part of the code\n  'z∈coordinateFrame)'\nshould be written as\n  'z ∈ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:23:38: missing space in the source\n\nThis part of the code\n  'z∉referenceCoordinateDozen)'\nshould be written as\n  'z ∉ referenceCoordinateDozen)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_intrinsicDozen_coordinate_intersection :\n    intrinsicDozen referenceCouple ∩ coordinateFrame = referenceCoordinateDozen :=\n  by\n  apply Set.Subset.antisymm\n  · rintro z ⟨⟨Q, hQ, hc, hz⟩, hzF⟩\n    exact reference_quartet_coordinate_member_in_dozen Q hQ hc z hz hzF\n  · intro z hz\n    exact ⟨referenceCoordinateDozen_subset_intrinsicDozen hz, referenceCoordinateDozen_subset hz⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeCouple_coordinateDozen_stable (g : codeCoupleStabilizer)\n    (c : MinimalCross) (hc : c ∈ referenceCoordinateDozen) : g.val • c ∈ referenceCoordinateDozen :=\n  by\n  rw [← reference_intrinsicDozen_coordinate_intersection]\n  refine ⟨?_, coordinateFrame_code_stable g.val c (referenceCoordinateDozen_subset hc)⟩\n  let a : coupleFusionGroup := ⟨coupleGaussianHom g, coupleGaussianHom_mem g⟩\n  have h := (coupleFusion_intrinsicDozen_iff a c).mpr (referenceCoordinateDozen_subset_intrinsicDozen hc)\n  change codeGaussianHom g.val • c ∈ intrinsicDozen referenceCouple at h\n  rwa [codeGaussianHom_cross] at h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:36:11: missing space in the source\n\nThis part of the code\n  'c∈referenceCoordinateDozen)'\nshould be written as\n  'c ∈ referenceCoordinateDozen)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeCouple_coordinateDozen_iff (g : codeCoupleStabilizer)\n    (c : MinimalCross) : g.val • c ∈ referenceCoordinateDozen ↔ c ∈ referenceCoordinateDozen :=\n  by\n  constructor\n  · intro h\n    have hi := codeCouple_coordinateDozen_stable g⁻¹ (g.val • c) h\n    simpa only [Subgroup.coe_inv, inv_smul_smul] using hi\n  · exact codeCouple_coordinateDozen_stable g c`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleQuartetTransport.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoupleFusionGroup transitive imports (legacy)",
+       "517aa735777e2fd5"],
+      ["Atlas.Rudvalis.CoupleFusionGroup:importAllArts", "fa505d00bbd00601"],
+      ["Atlas.Rudvalis.CoordinateQuartetCompletion transitive imports (legacy)",
+       "da0d13dceab00b3b"],
+      ["Atlas.Rudvalis.CoordinateQuartetCompletion:importAllArts",
+       "8c97306ea82af832"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoupleQuartetTransport.lean",
+   "8230561cb104b5ff"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoupleQuartetTransport", "5c354fd2d25a9279"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "48c7b98ea32a0b38"}

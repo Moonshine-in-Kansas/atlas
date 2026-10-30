@@ -1,0 +1,165 @@
+{
+  "id": "staged-ReeThreeBoundaryAction",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "ComparisonWork.ReeThreeBoundaryAction"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.Coordinates",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinateAction",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinateAction_injective",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinateAction_coherence",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinates_card",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.rootModel",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.uModel",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.vModel",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.tModel",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.wModel",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.uModel_order",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.model_generated_by_four",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinateAction_range",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.pointRight_root_affine",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinate_root_none",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinate_root_affine",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinate_u_affine",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinate_v_affine",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinate_t_none",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinate_t_affine",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinate_w_none",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinate_w_origin",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.affineVector_coordinates",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.oppositeParameters",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.pointRight_w_affine",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinate_w_affine",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinate_u_fixed_iff",
+      "module": "ComparisonWork.ReeThreeBoundaryAction",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-ReeThreeBoundaryAction-independent-structure",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Comparisons.ReeThree.Semilinear"
+      ],
+      "forbid_modules": [
+        "Atlas.Comparisons.Exceptional.ReeThree.SemilinearTarget",
+        "Atlas.Comparisons.Exceptional.ReeThree.FieldActionFaithful"
+      ]
+    }
+  ]
+}

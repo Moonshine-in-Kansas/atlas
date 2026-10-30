@@ -1,0 +1,117 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["802f8ad27c228884.olean"],
+  "m": false,
+  "i": "0690f25385c5e0a3.ilean",
+  "c": "6f74f695df3e5006.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CodeRowCrossStabilizer.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CodeRowCrossStabilizer.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CodeRowCrossStabilizer.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CodeRowCrossStabilizer.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CodeRowCrossStabilizer.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeRowKernel_coordinate_translation (g : codeRowKernel) :\n    ∃ B : BinaryMatrix, g.val.val.right = coordinateTranslation B :=\n  by\n  obtain ⟨B, hB⟩ := (codeRowTranslationHom g).prop\n  refine ⟨B.toAdd, ?_⟩\n  exact (congrArg Subtype.val hB).symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:7:1: 'theorem codeRowKernel_coordinate_translation (g : codeRowKernel) :\n    ∃ B : BinaryMatrix, g.val.val.right = coordinateTranslation B :=\n  by\n  obtain ⟨B, hB⟩ := (codeRowTranslationHom g).prop\n  refine ⟨B.toAdd, ?_⟩\n  exact (congrArg Subtype.val hB).symm' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeRowKernel_translation_lift (B : BinaryMatrix) :\n    ∃ g : codeRowKernel, g.val.val.right = coordinateTranslation B :=\n  by\n  let t : binaryTranslationSubgroup :=\n    ⟨coordinateTranslationHom (Multiplicative.ofAdd B), ⟨Multiplicative.ofAdd B, rfl⟩⟩\n  obtain ⟨g, hg⟩ := codeRowTranslationHom_surjective t\n  exact ⟨g, congrArg (fun t : binaryTranslationSubgroup => t.val.val) hg⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:13:1: 'theorem codeRowKernel_translation_lift (B : BinaryMatrix) :\n    ∃ g : codeRowKernel, g.val.val.right = coordinateTranslation B :=\n  by\n  let t : binaryTranslationSubgroup :=\n    ⟨coordinateTranslationHom (Multiplicative.ofAdd B), ⟨Multiplicative.ofAdd B, rfl⟩⟩\n  obtain ⟨g, hg⟩ := codeRowTranslationHom_surjective t\n  exact\n    ⟨g,\n      congrArg (fun t : binaryTranslationSubgroup => t.val.val)\n        hg⟩' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeRowKernel_coordinate_orbit (p : Point) (x : E) :\n    MulAction.orbit codeRowKernel (coordinateCross (p, x)) = coordinateRowFrame p :=\n  by\n  ext c\n  constructor\n  · intro hc\n    obtain ⟨g, rfl⟩ := MulAction.mem_orbit_iff.mp hc\n    obtain ⟨B, hB⟩ := codeRowKernel_coordinate_translation g\n    change g.val • coordinateCross (p, x) ∈ coordinateRowFrame p\n    rw [coordinateCross_action, hB]\n    exact ⟨x + matrixAt B p.val, rfl⟩\n  · rintro ⟨y, rfl⟩\n    obtain ⟨i, hi⟩ := point_has_one p\n    let u := (basisPoint i).val\n    have hu : dot u p.val = 1 := by rw [dot_basisPoint]; exact hi\n    let B := outerMatrix (x + y) u\n    have hB : matrixAt B p.val = x + y := by rw [matrixAt_outer, hu, one_smul]\n    obtain ⟨g, hg⟩ := codeRowKernel_translation_lift B\n    apply MulAction.mem_orbit_iff.mpr\n    refine ⟨g, ?_⟩\n    change g.val • coordinateCross (p, x) = coordinateCross (p, y)\n    rw [coordinateCross_action, hg]\n    change coordinateCross (p, x + matrixAt B p.val) = _\n    rw [hB, ← add_assoc, vector_add_self, zero_add]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:20:1: 'theorem codeRowKernel_coordinate_orbit (p : Point) (x : E) :\n    MulAction.orbit codeRowKernel (coordinateCross (p, x)) = coordinateRowFrame p :=\n  by\n  ext c\n  constructor\n  · intro hc\n    obtain ⟨g, rfl⟩ := MulAction.mem_orbit_iff.mp hc\n    obtain ⟨B, hB⟩ := codeRowKernel_coordinate_translation g\n    change g.val • coordinateCross (p, x) ∈ coordinateRowFrame p\n    rw [coordinateCross_action, hB]\n    exact ⟨x + matrixAt B p.val, rfl⟩\n  · rintro ⟨y, rfl⟩\n    obtain ⟨i, hi⟩ := point_has_one p\n    let u := (basisPoint i).val\n    have hu : dot u p.val = 1 := by rw [dot_basisPoint]; exact hi\n    let B := outerMatrix (x + y) u\n    have hB : matrixAt B p.val = x + y := by rw [matrixAt_outer, hu, one_smul]\n    obtain ⟨g, hg⟩ := codeRowKernel_translation_lift B\n    apply MulAction.mem_orbit_iff.mpr\n    refine ⟨g, ?_⟩\n    change g.val • coordinateCross (p, x) = coordinateCross (p, y)\n    rw [coordinateCross_action, hg]\n    change coordinateCross (p, x + matrixAt B p.val) = _\n    rw [hB, ← add_assoc, vector_add_self,\n      zero_add]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeRowKernel_coordinate_stabilizer_order (p : Point) (x : E) :\n    Nat.card (MulAction.stabilizer codeRowKernel (coordinateCross (p, x))) = 2048 :=\n  by\n  have h := Nat.card_congr (MulAction.orbitProdStabilizerEquivGroup codeRowKernel (coordinateCross (p, x)))\n  rw [Nat.card_prod, codeRowKernel_coordinate_orbit, coordinateRowFrame_card, codeRowKernel_order] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:46:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:44:1: 'theorem codeRowKernel_coordinate_stabilizer_order (p : Point) (x : E) :\n    Nat.card (MulAction.stabilizer codeRowKernel (coordinateCross (p, x))) = 2048 :=\n  by\n  have h := Nat.card_congr (MulAction.orbitProdStabilizerEquivGroup codeRowKernel (coordinateCross (p, x)))\n  rw [Nat.card_prod, codeRowKernel_coordinate_orbit, coordinateRowFrame_card, codeRowKernel_order] at h\n  omega' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable abbrev codeRowReferenceStabilizer :=\n  MulAction.stabilizer codeRowKernel localReferenceCross`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:50:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeRowReferenceStabilizer_order :\n    Nat.card codeRowReferenceStabilizer = 2048 :=\n  by\n  change Nat.card (MulAction.stabilizer codeRowKernel localReferenceCross) = 2048\n  rw [localReferenceCross_eq]\n  exact codeRowKernel_coordinate_stabilizer_order _ _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CodeRowCrossStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CodeRowExact transitive imports (legacy)",
+       "558f711ac86ce6b5"],
+      ["Atlas.Rudvalis.CodeRowExact:importAllArts", "1735337b8c862313"],
+      ["Atlas.Rudvalis.CoordinateLocalOrbits transitive imports (legacy)",
+       "c035b92560a3da76"],
+      ["Atlas.Rudvalis.CoordinateLocalOrbits:importAllArts",
+       "7922aff9176d85a4"],
+      ["Atlas.Rudvalis.LocalTransitivity transitive imports (legacy)",
+       "f1f6d4efc29fc69f"],
+      ["Atlas.Rudvalis.LocalTransitivity:importAllArts",
+       "2970be4858e65974"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CodeRowCrossStabilizer.lean",
+   "d0641e397cb45aa5"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CodeRowCrossStabilizer", "d419b535e43eee05"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "6b982618eb4f5c2d"}

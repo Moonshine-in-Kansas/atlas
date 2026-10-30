@@ -1,0 +1,80 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["79f1de34bec03867.olean"],
+  "m": false,
+  "i": "95e71a3baffd2acb.ilean",
+  "c": "aca35f6173fd9f75.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Algebra/IcosianReductionNorm.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Algebra/IcosianReductionNorm.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Algebra/IcosianReductionNorm.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Algebra/IcosianReductionNorm.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Algebra/IcosianReductionNorm.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Algebra/IcosianReductionNorm.lean:16:39: This simp argument is unused:\n  CharTwo.neg_eq\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [CharTwo.sub_eq_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/IcosianReductionNorm.lean:19:38: This simp argument is unused:\n  (show (8 : ZMod 2) = 0 from rfl)\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [(show (2 : ZMod 2) = 0 from rfl), (show (3 : ZMod 2) = 1 from rfl),\n    (show (4 : ZMod 2) = 0 from rfl), (show (5 : ZMod 2) = 1 from rfl), (show (10 : ZMod 2) = 0 from rfl),\n    (show (6 : ZMod 2) = 0 from rfl), (show (7 : ZMod 2) = 1 from rfl), mul_zero, mul_one, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/IcosianReductionNorm.lean:19:100: This simp argument is unused:\n  (show (7 : ZMod 2) = 1 from rfl)\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [(show (2 : ZMod 2) = 0 from rfl), (show (3 : ZMod 2) = 1 from rfl),\n    (show (4 : ZMod 2) = 0 from rfl), (show (5 : ZMod 2) = 1 from rfl), (show (10 : ZMod 2) = 0 from rfl),\n    (show (8 : ZMod 2) = 0 from rfl), (show (6 : ZMod 2) = 0 from rfl), mul_zero, mul_one, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/IcosianReductionNorm.lean:14:10: `simp [icosianMatrixFromCoefficients,icosianCoefficientNorm,\n    goldenFourTau,QuadraticAlgebra.omega,pow_two]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/IcosianReductionNorm.lean:14:10: Try this:\n  [apply] simp only [Fin.isValue, QuadraticAlgebra.re_sub, QuadraticAlgebra.re_mul, one_mul]",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/IcosianReductionNorm.lean:16:4: `(try simp only [CharTwo.sub_eq_add, CharTwo.neg_eq])`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 14!",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/IcosianReductionNorm.lean:14:10: `simp [icosianMatrixFromCoefficients,icosianCoefficientNorm,\n    goldenFourTau,QuadraticAlgebra.omega,pow_two]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/IcosianReductionNorm.lean:14:10: Try this:\n  [apply] simp only [Fin.isValue, QuadraticAlgebra.im_sub, QuadraticAlgebra.im_mul, one_mul]",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/IcosianReductionNorm.lean:16:4: `(try simp only [CharTwo.sub_eq_add, CharTwo.neg_eq])`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 14!",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/IcosianReductionNorm.lean:20:46: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/IcosianReductionNorm.lean:19:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/IcosianReductionNorm.lean:20:46: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Algebra.IcosianIntegralNorm transitive imports (legacy)",
+       "1a98c84abf1d3092"],
+      ["Atlas.Algebra.IcosianIntegralNorm:importAllArts", "f4fd8038b49afc55"],
+      ["Atlas.Algebra.IcosianModuloTwo transitive imports (legacy)",
+       "f4f2f154da2e5aee"],
+      ["Atlas.Algebra.IcosianModuloTwo:importAllArts", "0116b914521c2da7"],
+      ["Mathlib.LinearAlgebra.Matrix.Determinant.Basic transitive imports (legacy)",
+       "717fa9780b2ff92e"],
+      ["Mathlib.LinearAlgebra.Matrix.Determinant.Basic:importAllArts",
+       "6c618f5a68c6eb3a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Algebra/IcosianReductionNorm.lean",
+   "e91790986838f849"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Algebra.IcosianReductionNorm", "a70efad597f4efbc"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "7bec264bd9087fc9"}

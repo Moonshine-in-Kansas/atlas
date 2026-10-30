@@ -1832,3 +1832,29 @@ import Atlas.GroupTheory.GraphFieldScalars
 import Atlas.LinearGroups.Chevalley.TwistedE6.FoldedLattice
 import Atlas.LinearGroups.Chevalley.TwistedE6.PositiveRootOrbits
 import Atlas.GroupTheory.GraphFieldRootPairs
+
+-- Additional proved constructions and model identifications.
+import Atlas.Comparisons.Exceptional.G2Binary.FieldNineOrder
+import Atlas.Comparisons.Exceptional.G2Binary.FieldTransport
+import Atlas.Comparisons.Exceptional.G2Binary.MarkedUnitaryGeneration
+import Atlas.Comparisons.Exceptional.G2Binary.OctonionWords
+import Atlas.Comparisons.Exceptional.G2Binary.SplitExtension
+import Atlas.Comparisons.Exceptional.ReeThree.BoundaryAction
+import Atlas.Comparisons.Exceptional.ReeThree.FieldActionFaithful
+import Atlas.LinearGroups.Chevalley.Catalogue.F4Identification
+import Atlas.LinearGroups.Chevalley.Catalogue.F4Properties
+import Atlas.LinearGroups.Chevalley.Catalogue.G2Center
+import Atlas.LinearGroups.Chevalley.Catalogue.G2Exceptions
+import Atlas.LinearGroups.Chevalley.Catalogue.G2Finite
+import Atlas.LinearGroups.Chevalley.Catalogue.G2Identification
+import Atlas.LinearGroups.Chevalley.Catalogue.G2Nonabelian
+import Atlas.LinearGroups.Chevalley.Catalogue.G2Order
+import Atlas.LinearGroups.Chevalley.Catalogue.G2Simple
+import Atlas.LinearGroups.Chevalley.TwistedE6.E6ClosedOrder
+import Atlas.LinearGroups.Chevalley.TwistedE6.FixedProjection
+import Atlas.LinearGroups.Chevalley.TwistedE6.MinusculeCentralizerRecovery
+import Atlas.LinearGroups.ReeF4.BinaryDerivedPointFaithfulness
+import Atlas.LinearGroups.ReeF4.Generation
+import Atlas.LinearGroups.ReeF4.LineParabolicOrder
+import Atlas.LinearGroups.ReeF4.Order
+import Atlas.Sporadic.Janko1.WhitelawSInvariant

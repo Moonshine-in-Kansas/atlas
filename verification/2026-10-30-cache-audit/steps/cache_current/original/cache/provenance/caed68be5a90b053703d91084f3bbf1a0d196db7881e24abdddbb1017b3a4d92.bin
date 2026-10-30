@@ -1,0 +1,101 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["48cdee3859be10e9.olean"],
+  "m": false,
+  "i": "4d60eb9eac1314b5.ilean",
+  "c": "2714eac1060df784.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoupleRowEnergy.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleRowEnergy.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleRowEnergy.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleRowEnergy.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleRowEnergy.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeCouple_selected_coordinate_iff (g : codeCoupleStabilizer)\n    (i : Coordinate) : (g.val.val.right i).1 ∈ referenceDozenRows ↔ i.1 ∈ referenceDozenRows :=\n  by\n  have h := codeCouple_coordinateDozen_iff g (coordinateCross i)\n  rw [coordinateCross_action] at h\n  simpa only [referenceCoordinateDozen, coordinateCross_mem_selectedRows_iff] using h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:6:1: 'theorem codeCouple_selected_coordinate_iff (g : codeCoupleStabilizer) (i : Coordinate) :\n    (g.val.val.right i).1 ∈ referenceDozenRows ↔ i.1 ∈ referenceDozenRows :=\n  by\n  have h := codeCouple_coordinateDozen_iff g (coordinateCross i)\n  rw [coordinateCross_action] at h\n  simpa only [referenceCoordinateDozen, coordinateCross_mem_selectedRows_iff] using\n    h' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeCouple_projection_commute (g : codeCoupleStabilizer)\n    (v : RationalSpace) :\n    coordinateRowProjection referenceDozenRows (rationalMonomialHom g.val.val v) =\n      rationalMonomialHom g.val.val (coordinateRowProjection referenceDozenRows v) :=\n  by\n  classical\n  ext i\n  have hm : (g.val.val.right.symm i).1 ∈ referenceDozenRows ↔ i.1 ∈ referenceDozenRows :=\n    by\n    have h := codeCouple_selected_coordinate_iff g (g.val.val.right.symm i)\n    rw [Equiv.apply_symm_apply] at h\n    exact h.symm\n  change\n    (if i.1 ∈ referenceDozenRows then liftedSign (g.val.val.left.toAdd i) (v (g.val.val.right.symm i)) else 0) =\n      liftedSign (g.val.val.left.toAdd i)\n        (if (g.val.val.right.symm i).1 ∈ referenceDozenRows then v (g.val.val.right.symm i) else 0)\n  rw [hm]\n  split_ifs <;> simp [liftedSign]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:21:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:22:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:12:1: 'theorem codeCouple_projection_commute (g : codeCoupleStabilizer) (v : RationalSpace) :\n    coordinateRowProjection referenceDozenRows (rationalMonomialHom g.val.val v) =\n      rationalMonomialHom g.val.val (coordinateRowProjection referenceDozenRows v) :=\n  by\n  classical\n  ext i\n  have hm : (g.val.val.right.symm i).1 ∈ referenceDozenRows ↔ i.1 ∈ referenceDozenRows :=\n    by\n    have h := codeCouple_selected_coordinate_iff g (g.val.val.right.symm i)\n    rw [Equiv.apply_symm_apply] at h\n    exact h.symm\n  change\n    (if i.1 ∈ referenceDozenRows then liftedSign (g.val.val.left.toAdd i) (v (g.val.val.right.symm i)) else 0) =\n      liftedSign (g.val.val.left.toAdd i)\n        (if (g.val.val.right.symm i).1 ∈ referenceDozenRows then v (g.val.val.right.symm i) else 0)\n  rw [hm]\n  split_ifs <;> simp [liftedSign]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeCouple_coordinateRowEnergy (g : codeCoupleStabilizer)\n    (v : RationalSpace) :\n    coordinateRowEnergy referenceDozenRows (rationalMonomialHom g.val.val v) =\n      coordinateRowEnergy referenceDozenRows v :=\n  by\n  unfold coordinateRowEnergy\n  rw [codeCouple_projection_commute, rationalMonomial_pairing]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:26:1: 'theorem codeCouple_coordinateRowEnergy (g : codeCoupleStabilizer) (v : RationalSpace) :\n    coordinateRowEnergy referenceDozenRows (rationalMonomialHom g.val.val v) =\n      coordinateRowEnergy referenceDozenRows v :=\n  by\n  unfold coordinateRowEnergy\n  rw [codeCouple_projection_commute,\n    rationalMonomial_pairing]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeCouple_crossRowEnergy (g : codeCoupleStabilizer)\n    (c : MinimalCross) : crossRowEnergy referenceDozenRows (g.val • c) = crossRowEnergy referenceDozenRows c := by\n  induction c using Quotient.inductionOn with\n  | h\n    v =>\n    change\n      coordinateRowEnergy referenceDozenRows (rationalMonomialHom g.val.val v.val.val) =\n        coordinateRowEnergy referenceDozenRows v.val.val\n    exact codeCouple_coordinateRowEnergy g v.val.val`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:32:1: 'theorem codeCouple_crossRowEnergy (g : codeCoupleStabilizer) (c : MinimalCross) :\n    crossRowEnergy referenceDozenRows (g.val • c) = crossRowEnergy referenceDozenRows c := by\n  induction c using Quotient.inductionOn with\n  | h\n    v =>\n    change\n      coordinateRowEnergy referenceDozenRows (rationalMonomialHom g.val.val v.val.val) =\n        coordinateRowEnergy referenceDozenRows v.val.val\n    exact\n      codeCouple_coordinateRowEnergy g\n        v.val.val' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleRowEnergy.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoupleQuartetTransport transitive imports (legacy)",
+       "cc4ee5376df5e085"],
+      ["Atlas.Rudvalis.CoupleQuartetTransport:importAllArts",
+       "0f1466554c8bd6e2"],
+      ["Atlas.Rudvalis.CrossRowEnergy transitive imports (legacy)",
+       "5dad7e56dbc2570a"],
+      ["Atlas.Rudvalis.CrossRowEnergy:importAllArts", "69731f4e1d47127b"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoupleRowEnergy.lean",
+   "23564a4b13f9f1ea"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoupleRowEnergy", "254fd99a1cae52a5"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "b54d7419c95adf16"}

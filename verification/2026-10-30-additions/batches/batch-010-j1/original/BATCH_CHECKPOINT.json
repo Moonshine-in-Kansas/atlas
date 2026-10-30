@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "id": "batch-010-j1",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "boundaries": [],
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas.Sporadic.Janko1.Local168",
+    "Atlas.Sporadic.Janko1.SignConjugation",
+    "Atlas.Sporadic.Janko1.SignGroup"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Janko1.H_eq_signSubgroup_sup_pqSubgroup",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.H_normal_form",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.P_conjugates_sign",
+      "module": "Atlas.Sporadic.Janko1.SignConjugation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.P_signElement",
+      "module": "Atlas.Sporadic.Janko1.SignConjugation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.Q_conjugates_sign",
+      "module": "Atlas.Sporadic.Janko1.SignConjugation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.Q_signElement",
+      "module": "Atlas.Sporadic.Janko1.SignConjugation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.card_H",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.card_signSubgroup",
+      "module": "Atlas.Sporadic.Janko1.SignGroup",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.coordinateRepresentation_signElement",
+      "module": "Atlas.Sporadic.Janko1.SignConjugation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.hMultiply",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.hMultiply_bijective",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.hNormalFormEquiv",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.hNormalFormEquiv_apply",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.hProductEquiv",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.pqSubgroup_le_sign_normalizer",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.signDouble",
+      "module": "Atlas.Sporadic.Janko1.SignConjugation",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.signElement",
+      "module": "Atlas.Sporadic.Janko1.SignGroup",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.signElement_basis_zero",
+      "module": "Atlas.Sporadic.Janko1.SignConjugation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.signEquiv",
+      "module": "Atlas.Sporadic.Janko1.SignGroup",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.signHom",
+      "module": "Atlas.Sporadic.Janko1.SignGroup",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.signHom_injective",
+      "module": "Atlas.Sporadic.Janko1.SignGroup",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.signLinear_mul",
+      "module": "Atlas.Sporadic.Janko1.SignGroup",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.signShift",
+      "module": "Atlas.Sporadic.Janko1.SignConjugation",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.signSubgroup",
+      "module": "Atlas.Sporadic.Janko1.SignGroup",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.signSubgroupEquiv",
+      "module": "Atlas.Sporadic.Janko1.SignGroup",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.signSubgroup_comm",
+      "module": "Atlas.Sporadic.Janko1.SignGroup",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.signSubgroup_square",
+      "module": "Atlas.Sporadic.Janko1.SignGroup",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.sign_pq_disjoint",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "theorem"
+    }
+  ]
+}

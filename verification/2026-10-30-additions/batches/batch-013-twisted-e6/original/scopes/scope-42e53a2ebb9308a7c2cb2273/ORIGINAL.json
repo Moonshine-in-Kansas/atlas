@@ -1,0 +1,65 @@
+{
+  "id": "staged-WitnessedPositiveProduct",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.WitnessedPositiveProduct"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.positiveRootWitnessedProduct",
+      "kind": "definition",
+      "module": "FamilyWork.WitnessedPositiveProduct"
+    },
+    {
+      "declaration": "Atlas.Chevalley.positiveRootWitnessedProduct_val",
+      "kind": "theorem",
+      "module": "FamilyWork.WitnessedPositiveProduct"
+    },
+    {
+      "declaration": "Atlas.Chevalley.positiveRootWitnessedProduct_injective",
+      "kind": "theorem",
+      "module": "FamilyWork.WitnessedPositiveProduct"
+    },
+    {
+      "declaration": "Atlas.Chevalley.positiveRootWitnessedProduct_surjective",
+      "kind": "theorem",
+      "module": "FamilyWork.WitnessedPositiveProduct"
+    },
+    {
+      "declaration": "Atlas.Chevalley.positiveRootWitnessedProductEquiv",
+      "kind": "definition",
+      "module": "FamilyWork.WitnessedPositiveProduct"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-WitnessedPositiveProduct-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-WitnessedPositiveProduct-no-selected-model",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.Models",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightCompanion",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightOrbits"
+      ]
+    }
+  ]
+}

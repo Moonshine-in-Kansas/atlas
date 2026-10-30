@@ -1,0 +1,45 @@
+{
+  "id": "staged-FieldNineOrder",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "ComparisonWork.FieldNineOrder"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Final6048.card_fieldNine_psu",
+      "module": "ComparisonWork.FieldNineOrder",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "FieldNineOrder-independent-order-review-successor",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Comparisons.G2Binary.Source6048.",
+        "Atlas.Comparisons.G2Binary.Matching6048.",
+        "Atlas.G2.",
+        "Atlas.SplitOctonion."
+      ],
+      "forbid_modules": [
+        "Atlas.Comparisons.Exceptional.G2Binary.UnitaryMarking"
+      ],
+      "module_allowlists": [
+        {
+          "prefix": "ComparisonWork.",
+          "modules": [
+            "ComparisonWork.FieldNineOrder"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["9f0895ad00f81423.olean"],
+  "m": false,
+  "i": "5137c98ac2b10f2b.ilean",
+  "c": "b8799eedfc14b8cb.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateThreeRowObstruction.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateThreeRowObstruction.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateThreeRowObstruction.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateThreeRowObstruction.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateThreeRowObstruction.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavy_label_avoiding_three_rows (p q r : Point) (d : E) (hd0 : d ≠ 0)\n    (hdp : d ≠ p.val) : ∃ c : Point, p ≠ c ∧ q ≠ c ∧ r ≠ c ∧ d ≠ c.val ∧ d ≠ c.val + p.val := by\n  decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:8:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 3000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:9:72: missing space in the source\n\nThis part of the code\n  'd≠0) (hdp'\nshould be written as\n  'd ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:9:84: missing space in the source\n\nThis part of the code\n  'd≠p.val)'\nshould be written as\n  'd ≠ p.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nA genuine heavy cross detects a single member of the doubled row while avoiding two singleton rows. -/\ntheorem heavy_two_one_one_test (p q r : Point) (hqr : q ≠ r) (x y z t : E)\n    (hxy : coordinateCross (p, x) ≠ coordinateCross (p, y)) :\n    ∃ v : MinimalCross,\n      v ∉ coordinateFrame ∧\n        (CrossOrthogonal v (coordinateCross (p, x)) ↔ ¬CrossOrthogonal v (coordinateCross (p, y))) ∧\n          CrossOrthogonal v (coordinateCross (q, z)) ∧ CrossOrthogonal v (coordinateCross (r, t)) :=\n  by\n  have hd0 : y + x ≠ 0 := by\n    intro h\n    have he : y = x := by\n      calc\n        y = (y + x) + x := by rw [add_assoc, vector_add_self, add_zero]\n        _ = x := by rw [h, zero_add]\n    exact hxy (by rw [he])\n  have hdp : y + x ≠ p.val := by\n    intro h\n    have he : y = x + p.val := by\n      calc\n        y = (y + x) + x := by rw [add_assoc, vector_add_self, add_zero]\n        _ = x + p.val := by rw [h, add_comm]\n    apply hxy\n    rw [he]\n    simpa only [codeI_coordinate] using (coordinateCross_I (p, x)).symm\n  obtain ⟨c, hpc, hqc, hrc, hdc, hdcp⟩ := heavy_label_avoiding_three_rows p q r (y + x) hd0 hdp\n  have hn : Nonempty (FixedHeavyParameters c) :=\n    (Nat.card_pos_iff.mp (show 0 < Nat.card (FixedHeavyParameters c) by rw [fixedHeavyParameters_card]; decide)).1\n  obtain ⟨v⟩ := hn\n  obtain ⟨bq, hbq⟩ := fixedHeavy_pair_avoid_translate q c hqc v z\n  obtain ⟨br, hbr⟩ := fixedHeavy_pair_avoid_translate r c hrc v t\n  obtain ⟨B, hBq, hBr⟩ := matrixAt_two_points q r hqr bq br\n  let v' := fixedHeavyTranslate c B v\n  obtain ⟨w, hw, ht⟩ := fixedHeavy_test_cross c v'\n  refine ⟨w, hw, ?_, ?_, ?_⟩\n  · rw [ht p x, ht p y]\n    have h := fixedHeavy_pair_complement p c hpc (y + x) hd0 hdp hdc hdcp v' x\n    have he : x + (y + x) = y := by rw [add_comm y x, ← add_assoc, vector_add_self, zero_add]\n    rwa [he] at h\n  · rw [ht q z]\n    change\n      fixedHeavyWord c (fixedHeavyTranslate c B v) (q, z) = 0 ∧\n        fixedHeavyWord c (fixedHeavyTranslate c B v) (q, z + q.val) = 0\n    rw [fixedHeavyTranslate_word]\n    change fixedHeavyWord c v (q, z + matrixAt B q.val) = 0 ∧ fixedHeavyWord c v (q, z + q.val + matrixAt B q.val) = 0\n    rwa [hBq]\n  · rw [ht r t]\n    change\n      fixedHeavyWord c (fixedHeavyTranslate c B v) (r, t) = 0 ∧\n        fixedHeavyWord c (fixedHeavyTranslate c B v) (r, t + r.val) = 0\n    rw [fixedHeavyTranslate_word]\n    change fixedHeavyWord c v (r, t + matrixAt B r.val) = 0 ∧ fixedHeavyWord c v (r, t + r.val + matrixAt B r.val) = 0\n    rwa [hBr]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:13:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:35:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:48:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:50:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:53:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:55:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:14:55: missing space in the source\n\nThis part of the code\n  'q≠r) (x'\nshould be written as\n  'q ≠ r)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:15:30: missing space in the source\n\nThis part of the code\n  '(p,x)≠coordinateCross'\nshould be written as\n  '(p, x) ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:15:32: missing space in the source\n\nThis part of the code\n  '(p,x)≠coordinateCross'\nshould be written as\n  'x) ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:15:52: missing space in the source\n\nThis part of the code\n  '(p,y)) :'\nshould be written as\n  '(p, y))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The forbidden (2,1,1) row pattern. -/\ntheorem coordinateQuartet_not_two_one_one (p q r : Point) (hqr : q ≠ r) (x y z t : E)\n    (hxy : coordinateCross (p, x) ≠ coordinateCross (p, y)) (Q : Set MinimalCross) (hQ : IsQuartet Q)\n    (hx : coordinateCross (p, x) ∈ Q) (hy : coordinateCross (p, y) ∈ Q)\n    (hrest :\n      ∀ u ∈ Q,\n        u ≠ coordinateCross (p, x) →\n          u ≠ coordinateCross (p, y) → u = coordinateCross (q, z) ∨ u = coordinateCross (r, t)) :\n    False := by\n  classical\n  obtain ⟨v, hv, hpair, hq, hr⟩ := heavy_two_one_one_test p q r hqr x y z t hxy\n  have hvQ : v ∉ Q := by\n    intro h\n    apply hv\n    by_cases he : v = coordinateCross (p, x)\n    · rw [he]; exact coordinateCross_mem _\n    by_cases he' : v = coordinateCross (p, y)\n    · rw [he']; exact coordinateCross_mem _\n    rcases hrest v h he he' with h | h <;> rw [h] <;> exact coordinateCross_mem _\n  by_cases ho : CrossOrthogonal v (coordinateCross (p, x))\n  · apply (hpair.mp ho)\n    apply hQ.2.2 v hvQ (coordinateCross (p, y)) hy\n    intro u hu huy\n    by_cases hux : u = coordinateCross (p, x)\n    · rwa [hux]\n    rcases hrest u hu hux huy with h | h <;> rw [h] <;> assumption\n  · apply ho\n    apply hQ.2.2 v hvQ (coordinateCross (p, x)) hx\n    intro u hu hux\n    by_cases huy : u = coordinateCross (p, y)\n    · rw [huy]\n      by_contra hny\n      exact ho (hpair.mpr hny)\n    rcases hrest u hu hux huy with h | h <;> rw [h] <;> assumption`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:59:66: missing space in the source\n\nThis part of the code\n  'q≠r) (x'\nshould be written as\n  'q ≠ r)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:60:30: missing space in the source\n\nThis part of the code\n  '(p,x)≠coordinateCross'\nshould be written as\n  '(p, x) ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:60:32: missing space in the source\n\nThis part of the code\n  '(p,x)≠coordinateCross'\nshould be written as\n  'x) ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:60:52: missing space in the source\n\nThis part of the code\n  '(p,y))\n'\nshould be written as\n  '(p, y))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:62:29: missing space in the source\n\nThis part of the code\n  '(p,x)∈Q)'\nshould be written as\n  '(p, x) ∈'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:62:31: missing space in the source\n\nThis part of the code\n  '(p,x)∈Q) (hy'\nshould be written as\n  'x) ∈ Q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:62:60: missing space in the source\n\nThis part of the code\n  '(p,y)∈Q)'\nshould be written as\n  '(p, y) ∈'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:62:62: missing space in the source\n\nThis part of the code\n  '(p,y)∈Q)\n '\nshould be written as\n  'y) ∈ Q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:63:14: missing space in the source\n\nThis part of the code\n  '∀u∈Q,u≠coordinateCross'\nshould be written as\n  '∀ u ∈'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:63:18: missing space in the source\n\nThis part of the code\n  '∀u∈Q,u≠coordinateCross'\nshould be written as\n  'Q,\n   '\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:63:39: missing space in the source\n\nThis part of the code\n  '(p,x) →'\nshould be written as\n  '(p, x) →'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:63:45: missing space in the source\n\nThis part of the code\n  'u≠coordinateCross'\nshould be written as\n  'u ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:63:65: missing space in the source\n\nThis part of the code\n  '(p,y) →'\nshould be written as\n  '(p, y) →'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:64:7: missing space in the source\n\nThis part of the code\n  'u=coordinateCross'\nshould be written as\n  'u = coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:64:27: missing space in the source\n\nThis part of the code\n  '(q,z) ∨'\nshould be written as\n  '(q, z) ∨'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:64:33: missing space in the source\n\nThis part of the code\n  'u=coordinateCross'\nshould be written as\n  'u = coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:64:53: missing space in the source\n\nThis part of the code\n  '(r,t)) :'\nshould be written as\n  '(r, t))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreeRowObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.HeavyCoordinateTests transitive imports (legacy)",
+       "625a2bea0fed9cd9"],
+      ["Atlas.Rudvalis.HeavyCoordinateTests:importAllArts", "6469692436b16957"],
+      ["Atlas.Rudvalis.CoordinateCrossAction transitive imports (legacy)",
+       "d4a58c3b33ac8cc0"],
+      ["Atlas.Rudvalis.CoordinateCrossAction:importAllArts",
+       "8f5b7a82d887e404"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateThreeRowObstruction.lean",
+   "0fb5842c5bc67f58"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateThreeRowObstruction",
+   "16b4063b2e81dab7"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "4c764536f25c4511"}

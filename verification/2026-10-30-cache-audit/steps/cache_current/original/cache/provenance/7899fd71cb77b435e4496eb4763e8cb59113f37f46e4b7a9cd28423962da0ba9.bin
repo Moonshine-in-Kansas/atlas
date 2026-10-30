@@ -1,0 +1,263 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["00adb39da2c4ac9c.olean"],
+  "m": false,
+  "i": "89fc83742268b78d.ilean",
+  "c": "1fd5ce1556fc57a0.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:12:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:15:61: missing space in the source\n\nThis part of the code\n  '(n+2) →'\nshould be written as\n  '(n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:31:52: This simp argument is unused:\n  Matrix.smul_mulVec\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.single_mulVec, Function.update_apply, hij,\n    Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:32:29: This simp argument is unused:\n  Function.update_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec, hij, Ne.symm hij,\n    eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:32:55: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec,\n    Function.update_apply, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:35:54: This simp argument is unused:\n  Matrix.smul_mulVec\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.single_mulVec, Function.update_apply, hij,\n    Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:36:31: This simp argument is unused:\n  Function.update_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec, hij, Ne.symm hij,\n    eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:37:16: This simp argument is unused:\n  δ\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec,\n    Function.update_apply, hi, hj, Ne.symm hi, Ne.symm hj, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:37:54: This simp argument is unused:\n  Matrix.smul_mulVec\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.single_mulVec, Function.update_apply, hi, hj,\n    Ne.symm hi, Ne.symm hj, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:38:31: This simp argument is unused:\n  Function.update_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec, hi, hj,\n    Ne.symm hi, Ne.symm hj, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:39:10: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec,\n    Function.update_apply, hi, hj, Ne.symm hi, Ne.symm hj, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:39:14: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec,\n    Function.update_apply, hi, hj, Ne.symm hi, Ne.symm hj, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:39:39: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:19:15: missing space in the source\n\nThis part of the code\n  '(n+2) →'\nshould be written as\n  '(n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:19:37: missing space in the source\n\nThis part of the code\n  '(n+2)) (hij'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:19:50: missing space in the source\n\nThis part of the code\n  'i≠j) (hc'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:19:63: missing space in the source\n\nThis part of the code\n  'i+c j=0)'\nshould be written as\n  'i + c'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:19:67: missing space in the source\n\nThis part of the code\n  'j=0)\n '\nshould be written as\n  'j = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:39:39: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:32:76: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:36:78: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:61:52: This simp argument is unused:\n  Matrix.smul_mulVec\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.single_mulVec, Function.update_apply, hij,\n    Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:62:29: This simp argument is unused:\n  Function.update_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec, hij, Ne.symm hij,\n    eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:62:55: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec,\n    Function.update_apply, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:65:54: This simp argument is unused:\n  Matrix.smul_mulVec\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.single_mulVec, Function.update_apply, hij,\n    Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:66:31: This simp argument is unused:\n  Function.update_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec, hij, Ne.symm hij,\n    eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:67:16: This simp argument is unused:\n  δ\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec,\n    Function.update_apply, hi, hj, Ne.symm hi, Ne.symm hj, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:67:54: This simp argument is unused:\n  Matrix.smul_mulVec\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.single_mulVec, Function.update_apply, hi, hj,\n    Ne.symm hi, Ne.symm hj, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:68:31: This simp argument is unused:\n  Function.update_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec, hi, hj,\n    Ne.symm hi, Ne.symm hj, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:69:10: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec,\n    Function.update_apply, hi, hj, Ne.symm hi, Ne.symm hj, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:69:14: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec,\n    Function.update_apply, hi, hj, Ne.symm hi, Ne.symm hj, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:69:39: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:49:15: missing space in the source\n\nThis part of the code\n  '(n+2) →'\nshould be written as\n  '(n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:49:37: missing space in the source\n\nThis part of the code\n  '(n+2)) (hij'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:49:50: missing space in the source\n\nThis part of the code\n  'i≠j) (hc'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:49:63: missing space in the source\n\nThis part of the code\n  'i+c j=0)'\nshould be written as\n  'i + c'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:49:67: missing space in the source\n\nThis part of the code\n  'j=0)\n '\nshould be written as\n  'j = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:69:39: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:62:76: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:66:78: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:91:52: This simp argument is unused:\n  Matrix.smul_mulVec\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.single_mulVec, Function.update_apply, hij,\n    Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:92:29: This simp argument is unused:\n  Function.update_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec, hij, Ne.symm hij,\n    eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:92:55: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec,\n    Function.update_apply, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:95:54: This simp argument is unused:\n  Matrix.smul_mulVec\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.single_mulVec, Function.update_apply, hij,\n    Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:96:31: This simp argument is unused:\n  Function.update_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec, hij, Ne.symm hij,\n    eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:97:16: This simp argument is unused:\n  δ\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec,\n    Function.update_apply, hi, hj, Ne.symm hi, Ne.symm hj, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:97:54: This simp argument is unused:\n  Matrix.smul_mulVec\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.single_mulVec, Function.update_apply, hi, hj,\n    Ne.symm hi, Ne.symm hj, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:98:31: This simp argument is unused:\n  Function.update_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec, hi, hj,\n    Ne.symm hi, Ne.symm hj, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:99:10: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec,\n    Function.update_apply, hi, hj, Ne.symm hi, Ne.symm hj, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:99:14: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [A, δ, Matrix.add_mulVec, Matrix.one_mulVec, Matrix.smul_mulVec, Matrix.single_mulVec,\n    Function.update_apply, hi, hj, Ne.symm hi, Ne.symm hj, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:99:39: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:79:15: missing space in the source\n\nThis part of the code\n  '(n+2) →'\nshould be written as\n  '(n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:79:37: missing space in the source\n\nThis part of the code\n  '(n+2)) (hij'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:79:50: missing space in the source\n\nThis part of the code\n  'i≠j) (hc'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:79:63: missing space in the source\n\nThis part of the code\n  'i+c j=0)'\nshould be written as\n  'i + c'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:79:67: missing space in the source\n\nThis part of the code\n  'j=0)\n '\nshould be written as\n  'j = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:99:39: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:92:76: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:96:78: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:108:47: missing space in the source\n\nThis part of the code\n  '(n+1)) :'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:114:74: missing space in the source\n\nThis part of the code\n  '(n+1)) :'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:119:45: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:120:15: missing space in the source\n\nThis part of the code\n  '(n+2)) (t'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:130:45: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:131:15: missing space in the source\n\nThis part of the code\n  '(n+2)) (t'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:143:43: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:144:39: missing space in the source\n\nThis part of the code\n  '(n+2) hn)'\nshould be written as\n  '(n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:208:46: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:229:40: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:240:50: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean:241:39: missing space in the source\n\nThis part of the code\n  '(n+2) hn)'\nshould be written as\n  '(n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.Comparison.TypeDNaturalBlock transitive imports (legacy)",
+       "002e6826e2034610"],
+      ["Atlas.LinearGroups.Chevalley.Comparison.TypeDNaturalBlock:importAllArts",
+       "660b93379aaf6a88"],
+      ["Atlas.LinearGroups.Chevalley.WeightCompanionLeftInduction transitive imports (legacy)",
+       "3e231010f9b647d5"],
+      ["Atlas.LinearGroups.Chevalley.WeightCompanionLeftInduction:importAllArts",
+       "abecf06abf7f509d"],
+      ["Atlas.LinearGroups.Orthogonal.Basic transitive imports (legacy)",
+       "77e3abb66bd8467c"],
+      ["Atlas.LinearGroups.Orthogonal.Basic:importAllArts", "0d610f8cb0647a71"],
+      ["Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs transitive imports (legacy)",
+       "02abd460cfcb8e3a"],
+      ["Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs:importAllArts",
+       "a4789c9bc5de5b64"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalForm.lean",
+   "6c8775febb59b8da"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Comparison.TypeDNaturalForm",
+   "c70e5d5edbe2d40c"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "3d88d2ad0cea607b"}

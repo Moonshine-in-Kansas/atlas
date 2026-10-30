@@ -1,0 +1,99 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["a7027a8e58cf6d09.olean"],
+  "m": false,
+  "i": "3f1c00a537e40cd6.ilean",
+  "c": "e58e985ce16ef19b.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/ReferenceConfigurations.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ReferenceConfigurations.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ReferenceConfigurations.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ReferenceConfigurations.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ReferenceConfigurations.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def referenceCouple : Set MinimalCross :=\n  { localReferenceCross, referenceSecondCross }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateFrame_isFrame : IsFrame coordinateFrame :=\n  by\n  refine ⟨?_, ?_⟩\n  · change Nat.card coordinateFrame = 28\n    exact coordinateFrame_card\n  · intro x hx y hy hxy\n    exact (coordinateFrame_orthogonal_iff x y hx hy).mpr hxy`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceCouple_isCouple : IsCouple referenceCouple :=\n  by\n  refine ⟨?_, ?_⟩\n  · exact Set.ncard_pair reference_crosses_ne\n  · intro a ha b hb hab\n    rcases ha with rfl | rfl <;> rcases hb with rfl | rfl\n    · exact (hab rfl).elim\n    · exact reference_crosses_orthogonal\n    · exact (crossOrthogonal_symm _ _).mp reference_crosses_orthogonal\n    · exact (hab rfl).elim`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceCoordinateDozen_pairwise :\n    referenceCoordinateDozen.Pairwise CrossOrthogonal :=\n  by\n  intro x hx y hy hxy\n  exact coordinateFrame_isFrame.2 (referenceCoordinateDozen_subset hx) (referenceCoordinateDozen_subset hy) hxy`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceCouple_subset_dozen :\n    referenceCouple ⊆ referenceCoordinateDozen :=\n  by\n  rintro c (rfl | rfl)\n  · exact referenceCross_mem_dozen\n  · exact referenceSecondCross_mem_dozen`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceDozenRows_marking (r : Fin 7) :\n    rowLabel r ∈ referenceDozenRows ↔ r = 0 ∨ r = 4 ∨ r = 5 :=\n  by\n  change dot (binaryLabel 1) (rowLabel r).val = 0 ↔ _\n  decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:35:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceConfigurations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.IntrinsicConfigurations transitive imports (legacy)",
+       "baadce814d809638"],
+      ["Atlas.Rudvalis.IntrinsicConfigurations:importAllArts",
+       "35092b67e04ebadb"],
+      ["Atlas.Rudvalis.SelectedCoordinateRows transitive imports (legacy)",
+       "6ac676cb08801728"],
+      ["Atlas.Rudvalis.SelectedCoordinateRows:importAllArts",
+       "6d4c075dadaa737f"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/ReferenceConfigurations.lean",
+   "ae1b2f623c890236"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.ReferenceConfigurations", "e98666cc0dac5d9f"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "6cb696a21ef3aa0f"}

@@ -1,0 +1,151 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["878e4a0166bb4d20.olean"],
+  "m": false,
+  "i": "956ff060d7588fb0.ilean",
+  "c": "3e95055f49a216e0.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CanonicalDozens.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CanonicalDozens.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CanonicalDozens.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CanonicalDozens.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CanonicalDozens.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The distinct intrinsic dozens determined by couples in a set of crosses. -/\ndef quartetDozens (Q : Set MinimalCross) : Set (Set MinimalCross) :=\n  {D | ∃ c : Set MinimalCross, IsCouple c ∧ c ⊆ Q ∧ intrinsicDozen c = D}`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem quartetDozens_gaussianImage_forward (g : gaussianLatticeGroup)\n    (Q D : Set MinimalCross) (hD : D ∈ quartetDozens Q) : gaussianImage g D ∈ quartetDozens (gaussianImage g Q) :=\n  by\n  obtain ⟨c, hc, hQ, rfl⟩ := hD\n  exact\n    ⟨gaussianImage g c, (isCouple_gaussianImage g c).mpr hc, Set.image_mono hQ,\n      (intrinsicDozen_gaussianImage g c).symm⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:10:11: missing space in the source\n\nThis part of the code\n  'D∈quartetDozens'\nshould be written as\n  'D ∈ quartetDozens'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem quartetDozens_gaussianImage_iff (g : gaussianLatticeGroup)\n    (Q D : Set MinimalCross) : gaussianImage g D ∈ quartetDozens (gaussianImage g Q) ↔ D ∈ quartetDozens Q :=\n  by\n  constructor\n  · intro h\n    have hi := quartetDozens_gaussianImage_forward g⁻¹ _ _ h\n    simpa only [gaussianImage_inv] using hi\n  · exact quartetDozens_gaussianImage_forward g Q D`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def gaussianConfigurationEquiv (g : gaussianLatticeGroup) :\n    Equiv.Perm (Set MinimalCross) where\n  toFun := gaussianImage g\n  invFun := gaussianImage g⁻¹\n  left_inv := gaussianImage_inv g\n  right_inv := gaussianImage_inv_right g`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:23:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def quartetDozensEquiv (g : gaussianLatticeGroup)\n    (Q : Set MinimalCross) : quartetDozens Q ≃ quartetDozens (gaussianImage g Q) :=\n  Equiv.subtypeEquiv (gaussianConfigurationEquiv g) (fun D => (quartetDozens_gaussianImage_iff g Q D).symm)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem quartetDozens_image_exists (g : gaussianLatticeGroup)\n    (Q D : Set MinimalCross) (hD : D ∈ quartetDozens (gaussianImage g Q)) :\n    ∃ E ∈ quartetDozens Q, gaussianImage g E = D :=\n  by\n  obtain ⟨E, hE⟩ := (quartetDozensEquiv g Q).surjective ⟨D, hD⟩\n  exact ⟨E.val, E.prop, congrArg Subtype.val hE⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:35:11: missing space in the source\n\nThis part of the code\n  'D∈quartetDozens'\nshould be written as\n  'D ∈ quartetDozens'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem quartetDozens_card (Q : Set MinimalCross) (hQ : IsQuartet Q) :\n    Nat.card (quartetDozens Q) = 3 :=\n  by\n  obtain ⟨g, rfl⟩ := generated_quartet_transport Q hQ\n  rw [← Nat.card_congr (quartetDozensEquiv g.val (coordinateRowFrame (rowLabel 0)))]\n  exact rowCoupleDozens_card (rowLabel 0)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:40:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem quartetDozen_card (Q : Set MinimalCross) (hQ : IsQuartet Q)\n    (D : Set MinimalCross) (hD : D ∈ quartetDozens Q) : Nat.card D = 12 :=\n  by\n  obtain ⟨g, rfl⟩ := generated_quartet_transport Q hQ\n  obtain ⟨E, hE, rfl⟩ := quartetDozens_image_exists g.val _ D hD\n  change (gaussianImage g.val E).ncard = 12\n  rw [gaussianImage_ncard]\n  exact (coordinateRow_three_dozen_geometry (rowLabel 0)).2.1 E hE`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:46:34: missing space in the source\n\nThis part of the code\n  'D∈quartetDozens'\nshould be written as\n  'D ∈ quartetDozens'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem gaussianImage_inter (g : gaussianLatticeGroup)\n    (D E : Set MinimalCross) : gaussianImage g (D ∩ E) = gaussianImage g D ∩ gaussianImage g E :=\n  Set.image_inter (MulAction.injective g)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem quartetDozens_intersection (Q : Set MinimalCross) (hQ : IsQuartet Q)\n    (D E : Set MinimalCross) (hD : D ∈ quartetDozens Q) (hE : E ∈ quartetDozens Q) (hne : D ≠ E) : D ∩ E = Q :=\n  by\n  obtain ⟨g, rfl⟩ := generated_quartet_transport Q hQ\n  obtain ⟨D', hD', rfl⟩ := quartetDozens_image_exists g.val _ D hD\n  obtain ⟨E', hE', rfl⟩ := quartetDozens_image_exists g.val _ E hE\n  have hn : D' ≠ E' := fun h => hne (congrArg (gaussianImage g.val) h)\n  rw [← gaussianImage_inter, (coordinateRow_three_dozen_geometry (rowLabel 0)).2.2.1 D' hD' E' hE' hn]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:58:36: missing space in the source\n\nThis part of the code\n  'D∈quartetDozens'\nshould be written as\n  'D ∈ quartetDozens'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:58:61: missing space in the source\n\nThis part of the code\n  'E∈quartetDozens'\nshould be written as\n  'E ∈ quartetDozens'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:58:87: missing space in the source\n\nThis part of the code\n  'D≠E) :'\nshould be written as\n  'D ≠ E)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem quartetDozens_union (Q : Set MinimalCross) :\n    {x | ∃ D ∈ quartetDozens Q, x ∈ D} = canonicalBase Q :=\n  by\n  ext x\n  constructor\n  · rintro ⟨D, ⟨c, hc, hQ, rfl⟩, hx⟩\n    exact ⟨c, hc, hQ, hx⟩\n  · rintro ⟨c, hc, hQ, hx⟩\n    exact ⟨intrinsicDozen c, ⟨c, hc, hQ, rfl⟩, hx⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nEvery intrinsic quartet determines three twelve-cross dozens, meeting in that quartet,\nand their union is its genuine canonical Gaussian frame. -/\ntheorem quartet_three_dozen_geometry (Q : Set MinimalCross) (hQ : IsQuartet Q) :\n    Nat.card (quartetDozens Q) = 3 ∧\n      (∀ D ∈ quartetDozens Q, Nat.card D = 12) ∧\n        (∀ D ∈ quartetDozens Q, ∀ E ∈ quartetDozens Q, D ≠ E → D ∩ E = Q) ∧\n          {x | ∃ D ∈ quartetDozens Q, x ∈ D} = canonicalBase Q ∧ IsFrame (canonicalBase Q) :=\n  ⟨quartetDozens_card Q hQ, fun D => quartetDozen_card Q hQ D, fun D hD E hE =>\n    quartetDozens_intersection Q hQ D E hD hE, quartetDozens_union Q, canonicalBase_isFrame Q hQ⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalDozens.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CanonicalFrames transitive imports (legacy)",
+       "c023c475d2adcecc"],
+      ["Atlas.Rudvalis.CanonicalFrames:importAllArts", "defd751b5448917c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CanonicalDozens.lean",
+   "85a80e70235fb589"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CanonicalDozens", "abe671bb1ab3bb5e"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "dd227a621c75c021"}

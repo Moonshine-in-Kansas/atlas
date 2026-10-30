@@ -1,0 +1,91 @@
+{
+  "id": "staged-OctonionWords",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "ComparisonWork.OctonionWords"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Matching6048.step4",
+      "kind": "definition",
+      "module": "ComparisonWork.OctonionWords"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Matching6048.element4",
+      "kind": "definition",
+      "module": "ComparisonWork.OctonionWords"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Matching6048.element4_apply",
+      "kind": "theorem",
+      "module": "ComparisonWork.OctonionWords"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Matching6048.element4_mem",
+      "kind": "theorem",
+      "module": "ComparisonWork.OctonionWords"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Matching6048.act4",
+      "kind": "definition",
+      "module": "ComparisonWork.OctonionWords"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Matching6048.word4",
+      "kind": "definition",
+      "module": "ComparisonWork.OctonionWords"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Matching6048.word4_apply",
+      "kind": "theorem",
+      "module": "ComparisonWork.OctonionWords"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.Matching6048.word4_mem",
+      "kind": "theorem",
+      "module": "ComparisonWork.OctonionWords"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "OctonionWords-structural-independence-review-successor",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Unitary.card_psu",
+        "Atlas.Unitary.card_su",
+        "Atlas.Unitary.card_u",
+        "Atlas.G2.card_Model",
+        "Atlas.G2.OrderChecks.binary_order",
+        "Atlas.G2.BinaryException.card_H",
+        "Atlas.G2.BinaryException.order_of_character",
+        "Atlas.Comparisons.G2Binary.Final6048."
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Unitary.Order",
+        "Atlas.LinearGroups.Unitary.ProjectiveOrder",
+        "Atlas.LinearGroups.Unitary.OrderChecks",
+        "Atlas.LinearGroups.Unitary.ProjectiveOrderChecks",
+        "Atlas.LinearGroups.G2.Order",
+        "Atlas.LinearGroups.G2.OrderChecks",
+        "Atlas.LinearGroups.G2.BinaryExceptionFromCharacter",
+        "Atlas.LinearGroups.G2.BinarySign"
+      ],
+      "module_allowlists": [
+        {
+          "prefix": "ComparisonWork.",
+          "modules": [
+            "ComparisonWork.OctonionWords"
+          ]
+        }
+      ]
+    }
+  ]
+}

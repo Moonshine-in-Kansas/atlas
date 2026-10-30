@@ -1,0 +1,84 @@
+{
+  "id": "staged-F4AlbertEquiv",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "F4Work.F4AlbertEquiv"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.independent_orders_equal",
+      "module": "F4Work.F4AlbertEquiv",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertLiftSubgroup_eq_top",
+      "module": "F4Work.F4AlbertEquiv",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertToChevalley",
+      "module": "F4Work.F4AlbertEquiv",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertEquiv",
+      "module": "F4Work.F4AlbertEquiv",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertToChevalley_X",
+      "module": "F4Work.F4AlbertEquiv",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertToChevalley_Y",
+      "module": "F4Work.F4AlbertEquiv",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertEquiv_X",
+      "module": "F4Work.F4AlbertEquiv",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertEquiv_Y",
+      "module": "F4Work.F4AlbertEquiv",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertEquiv_simplePositive",
+      "module": "F4Work.F4AlbertEquiv",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertEquiv_simpleNegative",
+      "module": "F4Work.F4AlbertEquiv",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-F4AlbertEquiv-finite-equivalence-after-actual-surjective-lift",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis."
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityIffGood",
+        "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrices"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["989fdeb3d09214c3.olean"],
+  "m": false,
+  "i": "91fb8241babd3fe9.ilean",
+  "c": "8b06b657dfb0dbde.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/ReferenceLinearLifts.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ReferenceLinearLifts.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ReferenceLinearLifts.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ReferenceLinearLifts.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ReferenceLinearLifts.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateCross_stabilizer_linear_lift (p : Point) (A : E ≃ₗ[Bit] E)\n    (hA : A p.val = p.val) :\n    ∃ g : MulAction.stabilizer codeGroup (coordinateCross (p, 0)), codeBlockLinearHom g.val = A :=\n  by\n  obtain ⟨g, hg⟩ := codeBlockLinearHom_surjective A\n  have hr : (g.val.right (p, 0)).1 = p := by\n    apply Subtype.ext\n    rw [← codeBlockLinear_coordinates, hg, hA]\n  let y := (g.val.right (p, 0)).2\n  have hy : g.val.right (p, 0) = (p, y) := Prod.ext hr rfl\n  obtain ⟨i, hi⟩ := point_has_one p\n  have hu : dot (basisPoint i).val p.val = 1 := by rw [dot_basisPoint]; exact hi\n  let B := outerMatrix y (basisPoint i).val\n  have hB : matrixAt B p.val = y := by rw [matrixAt_outer, hu, one_smul]\n  obtain ⟨t, ht⟩ := codeRowKernel_translation_lift B\n  have hf : t.val * g ∈ MulAction.stabilizer codeGroup (coordinateCross (p, 0)) :=\n    by\n    change (t.val * g) • coordinateCross (p, 0) = coordinateCross (p, 0)\n    rw [mul_smul, coordinateCross_action, hy, coordinateCross_action, ht]\n    change coordinateCross (p, y + matrixAt B p.val) = coordinateCross (p, 0)\n    rw [hB, vector_add_self]\n  refine ⟨⟨t.val * g, hf⟩, ?_⟩\n  rw [map_mul, show codeBlockLinearHom t.val = 1 from t.prop, hg, one_mul]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:5:1: 'theorem coordinateCross_stabilizer_linear_lift (p : Point) (A : E ≃ₗ[Bit] E) (hA : A p.val = p.val) :\n    ∃ g : MulAction.stabilizer codeGroup (coordinateCross (p, 0)), codeBlockLinearHom g.val = A :=\n  by\n  obtain ⟨g, hg⟩ := codeBlockLinearHom_surjective A\n  have hr : (g.val.right (p, 0)).1 = p := by\n    apply Subtype.ext\n    rw [← codeBlockLinear_coordinates, hg, hA]\n  let y := (g.val.right (p, 0)).2\n  have hy : g.val.right (p, 0) = (p, y) := Prod.ext hr rfl\n  obtain ⟨i, hi⟩ := point_has_one p\n  have hu : dot (basisPoint i).val p.val = 1 := by rw [dot_basisPoint]; exact hi\n  let B := outerMatrix y (basisPoint i).val\n  have hB : matrixAt B p.val = y := by rw [matrixAt_outer, hu, one_smul]\n  obtain ⟨t, ht⟩ := codeRowKernel_translation_lift B\n  have hf : t.val * g ∈ MulAction.stabilizer codeGroup (coordinateCross (p, 0)) :=\n    by\n    change (t.val * g) • coordinateCross (p, 0) = coordinateCross (p, 0)\n    rw [mul_smul, coordinateCross_action, hy, coordinateCross_action, ht]\n    change coordinateCross (p, y + matrixAt B p.val) = coordinateCross (p, 0)\n    rw [hB, vector_add_self]\n  refine ⟨⟨t.val * g, hf⟩, ?_⟩\n  rw [map_mul, show codeBlockLinearHom t.val = 1 from t.prop, hg,\n    one_mul]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:5:66: missing space in the source\n\nThis part of the code\n  'E≃ₗ[Bit]E)'\nshould be written as\n  'E ≃ₗ[Bit]'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:5:73: missing space in the source\n\nThis part of the code\n  'E≃ₗ[Bit]E)\n '\nshould be written as\n  '≃ₗ[Bit] E) (hA'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:6:17: missing space in the source\n\nThis part of the code\n  'p.val=p.val)'\nshould be written as\n  'p.val = p.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeReferenceStabilizer_linear_lift (A : E ≃ₗ[Bit] E)\n    (hA : A (rowLabel 0).val = (rowLabel 0).val) : ∃ g : codeReferenceStabilizer, codeBlockLinearHom g.val = A :=\n  by\n  obtain ⟨g, hg⟩ := coordinateCross_stabilizer_linear_lift (rowLabel 0) A hA\n  refine ⟨⟨g.val, ?_⟩, hg⟩\n  change g.val • localReferenceCross = localReferenceCross\n  rw [localReferenceCross_eq]\n  exact g.prop`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:27:1: 'theorem codeReferenceStabilizer_linear_lift (A : E ≃ₗ[Bit] E) (hA : A (rowLabel 0).val = (rowLabel 0).val) :\n    ∃ g : codeReferenceStabilizer, codeBlockLinearHom g.val = A :=\n  by\n  obtain ⟨g, hg⟩ := coordinateCross_stabilizer_linear_lift (rowLabel 0) A hA\n  refine ⟨⟨g.val, ?_⟩, hg⟩\n  change g.val • localReferenceCross = localReferenceCross\n  rw [localReferenceCross_eq]\n  exact g.prop' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:27:51: missing space in the source\n\nThis part of the code\n  'E≃ₗ[Bit]E)'\nshould be written as\n  'E ≃ₗ[Bit]'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:27:58: missing space in the source\n\nThis part of the code\n  'E≃ₗ[Bit]E)\n '\nshould be written as\n  '≃ₗ[Bit] E) (hA'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:28:28: missing space in the source\n\nThis part of the code\n  '0).val=(rowLabel'\nshould be written as\n  '0).val = (rowLabel'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- A transvection fixing p transports any two forms taking value one at p. -/\nnoncomputable def activeFormTransvection (p a b : Point) (ha : dot a.val p.val = 1) (hb : dot b.val p.val = 1) :\n    E ≃ₗ[Bit] E where\n  toFun v := v + dot (a.val + b.val) v • p.val\n  invFun v := v + dot (a.val + b.val) v • p.val\n  left_inv\n    v := by\n    have hz : dot (a.val + b.val) p.val = 0 := by rw [dot_add_left, ha, hb]; decide\n    simp only [dot_add_right, dot_smul_right, hz, mul_zero, add_zero]\n    rw [add_assoc, ← add_smul]\n    have hh (k : Bit) : k + k = 0 := by exact Atlas.Codes.bit_self_add k\n    rw [hh, zero_smul, add_zero]\n  right_inv\n    v := by\n    have hz : dot (a.val + b.val) p.val = 0 := by rw [dot_add_left, ha, hb]; decide\n    simp only [dot_add_right, dot_smul_right, hz, mul_zero, add_zero]\n    rw [add_assoc, ← add_smul]\n    have hh (k : Bit) : k + k = 0 := by exact Atlas.Codes.bit_self_add k\n    rw [hh, zero_smul, add_zero]\n  map_add' v w := by rw [dot_add_right, add_smul]; abel\n  map_smul' k v := by simp only [dot_smul_right, smul_add, smul_smul, RingHom.id_apply]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:38:25: missing space in the source\n\nThis part of the code\n  'p.val=1) (hb'\nshould be written as\n  'p.val = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:38:50: missing space in the source\n\nThis part of the code\n  'p.val=1) :'\nshould be written as\n  'p.val = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem activeFormTransvection_fixed (p a b : Point) (ha : dot a.val p.val = 1)\n    (hb : dot b.val p.val = 1) : activeFormTransvection p a b ha hb p.val = p.val :=\n  by\n  change p.val + dot (a.val + b.val) p.val • p.val = p.val\n  rw [dot_add_left, ha, hb, show (1 : Bit) + 1 = 0 from by decide, zero_smul, add_zero]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:57:1: 'theorem activeFormTransvection_fixed (p a b : Point) (ha : dot a.val p.val = 1) (hb : dot b.val p.val = 1) :\n    activeFormTransvection p a b ha hb p.val = p.val :=\n  by\n  change p.val + dot (a.val + b.val) p.val • p.val = p.val\n  rw [dot_add_left, ha, hb, show (1 : Bit) + 1 = 0 from by decide, zero_smul,\n    add_zero]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:57:75: missing space in the source\n\nThis part of the code\n  'p.val=1)\n '\nshould be written as\n  'p.val = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:58:25: missing space in the source\n\nThis part of the code\n  'p.val=1) :'\nshould be written as\n  'p.val = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem activeFormTransvection_dual (p a b : Point) (ha : dot a.val p.val = 1)\n    (hb : dot b.val p.val = 1) (v : E) : dot b.val (activeFormTransvection p a b ha hb v) = dot a.val v :=\n  by\n  change dot b.val (v + dot (a.val + b.val) v • p.val) = _\n  rw [dot_add_right, dot_smul_right, hb, mul_one, dot_add_left]\n  rw [add_comm (dot a.val v), ← add_assoc, Atlas.Codes.bit_self_add, zero_add]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:62:1: 'theorem activeFormTransvection_dual (p a b : Point) (ha : dot a.val p.val = 1) (hb : dot b.val p.val = 1) (v : E) :\n    dot b.val (activeFormTransvection p a b ha hb v) = dot a.val v :=\n  by\n  change dot b.val (v + dot (a.val + b.val) v • p.val) = _\n  rw [dot_add_right, dot_smul_right, hb, mul_one, dot_add_left]\n  rw [add_comm (dot a.val v), ← add_assoc, Atlas.Codes.bit_self_add,\n    zero_add]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:62:74: missing space in the source\n\nThis part of the code\n  'p.val=1)\n '\nshould be written as\n  'p.val = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:63:25: missing space in the source\n\nThis part of the code\n  'p.val=1) (v'\nshould be written as\n  'p.val = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceLinearLifts.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FourRowKernelOrbit transitive imports (legacy)",
+       "fafbb7d8b9b7bed8"],
+      ["Atlas.Rudvalis.FourRowKernelOrbit:importAllArts",
+       "0dbf387c51b1d292"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/ReferenceLinearLifts.lean",
+   "b3463d3c5054d2a5"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.ReferenceLinearLifts", "a0536ee9cbd587c2"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "2fb261a9f512828c"}

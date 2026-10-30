@@ -1,0 +1,68 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["20af3046a5fd6072.olean"],
+  "m": false,
+  "i": "7143971702d0c737.ilean",
+  "c": "9a4078997149cd4e.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Codes/TernaryHexadProjection.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/TernaryHexadProjection.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/TernaryHexadProjection.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Codes/TernaryHexadProjection.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Codes/TernaryHexadProjection.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Codes/TernaryHexadProjection.lean:14:76: missing space in the source\n\nThis part of the code\n  'S.card=6)\n '\nshould be written as\n  'S.card = 6)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/TernaryHexadProjection.lean:15:44: missing space in the source\n\nThis part of the code\n  'w≠0) :'\nshould be written as\n  'w ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/TernaryHexadProjection.lean:30:79: missing space in the source\n\nThis part of the code\n  'S.card=6) :'\nshould be written as\n  'S.card = 6)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/TernaryHexadProjection.lean:57:52: This simp argument is unused:\n  mul_left_comm\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Finset.mul_sum, mul_comm, mul_assoc]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/TernaryHexadProjection.lean:113:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/TernaryHexadProjection.lean:120:14: missing space in the source\n\nThis part of the code\n  'i,c.val.val'\nshould be written as\n  'i, c.val.val'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/TernaryHexadProjection.lean:120:29: missing space in the source\n\nThis part of the code\n  'i.val*a i=0)'\nshould be written as\n  'i.val * a'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/TernaryHexadProjection.lean:120:33: missing space in the source\n\nThis part of the code\n  'i=0) :'\nshould be written as\n  'i = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/TernaryHexadProjection.lean:138:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Codes.TernaryGolaySupports transitive imports (legacy)",
+       "36812e1fd20fe6bc"],
+      ["Atlas.Codes.TernaryGolaySupports:importAllArts", "a80b818329063532"],
+      ["Mathlib.LinearAlgebra.Dimension.Finite transitive imports (legacy)",
+       "27f0b74fed02677a"],
+      ["Mathlib.LinearAlgebra.Dimension.Finite:importAllArts",
+       "1d43c575b05335b3"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Codes/TernaryHexadProjection.lean",
+   "ffa10275bfd70546"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Codes.TernaryHexadProjection", "c9a08466db1c48b4"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "c35978f429a53215"}

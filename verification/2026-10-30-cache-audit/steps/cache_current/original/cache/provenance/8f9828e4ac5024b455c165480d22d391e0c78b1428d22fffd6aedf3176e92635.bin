@@ -1,0 +1,71 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["70905213c4ed447f.olean"],
+  "m": false,
+  "i": "fef1a76b307806e6.ilean",
+  "c": "e1a0abc4d7ae1ae0.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/F4/ParabolicPairingEscape.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/F4/ParabolicPairingEscape.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/F4/ParabolicPairingEscape.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/F4/ParabolicPairingEscape.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/F4/ParabolicPairingEscape.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/F4/ParabolicPairingEscape.lean:47:8: automatically included section variable(s) unused in theorem `_private.Atlas.LinearGroups.F4.ParabolicPairingEscape.0.Atlas.F4.nonNearDetectingRoot_coordinate`:\n  [Field F]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Field F] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/ParabolicPairingEscape.lean:53:19: missing space in the source\n\nThis part of the code\n  'y=0) (ht'\nshould be written as\n  'y = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/ParabolicPairingEscape.lean:53:36: missing space in the source\n\nThis part of the code\n  'y=0) (hi'\nshould be written as\n  'y = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/ParabolicPairingEscape.lean:76:4: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/ParabolicPairingEscape.lean:69:19: missing space in the source\n\nThis part of the code\n  'y=0) (ht'\nshould be written as\n  'y = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/ParabolicPairingEscape.lean:69:36: missing space in the source\n\nThis part of the code\n  'y=0)\n '\nshould be written as\n  'y = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/ParabolicPairingEscape.lean:70:35: missing space in the source\n\nThis part of the code\n  '(F:=F))'\nshould be written as\n  '(F := F))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/ParabolicPairingEscape.lean:70:37: missing space in the source\n\nThis part of the code\n  '(F:=F)) :'\nshould be written as\n  ':= F))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Algebra.Albert.ShortRootPairing transitive imports (legacy)",
+       "e3433a57df5f7e11"],
+      ["Atlas.Algebra.Albert.ShortRootPairing:importAllArts",
+       "e489cee330474de7"],
+      ["Atlas.LinearGroups.F4.ParabolicShortRoots transitive imports (legacy)",
+       "a4dc57e8f4c02983"],
+      ["Atlas.LinearGroups.F4.ParabolicShortRoots:importAllArts",
+       "27b6c071e9cecce9"],
+      ["Atlas.LinearGroups.F4.NearDetection transitive imports (legacy)",
+       "a592fec21fe19c8f"],
+      ["Atlas.LinearGroups.F4.NearDetection:importAllArts",
+       "ec55bf9dbaf6cc0a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/F4/ParabolicPairingEscape.lean",
+   "7a46f7cf01582d02"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.F4.ParabolicPairingEscape",
+   "0cbea4628d01ac2f"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "29b7210b594dd666"}

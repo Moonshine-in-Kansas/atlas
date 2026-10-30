@@ -1,0 +1,234 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["f002eb5a392a6aed.olean"],
+  "m": false,
+  "i": "22f21ae2232a3c97.ilean",
+  "c": "440e76d04b9ccba8.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/StringExponential.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/StringExponential.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/StringExponential.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/StringExponential.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped Polynomial`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Chevalley.Integral`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem stringDividedPower_mul (n k l : ℕ) :\n    stringDividedPower n k * stringDividedPower n l = (((k + l).choose l : ℕ) : ℤ) • stringDividedPower n (k + l) :=\n  by\n  have hsc : (k.factorial : ℤ) * (l.factorial : ℤ) ≠ 0 := by\n    exact mul_ne_zero (by exact_mod_cast Nat.factorial_ne_zero k) (by exact_mod_cast Nat.factorial_ne_zero l)\n  apply (smul_right_injective (M := Module.End ℤ (StringLattice n)) hsc)\n  calc\n    ((k.factorial : ℤ) * (l.factorial : ℤ)) • (stringDividedPower n k * stringDividedPower n l) =\n        ((k.factorial : ℤ) • stringDividedPower n k) * ((l.factorial : ℤ) • stringDividedPower n l) :=\n      by rw [smul_mul_smul_comm]\n    _ = stringRaising n ^ k * stringRaising n ^ l := by\n      rw [factorial_smul_stringDividedPower, factorial_smul_stringDividedPower]\n    _ = stringRaising n ^ (k + l) := (pow_add _ _ _).symm\n    _ = ((k + l).factorial : ℤ) • stringDividedPower n (k + l) := (factorial_smul_stringDividedPower n (k + l)).symm\n    _ = _ := by\n      dsimp only\n      rw [smul_smul]\n      congr 1\n      exact_mod_cast\n        (by simpa [mul_comm, mul_left_comm, mul_assoc] using (Nat.add_choose_mul_factorial_mul_factorial k l).symm)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Chevalley.Integral`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Chevalley.Integral`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `variable {R : Type*} [CommRing R]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe concrete binomial exponential is the transpose of finite polynomial translation. -/\nnoncomputable def stringExponential (n : ℕ) (t : R) : Matrix (Fin (n + 1)) (Fin (n + 1)) R :=\n  (LinearMap.toMatrix (Polynomial.degreeLT.basis R (n + 1)) (Polynomial.degreeLT.basis R (n + 1))\n      (Polynomial.taylorLinearEquiv t (n + 1)).toLinearMap).transpose`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem stringExponential_entry (n : ℕ) (t : R) (i j : Fin (n + 1)) :\n    stringExponential n t i j = t ^ (i.val - j.val) * (i.val.choose j.val : R) :=\n  by\n  rw [stringExponential, Matrix.transpose_apply, LinearMap.toMatrix_apply, Polynomial.degreeLT.basis_repr]\n  change (Polynomial.taylor t ((Polynomial.degreeLT.basis R (n + 1) i) : R[X])).coeff j = _\n  rw [Polynomial.degreeLT.basis_val, Polynomial.taylor_X_pow, Polynomial.coeff_X_add_C_pow]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:45:61: missing space in the source\n\nThis part of the code\n  '(n+1)) :'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem stringExponential_add (n : ℕ) (s t : R) :\n    stringExponential n (s + t) = stringExponential n s * stringExponential n t :=\n  by\n  have h :\n    (Polynomial.taylorLinearEquiv (s + t) (n + 1)).toLinearMap =\n      (Polynomial.taylorLinearEquiv t (n + 1)).toLinearMap * (Polynomial.taylorLinearEquiv s (n + 1)).toLinearMap :=\n    by\n    apply LinearMap.ext\n    intro p\n    apply Subtype.ext\n    change Polynomial.taylor (s + t) (p : R[X]) = Polynomial.taylor t (Polynomial.taylor s (p : R[X]))\n    rw [Polynomial.taylor_taylor, add_comm]\n  unfold stringExponential\n  rw [h, LinearMap.toMatrix_mul, Matrix.transpose_mul]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `@[simp]\ntheorem stringExponential_zero (n : ℕ) : stringExponential n (0 : R) = 1 :=\n  by\n  have h : (Polynomial.taylorLinearEquiv (0 : R) (n + 1)).toLinearMap = 1 :=\n    by\n    apply LinearMap.ext\n    intro p\n    apply Subtype.ext\n    exact Polynomial.taylor_zero _\n  rw [stringExponential, h, LinearMap.toMatrix_one, Matrix.transpose_one]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem stringExponential_mul_neg (n : ℕ) (t : R) :\n    stringExponential n t * stringExponential n (-t) = 1 := by\n  rw [← stringExponential_add, add_neg_cancel, stringExponential_zero]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem stringExponential_neg_mul (n : ℕ) (t : R) :\n    stringExponential n (-t) * stringExponential n t = 1 := by\n  rw [← stringExponential_add, neg_add_cancel, stringExponential_zero]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem stringExponential_injective (n : ℕ) (hn : 1 ≤ n) :\n    Function.Injective (stringExponential n : R → Matrix (Fin (n + 1)) (Fin (n + 1)) R) :=\n  by\n  intro s t h\n  have h' := congrArg (fun A : Matrix (Fin (n + 1)) (Fin (n + 1)) R => A ⟨1, by omega⟩ ⟨0, by omega⟩) h\n  simpa [stringExponential_entry] using h'`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Chevalley.Integral`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Chevalley.Integral`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `variable {R : Type*} [CommRing R]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Explicit integral-coefficient divided-power matrix over any ring. -/\ndef stringDividedMatrix (n k : ℕ) : Matrix (Fin (n + 1)) (Fin (n + 1)) R := fun i j =>\n  if i.val = j.val + k then (i.val.choose k : R) else 0`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The binomial action is precisely the finite divided-power exponential. -/\ntheorem stringExponential_eq_sum (n : ℕ) (t : R) :\n    stringExponential n t = ∑ k ∈ Finset.range (n + 1), t ^ k • (stringDividedMatrix n k : Matrix _ _ R) :=\n  by\n  ext i j\n  rw [stringExponential_entry]\n  simp only [Matrix.sum_apply, Matrix.smul_apply, smul_eq_mul]\n  by_cases hji : j.val ≤ i.val\n  · rw [Finset.sum_eq_single_of_mem (i.val - j.val) (by simp; omega)]\n    · simp [stringDividedMatrix, Nat.add_sub_of_le hji, Nat.choose_symm hji]\n    · intro k hk hne\n      have h : ¬i.val = j.val + k := by omega\n      simp [stringDividedMatrix, h]\n  · rw [Nat.choose_eq_zero_of_lt (by omega), Nat.cast_zero, mul_zero]\n    symm\n    apply Finset.sum_eq_zero\n    intro k hk\n    have h : ¬i.val = j.val + k := by omega\n    simp [stringDividedMatrix, h]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Chevalley.Integral`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Chevalley.Integral`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The coefficient matrix is exactly that of the previously constructed\nintegral divided operator, in its original singleton basis. -/\ntheorem stringDividedMatrix_eq_toMatrix (n k : ℕ) :\n    (stringDividedMatrix n k : Matrix _ _ ℤ) =\n      LinearMap.toMatrix Finsupp.basisSingleOne Finsupp.basisSingleOne (stringDividedPower n k) :=\n  by\n  ext i j\n  rw [LinearMap.toMatrix_apply]\n  change _ = stringDividedPower n k (Finsupp.single j 1) i\n  rw [stringDividedPower_basis]\n  by_cases h : i.val = j.val + k\n  · have hlt : j.val + k < n + 1 := by omega\n    have hi : i = (⟨j.val + k, hlt⟩ : Fin (n + 1)) := Fin.ext h\n    simp [stringDividedMatrix, stringBasis, hlt, hi]\n  · by_cases hlt : j.val + k < n + 1\n    · simp [stringDividedMatrix, stringBasis, hlt, h, Fin.ext_iff]\n    · simp [stringDividedMatrix, stringBasis, hlt, h]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `variable {R : Type*} [CommRing R]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Coefficient reduction from the genuine integral divided powers. -/\ntheorem stringDividedMatrix_map (n k : ℕ) :\n    (stringDividedMatrix n k : Matrix _ _ ℤ).map (Int.castRingHom R) = (stringDividedMatrix n k : Matrix _ _ R) :=\n  by\n  ext i j\n  simp [stringDividedMatrix]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The actual invertible matrix, with its explicitly proved inverse. -/\nnoncomputable def stringRootElement (n : ℕ) (t : R) : (Matrix (Fin (n + 1)) (Fin (n + 1)) R)ˣ\n    where\n  val := stringExponential n t\n  inv := stringExponential n (-t)\n  val_inv := stringExponential_mul_neg n t\n  inv_val := stringExponential_neg_mul n t`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The root parametrization is a homomorphism from the additive ring. -/\nnoncomputable def stringRootHom (n : ℕ) : Multiplicative R →* (Matrix (Fin (n + 1)) (Fin (n + 1)) R)ˣ\n    where\n  toFun t := stringRootElement n t.toAdd\n  map_one' := Units.ext (stringExponential_zero n)\n  map_mul' s t := Units.ext (stringExponential_add n s.toAdd t.toAdd)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem stringRootHom_injective (n : ℕ) (hn : 1 ≤ n) :\n    Function.Injective (stringRootHom (R := R) n) := by\n  intro s t h\n  have h' := congrArg Units.val h\n  exact (stringExponential_injective n hn h' : s.toAdd = t.toAdd)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The same matrix acting as an actual linear equivalence. -/\nnoncomputable def stringRootLinearEquiv (n : ℕ) (t : R) : (Fin (n + 1) → R) ≃ₗ[R] (Fin (n + 1) → R) :=\n  Matrix.toLin'OfInv (stringExponential_neg_mul n t) (stringExponential_mul_neg n t)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Chevalley.Integral`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Mathlib.LinearAlgebra.Finsupp.VectorSpace transitive imports (legacy)",
+       "6207904ae62277f3"],
+      ["Mathlib.LinearAlgebra.Finsupp.VectorSpace:importAllArts",
+       "98d51960e64582a2"],
+      ["Mathlib.RingTheory.Polynomial.DegreeLT transitive imports (legacy)",
+       "b55630cd2a7cd7fc"],
+      ["Mathlib.RingTheory.Polynomial.DegreeLT:importAllArts",
+       "9d0e2886f1ceda57"],
+      ["Atlas.LinearGroups.Chevalley.Integral.DividedPowers transitive imports (legacy)",
+       "86a0c1518a589f31"],
+      ["Atlas.LinearGroups.Chevalley.Integral.DividedPowers:importAllArts",
+       "cad312ee58121cab"],
+      ["Mathlib.Algebra.Module.Torsion.Free transitive imports (legacy)",
+       "0a1fc91c502b0c0d"],
+      ["Mathlib.Algebra.Module.Torsion.Free:importAllArts",
+       "501e6a44d3e6d9c4"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/StringExponential.lean",
+   "8f8ed8e46168530a"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Integral.StringExponential",
+   "0553f8e94650bb54"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "f78856fc8490d966"}

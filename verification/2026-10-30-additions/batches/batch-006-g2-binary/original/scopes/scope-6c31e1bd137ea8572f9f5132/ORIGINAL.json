@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "comparison-g2-binary-field-transport",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.Comparisons.Exceptional.G2Binary.FieldTransport"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.G2.commutator_card_binary",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.commutator_eq_longRootNormalClosure_binary",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.commutator_index_binary",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.commutator_nonabelian_binary",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.commutator_perfect_binary",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.commutator_simple_binary",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.FieldTransport",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.longRootNormalClosure_simple_binary",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.FieldTransport",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independence-from-target-comparison",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Unitary.",
+        "Atlas.ReeG2.",
+        "Atlas.G2.isSimple"
+      ]
+    }
+  ]
+}

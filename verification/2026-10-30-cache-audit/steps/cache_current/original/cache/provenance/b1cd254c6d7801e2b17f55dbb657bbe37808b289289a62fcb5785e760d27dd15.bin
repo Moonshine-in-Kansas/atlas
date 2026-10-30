@@ -1,0 +1,102 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["ec7d8978f2046c79.olean"],
+  "m": false,
+  "i": "37cca8f0fc52fd83.ilean",
+  "c": "758a4265bafff2ae.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateThreePointLinear.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateThreePointLinear.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateThreePointLinear.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateThreePointLinear.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateThreePointLinear.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def threePointLinearEquiv (p q r : Point)\n    (h : (pairBasisMatrix p q r.val).det = 1) : E ≃ₗ[Bit] E :=\n  LinearEquiv.ofInjectiveEndo (binaryMatrixLinear (pairBasisMatrix p q r.val))\n    (by\n      have hC : IsUnit (pairBasisMatrix p q r.val) := (Matrix.isUnit_iff_isUnit_det _).mpr (by rw [h]; exact isUnit_one)\n      exact Matrix.mulVec_injective_iff_isUnit.mpr hC)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:5:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:8:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:5:92: missing space in the source\n\nThis part of the code\n  'r.val).det=1) :'\nshould be written as\n  'r.val).det = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem threePointLinearEquiv_basis (p q r : Point)\n    (h : (pairBasisMatrix p q r.val).det = 1) (i : Fin 3) :\n    threePointLinearEquiv p q r h (basisPoint i).val = ![p.val, q.val, r.val] i :=\n  by\n  ext j\n  change matrixAt (pairBasisMatrix p q r.val) (basisPoint i).val j = _\n  fin_cases i <;> simp [matrixAt, pairBasisMatrix, basisPoint, binaryLabel, Fin.sum_univ_succ]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:11:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:11:88: missing space in the source\n\nThis part of the code\n  'r.val).det=1) (i'\nshould be written as\n  'r.val).det = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nPrescribe independently the values at three linearly independent Fano labels. -/\ntheorem matrixAt_three_points (p q r : Point) (h : (pairBasisMatrix p q r.val).det = 1) (a b c : E) :\n    ∃ B : BinaryMatrix, matrixAt B p.val = a ∧ matrixAt B q.val = b ∧ matrixAt B r.val = c :=\n  by\n  let C := threePointLinearEquiv p q r h\n  let D : BinaryMatrix := fun i j => ![a i, b i, c i] j\n  let L : E →ₗ[Bit] E := (binaryMatrixLinear D).comp C.symm.toLinearMap\n  let B : BinaryMatrix := LinearMap.toMatrix' L\n  have hb (i : Fin 3) : matrixAt B (![p.val, q.val, r.val] i) = ![a, b, c] i :=\n    by\n    rw [← threePointLinearEquiv_basis p q r h i]\n    change (LinearMap.toMatrix' L).mulVec (C (basisPoint i).val) = _\n    rw [LinearMap.toMatrix'_mulVec]\n    change matrixAt D (C.symm (C (basisPoint i).val)) = _\n    rw [C.symm_apply_apply]\n    ext j\n    fin_cases i <;> simp [matrixAt, D, basisPoint, binaryLabel, Fin.sum_univ_succ]\n  exact ⟨B, hb 0, hb 1, hb 2⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:18:82: missing space in the source\n\nThis part of the code\n  'r.val).det=1) (a'\nshould be written as\n  'r.val).det = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem threePoint_spans (p q r : Point)\n    (h : (pairBasisMatrix p q r.val).det = 1) (x : E) : ∃ a : E, x = a 0 • p.val + a 1 • q.val + a 2 • r.val :=\n  by\n  obtain ⟨a, ha⟩ := (threePointLinearEquiv p q r h).surjective x\n  refine ⟨a, ?_⟩\n  rw [← ha]\n  ext i\n  change matrixAt (pairBasisMatrix p q r.val) a i = _\n  simp [matrixAt, pairBasisMatrix, Fin.sum_univ_succ]\n  ring`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:34:77: missing space in the source\n\nThis part of the code\n  'r.val).det=1) (x'\nshould be written as\n  'r.val).det = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateThreePointLinear.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateTwoRowRigidity transitive imports (legacy)",
+       "15745add1d0ee968"],
+      ["Atlas.Rudvalis.CoordinateTwoRowRigidity:importAllArts",
+       "cb87a3bc9c8df2cb"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateThreePointLinear.lean",
+   "e13394a47bbcc3bf"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateThreePointLinear",
+   "2b4c14a05451c158"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "cae1288949a653b2"}

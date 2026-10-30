@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "chevalley-twisted-e6-dual-orbits",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.TwistedE6.DualOrbit",
+    "Atlas.LinearGroups.Chevalley.TwistedE6.DualMatrices"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.negativeWeights",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualOrbit.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.negativeWeights_closed",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualOrbit.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.negativeWeights_minuscule",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualOrbit.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.weightDiagram_mem_negative",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualOrbit.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.weightDiagram_mem_positive",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualOrbit.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.weightDiagram_simple_grade",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualOrbit.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.weightDiagram_simple_root",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualOrbit.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.weightDiagram_simple_reflection",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualOrbit.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualOrbits",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualOrbit.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualOrbits_closed",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualOrbit.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualOrbits_minuscule",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualOrbit.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualBlockSwap",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualOrbit.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualBlockSwap_involutive",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualOrbit.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.weightDiagram_mem_dualOrbit",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualOrbit.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualOrbitDiagram",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualOrbit.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualOrbitDiagram_val",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualOrbit.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualMatrixDiagram",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualMatrices.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualMatrixDiagram_apply",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualMatrices.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualUnitsDiagram",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualMatrices.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualUnitsDiagram_root",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualMatrices.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualBlocksDiagram",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualMatrices.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualBlocksDiagram_involutive",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualMatrices.lean",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "chevalley-twisted-e6-dual-orbits-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ]
+}

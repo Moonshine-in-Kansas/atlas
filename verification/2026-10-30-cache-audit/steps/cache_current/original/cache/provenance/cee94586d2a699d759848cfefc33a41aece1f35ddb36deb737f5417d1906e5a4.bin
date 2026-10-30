@@ -1,0 +1,102 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["56e9b8d0214f62ea.olean"],
+  "m": false,
+  "i": "6ec5e5b8cee3783d.ilean",
+  "c": "2d03aceab344a19b.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/MinimumSupportClassification.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/MinimumSupportClassification.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/MinimumSupportClassification.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/MinimumSupportClassification.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/MinimumSupportClassification.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem quaternary_minimum_not_constant_rows (w : QuaternaryWord)\n    (hw : w ∈ quaternaryCode) (hweight : euclideanWeight w = 16) : ¬constantOnRows (reduce w) := by\n  classical\n  intro h\n  obtain ⟨s, hs⟩ := (constantOnRows_iff _).mp h\n  have hn := quaternary_minimum_residue_weight w hw hweight\n  rw [hs, rowSubsetWord_weight] at hn\n  have hc : s.card = 2 := by omega\n  obtain ⟨p, q, hpq, rfl⟩ := Finset.card_eq_two.mp hc\n  have he : rowSubsetWord { p, q } = rowWord p + rowWord q :=\n    by\n    funext z\n    by_cases hp : z.1 = p <;> by_cases hq : z.1 = q <;> simp_all [rowSubsetWord, rowWord]\n  exact quaternary_minimum_not_two_rows p q hpq w hw hweight (hs.trans he)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:8:73: missing space in the source\n\nThis part of the code\n  'w∈quaternaryCode)'\nshould be written as\n  'w ∈ quaternaryCode)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:9:32: missing space in the source\n\nThis part of the code\n  'w=16) :'\nshould be written as\n  'w = 16)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nNecessary four-block support data, independently of signed lift existence. -/\ndef admissibleFourSupport (d : BinaryWord) : Prop :=\n  ∃ (a : Point) (ε : Point → Bit),\n    d = binaryNormalMap (ε, outerMatrix a.val a.val, 0) ∧\n      (∀ p : Point, dot a.val p.val = 0 → ε p = 0) ∧ (∑ p : Point, ε p) = 1`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem quaternary_minimum_support_cases (w : QuaternaryWord)\n    (hw : w ∈ quaternaryCode) (hweight : euclideanWeight w = 16) :\n    admissibleFourSupport (reduce w) ∨ hasNonzeroQuadraticPart (reduce w) :=\n  by\n  have hd : reduce w ∈ binaryResidue := (quaternaryCode_residue _).mpr ⟨w, hw, rfl⟩\n  have hn := quaternary_minimum_residue_weight w hw hweight\n  rcases (binaryResidue_three_strata _ hd).1 with hc | hb | hq\n  · exact False.elim (quaternary_minimum_not_constant_rows w hw hweight hc)\n  · obtain ⟨ε, M, hM, he⟩ := hb\n    have htype := (binaryNormalMap_bilinear_weight_sixteen ε M hM).mp (he ▸ hn)\n    obtain ⟨b, a, hba⟩ := htype.1\n    subst M\n    obtain ⟨hab, hε⟩ := quaternary_four_active_support_constraint w hw hweight ε a b he.symm\n    subst b\n    refine Or.inl ⟨a, ε, he.symm, ?_, hε⟩\n    intro p hp\n    exact htype.2 p (by rw [matrixAt_outer, hp, zero_smul])\n  · exact Or.inr hq`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:29:69: missing space in the source\n\nThis part of the code\n  'w∈quaternaryCode)'\nshould be written as\n  'w ∈ quaternaryCode)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:30:32: missing space in the source\n\nThis part of the code\n  'w=16) :'\nshould be written as\n  'w = 16)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/MinimumSupportClassification.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CodeGroupOrder transitive imports (legacy)",
+       "44ea35fdbdd8c3b1"],
+      ["Atlas.Rudvalis.CodeGroupOrder:importAllArts", "6f8cdba058aaadf6"],
+      ["Atlas.Rudvalis.MinimumSupportObstructions transitive imports (legacy)",
+       "f01e1baff07b46db"],
+      ["Atlas.Rudvalis.MinimumSupportObstructions:importAllArts",
+       "641f1431a5162d71"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/MinimumSupportClassification.lean",
+   "8794c5d4e85d1e14"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.MinimumSupportClassification",
+   "7575770410cc5595"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "d2acf382c5a025a1"}

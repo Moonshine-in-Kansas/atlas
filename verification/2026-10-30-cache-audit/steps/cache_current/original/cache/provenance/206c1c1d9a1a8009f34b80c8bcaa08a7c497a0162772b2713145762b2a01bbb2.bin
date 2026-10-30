@@ -1,0 +1,94 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["4f40b48055717d49.olean"],
+  "m": false,
+  "i": "4703c2e050d606af.ilean",
+  "c": "ba224abd8e708345.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Conway/MonomialOrder.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/MonomialOrder.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/MonomialOrder.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Conway/MonomialOrder.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Conway/MonomialOrder.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Conway`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes Atlas.Lattices`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem monomial_order : Nat.card monomialSubgroup = 1002795171840 := by\n  rw [← Nat.card_congr monomialSubgroupEquiv.toEquiv, SemidirectProduct.card,\n    Nat.card_congr (Multiplicative.toAdd : Multiplicative golay ≃ golay), golay_card, mathieu24_order]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem monomial_coordinateEight (g : GolayMonomialGroup) (a : Omega) :\n    (monomialEmbedding g).val (coordinateEight a) =\n      if g.left.toAdd.val (g.right.val a) = 0 then coordinateEight (g.right.val a)\n      else -coordinateEight (g.right.val a) :=\n  by\n  apply Subtype.ext\n  ext i\n  by_cases hi : i = g.right.val a\n  · subst i\n    simp only [monomialEmbedding_apply, coordinateEight, coordinateVector, Pi.single_apply, Equiv.symm_apply_apply,\n      ite_true]\n    split_ifs <;> simp\n  · have ha : g.right.val.symm i ≠ a := by\n      intro h\n      apply hi\n      rw [← h, Equiv.apply_symm_apply]\n    simp only [monomialEmbedding_apply, coordinateEight, coordinateVector, Pi.single_apply, ha, ite_false]\n    split_ifs <;> simp_all`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:28:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem monomial_fixes_standardCross (g : GolayMonomialGroup) :\n    crossAction (monomialEmbedding g) standardCross = standardCross :=\n  by\n  apply Subtype.ext\n  change\n    leechModTwoRepresentation (monomialEmbedding g) (leechReduction (coordinateEight ((0, 0), 0))) =\n      leechReduction (coordinateEight ((0, 0), 0))\n  rw [leechModTwoRepresentation_reduce, monomial_coordinateEight]\n  split_ifs\n  · exact coordinateEight_class _ _\n  · rw [leechReduction_neg]; exact coordinateEight_class _ _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Conway`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialOrder.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Lattices.LeechVisibleSymmetries transitive imports (legacy)",
+       "12b83479fc27fbd4"],
+      ["Atlas.Lattices.LeechVisibleSymmetries:importAllArts",
+       "500c87631b0c595c"],
+      ["Atlas.Lattices.LeechCrossAction transitive imports (legacy)",
+       "531b74fb8c724c64"],
+      ["Atlas.Lattices.LeechCrossAction:importAllArts", "684edcad88dfc13c"],
+      ["Atlas.Mathieu.Mathieu24Order transitive imports (legacy)",
+       "36ec815d3b67071c"],
+      ["Atlas.Mathieu.Mathieu24Order:importAllArts", "940ec1cd94fe598a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Conway/MonomialOrder.lean", "69ccc527795c2c7d"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Conway.MonomialOrder", "6c21947a03baaac2"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "a14e0db26e753df8"}

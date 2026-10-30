@@ -1,0 +1,161 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["8fc0560727030ac0.olean"],
+  "m": false,
+  "i": "aa182e04d43b325f.ilean",
+  "c": "99aeeb95eb94e67f.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/HeavyOrthogonalCount.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyOrthogonalCount.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyOrthogonalCount.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyOrthogonalCount.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyOrthogonalCount.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `abbrev HeavyAvoidingResidues (p : Point) (x : E) :=\n  { d : HeavyMinimumResidues // d.val.val (p, x) = 0 ∧ d.val.val (p, x + p.val) = 0 }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def heavyAvoidingResidueEquiv (p : Point) (x : E) :\n    (Σ c : Point, HeavyAvoidingPair c p x) ≃ HeavyAvoidingResidues p x :=\n  (show\n        (Σ c : Point, HeavyAvoidingPair c p x) ≃\n          { a : QuadraticMinimumParameters //\n            fixedHeavyWord a.1 a.2 (p, x) = 0 ∧ fixedHeavyWord a.1 a.2 (p, x + p.val) = 0 }\n        from\n        { toFun := fun a => ⟨⟨a.1, a.2.val⟩, a.2.prop⟩\n          invFun := fun a => ⟨a.val.1, ⟨a.val.2, a.prop⟩⟩\n          left_inv := fun _ => rfl\n          right_inv := fun _ => rfl }).trans\n    (Equiv.subtypeEquiv quadraticMinimumWordEquiv (fun _ => Iff.rfl))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyAvoidingResidues_card (p : Point) (x : E) :\n    Nat.card (HeavyAvoidingResidues p x) = 384 := by\n  classical\n  rw [← Nat.card_congr (heavyAvoidingResidueEquiv p x), Nat.card_sigma]\n  simp_rw [heavyAvoidingPair_card]\n  have he : (Finset.univ.filter (fun c : Point => p ≠ c)).card = 6 := by decide +kernel +revert\n  have hs : (∑ c : Point, if p = c then 0 else 64) = ∑ c ∈ Finset.univ.filter (fun c : Point => p ≠ c), (64 : ℕ) :=\n    by\n    rw [Finset.sum_filter]\n    apply Finset.sum_congr rfl\n    intro c _\n    by_cases h : p = c <;> simp [h]\n  rw [hs, Finset.sum_const, he]\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:22:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `abbrev HeavyOrthogonalWords (p : Point) (x : E) :=\n  { w : HeavyMinimumWords // reduce w.val.val (p, x) = 0 ∧ reduce w.val.val (p, x + p.val) = 0 }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def heavyOrthogonalWordsEquiv (p : Point) (x : E) :\n    HeavyOrthogonalWords p x ≃ Σ d : HeavyAvoidingResidues p x, minimumLift d.val.val.val :=\n  (Equiv.subtypeEquiv heavyMinimumWordsEquiv (fun _ => Iff.rfl)).trans\n    (Equiv.subtypeSigmaEquiv (fun d : HeavyMinimumResidues => minimumLift d.val.val)\n      (fun d => d.val.val (p, x) = 0 ∧ d.val.val (p, x + p.val) = 0))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyOrthogonalWords_card (p : Point) (x : E) :\n    Nat.card (HeavyOrthogonalWords p x) = 6144 := by\n  classical\n  rw [Nat.card_congr (heavyOrthogonalWordsEquiv p x), Nat.card_sigma]\n  have hh (d : HeavyAvoidingResidues p x) : Nat.card (minimumLift d.val.val.val) = 16 :=\n    heavy_minimum_fibre_card _ d.val.prop.1 d.val.prop.2\n  simp_rw [hh]\n  simp only [Finset.sum_const, Finset.card_univ, smul_eq_mul]\n  rw [← Nat.card_eq_fintype_card, heavyAvoidingResidues_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:45:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def heavyWordShellEquiv : HeavyMinimumWords ≃ heavyShellPiece :=\n  Equiv.ofInjective (fun w : HeavyMinimumWords => minimumWordShellLift (heavyMinimumWord w))\n    (by\n      intro a b h\n      exact Subtype.ext (congrArg (fun u : MinimumWords => u.val) (minimumWordShellLift_injective h)))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyWord_coordinate_orthogonal_iff (w : HeavyMinimumWords) (p : Point)\n    (x : E) :\n    CrossOrthogonal (coordinateCross (p, x)) (minimalCross (minimumWordShellLift (heavyMinimumWord w))) ↔\n      reduce w.val.val (p, x) = 0 ∧ reduce w.val.val (p, x + p.val) = 0 :=\n  by\n  rw [coordinateCross, crossOrthogonal_mk]\n  change HermitianOrthogonal (coordinateMinimum (p, x)) (minimumWordShellLift (heavyMinimumWord w)).val.val ↔ _\n  rw [coordinate_hermitianOrthogonal_pair, minimumWordShellLift_zero_iff, minimumWordShellLift_zero_iff]\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:60:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:63:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:64:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def heavyOrthogonalShellEquiv (p : Point) (x : E) :\n    HeavyOrthogonalWords p x ≃ RestrictedShellPiece heavyShellPiece (CrossOrthogonal (coordinateCross (p, x))) :=\n  Equiv.subtypeEquiv heavyWordShellEquiv (fun w => (heavyWord_coordinate_orthogonal_iff w p x).symm)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:68:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyOrthogonalShell_card (p : Point) (x : E) :\n    Nat.card (RestrictedShellPiece heavyShellPiece (CrossOrthogonal (coordinateCross (p, x)))) = 6144 := by\n  rw [← Nat.card_congr (heavyOrthogonalShellEquiv p x), heavyOrthogonalWords_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:72:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyOrthogonalCrosses_card (p : Point) (x : E) :\n    Nat.card { c : HeavyCrosses // CrossOrthogonal (coordinateCross (p, x)) (shellPieceCrossMap heavyShellPiece c) } =\n      1536 :=\n  by\n  have h := restricted_shell_cross_card heavyShellPiece (CrossOrthogonal (coordinateCross (p, x)))\n  rw [heavyOrthogonalShell_card] at h\n  change\n    6144 =\n      Nat.card { c : HeavyCrosses // CrossOrthogonal (coordinateCross (p, x)) (shellPieceCrossMap heavyShellPiece c) } *\n        4 at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:80:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.HeavyAvoidingCount transitive imports (legacy)",
+       "73a405a354c32e79"],
+      ["Atlas.Rudvalis.HeavyAvoidingCount:importAllArts", "d3ae80cf2ea97d8f"],
+      ["Atlas.Rudvalis.FourOrthogonalCount transitive imports (legacy)",
+       "f1660cef4c7dd2b6"],
+      ["Atlas.Rudvalis.FourOrthogonalCount:importAllArts",
+       "5d9f23c83b59510c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/HeavyOrthogonalCount.lean",
+   "27c2ce395139ffd5"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.HeavyOrthogonalCount", "84284f4c0ffdf39e"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "a885060b4ffbec22"}

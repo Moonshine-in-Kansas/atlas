@@ -1,0 +1,111 @@
+{
+  "id": "draft-marked-line-gl2-action11",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "F4Work.MarkedLineGL2Action"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.ReeF4.specialMarkedLineParam",
+      "module": "F4Work.MarkedLineGL2Action",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.specialMarkedLineParam_val",
+      "module": "F4Work.MarkedLineGL2Action",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.specialMarkedLineParam_bijective",
+      "module": "F4Work.MarkedLineGL2Action",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.specialMarkedLineCoordinateEquiv",
+      "module": "F4Work.MarkedLineGL2Action",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.specialMarkedLineCoordinateEquiv_val",
+      "module": "F4Work.MarkedLineGL2Action",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.torusEquiv_scalar_markedLine",
+      "module": "F4Work.MarkedLineGL2Action",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelLongSL2ProductHom_markedLine",
+      "module": "F4Work.MarkedLineGL2Action",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelLongGL2Hom_markedLine",
+      "module": "F4Work.MarkedLineGL2Action",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelLongGL2Hom_maps_specialMarkedLine",
+      "module": "F4Work.MarkedLineGL2Action",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.markedLineGL2ActionEquiv",
+      "module": "F4Work.MarkedLineGL2Action",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.markedLineGL2ActionEquiv_apply",
+      "module": "F4Work.MarkedLineGL2Action",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "draft-marked-line-split-restriction-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis.",
+        "Atlas.F4.",
+        "Atlas.ReeF4.card_Model",
+        "Atlas.ReeF4.card_specialPoints",
+        "Atlas.ReeF4.elementarySubgroup_eq_top",
+        "Atlas.ReeF4.model_isPerfect",
+        "Atlas.ReeF4.simple_of_large",
+        "Atlas.ReeF4.model_specialPoint_transitive"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.ReeF4.Order",
+        "Atlas.LinearGroups.ReeF4.Generation",
+        "Atlas.LinearGroups.ReeF4.SpecialPointCount",
+        "Atlas.LinearGroups.ReeF4.SpecialOppositePairCount",
+        "Atlas.LinearGroups.ReeF4.SpecialPointTransitivity",
+        "Atlas.LinearGroups.ReeF4.OppositePairRecognition",
+        "Atlas.LinearGroups.ReeF4.OppositePairStabilizer",
+        "F4Work.PointParabolicSemidirect",
+        "F4Work.PositiveRootTail",
+        "F4Work.TailLeviNormalization",
+        "F4Work.TailChartAction",
+        "F4Work.BinarySpecialPointFaithfulness",
+        "F4Work.BinaryDerivedPointFaithfulness",
+        "F4Work.BinaryDerivedAction",
+        "F4Work.ReeFullOrder",
+        "F4Work.ReeFullGeneration",
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ]
+}

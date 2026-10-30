@@ -1,0 +1,91 @@
+{
+  "id": "staged-SingletonParameters",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.SingletonParameters"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedSingletonXHom",
+      "kind": "definition",
+      "module": "FamilyWork.SingletonParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedSingletonYHom",
+      "kind": "definition",
+      "module": "FamilyWork.SingletonParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedSingletonXHom_val",
+      "kind": "theorem",
+      "module": "FamilyWork.SingletonParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedSingletonYHom_val",
+      "kind": "theorem",
+      "module": "FamilyWork.SingletonParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedSingletonXHom_injective",
+      "kind": "theorem",
+      "module": "FamilyWork.SingletonParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedSingletonYHom_injective",
+      "kind": "theorem",
+      "module": "FamilyWork.SingletonParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.mem_fixedSingletonXHom_range_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.SingletonParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.mem_fixedSingletonYHom_range_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.SingletonParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedSingletonXEquiv",
+      "kind": "definition",
+      "module": "FamilyWork.SingletonParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedSingletonYEquiv",
+      "kind": "definition",
+      "module": "FamilyWork.SingletonParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedSingletonX_card",
+      "kind": "theorem",
+      "module": "FamilyWork.SingletonParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedSingletonY_card",
+      "kind": "theorem",
+      "module": "FamilyWork.SingletonParameters"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-SingletonParameters-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["5d1ec5d2d0cb6007.olean"],
+  "m": false,
+  "i": "05b0ac8fff576e91.ilean",
+  "c": "9c6106679945ec64.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Comparison/TypeCSignedMatrix.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Comparison/TypeCSignedMatrix.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Comparison/TypeCSignedMatrix.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Comparison/TypeCSignedMatrix.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Comparison/TypeCSignedMatrix.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCSignedMatrix.lean:8:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCSignedMatrix.lean:76:10: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [ha, hb]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCSignedMatrix.lean:146:37: This simp argument is unused:\n  mul_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortMatrix, Matrix.transvection, Matrix.fromBlocks, Matrix.single_apply, Matrix.one_apply, smul_eq_mul,\n    eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCSignedMatrix.lean:137:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCSignedMatrix.lean:162:37: This simp argument is unused:\n  mul_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortMatrix, Matrix.transvection, Matrix.fromBlocks, Matrix.single_apply, Matrix.one_apply, smul_eq_mul,\n    eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCSignedMatrix.lean:168:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCSignedMatrix.lean:183:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.Comparison.TypeCWeightBlock transitive imports (legacy)",
+       "4f951e2bb2f2e68b"],
+      ["Atlas.LinearGroups.Chevalley.Comparison.TypeCWeightBlock:importAllArts",
+       "0fb322f61c399a1b"],
+      ["Atlas.LinearGroups.Symplectic.Basic transitive imports (legacy)",
+       "b3ad20039f8e0d8e"],
+      ["Atlas.LinearGroups.Symplectic.Basic:importAllArts",
+       "91b3d4906310e26d"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Comparison/TypeCSignedMatrix.lean",
+   "586ab04594aa23d3"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Comparison.TypeCSignedMatrix",
+   "e3b04b9dab104eb4"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "41404fc842262f54"}

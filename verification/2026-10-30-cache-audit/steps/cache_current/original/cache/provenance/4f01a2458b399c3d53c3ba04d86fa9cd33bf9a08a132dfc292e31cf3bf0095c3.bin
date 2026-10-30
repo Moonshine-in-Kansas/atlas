@@ -1,0 +1,99 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["ce430916fb2c643e.olean"],
+  "m": false,
+  "i": "1d1ea1d4e4fad96d.ilean",
+  "c": "887fe3e12460c410.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean -M8704 -j1 /home/gerald/atlas/Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.ReeF4`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Albert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `variable {F : Type*} [Field F] [Finite F] [CharP F 2]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- On the nonpositive part of the actual grading, the three diagonal adjoint\ncoordinates force both marked diagonal coefficients to vanish. -/\ntheorem IsSpecialVector.diagonal_zero_of_no_positive {m : ℕ} {u : TraceZero F} (hu : IsSpecialVector m u)\n    (hp : ∀ j, 0 < specialAbsoluteGrade j → isotropyCoordinates u j = 0) :\n    isotropyCoordinates u 0 = 0 ∧ isotropyCoordinates u 1 = 0 :=\n  by\n  have h0 : fullAdjointDiag0 (isotropyCoordinates u) = 0 := by rw [← fullAdjointDiag0_actual, hu.adjoint_zero]; rfl\n  have h1 : fullAdjointDiag1 (isotropyCoordinates u) = 0 := by rw [← fullAdjointDiag1_actual, hu.adjoint_zero]; rfl\n  have h2 : fullAdjointDiag2 (isotropyCoordinates u) = 0 := by rw [← fullAdjointDiag2_actual, hu.adjoint_zero]; rfl\n  have hz6 := hp 6 (by decide)\n  have hz7 := hp 7 (by decide)\n  have hz8 := hp 8 (by decide)\n  have hz9 := hp 9 (by decide)\n  have hz14 := hp 14 (by decide)\n  have hz15 := hp 15 (by decide)\n  have hz16 := hp 16 (by decide)\n  have hz17 := hp 17 (by decide)\n  have hz21 := hp 21 (by decide)\n  have hz23 := hp 23 (by decide)\n  have hz24 := hp 24 (by decide)\n  have hz25 := hp 25 (by decide)\n  simp only [fullAdjointDiag0, fullAdjointDiag1, fullAdjointDiag2, hz6, hz7, hz8, hz9, hz14, hz15, hz16, hz17, hz21,\n    hz23, hz24, hz25, mul_zero, zero_mul, add_zero] at h0 h1 h2\n  rw [h2, add_zero] at h0 h1\n  exact ⟨sq_eq_zero_iff.mp h0, sq_eq_zero_iff.mp h1⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:13:67: missing space in the source\n\nThis part of the code\n  'j=0) :'\nshould be written as\n  'j = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Every intrinsic special vector has one of exactly the eight allowed\nleading root labels, with every higher coordinate zero. -/\ntheorem IsSpecialVector.exists_allowed_leading_root {m : ℕ} (hcard : Nat.card F = 2 ^ (2 * m + 1)) {u : TraceZero F}\n    (hu : IsSpecialVector m u) :\n    ∃ r : Fin 26,\n      allowedSpecialLeadingRoot r ∧\n        isotropyCoordinates u r ≠ 0 ∧\n          ∀ j, specialAbsoluteGrade r < specialAbsoluteGrade j → isotropyCoordinates u j = 0 :=\n  by\n  classical\n  let s : Finset (Fin 26) := Finset.univ.filter (fun i => isotropyCoordinates u i ≠ 0)\n  have hs : s.Nonempty := by\n    by_contra he\n    have hz : isotropyCoordinates u = 0 := by\n      funext i\n      by_contra hi\n      exact he ⟨i, Finset.mem_filter.mpr ⟨Finset.mem_univ i, hi⟩⟩\n    apply hu.ne_zero\n    calc\n      u = isotropyPoint (isotropyCoordinates u) := (isotropyPoint_coordinates u).symm\n      _ = isotropyPoint (isotropyCoordinates (0 : TraceZero F)) := by rw [hz, _root_.map_zero]\n      _ = 0 := isotropyPoint_coordinates 0\n  obtain ⟨r, hr, hmax⟩ := Finset.exists_max_image s specialAbsoluteGrade hs\n  have hn : isotropyCoordinates u r ≠ 0 := (Finset.mem_filter.mp hr).2\n  have hz : ∀ j, specialAbsoluteGrade r < specialAbsoluteGrade j → isotropyCoordinates u j = 0 :=\n    by\n    intro j hj\n    by_contra hne\n    exact (not_lt_of_ge (hmax j (Finset.mem_filter.mpr ⟨Finset.mem_univ j, hne⟩))) hj\n  have hrroot : 2 ≤ r.val := by\n    by_contra h\n    have hi : r = 0 ∨ r = 1 := by\n      have hv : r.val = 0 ∨ r.val = 1 := by omega\n      rcases hv with hv | hv\n      · exact Or.inl (Fin.ext hv)\n      · exact Or.inr (Fin.ext hv)\n    have hg : specialAbsoluteGrade r = 0 := by rcases hi with rfl | rfl <;> rfl\n    have hd := hu.diagonal_zero_of_no_positive (by simpa only [hg] using hz)\n    rcases hi with rfl | rfl\n    · exact hn hd.1\n    · exact hn hd.2\n  exact ⟨r, hu.leading_root_allowed hcard r hrroot hn hz, hn, hz⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:41:27: missing space in the source\n\nThis part of the code\n  '2^(2*m+1))'\nshould be written as\n  '2 ^ (2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:41:30: missing space in the source\n\nThis part of the code\n  '2^(2*m+1)) {u'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.ReeF4`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.ReeF4.SpecialLeadingClassification transitive imports (legacy)",
+       "3a26d3ccd06fefa9"],
+      ["Atlas.LinearGroups.ReeF4.SpecialLeadingClassification:importAllArts",
+       "094391fbd2032c0d"],
+      ["Mathlib.Data.Finset.Max transitive imports (legacy)",
+       "f0125ccd67618f68"],
+      ["Mathlib.Data.Finset.Max:importAllArts", "2444288585f79f2b"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/ReeF4/SpecialLeadingExistence.lean",
+   "d7343291c75df016"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.ReeF4.SpecialLeadingExistence",
+   "c743504809ac9bff"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "faed126650e34ea3"}

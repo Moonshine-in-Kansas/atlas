@@ -1,0 +1,62 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["8f2a31735be8e2d5.olean"],
+  "m": false,
+  "i": "a3994d7a343e3210.ilean",
+  "c": "6c2857532ceb5340.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/QuartetCoupleSelection.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/QuartetCoupleSelection.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/QuartetCoupleSelection.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/QuartetCoupleSelection.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/QuartetCoupleSelection.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/QuartetCoupleSelection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetCoupleSelection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetCoupleSelection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetCoupleSelection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem isQuartet_contains_couple (Q : Set MinimalCross) (hQ : IsQuartet Q) :\n    ∃ c : Set MinimalCross, IsCouple c ∧ c ⊆ Q :=\n  by\n  obtain ⟨a, b, c, d, hab, _, _, _, _, _, he⟩ := Set.ncard_eq_four.mp hQ.1\n  have ha : a ∈ Q := by rw [he]; exact Or.inl rfl\n  have hb : b ∈ Q := by rw [he]; exact Or.inr (Or.inl rfl)\n  have hs : ({ a, b } : Set MinimalCross) ⊆ Q := by\n    rintro z (rfl | rfl)\n    · exact ha\n    · exact hb\n  refine ⟨{ a, b }, ⟨Set.ncard_pair hab, ?_⟩, hs⟩\n  intro x hx y hy hxy\n  exact hQ.2.1 (hs hx) (hs hy) hxy`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetCoupleSelection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetCoupleSelection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetCoupleSelection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetCoupleSelection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.IntrinsicConfigurations transitive imports (legacy)",
+       "baadce814d809638"],
+      ["Atlas.Rudvalis.IntrinsicConfigurations:importAllArts",
+       "35092b67e04ebadb"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/QuartetCoupleSelection.lean",
+   "d4c4b0020c3f788a"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.QuartetCoupleSelection", "f8ab6ed5c223a811"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "e75c3b788ef76704"}

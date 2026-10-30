@@ -1,0 +1,121 @@
+{
+  "id": "staged-F4AlbertMatrixInterface",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "F4Work.F4AlbertMatrixInterface"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertReindex",
+      "kind": "definition",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertMatrixHom",
+      "kind": "definition",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimpleApply_map",
+      "kind": "theorem",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertCoordinates_map",
+      "kind": "theorem",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertCoordinates_injective",
+      "kind": "theorem",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.simplePolynomialMatrix_map",
+      "kind": "theorem",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimple_basis",
+      "kind": "theorem",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertMatrixHom_apply",
+      "kind": "theorem",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertMatrixHom_injective",
+      "kind": "theorem",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertMatrixHom_column",
+      "kind": "theorem",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertMatrixHom_simple",
+      "kind": "theorem",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimple_coordinates",
+      "kind": "theorem",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimple_add",
+      "kind": "theorem",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimple_zero",
+      "kind": "theorem",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimple_inv",
+      "kind": "theorem",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertMatrixHom_simple_inv",
+      "kind": "theorem",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.simplePolynomialMatrix_mul_neg",
+      "kind": "theorem",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.simplePolynomialMatrix_neg_mul",
+      "kind": "theorem",
+      "module": "F4Work.F4AlbertMatrixInterface"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "albert-matrix-interface-independent-of-order-and-simplicity",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ]
+}

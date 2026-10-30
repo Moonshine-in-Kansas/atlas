@@ -1,12 +1,12 @@
 # Lean certificates identifying construction models
 
 These are actual `MulEquiv` terms between the named concrete carriers. Their
-verbatim compiled types come from the source-bound 26 October audit. The linked
+verbatim compiled types come from the current source-bound audit scopes. The linked
 Lean definitions contain the proofs; the separate full audits retain type, instance
 and proof dependencies. A certificate applies on its stated domain, including
 nonsimple parameters when specified. Order equality alone is not an identification.
 
-This is the technical appendix for the four included construction-identification maps. The [comparison guide](REALIZATIONS.md) also covers [exceptional isomorphisms](REALIZATIONS.md#between-families), [nonisomorphism by orders and invariants](REALIZATIONS.md#remaining-pairs), and [remaining gaps](REALIZATIONS.md#comparison-scope).
+This is the technical appendix for the 6 included construction-identification maps. The [comparison guide](REALIZATIONS.md) also covers [exceptional isomorphisms](REALIZATIONS.md#between-families), [nonisomorphism by orders and invariants](REALIZATIONS.md#remaining-pairs), and [remaining gaps](REALIZATIONS.md#comparison-scope).
 
 <a id="chevalley-a-to-legacy-v1"></a>
 
@@ -23,7 +23,7 @@ Domain: K an arbitrary finite field; q = Nat.card K; r >= 1; every finite charac
 | Parameter map | [`Atlas.Chevalley.Catalogue.A_matrixDimension`](../Atlas/LinearGroups/Chevalley/Catalogue/ACIdentification.lean#L10) |
 | Isomorphism witness | [`Atlas.Chevalley.Catalogue.A_identification`](../Atlas/LinearGroups/Chevalley/Catalogue/ACIdentification.lean#L24) |
 
-Proof definition (verbatim source, in namespace `Atlas.Chevalley.Catalogue`):
+Proof definition (verbatim source; see the linked file for its namespace):
 
 ```lean
 def A_identification (r : ℕ) (hr : 1 ≤ r) (K : Type*) [Field K]
@@ -99,7 +99,7 @@ Atlas.Chevalley.Catalogue.A_identification.{u_1} : (r : Nat) →
 
 </details>
 
-[Compiled evidence](../verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz) · [Full dependency audit](../verification/runs/chevalley-a-to-legacy-v1/20261018T160827-105).
+[Compiled evidence](../verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz) · [Full dependency audit](../verification/runs/chevalley-a-to-legacy-v1/20261018T160827-105).
 
 Marked-generator compatibility:
 
@@ -122,7 +122,7 @@ Domain: K an arbitrary finite field; q = Nat.card K; r >= 2; every finite charac
 | Parameter map | [`Atlas.Chevalley.Catalogue.C_symplecticRank`](../Atlas/LinearGroups/Chevalley/Catalogue/ACIdentification.lean#L13) |
 | Isomorphism witness | [`Atlas.Chevalley.Catalogue.C_identification`](../Atlas/LinearGroups/Chevalley/Catalogue/ACIdentification.lean#L31) |
 
-Proof definition (verbatim source, in namespace `Atlas.Chevalley.Catalogue`):
+Proof definition (verbatim source; see the linked file for its namespace):
 
 ```lean
 def C_identification (n : ℕ) (hn : 2 ≤ n + 1) (K : Type*) [Field K]
@@ -188,7 +188,7 @@ Atlas.Chevalley.Catalogue.C_identification.{u_1} : (n : Nat) →
 
 </details>
 
-[Compiled evidence](../verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz) · [Full dependency audit](../verification/runs/chevalley-c-to-legacy-v1/20261018T162154-105).
+[Compiled evidence](../verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz) · [Full dependency audit](../verification/runs/chevalley-c-to-legacy-v1/20261018T162154-105).
 
 Marked-generator compatibility:
 
@@ -213,7 +213,7 @@ Domain: K an arbitrary finite field; q = Nat.card K; r >= 4; every finite charac
 | Parameter map | [`Atlas.Chevalley.Catalogue.D_quadraticRank`](../Atlas/LinearGroups/Chevalley/Catalogue/DIdentification.lean#L9) |
 | Isomorphism witness | [`Atlas.Chevalley.Catalogue.D_identification`](../Atlas/LinearGroups/Chevalley/Catalogue/DIdentification.lean#L16) |
 
-Proof definition (verbatim source, in namespace `Atlas.Chevalley.Catalogue`):
+Proof definition (verbatim source; see the linked file for its namespace):
 
 ```lean
 def D_identification (r : ℕ) (hr : 4 ≤ r) (K : Type*) [Field K]
@@ -271,7 +271,7 @@ Atlas.Chevalley.Catalogue.D_identification.{u_1} : (r : Nat) →
 
 </details>
 
-[Compiled evidence](../verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz) · [Full dependency audit](../verification/runs/chevalley-d-to-legacy-v1/20261018T163507-105).
+[Compiled evidence](../verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz) · [Full dependency audit](../verification/runs/chevalley-d-to-legacy-v1/20261018T163507-105).
 
 Marked-generator compatibility:
 
@@ -295,7 +295,7 @@ Domain: K an arbitrary finite field; q = Nat.card K; n : Nat, rank r = n+1 >= 2;
 | Parameter map | [`Atlas.Chevalley.Catalogue.B_quadraticRank`](../Atlas/LinearGroups/Chevalley/Catalogue/BIdentification.lean#L9) |
 | Isomorphism witness | [`Atlas.Chevalley.Catalogue.B_identification`](../Atlas/LinearGroups/Chevalley/Catalogue/BIdentification.lean#L16) |
 
-Proof definition (verbatim source, in namespace `Atlas.Chevalley.Catalogue`):
+Proof definition (verbatim source; see the linked file for its namespace):
 
 ```lean
 def B_identification (n : ℕ) (hn : 2 ≤ n + 1) (K : Type*) [Field K]
@@ -375,7 +375,7 @@ Atlas.Chevalley.Catalogue.B_identification.{u_1} : (n : Nat) →
 
 </details>
 
-[Compiled evidence](../verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz) · [Full dependency audit](../verification/runs/chevalley-b-to-legacy-v1/20261018T165216-105).
+[Compiled evidence](../verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz) · [Full dependency audit](../verification/runs/chevalley-b-to-legacy-v1/20261018T165216-105).
 
 Marked-generator compatibility:
 
@@ -385,15 +385,451 @@ Marked-generator compatibility:
 - [`Atlas.Chevalley.Comparison.TypeB.projectiveEquiv_X_short`](../Atlas/LinearGroups/Chevalley/Comparison/TypeBProjectiveEquiv.lean#L76)
 - [`Atlas.Chevalley.Comparison.TypeB.projectiveEquiv_Y_short`](../Atlas/LinearGroups/Chevalley/Comparison/TypeBProjectiveEquiv.lean#L86)
 
-## family.F4: comparison scope
+<a id="chevalley-g2-to-legacy-v1"></a>
 
-The isomorphism between the Chevalley and full split-Albert models remains unfinished. No certificate identifying them is claimed.
+## family.G2/chevalley ≃ family.G2/octonion
 
-[Both constructions](../CATALOGUE.md#family-f4).
+Domain: K an arbitrary finite field; q = Nat.card K; fixed rank 2; every finite characteristic, including q=2 and q=3.
 
-## family.G2: comparison scope
+| Interface | Exact Lean reference |
+|---|---|
+| Source model | [`Atlas.Chevalley.Catalogue.G2`](../Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean#L11) |
+| Source group operations | [`Atlas.Chevalley.Catalogue.G2Group`](../Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean#L13) |
+| Target model | [`Atlas.G2.Model`](../Atlas/LinearGroups/G2/Basic.lean#L8) |
+| Target group operations | [`Atlas.Chevalley.Catalogue.G2OctonionGroup`](../Atlas/LinearGroups/Chevalley/Catalogue/G2Identification.lean#L12) |
+| Parameter map | [`Atlas.Chevalley.Catalogue.G2_octonionField`](../Atlas/LinearGroups/Chevalley/Catalogue/G2Identification.lean#L9) |
+| Isomorphism witness | [`Atlas.Chevalley.Catalogue.G2_identification`](../Atlas/LinearGroups/Chevalley/Catalogue/G2Identification.lean#L15) |
 
-The research note records a marked Chevalley–octonion equivalence with ten passed local audit scopes, but its final preservation/registration and source export are outside this version. This version therefore supplies both model contracts, without claiming that their isomorphism certificate is included.
+Proof definition (verbatim source; see the linked file for its namespace):
 
-[Both constructions](../CATALOGUE.md#family-g2).
+```lean
+def G2_identification (K : Type*) [Field K] (hK : G2FieldDomain K) :
+    G2 K ≃* Atlas.G2.Model (G2_octonionField K) := by
+  letI : Finite K := hK
+  exact Comparison.G2.octonionEquiv K
+```
+
+<details>
+<summary>Complete compiled type, including implicit instances</summary>
+
+```lean
+Atlas.Chevalley.Catalogue.G2_identification.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    @Atlas.Chevalley.Catalogue.G2FieldDomain.{u_1} K inst →
+      @MulEquiv.{u_1, u_1} (@Atlas.Chevalley.Catalogue.G2.{u_1} K inst)
+        (↥(@Atlas.G2.Model.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst))
+        (@MulOne.toMul.{u_1} (@Atlas.Chevalley.Catalogue.G2.{u_1} K inst)
+          (@MulOneClass.toMulOne.{u_1} (@Atlas.Chevalley.Catalogue.G2.{u_1} K inst)
+            (@Monoid.toMulOneClass.{u_1} (@Atlas.Chevalley.Catalogue.G2.{u_1} K inst)
+              (@DivInvMonoid.toMonoid.{u_1} (@Atlas.Chevalley.Catalogue.G2.{u_1} K inst)
+                (@Group.toDivInvMonoid.{u_1} (@Atlas.Chevalley.Catalogue.G2.{u_1} K inst)
+                  (@Atlas.Chevalley.Catalogue.G2Group.{u_1} K inst))))))
+        (@Subgroup.mul.{u_1}
+          (@LinearEquiv.{u_1, u_1, u_1, u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+            (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+            (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+              (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst)))
+            (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+              (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst)))
+            (@RingHom.id.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+              (@Semiring.toNonAssocSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                  (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                    (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst)))))
+            (@RingHom.id.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+              (@Semiring.toNonAssocSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                  (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                    (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst)))))
+            ⋯ ⋯ (Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K))
+            (Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K))
+            (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+              (fun a ↦ Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) fun i ↦
+              @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                  (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                    (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst))))
+            (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+              (fun a ↦ Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) fun i ↦
+              @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                  (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                    (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst))))
+            (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+              (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+              (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                  (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst)))
+              (@Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                  (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                    (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst))))
+              (@Semiring.toModule.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                  (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                    (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst)))))
+            (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+              (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+              (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                  (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst)))
+              (@Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                  (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                    (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst))))
+              (@Semiring.toModule.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                  (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                    (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst))))))
+          (@LinearEquiv.automorphismGroup.{u_1, u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+            (Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K))
+            (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+              (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst)))
+            (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+              (fun a ↦ Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) fun i ↦
+              @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                  (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                    (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst))))
+            (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+              (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+              (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                  (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst)))
+              (@Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                  (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                    (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst))))
+              (@Semiring.toModule.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                (@DivisionSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                  (@Semifield.toDivisionSemiring.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K)
+                    (@Field.toSemifield.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst))))))
+          (@Atlas.G2.Model.{u_1} (Atlas.Chevalley.Catalogue.G2_octonionField.{u_1} K) inst))
+```
+
+</details>
+
+[Compiled evidence](../verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz) · [Full dependency audit](../verification/2026-10-30-additions/batches/batch-004-g2-comparison/original/scopes/scope-27d24b073003646aad6901a1).
+
+Marked-generator compatibility:
+
+- [`Atlas.Chevalley.Catalogue.G2_identification_X`](../Atlas/LinearGroups/Chevalley/Catalogue/G2Identification.lean#L20)
+- [`Atlas.Chevalley.Catalogue.G2_identification_Y`](../Atlas/LinearGroups/Chevalley/Catalogue/G2Identification.lean#L27)
+
+<a id="chevalley-f4-to-albert-v1"></a>
+
+## family.F4/chevalley ≃ family.F4/albert
+
+Domain: K an arbitrary finite field; q=Nat.card K; fixed rank 4; every characteristic, including q=2 and q=3..
+
+| Interface | Exact Lean reference |
+|---|---|
+| Source model | [`Atlas.Chevalley.Catalogue.F4`](../Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean#L10) |
+| Source group operations | [`Atlas.Chevalley.Catalogue.F4Group`](../Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean#L12) |
+| Target model | [`Atlas.F4.Model`](../Atlas/LinearGroups/F4/Basic.lean#L8) |
+| Target group operations | [`Atlas.Chevalley.Catalogue.F4AlbertGroup`](../Atlas/LinearGroups/Chevalley/Catalogue/F4Identification.lean#L11) |
+| Parameter map | [`Atlas.Chevalley.Catalogue.F4_albertField`](../Atlas/LinearGroups/Chevalley/Catalogue/F4Identification.lean#L9) |
+| Isomorphism witness | [`Atlas.Chevalley.Catalogue.F4_identification`](../Atlas/LinearGroups/Chevalley/Catalogue/F4Identification.lean#L13) |
+
+Proof definition (verbatim source; see the linked file for its namespace):
+
+```lean
+def F4_identification (K : Type*) [Field K] (hK : F4FieldDomain K) :
+    F4 K ≃* Atlas.F4.Model (F4_albertField K) := by
+  letI : Finite K := hK
+  exact Comparison.F4.albertEquiv K
+```
+
+<details>
+<summary>Complete compiled type, including implicit instances</summary>
+
+```lean
+Atlas.Chevalley.Catalogue.F4_identification.{u_1} : (K : Type u_1) →
+  [inst : Field.{u_1} K] →
+    @Atlas.Chevalley.Catalogue.F4FieldDomain.{u_1} K inst →
+      @MulEquiv.{u_1, u_1} (@Atlas.Chevalley.Catalogue.F4.{u_1} K inst)
+        (↥(@Atlas.F4.Model.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))
+        (@MulOne.toMul.{u_1} (@Atlas.Chevalley.Catalogue.F4.{u_1} K inst)
+          (@MulOneClass.toMulOne.{u_1} (@Atlas.Chevalley.Catalogue.F4.{u_1} K inst)
+            (@Monoid.toMulOneClass.{u_1} (@Atlas.Chevalley.Catalogue.F4.{u_1} K inst)
+              (@DivInvMonoid.toMonoid.{u_1} (@Atlas.Chevalley.Catalogue.F4.{u_1} K inst)
+                (@Group.toDivInvMonoid.{u_1} (@Atlas.Chevalley.Catalogue.F4.{u_1} K inst)
+                  (@Atlas.Chevalley.Catalogue.F4Group.{u_1} K inst))))))
+        (@Subgroup.mul.{u_1}
+          (@LinearEquiv.{u_1, u_1, u_1, u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+            (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+            (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+              (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))
+            (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+              (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))
+            (@RingHom.id.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+              (@Semiring.toNonAssocSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))))
+            (@RingHom.id.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+              (@Semiring.toNonAssocSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))))
+            ⋯ ⋯ (Atlas.Albert.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K))
+            (Atlas.Albert.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K))
+            (@Prod.instAddCommMonoid.{u_1, u_1}
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+                Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+                Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K))
+              (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (fun a ↦ Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) fun i ↦
+                @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+              (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (fun a ↦ Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)) fun i ↦
+                @Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+                  (fun a ↦ Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) fun i ↦
+                  @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                        (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))))
+            (@Prod.instAddCommMonoid.{u_1, u_1}
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+                Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+                Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K))
+              (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (fun a ↦ Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) fun i ↦
+                @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+              (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (fun a ↦ Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)) fun i ↦
+                @Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+                  (fun a ↦ Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) fun i ↦
+                  @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                        (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))))
+            (@Prod.instModule.{u_1, u_1, u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+                Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+                Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K))
+              (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))
+              (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (fun a ↦ Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) fun i ↦
+                @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+              (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (fun a ↦ Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)) fun i ↦
+                @Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+                  (fun a ↦ Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) fun i ↦
+                  @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                        (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+              (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))
+                (@Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+                (@Semiring.toModule.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))))
+              (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                (Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K))
+                (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))
+                (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+                  (fun a ↦ Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) fun i ↦
+                  @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                        (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+                (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+                  (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))
+                  (@Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                        (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+                  (@Semiring.toModule.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                        (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))))))
+            (@Prod.instModule.{u_1, u_1, u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+                Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+                Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K))
+              (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))
+              (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (fun a ↦ Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) fun i ↦
+                @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+              (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (fun a ↦ Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)) fun i ↦
+                @Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+                  (fun a ↦ Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) fun i ↦
+                  @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                        (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+              (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))
+                (@Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+                (@Semiring.toModule.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))))
+              (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                (Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K))
+                (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))
+                (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+                  (fun a ↦ Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) fun i ↦
+                  @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                        (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+                (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+                  (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))
+                  (@Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                        (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+                  (@Semiring.toModule.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                        (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))))))
+          (@LinearEquiv.automorphismGroup.{u_1, u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+            (Atlas.Albert.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K))
+            (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+              (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))
+            (@Prod.instAddCommMonoid.{u_1, u_1}
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+                Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+                Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K))
+              (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (fun a ↦ Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) fun i ↦
+                @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+              (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (fun a ↦ Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)) fun i ↦
+                @Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+                  (fun a ↦ Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) fun i ↦
+                  @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                        (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))))
+            (@Prod.instModule.{u_1, u_1, u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+                Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) →
+                Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K))
+              (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))
+              (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (fun a ↦ Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) fun i ↦
+                @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+              (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (fun a ↦ Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)) fun i ↦
+                @Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+                  (fun a ↦ Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) fun i ↦
+                  @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                        (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+              (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))
+                (@Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+                (@Semiring.toModule.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))))
+              (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))))
+                (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                (Atlas.SplitOctonion.Carrier.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K))
+                (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))
+                (@Pi.addCommMonoid.{0, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+                  (fun a ↦ Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) fun i ↦
+                  @Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                        (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+                (@Pi.Function.module.{0, u_1, u_1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+                  (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                  (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst)))
+                  (@Semiring.toAddCommMonoid.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                        (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))
+                  (@Semiring.toModule.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                    (@CommSemiring.toSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                      (@CommRing.toCommSemiring.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K)
+                        (@Field.toCommRing.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))))))))
+          (@Atlas.F4.Model.{u_1} (Atlas.Chevalley.Catalogue.F4_albertField.{u_1} K) inst))
+```
+
+</details>
+
+[Compiled evidence](../verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz) · [Full dependency audit](../verification/2026-10-30-additions/batches/batch-001-f4/original/scopes/scope-554991387ce2dbcd74585255).
+
+Marked-generator compatibility:
+
+- [`Atlas.Chevalley.Catalogue.F4_identification_X`](../Atlas/LinearGroups/Chevalley/Catalogue/F4Identification.lean#L18)
+- [`Atlas.Chevalley.Catalogue.F4_identification_Y`](../Atlas/LinearGroups/Chevalley/Catalogue/F4Identification.lean#L24)
 

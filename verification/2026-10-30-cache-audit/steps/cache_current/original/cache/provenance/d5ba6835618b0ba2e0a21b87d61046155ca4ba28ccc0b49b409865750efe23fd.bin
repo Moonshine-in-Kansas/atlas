@@ -1,0 +1,185 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["b0ff78a027288248.olean"],
+  "m": false,
+  "i": "64bd61fd1c3dbfa6.ilean",
+  "c": "53c3f3431db0f4de.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FourRowKernelOrbit.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourRowKernelOrbit.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourRowKernelOrbit.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourRowKernelOrbit.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourRowKernelOrbit.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem four_rowKernel_fixed_label_words (a : Point) (v w : FourMinimumWords)\n    (hv : fourSupportNormal ⟨reduce v.val.val, v.prop.2⟩ = a)\n    (hw : fourSupportNormal ⟨reduce w.val.val, w.prop.2⟩ = a) :\n    ∃ g : codeRowKernel, monomialHom g.val.val v.val.val = w.val.val :=\n  by\n  let vp := fourSupportEquiv.symm ⟨reduce v.val.val, v.prop.2⟩\n  let wp := fourSupportEquiv.symm ⟨reduce w.val.val, w.prop.2⟩\n  have hva : vp.1 = a := hv\n  have hwa : wp.1 = a := hw\n  have hε : ∀ p, dot a.val p.val = 0 → vp.2.val.val p = 0 := by rw [← hva]; exact vp.2.val.prop\n  have hδ : ∀ p, dot a.val p.val = 0 → wp.2.val.val p = 0 := by rw [← hwa]; exact wp.2.val.prop\n  have hvn : binaryNormalMap (vp.2.val.val, outerMatrix a.val a.val, 0) = reduce v.val.val :=\n    by\n    have h := congrArg Subtype.val (fourSupportEquiv.apply_symm_apply ⟨reduce v.val.val, v.prop.2⟩)\n    change binaryNormalMap (vp.2.val.val, outerMatrix vp.1.val vp.1.val, 0) = _ at h\n    rw [← hva]\n    exact h\n  have hwn : binaryNormalMap (wp.2.val.val, outerMatrix a.val a.val, 0) = reduce w.val.val :=\n    by\n    have h := congrArg Subtype.val (fourSupportEquiv.apply_symm_apply ⟨reduce w.val.val, w.prop.2⟩)\n    change binaryNormalMap (wp.2.val.val, outerMatrix wp.1.val wp.1.val, 0) = _ at h\n    rw [← hwa]\n    exact h\n  obtain ⟨B, hB⟩ :=\n    four_support_fixed_form_translation a vp.2.val.val wp.2.val.val hε hδ (vp.2.prop.trans wp.2.prop.symm)\n  obtain ⟨g, hg⟩ := codeRowKernel_translation_lift B\n  let u := monomialHom g.val.val v.val.val\n  have hur : reduce u = reduce w.val.val :=\n    by\n    change reduce (monomialAction g.val.val v.val.val) = _\n    rw [monomialAction_reduce, hg, ← hvn, ← hwn]\n    exact hB.symm\n  have hu : u ∈ quaternaryCode := (g.val.prop _).mp v.val.prop\n  have hu16 : euclideanWeight u = 16 := (monomial_euclideanWeight _ _).trans v.prop.1\n  obtain ⟨h, hh⟩ :=\n    four_rowKernel_same_residue_transitive u w.val.val hu w.val.prop hu16 w.prop.1 (hur.symm ▸ w.prop.2) hur\n  refine ⟨h * g, ?_⟩\n  change monomialHom (h.val.val * g.val.val) v.val.val = w.val.val\n  rw [map_mul]\n  exact hh`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:7:1: 'theorem four_rowKernel_fixed_label_words (a : Point) (v w : FourMinimumWords)\n    (hv : fourSupportNormal ⟨reduce v.val.val, v.prop.2⟩ = a)\n    (hw : fourSupportNormal ⟨reduce w.val.val, w.prop.2⟩ = a) :\n    ∃ g : codeRowKernel, monomialHom g.val.val v.val.val = w.val.val :=\n  by\n  let vp := fourSupportEquiv.symm ⟨reduce v.val.val, v.prop.2⟩\n  let wp := fourSupportEquiv.symm ⟨reduce w.val.val, w.prop.2⟩\n  have hva : vp.1 = a := hv\n  have hwa : wp.1 = a := hw\n  have hε : ∀ p, dot a.val p.val = 0 → vp.2.val.val p = 0 := by rw [← hva]; exact vp.2.val.prop\n  have hδ : ∀ p, dot a.val p.val = 0 → wp.2.val.val p = 0 := by rw [← hwa]; exact wp.2.val.prop\n  have hvn : binaryNormalMap (vp.2.val.val, outerMatrix a.val a.val, 0) = reduce v.val.val :=\n    by\n    have h := congrArg Subtype.val (fourSupportEquiv.apply_symm_apply ⟨reduce v.val.val, v.prop.2⟩)\n    change binaryNormalMap (vp.2.val.val, outerMatrix vp.1.val vp.1.val, 0) = _ at h\n    rw [← hva]\n    exact h\n  have hwn : binaryNormalMap (wp.2.val.val, outerMatrix a.val a.val, 0) = reduce w.val.val :=\n    by\n    have h := congrArg Subtype.val (fourSupportEquiv.apply_symm_apply ⟨reduce w.val.val, w.prop.2⟩)\n    change binaryNormalMap (wp.2.val.val, outerMatrix wp.1.val wp.1.val, 0) = _ at h\n    rw [← hwa]\n    exact h\n  obtain ⟨B, hB⟩ :=\n    four_support_fixed_form_translation a vp.2.val.val wp.2.val.val hε hδ (vp.2.prop.trans wp.2.prop.symm)\n  obtain ⟨g, hg⟩ := codeRowKernel_translation_lift B\n  let u := monomialHom g.val.val v.val.val\n  have hur : reduce u = reduce w.val.val :=\n    by\n    change reduce (monomialAction g.val.val v.val.val) = _\n    rw [monomialAction_reduce, hg, ← hvn, ← hwn]\n    exact hB.symm\n  have hu : u ∈ quaternaryCode := (g.val.prop _).mp v.val.prop\n  have hu16 : euclideanWeight u = 16 := (monomial_euclideanWeight _ _).trans v.prop.1\n  obtain ⟨h, hh⟩ :=\n    four_rowKernel_same_residue_transitive u w.val.val hu w.val.prop hu16 w.prop.1 (hur.symm ▸ w.prop.2) hur\n  refine ⟨h * g, ?_⟩\n  change monomialHom (h.val.val * g.val.val) v.val.val = w.val.val\n  rw [map_mul]\n  exact hh' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:8:46: missing space in the source\n\nThis part of the code\n  'v.val.val,v.prop.2⟩=a)'\nshould be written as\n  'v.val.val, v.prop.2⟩'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:8:55: missing space in the source\n\nThis part of the code\n  'v.val.val,v.prop.2⟩=a)\n '\nshould be written as\n  'v.prop.2⟩ = a)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:9:46: missing space in the source\n\nThis part of the code\n  'w.val.val,w.prop.2⟩=a)'\nshould be written as\n  'w.val.val, w.prop.2⟩'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:9:55: missing space in the source\n\nThis part of the code\n  'w.val.val,w.prop.2⟩=a) :'\nshould be written as\n  'w.prop.2⟩ = a)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourCrossHasLabel_rowKernel (g : codeRowKernel) (a : Point)\n    (c : MinimalCross) (hc : FourCrossHasLabel a c) : FourCrossHasLabel a (g.val • c) :=\n  by\n  obtain ⟨B, hB⟩ := codeRowKernel_coordinate_translation g⁻¹\n  intro p x\n  have h := crossOrthogonal_codeGroup g.val (g.val⁻¹ • coordinateCross (p, x)) c\n  rw [smul_inv_smul] at h\n  rw [h, coordinateCross_action]\n  change CrossOrthogonal (coordinateCross ((g⁻¹).val.val.right (p, x))) c ↔ _\n  rw [hB]\n  exact hc p (x + matrixAt B p.val)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:44:1: 'theorem fourCrossHasLabel_rowKernel (g : codeRowKernel) (a : Point) (c : MinimalCross) (hc : FourCrossHasLabel a c) :\n    FourCrossHasLabel a (g.val • c) :=\n  by\n  obtain ⟨B, hB⟩ := codeRowKernel_coordinate_translation g⁻¹\n  intro p x\n  have h := crossOrthogonal_codeGroup g.val (g.val⁻¹ • coordinateCross (p, x)) c\n  rw [smul_inv_smul] at h\n  rw [h, coordinateCross_action]\n  change CrossOrthogonal (coordinateCross ((g⁻¹).val.val.right (p, x))) c ↔ _\n  rw [hB]\n  exact hc p (x + matrixAt B p.val)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem four_rowKernel_fixed_label_shell (a : Point) (v w : fourShellPiece)\n    (hv : FourCrossHasLabel a (minimalCross v.val)) (hw : FourCrossHasLabel a (minimalCross w.val)) :\n    ∃ g : codeRowKernel, g.val • v.val = w.val :=\n  by\n  obtain ⟨v', hv'⟩ := v.prop\n  obtain ⟨w', hw'⟩ := w.prop\n  rw [← hv'] at hv\n  rw [← hw'] at hw\n  obtain ⟨g, hg⟩ :=\n    four_rowKernel_fixed_label_words a v' w' ((fourWord_label_iff a v').mp hv) ((fourWord_label_iff a w').mp hw)\n  refine ⟨g, ?_⟩\n  rw [← hv', ← hw', ← minimumWordShellLift_equivariant]\n  apply congrArg minimumWordShellLift\n  exact Subtype.ext (Subtype.ext hg)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:55:1: 'theorem four_rowKernel_fixed_label_shell (a : Point) (v w : fourShellPiece)\n    (hv : FourCrossHasLabel a (minimalCross v.val)) (hw : FourCrossHasLabel a (minimalCross w.val)) :\n    ∃ g : codeRowKernel, g.val • v.val = w.val :=\n  by\n  obtain ⟨v', hv'⟩ := v.prop\n  obtain ⟨w', hw'⟩ := w.prop\n  rw [← hv'] at hv\n  rw [← hw'] at hw\n  obtain ⟨g, hg⟩ :=\n    four_rowKernel_fixed_label_words a v' w' ((fourWord_label_iff a v').mp hv) ((fourWord_label_iff a w').mp hw)\n  refine ⟨g, ?_⟩\n  rw [← hv', ← hw', ← minimumWordShellLift_equivariant]\n  apply congrArg minimumWordShellLift\n  exact Subtype.ext (Subtype.ext hg)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem four_rowKernel_fixed_label_crosses (a : Point) (v w : FourBlockCrosses)\n    (hv : FourCrossHasLabel a (shellPieceCrossMap fourShellPiece v))\n    (hw : FourCrossHasLabel a (shellPieceCrossMap fourShellPiece w)) :\n    ∃ g : codeRowKernel, g.val • shellPieceCrossMap fourShellPiece v = shellPieceCrossMap fourShellPiece w := by\n  induction v using Quotient.inductionOn with\n  | h v =>\n    induction w using Quotient.inductionOn with\n    | h w =>\n      obtain ⟨g, hg⟩ := four_rowKernel_fixed_label_shell a v w hv hw\n      refine ⟨g, ?_⟩\n      change g.val • minimalCross v.val = minimalCross w.val\n      rw [← minimalCross_smul, hg]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:73:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:70:1: 'theorem four_rowKernel_fixed_label_crosses (a : Point) (v w : FourBlockCrosses)\n    (hv : FourCrossHasLabel a (shellPieceCrossMap fourShellPiece v))\n    (hw : FourCrossHasLabel a (shellPieceCrossMap fourShellPiece w)) :\n    ∃ g : codeRowKernel, g.val • shellPieceCrossMap fourShellPiece v = shellPieceCrossMap fourShellPiece w := by\n  induction v using Quotient.inductionOn with\n  | h v =>\n    induction w using Quotient.inductionOn with\n    | h w =>\n      obtain ⟨g, hg⟩ := four_rowKernel_fixed_label_shell a v w hv hw\n      refine ⟨g, ?_⟩\n      change g.val • minimalCross v.val = minimalCross w.val\n      rw [← minimalCross_smul, hg]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def fourLabelCrossPiece (a : Point) : Set MinimalCross :=\n  {c | FourCrossHasLabel a c ∧ ∃ v : FourBlockCrosses, shellPieceCrossMap fourShellPiece v = c}`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def fourLabelCrossPieceEquiv (a : Point) :\n    { v : FourBlockCrosses // FourCrossHasLabel a (shellPieceCrossMap fourShellPiece v) } ≃ fourLabelCrossPiece a :=\n  Equiv.ofBijective (fun v => ⟨shellPieceCrossMap fourShellPiece v.val, v.prop, v.val, rfl⟩)\n    (by\n      constructor\n      · intro u v h; exact Subtype.ext (shellPieceCrossMap_injective _ (congrArg Subtype.val h))\n      · rintro ⟨c, hc, v, rfl⟩; exact ⟨⟨v, hc⟩, rfl⟩)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:85:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLabelCrossPiece_card (a : Point) :\n    Nat.card (fourLabelCrossPiece a) = 64 := by\n  rw [← Nat.card_congr (fourLabelCrossPieceEquiv a), fourLabelCrosses_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:91:1: 'theorem fourLabelCrossPiece_card (a : Point) : Nat.card (fourLabelCrossPiece a) = 64 := by\n  rw [← Nat.card_congr (fourLabelCrossPieceEquiv a),\n    fourLabelCrosses_card]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourCross_rowKernel_orbit (a : Point) (v : FourBlockCrosses)\n    (hv : FourCrossHasLabel a (shellPieceCrossMap fourShellPiece v)) :\n    MulAction.orbit codeRowKernel (shellPieceCrossMap fourShellPiece v) = fourLabelCrossPiece a :=\n  by\n  ext c\n  constructor\n  · intro hc\n    obtain ⟨g, rfl⟩ := MulAction.mem_orbit_iff.mp hc\n    exact ⟨fourCrossHasLabel_rowKernel g a _ hv, shellPieceCross_range_stable fourShellPiece g.val _ ⟨v, rfl⟩⟩\n  · rintro ⟨hc, w, rfl⟩\n    obtain ⟨g, hg⟩ := four_rowKernel_fixed_label_crosses a v w hv hc\n    exact MulAction.mem_orbit_iff.mpr ⟨g, hg⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:101:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:94:1: 'theorem fourCross_rowKernel_orbit (a : Point) (v : FourBlockCrosses)\n    (hv : FourCrossHasLabel a (shellPieceCrossMap fourShellPiece v)) :\n    MulAction.orbit codeRowKernel (shellPieceCrossMap fourShellPiece v) = fourLabelCrossPiece a :=\n  by\n  ext c\n  constructor\n  · intro hc\n    obtain ⟨g, rfl⟩ := MulAction.mem_orbit_iff.mp hc\n    exact ⟨fourCrossHasLabel_rowKernel g a _ hv, shellPieceCross_range_stable fourShellPiece g.val _ ⟨v, rfl⟩⟩\n  · rintro ⟨hc, w, rfl⟩\n    obtain ⟨g, hg⟩ := four_rowKernel_fixed_label_crosses a v w hv hc\n    exact\n      MulAction.mem_orbit_iff.mpr\n        ⟨g, hg⟩' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourCross_label_exists (v : FourBlockCrosses) :\n    ∃ a : Point, FourCrossHasLabel a (shellPieceCrossMap fourShellPiece v) := by\n  induction v using Quotient.inductionOn with\n  | h v =>\n    obtain ⟨w, hw⟩ := v.prop\n    change ∃ a, FourCrossHasLabel a (minimalCross v.val)\n    rw [← hw]\n    exact ⟨fourSupportNormal ⟨reduce w.val.val, w.prop.2⟩, (fourWord_label_iff _ w).mpr rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:106:101: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:106:1: 'theorem fourCross_label_exists (v : FourBlockCrosses) :\n    ∃ a : Point, FourCrossHasLabel a (shellPieceCrossMap fourShellPiece v) := by\n  induction v using Quotient.inductionOn with\n  | h v =>\n    obtain ⟨w, hw⟩ := v.prop\n    change ∃ a, FourCrossHasLabel a (minimalCross v.val)\n    rw [← hw]\n    exact\n      ⟨fourSupportNormal ⟨reduce w.val.val, w.prop.2⟩,\n        (fourWord_label_iff _ w).mpr\n          rfl⟩' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourCross_rowKernel_orbit_card (v : FourBlockCrosses) :\n    Nat.card (MulAction.orbit codeRowKernel (shellPieceCrossMap fourShellPiece v)) = 64 :=\n  by\n  obtain ⟨a, ha⟩ := fourCross_label_exists v\n  rw [fourCross_rowKernel_orbit a v ha, fourLabelCrossPiece_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:114:1: 'theorem fourCross_rowKernel_orbit_card (v : FourBlockCrosses) :\n    Nat.card (MulAction.orbit codeRowKernel (shellPieceCrossMap fourShellPiece v)) = 64 :=\n  by\n  obtain ⟨a, ha⟩ := fourCross_label_exists v\n  rw [fourCross_rowKernel_orbit a v ha,\n    fourLabelCrossPiece_card]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourCross_rowKernel_stabilizer_order (v : FourBlockCrosses) :\n    Nat.card (MulAction.stabilizer codeRowKernel (shellPieceCrossMap fourShellPiece v)) = 128 :=\n  by\n  have h := Nat.card_congr (MulAction.orbitProdStabilizerEquivGroup codeRowKernel (shellPieceCrossMap fourShellPiece v))\n  rw [Nat.card_prod, fourCross_rowKernel_orbit_card, codeRowKernel_order] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:121:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:119:1: 'theorem fourCross_rowKernel_stabilizer_order (v : FourBlockCrosses) :\n    Nat.card (MulAction.stabilizer codeRowKernel (shellPieceCrossMap fourShellPiece v)) = 128 :=\n  by\n  have h := Nat.card_congr (MulAction.orbitProdStabilizerEquivGroup codeRowKernel (shellPieceCrossMap fourShellPiece v))\n  rw [Nat.card_prod, fourCross_rowKernel_orbit_card, codeRowKernel_order] at h\n  omega' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FourCrossLabels transitive imports (legacy)",
+       "440812c5e7daa5fc"],
+      ["Atlas.Rudvalis.FourCrossLabels:importAllArts", "37f7c07e0462ddbe"],
+      ["Atlas.Rudvalis.FourLocalOrbitSet transitive imports (legacy)",
+       "8d2f84f7209a0638"],
+      ["Atlas.Rudvalis.FourLocalOrbitSet:importAllArts",
+       "b40ac9e0f0e42293"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FourRowKernelOrbit.lean",
+   "33168c759593af97"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FourRowKernelOrbit", "e3d664cea781c752"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "1538411f27ad87c6"}

@@ -1,0 +1,165 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["7e1a8b2c9e3d170f.olean"],
+  "m": false,
+  "i": "3e91bf0e179cda0d.ilean",
+  "c": "0be3f4713ecb6d5c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FrameTranslationConjugation.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FrameTranslationConjugation.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FrameTranslationConjugation.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FrameTranslationConjugation.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FrameTranslationConjugation.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped commutatorElement`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def binaryMatrixConjugate (A : E ≃ₗ[Bit] E) (M : BinaryMatrix) :\n    BinaryMatrix :=\n  binaryLinearMatrix A * M * binaryLinearMatrix A.symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem binaryMatrixConjugate_apply (A : E ≃ₗ[Bit] E) (M : BinaryMatrix)\n    (x : E) : matrixAt (binaryMatrixConjugate A M) x = A (matrixAt M (A.symm x)) := by\n  rw [binaryMatrixConjugate, matrixAt_mul, matrixAt_mul, binaryLinearMatrix_apply, binaryLinearMatrix_apply]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:11:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem binarySection_translation_conjugate (A : E ≃ₗ[Bit] E) (t : Point → E)\n    (ht : ∀ p c x, theta (linearPointEquiv A p) (A c) (A x) + theta p c x = polar c (t p) x) (M : BinaryMatrix) :\n    binarySectionGroupLift A t ht * coordinateTranslationHom (Multiplicative.ofAdd M) *\n        (binarySectionGroupLift A t ht)⁻¹ =\n      coordinateTranslationHom (Multiplicative.ofAdd (binaryMatrixConjugate A M)) :=\n  by\n  apply Subtype.ext\n  apply Equiv.ext\n  intro z\n  obtain ⟨⟨p, x⟩, rfl⟩ := (binarySectionLift A t).surjective z\n  change\n    binarySectionLift A t (coordinateTranslation M ((binarySectionLift A t).symm (binarySectionLift A t (p, x)))) =\n      coordinateTranslation (binaryMatrixConjugate A M) (binarySectionLift A t (p, x))\n  rw [Equiv.symm_apply_apply]\n  change\n    (linearPointEquiv A p, A (x + matrixAt M p.val + t p)) =\n      (linearPointEquiv A p, A (x + t p) + matrixAt (binaryMatrixConjugate A M) (A p.val))\n  rw [binaryMatrixConjugate_apply, LinearEquiv.symm_apply_apply]\n  congr 1\n  rw [show x + matrixAt M p.val + t p = (x + t p) + matrixAt M p.val by abel, map_add]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:14:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:13:72: missing space in the source\n\nThis part of the code\n  'Point→E)\n '\nshould be written as\n  'Point → E)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:14:11: missing space in the source\n\nThis part of the code\n  '∀p c x,theta'\nshould be written as\n  '∀ p c'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:14:17: missing space in the source\n\nThis part of the code\n  'x,theta'\nshould be written as\n  'x, theta'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:14:57: missing space in the source\n\nThis part of the code\n  'x)+theta'\nshould be written as\n  'x) + theta'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:14:69: missing space in the source\n\nThis part of the code\n  'x=polar'\nshould be written as\n  'x = polar'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem binarySection_translation_commutator (A : E ≃ₗ[Bit] E) (t : Point → E)\n    (ht : ∀ p c x, theta (linearPointEquiv A p) (A c) (A x) + theta p c x = polar c (t p) x) (M : BinaryMatrix) :\n    ⁅binarySectionGroupLift A t ht, coordinateTranslationHom (Multiplicative.ofAdd M)⁆ =\n      coordinateTranslationHom (Multiplicative.ofAdd (binaryMatrixConjugate A M - M)) :=\n  by\n  rw [commutatorElement_def, binarySection_translation_conjugate, ← map_inv, ← map_mul, sub_eq_add_neg]\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:33:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:32:73: missing space in the source\n\nThis part of the code\n  'Point→E)\n '\nshould be written as\n  'Point → E)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:33:11: missing space in the source\n\nThis part of the code\n  '∀p c x,theta'\nshould be written as\n  '∀ p c'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:33:17: missing space in the source\n\nThis part of the code\n  'x,theta'\nshould be written as\n  'x, theta'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:33:57: missing space in the source\n\nThis part of the code\n  'x)+theta'\nshould be written as\n  'x) + theta'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:33:69: missing space in the source\n\nThis part of the code\n  'x=polar'\nshould be written as\n  'x = polar'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem binaryMatrix_eq_of_apply (M N : BinaryMatrix)\n    (h : ∀ x : E, matrixAt M x = matrixAt N x) : M = N :=\n  by\n  ext i j\n  have hj := congrArg (fun x : E => x i) (h (basisPoint j).val)\n  fin_cases j <;> simpa [matrixAt, basisPoint, binaryLabel, Fin.sum_univ_succ] using hj`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:39:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:39:60: missing space in the source\n\nThis part of the code\n  '∀x : E,matrixAt'\nshould be written as\n  '∀ x :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem binaryLinearMatrix_elementary (i j : Fin 3) (hij : i ≠ j) :\n    binaryLinearMatrix (binaryElementaryLinear i j hij) = binaryElementaryMatrix i j :=\n  by\n  apply binaryMatrix_eq_of_apply\n  intro x\n  rw [binaryLinearMatrix_apply, binaryElementaryLinear_apply]\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:44:60: missing space in the source\n\nThis part of the code\n  'i≠j) :'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem binaryElementaryLinear_symm (i j : Fin 3) (hij : i ≠ j) :\n    (binaryElementaryLinear i j hij).symm = binaryElementaryLinear i j hij :=\n  by\n  apply LinearEquiv.ext\n  intro x\n  apply (binaryElementaryLinear i j hij).injective\n  rw [LinearEquiv.apply_symm_apply, binaryElementaryLinear_apply, binaryElementaryLinear_apply, Matrix.mulVec_mulVec,\n    binaryElementaryMatrix_square i j hij, Matrix.one_mulVec]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:51:58: missing space in the source\n\nThis part of the code\n  'i≠j) :'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem binaryMatrixConjugate_elementary (i j : Fin 3) (hij : i ≠ j)\n    (M : BinaryMatrix) : binaryMatrixConjugate (binaryElementaryLinear i j hij) M - M = binaryMatrixDifference i j M :=\n  by\n  rw [binaryMatrixConjugate, binaryElementaryLinear_symm, binaryLinearMatrix_elementary]\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:59:63: missing space in the source\n\nThis part of the code\n  'i≠j) (M'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationConjugation.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FrameSignDifferences transitive imports (legacy)",
+       "b4e793716276a3b0"],
+      ["Atlas.Rudvalis.FrameSignDifferences:importAllArts",
+       "48db34f727ace974"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FrameTranslationConjugation.lean",
+   "d934682943560fd3"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FrameTranslationConjugation",
+   "73326ece24ec5eb2"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "29ca0a6559e4e72d"}

@@ -1,0 +1,99 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["44bfe72f6be38b49.olean"],
+  "m": false,
+  "i": "9a6b9bcc223601fd.ilean",
+  "c": "2c978bc8f10eefdc.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Combinatorics/RegularUniqueTriangleCount.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Combinatorics/RegularUniqueTriangleCount.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Combinatorics/RegularUniqueTriangleCount.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Combinatorics/RegularUniqueTriangleCount.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Combinatorics/RegularUniqueTriangleCount.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:21:8: This simp argument is unused:\n  nsmul_eq_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:15:0: `relationEdge_card` does not use the following hypothesis in its type:\n  • [Fintype X] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:16:14: missing space in the source\n\nThis part of the code\n  'x,Nat.card'\nshould be written as\n  'x, Nat.card'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:16:38: missing space in the source\n\nThis part of the code\n  'y}=d) :'\nshould be written as\n  'y } ='\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:26:31: `Symmetric` has been deprecated: Use `Std.Symm` instead\n\nNote: The updated constant has a different type:\n  {α : Sort u} → (α → α → Prop) → Prop\ninstead of\n  {α : Sort u_1} → (α → α → Prop) → Prop",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:26:52: `Irreflexive` has been deprecated: Use `Std.Irrefl` instead\n\nNote: The updated constant has a different type:\n  {α : Sort u} → (α → α → Prop) → Prop\ninstead of\n  {α : Sort u_1} → (α → α → Prop) → Prop",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:31:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:23:0: `regular_unique_triangle_count` does not use the following hypothesis in its type:\n  • [Fintype X] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:27:16: missing space in the source\n\nThis part of the code\n  'y,R x y'\nshould be written as\n  'y, R x'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:27:29: missing space in the source\n\nThis part of the code\n  'z,R x z'\nshould be written as\n  'z, R x'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:28:22: missing space in the source\n\nThis part of the code\n  'x,Nat.card'\nshould be written as\n  'x, Nat.card'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:28:46: missing space in the source\n\nThis part of the code\n  'y}=d) :'\nshould be written as\n  'y } ='\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:43:31: `Symmetric` has been deprecated: Use `Std.Symm` instead\n\nNote: The updated constant has a different type:\n  {α : Sort u} → (α → α → Prop) → Prop\ninstead of\n  {α : Sort u_1} → (α → α → Prop) → Prop",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:43:52: `Irreflexive` has been deprecated: Use `Std.Irrefl` instead\n\nNote: The updated constant has a different type:\n  {α : Sort u} → (α → α → Prop) → Prop\ninstead of\n  {α : Sort u_1} → (α → α → Prop) → Prop",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:41:0: `regular_unique_triangle_count_315_10` does not use the following hypothesis in its type:\n  • [Fintype X] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:44:16: missing space in the source\n\nThis part of the code\n  'y,R x y'\nshould be written as\n  'y, R x'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:44:29: missing space in the source\n\nThis part of the code\n  'z,R x z'\nshould be written as\n  'z, R x'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:45:20: missing space in the source\n\nThis part of the code\n  'X=315)'\nshould be written as\n  'X = 315)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:45:36: missing space in the source\n\nThis part of the code\n  'x,Nat.card'\nshould be written as\n  'x, Nat.card'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/RegularUniqueTriangleCount.lean:45:60: missing space in the source\n\nThis part of the code\n  'y}=10) :'\nshould be written as\n  'y } ='\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Combinatorics.UniqueTriangleFrames transitive imports (legacy)",
+       "9f0d8e40cebe5609"],
+      ["Atlas.Combinatorics.UniqueTriangleFrames:importAllArts",
+       "f68d65df72b4148e"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Combinatorics/RegularUniqueTriangleCount.lean",
+   "3c6a0ebbc2e4215f"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Combinatorics.RegularUniqueTriangleCount",
+   "993fface5de89f55"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "069f7586ca337f0a"}

@@ -1,0 +1,101 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["3df7936a6c0913bf.olean"],
+  "m": false,
+  "i": "a89eae6490206e99.ilean",
+  "c": "1555a1e0abb7bfdd.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateCanonicalFrames.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateCanonicalFrames.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateCanonicalFrames.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateCanonicalFrames.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateCanonicalFrames.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nEvery coordinate row determines the entire coordinate frame intrinsically. -/\ntheorem coordinateRow_canonicalBase_eq (p : Point) : canonicalBase (coordinateRowFrame p) = coordinateFrame :=\n  coordinateRow_canonicalBase_eq_of_reference_dozen reference_intrinsicDozen_eq p`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateFrame_isCanonicalBase : coordinateFrame ∈ canonicalBases :=\n  ⟨coordinateRowFrame (rowLabel 0), coordinateRowFrame_isQuartet _, coordinateRow_canonicalBase_eq _⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe dozen of either complementary couple in a row slice is exactly the associated three-row plane. -/\ntheorem coordinatePlaneSlice_dozen_eq (p a : Point) (hap : dot a.val p.val = 0) (δ : Bit) :\n    intrinsicDozen (coordinatePlaneSlice p a δ) = coordinatePlaneDozen a :=\n  coordinatePlaneSlice_dozen_eq_of_reference reference_intrinsicDozen_eq p a hap δ`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:14:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:15:74: missing space in the source\n\nThis part of the code\n  'p.val=0) (δ'\nshould be written as\n  'p.val = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rowCoupleDozens_eq_planes (p : Point) :\n    rowCoupleDozens p = Set.range (rowPlaneDozen p) :=\n  rowCoupleDozens_eq_planes_of_reference reference_intrinsicDozen_eq p`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe couples in a coordinate row determine precisely three distinct intrinsic dozens. -/\ntheorem rowCoupleDozens_card (p : Point) : Nat.card (rowCoupleDozens p) = 3 :=\n  rowCoupleDozens_card_of_reference reference_intrinsicDozen_eq p`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateRow_three_dozen_geometry (p : Point) :\n    Nat.card (rowCoupleDozens p) = 3 ∧\n      (∀ D ∈ rowCoupleDozens p, Nat.card D = 12) ∧\n        (∀ D ∈ rowCoupleDozens p, ∀ D' ∈ rowCoupleDozens p, D ≠ D' → D ∩ D' = coordinateRowFrame p) ∧\n          {c | ∃ D ∈ rowCoupleDozens p, c ∈ D} = coordinateFrame :=\n  by\n  refine ⟨rowCoupleDozens_card p, ?_, ?_, ?_⟩\n  · intro D hD\n    rw [rowCoupleDozens_eq_planes] at hD\n    obtain ⟨a, rfl⟩ := hD\n    exact coordinatePlaneDozen_card a.val\n  · intro D hD D' hD' hne\n    rw [rowCoupleDozens_eq_planes] at hD hD'\n    obtain ⟨a, rfl⟩ := hD\n    obtain ⟨b, rfl⟩ := hD'\n    exact rowPlaneDozen_intersection p a b (fun h => hne (congrArg (rowPlaneDozen p) h))\n  · rw [rowCoupleDozens_eq_planes]\n    have he :\n      {c | ∃ D ∈ Set.range (rowPlaneDozen p), c ∈ D} =\n        {c | ∃ a : { a : Point // dot a.val p.val = 0 }, c ∈ rowPlaneDozen p a} :=\n      by\n      ext c\n      constructor\n      · rintro ⟨D, ⟨a, rfl⟩, hc⟩; exact ⟨a, hc⟩\n      · rintro ⟨a, hc⟩; exact ⟨_, ⟨a, rfl⟩, hc⟩\n    rw [he, rowPlaneDozens_union]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateCanonicalFrames.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateRowDozens transitive imports (legacy)",
+       "e6a140ec96042b3a"],
+      ["Atlas.Rudvalis.CoordinateRowDozens:importAllArts", "26ad9fb4c5cebc74"],
+      ["Atlas.Rudvalis.ReferenceQuartetExhaustion transitive imports (legacy)",
+       "36bd1e58cfd1fe3b"],
+      ["Atlas.Rudvalis.ReferenceQuartetExhaustion:importAllArts",
+       "6c756ce279d6c559"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateCanonicalFrames.lean",
+   "7b1a94be98a3d7ef"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateCanonicalFrames", "01d95e2aeebe9563"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "9088c09498c3b5aa"}

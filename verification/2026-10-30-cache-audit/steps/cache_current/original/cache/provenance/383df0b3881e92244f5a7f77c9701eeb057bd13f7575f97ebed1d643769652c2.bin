@@ -1,0 +1,68 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["8d1d855bb2dd0719.olean"],
+  "m": false,
+  "i": "8ba4aa5d923fb31d.ilean",
+  "c": "43bfc8d6a62b60eb.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Algebra/BinaryQuadraticWordRank.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Algebra/BinaryQuadraticWordRank.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Algebra/BinaryQuadraticWordRank.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Algebra/BinaryQuadraticWordRank.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Algebra/BinaryQuadraticWordRank.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Algebra/BinaryQuadraticWordRank.lean:37:11: missing space in the source\n\nThis part of the code\n  'r=2 ∨ r=4)'\nshould be written as\n  'r = 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/BinaryQuadraticWordRank.lean:37:17: missing space in the source\n\nThis part of the code\n  'r=4) (hw'\nshould be written as\n  'r = 4)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/BinaryQuadraticWordRank.lean:37:46: missing space in the source\n\nThis part of the code\n  '2=16*2^(4-r))'\nshould be written as\n  '2 = 16'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/BinaryQuadraticWordRank.lean:37:49: missing space in the source\n\nThis part of the code\n  '2=16*2^(4-r))'\nshould be written as\n  '16 * 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/BinaryQuadraticWordRank.lean:37:54: missing space in the source\n\nThis part of the code\n  '2=16*2^(4-r)) :'\nshould be written as\n  '(4 - r))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/BinaryQuadraticWordRank.lean:56:27: missing space in the source\n\nThis part of the code\n  'w.val=6) :'\nshould be written as\n  'w.val = 6)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/BinaryQuadraticWordRank.lean:62:27: missing space in the source\n\nThis part of the code\n  'w.val=4) :'\nshould be written as\n  'w.val = 4)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Algebra.BinaryQuadraticNormalization transitive imports (legacy)",
+       "85b63fa36b27f4db"],
+      ["Atlas.Algebra.BinaryQuadraticNormalization:importAllArts",
+       "c81e23e7cc698da4"],
+      ["Atlas.Algebra.BinaryWalshRank transitive imports (legacy)",
+       "a971b8047f94a841"],
+      ["Atlas.Algebra.BinaryWalshRank:importAllArts", "cf8ce70967fe16fe"],
+      ["Atlas.Codes.BinaryWeight transitive imports (legacy)",
+       "a2753b5c5d6264fc"],
+      ["Atlas.Codes.BinaryWeight:importAllArts", "b44d306d674a8eec"],
+      ["Mathlib.Tactic.IntervalCases transitive imports (legacy)",
+       "9ca5d175b829416e"],
+      ["Mathlib.Tactic.IntervalCases:importAllArts", "1abc948b948eca4c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Algebra/BinaryQuadraticWordRank.lean",
+   "a4343c3ae1453c6f"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Algebra.BinaryQuadraticWordRank", "ad29b43426650589"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "236ad4b90687f8c3"}

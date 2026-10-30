@@ -1,0 +1,86 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["e3967aa2bd7add26.olean"],
+  "m": false,
+  "i": "aca45d5cc956af1d.ilean",
+  "c": "f101be3813260fcb.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/GroupTheory/InvariantOrbitDivisibility.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/GroupTheory/InvariantOrbitDivisibility.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/GroupTheory/InvariantOrbitDivisibility.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/GroupTheory/InvariantOrbitDivisibility.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/GroupTheory/InvariantOrbitDivisibility.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/GroupTheory/InvariantOrbitDivisibility.lean:4:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/InvariantOrbitDivisibility.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/InvariantOrbitDivisibility.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.GroupTheory`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/InvariantOrbitDivisibility.lean:4:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/InvariantOrbitDivisibility.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/InvariantOrbitDivisibility.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nSumming actual orbits transfers a common divisor to any finite invariant subset. -/\ntheorem invariant_card_dvd_of_orbits {G X : Type*} [Group G] [MulAction G X] (S : Set X) (hfin : S.Finite)\n    (hstable : ∀ g : G, ∀ x ∈ S, g • x ∈ S) (n : ℕ) (hdiv : ∀ x ∈ S, n ∣ Nat.card (MulAction.orbit G x)) :\n    n ∣ Nat.card S := by\n  classical\n  let : Finite S := hfin.to_subtype\n  let : MulAction G S :=\n    { smul g x := ⟨g • x.val, hstable g x.val x.prop⟩\n      one_smul x := Subtype.ext (one_smul G x.val)\n      mul_smul g h x := Subtype.ext (mul_smul g h x.val) }\n  have horbit (x : S) : Nat.card (MulAction.orbit G x) = Nat.card (MulAction.orbit G x.val) :=\n    by\n    let e : MulAction.orbit G x ≃ MulAction.orbit G x.val :=\n      { toFun := fun y =>\n          ⟨y.val.val, by\n            obtain ⟨g, hg⟩ := MulAction.mem_orbit_iff.mp y.prop\n            exact MulAction.mem_orbit_iff.mpr ⟨g, congrArg Subtype.val hg⟩⟩\n        invFun := fun y =>\n          ⟨⟨y.val, by\n              obtain ⟨g, hg⟩ := MulAction.mem_orbit_iff.mp y.prop\n              rw [← hg]\n              exact hstable g x.val x.prop⟩,\n            by\n            obtain ⟨g, hg⟩ := MulAction.mem_orbit_iff.mp y.prop\n            exact MulAction.mem_orbit_iff.mpr ⟨g, Subtype.ext hg⟩⟩\n        left_inv := fun _ => rfl\n        right_inv := fun _ => rfl }\n    exact Nat.card_congr e\n  let : Fintype (MulAction.orbitRel.Quotient G S) := Fintype.ofFinite _\n  rw [Nat.card_congr (MulAction.selfEquivSigmaOrbits G S), Nat.card_sigma]\n  exact Finset.dvd_sum fun q _ => by rw [horbit]; exact hdiv q.out.val q.out.prop`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/InvariantOrbitDivisibility.lean:10:46: missing space in the source\n\nThis part of the code\n  '∀g : G,∀x∈S,g'\nshould be written as\n  '∀ g :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/InvariantOrbitDivisibility.lean:4:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/InvariantOrbitDivisibility.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/InvariantOrbitDivisibility.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.GroupTheory`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/InvariantOrbitDivisibility.lean:4:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/InvariantOrbitDivisibility.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/InvariantOrbitDivisibility.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Mathlib.GroupTheory.GroupAction.Quotient transitive imports (legacy)",
+       "12c117c0cbb742c4"],
+      ["Mathlib.GroupTheory.GroupAction.Quotient:importAllArts",
+       "18f601f87743d6bf"],
+      ["Mathlib.SetTheory.Cardinal.Finite transitive imports (legacy)",
+       "0f22d33fdd3e21f3"],
+      ["Mathlib.SetTheory.Cardinal.Finite:importAllArts", "6f293d32afda3c7c"],
+      ["Mathlib.Data.Set.Finite.Basic transitive imports (legacy)",
+       "e2886e56a21cd53b"],
+      ["Mathlib.Data.Set.Finite.Basic:importAllArts", "835561e9243b0033"],
+      ["Mathlib.Tactic transitive imports (legacy)", "ec156eb4c1db663c"],
+      ["Mathlib.Tactic:importAllArts", "49193de2eba247db"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/GroupTheory/InvariantOrbitDivisibility.lean",
+   "8562cc40191f799c"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.GroupTheory.InvariantOrbitDivisibility",
+   "8a37912c74920e5f"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "37738f26be7f62f6"}

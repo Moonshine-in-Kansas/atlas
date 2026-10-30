@@ -1,0 +1,614 @@
+{
+  "schema_version": 1,
+  "id": "batch-002-large-ree",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "boundaries": [],
+  "environment": "verification/checkpoints/environment.json",
+  "imports": [
+    "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+    "Atlas.LinearGroups.ReeF4.OppositePairIntrinsicSpace",
+    "Atlas.LinearGroups.ReeF4.OppositePairRecognition",
+    "Atlas.LinearGroups.ReeF4.OppositePairRestriction",
+    "Atlas.LinearGroups.ReeF4.OppositePairRestrictionFaithful",
+    "Atlas.LinearGroups.ReeF4.OppositePairStabilizer",
+    "Atlas.LinearGroups.ReeF4.OppositePairTensorPreservation",
+    "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicSymplectic",
+    "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicTensor",
+    "Atlas.LinearGroups.SuzukiFamily.TensorAction",
+    "Atlas.LinearGroups.SuzukiFamily.TensorDiagonal",
+    "Atlas.LinearGroups.SuzukiFamily.TensorRecognition"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.ReeF4.eq_modelSuzukiEmbedding_of_restriction",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairRestrictionFaithful",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.fullOppositePairSuzukiEquiv",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairStabilizer",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row0",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row1",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row10",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row11",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row12",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row13",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row14",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row15",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row16",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row17",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row18",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row19",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row2",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row20",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row21",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row22",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row23",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row24",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row25",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row3",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row4",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row5",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row6",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row7",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row8",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyCross_row9",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row0",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row1",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row10",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row11",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row12",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row13",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row14",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row15",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row16",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row17",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row18",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row19",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row2",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row20",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row21",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row22",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row23",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row24",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row25",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row3",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row4",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row5",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row6",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row7",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row8",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.isotropyRawStar_row9",
+      "module": "Atlas.LinearGroups.ReeF4.IsotropyCoordinateRows",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.mem_baseSpecialOppositePair_stabilizer_iff",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.mem_negativeSuzukiBlock_iff_intrinsicImage",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairIntrinsicSpace",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiEmbedding_fixes_first",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairRestrictionFaithful",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiEmbedding_fixes_opposite",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairRestrictionFaithful",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiEmbedding_restriction_apply",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairRestrictionFaithful",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.model_ext_oppositePair_block",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairRestrictionFaithful",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositePairImagePreimage",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairIntrinsicSpace",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositePairImagePreimage_domain",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairIntrinsicSpace",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositePairImagePreimage_image",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairIntrinsicSpace",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositePairImage_formula",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairIntrinsicSpace",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositePairLinearRestriction",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairRestriction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositePairLinearRestriction_block2",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairTensorPreservation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositePairLinearRestriction_embed",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairRestriction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositePairLinearRestriction_injective",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairRestrictionFaithful",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositePairLinearRestriction_polar",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairTensorPreservation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositePairLinearRestriction_tensor",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairTensorPreservation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositePairStabilizer_eq_suzukiProduct",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairStabilizer",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositePair_fixes_minus3",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairTensorPreservation",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositePair_preserves_negativeBlock",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairRestriction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositeVectorStabilizer_eq_suzuki",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairRecognition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsicCoordinates_injective",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicTensor",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsicPolar",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicTensor",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsicRawTensor",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicTensor",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_block1_coordinates",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicTensor",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_block2_coordinates",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicTensor",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_block3_coordinates",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicTensor",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_cross_minus3",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicTensor",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_cross_plus",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicTensor",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_map_block3",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicTensor",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_map_firstRoot_smul",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicSymplectic",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_mixed_cross",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicTensor",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_mixed_domain",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicTensor",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_mixed_polar",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicTensor",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_mixed_rawStar",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicTensor",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_same_cross",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicSymplectic",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_same_domain",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicSymplectic",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_same_partial",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicSymplectic",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_same_polar",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicSymplectic",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_same_rawStar",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicSymplectic",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiIntrinsic_tensor_actual",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiIntrinsicTensor",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.IsTensorSpecial",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorRecognition",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.IsTensorSpecial.map",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.IsTensorSpecial.smul",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorRecognition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.PreservesPartialTensor",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorAction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.partialTensor",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorAction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.partialTensor_basis01",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.partialTensor_basis02",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.partialTensor_preserves_column01",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.partialTensor_preserves_column02",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.rawPartialTensor",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorRecognition",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.rawPartialTensor_smul",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorRecognition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.tensorBasis",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorAction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.tensorBasis_special_first",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.tensorBasis_special_last",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.tensorPolar",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorRecognition",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.tensorPolar_smul",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorRecognition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.tensorSpecial_affine_normalized",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorRecognition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.tensorSpecial_projective_mem",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorRecognition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.tensorSpecial_zero_first",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorRecognition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.tensor_diagonal_parameters",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorRecognition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.tensor_linear_diagonal_reduction",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorDiagonal",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.tensor_matrix_diagonal_reduction",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorDiagonal",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.SuzukiFamily.tensor_pair_normalization",
+      "module": "Atlas.LinearGroups.SuzukiFamily.TensorAction",
+      "kind": "theorem"
+    }
+  ]
+}

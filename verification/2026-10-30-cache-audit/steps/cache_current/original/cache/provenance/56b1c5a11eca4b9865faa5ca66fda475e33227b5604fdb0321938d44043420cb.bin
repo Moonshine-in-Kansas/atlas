@@ -1,0 +1,150 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["1284e511c58d500b.olean"],
+  "m": false,
+  "i": "7e9c3a8d672cb7ae.ilean",
+  "c": "0d49b0acdd13ea1c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoupleFusionGroup.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleFusionGroup.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleFusionGroup.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleFusionGroup.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleFusionGroup.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable abbrev codeCoupleStabilizer : Subgroup codeGroup :=\n  MulAction.stabilizer codeGroup localReferenceCross ⊓ MulAction.stabilizer codeGroup referenceSecondCross`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def coupleGaussianHom :\n    codeCoupleStabilizer →* gaussianLatticeGroup :=\n  codeGaussianHom.comp codeCoupleStabilizer.subtype`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def coupleFusionGroup : Subgroup gaussianLatticeGroup :=\n  Subgroup.closure (Set.range coupleGaussianHom ∪ { localFusionT })`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleGaussianHom_mem (g : codeCoupleStabilizer) :\n    coupleGaussianHom g ∈ coupleFusionGroup :=\n  Subgroup.subset_closure (Or.inl ⟨g, rfl⟩)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localFusionT_mem_coupleFusionGroup : localFusionT ∈ coupleFusionGroup :=\n  Subgroup.subset_closure (Or.inr rfl)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionGroup_le_generated :\n    coupleFusionGroup ≤ generatedGaussianGroup :=\n  by\n  apply (Subgroup.closure_le _).mpr\n  rintro g (⟨a, rfl⟩ | rfl)\n  · exact codeGaussianHom_mem_generated a.val\n  · exact localFusionT_mem_generated`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionGroup_le_pair_stabilizer :\n    coupleFusionGroup ≤\n      MulAction.stabilizer gaussianLatticeGroup localReferenceCross ⊓\n        MulAction.stabilizer gaussianLatticeGroup referenceSecondCross :=\n  by\n  apply (Subgroup.closure_le _).mpr\n  rintro g (⟨a, rfl⟩ | rfl)\n  · change\n      (codeGaussianHom a.val • localReferenceCross = localReferenceCross) ∧\n        (codeGaussianHom a.val • referenceSecondCross = referenceSecondCross)\n    simp only [codeGaussianHom_cross]\n    exact a.prop\n  · exact ⟨localFusionT_fixes_first, localFusionT_fixes_second⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionGroup_fix (g : coupleFusionGroup) :\n    g.val • localReferenceCross = localReferenceCross ∧ g.val • referenceSecondCross = referenceSecondCross :=\n  coupleFusionGroup_le_pair_stabilizer g.prop`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionGroup_preserves_referenceCouple (g : coupleFusionGroup) :\n    gaussianImage g.val referenceCouple = referenceCouple :=\n  by\n  have h := coupleFusionGroup_fix g\n  ext c\n  simp only [gaussianImage, referenceCouple, Set.image_insert_eq, Set.image_singleton, h.1, h.2]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleCodeR_mem : codeR ∈ codeCoupleStabilizer :=\n  coupleCodeR_fixes_reference`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleCodeBeta_mem : coupleCodeBeta ∈ codeCoupleStabilizer :=\n  coupleCodeBeta_fixes_reference`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeCoupleOrbit_subset_coupleFusionOrbit (y : MinimalCross) :\n    MulAction.orbit codeCoupleStabilizer y ⊆ MulAction.orbit coupleFusionGroup y :=\n  by\n  intro c hc\n  obtain ⟨g, hg⟩ := MulAction.mem_orbit_iff.mp hc\n  apply MulAction.mem_orbit_iff.mpr\n  refine ⟨⟨coupleGaussianHom g, coupleGaussianHom_mem g⟩, ?_⟩\n  change codeGaussianHom g.val • y = c\n  rw [codeGaussianHom_cross]\n  exact hg`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def codeCoupleIteratedStabilizerEquiv :\n    codeCoupleStabilizer ≃ MulAction.stabilizer codeReferenceStabilizer referenceSecondCross :=\n  { toFun := fun g => ⟨⟨g.val, g.prop.1⟩, g.prop.2⟩\n    invFun := fun g => ⟨g.val.val, g.val.prop, g.prop⟩\n    left_inv := fun _ => rfl\n    right_inv := fun _ => rfl }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeCoupleStabilizer_order : Nat.card codeCoupleStabilizer = 16384 :=\n  by\n  rw [Nat.card_congr codeCoupleIteratedStabilizerEquiv]\n  change\n    Nat.card (MulAction.stabilizer (MulAction.stabilizer codeGroup localReferenceCross) referenceSecondCross) = 16384\n  rw [localReferenceCross_eq, referenceSecondCross_eq]\n  exact\n    coordinate_same_row_pair_stabilizer_order (rowLabel 0) 0 (binaryLabel 2)\n      (by simpa only [← localReferenceCross_eq, ← referenceSecondCross_eq] using Ne.symm reference_crosses_ne)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:74:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:77:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionGroup.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoupleMonomialGenerators transitive imports (legacy)",
+       "0b39bdc1b50d1395"],
+      ["Atlas.Rudvalis.CoupleMonomialGenerators:importAllArts",
+       "1255eaaa31e991ad"],
+      ["Atlas.Rudvalis.ReferenceConfigurations transitive imports (legacy)",
+       "849ae6bfd3eaab6f"],
+      ["Atlas.Rudvalis.ReferenceConfigurations:importAllArts",
+       "aa958a51036d3578"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoupleFusionGroup.lean",
+   "2490e438d69e2d90"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoupleFusionGroup", "1aee4832994f7335"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "2b502810f193f760"}

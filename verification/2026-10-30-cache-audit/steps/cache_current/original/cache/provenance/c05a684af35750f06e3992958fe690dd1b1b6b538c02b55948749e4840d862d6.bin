@@ -1,0 +1,123 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["47b02628682542bb.olean"],
+  "m": false,
+  "i": "2403f9dae3f294cb.ilean",
+  "c": "290fe098bc14e162.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FourPlaneTorsion.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourPlaneTorsion.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourPlaneTorsion.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourPlaneTorsion.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourPlaneTorsion.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:7:0: Unscoped option maxHeartbeats is not allowed:\nPlease scope this to individual declarations, as in\n```\nset_option maxHeartbeats in\n-- comment explaining why this is necessary\nexample : ... := ...\n```\n\nNote: This linter can be disabled with `set_option linter.style.setOption false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:46:54: missing space in the source\n\nThis part of the code\n  'w∈binaryTorsion)'\nshould be written as\n  'w ∈ binaryTorsion)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:58:66: missing space in the source\n\nThis part of the code\n  'w∈binaryTorsion)'\nshould be written as\n  'w ∈ binaryTorsion)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:77:57: missing space in the source\n\nThis part of the code\n  'x,x 0≠r'\nshould be written as\n  'x, x 0'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:77:60: missing space in the source\n\nThis part of the code\n  '0≠r → f'\nshould be written as\n  '0 ≠ r'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:77:68: missing space in the source\n\nThis part of the code\n  'x=0) :'\nshould be written as\n  'x = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:94:35: missing space in the source\n\nThis part of the code\n  'x,x 0≠r'\nshould be written as\n  'x, x 0'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:94:38: missing space in the source\n\nThis part of the code\n  '0≠r → f'\nshould be written as\n  '0 ≠ r'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:94:46: missing space in the source\n\nThis part of the code\n  'x=0) :'\nshould be written as\n  'x = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:107:2: `simp [fourPlanePattern,fourPlanePoint] at hδ0` is a flexible tactic modifying `hδ0`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:107:2: Try this:\n  [apply] simp only [Fin.isValue, Finset.sum_apply, Pi.smul_apply, smul_eq_mul] at hδ0",
+   "level": "info"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:112:2: `rw [fourPlanePattern, ← hδ0] at h`\nuses `hδ0`, which was modified by the flexible tactic `simp` on line 107!",
+   "level": "info"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:101:60: missing space in the source\n\nThis part of the code\n  'x,x 0≠r'\nshould be written as\n  'x, x 0'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:101:63: missing space in the source\n\nThis part of the code\n  '0≠r → f'\nshould be written as\n  '0 ≠ r'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:101:71: missing space in the source\n\nThis part of the code\n  'x=0)\n '\nshould be written as\n  'x = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:102:19: missing space in the source\n\nThis part of the code\n  'E,f x)=0)'\nshould be written as\n  'E, f x)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:102:23: missing space in the source\n\nThis part of the code\n  'x)=0) (x'\nshould be written as\n  'x) = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:102:44: missing space in the source\n\nThis part of the code\n  '0=r) :'\nshould be written as\n  '0 = r)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:124:21: missing space in the source\n\nThis part of the code\n  '0=r i)'\nshould be written as\n  '0 = r'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:139:0: Please, write a comment here or remove this line, but do not place empty lines within commands!\nContext:\n                                                                                          ↓\n  ⏎    rwa [fourPlaneParamMap_apply r u i _ rfl,fourPlaneParamMap_apply r v i _ rfl] at hh⏎⏎  have hd : u.1=v.1 := by⏎\n\nNote: This linter can be disabled with `set_option linter.style.emptyLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:132:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:184:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:159:77: missing space in the source\n\nThis part of the code\n  'w∈binaryTorsion)'\nshould be written as\n  'w ∈ binaryTorsion)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:160:14: missing space in the source\n\nThis part of the code\n  'z,fourPlaneSupport'\nshould be written as\n  'z, fourPlaneSupport'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:160:34: missing space in the source\n\nThis part of the code\n  'z=0 → w'\nshould be written as\n  'z = 0'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourPlaneTorsion.lean:160:42: missing space in the source\n\nThis part of the code\n  'z=0) :'\nshould be written as\n  'z = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FourPlaneGeometry transitive imports (legacy)",
+       "24bc36bfe635bfc7"],
+      ["Atlas.Rudvalis.FourPlaneGeometry:importAllArts", "164ccab7d21678ab"],
+      ["Atlas.Rudvalis.MinimumSupportObstructions transitive imports (legacy)",
+       "f01e1baff07b46db"],
+      ["Atlas.Rudvalis.MinimumSupportObstructions:importAllArts",
+       "641f1431a5162d71"],
+      ["Atlas.Codes.QuaternaryLiftFibres transitive imports (legacy)",
+       "e205dc480b50d88d"],
+      ["Atlas.Codes.QuaternaryLiftFibres:importAllArts",
+       "4f3e19bc6a73e00c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FourPlaneTorsion.lean",
+   "34e1a7bc1e95b528"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FourPlaneTorsion", "7a9e688a5bd05083"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "3989dd9787e85ffa"}

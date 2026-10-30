@@ -1,0 +1,272 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["20ced7f5f200e8d0.olean"],
+  "m": false,
+  "i": "91647f57b1bcab2f.ilean",
+  "c": "03d2999e1a347432.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:9:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:94:33: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [weightLabel, hi, hj, Ne.symm hij, Equiv.swap_apply_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:100:33: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [weightLabel, hi, hj, Ne.symm hij, Equiv.swap_apply_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:131:22: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Matrix.single_apply, Equiv.swap_apply_def, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:131:39: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Equiv.swap_apply_def, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:131:60: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:131:87: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, Equiv.swap_apply_def, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:134:22: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Matrix.single_apply, Equiv.swap_apply_def, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:134:60: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:134:82: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, Equiv.swap_apply_def, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:135:20: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Matrix.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, hkj, Ne.symm hkj, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:135:37: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, hkj, Ne.symm hkj, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:135:85: This simp argument is unused:\n  Ne.symm hki\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, Equiv.swap_apply_def, hki, hkj, Ne.symm hkj, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:141:22: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Matrix.single_apply, Equiv.swap_apply_def, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:141:60: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:141:87: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, Equiv.swap_apply_def, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:144:22: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Matrix.single_apply, Equiv.swap_apply_def, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:144:39: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Equiv.swap_apply_def, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:144:60: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:145:20: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Matrix.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, hkj, Ne.symm hkj, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:145:37: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, hkj, Ne.symm hkj, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:145:103: This simp argument is unused:\n  Ne.symm hkj\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, hkj, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:131:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:134:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:135:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:141:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:144:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:145:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:160:22: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Matrix.single_apply, Equiv.swap_apply_def, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:160:60: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:160:87: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, Equiv.swap_apply_def, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:163:22: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Matrix.single_apply, Equiv.swap_apply_def, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:163:39: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Equiv.swap_apply_def, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:163:60: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:164:20: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Matrix.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, hkj, Ne.symm hkj, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:164:37: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, hkj, Ne.symm hkj, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:164:103: This simp argument is unused:\n  Ne.symm hkj\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, hkj, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:170:22: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Matrix.single_apply, Equiv.swap_apply_def, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:170:39: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Equiv.swap_apply_def, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:170:60: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:170:87: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, Equiv.swap_apply_def, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:173:22: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Matrix.single_apply, Equiv.swap_apply_def, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:173:60: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:173:82: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, Equiv.swap_apply_def, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:174:20: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Matrix.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, hkj, Ne.symm hkj, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:174:37: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, hkj, Ne.symm hkj, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:174:85: This simp argument is unused:\n  Ne.symm hki\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, Pi.single_apply, Matrix.single_apply, Equiv.swap_apply_def, hki, hkj, Ne.symm hkj, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:160:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:163:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:164:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:170:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:173:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:174:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:188:23: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Matrix.single_apply, Equiv.swap_apply_def, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:188:40: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Pi.single_apply, Equiv.swap_apply_def, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:188:61: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Pi.single_apply, Matrix.single_apply, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:189:21: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Matrix.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:189:38: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Pi.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:195:23: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Matrix.single_apply, Equiv.swap_apply_def, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:195:61: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Pi.single_apply, Matrix.single_apply, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:196:21: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Matrix.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:196:38: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Pi.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:189:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:196:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:210:23: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Matrix.single_apply, Equiv.swap_apply_def, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:210:61: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Pi.single_apply, Matrix.single_apply, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:211:21: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Matrix.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:211:38: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Pi.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:217:23: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Matrix.single_apply, Equiv.swap_apply_def, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:217:40: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Pi.single_apply, Equiv.swap_apply_def, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:217:61: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Pi.single_apply, Matrix.single_apply, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:218:21: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Matrix.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:218:38: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [shortRoot, Pi.single_apply, Equiv.swap_apply_def, hki, Ne.symm hki, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:211:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean:218:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.SelectedWeightCompanion transitive imports (legacy)",
+       "39fdaab0d5357286"],
+      ["Atlas.LinearGroups.Chevalley.SelectedWeightCompanion:importAllArts",
+       "1c06425405dfa514"],
+      ["Mathlib.LinearAlgebra.Matrix.Reindex transitive imports (legacy)",
+       "eb3a6006e32769c8"],
+      ["Mathlib.LinearAlgebra.Matrix.Reindex:importAllArts",
+       "ba19b1d9f56ba3af"],
+      ["Mathlib.LinearAlgebra.Matrix.Transvection transitive imports (legacy)",
+       "fde8ce431aa6bf3d"],
+      ["Mathlib.LinearAlgebra.Matrix.Transvection:importAllArts",
+       "19dfc952fa977dc4"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Comparison/TypeCWeightBlock.lean",
+   "a7fb75a24bb0f7ca"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Comparison.TypeCWeightBlock",
+   "182051ac2949ac9c"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "150c4f3377fe36c3"}

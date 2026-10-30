@@ -1,0 +1,119 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["5cdb076a239fdbc1.olean"],
+  "m": false,
+  "i": "8f44cfb4d77c7dee.ilean",
+  "c": "e7f9c38448442d8a.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateRowCanonicalBase.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateRowCanonicalBase.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateRowCanonicalBase.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateRowCanonicalBase.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateRowCanonicalBase.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem quartet_subset_canonicalBase (Q : Set MinimalCross) (hQ : IsQuartet Q) :\n    Q ⊆ canonicalBase Q :=\n  by\n  obtain ⟨c, hc, hcard⟩ := Set.exists_subset_card_eq (show 2 ≤ Q.ncard by rw [hQ.1]; decide)\n  intro x hx\n  exact ⟨c, ⟨hcard, hQ.2.1.mono hc⟩, hc, Q, hQ, hc, hx⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:8:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nEvery coordinate cross occurs in a dozen of a couple of each coordinate row. -/\ntheorem coordinateFrame_subset_row_canonicalBase (p : Point) : coordinateFrame ⊆ canonicalBase (coordinateRowFrame p) :=\n  by\n  intro c hc\n  obtain ⟨⟨q, x⟩, rfl⟩ := coordinateFrame_rep c hc\n  by_cases hpq : p = q\n  · subst q\n    exact quartet_subset_canonicalBase _ (coordinateRowFrame_isQuartet p) ⟨x, rfl⟩\n  · let s : CoordinateRowPair := ⟨{ p, q }, by simp [hpq]⟩\n    let a := coordinateRowPairNormal s\n    have hap : dot a.val p.val = 0 := coordinateRowPairNormal_spec s p (by simp [s])\n    have haq : dot a.val q.val = 0 := coordinateRowPairNormal_spec s q (by simp [s])\n    let d := coordinatePlaneSlice p a 0\n    let Q := coordinatePlaneQuartet p q a 0 (dot a.val x)\n    have hd : IsCouple d := by\n      refine ⟨?_, ?_⟩\n      · change Nat.card (coordinatePlaneSlice p a 0) = 2\n        exact coordinatePlaneSlice_card p a hap 0\n      · exact (coordinateRowFrame_isQuartet p).2.1.mono (coordinatePlaneSlice_subset p a 0)\n    have hdQ : d ⊆ Q := Set.subset_union_left\n    exact\n      ⟨d, hd, coordinatePlaneSlice_subset p a 0, Q, coordinatePlaneQuartet_isQuartet p q a hpq hap haq 0 (dot a.val x),\n        hdQ, Or.inr ⟨x, rfl, rfl⟩⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe actual monomial group transports the reference ordered couple to any same-row ordered pair. -/\ntheorem referenceCouple_same_row_transport (p : Point) (x y : E)\n    (hxy : coordinateCross (p, x) ≠ coordinateCross (p, y)) :\n    ∃ g : codeGroup,\n      g • localReferenceCross = coordinateCross (p, x) ∧ g • referenceSecondCross = coordinateCross (p, y) :=\n  by\n  have ho : coordinateCross (p, x) ∈ MulAction.orbit codeGroup localReferenceCross :=\n    by\n    rw [coordinateCross_orbit _ (coordinateCross_mem _)]\n    exact coordinateCross_mem _\n  obtain ⟨g, hg⟩ := MulAction.mem_orbit_iff.mp ho\n  have hrow : codeRowImage g (rowLabel 0) = p := by\n    have he := hg\n    rw [localReferenceCross_eq, coordinateCross_action] at he\n    have hr := coordinateCross_row_of_eq he\n    rwa [codeRowImage_coordinates] at hr\n  let z := (g.val.right (rowLabel 0, binaryLabel 2)).2\n  have hsecond : g • referenceSecondCross = coordinateCross (p, z) :=\n    by\n    rw [referenceSecondCross_eq, coordinateCross_action]\n    congr 1\n    exact Prod.ext ((codeRowImage_coordinates g _).trans hrow) rfl\n  have hzx : coordinateCross (p, z) ≠ coordinateCross (p, x) :=\n    by\n    rw [← hsecond, ← hg]\n    exact fun h => reference_crosses_ne (MulAction.injective g h).symm\n  obtain ⟨k, hk⟩ := coordinateCross_same_row_transitive p x z y hzx hxy.symm\n  refine ⟨k.val * g, ?_, ?_⟩\n  · rw [mul_smul, hg]; exact k.prop\n  · rw [mul_smul, hsecond, hk]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:37:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:39:30: missing space in the source\n\nThis part of the code\n  '(p,x)≠coordinateCross'\nshould be written as\n  '(p, x) ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:39:32: missing space in the source\n\nThis part of the code\n  '(p,x)≠coordinateCross'\nshould be written as\n  'x) ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:39:52: missing space in the source\n\nThis part of the code\n  '(p,y)) :'\nshould be written as\n  '(p, y))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceCouple_same_row_set_transport (p : Point)\n    (c : Set MinimalCross) (hc : IsCouple c) (hp : c ⊆ coordinateRowFrame p) :\n    ∃ g : codeGroup, gaussianImage (codeGaussianHom g) referenceCouple = c :=\n  by\n  obtain ⟨a, b, hab, he⟩ := Set.ncard_eq_two.mp hc.1\n  have ha : a ∈ c := by rw [he]; simp\n  have hb : b ∈ c := by rw [he]; simp\n  obtain ⟨x, rfl⟩ := hp ha\n  obtain ⟨y, rfl⟩ := hp hb\n  obtain ⟨g, hg0, hg2⟩ := referenceCouple_same_row_transport p x y hab\n  refine ⟨g, ?_⟩\n  rw [he]\n  simp only [gaussianImage, referenceCouple, Set.image_pair, codeGaussianHom_cross, hg0, hg2]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:65:29: missing space in the source\n\nThis part of the code\n  'c⊆coordinateRowFrame'\nshould be written as\n  'c ⊆ coordinateRowFrame'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThis conditional endpoint isolates precisely the pending intrinsic reference-dozen equality. -/\ntheorem coordinateRow_canonicalBase_eq_of_reference_dozen\n    (hD : intrinsicDozen referenceCouple = referenceCoordinateDozen) (p : Point) :\n    canonicalBase (coordinateRowFrame p) = coordinateFrame :=\n  by\n  apply Set.Subset.antisymm _ (coordinateFrame_subset_row_canonicalBase p)\n  rintro x ⟨c, hc, hp, hx⟩\n  obtain ⟨g, hg⟩ := referenceCouple_same_row_set_transport p c hc hp\n  rw [← hg, ← intrinsicDozen_gaussianImage, hD] at hx\n  obtain ⟨y, hy, rfl⟩ := hx\n  change codeGaussianHom g • y ∈ coordinateFrame\n  rw [codeGaussianHom_cross]\n  exact coordinateFrame_code_stable g y (referenceCoordinateDozen_subset hy)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:79:40: missing space in the source\n\nThis part of the code\n  'referenceCouple=referenceCoordinateDozen)'\nshould be written as\n  'referenceCouple = referenceCoordinateDozen)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowCanonicalBase.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateReferenceDozen transitive imports (legacy)",
+       "ddc471861aff4984"],
+      ["Atlas.Rudvalis.CoordinateReferenceDozen:importAllArts",
+       "18c3c9e08a9ca524"],
+      ["Atlas.Rudvalis.HeavyBlockTransport transitive imports (legacy)",
+       "56445344fd5db4b5"],
+      ["Atlas.Rudvalis.HeavyBlockTransport:importAllArts", "3d5ca1bf80ca0a33"],
+      ["Atlas.Rudvalis.CoordinateCrossLocalAction transitive imports (legacy)",
+       "d8f5d85b21f8df9d"],
+      ["Atlas.Rudvalis.CoordinateCrossLocalAction:importAllArts",
+       "dfab4e3f37e4feea"],
+      ["Atlas.Rudvalis.CoordinateCrossStabilizer transitive imports (legacy)",
+       "fe67978918f9ab10"],
+      ["Atlas.Rudvalis.CoordinateCrossStabilizer:importAllArts",
+       "55e3d9d6b765bce4"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateRowCanonicalBase.lean",
+   "705a144e46623622"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateRowCanonicalBase",
+   "8a488f80d2b5935b"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "786ba817d4a7f81b"}

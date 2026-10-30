@@ -1,0 +1,218 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["749db89d1b008e00.olean"],
+  "m": false,
+  "i": "cabef566a81e1d65.ilean",
+  "c": "d0d2d194d6445c39.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:9:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:10:12: Ambiguous namespace `Matrix`: it is interpreted as `_root_.Atlas.Matrix` because this `open` occurs inside `namespace Atlas.Chevalley.Comparison.TypeD`, while `_root_.Matrix` is silently not opened. Specify the namespace unambiguously, e.g. `_root_.Atlas.Matrix`. The warning can sometimes also be addressed by moving the `open` outside of the surrounding `namespace`.\n\nNote: This linter can be disabled with `set_option linter.ambiguousOpen false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:71:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:66:45: missing space in the source\n\nThis part of the code\n  'n+2) (K'\nshould be written as\n  'n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:73:36: missing space in the source\n\nThis part of the code\n  'n+2) (K'\nshould be written as\n  'n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:77:43: missing space in the source\n\nThis part of the code\n  '(n+2)) (k'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:102:33: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [weightLabel, hi, hj, Ne.symm hij, Equiv.swap_apply_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:108:33: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [weightLabel, hi, hj, Ne.symm hij, Equiv.swap_apply_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:92:50: missing space in the source\n\nThis part of the code\n  '(n+2)) (hij'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:92:63: missing space in the source\n\nThis part of the code\n  'i≠j) (k'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:110:41: missing space in the source\n\nThis part of the code\n  '(n+2)) :'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:124:42: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [weightLabel, sumSwap, hi, hj, Ne.symm hij]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:130:42: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [weightLabel, sumSwap, hi, hj, Ne.symm hij]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:114:49: missing space in the source\n\nThis part of the code\n  '(n+2)) (hij'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:114:62: missing space in the source\n\nThis part of the code\n  'i≠j) (k'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:146:33: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.single_apply, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:146:60: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.single_apply, Equiv.swap_apply_def, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:149:35: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.single_apply, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:150:14: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Equiv.swap_apply_def, hbi, hbj, Ne.symm hbi, Ne.symm hbj, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:151:36: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.single_apply, Equiv.swap_apply_def, hbi, hbj, Ne.symm hbi, Ne.symm hbj, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:151:41: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.single_apply, Equiv.swap_apply_def, hbi, hbj, Ne.symm hbi, Ne.symm hbj, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:132:67: missing space in the source\n\nThis part of the code\n  '(n+2)) (hij'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:132:80: missing space in the source\n\nThis part of the code\n  'i≠j) :'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:167:33: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.single_apply, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:167:60: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.single_apply, Equiv.swap_apply_def, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:170:35: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.single_apply, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:171:14: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Equiv.swap_apply_def, hbi, hbj, Ne.symm hbi, Ne.symm hbj, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:172:36: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.single_apply, Equiv.swap_apply_def, hbi, hbj, Ne.symm hbi, Ne.symm hbj, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:172:41: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.single_apply, Equiv.swap_apply_def, hbi, hbj, Ne.symm hbi, Ne.symm hbj, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:153:68: missing space in the source\n\nThis part of the code\n  '(n+2)) (hij'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:153:81: missing space in the source\n\nThis part of the code\n  'i≠j) :'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:188:47: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.single_apply, sumSwap, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:192:14: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [sumSwap, hbi, hbj, Ne.symm hbi, Ne.symm hbj, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:193:36: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.single_apply, sumSwap, hbi, hbj, Ne.symm hbi, Ne.symm hbj, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:193:41: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.single_apply, sumSwap, hbi, hbj, Ne.symm hbi, Ne.symm hbj, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:174:66: missing space in the source\n\nThis part of the code\n  '(n+2)) (hij'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:174:79: missing space in the source\n\nThis part of the code\n  'i≠j) :'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:209:47: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.single_apply, sumSwap, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:213:14: This simp argument is unused:\n  Matrix.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [sumSwap, hbi, hbj, Ne.symm hbi, Ne.symm hbj, hij, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:214:36: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.single_apply, sumSwap, hbi, hbj, Ne.symm hbi, Ne.symm hbj, Ne.symm hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:214:41: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.single_apply, sumSwap, hbi, hbj, Ne.symm hbi, Ne.symm hbj, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:195:67: missing space in the source\n\nThis part of the code\n  '(n+2)) (hij'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:195:80: missing space in the source\n\nThis part of the code\n  'i≠j) :'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:216:47: missing space in the source\n\nThis part of the code\n  '(n+1)) :'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:222:47: missing space in the source\n\nThis part of the code\n  '(n+1)) :'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:241:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:236:35: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:237:15: missing space in the source\n\nThis part of the code\n  '(n+2)) (t'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:265:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:260:35: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:261:15: missing space in the source\n\nThis part of the code\n  '(n+2)) (t'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:284:37: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:285:15: missing space in the source\n\nThis part of the code\n  '(n+1)) (t'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:291:37: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:292:15: missing space in the source\n\nThis part of the code\n  '(n+1)) (t'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:298:36: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean:304:36: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.SelectedWeightCompanionAdjoinOrbit transitive imports (legacy)",
+       "2847cdb6df83e644"],
+      ["Atlas.LinearGroups.Chevalley.SelectedWeightCompanionAdjoinOrbit:importAllArts",
+       "9c747d43bd49fee9"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeDNatural transitive imports (legacy)",
+       "06692d0355f7ce4f"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeDNatural:importAllArts",
+       "9ca959b6f2e4bae8"],
+      ["Mathlib.LinearAlgebra.Matrix.Reindex transitive imports (legacy)",
+       "eb3a6006e32769c8"],
+      ["Mathlib.LinearAlgebra.Matrix.Reindex:importAllArts",
+       "ba19b1d9f56ba3af"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalBlock.lean",
+   "0d1f994348695b96"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Comparison.TypeDNaturalBlock",
+   "a9ae887483ec3025"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "011bcc1f3c097541"}

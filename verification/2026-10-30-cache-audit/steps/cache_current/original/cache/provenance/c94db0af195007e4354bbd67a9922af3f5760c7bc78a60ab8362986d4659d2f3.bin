@@ -1,0 +1,98 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["e69fc006881e144a.olean"],
+  "m": false,
+  "i": "f6a0480074f7ff34.ilean",
+  "c": "c029c94c676944e7.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateTripleFrame.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateTripleFrame.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateTripleFrame.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateTripleFrame.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateTripleFrame.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem no_cross_orthogonal_coordinateFrame (w : MinimalCross) :\n    ¬∀ z ∈ coordinateFrame, CrossOrthogonal z w := by\n  intro h\n  obtain ⟨v, rfl⟩ := Quotient.exists_rep w\n  have hv (i : Coordinate) : v.val.val i = 0 :=\n    by\n    have hi := h (coordinateCross i) (coordinateCross_mem i)\n    change CrossOrthogonal (minimalCross (coordinateShellLift (i, true))) (minimalCross v) at hi\n    rw [crossOrthogonal_mk] at hi\n    change HermitianOrthogonal (coordinateMinimum i) v.val.val at hi\n    exact ((coordinate_hermitianOrthogonal_pair i.1 i.2 v.val.val).mp hi).1\n  have hz : v.val.val = 0 := funext hv\n  have hn := v.prop\n  rw [hz] at hn\n  norm_num [rationalDot] at hn`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- If all but one member of an intrinsic quartet lie in the coordinate frame,\nthen the remaining member also lies in that frame. -/\ntheorem quartet_three_in_coordinateFrame (Q : Set MinimalCross) (hQ : IsQuartet Q) (w : MinimalCross) (hw : w ∈ Q)\n    (hthree : ∀ q ∈ Q, q ≠ w → q ∈ coordinateFrame) : w ∈ coordinateFrame :=\n  by\n  by_contra hnot\n  apply no_cross_orthogonal_coordinateFrame w\n  intro z hz\n  by_cases hzQ : z ∈ Q\n  · exact hQ.2.1 hzQ hw (by intro he; subst z; exact hnot hz)\n  · apply hQ.2.2 z hzQ w hw\n    intro y hy hyw\n    exact (coordinateFrame_orthogonal_iff z y hz (hthree y hy hyw)).mpr (by intro he; subst z; exact hzQ hy)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:23:30: missing space in the source\n\nThis part of the code\n  'w∈Q)\n '\nshould be written as\n  'w ∈ Q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:24:15: missing space in the source\n\nThis part of the code\n  '∀q∈Q,q≠w'\nshould be written as\n  '∀ q ∈'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:24:19: missing space in the source\n\nThis part of the code\n  '∀q∈Q,q≠w → q∈coordinateFrame)'\nshould be written as\n  'Q, q ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:24:26: missing space in the source\n\nThis part of the code\n  'q∈coordinateFrame)'\nshould be written as\n  'q ∈ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe same triple-in-frame principle holds in every actual Gaussian translate. -/\ntheorem quartet_three_in_gaussian_coordinateFrame (g : gaussianLatticeGroup) (Q : Set MinimalCross) (hQ : IsQuartet Q)\n    (w : MinimalCross) (hw : w ∈ Q) (hthree : ∀ q ∈ Q, q ≠ w → q ∈ gaussianImage g coordinateFrame) :\n    w ∈ gaussianImage g coordinateFrame :=\n  by\n  have hQ' := (isQuartet_gaussianImage g⁻¹ Q).mpr hQ\n  have hw' : g⁻¹ • w ∈ gaussianImage g⁻¹ Q := Set.mem_image_of_mem _ hw\n  have hthree' : ∀ q ∈ gaussianImage g⁻¹ Q, q ≠ g⁻¹ • w → q ∈ coordinateFrame :=\n    by\n    rintro q ⟨z, hz, rfl⟩ hne\n    have hz' := hthree z hz (by intro he; subst z; exact hne rfl)\n    obtain ⟨u, hu, he⟩ := hz'\n    rw [← he]\n    change g⁻¹ • (g • u) ∈ coordinateFrame\n    rwa [inv_smul_smul]\n  have h := quartet_three_in_coordinateFrame _ hQ' _ hw' hthree'\n  have hh : g • (g⁻¹ • w) ∈ gaussianImage g coordinateFrame := Set.mem_image_of_mem _ h\n  simpa only [smul_inv_smul] using hh`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:37:72: missing space in the source\n\nThis part of the code\n  'w∈Q)\n '\nshould be written as\n  'w ∈ Q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:38:15: missing space in the source\n\nThis part of the code\n  '∀q∈Q,q≠w'\nshould be written as\n  '∀ q ∈'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:38:19: missing space in the source\n\nThis part of the code\n  '∀q∈Q,q≠w → q∈gaussianImage'\nshould be written as\n  'Q, q ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:38:26: missing space in the source\n\nThis part of the code\n  'q∈gaussianImage'\nshould be written as\n  'q ∈ gaussianImage'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTripleFrame.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateQuartetClassification transitive imports (legacy)",
+       "0a76514a227d9779"],
+      ["Atlas.Rudvalis.CoordinateQuartetClassification:importAllArts",
+       "159541aa19114d9a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateTripleFrame.lean",
+   "468ea431b8d622df"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateTripleFrame", "4a2780267838fba3"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "b4034f79d0ff73a4"}

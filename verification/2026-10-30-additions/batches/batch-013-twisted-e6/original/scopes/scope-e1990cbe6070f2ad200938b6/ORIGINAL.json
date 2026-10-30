@@ -1,0 +1,73 @@
+{
+  "id": "staged-OrbitProductEquivariance",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.OrbitProductEquivariance"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.positiveOrbitProduct",
+      "kind": "definition",
+      "module": "FamilyWork.OrbitProductEquivariance"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.positiveOrbitBlock_twist",
+      "kind": "theorem",
+      "module": "FamilyWork.OrbitProductEquivariance"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.positiveOrbitBlocks_twist",
+      "kind": "theorem",
+      "module": "FamilyWork.OrbitProductEquivariance"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.positiveOrbitProduct_twist",
+      "kind": "theorem",
+      "module": "FamilyWork.OrbitProductEquivariance"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.positiveOrbitProduct_fixed_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.OrbitProductEquivariance"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-OrbitProductEquivariance-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-OrbitProductEquivariance-no-selected-model",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.Models",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightCompanion",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightOrbits"
+      ]
+    },
+    {
+      "id": "staged-OrbitProductEquivariance-no-inherited-positive-order",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.selectedWeightCompanionPositive_card",
+        "Atlas.Chevalley.positiveWitnessedWeightCompanionSubgroup_card"
+      ]
+    }
+  ]
+}

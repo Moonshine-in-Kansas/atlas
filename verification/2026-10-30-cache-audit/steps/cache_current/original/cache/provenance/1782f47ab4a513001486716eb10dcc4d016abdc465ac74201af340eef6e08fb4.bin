@@ -1,0 +1,70 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["75083d20acd50eed.olean"],
+  "m": false,
+  "i": "e0c064e6d16b678d.ilean",
+  "c": "cfabf7746cb29e3e.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Conway/EisensteinNineHexadTransitive.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/EisensteinNineHexadTransitive.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/EisensteinNineHexadTransitive.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Conway/EisensteinNineHexadTransitive.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Conway/EisensteinNineHexadTransitive.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Conway/EisensteinNineHexadTransitive.lean:27:8: This simp argument is unused:\n  eisensteinNineHexadShellVector\n\nHint: Omit it from the simp argument list.\n  [apply] simp [eisensteinNineHexadLatticeVector, eisensteinNineHexadVector, eisensteinNineHexadLift, Pi.smul_apply,\n    Finset.mem_map_equiv, Equiv.symm_apply_eq]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNineHexadTransitive.lean:11:1: 'theorem eisensteinNineHexadFrame_coordinate (s : Finset (Fin 12)) (hs : s ∈ ternaryConstantHexads) (k j : Fin 12)\n    (hk : k ∈ s) (hj : j ∉ s) (b : ZMod 3) (hb : b ≠ 0) (g : TernaryPureAutomorphism) :\n    eisensteinCoordinateIsometries g • eisensteinNineHexadFrame s hs k j hk hj b hb =\n      eisensteinNineHexadFrame (s.map g.val.toEmbedding) (ternaryConstantHexads_permute g s hs) (g.val k) (g.val j)\n        (Finset.mem_map.mpr ⟨k, hk, rfl⟩) (by simpa [Finset.mem_map_equiv] using hj) b hb :=\n  by\n  rw [eisensteinNineHexadFrame, eisensteinFrameAction_vector]\n  apply congrArg eisensteinFrameOfVector\n  apply Subtype.ext\n  apply Subtype.ext\n  funext i\n  change\n    (eisensteinIntegralAction (eisensteinCoordinateIsometries g) (eisensteinNineHexadLatticeVector s hs k j b)).val i =\n      eisensteinNineHexadVector (s.map g.val.toEmbedding) (g.val k) (g.val j) b i\n  rw [eisensteinIntegralAction_coordinate_apply]\n  simp [eisensteinNineHexadShellVector, eisensteinNineHexadLatticeVector, eisensteinNineHexadVector,\n    eisensteinNineHexadLift, Pi.smul_apply, Finset.mem_map_equiv,\n    Equiv.symm_apply_eq]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNineHexadTransitive.lean:13:24: missing space in the source\n\nThis part of the code\n  'b≠0) (g'\nshould be written as\n  'b ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNineHexadTransitive.lean:30:1: 'theorem eisensteinNineHexadPairFrame_mem (b : ZMod 3) (hb : b ≠ 0) (p : TernaryConstantHexadPair) :\n    eisensteinNineHexadPairFrame b hb p ∈ eisensteinNineHexadFamily b hb := by\n  classical\n  rw [eisensteinNineHexadFamily]\n  apply Finset.mem_biUnion.mpr\n  exact\n    ⟨p, Finset.mem_univ _,\n      (eisensteinNineHexadPairOrbit_mem b hb p _).mpr\n        ⟨1, by simp⟩⟩' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNineHexadTransitive.lean:30:62: missing space in the source\n\nThis part of the code\n  'b≠0) (p'\nshould be written as\n  'b ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNineHexadTransitive.lean:39:74: missing space in the source\n\nThis part of the code\n  'b≠0)\n '\nshould be written as\n  'b ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNineHexadTransitive.lean:70:65: missing space in the source\n\nThis part of the code\n  'b≠0)\n '\nshould be written as\n  'b ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNineHexadTransitive.lean:104:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNineHexadTransitive.lean:102:60: missing space in the source\n\nThis part of the code\n  'b≠0)\n '\nshould be written as\n  'b ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Conway.EisensteinNineHexadInvariant transitive imports (legacy)",
+       "eb3c91873f8f774a"],
+      ["Atlas.Conway.EisensteinNineHexadInvariant:importAllArts",
+       "c10ee31e0908135b"],
+      ["Atlas.Codes.TernaryConstantHexadTransitivity transitive imports (legacy)",
+       "88c0c4bbaaa4fbcc"],
+      ["Atlas.Codes.TernaryConstantHexadTransitivity:importAllArts",
+       "3770208c52334a99"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Conway/EisensteinNineHexadTransitive.lean",
+   "9985531fbab59f8e"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Conway.EisensteinNineHexadTransitive",
+   "d0de56c42014fbd9"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "6b475f5940336896"}

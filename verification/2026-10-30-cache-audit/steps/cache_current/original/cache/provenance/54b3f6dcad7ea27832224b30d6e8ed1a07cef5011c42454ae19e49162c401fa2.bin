@@ -1,0 +1,76 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["3425464d7a7c5a80.olean"],
+  "m": false,
+  "i": "b33b18273fa18d41.ilean",
+  "c": "588580a6aeffb50c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearAlgebra/BooleanSpinGamma.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearAlgebra/BooleanSpinGamma.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearAlgebra/BooleanSpinGamma.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearAlgebra/BooleanSpinGamma.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearAlgebra/BooleanSpinGamma.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGamma.lean:9:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGamma.lean:36:68: This simp argument is unused:\n  smul_smul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [axis, mul_add, add_mul, smul_mul_assoc, mul_smul_comm, creation, annihilation, hcc, hca, hac, haa,\n    smul_neg]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGamma.lean:86:0: `particle_ne_vacuum` does not use the following hypothesis in its type:\n  • [Fintype I] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGamma.lean:91:8: automatically included section variable(s) unused in theorem `_private.Atlas.LinearAlgebra.BooleanSpinGamma.0.Atlas.BooleanSpin.particle_injective`:\n  [Fintype I]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype I] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGamma.lean:91:0: `particle_injective` does not use the following hypothesis in its type:\n  • [Fintype I] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGamma.lean:97:0: `flip_eq_vacuum` does not use the following hypothesis in its type:\n  • [Fintype I] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGamma.lean:147:6: This simp argument is unused:\n  Finsupp.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [axis, creation, annihilation, step_single, hp, hji, hf]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGamma.lean:151:36: This simp argument is unused:\n  Finsupp.finsetSum_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [gamma, LinearMap.sum_apply, axis_vacuum_vacuum, parity_single, vacuum, paritySign, signProduct, bitSign]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGamma.lean:156:36: This simp argument is unused:\n  Finsupp.finsetSum_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [gamma, LinearMap.sum_apply, axis_vacuum_particle, parity_single, Finsupp.single_apply,\n    particle_ne_vacuum, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGamma.lean:157:19: This simp argument is unused:\n  Finsupp.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [gamma, LinearMap.sum_apply, Finsupp.finsetSum_apply, axis_vacuum_particle, parity_single,\n    particle_ne_vacuum, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGamma.lean:161:36: This simp argument is unused:\n  Finsupp.finsetSum_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [gamma, LinearMap.sum_apply, axis_particle_vacuum, parity_single, Finsupp.single_apply,\n    particle_ne_vacuum]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGamma.lean:162:19: This simp argument is unused:\n  Finsupp.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [gamma, LinearMap.sum_apply, Finsupp.finsetSum_apply, axis_particle_vacuum, parity_single,\n    particle_ne_vacuum]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearAlgebra.BooleanSpinOperators transitive imports (legacy)",
+       "cf09eb8c172fc5eb"],
+      ["Atlas.LinearAlgebra.BooleanSpinOperators:importAllArts",
+       "33d356569b39dc6d"],
+      ["Mathlib.Tactic.Module transitive imports (legacy)", "b5f83df3ed43bfc6"],
+      ["Mathlib.Tactic.Module:importAllArts", "0733868e493644a5"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearAlgebra/BooleanSpinGamma.lean",
+   "0258f0dd54907f78"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearAlgebra.BooleanSpinGamma", "f409ff1cc7835fa0"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "adb467c7c5793979"}

@@ -1,0 +1,98 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["437bae38527ef440.olean"],
+  "m": false,
+  "i": "e2ccef116d769352.ilean",
+  "c": "b67c537aeeb97b96.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/LatticeReflection.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LatticeReflection.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LatticeReflection.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LatticeReflection.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LatticeReflection.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/LatticeReflection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeReflection.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeReflection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeReflection.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem distinguishedReflection_lattice_iff (v : RationalSpace) :\n    distinguishedReflection v ∈ rudvalisLattice ↔ v ∈ rudvalisLattice :=\n  distinguishedReflection_lattice_of_glue_embedding secondFrameGlue_embedding v`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeReflection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeReflection.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem secondFrameLineReflection_lattice_iff (a : Point) (v : RationalSpace) :\n    secondFrameLineReflection a v ∈ rudvalisLattice ↔ v ∈ rudvalisLattice :=\n  secondFrameLineReflection_lattice_of_glue_embedding secondFrameGlue_embedding a v`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeReflection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeReflection.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe actual distinguished Gaussian lattice reflection, constructed through binary glue. -/\nnoncomputable def rudvalisReflection : gaussianLatticeGroup :=\n  ⟨distinguishedReflection, distinguishedReflection_pairing, fun v => (distinguishedReflection_lattice_iff v).symm,\n    distinguishedReflection_gaussian⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeReflection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeReflection.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def secondFrameLineIsometry (a : Point) : gaussianLatticeGroup :=\n  ⟨secondFrameLineReflection a, secondFrameLineReflection_pairing a, fun v =>\n    (secondFrameLineReflection_lattice_iff a v).symm, secondFrameLineReflection_gaussian a⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeReflection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeReflection.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rudvalisReflection_order : orderOf rudvalisReflection = 2 :=\n  by\n  apply orderOf_eq_prime\n  · apply Subtype.ext\n    apply LinearEquiv.ext\n    intro v\n    exact distinguishedReflection_involutive v\n  · intro h\n    exact distinguishedReflection_ne_one (congrArg Subtype.val h)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeReflection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeReflection.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeReflection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeReflection.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.GaussianLatticeFinite transitive imports (legacy)",
+       "de13a5fb230b17a6"],
+      ["Atlas.Rudvalis.GaussianLatticeFinite:importAllArts",
+       "0ba4730f1b3d0385"],
+      ["Atlas.Rudvalis.SecondFrameLineReflections transitive imports (legacy)",
+       "7f6ca57d31ed3876"],
+      ["Atlas.Rudvalis.SecondFrameLineReflections:importAllArts",
+       "fe570cf969868465"],
+      ["Atlas.Rudvalis.SecondFrameGlueEmbedding transitive imports (legacy)",
+       "60dbd410d68c040b"],
+      ["Atlas.Rudvalis.SecondFrameGlueEmbedding:importAllArts",
+       "e0a1745a7eb56c55"],
+      ["Atlas.Rudvalis.SeedFrobeniusOrder transitive imports (legacy)",
+       "28a296633934e97f"],
+      ["Atlas.Rudvalis.SeedFrobeniusOrder:importAllArts",
+       "7e0c17287c975e52"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/LatticeReflection.lean",
+   "b9aa8721672aef18"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.LatticeReflection", "8067eeeccc2ab187"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "38317aee51b9d38e"}

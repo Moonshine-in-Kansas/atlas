@@ -3,14 +3,15 @@ require 'json'
 require 'digest'
 require 'pathname'
 require 'zlib'
-require_relative 'existence/contracts'
+require_relative 'existence/contracts' unless defined?(AtlasContracts::Index)
+require_relative 'release_evidence'
 
 module AtlasReleaseMetadata
   ROOT=File.expand_path('..',__dir__)
   MANIFESTS=%w[RELEASE_MANIFEST.json SHA256SUMS verification/release-candidate/PACKAGE_SHA256SUMS].freeze
   CHECKS=%w[build_audit nanoda interface_comparator].freeze
   class Gate
-    attr_reader :files,:index,:sources,:roots,:contracts,:cache,:nanoda,:blockers
+    attr_reader :files,:index,:sources,:roots,:contracts,:cache,:nanoda,:blockers,:successor,:additions
     def initialize(root=ROOT,reader:nil)
       @files=reader || AtlasContracts::Index.new(root)
       @index=files.json('verification/current.json')
@@ -18,6 +19,8 @@ module AtlasReleaseMetadata
       raise 'Wrong metadata paths' unless index.values_at('sources','roots','contracts')==
         %w[verification/release-candidate/SOURCE_HASHES.json verification/roots.json verification/existence/registry.json]
       raise 'Unknown or missing acceptance checks' unless index.fetch('checks').keys.sort==CHECKS.sort
+      raise 'Successor evidence requires source update' if index.dig('supplemental_cache_audit','format')==2 && !index.key?('source_update')
+      raise 'Unindexed public checkpoint file' if File.exist?(files.root+'/catalogue/checkpoints.json') && !index['completed_checkpoints']
     end
     def equal(actual,expected,message)
       raise message unless actual==expected
@@ -48,6 +51,7 @@ module AtlasReleaseMetadata
         end
       end
       %w[catalogue/catalogue.json catalogue/realizations.json catalogue/comparisons.json].each { |p|collect.call(files.json(p)) }
+      collect.call(AtlasReleaseEvidence.checkpoints(files,index))
       equal(roots,refs.values.sort_by { |r|r['declaration'] },'Catalogue, realizations, comparisons and audit roots differ')
       raise 'Empty audit target selection' if roots.empty?
     end
@@ -72,6 +76,14 @@ module AtlasReleaseMetadata
       raise 'Unsuccessful or memory-stopped process' unless r['status']=='process-passed' && r['exit_code']==0 && r['signal'].nil? && r['guard_stop'].nil?
     end
     def validate_cache!
+      if index['source_update']
+        @additions=AtlasReleaseEvidence::Successor.new(files,index,sources,roots,whole:false).validate!
+      end
+      if index.dig('supplemental_cache_audit','format')==2
+        @successor=AtlasReleaseEvidence::Successor.new(files,index,sources,roots).validate!
+        @cache=successor.record
+        return
+      end
       ptr=index.fetch('supplemental_cache_audit');dir=ptr.fetch('directory')
       bundle=files.validate_bundle(dir,ptr.fetch('bundle_sha256'))
       @cache=files.json(dir+'/RESULT.json')
@@ -98,6 +110,47 @@ module AtlasReleaseMetadata
         digest=Digest::SHA256.new
         Zlib::GzipReader.open(full) { |g|digest.update(g.read(1024*1024)) until g.eof? }
         equal(digest.hexdigest,h,"Changed compressed audit artifact #{p}")
+      end
+      if additions
+        # The original four-step format is retained. New runs must use the exact
+        # export cache and pass the same original process/log checks as scopes.
+        equal(files.json(dir+'/CACHE_SOURCE_HASHES.json'),sources,'Successor cache does not bind exact exported bytes')
+        equal(files.json(dir+'/SOURCE_HASHES_AFTER.json'),sources,'Successor sources changed during audit')
+        AtlasReleaseEvidence.cache_artifacts!(files,dir,sources)
+        %w[fresh_project_rebuild independent_replay].each { |key|equal(cache.fetch(key),false,'Supplemental evidence is not acceptance') }
+        # Preserve the historical four-step format, but new extraction/root
+        # successes must survive the original outer verifier's final guard.
+        bound=AtlasReleaseEvidence::Successor.new(files,index,sources,roots)
+        bound.instance_variable_set(:@bundle,bundle)
+        bound.instance_variable_set(:@update_date,Date.iso8601(index['source_update'].fetch('authorized_on')))
+        cache.fetch('steps').each do |step|
+          if step.fetch('name')=='full-dependency-extraction'
+            targets,_declarations,_graph,_process,_parent=bound.extraction!(step)
+            equal(targets,roots,'Whole public-root extraction scope differs')
+            equal(files.sha(dir+'/'+step.fetch('declarations')),files.sha(dir+'/declarations.jsonl'),'Whole-root declaration alias differs')
+            equal(files.sha(dir+'/'+step.fetch('log')),files.sha(dir+'/full-dependency-extraction.log.gz'),'Whole-root statement log alias differs')
+          else
+            bound.cache_step!(step)
+          end
+        end
+        cache.fetch('steps').each do |step|
+          r=files.json(dir+'/'+step.fetch('record'))
+          raise 'Historical process relabelled as successor' if Date.iso8601(r.fetch('started_utc')[0,10])<Date.iso8601(index['source_update'].fetch('authorized_on'))
+          name=step.fetch('name')+'.log'
+          p=step.fetch('log')
+          raise 'Missing successor process log' unless bundle.fetch('files').key?(p)
+          digest=Digest::SHA256.new
+          io=p.end_with?('.gz') ? Zlib::GzipReader.open(files.path(dir+'/'+p)) : File.open(files.path(dir+'/'+p))
+          begin
+            io.each_line do |line|
+              raise 'Error/PANIC/sorry in successor log' if line.match?(/\berror:|\bPANIC\b|\bsorry\b/)
+              digest.update(line)
+            end
+          ensure
+            io.close
+          end
+          equal(digest.hexdigest,r.fetch('log_sha256'),'Original successor log binding differs')
+        end
       end
     end
     def validate_history!
@@ -164,6 +217,13 @@ module AtlasReleaseMetadata
       paths=[index.fetch('sources'),index.fetch('roots'),index.fetch('contracts'),index.fetch('prior_accepted_release'),
         index.fetch('supplemental_cache_audit').fetch('directory')+'/BUNDLE.json',
         index.fetch('dated_nanoda').fetch('directory')+'/BUNDLE.json']
+      if index['source_update']
+        paths.concat(AtlasReleaseEvidence::REGISTRIES)
+        paths.concat(index.fetch('source_update').values_at('previous_index','previous_manifest'))
+        paths<<index.fetch('source_update').fetch('proof_evidence').fetch('directory')+'/BUNDLE.json'
+        paths<<index['completed_checkpoints'] if index['completed_checkpoints']
+        equal(authorization.fetch('source_update'),index.fetch('source_update'),'Working-publication update instruction differs')
+      end
       equal(authorization.fetch('bindings'),paths.to_h { |p|[p,files.sha(p)] },
         'Working-publication source, target or evidence binding changed')
       equal(authorization.fetch('allowed_pending_checks').sort,CHECKS.sort,'Wrong allowed pending checks')
@@ -184,6 +244,7 @@ module AtlasReleaseMetadata
         catalogue/README.md catalogue/REALIZATIONS.md catalogue/COMPARISONS.md catalogue/ISOMORPHISMS.md
         verification/README.md verification/MAINTENANCE.md verification/INDEPENDENT_CHECKERS.md
         verification/existence/README.md verification/existence/RESULTS.md verification/comparisons/README.md]
+      pages<<'catalogue/CHECKPOINTS.md' if index['completed_checkpoints']
       pages.each do |p|
         files.read(p).scan(/\]\(([^\s)]+)(?:\s+"[^"]*")?\)/).flatten.each do |url|
           next if url.match?(%r{\A(?:https?://|mailto:|#)})
@@ -195,7 +256,20 @@ module AtlasReleaseMetadata
     end
     def audit_text
       dir=index.fetch('supplemental_cache_audit').fetch('directory')
-      peak=cache.fetch('steps').map { |s|files.json(dir+'/'+s['record']).fetch('peak_owned_rss_and_swap',0) }.max
+      if successor
+        facts=successor.summary
+        peak=facts.fetch(:peak_owned_rss_and_swap)
+        audit_row="[Exact-export successor audit](#{dir}/CACHE_AUDIT.json) | #{facts[:roots]} roots; #{facts[:scopes]} full scopes; #{facts[:dependency_node_occurrences]} dependency-node occurrences (scopes may overlap); only permitted logical axioms"
+        provenance="The successor audit uses the exact exported source bytes, with normal source proof checks for every new or changed Lean file. Original process receipts and complete per-scope dependency graphs are retained. The [published baseline](#{index['source_update']['previous_index']}) and its dated evidence are preserved; old successes are not relabelled."
+      elsif additions
+        peak=cache.fetch('steps').map { |s|files.json(dir+'/'+s['record']).fetch('peak_owned_rss_and_swap',0) }.max
+        audit_row="[Exact-export compiled audit](#{dir}/RESULT.json) | #{cache['roots']} roots; #{cache['dependency_nodes']} complete type/proof dependency nodes; only the three permitted logical axioms"
+        provenance="The successor audit uses the exact exported source bytes. The [additional proof evidence](#{additions.directory}/ADDITIONS.json) records normal source proof checks and full checkpoint policies. The [published baseline](#{index['source_update']['previous_index']}) and its dated evidence remain unchanged."
+      else
+        peak=cache.fetch('steps').map { |s|files.json(dir+'/'+s['record']).fetch('peak_owned_rss_and_swap',0) }.max
+        audit_row="[26 October compiled audit](#{dir}/RESULT.json) | #{cache['roots']} roots; #{cache['dependency_nodes']} complete type/proof dependency nodes; only the three permitted logical axioms"
+        provenance="The historical source copies differ only by recorded licence comments and package version metadata; the filtered root import has its own fresh elaboration."
+      end
       <<~MD
         # Verification of Version 1.2
 
@@ -206,15 +280,14 @@ module AtlasReleaseMetadata
 
         | Check | Recorded result | Scope |
         |---|---|---|
-        | [26 October compiled audit](#{dir}/RESULT.json) | #{cache['roots']} roots; #{cache['dependency_nodes']} complete type/proof dependency nodes; only the three permitted logical axioms | Fresh elaboration of both import roots using a validated, unchanged cache; not a fresh whole-project rebuild or independent replay |
+        | #{audit_row} | Fresh elaboration of both import roots using a validated, unchanged cache; not a fresh whole-project rebuild or independent replay |
         | [24 October Nanoda](#{index['dated_nanoda']['directory']}/README.md) | #{nanoda['checked_declarations']} declarations, no typechecker errors; pretty-printer warning retained | Broader dated development snapshot; explicit exclusions and original wrapper receipt preserved |
         | [25 October Comparator](verification/existence/RESULTS.md) | #{contracts[:passed]} of #{contracts[:total]} targets passed | 39 model-existence contracts, four strengthened contracts, two aggregate comparison contracts; three memory-stopped targets remain open |
 
         The supplemental audit binds every current source and dependency pin, all
-        #{roots.size} catalogue/realization/comparison roots, and the cached artifacts.
+        #{roots.size} catalogue/realization/comparison/checkpoint roots, and the cached artifacts.
         Its peak owned RSS plus swap was #{format('%.2f',peak.to_f/1024**3)} GiB.
-        The historical source copies differ only by recorded licence comments and
-        package version metadata; the filtered root import has its own fresh elaboration.
+        #{provenance}
         The allowed axioms are `propext`, `Classical.choice` and `Quot.sound`.
 
         The three deferred targets are Albert-model F₄, `AtlasComparison.main` and

@@ -1,0 +1,57 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["ee45fceabcfbd538.olean"],
+  "m": false,
+  "i": "7207f433aaa45eaa.ilean",
+  "c": "1fef530655bf697d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean -M8704 -j1 /home/gerald/atlas/Atlas/LinearGroups/ReeF4/RootGroupResidualGrading.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/RootGroupResidualGrading.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/RootGroupResidualGrading.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/RootGroupResidualGrading.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/RootGroupResidualGrading.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupResidualGrading.lean:15:42: missing space in the source\n\nThis part of the code\n  'u^2) (r'\nshould be written as\n  'u ^ 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupResidualGrading.lean:24:1: automatically included section variable(s) unused in theorem `Atlas.ReeF4.shortRootParameterFormula_residual_comm`:\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupResidualGrading.lean:23:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 2000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupResidualGrading.lean:24:1: 'theorem shortRootParameterFormula_residual_comm (τ : F →+* F) (a : F) (u v : Fˣ) (w : Carrier F) :\n    rootDiagonalFormula (shortRootResidualWeight u v) (shortRootParameterFormula τ a w) =\n      shortRootParameterFormula τ a (rootDiagonalFormula (shortRootResidualWeight u v) w) :=\n  by\n  apply Prod.ext\n  · funext i\n    fin_cases i <;>\n      simp [rootDiagonalFormula, shortRootParameterFormula, shortRootResidualWeight, shortRootResidualGrade,\n        torusConstantExponents, torusThetaExponents]\n  · funext i j\n    fin_cases i <;> fin_cases j <;>\n        simp [rootDiagonalFormula, shortRootParameterFormula, shortRootResidualWeight, shortRootResidualGrade,\n          torusConstantExponents, torusThetaExponents, Units.val_zpow_eq_zpow_val] <;>\n      ring' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupResidualGrading.lean:40:0: automatically included section variable(s) unused in theorem `Atlas.ReeF4.shortRootCenterFormula_residual_comm`:\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupResidualGrading.lean:39:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 2000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.ReeF4.RootGroupConjugation transitive imports (legacy)",
+       "bd0f8d1d518446be"],
+      ["Atlas.LinearGroups.ReeF4.RootGroupConjugation:importAllArts",
+       "22aaf14e5efc8439"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/ReeF4/RootGroupResidualGrading.lean",
+   "a5b600fb226ecca1"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.ReeF4.RootGroupResidualGrading",
+   "1f2615ce24cb7ce6"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "ab49d400a1ac2300"}

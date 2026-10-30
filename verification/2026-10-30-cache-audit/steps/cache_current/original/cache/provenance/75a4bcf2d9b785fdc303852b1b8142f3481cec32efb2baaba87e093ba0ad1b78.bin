@@ -1,0 +1,264 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["0a5ceeda955ce136.olean"],
+  "m": false,
+  "i": "b260326dd369d825.ilean",
+  "c": "bff83bbfe98138e6.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeG2/GeneratorCompatibility.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeG2/GeneratorCompatibility.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeG2/GeneratorCompatibility.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeG2/GeneratorCompatibility.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:24:34: This simp argument is unused:\n  sigma_theta hcard\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, alpha, alphaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, hsx]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:24:53: This simp argument is unused:\n  hsx\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, alpha, alphaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, sigma_theta hcard]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:29:53: This simp argument is unused:\n  hsx\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, alpha, alphaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, sigma_theta hcard]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:34:34: This simp argument is unused:\n  sigma_theta hcard\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, alpha, alphaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, hsx]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:37:4: `simp [wedgeCoordinate, rowEquiv_apply, alpha, alphaMatrix,\n      Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n      -theta_apply, -sigma_apply, sigma_theta hcard, hsx]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:37:4: Try this:\n  [apply] simp only [rowEquiv_apply, alpha_val, Fin.isValue, sigma_apply]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:41:14: `reduce_mod_char!`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 37!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:47:4: `simp [wedgeCoordinate, rowEquiv_apply, alpha, alphaMatrix,\n      Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n      -theta_apply, -sigma_apply, sigma_theta hcard, hsx]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:47:4: Try this:\n  [apply] simp only [rowEquiv_apply, alpha_val, Fin.isValue, sigma_apply]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:51:14: `reduce_mod_char!`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 47!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:26:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:31:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:36:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:46:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:56:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:35:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:40:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:45:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:50:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:55:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:26:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:31:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:36:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:46:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:56:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:75:34: This simp argument is unused:\n  sigma_theta hcard\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, beta, betaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, hsx]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:75:53: This simp argument is unused:\n  hsx\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, beta, betaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, sigma_theta hcard]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:80:34: This simp argument is unused:\n  sigma_theta hcard\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, beta, betaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, hsx]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:80:53: This simp argument is unused:\n  hsx\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, beta, betaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, sigma_theta hcard]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:85:53: This simp argument is unused:\n  hsx\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, beta, betaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, sigma_theta hcard]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:90:53: This simp argument is unused:\n  hsx\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, beta, betaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, sigma_theta hcard]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:95:34: This simp argument is unused:\n  sigma_theta hcard\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, beta, betaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, hsx]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:100:53: This simp argument is unused:\n  hsx\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, beta, betaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, sigma_theta hcard]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:98:4: `simp [wedgeCoordinate, rowEquiv_apply, beta, betaMatrix,\n      Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n      -theta_apply, -sigma_apply, sigma_theta hcard, hsx]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:98:4: Try this:\n  [apply] simp only [rowEquiv_apply, beta_val, Fin.isValue, sigma_apply]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:102:14: `reduce_mod_char!`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 98!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:77:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:82:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:87:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:92:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:97:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:107:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:96:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:106:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:77:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:82:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:87:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:92:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:97:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:107:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:126:34: This simp argument is unused:\n  sigma_theta hcard\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, gamma, gammaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, hsx]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:126:53: This simp argument is unused:\n  hsx\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, gamma, gammaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, sigma_theta hcard]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:131:34: This simp argument is unused:\n  sigma_theta hcard\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, gamma, gammaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, hsx]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:131:53: This simp argument is unused:\n  hsx\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, gamma, gammaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, sigma_theta hcard]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:136:34: This simp argument is unused:\n  sigma_theta hcard\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, gamma, gammaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, hsx]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:136:53: This simp argument is unused:\n  hsx\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, gamma, gammaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, sigma_theta hcard]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:141:53: This simp argument is unused:\n  hsx\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, gamma, gammaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, sigma_theta hcard]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:146:53: This simp argument is unused:\n  hsx\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedgeCoordinate, rowEquiv_apply, gamma, gammaMatrix, Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n    -theta_apply, -sigma_apply, sigma_theta hcard]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:154:4: `simp [wedgeCoordinate, rowEquiv_apply, gamma, gammaMatrix,\n      Matrix.vecMul, dotProduct, Fin.sum_univ_succ,\n      -theta_apply, -sigma_apply, sigma_theta hcard, hsx]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:154:4: Try this:\n  [apply] simp only [rowEquiv_apply, gamma_val, Fin.isValue, sigma_apply]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:158:14: `reduce_mod_char!`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 154!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:128:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:133:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:138:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:143:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:148:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:153:4: Unused tactic linter: `all_goals reduce_mod_char!` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:152:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:157:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:128:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:133:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:138:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:143:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:148:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean:153:14: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.ReeG2.CrossProductGroup transitive imports (legacy)",
+       "79b9b32ed83ce946"],
+      ["Atlas.LinearGroups.ReeG2.CrossProductGroup:importAllArts",
+       "84873b2193447094"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/ReeG2/GeneratorCompatibility.lean",
+   "1ade2b95af4da847"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.ReeG2.GeneratorCompatibility",
+   "70a26a19af33a7bd"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "d9c48ae3e3a98550"}

@@ -1,0 +1,59 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["f0236453dd63416f.olean"],
+  "m": false,
+  "i": "be32cc1572b1f516.ilean",
+  "c": "0198e808de3541ff.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean -M8704 -j1 /home/gerald/atlas/Atlas/LinearGroups/ReeF4/MarkedBasis.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/MarkedBasis.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/MarkedBasis.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/MarkedBasis.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/MarkedBasis.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/MarkedBasis.lean:16:8: automatically included section variable(s) unused in theorem `_private.Atlas.LinearGroups.ReeF4.MarkedBasis.0.Atlas.ReeF4.coordinate_inl`:\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/MarkedBasis.lean:19:8: automatically included section variable(s) unused in theorem `_private.Atlas.LinearGroups.ReeF4.MarkedBasis.0.Atlas.ReeF4.coordinate_inr`:\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/MarkedBasis.lean:29:52: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rootVector]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/MarkedBasis.lean:45:31: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [markedIndexSwap, diagonalVector, traceZeroProjection, unit, trace, Pi.single_apply, CharTwo.neg_eq]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/MarkedBasis.lean:46:44: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [markedIndexSwap, Equiv.swap_apply_def, diagonalVector, traceZeroProjection, unit, trace, CharTwo.neg_eq]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/MarkedBasis.lean:49:29: This simp argument is unused:\n  Equiv.swap_apply_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [markedIndexSwap, diagonalVector, traceZeroProjection, unit, trace, Pi.single_apply]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/MarkedBasis.lean:50:42: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [markedIndexSwap, Equiv.swap_apply_def, diagonalVector, traceZeroProjection, unit, trace]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.ReeF4.RootVectors transitive imports (legacy)",
+       "fe6545bae2da9f33"],
+      ["Atlas.LinearGroups.ReeF4.RootVectors:importAllArts",
+       "a2f94040e963dc46"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/ReeF4/MarkedBasis.lean",
+   "e267aea21ca9972c"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.ReeF4.MarkedBasis", "b0f5a8a3f522efa8"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "88f7c52edcd3462c"}

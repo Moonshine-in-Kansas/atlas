@@ -1,0 +1,157 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["93ec627767195c14.olean"],
+  "m": false,
+  "i": "b9ef31c60b259866.ilean",
+  "c": "736e11273513f20e.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Sporadic/Conway2.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Sporadic/Conway2.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Sporadic/Conway2.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Sporadic/Conway2.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Sporadic/Conway2.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Sporadic.Conway2`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes Atlas.Lattices Atlas.Conway`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- A fixed norm-four vector of the retained Golay Leech lattice. -/\ndef vector : LeechShell 4 :=\n  ⟨minimumPairPlus ((0, 0), 0) ((0, 0), 1), minimumPairPlus_norm _ _ (by decide)⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The actual full vector stabilizer, with its inherited group law. -/\nabbrev Model :=\n  fullVectorStabilizer vector.val`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def order : ℕ :=\n  42305421312000`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem finite : Finite Model :=\n  inferInstance`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem card : Nat.card Model = order :=\n  minimum_vector_stabilizer_order vector`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem card_factorization :\n    Nat.card Model = 2 ^ 18 * 3 ^ 6 * 5 ^ 3 * 7 * 11 * 23 :=\n  minimum_vector_stabilizer_factorization vector`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def embedding : Model →* LeechIsometryGroup :=\n  (fullVectorStabilizer vector.val).subtype`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def toConway1 : Model →* LeechCentralQuotient :=\n  vectorStabilizerProjection vector.val`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem toConway1_injective : Function.Injective toConway1 :=\n  vectorStabilizerProjection_injective vector.val (minimum_vector_ne_zero vector)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def antipodalStabilizerEquiv :\n    Model ≃* MulAction.stabilizer LeechCentralQuotient (antipodalLine vector.val) :=\n  vectorAntipodalStabilizerEquiv vector.val (minimum_vector_ne_zero vector)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem shell_index_product :\n    196560 * Nat.card Model = Nat.card LeechIsometryGroup :=\n  minimum_vector_orbit_stabilizer vector`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem line_index_product :\n    98280 * Nat.card Model = Nat.card LeechCentralQuotient := by\n  simpa only [minimum_lines_card] using minimum_line_orbit_stabilizer vector`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `abbrev Points :=\n  OrthogonalMinimumLines vector.val`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem degree : Nat.card Points = 46575 :=\n  orthogonalMinimumLines_card _ _ (by decide)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem transitive : MulAction.IsPretransitive Model Points :=\n  orthogonalMinimumLines_pretransitive _ _ (by decide)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Sporadic.Conway2`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Sporadic/Conway2.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Conway.OrthogonalMinimumLines transitive imports (legacy)",
+       "e5a69a569743db53"],
+      ["Atlas.Conway.OrthogonalMinimumLines:importAllArts",
+       "3392333f310d75e2"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Sporadic/Conway2.lean", "b317bdc4b6e2df37"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Sporadic.Conway2", "f31e4c87fb919cc4"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "165718f335d3460a"}

@@ -1,0 +1,73 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["5007833f237bd365.olean"],
+  "m": false,
+  "i": "3d74b31be988d50b.ilean",
+  "c": "17a1a6288646c9a5.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Lattices/IcosianEdgeRoots.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/IcosianEdgeRoots.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/IcosianEdgeRoots.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/IcosianEdgeRoots.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/IcosianEdgeRoots.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Lattices/IcosianEdgeRoots.lean:28:6: `simp [icosianHermitian,icosianCoordinateEmbedding,Fin.sum_univ_succ,\n        Quaternion.star_mul_self,h1,h2]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/IcosianEdgeRoots.lean:30:6: `ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 28!",
+   "level": "info"},
+  {"message":
+   "Atlas/Lattices/IcosianEdgeRoots.lean:19:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/IcosianEdgeRoots.lean:35:74: missing space in the source\n\nThis part of the code\n  'j≠0) :'\nshould be written as\n  'j ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/IcosianEdgeRoots.lean:49:87: missing space in the source\n\nThis part of the code\n  'j≠p.1)'\nshould be written as\n  'j ≠ p.1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/IcosianEdgeRoots.lean:98:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/IcosianEdgeRoots.lean:88:71: missing space in the source\n\nThis part of the code\n  '0=0)\n '\nshould be written as\n  '0 = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/IcosianEdgeRoots.lean:89:35: missing space in the source\n\nThis part of the code\n  '1).val=2) (h2'\nshould be written as\n  '1).val = 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/IcosianEdgeRoots.lean:89:70: missing space in the source\n\nThis part of the code\n  '2).val=2) :'\nshould be written as\n  '2).val = 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/IcosianEdgeRoots.lean:116:17: missing space in the source\n\nThis part of the code\n  'i=0) (hn'\nshould be written as\n  'i = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/IcosianEdgeRoots.lean:116:31: missing space in the source\n\nThis part of the code\n  'j,j≠i → icosianNorm'\nshould be written as\n  'j, j ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/IcosianEdgeRoots.lean:116:62: missing space in the source\n\nThis part of the code\n  'j).val=2) :'\nshould be written as\n  'j).val = 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Lattices.IcosianEdgePairs transitive imports (legacy)",
+       "0437040325589f65"],
+      ["Atlas.Lattices.IcosianEdgePairs:importAllArts", "d02554fd0d324c45"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Lattices/IcosianEdgeRoots.lean",
+   "5a4efecc71fa1a18"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Lattices.IcosianEdgeRoots", "b6ff884e968c0235"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "1e3260b4d3bbb0c1"}

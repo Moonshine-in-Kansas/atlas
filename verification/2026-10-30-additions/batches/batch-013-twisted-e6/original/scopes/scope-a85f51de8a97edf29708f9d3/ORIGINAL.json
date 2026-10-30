@@ -1,0 +1,75 @@
+{
+  "id": "staged-FoldedReflectionGeometry",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.FoldedReflectionGeometry"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.foldedReflectionLift_diagram",
+      "kind": "theorem",
+      "module": "FamilyWork.FoldedReflectionGeometry"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.foldedReflectionLift_norm",
+      "kind": "theorem",
+      "module": "FamilyWork.FoldedReflectionGeometry"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.foldedReflectionLift_involutive",
+      "kind": "theorem",
+      "module": "FamilyWork.FoldedReflectionGeometry"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.foldedRootWordAction_diagram",
+      "kind": "theorem",
+      "module": "FamilyWork.FoldedReflectionGeometry"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.foldedRootWordAction_norm",
+      "kind": "theorem",
+      "module": "FamilyWork.FoldedReflectionGeometry"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.foldedRootWordAction_injective",
+      "kind": "theorem",
+      "module": "FamilyWork.FoldedReflectionGeometry"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.foldedRootWord_partner",
+      "kind": "theorem",
+      "module": "FamilyWork.FoldedReflectionGeometry"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-FoldedReflectionGeometry-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-FoldedReflectionGeometry-no-selected-model",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.Models",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightCompanion",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightOrbits"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["3cb08d0d2e93521c.olean"],
+  "m": false,
+  "i": "9d28e3814236c0e0.ilean",
+  "c": "55e33abe1f16558d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/IntrinsicIncidenceCounts.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/IntrinsicIncidenceCounts.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/IntrinsicIncidenceCounts.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/IntrinsicIncidenceCounts.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/IntrinsicIncidenceCounts.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Classical`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:7:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `abbrev IntrinsicCouples :=\n  { c : Set MinimalCross // IsCouple c }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `abbrev IntrinsicQuartets :=\n  { Q : Set MinimalCross // IsQuartet Q }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def orthogonalPairCouple (z : OrthogonalPairs) :\n    IntrinsicCouples :=\n  ⟨{ z.val.1, z.val.2 },\n    Set.ncard_pair (fun h => crossOrthogonal_irrefl _ (h ▸ (show CrossOrthogonal z.val.1 z.val.2 from z.prop))),\n    by\n    intro a ha b hb hab\n    rcases ha with rfl | rfl <;> rcases hb with rfl | rfl\n    · exact (hab rfl).elim\n    · exact z.prop\n    · exact (crossOrthogonal_symm _ _).mp z.prop\n    · exact (hab rfl).elim⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:13:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def orderedPairCouplePointEquiv :\n    OrthogonalPairs ≃ Σ c : IntrinsicCouples, c.val :=\n  Equiv.ofBijective\n    (fun z =>\n      ⟨orthogonalPairCouple z,\n        ⟨z.val.1, by change z.val.1 ∈ ({ z.val.1, z.val.2 } : Set MinimalCross); exact Or.inl rfl⟩⟩)\n    (by\n      constructor\n      · rintro ⟨⟨a, b⟩, hab⟩ ⟨⟨c, d⟩, hcd⟩ h\n        have hx : a = c := congrArg (fun z : Σ c : IntrinsicCouples, c.val => z.2.val) h\n        subst c\n        have he : ({ a, b } : Set MinimalCross) = { a, d } :=\n          congrArg (fun z : Σ c : IntrinsicCouples, c.val => z.1.val) h\n        have hb : b ∈ ({ a, d } : Set MinimalCross) := he ▸ (show b ∈ ({ a, b } : Set MinimalCross) from Or.inr rfl)\n        have hbd : b = d := by\n          rcases hb with hb | hb\n          · exact False.elim (crossOrthogonal_irrefl _ (hb ▸ hab))\n          · exact hb\n        subst d\n        rfl\n      · rintro ⟨⟨s, hs⟩, x, hx⟩\n        obtain ⟨a, b, hab, rfl⟩ := Set.ncard_eq_two.mp hs.1\n        have ho : CrossOrthogonal a b := hs.2 (Or.inl rfl) (Or.inr rfl) hab\n        rcases hx with hx | hx\n        · subst x\n          exact ⟨⟨(a, b), ho⟩, rfl⟩\n        · subst x\n          refine ⟨⟨(b, a), (crossOrthogonal_symm _ _).mp ho⟩, ?_⟩\n          have he : ({ b, a } : Set MinimalCross) = { a, b } := Set.pair_comm _ _\n          apply Sigma.ext\n          · exact Subtype.ext he\n          · change (⟨b, Or.inl rfl⟩ : ({ b, a } : Set MinimalCross)) ≍ (⟨b, Or.inr rfl⟩ : ({ a, b } : Set MinimalCross))\n            exact (Subtype.heq_iff_coe_eq (fun z => by rw [he])).mpr rfl)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:22:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:29:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem intrinsicCouples_card : Nat.card IntrinsicCouples = 3562650 :=\n  by\n  let : Fintype IntrinsicCouples := Fintype.ofFinite _\n  have h := Nat.card_congr orderedPairCouplePointEquiv\n  rw [rudvalis_ordered_orthogonal_pairs_card, Nat.card_sigma] at h\n  have hc (c : IntrinsicCouples) : Nat.card c.val = 2 := c.prop.1\n  simp_rw [hc] at h\n  simp only [Finset.sum_const, Finset.card_univ, smul_eq_mul] at h\n  rw [← Nat.card_eq_fintype_card] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def couplesWithinEquiv (s : Set MinimalCross) :\n    { c : IntrinsicCouples // c.val ⊆ s } ≃\n      { c : Set MinimalCross // c ⊆ s ∧ c.ncard = 2 ∧ c.Pairwise CrossOrthogonal } :=\n  { toFun := fun c => ⟨c.val.val, c.prop, c.val.prop⟩\n    invFun := fun c => ⟨⟨c.val, c.prop.2⟩, c.prop.1⟩\n    left_inv := fun _ => rfl\n    right_inv := fun _ => rfl }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem couplesWithin_card (s : Set MinimalCross) (hs : s.Finite)\n    (hp : s.Pairwise CrossOrthogonal) : Nat.card { c : IntrinsicCouples // c.val ⊆ s } = s.ncard.choose 2 :=\n  by\n  rw [Nat.card_congr (couplesWithinEquiv s)]\n  exact Atlas.Combinatorics.pairwise_subsets_card CrossOrthogonal s hs hp 2`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:69:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def coupleQuartetIncidenceEquiv :\n    (Σ c : IntrinsicCouples, QuartetsThrough c.val) ≃\n      Σ Q : IntrinsicQuartets, { c : IntrinsicCouples // c.val ⊆ Q.val } :=\n  { toFun := fun z => ⟨⟨z.2.val, z.2.prop.1⟩, z.1, z.2.prop.2⟩\n    invFun := fun z => ⟨z.2.val, ⟨z.1.val, z.1.prop, z.2.prop⟩⟩\n    left_inv := fun _ => rfl\n    right_inv := fun _ => rfl }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem intrinsicQuartets_card : Nat.card IntrinsicQuartets = 2968875 :=\n  by\n  let : Fintype IntrinsicCouples := Fintype.ofFinite _\n  let : Fintype IntrinsicQuartets := Fintype.ofFinite _\n  have h := Nat.card_congr coupleQuartetIncidenceEquiv\n  rw [Nat.card_sigma, Nat.card_sigma] at h\n  have hc (c : IntrinsicCouples) : Nat.card (QuartetsThrough c.val) = 5 := quartetsThrough_couple_card c.val c.prop\n  have hQ (Q : IntrinsicQuartets) : Nat.card { c : IntrinsicCouples // c.val ⊆ Q.val } = 6 :=\n    by\n    rw [couplesWithin_card Q.val (isQuartet_finite Q.prop) Q.prop.2.1, Q.prop.1]\n    rfl\n  simp_rw [hc, hQ] at h\n  simp only [Finset.sum_const, Finset.card_univ, smul_eq_mul] at h\n  rw [← Nat.card_eq_fintype_card, ← Nat.card_eq_fintype_card, intrinsicCouples_card] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:87:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/IntrinsicIncidenceCounts.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.ReferenceQuartetExhaustion transitive imports (legacy)",
+       "36bd1e58cfd1fe3b"],
+      ["Atlas.Rudvalis.ReferenceQuartetExhaustion:importAllArts",
+       "6c756ce279d6c559"],
+      ["Atlas.Combinatorics.PairwiseIncidence transitive imports (legacy)",
+       "f8f7c5eadf3bb64a"],
+      ["Atlas.Combinatorics.PairwiseIncidence:importAllArts",
+       "f064ce20f7b67205"],
+      ["Mathlib.Data.Subtype transitive imports (legacy)", "baec4d86ff06f390"],
+      ["Mathlib.Data.Subtype:importAllArts", "9c420969cecd3133"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/IntrinsicIncidenceCounts.lean",
+   "e7a157fa640d7f01"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.IntrinsicIncidenceCounts", "37ce93942dc973e8"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "adc0ba95c4811d29"}

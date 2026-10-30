@@ -1,0 +1,54 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["57cd28a7afda12ce.olean"],
+  "m": false,
+  "i": "9f319572649d5d6f.ilean",
+  "c": "6773d99973e5a7cd.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Codes/GolayDistribution.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/GolayDistribution.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/GolayDistribution.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Codes/GolayDistribution.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Codes/GolayDistribution.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Codes/GolayDistribution.lean:17:24: This simp argument is unused:\n  allOnes\n\nHint: Omit it from the simp argument list.\n  [apply] simp [c0Encoder, rho]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayDistribution.lean:72:36: This simp argument is unused:\n  Fintype.card_subtype\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Nat.card_eq_fintype_card]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayDistribution.lean:78:36: This simp argument is unused:\n  Fintype.card_subtype\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Nat.card_eq_fintype_card]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayDistribution.lean:62:0: `code_extreme_count` does not use the following hypothesis in its type:\n  • [Fintype ↥C] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayDistribution.lean:90:13: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayDistribution.lean:116:13: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Codes.GolayCounts transitive imports (legacy)",
+       "0536b718a7590067"],
+      ["Atlas.Codes.GolayCounts:importAllArts", "843ca5995d7e3f47"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Codes/GolayDistribution.lean", "5a99e94c99e75dbb"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Codes.GolayDistribution", "7f829723b4675c8c"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "39208cc1a0712783"}

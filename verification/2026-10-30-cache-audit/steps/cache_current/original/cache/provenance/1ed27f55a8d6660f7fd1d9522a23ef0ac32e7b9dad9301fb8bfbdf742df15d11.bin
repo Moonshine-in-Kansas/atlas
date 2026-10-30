@@ -1,0 +1,71 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["a417ce5154c36961.olean"],
+  "m": false,
+  "i": "8f2fc592844bbe28.ilean",
+  "c": "5bf2bfa7544c4c61.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FullPointStabilizer.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FullPointStabilizer.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FullPointStabilizer.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FullPointStabilizer.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FullPointStabilizer.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FullPointStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FullPointStabilizer.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FullPointStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FullPointStabilizer.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionGroup_le_localFusionGroup :\n    coupleFusionGroup ≤ localFusionGroup :=\n  by\n  apply (Subgroup.closure_le _).mpr\n  rintro g (⟨a, rfl⟩ | rfl)\n  · exact codeReferenceGaussianHom_mem ⟨a.val, a.prop.1⟩\n  · exact localFusionT_mem_localFusionGroup`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FullPointStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FullPointStabilizer.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe explicitly generated orthogonal-shell group is the full Gaussian point stabilizer. -/\ntheorem localFusionGroup_eq_point_stabilizer :\n    localFusionGroup = MulAction.stabilizer gaussianLatticeGroup localReferenceCross :=\n  by\n  apply le_antisymm localFusionGroup_le_stabilizer\n  intro g hg\n  change g • localReferenceCross = localReferenceCross at hg\n  have hgy : CrossOrthogonal localReferenceCross (g • referenceSecondCross) :=\n    by\n    have h := (crossOrthogonal_gaussian g localReferenceCross referenceSecondCross).mpr reference_crosses_orthogonal\n    rwa [hg] at h\n  have ha : g • referenceSecondCross ∈ MulAction.orbit localFusionGroup localThirdCross :=\n    by\n    rw [localFusionGroup_orthogonal_orbit]\n    exact hgy\n  have hb : referenceSecondCross ∈ MulAction.orbit localFusionGroup localThirdCross :=\n    by\n    rw [localFusionGroup_orthogonal_orbit]\n    exact reference_crosses_orthogonal\n  obtain ⟨a, ha⟩ := MulAction.mem_orbit_iff.mp ha\n  obtain ⟨b, hb⟩ := MulAction.mem_orbit_iff.mp hb\n  let k : localFusionGroup := a * b⁻¹\n  have hk : k.val • referenceSecondCross = g • referenceSecondCross :=\n    by\n    change (a * b⁻¹) • referenceSecondCross = g • referenceSecondCross\n    rw [mul_smul, ← hb, inv_smul_smul, ha]\n    exact congrArg (fun z : MinimalCross => g • z) hb.symm\n  have hkx : k.val • localReferenceCross = localReferenceCross := localFusionGroup_fix k\n  have hm : k.val⁻¹ * g ∈ coupleFusionGroup :=\n    by\n    rw [coupleFusionGroup_eq_pair_stabilizer]\n    constructor\n    · change (k.val⁻¹ * g) • localReferenceCross = localReferenceCross\n      rw [mul_smul, hg, ← hkx, inv_smul_smul]\n      exact hkx.symm\n    · change (k.val⁻¹ * g) • referenceSecondCross = referenceSecondCross\n      rw [mul_smul, ← hk, inv_smul_smul]\n  have h := localFusionGroup.mul_mem k.prop (coupleFusionGroup_le_localFusionGroup hm)\n  simpa only [mul_inv_cancel_left] using h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FullPointStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FullPointStabilizer.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FullPointStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FullPointStabilizer.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FullCoupleStabilizer transitive imports (legacy)",
+       "755bea1a3d304553"],
+      ["Atlas.Rudvalis.FullCoupleStabilizer:importAllArts", "676f7e4a3ac742f6"],
+      ["Atlas.Rudvalis.LocalTransitivity transitive imports (legacy)",
+       "f1f6d4efc29fc69f"],
+      ["Atlas.Rudvalis.LocalTransitivity:importAllArts",
+       "2970be4858e65974"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FullPointStabilizer.lean",
+   "17177b6187121ed9"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FullPointStabilizer", "9f64143b90f63416"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "aa54a3f065feb64e"}

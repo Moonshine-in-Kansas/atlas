@@ -17,8 +17,8 @@
     "interface_comparator": null
   },
   "supplemental_cache_audit": {
-    "directory": "verification/2026-10-26-cache-audit",
-    "bundle_sha256": "9944b10ecd41e33aea4d1e814358264f335fb44cce8d2972b02c72b4330ea9fc"
+    "directory": "verification/2026-10-30-cache-audit",
+    "bundle_sha256": "4b811497e26c37e687b003ed10d817e2aa09452cb3b62692ef1f310cd688db65"
   },
   "dated_nanoda": {
     "directory": "verification/nanoda/2026-10-24-draft",
@@ -33,12 +33,19 @@
     "authorized_on": "2026-10-27",
     "owner_decision": "Make version v1.2 the main working (modifable) version. Preserve immutable v1.0. Keep the outstanding checks open and leave v1.2 unfrozen.",
     "bindings": {
-      "verification/release-candidate/SOURCE_HASHES.json": "e1dd7c464e00ceee5d6051ea69fc2d63fa6831a5a3709b8c5d098123b9e0fe19",
-      "verification/roots.json": "063e4d2f12380a07737a301b7a95336a52e2042f018c7ab58c4854d860df289e",
+      "verification/release-candidate/SOURCE_HASHES.json": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6",
+      "verification/roots.json": "9274712b657aea7c70ec1cb77490585752a8c568bd955c20985fdd238363cb67",
       "verification/existence/registry.json": "63246830310d0bf043dfd3f279ea4d1d329dff39d6a89d0e79feacde0e79b458",
       "verification/release-candidate/V1_BASELINE.json": "3ddc6d496bc784d342c708ca6ae4d46b50e2b7c65d2b56a909d2476e49d52a48",
-      "verification/2026-10-26-cache-audit/BUNDLE.json": "9944b10ecd41e33aea4d1e814358264f335fb44cce8d2972b02c72b4330ea9fc",
-      "verification/nanoda/2026-10-24-draft/BUNDLE.json": "d9e395904bbdd5bba5c695cc0c347b252cb7bd81e7ccde41aabbc390cdb1a7c6"
+      "verification/2026-10-30-cache-audit/BUNDLE.json": "4b811497e26c37e687b003ed10d817e2aa09452cb3b62692ef1f310cd688db65",
+      "verification/nanoda/2026-10-24-draft/BUNDLE.json": "d9e395904bbdd5bba5c695cc0c347b252cb7bd81e7ccde41aabbc390cdb1a7c6",
+      "catalogue/catalogue.json": "b39028d842fc03513ddd9602d997811b5e88c52868a1902d2383bc430f9a1eb3",
+      "catalogue/realizations.json": "1cdbc65c516ccc8a6276084a5d1703ab43204ebb6b0e60a4524f45f49210b980",
+      "catalogue/comparisons.json": "3f01213eaf77c798b689c97782a8fac8518c4205e55c9b975bfe37b4c6bddacc",
+      "catalogue/checkpoints.json": "e5776edac6908771bcf55979debfc311169f04d4909465ab204a0da14eb2ad01",
+      "verification/history/v1.2-d2dca87/current.json": "ab2c2390eeba34f6934a3b55a885175725ccfd369652b672e7dcf6719009dc38",
+      "verification/history/v1.2-d2dca87/RELEASE_MANIFEST.json": "349815784c90c36b433b24a707faf66bd5cc5546d1956884c1db093abafe28e0",
+      "verification/2026-10-30-additions/BUNDLE.json": "a6f130aa63746ab3a72a3c3178f19a8f6d09b86a029d2f09817384c6719eca5b"
     },
     "allowed_pending_checks": [
       "build_audit",
@@ -49,6 +56,33 @@
       "AtlasComparison.main",
       "AtlasComparison.nonisomorphic",
       "AtlasExistence.F4"
-    ]
-  }
+    ],
+    "source_update": {
+      "format": 1,
+      "previous_index": "verification/history/v1.2-d2dca87/current.json",
+      "previous_manifest": "verification/history/v1.2-d2dca87/RELEASE_MANIFEST.json",
+      "authorized_on": "2026-10-30",
+      "purpose": "prepare-editable-v1.2-update",
+      "owner_decision": "Prepare all finished projects for upload review, not actual push. Preserve editable v1.2, immutable v1.0 and the existing open checks. Upload requires separate owner approval.",
+      "proof_evidence": {
+        "format": 1,
+        "directory": "verification/2026-10-30-additions",
+        "bundle_sha256": "a6f130aa63746ab3a72a3c3178f19a8f6d09b86a029d2f09817384c6719eca5b"
+      }
+    }
+  },
+  "source_update": {
+    "format": 1,
+    "previous_index": "verification/history/v1.2-d2dca87/current.json",
+    "previous_manifest": "verification/history/v1.2-d2dca87/RELEASE_MANIFEST.json",
+    "authorized_on": "2026-10-30",
+    "purpose": "prepare-editable-v1.2-update",
+    "owner_decision": "Prepare all finished projects for upload review, not actual push. Preserve editable v1.2, immutable v1.0 and the existing open checks. Upload requires separate owner approval.",
+    "proof_evidence": {
+      "format": 1,
+      "directory": "verification/2026-10-30-additions",
+      "bundle_sha256": "a6f130aa63746ab3a72a3c3178f19a8f6d09b86a029d2f09817384c6719eca5b"
+    }
+  },
+  "completed_checkpoints": "catalogue/checkpoints.json"
 }

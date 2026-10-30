@@ -1,0 +1,273 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["719d4c41dd6cdaeb.olean"],
+  "m": false,
+  "i": "d796d512365dadd4.ilean",
+  "c": "27ffa8f1932140bd.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/MinusculeB.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/MinusculeB.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/MinusculeB.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/MinusculeB.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:3:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:10:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:23:39: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:23:62: missing space in the source\n\nThis part of the code\n  '(n+1)) :'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:28:34: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:33:50: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:33:73: missing space in the source\n\nThis part of the code\n  '(n+1)) :'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:41:46: This simp argument is unused:\n  Bool.true_eq\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [spinCoordinates, halfDifference, ↓reduceIte, sign]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:46:10: This simp argument is unused:\n  hi\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hn]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:39:52: missing space in the source\n\nThis part of the code\n  '(n+1)) :'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:63:40: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:71:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:74:56: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:74:79: missing space in the source\n\nThis part of the code\n  '(n+1)) :'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:93:44: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:102:50: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:103:35: missing space in the source\n\nThis part of the code\n  '(n+1)))'\nshould be written as\n  '(n + 1)))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:110:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:121:34: This simp argument is unused:\n  mul_assoc\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Pi.single_apply, mul_ite] at h\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:113:52: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:114:15: missing space in the source\n\nThis part of the code\n  '(n+1)) (t'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:114:35: missing space in the source\n\nThis part of the code\n  't=1 ∨ t='\nshould be written as\n  't = 1'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:114:41: missing space in the source\n\nThis part of the code\n  't= -1)'\nshould be written as\n  't = -1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:135:64: `if_true` has been deprecated: Use `ite_true` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:125:57: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:126:17: missing space in the source\n\nThis part of the code\n  '(n+1)) (hij'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:126:30: missing space in the source\n\nThis part of the code\n  'i≠j) (t'\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:126:51: missing space in the source\n\nThis part of the code\n  't=1 ∨ t='\nshould be written as\n  't = 1'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:126:57: missing space in the source\n\nThis part of the code\n  't= -1)'\nshould be written as\n  't = -1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:126:70: missing space in the source\n\nThis part of the code\n  'u=1 ∨ u='\nshould be written as\n  'u = 1'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:126:76: missing space in the source\n\nThis part of the code\n  'u= -1)'\nshould be written as\n  'u = -1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:147:64: This simp argument is unused:\n  hi\n\nHint: Omit it from the simp argument list.\n  [apply] simp [sign]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:139:48: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:139:73: missing space in the source\n\nThis part of the code\n  '(n+1)) :'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:172:62: missing space in the source\n\nThis part of the code\n  '(n+1)) :'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:193:40: This simp argument is unused:\n  Fin.val_mk\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Fin.ext_iff, Fin.le_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:195:29: This simp argument is unused:\n  smul_eq_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hj, Pi.smul_apply, Pi.single_apply, mul_ite]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:194:18: Unused tactic linter: `(try simp only [Fin.le_def, Fin.val_mk] at *)` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:181:53: missing space in the source\n\nThis part of the code\n  '(n+1)) (hi'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:220:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:223:34: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:225:48: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:230:55: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:231:35: missing space in the source\n\nThis part of the code\n  '(n+1)))'\nshould be written as\n  '(n + 1)))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:246:20: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, hi, hj, hij, eq_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:247:4: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:247:4: Unused tactic linter: `first\n| (subst k; contradiction)\n| ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:237:63: missing space in the source\n\nThis part of the code\n  'i≠j)\n '\nshould be written as\n  'i ≠ j)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:238:21: missing space in the source\n\nThis part of the code\n  't=1 ∨ t='\nshould be written as\n  't = 1'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:238:27: missing space in the source\n\nThis part of the code\n  't= -1)'\nshould be written as\n  't = -1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:238:40: missing space in the source\n\nThis part of the code\n  'u=1 ∨ u='\nshould be written as\n  'u = 1'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:238:46: missing space in the source\n\nThis part of the code\n  'u= -1)'\nshould be written as\n  'u = -1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:250:44: missing space in the source\n\nThis part of the code\n  '(n+1)) (σ'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:250:60: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:250:83: missing space in the source\n\nThis part of the code\n  '(n+1)) :'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:265:40: missing space in the source\n\nThis part of the code\n  '(n+1)) (σ'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:265:56: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:268:55: missing space in the source\n\nThis part of the code\n  '(n+1)) (σ'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:268:71: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:274:61: missing space in the source\n\nThis part of the code\n  '(n+1))\n'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:275:15: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:275:58: missing space in the source\n\nThis part of the code\n  '(n+1)))'\nshould be written as\n  '(n + 1)))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:291:51: missing space in the source\n\nThis part of the code\n  '(n+1)) (σ'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:291:67: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:300:46: missing space in the source\n\nThis part of the code\n  '(n+1)) (μ'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:300:82: missing space in the source\n\nThis part of the code\n  '(n+1)))'\nshould be written as\n  '(n + 1)))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:309:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:312:48: missing space in the source\n\nThis part of the code\n  '(n+1)) (σ'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:312:64: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:320:60: missing space in the source\n\nThis part of the code\n  '(n+1)))'\nshould be written as\n  '(n + 1)))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:323:44: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:323:67: missing space in the source\n\nThis part of the code\n  '(n+1)) (t'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:335:50: missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean:358:70: missing space in the source\n\nThis part of the code\n  '(n+1)))'\nshould be written as\n  '(n + 1)))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.RootData.ClassicalBasesBC transitive imports (legacy)",
+       "260e235c06a4d1cc"],
+      ["Atlas.LinearGroups.Chevalley.RootData.ClassicalBasesBC:importAllArts",
+       "ac1f1ceb9d7ab7ad"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeWeightLattice transitive imports (legacy)",
+       "33080e4478badaa5"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeWeightLattice:importAllArts",
+       "d93d4f3a02f29907"],
+      ["Mathlib.Tactic transitive imports (legacy)", "ec156eb4c1db663c"],
+      ["Mathlib.Tactic:importAllArts", "49193de2eba247db"],
+      ["Mathlib.Logic.Relation transitive imports (legacy)",
+       "ff8b487848e849f6"],
+      ["Mathlib.Logic.Relation:importAllArts", "f63b5e3baab555a4"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/MinusculeB.lean",
+   "edf9bab998ce1017"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Integral.MinusculeB",
+   "8471abe543d14975"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "a3c7ef5fde16b67d"}

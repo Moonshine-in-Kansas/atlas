@@ -1,0 +1,122 @@
+{
+  "id": "staged-F4AlbertMatrixInterface",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertReindex",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertMatrixHom",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimpleApply_map",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertCoordinates_map",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertCoordinates_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.simplePolynomialMatrix_map",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimple_basis",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertMatrixHom_apply",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertMatrixHom_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertMatrixHom_column",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertMatrixHom_simple",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimple_coordinates",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimple_add",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimple_zero",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimple_inv",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertMatrixHom_simple_inv",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.simplePolynomialMatrix_mul_neg",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.simplePolynomialMatrix_neg_mul",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertMatrixInterface"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "albert-matrix-interface-independent-of-order-and-simplicity",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

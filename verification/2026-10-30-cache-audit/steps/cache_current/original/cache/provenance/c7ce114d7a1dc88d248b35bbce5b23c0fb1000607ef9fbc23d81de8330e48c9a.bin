@@ -1,0 +1,75 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["1fa10cfae65fc4e1.olean"],
+  "m": false,
+  "i": "58ce02c3221fb29b.ilean",
+  "c": "688c835a2efe6b3c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Lattices/ConwayWales/AmbientSymmetry.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/ConwayWales/AmbientSymmetry.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/ConwayWales/AmbientSymmetry.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/ConwayWales/AmbientSymmetry.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/ConwayWales/AmbientSymmetry.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/AmbientSymmetry.lean:10:24: This simp argument is unused:\n  neg_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp [dagger, add_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/AmbientSymmetry.lean:34:21: This simp argument is unused:\n  smul_mul_assoc\n\nHint: Omit it from the simp argument list.\n  [apply] simp [convolution, convolutionMatrix, Matrix.mulVec, dotProduct, Finset.smul_sum]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/AmbientSymmetry.lean:43:43: `if_pos` has been deprecated: Use `ite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/AmbientSymmetry.lean:43:43: This simp argument is unused:\n  if_pos rfl\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [ite_true, Matrix.one_apply]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/AmbientSymmetry.lean:46:13: This simp argument is unused:\n  Matrix.one_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [h, Ne.symm h]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/AmbientSymmetry.lean:56:48: This simp argument is unused:\n  smul_mul_assoc\n\nHint: Omit it from the simp argument list.\n  [apply] simp [convolution, Finset.sum_mul, mul_assoc]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/AmbientSymmetry.lean:77:17: This simp argument is unused:\n  smul_mul_assoc\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rowPair]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/AmbientSymmetry.lean:79:17: This simp argument is unused:\n  mul_smul_comm\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rowPair]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/AmbientSymmetry.lean:102:41: This simp argument is unused:\n  map_div₀\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [convolution, rowPair_smul_left, rowPair_smul_right, rowPair_sum_left, rowPair_sum_right, map_one,\n    map_ofNat, Finset.mul_sum]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/AmbientSymmetry.lean:102:51: This simp argument is unused:\n  map_one\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [convolution, rowPair_smul_left, rowPair_smul_right, rowPair_sum_left, rowPair_sum_right, map_div₀,\n    map_ofNat, Finset.mul_sum]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/AmbientSymmetry.lean:102:60: This simp argument is unused:\n  map_ofNat\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [convolution, rowPair_smul_left, rowPair_smul_right, rowPair_sum_left, rowPair_sum_right, map_div₀,\n    map_one, Finset.mul_sum]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Lattices.ConwayWales.Coordinates transitive imports (legacy)",
+       "981de5f1f2132f7c"],
+      ["Atlas.Lattices.ConwayWales.Coordinates:importAllArts",
+       "4b482554caf7c337"],
+      ["Mathlib.Data.Matrix.Mul transitive imports (legacy)",
+       "43c3851444dd6c17"],
+      ["Mathlib.Data.Matrix.Mul:importAllArts", "009975bd22864bcc"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Lattices/ConwayWales/AmbientSymmetry.lean",
+   "e7af3bae8c07f393"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Lattices.ConwayWales.AmbientSymmetry",
+   "4f144c0d484059f0"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "fc62ab396f03e27d"}

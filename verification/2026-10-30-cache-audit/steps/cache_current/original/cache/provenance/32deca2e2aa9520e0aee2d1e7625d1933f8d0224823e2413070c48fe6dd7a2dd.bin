@@ -1,0 +1,50 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["0d76ea1f2d34e0d1.olean"],
+  "m": false,
+  "i": "7c73db38548adb23.ilean",
+  "c": "8212ff6b6177c802.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Lattices/EisensteinBalancedPhases.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/EisensteinBalancedPhases.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/EisensteinBalancedPhases.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/EisensteinBalancedPhases.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/EisensteinBalancedPhases.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Lattices/EisensteinBalancedPhases.lean:30:43: `dif_pos` has been deprecated: Use `dite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/EisensteinBalancedPhases.lean:26:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/EisensteinBalancedPhases.lean:66:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/EisensteinBalancedPhases.lean:72:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Lattices.EisensteinBalancedHexadVectors transitive imports (legacy)",
+       "103a51ffd95d1728"],
+      ["Atlas.Lattices.EisensteinBalancedHexadVectors:importAllArts",
+       "8f09b7be4f398bc6"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Lattices/EisensteinBalancedPhases.lean",
+   "b3de63fe7c33df90"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Lattices.EisensteinBalancedPhases", "f0dc3b767d613bc4"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "7e1d7cf2201fc42b"}

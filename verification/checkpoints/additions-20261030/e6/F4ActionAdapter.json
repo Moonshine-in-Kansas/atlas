@@ -1,0 +1,146 @@
+{
+  "id": "staged-F4ActionAdapter",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.rationalActionHom",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.rationalActionHom_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.FourSpace",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.F4Weyl",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.f4Coordinates",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.f4RootVector",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.f4BaseIndex_root",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.f4RootVector_simple",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.f4RootVector_coordinates",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.f4Action",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.f4Action_apply",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.f4Action_root",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.f4Action_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.f4Simple",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.f4Simple_coordinates",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.foldedReflection_cast",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.f4Action_simple",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4ActionAdapter.f4Action_simple_apply",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4ActionAdapter"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-F4ActionAdapter-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-F4ActionAdapter-structural-identification-before-count",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.TwistedE6.companionFixedSubgroup_card",
+        "Atlas.Chevalley.TwistedE6.companionFixedWeylCell_card",
+        "Atlas.Chevalley.F4B3.rootWeylPoincareEval_F4",
+        "Atlas.Chevalley.RootData.rootWeylPoincareEval"
+      ],
+      "forbid_modules": [
+        "FamilyWork.PositiveFixedOrder",
+        "FamilyWork.FixedTorusOrder",
+        "FamilyWork.FixedBorel",
+        "FamilyWork.FixedInversionOrder",
+        "FamilyWork.FixedCellCoordinates",
+        "FamilyWork.FixedWeylCell",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveFixedOrder",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedTorusOrder",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedBorel",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedInversionOrder",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedCellCoordinates",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedWeylCell"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

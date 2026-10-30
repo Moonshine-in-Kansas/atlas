@@ -1,0 +1,63 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["0012023df4f28f88.olean"],
+  "m": false,
+  "i": "0fc516ef7703446d.ilean",
+  "c": "d6cb6b889391c6b9.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/G2/Unipotent.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/Unipotent.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/Unipotent.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/Unipotent.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/Unipotent.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/G2/Unipotent.lean:9:0: Unscoped option maxHeartbeats is not allowed:\nPlease scope this to individual declarations, as in\n```\nset_option maxHeartbeats in\n-- comment explaining why this is necessary\nexample : ... := ...\n```\n\nNote: This linter can be disabled with `set_option linter.style.setOption false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/Unipotent.lean:33:63: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [unipotentParameters, basisVector, unipotentProduct, rootA, rootB, rootC, rootD, rootE, rootF,\n    rootAEquiv, rootBEquiv, rootCEquiv, rootDEquiv, rootEEquiv, rootFEquiv, rootALinear, rootBLinear, rootCLinear,\n    rootDLinear, rootELinear, rootFLinear, rootAApply, rootBApply, rootCApply, rootDApply, rootEApply, rootFApply]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/Unipotent.lean:33:337: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/Unipotent.lean:33:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/Unipotent.lean:39:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/Unipotent.lean:41:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.G2.RootGroups transitive imports (legacy)",
+       "66555e773829f8e8"],
+      ["Atlas.LinearGroups.G2.RootGroups:importAllArts", "e026cf1afaa88209"],
+      ["Mathlib.Algebra.Group.Subgroup.Lattice transitive imports (legacy)",
+       "79b0dd77672c4656"],
+      ["Mathlib.Algebra.Group.Subgroup.Lattice:importAllArts",
+       "4aa3eb6434fb8d91"],
+      ["Mathlib.SetTheory.Cardinal.Finite transitive imports (legacy)",
+       "0f22d33fdd3e21f3"],
+      ["Mathlib.SetTheory.Cardinal.Finite:importAllArts",
+       "6f293d32afda3c7c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/G2/Unipotent.lean",
+   "8468d4e8ec0f5a86"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.G2.Unipotent", "1d1ee15444ba9da7"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "a1e40a037f3c6eaf"}

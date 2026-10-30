@@ -7,15 +7,14 @@ the supplemental audit and outstanding verification requirements separate.
 
 | Check | Recorded result | Scope |
 |---|---|---|
-| [26 October compiled audit](verification/2026-10-26-cache-audit/RESULT.json) | 1207 roots; 99886 complete type/proof dependency nodes; only the three permitted logical axioms | Fresh elaboration of both import roots using a validated, unchanged cache; not a fresh whole-project rebuild or independent replay |
+| [Exact-export compiled audit](verification/2026-10-30-cache-audit/RESULT.json) | 1313 roots; 115295 complete type/proof dependency nodes; only the three permitted logical axioms | Fresh elaboration of both import roots using a validated, unchanged cache; not a fresh whole-project rebuild or independent replay |
 | [24 October Nanoda](verification/nanoda/2026-10-24-draft/README.md) | 139617 declarations, no typechecker errors; pretty-printer warning retained | Broader dated development snapshot; explicit exclusions and original wrapper receipt preserved |
 | [25 October Comparator](verification/existence/RESULTS.md) | 42 of 45 targets passed | 39 model-existence contracts, four strengthened contracts, two aggregate comparison contracts; three memory-stopped targets remain open |
 
 The supplemental audit binds every current source and dependency pin, all
-1207 catalogue/realization/comparison roots, and the cached artifacts.
-Its peak owned RSS plus swap was 4.07 GiB.
-The historical source copies differ only by recorded licence comments and
-package version metadata; the filtered root import has its own fresh elaboration.
+1313 catalogue/realization/comparison/checkpoint roots, and the cached artifacts.
+Its peak owned RSS plus swap was 5.64 GiB.
+The successor audit uses the exact exported source bytes. The [additional proof evidence](verification/2026-10-30-additions/ADDITIONS.json) records normal source proof checks and full checkpoint policies. The [published baseline](verification/history/v1.2-d2dca87/current.json) and its dated evidence remain unchanged.
 The allowed axioms are `propext`, `Classical.choice` and `Quot.sound`.
 
 The three deferred targets are Albert-model F₄, `AtlasComparison.main` and

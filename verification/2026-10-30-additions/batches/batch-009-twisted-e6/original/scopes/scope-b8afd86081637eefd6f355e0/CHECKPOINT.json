@@ -1,0 +1,81 @@
+{
+  "id": "staged-E6ClosedOrder",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.TwistedE6.E6ClosedOrder"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.ClosedOrder.diagramFixedWeylSum_eq_f4",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.E6ClosedOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.ClosedOrder.diagramFixedWeylSum",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.E6ClosedOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.ClosedOrder.companionFixedSubgroup_card",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.E6ClosedOrder"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-E6ClosedOrder-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-E6ClosedOrder-no-inherited-cell-order",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.positiveWitnessed_doubleCell_card",
+        "Atlas.Chevalley.selectedWeightCompanionPositive_card",
+        "Atlas.Chevalley.selectedWeightCompanionPositiveTorusJoin_card"
+      ]
+    },
+    {
+      "id": "staged-E6ClosedOrder-weyl-evaluation-before-group-count",
+      "roots": [
+        "Atlas.Chevalley.TwistedE6.ClosedOrder.diagramFixedWeylSum_eq_f4",
+        "Atlas.Chevalley.TwistedE6.ClosedOrder.diagramFixedWeylSum"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.TwistedE6.companionFixedSubgroup_card",
+        "Atlas.Chevalley.RootData.rootWeylPoincareEval"
+      ],
+      "forbid_modules": [
+        "FamilyWork.PositiveFixedOrder",
+        "FamilyWork.FixedTorusOrder",
+        "FamilyWork.FixedBorel",
+        "FamilyWork.FixedInversionOrder",
+        "FamilyWork.FixedCellCoordinates",
+        "FamilyWork.FixedWeylCell",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveFixedOrder",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedTorusOrder",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedBorel",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedInversionOrder",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedCellCoordinates",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedWeylCell"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

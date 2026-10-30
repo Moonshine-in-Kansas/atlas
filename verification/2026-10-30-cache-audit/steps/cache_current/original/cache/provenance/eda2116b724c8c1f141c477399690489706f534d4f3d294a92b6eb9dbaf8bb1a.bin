@@ -1,0 +1,68 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["59c60ba9faaef941.olean"],
+  "m": false,
+  "i": "3fc57079f34989b8.ilean",
+  "c": "803a19b77d0c8ac5.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Conway/IcosianRootLocalReferences.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/IcosianRootLocalReferences.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/IcosianRootLocalReferences.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Conway/IcosianRootLocalReferences.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Conway/IcosianRootLocalReferences.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Conway/IcosianRootLocalReferences.lean:28:18: `simp [icosianLocalCVector,icosianLocalCScalar_reduction]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/IcosianRootLocalReferences.lean:28:18: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta]",
+   "level": "info"},
+  {"message":
+   "Atlas/Conway/IcosianRootLocalReferences.lean:29:2: `apply QuadraticAlgebra.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 28!",
+   "level": "info"},
+  {"message":
+   "Atlas/Conway/IcosianRootLocalReferences.lean:28:18: `simp [icosianLocalCVector,icosianLocalCScalar_reduction]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/IcosianRootLocalReferences.lean:28:18: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta]",
+   "level": "info"},
+  {"message":
+   "Atlas/Conway/IcosianRootLocalReferences.lean:29:33: `decide +kernel`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 28!",
+   "level": "info"},
+  {"message":
+   "Atlas/Conway/IcosianRootLocalReferences.lean:28:18: `simp [icosianLocalCVector,icosianLocalCScalar_reduction]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/IcosianRootLocalReferences.lean:28:18: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta]",
+   "level": "info"},
+  {"message":
+   "Atlas/Conway/IcosianRootLocalReferences.lean:29:33: `decide +kernel`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 28!",
+   "level": "info"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Conway.IcosianRootPointShapes transitive imports (legacy)",
+       "71fd25ea50875887"],
+      ["Atlas.Conway.IcosianRootPointShapes:importAllArts", "222eb73b0f039c60"],
+      ["Atlas.Conway.IcosianReflectionDiagonalData transitive imports (legacy)",
+       "6d79d56d0d7f7242"],
+      ["Atlas.Conway.IcosianReflectionDiagonalData:importAllArts",
+       "ade5a453b7c71041"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Conway/IcosianRootLocalReferences.lean",
+   "7180741f2062a359"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Conway.IcosianRootLocalReferences", "e2da32b711d713f1"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "2eabe9619f539f9e"}

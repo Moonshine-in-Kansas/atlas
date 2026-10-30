@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "staged-ree-f4-suzuki-scalar-product",
+  "imports": [
+    "Atlas.LinearGroups.ReeF4.RootSuzukiScalarProduct",
+    "Atlas.LinearGroups.ReeF4.RootSuzukiScalarPair",
+    "Atlas.LinearGroups.ReeF4.OppositePairScalarReduction",
+    "Atlas.LinearGroups.ReeF4.RootSuzukiScalarElementary"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiScalarHom",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarProduct.lean",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarProduct"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiScalarHom_injective",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarProduct.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarProduct"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiScalar_commutes_root",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarProduct.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarProduct"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiScalar_commutes_torus",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarProduct.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarProduct"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiScalar_commutes_rho",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarProduct.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarProduct"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiLeviSubgroup_le_scalarCentralizer",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarProduct.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarProduct"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzuki_commutes_scalar",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarProduct.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarProduct"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiLeviHom_negative_coordinate",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarProduct.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarProduct"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiScalar_intersection",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarProduct.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarProduct"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzuki_disjoint_scalar",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarProduct.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarProduct"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiProductHom",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarProduct.lean",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarProduct"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiProductHom_injective",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarProduct.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarProduct"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiProductSubgroup",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarProduct.lean",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarProduct"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiProductEquiv",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarProduct.lean",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarProduct"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiLeviHom_extremal_root",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarPair.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarPair"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiProduct_first_root",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarPair.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarPair"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiProduct_opposite_root",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarPair.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarPair"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiProduct_fixes_first",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarPair.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarPair"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiProduct_fixes_opposite",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarPair.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarPair"
+    },
+    {
+      "declaration": "Atlas.ReeF4.model_opposite_pair_scalars",
+      "source": "Atlas/LinearGroups/ReeF4/OppositePairScalarReduction.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairScalarReduction"
+    },
+    {
+      "declaration": "Atlas.ReeF4.model_opposite_pair_scalar_reduction",
+      "source": "Atlas/LinearGroups/ReeF4/OppositePairScalarReduction.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.OppositePairScalarReduction"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiEmbedding_mem_elementary",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarElementary.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarElementary"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiScalarHom_mem_elementary",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarElementary.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarElementary"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiProductSubgroup_le_elementary",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarElementary.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarElementary"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independent-mathematical-scope",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.F4.",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis.",
+        "Atlas.ReeF4.simple_of_large",
+        "Atlas.ReeF4.BinaryDerived",
+        "Atlas.SuzukiFamily.simple_of_large",
+        "Atlas.SuzukiFamily.perfect_of_large",
+        "Atlas.SuzukiFamily.simple_iff",
+        "Atlas.ReeF4.card_Model",
+        "Atlas.SuzukiFamily.card_group",
+        "Atlas.ReeF4.card_suzukiLeviSubgroup",
+        "Atlas.ReeF4.card_positiveRootSubgroup",
+        "Atlas.ReeF4.card_modelSuzukiProductSubgroup",
+        "Atlas.ReeF4.card_fullOppositePairStabilizer"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.SuzukiFamily.Simplicity",
+        "Atlas.LinearGroups.SuzukiFamily.ExactSimplicity"
+      ]
+    }
+  ],
+  "original_manifest": {
+    "path": "verification/checkpoints/ree-f4-suzuki-scalar-product.json",
+    "sha256": "c567bbee460a3d858f578eb69cd7b01ec1eb3732337b69e01de6659e922efa86"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "f4-catalogue-construction-candidate",
+  "environment": "verification/checkpoints/environment.json",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.Catalogue.F4Construction"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.F4FieldDomain",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.F4Construction",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.F4",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.F4Construction",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.F4Group",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.F4Construction",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.F4_construction",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.F4Construction",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "construction-from-existing-adjoint-interface",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.CFSG.",
+        "Atlas.CurtisTits.",
+        "Atlas.Chevalley.CurtisTits.",
+        "Atlas.Chevalley.Amalgam.",
+        "Atlas.Chevalley.Comparison.F4.",
+        "Atlas.F4.Model",
+        "Atlas.Chevalley.model_F4_card",
+        "IsSimpleGroup",
+        "Group.IsPerfect"
+      ]
+    }
+  ]
+}

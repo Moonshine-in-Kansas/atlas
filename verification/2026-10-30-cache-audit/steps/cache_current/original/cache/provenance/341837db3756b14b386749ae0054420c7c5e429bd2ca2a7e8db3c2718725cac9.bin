@@ -1,0 +1,275 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["7949ab7e2caccd77.olean"],
+  "m": false,
+  "i": "24d907b5a360e379.ilean",
+  "c": "0671d66e04ff2b3f.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateTwoRowRigidity.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateTwoRowRigidity.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateTwoRowRigidity.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateTwoRowRigidity.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateTwoRowRigidity.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem quadratic_pair_radical_partner (p c : Point) (hpc : p ≠ c) (ε : Bit)\n    (b x : E) (hw : blockWeight ε b c.val = 2) :\n    (ε + dot b x + quadratic c.val x = 0 ∧ ε + dot b (x + p.val) + quadratic c.val (x + p.val) = 0) ↔\n      (ε + dot b (x + c.val) + quadratic c.val (x + c.val) = 0 ∧\n        ε + dot b (x + c.val + p.val) + quadratic c.val (x + c.val + p.val) = 0) :=\n  by decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:8:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 3000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:9:61: missing space in the source\n\nThis part of the code\n  'p≠c)\n '\nshould be written as\n  'p ≠ c)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:10:51: missing space in the source\n\nThis part of the code\n  'c.val=2) :'\nshould be written as\n  'c.val = 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fixedHeavy_pair_radical_partner (p c : Point) (hpc : p ≠ c)\n    (v : FixedHeavyParameters c) (x : E) :\n    (fixedHeavyWord c v (p, x) = 0 ∧ fixedHeavyWord c v (p, x + p.val) = 0) ↔\n      (fixedHeavyWord c v (p, x + c.val) = 0 ∧ fixedHeavyWord c v (p, x + c.val + p.val) = 0) :=\n  by\n  have hw := (binaryNormalMap_quadratic_weight_sixteen (v.2.val, v.1.val, c.val) c.prop).mp v.2.prop p\n  have hn : p.val ≠ c.val := fun h => hpc (Subtype.ext h)\n  simp only [hn, ite_false] at hw\n  simp_rw [fixedHeavyWord_row_quadratic]\n  exact quadratic_pair_radical_partner p c hpc _ _ x hw`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:16:62: missing space in the source\n\nThis part of the code\n  'p≠c)\n '\nshould be written as\n  'p ≠ c)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavy_two_two_test (p q c : Point) (hpq : p ≠ q) (hpc : p ≠ c)\n    (hqc : q ≠ c) (x y z t : E) (hxy : coordinateCross (p, x) ≠ coordinateCross (p, y)) (hdy : y + x ≠ c.val)\n    (hdyp : y + x ≠ c.val + p.val) (ht : t = z + c.val ∨ t = z + c.val + q.val) :\n    ∃ v : MinimalCross,\n      v ∉ coordinateFrame ∧\n        (CrossOrthogonal v (coordinateCross (p, x)) ↔ ¬CrossOrthogonal v (coordinateCross (p, y))) ∧\n          CrossOrthogonal v (coordinateCross (q, z)) ∧ CrossOrthogonal v (coordinateCross (q, t)) :=\n  by\n  have hd0 : y + x ≠ 0 := by\n    intro h\n    have he : y = x := by\n      calc\n        y = (y + x) + x := by rw [add_assoc, vector_add_self, add_zero]\n        _ = x := by rw [h, zero_add]\n    exact hxy (by rw [he])\n  have hdp : y + x ≠ p.val := by\n    intro h\n    have he : y = x + p.val := by\n      calc\n        y = (y + x) + x := by rw [add_assoc, vector_add_self, add_zero]\n        _ = x + p.val := by rw [h, add_comm]\n    apply hxy\n    rw [he]\n    simpa only [codeI_coordinate] using (coordinateCross_I (p, x)).symm\n  have hn : Nonempty (FixedHeavyParameters c) :=\n    (Nat.card_pos_iff.mp (show 0 < Nat.card (FixedHeavyParameters c) by rw [fixedHeavyParameters_card]; decide)).1\n  obtain ⟨v⟩ := hn\n  obtain ⟨bq, hbq⟩ := fixedHeavy_pair_avoid_translate q c hqc v z\n  obtain ⟨B, _, hBq⟩ := matrixAt_two_points p q hpq 0 bq\n  let v' := fixedHeavyTranslate c B v\n  obtain ⟨w, hw, hwtest⟩ := fixedHeavy_test_cross c v'\n  have hz : fixedHeavyWord c v' (q, z) = 0 ∧ fixedHeavyWord c v' (q, z + q.val) = 0 :=\n    by\n    change\n      fixedHeavyWord c (fixedHeavyTranslate c B v) (q, z) = 0 ∧\n        fixedHeavyWord c (fixedHeavyTranslate c B v) (q, z + q.val) = 0\n    rw [fixedHeavyTranslate_word]\n    change fixedHeavyWord c v (q, z + matrixAt B q.val) = 0 ∧ fixedHeavyWord c v (q, z + q.val + matrixAt B q.val) = 0\n    rwa [hBq]\n  refine ⟨w, hw, ?_, (hwtest q z).mpr hz, ?_⟩\n  · rw [hwtest p x, hwtest p y]\n    have h := fixedHeavy_pair_complement p c hpc (y + x) hd0 hdp hdy hdyp v' x\n    have he : x + (y + x) = y := by rw [add_comm y x, ← add_assoc, vector_add_self, zero_add]\n    rwa [he] at h\n  · have hzc := (fixedHeavy_pair_radical_partner q c hqc v' z).mp hz\n    rcases ht with rfl | rfl\n    · exact (hwtest q _).mpr hzc\n    · apply (hwtest q _).mpr\n      have he : z + c.val + q.val + q.val = z + c.val := by rw [add_assoc, vector_add_self, add_zero]\n      rw [he]\n      exact ⟨hzc.2, hzc.1⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:48:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:55:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:57:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:26:51: missing space in the source\n\nThis part of the code\n  'p≠q) (hpc'\nshould be written as\n  'p ≠ q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:26:63: missing space in the source\n\nThis part of the code\n  'p≠c) (hqc'\nshould be written as\n  'p ≠ c)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:26:75: missing space in the source\n\nThis part of the code\n  'q≠c)\n '\nshould be written as\n  'q ≠ c)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:27:44: missing space in the source\n\nThis part of the code\n  '(p,x)≠coordinateCross'\nshould be written as\n  '(p, x) ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:27:46: missing space in the source\n\nThis part of the code\n  '(p,x)≠coordinateCross'\nshould be written as\n  'x) ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:27:66: missing space in the source\n\nThis part of the code\n  '(p,y))\n'\nshould be written as\n  '(p, y))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:28:12: missing space in the source\n\nThis part of the code\n  'y+x≠c.val)'\nshould be written as\n  'y + x'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:28:31: missing space in the source\n\nThis part of the code\n  'y+x≠c.val+p.val)'\nshould be written as\n  'y + x'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:28:39: missing space in the source\n\nThis part of the code\n  'y+x≠c.val+p.val)'\nshould be written as\n  'c.val + p.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:29:11: missing space in the source\n\nThis part of the code\n  't=z+c.val'\nshould be written as\n  't = z'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:29:23: missing space in the source\n\nThis part of the code\n  't=z+c.val+q.val)'\nshould be written as\n  't = z'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:29:31: missing space in the source\n\nThis part of the code\n  't=z+c.val+q.val)'\nshould be written as\n  'c.val + q.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nAny external test cross with exactly one supported member contradicts quartet closure. -/\ntheorem quartet_pair_test_obstruction (Q : Set MinimalCross) (hQ : IsQuartet Q) (u v a b w : MinimalCross) (hu : u ∈ Q)\n    (hv : v ∈ Q) (hw : w ∉ Q) (hpair : CrossOrthogonal w u ↔ ¬CrossOrthogonal w v) (ha : CrossOrthogonal w a)\n    (hb : CrossOrthogonal w b) (hrest : ∀ z ∈ Q, z ≠ u → z ≠ v → z = a ∨ z = b) : False := by\n  classical\n  by_cases ho : CrossOrthogonal w u\n  · apply hpair.mp ho\n    apply hQ.2.2 w hw v hv\n    intro z hz hzv\n    by_cases hzu : z = u\n    · rwa [hzu]\n    rcases hrest z hz hzu hzv with h | h <;> rw [h] <;> assumption\n  · apply ho\n    apply hQ.2.2 w hw u hu\n    intro z hz hzu\n    by_cases hzv : z = v\n    · rw [hzv]\n      by_contra hnv\n      exact ho (hpair.mpr hnv)\n    rcases hrest z hz hzu hzv with h | h <;> rw [h] <;> assumption`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:74:38: missing space in the source\n\nThis part of the code\n  'u∈Q) (hv'\nshould be written as\n  'u ∈ Q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:74:49: missing space in the source\n\nThis part of the code\n  'v∈Q) (hw'\nshould be written as\n  'v ∈ Q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:74:60: missing space in the source\n\nThis part of the code\n  'w∉Q)\n '\nshould be written as\n  'w ∉ Q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:77:14: missing space in the source\n\nThis part of the code\n  '∀z∈Q,z≠u'\nshould be written as\n  '∀ z ∈'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:77:18: missing space in the source\n\nThis part of the code\n  '∀z∈Q,z≠u → z≠v'\nshould be written as\n  'Q, z ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:77:25: missing space in the source\n\nThis part of the code\n  'z≠v → z=a'\nshould be written as\n  'z ≠ v'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:77:31: missing space in the source\n\nThis part of the code\n  'z=a ∨ z=b)'\nshould be written as\n  'z = a'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:77:37: missing space in the source\n\nThis part of the code\n  'z=b) :'\nshould be written as\n  'z = b)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateQuartet_two_row_direction_imp (p q c : Point) (hpq : p ≠ q)\n    (hpc : p ≠ c) (hqc : q ≠ c) (x y z t : E) (hxy : coordinateCross (p, x) ≠ coordinateCross (p, y))\n    (hQ : IsQuartet {coordinateCross (p, x), coordinateCross (p, y), coordinateCross (q, z), coordinateCross (q, t)})\n    (hdir : t + z = c.val ∨ t + z = c.val + q.val) : y + x = c.val ∨ y + x = c.val + p.val := by\n  classical\n  by_contra hn\n  push Not at hn\n  have ht : t = z + c.val ∨ t = z + c.val + q.val :=\n    by\n    rcases hdir with h | h\n    · left\n      calc\n        t = (t + z) + z := by rw [add_assoc, vector_add_self, add_zero]\n        _ = z + c.val := by rw [h, add_comm]\n    · right\n      calc\n        t = (t + z) + z := by rw [add_assoc, vector_add_self, add_zero]\n        _ = z + c.val + q.val := by rw [h]; abel\n  obtain ⟨w, hw, hpair, hz, ht⟩ := heavy_two_two_test p q c hpq hpc hqc x y z t hxy hn.1 hn.2 ht\n  apply\n    quartet_pair_test_obstruction _ hQ (coordinateCross (p, x)) (coordinateCross (p, y)) (coordinateCross (q, z))\n      (coordinateCross (q, t)) w (by simp) (by simp) ?_ hpair hz ht\n  · intro u hu hux huy\n    simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at hu\n    rcases hu with h | h | h | h\n    · exact False.elim (hux h)\n    · exact False.elim (huy h)\n    · exact Or.inl h\n    · exact Or.inr h\n  · intro h\n    apply hw\n    simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at h\n    rcases h with h | h | h | h <;> rw [h] <;> exact coordinateCross_mem _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:98:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:96:12: missing space in the source\n\nThis part of the code\n  'p≠q) (hpc'\nshould be written as\n  'p ≠ q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:96:24: missing space in the source\n\nThis part of the code\n  'p≠c) (hqc'\nshould be written as\n  'p ≠ c)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:96:36: missing space in the source\n\nThis part of the code\n  'q≠c) (x'\nshould be written as\n  'q ≠ c)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:97:30: missing space in the source\n\nThis part of the code\n  '(p,x)≠coordinateCross'\nshould be written as\n  '(p, x) ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:97:32: missing space in the source\n\nThis part of the code\n  '(p,x)≠coordinateCross'\nshould be written as\n  'x) ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:97:52: missing space in the source\n\nThis part of the code\n  '(p,y))\n'\nshould be written as\n  '(p, y))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:99:13: missing space in the source\n\nThis part of the code\n  't+z=c.val'\nshould be written as\n  't + z'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:99:25: missing space in the source\n\nThis part of the code\n  't+z=c.val+q.val)'\nshould be written as\n  't + z'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:99:33: missing space in the source\n\nThis part of the code\n  't+z=c.val+q.val)'\nshould be written as\n  'c.val + q.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem two_row_direction_rigidity (p q : Point) (hpq : p ≠ q) (d e : E)\n    (hd0 : d ≠ 0) (hdp : d ≠ p.val) (he0 : e ≠ 0) (heq : e ≠ q.val)\n    (h : ∀ c : Point, p ≠ c → q ≠ c → (d = c.val ∨ d = c.val + p.val ↔ e = c.val ∨ e = c.val + q.val)) :\n    (d = q.val ∨ d = q.val + p.val) ∧ (e = p.val ∨ e = p.val + q.val) := by decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:129:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 5000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:130:57: missing space in the source\n\nThis part of the code\n  'p≠q) (d'\nshould be written as\n  'p ≠ q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:131:12: missing space in the source\n\nThis part of the code\n  'd≠0) (hdp'\nshould be written as\n  'd ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:131:24: missing space in the source\n\nThis part of the code\n  'd≠p.val)'\nshould be written as\n  'd ≠ p.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:131:40: missing space in the source\n\nThis part of the code\n  'e≠0) (heq'\nshould be written as\n  'e ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:131:52: missing space in the source\n\nThis part of the code\n  'e≠q.val)'\nshould be written as\n  'e ≠ q.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:132:10: missing space in the source\n\nThis part of the code\n  '∀c : Point,p≠c'\nshould be written as\n  '∀ c :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateCross_difference_ne (p : Point) (x y : E)\n    (hxy : coordinateCross (p, x) ≠ coordinateCross (p, y)) : y + x ≠ 0 ∧ y + x ≠ p.val :=\n  by\n  constructor\n  · intro h\n    have he : y = x := by\n      calc\n        y = (y + x) + x := by rw [add_assoc, vector_add_self, add_zero]\n        _ = x := by rw [h, zero_add]\n    exact hxy (by rw [he])\n  · intro h\n    have he : y = x + p.val := by\n      calc\n        y = (y + x) + x := by rw [add_assoc, vector_add_self, add_zero]\n        _ = x + p.val := by rw [h, add_comm]\n    apply hxy\n    rw [he]\n    simpa only [codeI_coordinate] using (coordinateCross_I (p, x)).symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:137:30: missing space in the source\n\nThis part of the code\n  '(p,x)≠coordinateCross'\nshould be written as\n  '(p, x) ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:137:32: missing space in the source\n\nThis part of the code\n  '(p,x)≠coordinateCross'\nshould be written as\n  'x) ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:137:52: missing space in the source\n\nThis part of the code\n  '(p,y)) :'\nshould be written as\n  '(p, y))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The (2,2) row pattern forces the manuscript affine-plane directions. -/\ntheorem coordinateQuartet_two_row_rigidity (p q : Point) (hpq : p ≠ q) (x y z t : E)\n    (hxy : coordinateCross (p, x) ≠ coordinateCross (p, y)) (hzt : coordinateCross (q, z) ≠ coordinateCross (q, t))\n    (hQ : IsQuartet {coordinateCross (p, x), coordinateCross (p, y), coordinateCross (q, z), coordinateCross (q, t)}) :\n    (y + x = q.val ∨ y + x = q.val + p.val) ∧ (t + z = p.val ∨ t + z = p.val + q.val) :=\n  by\n  have hd := coordinateCross_difference_ne p x y hxy\n  have he := coordinateCross_difference_ne q z t hzt\n  apply two_row_direction_rigidity p q hpq (y + x) (t + z) hd.1 hd.2 he.1 he.2\n  intro c hpc hqc\n  constructor\n  · apply coordinateQuartet_two_row_direction_imp q p c hpq.symm hqc hpc z t x y hzt\n    have hs :\n      ({coordinateCross (q, z), coordinateCross (q, t), coordinateCross (p, x), coordinateCross (p, y)} :\n          Set MinimalCross) =\n        {coordinateCross (p, x), coordinateCross (p, y), coordinateCross (q, z), coordinateCross (q, t)} :=\n      by\n      ext v\n      simp only [Set.mem_insert_iff, Set.mem_singleton_iff]\n      tauto\n    rwa [hs]\n  · exact coordinateQuartet_two_row_direction_imp p q c hpq hpc hqc x y z t hxy hQ`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:156:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:164:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:165:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:153:65: missing space in the source\n\nThis part of the code\n  'p≠q) (x'\nshould be written as\n  'p ≠ q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:154:30: missing space in the source\n\nThis part of the code\n  '(p,x)≠coordinateCross'\nshould be written as\n  '(p, x) ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:154:32: missing space in the source\n\nThis part of the code\n  '(p,x)≠coordinateCross'\nshould be written as\n  'x) ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:154:52: missing space in the source\n\nThis part of the code\n  '(p,y))\n'\nshould be written as\n  '(p, y))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:155:30: missing space in the source\n\nThis part of the code\n  '(q,z)≠coordinateCross'\nshould be written as\n  '(q, z) ≠'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:155:32: missing space in the source\n\nThis part of the code\n  '(q,z)≠coordinateCross'\nshould be written as\n  'z) ≠ coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:155:52: missing space in the source\n\nThis part of the code\n  '(q,t))\n'\nshould be written as\n  '(q, t))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateTwoRowRigidity.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateThreeRowObstruction transitive imports (legacy)",
+       "b8217e31935dede4"],
+      ["Atlas.Rudvalis.CoordinateThreeRowObstruction:importAllArts",
+       "fa1e13c0a1c8cf3a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateTwoRowRigidity.lean",
+   "28e9d64eedaf6342"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateTwoRowRigidity", "91ae617c1f353b92"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "5d84b469f33fcb13"}

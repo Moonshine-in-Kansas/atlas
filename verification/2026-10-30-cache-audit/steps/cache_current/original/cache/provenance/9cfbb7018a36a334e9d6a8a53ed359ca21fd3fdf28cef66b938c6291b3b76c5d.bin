@@ -1,0 +1,222 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["0b975dfd9d18f5b7.olean"],
+  "m": false,
+  "i": "1371b811eb02cd9c.ilean",
+  "c": "a6764f7b27caf664.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FourLocalFibre.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourLocalFibre.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourLocalFibre.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourLocalFibre.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourLocalFibre.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `set_option maxRecDepth 16384`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def fourLocalSignsOriginal (b c : Bool) :\n    SignedCoordinates SeedCoordinate :=\n  (if b then fourLocalOriginalA else 1) * (if c then fourLocalOriginalB else 1)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def fourLocalSignsCode (b c : Bool) : codeGroup :=\n  (if b then fourLocalCodeA else 1) * (if c then fourLocalCodeB else 1)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def fourLocalSignsWord (b c : Bool) : SeedCoordinate → ZMod 4 :=\n  monomialHom (fourLocalSignsOriginal b c) fourLocalSeed`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocalSigns_transport (b c : Bool) :\n    (fourLocalSignsCode b c).val = seedConjugateHom (fourLocalSignsOriginal b c) := by\n  cases b <;> cases c <;>\n    simp [fourLocalSignsCode, fourLocalSignsOriginal, fourLocalCodeA_transport, fourLocalCodeB_transport, map_mul]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocalSeed_transport :\n    quaternarySeed (3, 0, 0, 0) = seedTransportLinear fourLocalSeed :=\n  by\n  rw [← codeP_cube_seedA, quaternarySeed_transport]\n  have h : (codeP ^ 3).val = seedConjugateHom (seedPMonomial ^ 3) := by rw [map_pow]; rfl\n  rw [h]\n  exact seedConjugateMonomial_transport _ _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocalSigns_certificates (b c : Bool) :\n    (∀ z, reduceScalar (fourLocalSignsWord b c z) = reduceScalar (fourLocalSeed z)) ∧\n      fourLocalSignsWord b c (1, 1) * fourLocalSignsWord b c (1, 3) = (if b then -1 else 1) ∧\n        fourLocalSignsWord b c (1, 3) * fourLocalSignsWord b c (1, 4) = (if c then 1 else -1) ∧\n          (∀ z, fourLocalSeed z ≠ 0 → (fourLocalSignsWord b c z) ^ 2 = 1) :=\n  by decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:26:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 2000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def fourLocalOrbitOriginal (v : E) (b c : Bool) :\n    SeedCoordinate → ZMod 4 := fun z => signedScalar (dot v (rowLabel z.1).val) (fourLocalSignsWord b c z)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def fourLocalOrbitElement (v : E) (b c : Bool) : codeGroup :=\n  seedARowSign v * fourLocalSignsCode b c`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocalOrbit_action (v : E) (b c : Bool) :\n    monomialHom (fourLocalOrbitElement v b c).val (quaternarySeed (3, 0, 0, 0)) =\n      seedTransportLinear (fourLocalOrbitOriginal v b c) :=\n  by\n  change monomialHom ((seedARowSign v).val * (fourLocalSignsCode b c).val) _ = _\n  rw [map_mul]\n  change monomialHom (seedARowSign v).val (monomialHom (fourLocalSignsCode b c).val _) = _\n  rw [fourLocalSigns_transport, fourLocalSeed_transport]\n  change\n    monomialHom (seedARowSign v).val\n        (monomialHom (seedConjugateMonomial (fourLocalSignsOriginal b c)) (seedTransportLinear fourLocalSeed)) =\n      _\n  rw [seedConjugateMonomial_transport, seedARowSign_transport]\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:46:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `private theorem local_scalar_pair (a : Bit) (x y : ZMod 4) :\n    signedScalar a x * signedScalar a y = x * y :=\n  by\n  simp only [signedScalar]\n  split <;> simp`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `private theorem local_scalar_sign_injective (a b : Bit) (x : ZMod 4)\n    (hx : x ^ 2 = 1) (h : signedScalar a x = signedScalar b x) : a = b := by decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:55:76: missing space in the source\n\nThis part of the code\n  'x^2=1)\n '\nshould be written as\n  'x ^ 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:56:25: missing space in the source\n\nThis part of the code\n  'x=signedScalar'\nshould be written as\n  'x = signedScalar'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `private theorem local_bool_sign_injective (a b : Bool)\n    (h : (if a then (-1 : ZMod 4) else 1) = (if b then -1 else 1)) : a = b := by decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:59:41: missing space in the source\n\nThis part of the code\n  '1)=(if b'\nshould be written as\n  '1) = (if'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `private theorem local_three_rows_separate (v w : E)\n    (h1 : dot v (rowLabel 1).val = dot w (rowLabel 1).val) (h2 : dot v (rowLabel 2).val = dot w (rowLabel 2).val)\n    (h3 : dot v (rowLabel 3).val = dot w (rowLabel 3).val) : v = w :=\n  by\n  obtain ⟨i, rfl⟩ := binaryLabel_bijective.surjective v\n  obtain ⟨j, rfl⟩ := binaryLabel_bijective.surjective w\n  decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:62:32: missing space in the source\n\nThis part of the code\n  '1).val=dot w'\nshould be written as\n  '1).val = dot'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:63:32: missing space in the source\n\nThis part of the code\n  '2).val=dot w'\nshould be written as\n  '2).val = dot'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:64:32: missing space in the source\n\nThis part of the code\n  '3).val=dot w'\nshould be written as\n  '3).val = dot'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocalOrbitOriginal_injective :\n    Function.Injective (fun t : E × Bool × Bool => fourLocalOrbitOriginal t.1 t.2.1 t.2.2) :=\n  by\n  rintro ⟨v, b, c⟩ ⟨w, d, e⟩ h\n  have hb : b = d := by\n    apply local_bool_sign_injective\n    have hh := congrArg (fun f : SeedCoordinate → ZMod 4 => f (1, 1) * f (1, 3)) h\n    simp only [fourLocalOrbitOriginal, local_scalar_pair] at hh\n    rwa [(fourLocalSigns_certificates b c).2.1, (fourLocalSigns_certificates d e).2.1] at hh\n  have hc : c = e := by\n    have hh := congrArg (fun f : SeedCoordinate → ZMod 4 => f (1, 3) * f (1, 4)) h\n    simp only [fourLocalOrbitOriginal, local_scalar_pair] at hh\n    rw [(fourLocalSigns_certificates b c).2.2.1, (fourLocalSigns_certificates d e).2.2.1] at hh\n    have hi : ∀ c e : Bool, (if c then (1 : ZMod 4) else -1) = (if e then 1 else -1) → c = e := by decide +kernel\n    exact hi c e hh\n  subst d\n  subst e\n  have hr (z : SeedCoordinate) (hz : fourLocalSeed z ≠ 0) : dot v (rowLabel z.1).val = dot w (rowLabel z.1).val :=\n    local_scalar_sign_injective _ _ _ ((fourLocalSigns_certificates b c).2.2.2 z hz) (congrFun h z)\n  have hv : v = w :=\n    local_three_rows_separate v w (hr (1, 1) (by decide +kernel)) (hr (2, 1) (by decide +kernel))\n      (hr (3, 0) (by decide +kernel))\n  subst w\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:81:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocalOrbit_reduce (v : E) (b c : Bool) :\n    reduce (monomialHom (fourLocalOrbitElement v b c).val (quaternarySeed (3, 0, 0, 0))) = fourPlaneSeedResidue :=\n  by\n  rw [← fourthSeed_residue, fourLocalOrbit_action, fourLocalSeed_transport]\n  funext z\n  obtain ⟨⟨r, k⟩, rfl⟩ := seedCoordinateEquiv.surjective z\n  change\n    reduceScalar (seedTransportLinear (fourLocalOrbitOriginal v b c) (seedCoordinateEquiv (r, k))) =\n      reduceScalar (seedTransportLinear fourLocalSeed (seedCoordinateEquiv (r, k)))\n  rw [seedTransportLinear_apply, seedTransportLinear_apply]\n  have hr : ∀ a : Bit, ∀ x : ZMod 4, reduceScalar (signedScalar a x) = reduceScalar x := by decide +kernel\n  have hh := (fourLocalSigns_certificates b c).1 (r, signedPositionIndex k)\n  simp only [fourLocalOrbitOriginal]\n  split <;> simp only [map_neg, hr, hh]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:94:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:98:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def fourLocalOrbitLift (t : E × Bool × Bool) :\n    minimumLift fourPlaneSeedResidue :=\n  ⟨⟨monomialHom (fourLocalOrbitElement t.1 t.2.1 t.2.2).val (quaternarySeed (3, 0, 0, 0)),\n      ((fourLocalOrbitElement t.1 t.2.1 t.2.2).prop _).mp (quaternaryCode_seed _)⟩,\n    (monomial_euclideanWeight _ _).trans fourthSeed_weight, fourLocalOrbit_reduce _ _ _⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocalOrbitLift_injective : Function.Injective fourLocalOrbitLift :=\n  by\n  intro a b h\n  have hh := congrArg (fun w : minimumLift fourPlaneSeedResidue => w.val.val) h\n  change\n    monomialHom (fourLocalOrbitElement a.1 a.2.1 a.2.2).val _ =\n      monomialHom (fourLocalOrbitElement b.1 b.2.1 b.2.2).val _ at hh\n  rw [fourLocalOrbit_action, fourLocalOrbit_action] at hh\n  exact fourLocalOrbitOriginal_injective (seedTransportLinear.injective hh)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocalOrbitLift_surjective :\n    Function.Surjective fourLocalOrbitLift :=\n  by\n  apply (Nat.bijective_iff_injective_and_card fourLocalOrbitLift).mpr ⟨fourLocalOrbitLift_injective, ?_⟩ |>.2\n  rw [fourPlaneSeed_minimum_lifts_card]\n  simp [Nat.card_eq_fintype_card, E, Bit, ZMod.card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocalOrbitElement_fix (v : E) (b c : Bool) :\n    fourLocalOrbitElement v b c • coordinateCross (originalCoordinateEquiv (0, 1)) =\n      coordinateCross (originalCoordinateEquiv (0, 1)) :=\n  by\n  have hr :\n    seedARowSign v • coordinateCross (originalCoordinateEquiv (0, 1)) =\n      coordinateCross (originalCoordinateEquiv (0, 1)) :=\n    by\n    rw [coordinateCross_action]\n    rfl\n  rw [fourLocalOrbitElement, mul_smul]\n  have hs :\n    fourLocalSignsCode b c • coordinateCross (originalCoordinateEquiv (0, 1)) =\n      coordinateCross (originalCoordinateEquiv (0, 1)) :=\n    by\n    cases b <;> cases c <;>\n      simp only [fourLocalSignsCode, Bool.false_eq_true, ite_false, ite_true, mul_smul, one_smul, fourLocalCode_fix.2.1,\n        fourLocalCode_fix.2.2]\n  rw [hs, hr]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocal_fibre_transitive (w : minimumLift fourPlaneSeedResidue) :\n    ∃ g : MulAction.stabilizer codeGroup (coordinateCross (originalCoordinateEquiv (0, 1))),\n      monomialHom g.val.val (quaternarySeed (3, 0, 0, 0)) = w.val.val :=\n  by\n  obtain ⟨⟨v, b, c⟩, h⟩ := fourLocalOrbitLift_surjective w\n  refine ⟨⟨fourLocalOrbitElement v b c, fourLocalOrbitElement_fix v b c⟩, ?_⟩\n  exact congrArg (fun u => u.val.val) h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FourLocalWords transitive imports (legacy)",
+       "2ef82ff5163477c0"],
+      ["Atlas.Rudvalis.FourLocalWords:importAllArts", "37bc3ea3747762cb"],
+      ["Atlas.Rudvalis.FourSeedLifts transitive imports (legacy)",
+       "81e8a5082a3c37c9"],
+      ["Atlas.Rudvalis.FourSeedLifts:importAllArts", "817ede73d367602f"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FourLocalFibre.lean", "a7530c9128d10064"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FourLocalFibre", "9ab7bcac3d156d5f"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "4cb06d84656a0987"}

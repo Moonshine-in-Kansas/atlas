@@ -1,0 +1,65 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["e08878e044fe4c16.olean"],
+  "m": false,
+  "i": "055edba74c342aca.ilean",
+  "c": "2f06b7275e3ff17f.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/RootData/SmallRankCommutatorRootCones.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/RootData/SmallRankCommutatorRootCones.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/RootData/SmallRankCommutatorRootCones.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/RootData/SmallRankCommutatorRootCones.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/RootData/SmallRankCommutatorRootCones.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SmallRankCommutatorRootCones.lean:14:0: automatically included section variable(s) unused in theorem `Atlas.Chevalley.RootData.a2_literal_root_label`:\n  [Fintype ι]\n  [DecidableEq ι]\n  [P.IsReduced]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype ι] [DecidableEq ι] [P.IsReduced] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SmallRankCommutatorRootCones.lean:13:0: `a2_literal_root_label` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SmallRankCommutatorRootCones.lean:13:0: `a2_literal_root_label` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SmallRankCommutatorRootCones.lean:24:0: automatically included section variable(s) unused in theorem `Atlas.Chevalley.RootData.b2_literal_root_labels`:\n  [Fintype ι]\n  [DecidableEq ι]\n  [P.IsReduced]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype ι] [DecidableEq ι] [P.IsReduced] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SmallRankCommutatorRootCones.lean:23:0: `b2_literal_root_labels` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SmallRankCommutatorRootCones.lean:23:0: `b2_literal_root_labels` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SmallRankCommutatorRootCones.lean:40:0: `a2_literal_commutator_root_cone` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/SmallRankCommutatorRootCones.lean:48:0: `b2_literal_commutator_root_cones` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.RootData.PositiveIntegralRootCone transitive imports (legacy)",
+       "3e9684cc0981e79f"],
+      ["Atlas.LinearGroups.Chevalley.RootData.PositiveIntegralRootCone:importAllArts",
+       "63d4714d55f71b73"],
+      ["Mathlib.Tactic.Module transitive imports (legacy)", "b5f83df3ed43bfc6"],
+      ["Mathlib.Tactic.Module:importAllArts", "0733868e493644a5"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/RootData/SmallRankCommutatorRootCones.lean",
+   "0ebe29afb3d7ce71"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.RootData.SmallRankCommutatorRootCones",
+   "85a7b773d52a1816"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "8f6ec2c475c1b4fa"}

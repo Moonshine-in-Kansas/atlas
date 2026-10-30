@@ -1,0 +1,103 @@
+{
+  "id": "staged-MarkedLineKernelRecognition",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "F4Work.MarkedLineKernelRecognition"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.ReeF4.model_mem_positiveRootSubgroup_of_fix_markedLine_roots",
+      "module": "F4Work.MarkedLineKernelRecognition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.markedLineRestrictionKernel_mem_positiveRootSubgroup",
+      "module": "F4Work.MarkedLineKernelRecognition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveLineKernelEmbedding_surjective",
+      "module": "F4Work.MarkedLineKernelRecognition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveLineKernelEquivFull",
+      "module": "F4Work.MarkedLineKernelRecognition",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveLineKernelEquivFull_val",
+      "module": "F4Work.MarkedLineKernelRecognition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveLineKernelFullParam_bijective",
+      "module": "F4Work.MarkedLineKernelRecognition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.markedLineKernelParameters",
+      "module": "F4Work.MarkedLineKernelRecognition",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.markedLineKernelParameters_val",
+      "module": "F4Work.MarkedLineKernelRecognition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.card_markedLineRestrictionKernel",
+      "module": "F4Work.MarkedLineKernelRecognition",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.markedLineRestrictionKernel_isSolvable",
+      "module": "F4Work.MarkedLineKernelRecognition",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "draft-full-line-kernel-via-actual-point-parabolic",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis.",
+        "Atlas.F4.",
+        "Atlas.ReeF4.card_Model",
+        "Atlas.ReeF4.card_positiveRootSubgroup",
+        "Atlas.ReeF4.card_specialPoints",
+        "Atlas.ReeF4.elementarySubgroup_eq_top",
+        "Atlas.ReeF4.model_isPerfect",
+        "Atlas.ReeF4.simple_of_large",
+        "Atlas.ReeF4.model_specialPoint_transitive",
+        "Atlas.ReeF4.card_firstPointParabolic",
+        "Atlas.ReeF4.card_positiveRootTailSubgroup",
+        "Atlas.ReeF4.card_modelSuzukiProductSubgroup"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.ReeF4.Order",
+        "Atlas.LinearGroups.ReeF4.Generation",
+        "F4Work.BinarySpecialPointFaithfulness",
+        "F4Work.BinaryDerivedPointFaithfulness",
+        "F4Work.BinaryDerivedAction",
+        "F4Work.ReeFullOrder",
+        "F4Work.ReeFullGeneration",
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood",
+        "Atlas.LinearGroups.SuzukiFamily.Order",
+        "Atlas.LinearGroups.SuzukiFamily.Simplicity"
+      ]
+    }
+  ]
+}

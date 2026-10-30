@@ -1,0 +1,245 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["1cebd8dd7ff46681.olean"],
+  "m": false,
+  "i": "e918e117ab270d82.ilean",
+  "c": "2dc5fc088f188c0d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Lattices/ConwayWales/CyclicCodeAction.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/ConwayWales/CyclicCodeAction.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/ConwayWales/CyclicCodeAction.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/ConwayWales/CyclicCodeAction.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/ConwayWales/CyclicCodeAction.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `set_option backward.isDefEq.respectTransparency false`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.ConwayWales`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Polynomial`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The actual cyclic block shift, restricted to the actual lattice code. -/\ndef frameShift : Module.End (ZMod 4) frameCodeModule\n    where\n  toFun c := ⟨shiftCoordinates 1 c.val, frameCode_shift 1 c.property⟩\n  map_add' := by intros; rfl\n  map_smul' := by intros; rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem frameShift_pow_apply (n : ℕ) (c : frameCodeModule) (i : RealIndex) :\n    ((frameShift ^ n) c).val i = c.val (i.1 - (n • (1 : Row)), i.2) := by\n  induction n generalizing i with\n  | zero => simp\n  | succ n ih =>\n    rw [pow_succ']\n    change ((frameShift ^ n) c).val (i.1 - 1, i.2) = _\n    rw [ih]\n    rw [succ_nsmul]\n    have heq : i.1 - 1 - n • (1 : Row) = i.1 - (n • (1 : Row) + 1) := by abel\n    exact congrArg (fun r => c.val (r, i.2)) heq`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem frameShift_seventh : frameShift ^ 7 = 1 :=\n  by\n  apply LinearMap.ext\n  intro c\n  apply Subtype.ext\n  funext i\n  rw [frameShift_pow_apply]\n  change c.val (i.1 - (7 • (1 : Row)), i.2) = c.val i\n  rw [show 7 • (1 : Row) = 0 by decide, sub_zero]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Polynomial evaluation factors through t^7−1 on the given frame code. -/\ndef frameCodeCyclicAction : CyclicRing →+* Module.End (ZMod 4) frameCodeModule :=\n  Ideal.Quotient.lift _ (Polynomial.aeval frameShift).toRingHom\n    (by\n      change Ideal.span {X ^ 7 - 1} ≤ RingHom.ker (Polynomial.aeval frameShift).toRingHom\n      apply Ideal.span_le.mpr\n      intro p hp\n      obtain rfl := Set.mem_singleton_iff.mp hp\n      change Polynomial.aeval frameShift (X ^ 7 - 1) = 0\n      simp only [map_sub, map_pow, aeval_X, map_one, frameShift_seventh, sub_self])`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The cyclic-ring scalar structure acts on the original frame code subtype. -/\nscoped instance frameCodeCyclicModule : Module CyclicRing frameCodeModule :=\n  Module.compHom frameCodeModule frameCodeCyclicAction`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe CRT product acts through the already constructed quotient-ring action. -/\ndef frameComponentAction :\n    (CyclicComponent cyclicFactorZero × (CyclicComponent cyclicFactorPlus × CyclicComponent cyclicFactorMinus)) →+*\n      Module.End (ZMod 4) frameCodeModule :=\n  frameCodeCyclicAction.comp cyclicCRT.symm.toRingHom`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def frameProjectionZero :=\n  frameComponentAction (1, 0, 0)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def frameProjectionPlus :=\n  frameComponentAction (0, 1, 0)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def frameProjectionMinus :=\n  frameComponentAction (0, 0, 1)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem frameProjections_sum :\n    frameProjectionZero + frameProjectionPlus + frameProjectionMinus = 1 :=\n  by\n  rw [frameProjectionZero, frameProjectionPlus, frameProjectionMinus, ← map_add, ← map_add]\n  simp only [Prod.mk_add_mk, add_zero, zero_add]\n  exact frameComponentAction.map_one`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:70:10: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem frameProjectionZero_sq :\n    frameProjectionZero * frameProjectionZero = frameProjectionZero :=\n  by\n  rw [frameProjectionZero, ← map_mul]\n  congr 1 <;> ext <;> simp`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:68:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:74:10: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem frameProjectionPlus_sq :\n    frameProjectionPlus * frameProjectionPlus = frameProjectionPlus :=\n  by\n  rw [frameProjectionPlus, ← map_mul]\n  congr 1 <;> ext <;> simp`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:72:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:78:10: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem frameProjectionMinus_sq :\n    frameProjectionMinus * frameProjectionMinus = frameProjectionMinus :=\n  by\n  rw [frameProjectionMinus, ← map_mul]\n  congr 1 <;> ext <;> simp`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:76:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:82:39: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Prod.mk_mul_mk, mul_zero, mul_one, one_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:82:58: This simp argument is unused:\n  one_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Prod.mk_mul_mk, mul_zero, zero_mul, mul_one]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem frameProjections_zero_plus :\n    frameProjectionZero * frameProjectionPlus = 0 :=\n  by\n  rw [frameProjectionZero, frameProjectionPlus, ← map_mul]\n  simp only [Prod.mk_mul_mk, mul_zero, zero_mul, mul_one, one_mul]\n  exact frameComponentAction.map_zero`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:87:39: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Prod.mk_mul_mk, mul_zero, mul_one, one_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:87:58: This simp argument is unused:\n  one_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Prod.mk_mul_mk, mul_zero, zero_mul, mul_one]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem frameProjections_zero_minus :\n    frameProjectionZero * frameProjectionMinus = 0 :=\n  by\n  rw [frameProjectionZero, frameProjectionMinus, ← map_mul]\n  simp only [Prod.mk_mul_mk, mul_zero, zero_mul, mul_one, one_mul]\n  exact frameComponentAction.map_zero`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:92:39: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Prod.mk_mul_mk, mul_zero, mul_one, one_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:92:58: This simp argument is unused:\n  one_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Prod.mk_mul_mk, mul_zero, zero_mul, mul_one]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem frameProjections_plus_minus :\n    frameProjectionPlus * frameProjectionMinus = 0 :=\n  by\n  rw [frameProjectionPlus, frameProjectionMinus, ← map_mul]\n  simp only [Prod.mk_mul_mk, mul_zero, zero_mul, mul_one, one_mul]\n  exact frameComponentAction.map_zero`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem frameProjections_plus_zero :\n    frameProjectionPlus * frameProjectionZero = 0 :=\n  by\n  rw [frameProjectionPlus, frameProjectionZero, ← map_mul, mul_comm, map_mul]\n  exact frameProjections_zero_plus`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem frameProjections_minus_zero :\n    frameProjectionMinus * frameProjectionZero = 0 :=\n  by\n  rw [frameProjectionMinus, frameProjectionZero, ← map_mul, mul_comm, map_mul]\n  exact frameProjections_zero_minus`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem frameProjections_minus_plus :\n    frameProjectionMinus * frameProjectionPlus = 0 :=\n  by\n  rw [frameProjectionMinus, frameProjectionPlus, ← map_mul, mul_comm, map_mul]\n  exact frameProjections_plus_minus`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Every actual codeword is the sum of its three CRT projections. -/\ntheorem frameCode_decomposition (c : frameCodeModule) :\n    frameProjectionZero c + frameProjectionPlus c + frameProjectionMinus c = c :=\n  by\n  have h := congrArg (fun f : Module.End (ZMod 4) frameCodeModule => f c) frameProjections_sum\n  exact h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nIndependently selected CRT components combine to a codeword in the original code. -/\ntheorem frameCode_component_independence (x y z : frameCodeModule) :\n    ∃ c : frameCodeModule,\n      frameProjectionZero c = frameProjectionZero x ∧\n        frameProjectionPlus c = frameProjectionPlus y ∧ frameProjectionMinus c = frameProjectionMinus z :=\n  by\n  refine ⟨frameProjectionZero x + frameProjectionPlus y + frameProjectionMinus z, ?_⟩\n  simp only [map_add, ← Module.End.mul_apply, frameProjectionZero_sq, frameProjectionPlus_sq, frameProjectionMinus_sq,\n    frameProjections_zero_plus, frameProjections_zero_minus, frameProjections_plus_minus, frameProjections_plus_zero,\n    frameProjections_minus_zero, frameProjections_minus_plus, LinearMap.zero_apply, add_zero, zero_add, and_self]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.ConwayWales`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicCodeAction.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Lattices.ConwayWales.FrameCode transitive imports (legacy)",
+       "442d5d9e344fe8a1"],
+      ["Atlas.Lattices.ConwayWales.FrameCode:importAllArts",
+       "c2a6c12622f4ef3c"],
+      ["Atlas.Lattices.ConwayWales.CyclicFactors transitive imports (legacy)",
+       "2157380dab67edcc"],
+      ["Atlas.Lattices.ConwayWales.CyclicFactors:importAllArts",
+       "f4f4c3e633ce19a7"],
+      ["Mathlib.Algebra.Polynomial.AlgebraMap transitive imports (legacy)",
+       "5e3dfcb1dd275263"],
+      ["Mathlib.Algebra.Polynomial.AlgebraMap:importAllArts",
+       "9be3166cbf4abb06"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Lattices/ConwayWales/CyclicCodeAction.lean",
+   "622325fc0a5867e0"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Lattices.ConwayWales.CyclicCodeAction",
+   "3ce33ace06f10392"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "c31b8ce595f97dc7"}

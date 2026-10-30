@@ -1,0 +1,79 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["2f7f5ad2860c80ef.olean"],
+  "m": false,
+  "i": "d9e24daee9f2c8f2.ilean",
+  "c": "37a3434f6be085c5.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean -M8704 -j1 /home/gerald/atlas/Atlas/LinearGroups/F4/LeviGeneratedImage.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/F4/LeviGeneratedImage.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/F4/LeviGeneratedImage.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/F4/LeviGeneratedImage.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/F4/LeviGeneratedImage.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviGeneratedImage.lean:33:29: This simp argument is unused:\n  zero_smul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Atlas.Quadratic.siegel, (Atlas.Orthogonal.formB 3 F).map_smul, map_smul, hu, hv, smul_zero,\n    mul_zero, sub_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviGeneratedImage.lean:33:39: This simp argument is unused:\n  mul_zero\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Atlas.Quadratic.siegel, (Atlas.Orthogonal.formB 3 F).map_smul, map_smul, hu, hv, smul_zero,\n    zero_smul, sub_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviGeneratedImage.lean:33:48: This simp argument is unused:\n  sub_zero\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Atlas.Quadratic.siegel, (Atlas.Orthogonal.formB 3 F).map_smul, map_smul, hu, hv, smul_zero,\n    zero_smul, mul_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviGeneratedImage.lean:29:38: missing space in the source\n\nThis part of the code\n  'u=0) (hv'\nshould be written as\n  'u = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviGeneratedImage.lean:29:76: missing space in the source\n\nThis part of the code\n  'v=0) :'\nshould be written as\n  'v = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviGeneratedImage.lean:69:39: This simp argument is unused:\n  Fin.sum_univ_succ\n\nHint: Omit it from the simp argument list.\n  [apply] simp_all [leviSingularDirection, leviShortDirection, QuadraticMap.polar, Atlas.Orthogonal.formD_apply,\n    Pi.single_apply]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviGeneratedImage.lean:93:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviGeneratedImage.lean:48:35: missing space in the source\n\nThis part of the code\n  'l)=0) :'\nshould be written as\n  'l) = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviGeneratedImage.lean:122:6: Try `simp at hu` instead of `simpa using hu`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviGeneratedImage.lean:137:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviGeneratedImage.lean:145:4: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.F4.LeviSpecialImage transitive imports (legacy)",
+       "b9156abb0f8f84fa"],
+      ["Atlas.LinearGroups.F4.LeviSpecialImage:importAllArts",
+       "f42e69a386943c92"],
+      ["Atlas.LinearGroups.F4.RootGeneratedElements transitive imports (legacy)",
+       "9df2414eeb693e93"],
+      ["Atlas.LinearGroups.F4.RootGeneratedElements:importAllArts",
+       "85a7b3f87dc5d5ae"],
+      ["Atlas.LinearGroups.F4.TorusGenerated transitive imports (legacy)",
+       "dc4a9143b3f9f7ce"],
+      ["Atlas.LinearGroups.F4.TorusGenerated:importAllArts",
+       "1889fa51acd284b2"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/F4/LeviGeneratedImage.lean",
+   "e3a32c051ed8e54d"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.F4.LeviGeneratedImage", "b7e1ad2fd7e9617c"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "9aae730b9b08579f"}

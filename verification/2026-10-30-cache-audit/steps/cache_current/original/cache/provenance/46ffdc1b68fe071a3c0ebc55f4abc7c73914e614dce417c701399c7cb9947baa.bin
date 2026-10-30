@@ -1,0 +1,61 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["b016d01369129f21.olean"],
+  "m": false,
+  "i": "a0e7d31f92dbefab.ilean",
+  "c": "7b531440d33fd8b2.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/SecondFrame.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/SecondFrame.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/SecondFrame.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/SecondFrame.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/SecondFrame.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/SecondFrame.lean:9:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 2000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SecondFrame.lean:40:8: `if_pos` has been deprecated: Use `ite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SecondFrame.lean:46:8: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SecondFrame.lean:61:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SecondFrame.lean:64:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/SecondFrame.lean:87:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.LatticeMonomial transitive imports (legacy)",
+       "08a83b49d56b2eb3"],
+      ["Atlas.Rudvalis.LatticeMonomial:importAllArts", "b892921afe648e6c"],
+      ["Atlas.Rudvalis.SeedCorrelations transitive imports (legacy)",
+       "6e540d67975432f4"],
+      ["Atlas.Rudvalis.SeedCorrelations:importAllArts", "d3c9d1950ef9573a"],
+      ["Mathlib.LinearAlgebra.FiniteDimensional.Lemmas transitive imports (legacy)",
+       "461fed25556aeeb6"],
+      ["Mathlib.LinearAlgebra.FiniteDimensional.Lemmas:importAllArts",
+       "6641177c89ee508b"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/SecondFrame.lean", "763492f4116689b3"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.SecondFrame", "62c3365db8c7d656"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "00a1d2a4ca029464"}

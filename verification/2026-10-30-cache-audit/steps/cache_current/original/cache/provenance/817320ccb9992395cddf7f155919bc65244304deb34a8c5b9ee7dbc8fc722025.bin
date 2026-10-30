@@ -1,0 +1,84 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["df29863fd36a6ec9.olean"],
+  "m": false,
+  "i": "f7807510bffbb7a6.ilean",
+  "c": "1c88f3786f8504ae.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean -M8704 -j1 /home/gerald/atlas/Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean:9:1: automatically included section variable(s) unused in theorem `Atlas.ReeF4.shortRootParameterFormula_graded_conjugation`:\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean:23:30: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean:29:30: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean:8:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 3000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean:23:30: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean:29:30: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean:9:1: 'theorem shortRootParameterFormula_graded_conjugation (τ : F →+* F) (u : Fˣ) (a : F) (w : Carrier F) :\n    rootDiagonalFormula (fun r => (shortRootGradingWeight u (Units.map τ.toMonoidHom u) r)⁻¹)\n        (shortRootParameterFormula τ a (rootDiagonalFormula (shortRootGradingWeight u (Units.map τ.toMonoidHom u)) w)) =\n      shortRootParameterFormula τ ((u : F) * a) w :=\n  by\n  have hu : (u : F) ≠ 0 := Units.ne_zero u\n  have hv : τ (u : F) ≠ 0 := Units.ne_zero (Units.map τ.toMonoidHom u)\n  apply Prod.ext\n  · funext i\n    fin_cases i <;>\n          simp [rootDiagonalFormula, shortRootParameterFormula, shortRootGradingWeight, shortRootGrade,\n            torusConstantExponents, torusThetaExponents, Units.val_zpow_eq_zpow_val, map_mul] <;>\n        field_simp [hu, hv] <;>\n      ring\n  · funext i j\n    fin_cases i <;> fin_cases j <;>\n          simp [rootDiagonalFormula, shortRootParameterFormula, shortRootGradingWeight, shortRootGrade,\n            torusConstantExponents, torusThetaExponents, Units.val_zpow_eq_zpow_val, map_mul] <;>\n        field_simp [hu, hv] <;>\n      ring' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean:33:1: automatically included section variable(s) unused in theorem `Atlas.ReeF4.shortRootCenterFormula_graded_conjugation`:\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean:47:30: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean:53:30: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean:32:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 3000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean:47:30: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean:53:30: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean:33:1: 'theorem shortRootCenterFormula_graded_conjugation (τ : F →+* F) (u : Fˣ) (huu : τ (τ (u : F)) = (u : F) ^ 2) (b : F)\n    (w : Carrier F) :\n    rootDiagonalFormula (fun r => (shortRootGradingWeight u (Units.map τ.toMonoidHom u) r)⁻¹)\n        (shortRootCenterFormula τ b (rootDiagonalFormula (shortRootGradingWeight u (Units.map τ.toMonoidHom u)) w)) =\n      shortRootCenterFormula τ ((u : F) * τ (u : F) * b) w :=\n  by\n  have hu : (u : F) ≠ 0 := Units.ne_zero u\n  have hv : τ (u : F) ≠ 0 := Units.ne_zero (Units.map τ.toMonoidHom u)\n  apply Prod.ext\n  · funext i\n    fin_cases i <;>\n          simp [rootDiagonalFormula, shortRootCenterFormula, shortRootGradingWeight, shortRootGrade,\n            torusConstantExponents, torusThetaExponents, Units.val_zpow_eq_zpow_val, map_mul, huu] <;>\n        field_simp [hu, hv] <;>\n      ring\n  · funext i j\n    fin_cases i <;> fin_cases j <;>\n          simp [rootDiagonalFormula, shortRootCenterFormula, shortRootGradingWeight, shortRootGrade,\n            torusConstantExponents, torusThetaExponents, Units.val_zpow_eq_zpow_val, map_mul, huu] <;>\n        field_simp [hu, hv] <;>\n      ring' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean:34:43: missing space in the source\n\nThis part of the code\n  'F)^2) (b'\nshould be written as\n  'F) ^ 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.ReeF4.RootGroupConjugation transitive imports (legacy)",
+       "bd0f8d1d518446be"],
+      ["Atlas.LinearGroups.ReeF4.RootGroupConjugation:importAllArts",
+       "22aaf14e5efc8439"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/ReeF4/RootGroupTorusFormulas.lean",
+   "b71ac8ab8a3704c1"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.ReeF4.RootGroupTorusFormulas",
+   "ae7bf1f4088aaa66"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "d7837d92925640d4"}

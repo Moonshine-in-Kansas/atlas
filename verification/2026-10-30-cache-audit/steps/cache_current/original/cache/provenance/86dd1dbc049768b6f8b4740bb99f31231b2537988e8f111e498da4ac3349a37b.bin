@@ -1,0 +1,81 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["a4c0388f7e48fb90.olean"],
+  "m": false,
+  "i": "c9d2480c3defe8ab.ilean",
+  "c": "8cd2a2ade314c859.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/QuartetGlobalTransitivity.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/QuartetGlobalTransitivity.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/QuartetGlobalTransitivity.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/QuartetGlobalTransitivity.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/QuartetGlobalTransitivity.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/QuartetGlobalTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetGlobalTransitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetGlobalTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetGlobalTransitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nEvery intrinsic quartet is an image of the reference row under the actual generated lattice group. -/\ntheorem generated_quartet_transport (Q : Set MinimalCross) (hQ : IsQuartet Q) :\n    ∃ g : generatedGaussianGroup, gaussianImage g.val (coordinateRowFrame (rowLabel 0)) = Q :=\n  by\n  obtain ⟨c, hc, hcQ⟩ := isQuartet_contains_couple Q hQ\n  obtain ⟨g, hg⟩ := generated_couple_transport c hc\n  have hQ' : IsQuartet (gaussianImage g.val⁻¹ Q) := (isQuartet_gaussianImage g.val⁻¹ Q).mpr hQ\n  have hcQ' : referenceCouple ⊆ gaussianImage g.val⁻¹ Q :=\n    by\n    have h := Set.image_mono (f := fun z : MinimalCross => g.val⁻¹ • z) hcQ\n    change gaussianImage g.val⁻¹ c ⊆ gaussianImage g.val⁻¹ Q at h\n    rwa [← hg, gaussianImage_inv] at h\n  obtain ⟨a, ha⟩ := coupleFusion_reference_quartet_transport _ hQ' hcQ'\n  refine ⟨⟨g.val * a.val, generatedGaussianGroup.mul_mem g.prop (coupleFusionGroup_le_generated a.prop)⟩, ?_⟩\n  change gaussianImage (g.val * a.val) _ = Q\n  rw [gaussianImage_mul, ha, gaussianImage_inv_right]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetGlobalTransitivity.lean:6:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetGlobalTransitivity.lean:18:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetGlobalTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetGlobalTransitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem generated_quartet_transitive (Q R : Set MinimalCross) (hQ : IsQuartet Q)\n    (hR : IsQuartet R) : ∃ g : generatedGaussianGroup, gaussianImage g.val Q = R :=\n  by\n  obtain ⟨g, hg⟩ := generated_quartet_transport Q hQ\n  obtain ⟨h, hh⟩ := generated_quartet_transport R hR\n  refine ⟨h * g⁻¹, ?_⟩\n  change gaussianImage (h.val * g.val⁻¹) Q = R\n  rw [gaussianImage_mul, ← hg, gaussianImage_inv, hh]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetGlobalTransitivity.lean:22:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetGlobalTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetGlobalTransitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetGlobalTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/QuartetGlobalTransitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.QuartetLocalTransitivity transitive imports (legacy)",
+       "b8e2161ea4dbd046"],
+      ["Atlas.Rudvalis.QuartetLocalTransitivity:importAllArts",
+       "67780211c25cf402"],
+      ["Atlas.Rudvalis.QuartetCoupleSelection transitive imports (legacy)",
+       "909b7cc91f83e8d9"],
+      ["Atlas.Rudvalis.QuartetCoupleSelection:importAllArts",
+       "2b0b030c8e936604"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/QuartetGlobalTransitivity.lean",
+   "6d54ee4ef87366e0"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.QuartetGlobalTransitivity", "b02893bc0e3d8cc5"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "4a0573fca3609bc0"}

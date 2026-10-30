@@ -1,0 +1,67 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["1f1e3756096f63c8.olean"],
+  "m": false,
+  "i": "339d38c89cf2af24.ilean",
+  "c": "4e88bc6fbc198aaf.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Conway/EisensteinBalancedNineCoordinateAction.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/EisensteinBalancedNineCoordinateAction.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/EisensteinBalancedNineCoordinateAction.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Conway/EisensteinBalancedNineCoordinateAction.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Conway/EisensteinBalancedNineCoordinateAction.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Conway/EisensteinBalancedNineCoordinateAction.lean:12:44: missing space in the source\n\nThis part of the code\n  'i,c.val.val'\nshould be written as\n  'i, c.val.val'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinBalancedNineCoordinateAction.lean:12:68: missing space in the source\n\nThis part of the code\n  'i)=d.val.val'\nshould be written as\n  'i) = d.val.val'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinBalancedNineCoordinateAction.lean:56:10: This simp argument is unused:\n  eisensteinPermutation\n\nHint: Omit it from the simp argument list.\n  [apply] simp [eisensteinBalancedNineParameterVector, eisensteinBalancedNineParameterLift, Pi.smul_apply, smul_eq_mul,\n    eisensteinBalancedNinePhaseWord, eisensteinBalancedNinePermutedPhase, his, his', hi, hc]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinBalancedNineCoordinateAction.lean:61:10: This simp argument is unused:\n  eisensteinPermutation\n\nHint: Omit it from the simp argument list.\n  [apply] simp [eisensteinBalancedNineParameterVector, eisensteinBalancedNineParameterLift, Pi.smul_apply, smul_eq_mul,\n    hz, hz', hi, ternarySignedLift, show (0 : ZMod 3) ≠ 2 by decide]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinBalancedNineCoordinateAction.lean:50:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinBalancedNineCoordinateAction.lean:38:44: missing space in the source\n\nThis part of the code\n  'i,c.val.val'\nshould be written as\n  'i, c.val.val'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinBalancedNineCoordinateAction.lean:38:68: missing space in the source\n\nThis part of the code\n  'i)=d.val.val'\nshould be written as\n  'i) = d.val.val'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinBalancedNineCoordinateAction.lean:40:72: missing space in the source\n\nThis part of the code\n  'j.val=k.val)'\nshould be written as\n  'j.val = k.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Conway.EisensteinBalancedNinePhaseAction transitive imports (legacy)",
+       "5fcd418864d9217a"],
+      ["Atlas.Conway.EisensteinBalancedNinePhaseAction:importAllArts",
+       "8ff21d1b92f5dee3"],
+      ["Atlas.Codes.TernaryBalancedOutsideAction transitive imports (legacy)",
+       "79962ed2d4b701f0"],
+      ["Atlas.Codes.TernaryBalancedOutsideAction:importAllArts",
+       "02affabc19d0275a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Conway/EisensteinBalancedNineCoordinateAction.lean",
+   "436965c19dd92843"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Conway.EisensteinBalancedNineCoordinateAction",
+   "52b14088206d7b88"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "be2252672a8a0c3e"}

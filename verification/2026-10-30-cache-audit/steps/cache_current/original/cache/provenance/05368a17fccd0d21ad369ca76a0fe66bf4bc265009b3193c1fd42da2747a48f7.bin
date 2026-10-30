@@ -1,0 +1,50 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["cabf92961f8e99ec.olean"],
+  "m": false,
+  "i": "1b56cae615c2dfd9.ilean",
+  "c": "65f8c06b82371a40.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FrameExchangePower.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FrameExchangePower.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FrameExchangePower.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FrameExchangePower.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FrameExchangePower.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FrameExchangePower.lean:9:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameExchangePower.lean:7:1: 'theorem frameSign_raw_formula (v : RationalSpace) (j : SeedCoordinate) :\n    seedTransportLinear.symm (frameSign v) j =\n      if j.1 = 0 ∨ j.1 = 4 ∨ j.1 = 5 then seedTransportLinear.symm v j else -seedTransportLinear.symm v j :=\n  by\n  obtain ⟨w, rfl⟩ := seedTransportLinear.surjective v\n  rw [frameSign_transport]\n  simp' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameExchangePower.lean:22:15: This simp argument is unused:\n  Int.cast_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Int.cast_neg, Int.cast_one, neg_one_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameExchangePower.lean:22:41: This simp argument is unused:\n  Int.cast_one\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Int.cast_mul, Int.cast_neg, neg_one_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FramePowerCertificate transitive imports (legacy)",
+       "22a26ff5e1901d7e"],
+      ["Atlas.Rudvalis.FramePowerCertificate:importAllArts",
+       "dfaf5bb324e1b412"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FrameExchangePower.lean",
+   "3293f2ec83708a97"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FrameExchangePower", "2a92e5501a137fd1"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "f1c335ef81e60589"}

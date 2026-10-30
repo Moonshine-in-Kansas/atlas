@@ -1,0 +1,61 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["33d091499c361aed.olean"],
+  "m": false,
+  "i": "d0cc99d68c5ad9af.ilean",
+  "c": "77ea5f413498e557.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearAlgebra/QuadraticSiegel.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearAlgebra/QuadraticSiegel.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearAlgebra/QuadraticSiegel.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearAlgebra/QuadraticSiegel.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearAlgebra/QuadraticSiegel.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearAlgebra/QuadraticSiegel.lean:52:70: This simp argument is unused:\n  huw\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [siegel, map_sub, map_add, map_smul, LinearMap.sub_apply, LinearMap.add_apply, LinearMap.smul_apply,\n    smul_eq_mul, huu, huv, hvu, hwu, mul_zero, add_zero, sub_zero, hwv, hq]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/QuadraticSiegel.lean:52:75: This simp argument is unused:\n  hvu\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [siegel, map_sub, map_add, map_smul, LinearMap.sub_apply, LinearMap.add_apply, LinearMap.smul_apply,\n    smul_eq_mul, huu, huv, huw, hwu, mul_zero, add_zero, sub_zero, hwv, hq]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/QuadraticSiegel.lean:88:40: This simp argument is unused:\n  LinearMap.smul_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [siegel, Q.map_smul, map_smul, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/QuadraticSiegel.lean:96:40: This simp argument is unused:\n  LinearMap.add_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [siegel, hq, map_add, map_smul, LinearMap.smul_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/QuadraticSiegel.lean:96:60: This simp argument is unused:\n  LinearMap.smul_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [siegel, hq, map_add, map_smul, LinearMap.add_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/QuadraticSiegel.lean:92:63: missing space in the source\n\nThis part of the code\n  'u=0)\n '\nshould be written as\n  'u = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/QuadraticSiegel.lean:93:27: missing space in the source\n\nThis part of the code\n  'v=0) :'\nshould be written as\n  'v = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearAlgebra.QuadraticHyperbolic transitive imports (legacy)",
+       "b8645780f465676a"],
+      ["Atlas.LinearAlgebra.QuadraticHyperbolic:importAllArts",
+       "1249ee2a136832f6"],
+      ["Mathlib.Tactic.Module transitive imports (legacy)", "b5f83df3ed43bfc6"],
+      ["Mathlib.Tactic.Module:importAllArts", "0733868e493644a5"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearAlgebra/QuadraticSiegel.lean",
+   "5f288df651858844"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearAlgebra.QuadraticSiegel", "0c2a81584a1605ff"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "e4c1ec46ca67919a"}

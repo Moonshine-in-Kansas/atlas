@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "id": "j1-whitelaw-j1whitelawfirstorbit",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "ComparisonWork.J1WhitelawFirstOrbit"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Janko1.firstSeedInvolution",
+      "module": "ComparisonWork.J1WhitelawFirstOrbit",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.firstSeedInvolution_ne_one",
+      "module": "ComparisonWork.J1WhitelawFirstOrbit",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.firstSeedInvolution_fixes",
+      "module": "ComparisonWork.J1WhitelawFirstOrbit",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.firstSeed_permutation_square_rigid",
+      "module": "ComparisonWork.J1WhitelawFirstOrbit",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.firstSeed_sign_rigid",
+      "module": "ComparisonWork.J1WhitelawFirstOrbit",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.firstSeed_normalForm_fixes_iff",
+      "module": "ComparisonWork.J1WhitelawFirstOrbit",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.mem_firstSeed_stabilizer_iff",
+      "module": "ComparisonWork.J1WhitelawFirstOrbit",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.card_firstSeed_stabilizer",
+      "module": "ComparisonWork.J1WhitelawFirstOrbit",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.card_firstWhitelawOrbit",
+      "module": "ComparisonWork.J1WhitelawFirstOrbit",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelawOrbitCover",
+      "module": "ComparisonWork.J1WhitelawFirstOrbit",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.whitelawOrbitCover_surjective",
+      "module": "ComparisonWork.J1WhitelawFirstOrbit",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.card_whitelawPoints_le",
+      "module": "ComparisonWork.J1WhitelawFirstOrbit",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "j1whitelawfirstorbit-actual-geometry-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Janko1.isPerfect",
+        "Atlas.Janko1.isSimpleGroup",
+        "Atlas.Sporadic.Janko1.card",
+        "Atlas.Sporadic.Janko1.isSimpleGroup",
+        "Atlas.G2.card_Model",
+        "Atlas.G2.isSimpleGroup"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.G2.Order",
+        "Atlas.LinearGroups.G2.Simplicity",
+        "Atlas.Sporadic.Janko1.Order",
+        "Atlas.Sporadic.Janko1.Simplicity",
+        "Atlas.Sporadic.Janko1.Perfectness",
+        "Atlas.Sporadic.Janko1.WhitelawPointCount",
+        "Atlas.Sporadic.Janko1.WhitelawPointStabilizer",
+        "Atlas.Sporadic.Janko1.WhitelawSextics",
+        "Atlas.Sporadic.Janko1.PSL2Embedding",
+        "Atlas.Sporadic.Janko1.SexticStabilizer",
+        "Atlas.OrderArithmetic.FixedTables.J1",
+        "ComparisonWork.G2Order",
+        "ComparisonWork.G2Simplicity",
+        "ComparisonWork.J1Order",
+        "ComparisonWork.J1Simplicity",
+        "ComparisonWork.J1Perfectness",
+        "ComparisonWork.J1WhitelawPointCount",
+        "ComparisonWork.J1WhitelawPointStabilizer",
+        "ComparisonWork.J1WhitelawSextics",
+        "ComparisonWork.J1PSL2Embedding",
+        "ComparisonWork.J1SexticStabilizer"
+      ],
+      "module_allowlists": [
+        {
+          "prefix": "Atlas.Sporadic.Janko1.",
+          "modules": [
+            "Atlas.Sporadic.Janko1.OctonionBasis",
+            "Atlas.Sporadic.Janko1.Imaginary",
+            "Atlas.Sporadic.Janko1.GeneratorMatrices",
+            "Atlas.Sporadic.Janko1.GeneratorChecks",
+            "Atlas.Sporadic.Janko1.Generators",
+            "Atlas.Sporadic.Janko1.GeneratorActions",
+            "Atlas.Sporadic.Janko1.CoordinateRepresentation",
+            "Atlas.Sporadic.Janko1.Relations"
+          ]
+        },
+        {
+          "prefix": "Atlas.LinearGroups.G2.",
+          "modules": [
+            "Atlas.LinearGroups.G2.Basic"
+          ]
+        },
+        {
+          "prefix": "ComparisonWork.",
+          "modules": [
+            "ComparisonWork.J1SignCoordinates",
+            "ComparisonWork.J1SignGroup",
+            "ComparisonWork.J1SignConjugation",
+            "ComparisonWork.J1SignNormalizer",
+            "ComparisonWork.J1PQComplement",
+            "ComparisonWork.J1Local168",
+            "ComparisonWork.J1ProjectiveGeometry",
+            "ComparisonWork.J1WhitelawPoints",
+            "ComparisonWork.J1WhitelawFirstOrbit"
+          ]
+        }
+      ]
+    }
+  ]
+}

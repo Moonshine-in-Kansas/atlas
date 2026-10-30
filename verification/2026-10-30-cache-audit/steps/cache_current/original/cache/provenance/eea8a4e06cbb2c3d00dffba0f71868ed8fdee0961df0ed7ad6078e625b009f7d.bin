@@ -1,0 +1,80 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["9aaaa1257863633a.olean"],
+  "m": false,
+  "i": "71e2b3b4afa963df.ilean",
+  "c": "37f02c4fedbf108f.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateRowPairCount.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateRowPairCount.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateRowPairCount.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateRowPairCount.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateRowPairCount.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowPairCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowPairCount.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowPairCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowPairCount.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nSplitting the eight real coordinates into a representative and its Gaussian partner. -/\nnoncomputable def coordinatePairSplit (p : Point) (k : Fin 3) (hp : p.val k = 1) : E ≃ { x : E // x k = 0 } × Bit\n    where\n  toFun\n    x :=\n    (⟨x + x k • p.val, by\n        change x k + x k * p.val k = 0\n        rw [hp, mul_one, CharTwo.add_self_eq_zero]⟩,\n      x k)\n  invFun y := y.1.val + y.2 • p.val\n  left_inv\n    x := by\n    change (x + x k • p.val) + x k • p.val = x\n    rw [add_assoc, vector_add_self, add_zero]\n  right_inv\n    y := by\n    rcases y with ⟨⟨x, hx⟩, b⟩\n    have hk : (x + b • p.val) k = b := by\n      change x k + b * p.val k = b\n      rw [hx, hp, mul_one, zero_add]\n    apply Prod.ext\n    · apply Subtype.ext\n      change (x + b • p.val) + (x + b • p.val) k • p.val = x\n      rw [hk, add_assoc, vector_add_self, add_zero]\n    · exact hk`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowPairCount.lean:6:75: missing space in the source\n\nThis part of the code\n  'k=1) :'\nshould be written as\n  'k = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowPairCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowPairCount.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateCross_smul_partner (p : Point) (x : E) (b : Bit) :\n    coordinateCross (p, x + b • p.val) = coordinateCross (p, x) :=\n  by\n  rcases Atlas.Codes.bit_cases b with rfl | rfl\n  · rw [zero_smul, add_zero]\n  · rw [one_smul]\n    simpa only [codeI_coordinate] using coordinateCross_I (p, x)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowPairCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowPairCount.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nEvery predicate on coordinate crosses has exactly two real representatives in each row. -/\ntheorem coordinateRow_predicate_card (p : Point) (P : MinimalCross → Prop) :\n    Nat.card { x : E // P (coordinateCross (p, x)) } = 2 * Nat.card { c : coordinateRowFrame p // P c.val } := by\n  classical\n  obtain ⟨k, hk⟩ := point_has_one p\n  let e := coordinatePairSplit p k hk\n  let f :\n    { x : E // P (coordinateCross (p, x)) } ≃ { y : { x : E // x k = 0 } × Bit // P (coordinateCross (p, y.1.val)) } :=\n    Equiv.subtypeEquiv e\n      (fun x => by\n        change P (coordinateCross (p, x)) ↔ P (coordinateCross (p, x + x k • p.val))\n        rw [coordinateCross_smul_partner])\n  let h :\n    { y : { x : E // x k = 0 } × Bit // P (coordinateCross (p, y.1.val)) } ≃\n      { x : { x : E // x k = 0 } // P (coordinateCross (p, x.val)) } × Bit :=\n    { toFun := fun y => (⟨y.val.1, y.prop⟩, y.val.2)\n      invFun := fun y => ⟨(y.1.val, y.2), y.1.prop⟩\n      left_inv := by intro y; rfl\n      right_inv := by intro y; rfl }\n  let j : { x : { x : E // x k = 0 } // P (coordinateCross (p, x.val)) } ≃ { c : coordinateRowFrame p // P c.val } :=\n    Equiv.subtypeEquiv (coordinateRowParamEquiv p k hk) (fun _ => Iff.rfl)\n  rw [Nat.card_congr f, Nat.card_congr h, Nat.card_prod, Nat.card_congr j]\n  have hb : Nat.card Bit = 2 := by simp [Nat.card_eq_fintype_card, Bit, ZMod.card]\n  rw [hb, Nat.mul_comm]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowPairCount.lean:34:66: missing space in the source\n\nThis part of the code\n  'MinimalCross→Prop)'\nshould be written as\n  'MinimalCross → Prop)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowPairCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowPairCount.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowPairCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowPairCount.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateCrossRows transitive imports (legacy)",
+       "5b907ae8c61bf8ba"],
+      ["Atlas.Rudvalis.CoordinateCrossRows:importAllArts",
+       "f9c104537d1cbc62"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateRowPairCount.lean",
+   "c178fc95a63a96ab"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateRowPairCount", "8e00be45cf1cf2a5"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "a018191ece27e9bb"}

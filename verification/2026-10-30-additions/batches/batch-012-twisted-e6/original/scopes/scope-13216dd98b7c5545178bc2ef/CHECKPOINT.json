@@ -1,0 +1,86 @@
+{
+  "id": "staged-FixedBruhat",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.TwistedE6.FixedBruhat"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6DiagramFixedWeyl",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedBruhat"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedWeylCell_index_fixed",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedBruhat"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedGroup_existsUnique_cell",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedBruhat"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedCellInGroup",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedBruhat"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedCellInGroupEquiv",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedBruhat"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedBruhatEquiv",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedBruhat"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedBruhatEquiv_val",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedBruhat"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedBruhatCoordinatesEquiv",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedBruhat"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedSubgroup_card_weightedSum",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedBruhat"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-FixedBruhat-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-FixedBruhat-no-inherited-cell-order",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.positiveWitnessed_doubleCell_card",
+        "Atlas.Chevalley.selectedWeightCompanionPositive_card",
+        "Atlas.Chevalley.selectedWeightCompanionPositiveTorusJoin_card"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

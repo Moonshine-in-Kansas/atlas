@@ -1,0 +1,79 @@
+{
+  "id": "staged-OrbitNormalForm",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.OrbitNormalForm"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveParameterEquiv",
+      "kind": "definition",
+      "module": "FamilyWork.OrbitNormalForm"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6OrbitLiftFactor",
+      "kind": "definition",
+      "module": "FamilyWork.OrbitNormalForm"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6OrbitLiftProduct",
+      "kind": "definition",
+      "module": "FamilyWork.OrbitNormalForm"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6OrbitLiftProduct_val",
+      "kind": "theorem",
+      "module": "FamilyWork.OrbitNormalForm"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6OrbitLiftProductEquiv",
+      "kind": "definition",
+      "module": "FamilyWork.OrbitNormalForm"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6OrbitLiftProductEquiv_apply",
+      "kind": "theorem",
+      "module": "FamilyWork.OrbitNormalForm"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6OrbitLiftProduct_injective",
+      "kind": "theorem",
+      "module": "FamilyWork.OrbitNormalForm"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6OrbitLiftProduct_surjective",
+      "kind": "theorem",
+      "module": "FamilyWork.OrbitNormalForm"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-OrbitNormalForm-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-OrbitNormalForm-no-inherited-positive-order",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.selectedWeightCompanionPositive_card",
+        "Atlas.Chevalley.positiveWitnessedWeightCompanionSubgroup_card"
+      ]
+    }
+  ]
+}

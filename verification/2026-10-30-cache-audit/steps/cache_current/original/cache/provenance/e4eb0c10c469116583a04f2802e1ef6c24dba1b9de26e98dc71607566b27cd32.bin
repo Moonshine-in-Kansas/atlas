@@ -1,0 +1,147 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["b78141a3ecc10b8d.olean"],
+  "m": false,
+  "i": "8c68a561b100c6f9.ilean",
+  "c": "55f4106aaa9c2f9d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateQuartetInjection.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateQuartetInjection.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateQuartetInjection.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateQuartetInjection.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateQuartetInjection.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem dot_value_exists (a : Point) (δ : Bit) : ∃ x : E, dot a.val x = δ :=\n  by\n  obtain ⟨k, hk⟩ := point_has_one a\n  refine ⟨δ • (basisPoint k).val, ?_⟩\n  rw [dot_smul_right, dot_comm a.val, dot_basisPoint, hk, mul_one]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinatePlaneSlice_nonempty (p a : Point) (δ : Bit) :\n    (coordinatePlaneSlice p a δ).Nonempty :=\n  by\n  obtain ⟨x, hx⟩ := dot_value_exists a δ\n  exact ⟨coordinateCross (p, x), x, hx, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:10:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinatePlaneQuartetFromParameters_rows\n    (v : CoordinatePlaneQuartetParameters) (p : Point) :\n    (∃ c, c ∈ coordinatePlaneQuartetFromParameters v ∧ c ∈ coordinateRowFrame p) ↔ p ∈ v.1.val :=\n  by\n  constructor\n  · rintro ⟨c, ⟨q, hq⟩, hp⟩\n    have he : p = q.val := by\n      by_contra hn\n      exact Set.disjoint_left.mp (coordinateRowFrame_disjoint hn) hp (coordinatePlaneSlice_subset _ _ _ hq)\n    rw [he]\n    exact q.prop\n  · intro hp\n    obtain ⟨c, hc⟩ := coordinatePlaneSlice_nonempty p (coordinateRowPairNormal v.1) (v.2 ⟨p, hp⟩)\n    exact ⟨c, ⟨⟨p, hp⟩, hc⟩, coordinatePlaneSlice_subset _ _ _ hc⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:14:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinatePlaneQuartetFromParameters_injective :\n    Function.Injective coordinatePlaneQuartetFromParameters :=\n  by\n  rintro ⟨s, f⟩ ⟨t, g⟩ h\n  have hst : s = t := by\n    apply Subtype.ext\n    apply Finset.ext\n    intro p\n    rw [← coordinatePlaneQuartetFromParameters_rows ⟨s, f⟩ p, ← coordinatePlaneQuartetFromParameters_rows ⟨t, g⟩ p, h]\n  subst t\n  have hfg : f = g := by\n    funext p\n    obtain ⟨x, hx⟩ := dot_value_exists (coordinateRowPairNormal s) (f p)\n    have hc : coordinateCross (p.val, x) ∈ coordinatePlaneQuartetFromParameters ⟨s, f⟩ := ⟨p, x, hx, rfl⟩\n    rw [h] at hc\n    obtain ⟨q, hq⟩ := hc\n    have hpq : p = q := by\n      apply Subtype.ext\n      by_contra hn\n      exact\n        Set.disjoint_left.mp (coordinateRowFrame_disjoint hn)\n          (show coordinateCross (p.val, x) ∈ coordinateRowFrame p.val from ⟨x, rfl⟩)\n          (coordinatePlaneSlice_subset _ _ _ hq)\n    subst q\n    have hy :=\n      (coordinatePlaneSlice_mem p.val (coordinateRowPairNormal s) (coordinateRowPairNormal_spec s p.val p.prop) (g p)\n            x).mp\n        hq\n    exact hx.symm.trans hy\n  subst g\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:28:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinatePlaneQuartetFromParameters_range_card :\n    Nat.card (Set.range coordinatePlaneQuartetFromParameters) = 84 :=\n  by\n  rw [←\n    Nat.card_congr\n      (Equiv.ofInjective coordinatePlaneQuartetFromParameters coordinatePlaneQuartetFromParameters_injective)]\n  exact coordinatePlaneQuartetParameters_card`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:58:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateRowFrame_injective : Function.Injective coordinateRowFrame :=\n  by\n  intro p q h\n  by_contra hn\n  have hp : coordinateCross (p, 0) ∈ coordinateRowFrame p := ⟨0, rfl⟩\n  exact Set.disjoint_left.mp (coordinateRowFrame_disjoint hn) hp (h ▸ hp)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateRowFrame_ne_planeQuartet (p : Point)\n    (v : CoordinatePlaneQuartetParameters) : coordinateRowFrame p ≠ coordinatePlaneQuartetFromParameters v :=\n  by\n  intro h\n  have hs : ∀ q ∈ v.1.val, q = p := by\n    intro q hq\n    obtain ⟨c, hc, hcq⟩ := (coordinatePlaneQuartetFromParameters_rows v q).mpr hq\n    rw [← h] at hc\n    by_contra hn\n    exact Set.disjoint_left.mp (coordinateRowFrame_disjoint hn) hcq hc\n  have hsub : v.1.val ⊆ { p } := by intro q hq; simpa using hs q hq\n  have hcard := Finset.card_le_card hsub\n  rw [v.1.prop, Finset.card_singleton] at hcard\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def coordinateQuartetConstruction :\n    Point ⊕ CoordinatePlaneQuartetParameters → Set MinimalCross :=\n  Sum.elim coordinateRowFrame coordinatePlaneQuartetFromParameters`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:81:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateQuartetConstruction_injective :\n    Function.Injective coordinateQuartetConstruction :=\n  by\n  intro a b h\n  cases a with\n  | inl p =>\n    cases b with\n    | inl q => exact congrArg Sum.inl (coordinateRowFrame_injective h)\n    | inr v => exact False.elim (coordinateRowFrame_ne_planeQuartet p v h)\n  | inr v =>\n    cases b with\n    | inl p => exact False.elim (coordinateRowFrame_ne_planeQuartet p v h.symm)\n    | inr w => exact congrArg Sum.inr (coordinatePlaneQuartetFromParameters_injective h)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:84:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nNinety-one distinct actual intrinsic coordinate quartets, before the exhaustion theorem. -/\ntheorem coordinateQuartetConstruction_card : Nat.card (Set.range coordinateQuartetConstruction) = 91 :=\n  by\n  rw [← Nat.card_congr (Equiv.ofInjective coordinateQuartetConstruction coordinateQuartetConstruction_injective),\n    Nat.card_sum, coordinatePlaneQuartetParameters_card]\n  have hp : Nat.card Point = 7 := by rw [Nat.card_eq_fintype_card]; decide +kernel\n  rw [hp]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:97:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:98:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateQuartetConstruction_isQuartet\n    (v : Point ⊕ CoordinatePlaneQuartetParameters) : IsQuartet (coordinateQuartetConstruction v) := by\n  cases v with\n  | inl p => exact coordinateRowFrame_isQuartet p\n  | inr v => exact coordinatePlaneQuartetFromParameters_isQuartet v`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetInjection.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateQuartetParameters transitive imports (legacy)",
+       "96b16014f33b1770"],
+      ["Atlas.Rudvalis.CoordinateQuartetParameters:importAllArts",
+       "280d40e2d8385a2c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateQuartetInjection.lean",
+   "2df87e8e90ede203"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateQuartetInjection",
+   "bd1854121ebeddc2"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "709db6bd58e1464d"}

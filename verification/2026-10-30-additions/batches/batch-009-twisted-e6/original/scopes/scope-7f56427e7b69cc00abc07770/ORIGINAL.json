@@ -1,0 +1,154 @@
+{
+  "id": "staged-FixedBorel",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.FixedBorel"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6Torus_le_positiveNormalizer",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6Positive_disjoint_torus",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveTorusJoin_existsUnique",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6TorusSubgroup_twist_mem",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveTorusJoin_twist_mem",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveTorusProduct_fixed_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedBorel",
+      "kind": "definition",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.mem_companionFixedBorel_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionPositiveFixed_le_fixedBorel",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedTorus_le_fixedBorel",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedBorel_eq_sup",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionPositiveFixed_disjoint_fixedTorus",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedTorus_le_positiveFixedNormalizer",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionPositiveFixed_normal_in_fixedBorel",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionPositiveFixedTorusAction",
+      "kind": "definition",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedBorelMulEquiv",
+      "kind": "definition",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedBorelMulEquiv_val",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedBorel_existsUnique",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedBorelEquiv",
+      "kind": "definition",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedBorelEquiv_val",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedBorel_card",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedBorel"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-FixedBorel-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-FixedBorel-no-inherited-positive-order",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.selectedWeightCompanionPositive_card",
+        "Atlas.Chevalley.positiveWitnessedWeightCompanionSubgroup_card"
+      ]
+    },
+    {
+      "id": "staged-FixedBorel-no-inherited-factor-count",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.selectedWeightCompanionTorus_card",
+        "Atlas.Chevalley.weightCompanionTorus_card",
+        "Atlas.Chevalley.selectedWeightCompanionPositiveTorusJoin_card",
+        "Atlas.Chevalley.positiveWitnessedTorusJoin_card"
+      ]
+    }
+  ]
+}

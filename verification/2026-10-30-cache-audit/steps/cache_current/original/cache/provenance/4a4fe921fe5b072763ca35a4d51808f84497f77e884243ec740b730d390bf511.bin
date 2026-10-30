@@ -1,0 +1,67 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["00d332a36bd91750.olean"],
+  "m": false,
+  "i": "59e8b09f392430e8.ilean",
+  "c": "b1353d1b131660be.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Conway/McLEndpointInterchange.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/McLEndpointInterchange.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/McLEndpointInterchange.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Conway/McLEndpointInterchange.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Conway/McLEndpointInterchange.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Conway/McLEndpointInterchange.lean:18:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/McLEndpointInterchange.lean:19:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/McLEndpointInterchange.lean:20:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/McLEndpointInterchange.lean:21:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/McLEndpointInterchange.lean:44:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/McLEndpointInterchange.lean:58:43: This simp argument is unused:\n  Finset.sum_add_distrib\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [integerDot, Pi.sub_apply, Finset.sum_sub_distrib, Finset.mul_sum]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/McLEndpointInterchange.lean:59:10: This simp argument is unused:\n  Finset.sum_sub_distrib\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [integerDot, Pi.sub_apply, Finset.sum_add_distrib, Finset.mul_sum]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/McLEndpointInterchange.lean:32:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Conway.McLModel transitive imports (legacy)", "6418732dfb6d9b2c"],
+      ["Atlas.Conway.McLModel:importAllArts", "11fc9d8aea7c8fd7"],
+      ["Atlas.GroupTheory.OrbitSection transitive imports (legacy)",
+       "db8f438135634ea0"],
+      ["Atlas.GroupTheory.OrbitSection:importAllArts", "f04e306cb444d245"],
+      ["Atlas.LinearAlgebra.ConstantGramBound transitive imports (legacy)",
+       "1d11ce9798b6bae5"],
+      ["Atlas.LinearAlgebra.ConstantGramBound:importAllArts",
+       "e87f95005711f8f2"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Conway/McLEndpointInterchange.lean",
+   "7d26821999db3b2a"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Conway.McLEndpointInterchange", "f68bb18bb79dccaa"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "379dce4d13201a1e"}

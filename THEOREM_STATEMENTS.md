@@ -1,7 +1,7 @@
 # Principal compiled theorem statements
 
-These signatures are copied verbatim from the source-bound 26 October compiled
-audit, with implicit parameters and instances visible. See [verification status](AUDIT.md)
+These signatures are copied verbatim from the current source-bound compiled
+audit scopes, with implicit parameters and instances visible. See [verification status](AUDIT.md)
 for the distinction between this cached-artifact audit and a fresh proof rebuild.
 
 <a id="family-cyclic"></a>
@@ -12,7 +12,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Families.Cyclic.card : ∀ (m : Nat),
@@ -22,7 +22,7 @@ Atlas.Families.Cyclic.card : ∀ (m : Nat),
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Families.Cyclic.isSimpleGroup : ∀ (p : Nat),
@@ -41,7 +41,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Families.Alternating.card_factorial : ∀ (n : Nat),
@@ -53,7 +53,7 @@ Atlas.Families.Alternating.card_factorial : ∀ (n : Nat),
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Families.Alternating.isSimpleGroup : ∀ (n : Nat),
@@ -71,7 +71,7 @@ Primary construction: Projective special-linear matrix model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.card_psl_factor.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] (n : Nat)
@@ -105,7 +105,7 @@ Primary construction: Projective special-linear matrix model.
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.psl_simple_iff.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
@@ -136,7 +136,7 @@ Primary construction: Projective special-linear matrix model.
 
 ### Chevalley root-operator model
 
-Order: [compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+Order: [compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Chevalley.Catalogue.A_order.{u_1} : ∀ (r : Nat)
@@ -167,7 +167,7 @@ Atlas.Chevalley.Catalogue.A_order.{u_1} : ∀ (r : Nat)
             (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
 ```
 
-Simple: [compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+Simple: [compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Chevalley.Catalogue.A_simple.{u_1} : ∀ (r : Nat)
@@ -188,7 +188,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.Unitary.card_psu_factor.{u_1,
@@ -234,7 +234,7 @@ Primary construction: Original concrete model.
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.Unitary.simple_of_good.{u_1,
@@ -274,7 +274,7 @@ Primary construction: Quadratic-form model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.Orthogonal.B_card_all_rank.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
@@ -284,7 +284,7 @@ Primary construction: Quadratic-form model.
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.Orthogonal.B_simple_all_rank.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
@@ -315,7 +315,7 @@ Primary construction: Quadratic-form model.
 
 ### Chevalley root-operator model
 
-Order: [compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+Order: [compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Chevalley.Catalogue.B_order.{u_1} : ∀ (n : Nat)
@@ -354,7 +354,7 @@ Atlas.Chevalley.Catalogue.B_order.{u_1} : ∀ (n : Nat)
             (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
 ```
 
-Simple: [compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+Simple: [compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Chevalley.Catalogue.B_simple.{u_1} : ∀ (n : Nat)
@@ -378,7 +378,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.SuzukiFamily.card_group.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
@@ -413,7 +413,7 @@ Primary construction: Original concrete model.
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.SuzukiFamily.simple_of_large.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
@@ -452,7 +452,7 @@ Primary construction: Symplectic matrix model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.Symplectic.card_psp.{u_1} : ∀ {n : Nat} {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F],
@@ -467,7 +467,7 @@ Primary construction: Symplectic matrix model.
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.Symplectic.simple_of_good.{u_1} : ∀ {n : Nat} {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F],
@@ -484,7 +484,7 @@ Primary construction: Symplectic matrix model.
 
 ### Chevalley root-operator model
 
-Order: [compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+Order: [compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Chevalley.Catalogue.C_order.{u_1} : ∀ (n : Nat)
@@ -523,7 +523,7 @@ Atlas.Chevalley.Catalogue.C_order.{u_1} : ∀ (n : Nat)
             (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
 ```
 
-Simple: [compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+Simple: [compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Chevalley.Catalogue.C_simple.{u_1} : ∀ (n : Nat)
@@ -547,7 +547,7 @@ Primary construction: Quadratic-form model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.Orthogonal.DPlus_card.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F] (n : Nat),
@@ -558,7 +558,7 @@ Primary construction: Quadratic-form model.
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.Orthogonal.DPlus_simple.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] (n : Nat),
@@ -578,7 +578,7 @@ Primary construction: Quadratic-form model.
 
 ### Chevalley root-operator model
 
-Order: [compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+Order: [compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Chevalley.Catalogue.D_order.{u_1} : ∀ (r : Nat)
@@ -622,7 +622,7 @@ Atlas.Chevalley.Catalogue.D_order.{u_1} : ∀ (r : Nat)
             (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
 ```
 
-Simple: [compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+Simple: [compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Chevalley.Catalogue.D_simple.{u_1} : ∀ (r : Nat)
@@ -643,7 +643,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.Orthogonal.Minus.family_order.{u_1,
@@ -681,7 +681,7 @@ Primary construction: Original concrete model.
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.Orthogonal.Minus.family_simple.{u_1,
@@ -763,7 +763,7 @@ Primary construction: Original concrete model.
 
 ### Uniform order, n ≥ 2
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz) · [Passed audit (27 Sep)](verification/runs/minus-orthogonal-rank-three-all-ranks-order/20260927T013845-635/CERTIFICATE.md).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz) · [Passed audit (27 Sep)](verification/runs/minus-orthogonal-rank-three-all-ranks-order/20260927T013845-635/CERTIFICATE.md).
 
 ```lean
 @Atlas.Orthogonal.Minus.family_order_all.{u_1,
@@ -801,7 +801,7 @@ Primary construction: Original concrete model.
 
 ### Uniform simplicity, n ≥ 2
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz) · [Passed audit (27 Sep)](verification/runs/minus-orthogonal-rank-three-all-ranks-simplicity/20260927T013328-843/CERTIFICATE.md).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz) · [Passed audit (27 Sep)](verification/runs/minus-orthogonal-rank-three-all-ranks-simplicity/20260927T013328-843/CERTIFICATE.md).
 
 ```lean
 @Atlas.Orthogonal.Minus.family_simple_all.{u_1,
@@ -889,7 +889,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Triality.card_group.{u_1,
@@ -940,7 +940,7 @@ Atlas.Triality.card_group.{u_1,
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Triality.simple.{u_1,
@@ -1051,7 +1051,7 @@ Primary construction: Chevalley root-operator model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Chevalley.Catalogue.E6_order.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K],
@@ -1104,7 +1104,7 @@ Atlas.Chevalley.Catalogue.E6_order.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Chevalley.Catalogue.E6_simple.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K],
@@ -1120,7 +1120,7 @@ Primary construction: Chevalley root-operator model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Chevalley.Catalogue.E7_order.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K],
@@ -1179,7 +1179,7 @@ Atlas.Chevalley.Catalogue.E7_order.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Chevalley.Catalogue.E7_simple.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K],
@@ -1195,7 +1195,7 @@ Primary construction: Chevalley root-operator model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Chevalley.Catalogue.E8_order.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K],
@@ -1256,7 +1256,7 @@ Atlas.Chevalley.Catalogue.E8_order.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Chevalley.Catalogue.E8_simple.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K],
@@ -1272,7 +1272,7 @@ Primary construction: Split-Albert model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.F4.card_Model.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F],
@@ -1308,7 +1308,7 @@ Primary construction: Split-Albert model.
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.F4.isSimple.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [Finite.{u_1 + 1} F],
@@ -1466,7 +1466,50 @@ Primary construction: Split-Albert model.
 
 ### Chevalley root-operator model
 
-[Concrete-model Lean certificate](verification/existence/2026-10-25-draft/Chevalley-F4/Solution.lean) · [exact mathematical specification](verification/existence/2026-10-25-draft/Chevalley-F4/Challenge.lean).
+Order: [compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.F4_order.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.F4FieldDomain.{u_1} K inst →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.Chevalley.Catalogue.F4.{u_1} K inst))
+      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+              (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 24) (instOfNatNat (nat_lit 24))))
+              (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+                (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                  (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                  (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))))
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+            (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+              (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+                (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 8) (instOfNatNat (nat_lit 8))))
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 6) (instOfNatNat (nat_lit 6))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+          (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+            (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) (Nat.card.{u_1} K)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+```
+
+Simple: [compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.F4_simple.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.F4FieldDomain.{u_1} K inst →
+    @IsSimpleGroup.{u_1} (@Atlas.Chevalley.Catalogue.F4.{u_1} K inst) (@Atlas.Chevalley.Catalogue.F4Group.{u_1} K inst)
+```
+
+[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-f4-to-albert-v1) · [`Atlas.Chevalley.Catalogue.F4_identification`](Atlas/LinearGroups/Chevalley/Catalogue/F4Identification.lean#L13).
 
 <a id="exceptional-tits"></a>
 
@@ -1476,7 +1519,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Tits.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Tits.Model)
@@ -1485,7 +1528,7 @@ Atlas.Tits.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Tits.Model)
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Tits.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Tits.Model
@@ -1521,7 +1564,7 @@ Primary construction: Split-octonion model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.G2.card_Model.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [Finite.{u_1 + 1} K],
@@ -1545,7 +1588,7 @@ Primary construction: Split-octonion model.
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.G2.isSimple.{u_1} : ∀ {K : Type u_1} [inst : Field.{u_1} K] [Finite.{u_1 + 1} K],
@@ -1616,7 +1659,38 @@ Primary construction: Split-octonion model.
 
 ### Chevalley root-operator model
 
-[Concrete-model Lean certificate](verification/existence/2026-10-25-draft/Chevalley-G2/Solution.lean) · [exact mathematical specification](verification/existence/2026-10-25-draft/Chevalley-G2/Challenge.lean).
+Order: [compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.G2_order.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.G2FieldDomain.{u_1} K inst →
+    @Eq.{1} Nat (Nat.card.{u_1} (@Atlas.Chevalley.Catalogue.G2.{u_1} K inst))
+      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+            (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) (Nat.card.{u_1} K)
+            (@OfNat.ofNat.{0} Nat (nat_lit 6) (instOfNatNat (nat_lit 6))))
+          (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+              (Nat.card.{u_1} K) (@OfNat.ofNat.{0} Nat (nat_lit 6) (instOfNatNat (nat_lit 6))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+          (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+            (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) (Nat.card.{u_1} K)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+```
+
+Simple: [compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
+
+```lean
+Atlas.Chevalley.Catalogue.G2_simple.{u_1} : ∀ (K : Type u_1) [inst : Field.{u_1} K],
+  @Atlas.Chevalley.Catalogue.G2GoodDomain.{u_1} K inst →
+    @IsSimpleGroup.{u_1} (@Atlas.Chevalley.Catalogue.G2.{u_1} K inst) (@Atlas.Chevalley.Catalogue.G2Group.{u_1} K inst)
+```
+
+[Lean isomorphism certificate](catalogue/ISOMORPHISMS.md#chevalley-g2-to-legacy-v1) · [`Atlas.Chevalley.Catalogue.G2_identification`](Atlas/LinearGroups/Chevalley/Catalogue/G2Identification.lean#L15).
 
 <a id="family-reeg2"></a>
 
@@ -1626,7 +1700,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.ReeG2.order.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
@@ -1661,7 +1735,7 @@ Primary construction: Original concrete model.
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 @Atlas.ReeG2.simple.{u_1} : ∀ {F : Type u_1} [inst : Field.{u_1} F] [inst_1 : Finite.{u_1 + 1} F]
@@ -1696,7 +1770,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu11.card : ∀ (D : Atlas.Codes.Dodecad) (a : Atlas.Codes.Mathieu12Points D),
@@ -1705,7 +1779,7 @@ Atlas.Sporadic.Mathieu11.card : ∀ (D : Atlas.Codes.Dodecad) (a : Atlas.Codes.M
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu11.isSimpleGroup : ∀ (D : Atlas.Codes.Dodecad) (a : Atlas.Codes.Mathieu12Points D),
@@ -1726,7 +1800,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu12.card : ∀ (D : Atlas.Codes.Dodecad),
@@ -1735,7 +1809,7 @@ Atlas.Sporadic.Mathieu12.card : ∀ (D : Atlas.Codes.Dodecad),
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu12.isSimpleGroup : ∀ (D : Atlas.Codes.Dodecad),
@@ -1754,7 +1828,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu22.card : ∀ (a : Atlas.Codes.Omega) (b : ↥(Atlas.Codes.Mathieu23Points a)),
@@ -1763,7 +1837,7 @@ Atlas.Sporadic.Mathieu22.card : ∀ (a : Atlas.Codes.Omega) (b : ↥(Atlas.Codes
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu22.isSimpleGroup : ∀ (a : Atlas.Codes.Omega) (b : ↥(Atlas.Codes.Mathieu23Points a)),
@@ -1784,7 +1858,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu23.card : ∀ (a : Atlas.Codes.Omega),
@@ -1793,7 +1867,7 @@ Atlas.Sporadic.Mathieu23.card : ∀ (a : Atlas.Codes.Omega),
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu23.isSimpleGroup : ∀ (a : Atlas.Codes.Omega),
@@ -1812,7 +1886,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu24.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Mathieu24.Model)
@@ -1821,7 +1895,7 @@ Atlas.Sporadic.Mathieu24.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Mathieu
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Mathieu24.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Mathieu24.Model
@@ -1837,7 +1911,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Conway1.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Conway1.Model) Atlas.Sporadic.Conway1.order
@@ -1845,7 +1919,7 @@ Atlas.Sporadic.Conway1.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Conway1.M
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Conway1.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Conway1.Model
@@ -1901,7 +1975,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Conway2.card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Conway2.Model) Atlas.Sporadic.Conway2.order
@@ -1909,7 +1983,7 @@ Atlas.Sporadic.Conway2.card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Conway
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Conway2.isSimpleGroup : @IsSimpleGroup.{0} (↥Atlas.Sporadic.Conway2.Model)
@@ -1965,7 +2039,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Conway3.card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Conway3.Model) Atlas.Sporadic.Conway3.order
@@ -1973,7 +2047,7 @@ Atlas.Sporadic.Conway3.card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Conway
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Conway3.isSimpleGroup : @IsSimpleGroup.{0} (↥Atlas.Sporadic.Conway3.Model)
@@ -2029,7 +2103,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.McLaughlin.card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.McLaughlin.Model)
@@ -2038,7 +2112,7 @@ Atlas.Sporadic.McLaughlin.card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.McL
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.McLaughlin.isSimpleGroup : @IsSimpleGroup.{0} (↥Atlas.Sporadic.McLaughlin.Model)
@@ -2096,7 +2170,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.HigmanSims.card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.HigmanSims.Model)
@@ -2105,7 +2179,7 @@ Atlas.Sporadic.HigmanSims.card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Hig
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.HigmanSims.isSimpleGroup : @IsSimpleGroup.{0} (↥Atlas.Sporadic.HigmanSims.Model)
@@ -2164,7 +2238,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Suzuki.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Suzuki.Model)
@@ -2173,7 +2247,7 @@ Atlas.Sporadic.Suzuki.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Suzuki.Mod
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Suzuki.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Suzuki.Model
@@ -2231,7 +2305,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Janko2.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Janko2.Model)
@@ -2240,7 +2314,7 @@ Atlas.Sporadic.Janko2.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Janko2.Mod
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Janko2.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Janko2.Model
@@ -2332,7 +2406,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Fischer22.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Fischer22.Model)
@@ -2341,7 +2415,7 @@ Atlas.Sporadic.Fischer22.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Fischer
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Fischer22.simple : @IsSimpleGroup.{0} Atlas.Sporadic.Fischer22.Model
@@ -2364,7 +2438,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Fischer23.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Fischer23.Model)
@@ -2373,7 +2447,7 @@ Atlas.Sporadic.Fischer23.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Fischer
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Fischer23.simple : @IsSimpleGroup.{0} Atlas.Sporadic.Fischer23.Model
@@ -2396,7 +2470,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Fischer24Prime.card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic.Fischer24Prime.Model)
@@ -2405,7 +2479,7 @@ Atlas.Sporadic.Fischer24Prime.card : @Eq.{1} Nat (Nat.card.{0} ↥Atlas.Sporadic
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Fischer24Prime.simple : @IsSimpleGroup.{0} (↥Atlas.Sporadic.Fischer24Prime.Model)
@@ -2426,7 +2500,7 @@ Primary construction: Original concrete model.
 
 ### Order
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Rudvalis.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Rudvalis.Model)
@@ -2435,7 +2509,7 @@ Atlas.Sporadic.Rudvalis.card : @Eq.{1} Nat (Nat.card.{0} Atlas.Sporadic.Rudvalis
 
 ### Simple
 
-[Compiled evidence](verification/2026-10-26-cache-audit/full-dependency-extraction.log.gz).
+[Compiled evidence](verification/2026-10-30-cache-audit/full-dependency-extraction.log.gz).
 
 ```lean
 Atlas.Sporadic.Rudvalis.isSimpleGroup : @IsSimpleGroup.{0} Atlas.Sporadic.Rudvalis.Model

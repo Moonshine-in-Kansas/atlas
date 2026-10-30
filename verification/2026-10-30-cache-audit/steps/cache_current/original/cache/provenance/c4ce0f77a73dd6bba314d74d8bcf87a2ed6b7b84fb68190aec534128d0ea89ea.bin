@@ -1,0 +1,95 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["f88d60f8d7b4493e.olean"],
+  "m": false,
+  "i": "fa8c5194b7cc214e.ilean",
+  "c": "8e0cb0a2f78037bb.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean:10:46: missing space in the source\n\nThis part of the code\n  '2≤n) :'\nshould be written as\n  '2 ≤ n)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean:20:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean:30:4: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean:27:29: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [e, hij]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean:16:50: missing space in the source\n\nThis part of the code\n  '2≤n) (x'\nshould be written as\n  '2 ≤ n)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean:17:21: missing space in the source\n\nThis part of the code\n  'x=0) (hxn'\nshould be written as\n  'x = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean:17:33: missing space in the source\n\nThis part of the code\n  'x≠0) :'\nshould be written as\n  'x ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean:47:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean:59:4: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean:56:42: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [e, hij]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean:43:50: missing space in the source\n\nThis part of the code\n  '2≤n) (x'\nshould be written as\n  '2 ≤ n)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean:44:21: missing space in the source\n\nThis part of the code\n  'x=0) (hxn'\nshould be written as\n  'x = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean:44:33: missing space in the source\n\nThis part of the code\n  'x≠0) :'\nshould be written as\n  'x ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean:77:61: missing space in the source\n\nThis part of the code\n  '2≤n) :'\nshould be written as\n  '2 ≤ n)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean:85:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean:86:61: missing space in the source\n\nThis part of the code\n  '2≤n) :'\nshould be written as\n  '2 ≤ n)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Orthogonal.CoordinateRootSubgroups transitive imports (legacy)",
+       "4b38f4cce6105f40"],
+      ["Atlas.LinearGroups.Orthogonal.CoordinateRootSubgroups:importAllArts",
+       "27c5b301727aefce"],
+      ["Atlas.LinearGroups.Orthogonal.RootLineElimination transitive imports (legacy)",
+       "37b51b8f8e6fc2ee"],
+      ["Atlas.LinearGroups.Orthogonal.RootLineElimination:importAllArts",
+       "3bcfae922a650861"],
+      ["Atlas.LinearGroups.Orthogonal.RootGenerationFromLineTransport transitive imports (legacy)",
+       "758d3582fe47e617"],
+      ["Atlas.LinearGroups.Orthogonal.RootGenerationFromLineTransport:importAllArts",
+       "2b3debc10381778a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Orthogonal/CoordinateRootGeneration.lean",
+   "72b6942a4c58670c"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Orthogonal.CoordinateRootGeneration",
+   "5aa5c39ddcd87f67"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "61dae2b9a0f9c686"}

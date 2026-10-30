@@ -1,0 +1,72 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["90a5522481b040e6.olean"],
+  "m": false,
+  "i": "eff373162bc8b710.ilean",
+  "c": "b77ed730f97b0f1e.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/RootData/ClassicalBParabolicOrbit.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/RootData/ClassicalBParabolicOrbit.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/RootData/ClassicalBParabolicOrbit.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/RootData/ClassicalBParabolicOrbit.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/RootData/ClassicalBParabolicOrbit.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBParabolicOrbit.lean:13:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBParabolicOrbit.lean:31:31: This simp argument is unused:\n  Fin.val_mk\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Fin.val_zero] at hv\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBParabolicOrbit.lean:55:21: This simp argument is unused:\n  (baseBIndexEquiv n).injective.eq_iff\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [simple]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBParabolicOrbit.lean:150:20: This simp argument is unused:\n  dot_add_left\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, dot_single_left, Pi.single_apply, hij, Ne.symm hij]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBParabolicOrbit.lean:150:34: This simp argument is unused:\n  dot_single_left\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, dot_add_left, Pi.single_apply, hij, Ne.symm hij]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBParabolicOrbit.lean:150:51: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, dot_add_left, dot_single_left, hij, Ne.symm hij]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBParabolicOrbit.lean:150:73: This simp argument is unused:\n  Ne.symm hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longRoot, dot_add_left, dot_single_left, Pi.single_apply, hij]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBParabolicOrbit.lean:181:64: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [decodeShort, hc, shortRoot, hk]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.RootData.ClassicalBasesBC transitive imports (legacy)",
+       "260e235c06a4d1cc"],
+      ["Atlas.LinearGroups.Chevalley.RootData.ClassicalBasesBC:importAllArts",
+       "ac1f1ceb9d7ab7ad"],
+      ["Atlas.LinearGroups.Chevalley.RootData.DominantFunctionalStabilizer transitive imports (legacy)",
+       "0a1f01c1ad1b7fcc"],
+      ["Atlas.LinearGroups.Chevalley.RootData.DominantFunctionalStabilizer:importAllArts",
+       "357c66dae50670df"],
+      ["Mathlib.SetTheory.Cardinal.Finite transitive imports (legacy)",
+       "0f22d33fdd3e21f3"],
+      ["Mathlib.SetTheory.Cardinal.Finite:importAllArts", "6f293d32afda3c7c"],
+      ["Mathlib.Tactic.Abel transitive imports (legacy)", "6edb1820afd06042"],
+      ["Mathlib.Tactic.Abel:importAllArts", "1e7e83bdd07174a6"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/RootData/ClassicalBParabolicOrbit.lean",
+   "2f12b3b56e1fd207"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.RootData.ClassicalBParabolicOrbit",
+   "168f13246a97991f"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "028ebc6bee1d7bdd"}

@@ -1,0 +1,149 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["b71eaa74bdc7db96.olean"],
+  "m": false,
+  "i": "38909c59496f26b7.ilean",
+  "c": "40ac7eba8f1c9e8c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoupleFourSupportOrbit.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleFourSupportOrbit.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleFourSupportOrbit.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleFourSupportOrbit.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleFourSupportOrbit.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def coupleFourStep (z : Fin 3 × E) : Fin 3 × E :=\n  (coupleFourTransportForm z.1, coupleFourTransportParameters 1 z.1 z.2)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:8:43: missing space in the source\n\nThis part of the code\n  '3×E) :'\nshould be written as\n  '3 × E)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFourStep_state (z : Fin 3 × E) :\n    coupleFourState (coupleFourStep z).1 (coupleFourStep z).2 = coupleSixStatePermutation 1 (coupleFourState z.1 z.2) :=\n  coupleFour_six_state_action 1 z.1 z.2`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:11:39: missing space in the source\n\nThis part of the code\n  '3×E) :'\nshould be written as\n  '3 × E)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFourIterate_state (n : ℕ) (z : Fin 3 × E) :\n    coupleFourState ((coupleFourStep^[n]) z).1 ((coupleFourStep^[n]) z).2 =\n      ((coupleSixStatePermutation 1)^[n]) (coupleFourState z.1 z.2) :=\n  by\n  induction n with\n  | zero => rfl\n  | succ n ih => rw [Function.iterate_succ_apply', Function.iterate_succ_apply', coupleFourStep_state, ih]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:21:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:16:50: missing space in the source\n\nThis part of the code\n  '3×E) :'\nshould be written as\n  '3 × E)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFourState_eq_iff (a b : Fin 3) (m n : E) :\n    coupleFourState a m = coupleFourState b n ↔ a = b ∧ coupleFourParity a m = coupleFourParity b n := by\n  decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFourState_first (a : Fin 3) (m : E) :\n    (coupleFourState a m).val < 2 ↔ a = 0 := by decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleBeta_reduce_iterate (n : ℕ) (z : Fin 3 × E) (w : QuaternaryWord)\n    (hw : reduce w = coupleFourSupport z.1 z.2) :\n    reduce (monomialHom (coupleCodeBeta ^ n).val w) =\n      coupleFourSupport ((coupleFourStep^[n]) z).1 ((coupleFourStep^[n]) z).2 :=\n  by\n  induction n with\n  | zero => simpa using hw\n  | succ n ih =>\n    rw [pow_succ', Subgroup.coe_mul, map_mul]\n    change reduce (monomialAction coupleCodeBeta.val (monomialHom (coupleCodeBeta ^ n).val w)) = _\n    rw [monomialAction_reduce, ih, Function.iterate_succ_apply']\n    exact coupleFourSupport_action 1 _ _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:30:52: missing space in the source\n\nThis part of the code\n  '3×E) (w'\nshould be written as\n  '3 × E)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:31:18: missing space in the source\n\nThis part of the code\n  'w=coupleFourSupport'\nshould be written as\n  'w = coupleFourSupport'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleBeta_pow_fix (n : ℕ) :\n    coupleCodeBeta ^ n • localReferenceCross = localReferenceCross ∧\n      coupleCodeBeta ^ n • referenceSecondCross = referenceSecondCross :=\n  by\n  have hf := coupleCodeBeta_fixes_reference\n  change\n    coupleCodeBeta • localReferenceCross = localReferenceCross ∧\n      coupleCodeBeta • referenceSecondCross = referenceSecondCross at hf\n  induction n with\n  | zero => simp\n  | succ n ih => simp only [pow_succ', mul_smul, ih.1, ih.2, hf.1, hf.2, and_self]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFour_same_class_support_orbit (a b : Fin 3) (m n : E)\n    (hab : a = 0 ↔ b = 0) (w : QuaternaryWord) (hw : reduce w = coupleFourSupport a m) :\n    ∃ g : codeGroup,\n      g • localReferenceCross = localReferenceCross ∧\n        g • referenceSecondCross = referenceSecondCross ∧ reduce (monomialHom g.val w) = coupleFourSupport b n :=\n  by\n  have hs : (coupleFourState a m).val < 2 ↔ (coupleFourState b n).val < 2 := by\n    rw [coupleFourState_first, coupleFourState_first]; exact hab\n  obtain ⟨j, hj⟩ := coupleSixState_beta_connected _ _ hs\n  let z := (coupleFourStep^[j.val]) (a, m)\n  have hz : coupleFourState z.1 z.2 = coupleFourState b n := (coupleFourIterate_state j.val (a, m)).trans hj\n  obtain ⟨hzb, hze⟩ := (coupleFourState_eq_iff _ _ _ _).mp hz\n  have hze' : coupleFourParity b z.2 = coupleFourParity b n := by simpa only [hzb] using hze\n  obtain ⟨B, hB, htrans⟩ := coupleFour_equal_parity_translation b z.2 n hze'\n  obtain ⟨g, hg⟩ := codePermutationHom_surjective ⟨coordinateTranslation B, coordinateTranslation_mem B⟩\n  have hgr : g.val.right = coordinateTranslation B := congrArg Subtype.val hg\n  have hfix (x : E) : g • coordinateCross (rowLabel 0, x) = coordinateCross (rowLabel 0, x) :=\n    by\n    rw [coordinateCross_action, hgr]\n    change coordinateCross (rowLabel 0, x + matrixAt B (rowLabel 0).val) = _\n    rw [hB, add_zero]\n  refine ⟨g * coupleCodeBeta ^ j.val, ?_, ?_, ?_⟩\n  · rw [mul_smul, (coupleBeta_pow_fix j.val).1, localReferenceCross_eq]; exact hfix 0\n  · rw [mul_smul, (coupleBeta_pow_fix j.val).2, referenceSecondCross_eq]; exact hfix _\n  · rw [Subgroup.coe_mul, map_mul]\n    change reduce (monomialAction g.val (monomialHom (coupleCodeBeta ^ j.val).val w)) = _\n    rw [monomialAction_reduce, hgr, coupleBeta_reduce_iterate j.val (a, m) w hw]\n    change coupleFourSupport z.1 z.2 ∘ (coordinateTranslation B).symm = _\n    rw [hzb]\n    exact htrans.symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:61:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:65:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:53:12: missing space in the source\n\nThis part of the code\n  'a=0 ↔ b=0)'\nshould be written as\n  'a = 0'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:53:18: missing space in the source\n\nThis part of the code\n  'b=0) (w'\nshould be written as\n  'b = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:53:57: missing space in the source\n\nThis part of the code\n  'w=coupleFourSupport'\nshould be written as\n  'w = coupleFourSupport'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourSupportOrbit.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FourCoupleProjection transitive imports (legacy)",
+       "e297619c1685ad2d"],
+      ["Atlas.Rudvalis.FourCoupleProjection:importAllArts", "b3f27b2baf40c5e7"],
+      ["Atlas.Rudvalis.CoupleSupportTranslations transitive imports (legacy)",
+       "a294b2ca9f0894ed"],
+      ["Atlas.Rudvalis.CoupleSupportTranslations:importAllArts",
+       "3a45159a87a88166"],
+      ["Atlas.Rudvalis.CoupleFourFibre transitive imports (legacy)",
+       "daaab69dfd6cc7fb"],
+      ["Atlas.Rudvalis.CoupleFourFibre:importAllArts", "cede8736e68dade5"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoupleFourSupportOrbit.lean",
+   "b9951f8e1c53520d"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoupleFourSupportOrbit", "1a65a73307ef1993"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "b1eed742c5973834"}

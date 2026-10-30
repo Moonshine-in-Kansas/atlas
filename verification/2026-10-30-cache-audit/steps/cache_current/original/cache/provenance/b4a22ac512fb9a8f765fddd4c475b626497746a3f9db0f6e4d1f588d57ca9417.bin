@@ -1,0 +1,153 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["b896f0b0f1f4a2f2.olean"],
+  "m": false,
+  "i": "0152a3ca1a748710.ilean",
+  "c": "9f14befaf101d766.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateReferenceDozen.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateReferenceDozen.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateReferenceDozen.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateReferenceDozen.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateReferenceDozen.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def referencePlaneNormal : Point :=\n  ⟨binaryLabel 1, by decide⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def ReferencePlaneParameters (v : CoordinatePlaneQuartetParameters) : Prop :=\n  ∃ h : rowLabel 0 ∈ v.1.val, (∀ q ∈ v.1.val, dot (binaryLabel 1) q.val = 0) ∧ v.2 ⟨rowLabel 0, h⟩ = 0`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `instance (v : CoordinatePlaneQuartetParameters) :\n    Decidable (ReferencePlaneParameters v) :=\n  inferInstanceAs\n    (Decidable (∃ h : rowLabel 0 ∈ v.1.val, (∀ q ∈ v.1.val, dot (binaryLabel 1) q.val = 0) ∧ v.2 ⟨rowLabel 0, h⟩ = 0))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referencePlaneParameters_normal (v : CoordinatePlaneQuartetParameters)\n    (hv : ReferencePlaneParameters v) : coordinateRowPairNormal v.1 = referencePlaneNormal :=\n  by\n  symm\n  apply (coordinateRowPair_normal_exists v.1).choose_spec.2\n  exact hv.choose_spec.1`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referencePlaneParameters_iff (v : CoordinatePlaneQuartetParameters) :\n    referenceCouple ⊆ coordinatePlaneQuartetFromParameters v ↔ ReferencePlaneParameters v := by\n  classical\n  constructor\n  · intro h\n    have h0 := h (show localReferenceCross ∈ referenceCouple from by simp [referenceCouple])\n    have h2 := h (show referenceSecondCross ∈ referenceCouple from by simp [referenceCouple])\n    rw [localReferenceCross_eq] at h0\n    rw [referenceSecondCross_eq] at h2\n    have hp := (coordinatePlaneQuartetFromParameters_rows v (rowLabel 0)).mp ⟨_, h0, 0, rfl⟩\n    have he0 := (coordinatePlaneQuartetFromParameters_mem v.1 v.2 ⟨rowLabel 0, hp⟩ 0).mp h0\n    have he2 := (coordinatePlaneQuartetFromParameters_mem v.1 v.2 ⟨rowLabel 0, hp⟩ (binaryLabel 2)).mp h2\n    have hd0 : dot (coordinateRowPairNormal v.1).val 0 = 0 := by simp [dot]\n    have he : coordinateRowPairNormal v.1 = referencePlaneNormal :=\n      by\n      have cert :\n        ∀ a : Point, dot a.val (rowLabel 0).val = 0 → dot a.val (binaryLabel 2) = 0 → a = referencePlaneNormal := by\n        decide +kernel\n      apply cert _ (coordinateRowPairNormal_spec v.1 _ hp)\n      rw [← he2, he0, hd0]\n    refine ⟨hp, ?_, he0.trans hd0⟩\n    intro q hq\n    have hh := coordinateRowPairNormal_spec v.1 q hq\n    rwa [he] at hh\n  · intro hv\n    obtain ⟨hp, ha, hf⟩ := hv\n    have he := referencePlaneParameters_normal v ⟨hp, ha, hf⟩\n    rintro c (rfl | rfl)\n    · rw [localReferenceCross_eq]\n      apply (coordinatePlaneQuartetFromParameters_mem v.1 v.2 ⟨rowLabel 0, hp⟩ 0).mpr\n      rw [hf]; simp [dot]\n    · rw [referenceSecondCross_eq]\n      apply (coordinatePlaneQuartetFromParameters_mem v.1 v.2 ⟨rowLabel 0, hp⟩ (binaryLabel 2)).mpr\n      rw [he, hf]\n      decide +kernel`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:33:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referencePlaneParameters_fibre_card (s : CoordinateRowPair) :\n    Nat.card { f : s.val → Bit // ReferencePlaneParameters ⟨s, f⟩ } =\n      if rowLabel 0 ∈ s.val ∧ (∀ q ∈ s.val, dot (binaryLabel 1) q.val = 0) then 2 else 0 :=\n  by\n  classical\n  by_cases h : rowLabel 0 ∈ s.val ∧ (∀ q ∈ s.val, dot (binaryLabel 1) q.val = 0)\n  · rw [ite_eq_left h]\n    have he (f : s.val → Bit) : ReferencePlaneParameters ⟨s, f⟩ ↔ f ⟨rowLabel 0, h.1⟩ = 0 :=\n      by\n      constructor\n      · rintro ⟨_, _, hf⟩; exact hf\n      · intro hf; exact ⟨h.1, h.2, hf⟩\n    rw [Nat.card_congr (Equiv.subtypeEquivRight he)]\n    exact coordinateRowPair_value_card s ⟨rowLabel 0, h.1⟩ 0\n  · rw [ite_eq_right h]\n    have hn (f : s.val → Bit) : ¬ReferencePlaneParameters ⟨s, f⟩ := by rintro ⟨hp, ha, _⟩; exact h ⟨hp, ha⟩\n    simp [hn, Nat.card_eq_fintype_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referencePlaneParameters_card :\n    Nat.card { v : CoordinatePlaneQuartetParameters // ReferencePlaneParameters v } = 4 := by\n  classical\n  let e :\n    { v : CoordinatePlaneQuartetParameters // ReferencePlaneParameters v } ≃\n      Σ s : CoordinateRowPair, { f : s.val → Bit // ReferencePlaneParameters ⟨s, f⟩ } :=\n    { toFun := fun v => ⟨v.val.1, ⟨v.val.2, v.prop⟩⟩\n      invFun := fun v => ⟨⟨v.1, v.2.val⟩, v.2.prop⟩\n      left_inv := by intro v; rfl\n      right_inv := by intro v; rfl }\n  rw [Nat.card_congr e, Nat.card_sigma]\n  simp_rw [referencePlaneParameters_fibre_card]\n  have cert :\n    (∑ s : CoordinateRowPair,\n        if rowLabel 0 ∈ s.val ∧ (∀ q ∈ s.val, dot (binaryLabel 1) q.val = 0) then (2 : ℕ) else 0) =\n      4 :=\n    by decide +kernel\n  exact cert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:73:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceCouple_subset_row_iff (p : Point) :\n    referenceCouple ⊆ coordinateRowFrame p ↔ p = rowLabel 0 :=\n  by\n  constructor\n  · intro h\n    have h0 := h (show localReferenceCross ∈ referenceCouple from by simp [referenceCouple])\n    rw [localReferenceCross_eq] at h0\n    exact (coordinateCross_mem_row_iff _ _ _).mp h0\n  · rintro rfl c (rfl | rfl)\n    · rw [localReferenceCross_eq]; exact ⟨0, rfl⟩\n    · rw [referenceSecondCross_eq]; exact ⟨binaryLabel 2, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `abbrev ReferenceCoordinateQuartets :=\n  { Q : CoordinateQuartets // referenceCouple ⊆ Q.val }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceCoordinateQuartets_card :\n    Nat.card ReferenceCoordinateQuartets = 5 := by\n  classical\n  change Nat.card { Q : CoordinateQuartets // referenceCouple ⊆ Q.val } = 5\n  rw [coordinateQuartets_eq_constructed]\n  let e := Equiv.ofInjective coordinateQuartetConstruction coordinateQuartetConstruction_injective\n  let f :\n    { v : Point ⊕ CoordinatePlaneQuartetParameters // referenceCouple ⊆ coordinateQuartetConstruction v } ≃\n      { Q : Set.range coordinateQuartetConstruction // referenceCouple ⊆ Q.val } :=\n    Equiv.subtypeEquiv e (fun _ => Iff.rfl)\n  rw [← Nat.card_congr f, Nat.card_congr Equiv.subtypeSum, Nat.card_sum]\n  change\n    Nat.card { p : Point // referenceCouple ⊆ coordinateRowFrame p } +\n        Nat.card { v : CoordinatePlaneQuartetParameters // referenceCouple ⊆ coordinatePlaneQuartetFromParameters v } =\n      5\n  rw [Nat.card_congr (Equiv.subtypeEquivRight referenceCouple_subset_row_iff),\n    Nat.card_congr (Equiv.subtypeEquivRight referencePlaneParameters_iff), referencePlaneParameters_card]\n  simp [Nat.card_eq_fintype_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:106:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:111:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:113:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe union over coordinate quartets only; no global exhaustion is built into this definition. -/\ndef referenceCoordinateQuartetUnion : Set MinimalCross :=\n  {x | ∃ Q : Set MinimalCross, IsQuartet Q ∧ Q ⊆ coordinateFrame ∧ referenceCouple ⊆ Q ∧ x ∈ Q}`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem referenceCoordinateQuartetUnion_eq :\n    referenceCoordinateQuartetUnion = referenceCoordinateDozen := by\n  classical\n  apply Set.Subset.antisymm\n  · rintro c ⟨Q, hQ, hF, hcouple, hc⟩\n    obtain ⟨v, rfl⟩ := coordinateQuartet_classification Q hQ hF\n    cases v with\n    | inl p =>\n      change referenceCouple ⊆ coordinateRowFrame p at hcouple\n      have hp := referenceCouple_subset_row_iff p |>.mp hcouple\n      subst p\n      exact ⟨rowLabel 0, by change dot (binaryLabel 1) (rowLabel 0).val = 0; decide +kernel, hc⟩\n    | inr v =>\n      have hv := (referencePlaneParameters_iff v).mp hcouple\n      obtain ⟨p, hp⟩ := hc\n      exact ⟨p.val, hv.choose_spec.1 p.val p.prop, coordinatePlaneSlice_subset _ _ _ hp⟩\n  · rintro c ⟨p, hp, x, rfl⟩\n    by_cases he : p = rowLabel 0\n    · subst p\n      exact\n        ⟨coordinateRowFrame (rowLabel 0), coordinateRowFrame_isQuartet _, coordinateRowFrame_subset _,\n          (referenceCouple_subset_row_iff _).mpr rfl, x, rfl⟩\n    · let s : CoordinateRowPair := ⟨{rowLabel 0, p}, by simp [Ne.symm he]⟩\n      let f : s.val → Bit := fun q => if q.val = rowLabel 0 then 0 else dot (binaryLabel 1) x\n      let v : CoordinatePlaneQuartetParameters := ⟨s, f⟩\n      have h0 : rowLabel 0 ∈ s.val := by simp [s]\n      have hps : p ∈ s.val := by simp [s]\n      have hv : ReferencePlaneParameters v := by\n        refine ⟨h0, ?_, ?_⟩\n        · intro q hq\n          have hq2 : q = rowLabel 0 ∨ q = p := by simpa [v, s] using hq\n          rcases hq2 with rfl | rfl\n          · decide +kernel\n          · exact hp\n        · simp [v, f]\n      refine\n        ⟨coordinatePlaneQuartetFromParameters v, coordinatePlaneQuartetFromParameters_isQuartet _,\n          coordinateQuartetConstruction_subset (Sum.inr v), (referencePlaneParameters_iff v).mpr hv, ?_⟩\n      apply (coordinatePlaneQuartetFromParameters_mem s f ⟨p, hps⟩ x).mpr\n      rw [referencePlaneParameters_normal v hv]\n      simp [f, he, referencePlaneNormal]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe coordinate dozen really is contained in the intrinsically defined dozen. -/\ntheorem referenceCoordinateDozen_subset_intrinsicDozen : referenceCoordinateDozen ⊆ intrinsicDozen referenceCouple :=\n  by\n  rw [← referenceCoordinateQuartetUnion_eq]\n  rintro x ⟨Q, hQ, _, hc, hx⟩\n  exact ⟨Q, hQ, hc, hx⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateReferenceDozen.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateQuartetClassification transitive imports (legacy)",
+       "0a76514a227d9779"],
+      ["Atlas.Rudvalis.CoordinateQuartetClassification:importAllArts",
+       "159541aa19114d9a"],
+      ["Atlas.Rudvalis.ReferenceConfigurations transitive imports (legacy)",
+       "849ae6bfd3eaab6f"],
+      ["Atlas.Rudvalis.ReferenceConfigurations:importAllArts",
+       "aa958a51036d3578"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateReferenceDozen.lean",
+   "ab2406b0b54cb8ee"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateReferenceDozen", "7e3788a4d07d85be"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "80c3a4a33c7aa7b5"}

@@ -1,0 +1,57 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["97e4da93c932813f.olean"],
+  "m": false,
+  "i": "8c811a96334bb29b.ilean",
+  "c": "f08b65ecbabd3b5c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean -M8704 -j1 /home/gerald/atlas/Atlas/LinearGroups/ReeF4/WeylSL2Diagonal.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/WeylSL2Diagonal.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/WeylSL2Diagonal.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/WeylSL2Diagonal.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/WeylSL2Diagonal.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/WeylSL2Diagonal.lean:13:0: automatically included section variable(s) unused in theorem `Atlas.ReeF4.longSL2DiagonalMatrix_map`:\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/WeylSL2Diagonal.lean:21:33: This simp argument is unused:\n  Matrix.SpecialLinearGroup.map\n\nHint: Omit it from the simp argument list.\n  [apply] simp [longSL2DiagonalMatrix, Matrix.SpecialLinearGroup.diag2_coe']\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/WeylSL2Diagonal.lean:24:0: automatically included section variable(s) unused in theorem `Atlas.ReeF4.longSL2DiagonalMatrix_apply`:\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/WeylSL2Diagonal.lean:33:0: automatically included section variable(s) unused in theorem `Atlas.ReeF4.longSL2DiagonalMatrix_tensor`:\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/WeylSL2Diagonal.lean:45:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 800000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.ReeF4.WeylSL2Representation transitive imports (legacy)",
+       "621f93287b25da7e"],
+      ["Atlas.LinearGroups.ReeF4.WeylSL2Representation:importAllArts",
+       "6a2d8b4c709db4cf"],
+      ["Atlas.LinearGroups.ReeF4.WeylSL2Torus transitive imports (legacy)",
+       "487ad3b1c5fc7e96"],
+      ["Atlas.LinearGroups.ReeF4.WeylSL2Torus:importAllArts",
+       "ecaa36da1c71e4b9"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/ReeF4/WeylSL2Diagonal.lean",
+   "f6bcd1a9818dd10d"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.ReeF4.WeylSL2Diagonal", "2f0e438199e7734d"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "fc4aea0205d342f9"}

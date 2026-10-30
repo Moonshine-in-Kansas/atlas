@@ -1,0 +1,59 @@
+{
+  "id": "staged-F4AlbertSimpleFormulas",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertSimpleFormulas"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertCoordinates",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertSimpleFormulaData",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.simplePolynomialMatrix",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertSimpleFormulaData",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimple_polynomial_basis",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertSimpleFormulas",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimple",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertSimpleFormulas",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimple_apply",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertSimpleFormulas",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-F4AlbertSimpleFormulas-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis."
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

@@ -1,0 +1,229 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["701f13520c4ea54d.olean"],
+  "m": false,
+  "i": "7c365ddea5b53426.ilean",
+  "c": "85bf8ccb6a3c973f.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Lattices/ConwayWales/CyclicFactors.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/ConwayWales/CyclicFactors.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/ConwayWales/CyclicFactors.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/ConwayWales/CyclicFactors.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/ConwayWales/CyclicFactors.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `set_option backward.isDefEq.respectTransparency false`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.ConwayWales`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Polynomial`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `private theorem polynomial_four : (4 : Polynomial (ZMod 4)) = 0 := by\n  simpa only [map_ofNat, map_zero] using\n    congrArg (Polynomial.C : ZMod 4 →+* Polynomial (ZMod 4)) (show (4 : ZMod 4) = 0 by decide)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `private theorem polynomial_eight : (8 : Polynomial (ZMod 4)) = 0 := by\n  linear_combination 2 * polynomial_four`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `private theorem polynomial_neg_three : (-3 : Polynomial (ZMod 4)) = 1 := by\n  linear_combination -polynomial_four`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The three actual factors of the seven-block cyclic polynomial over Z/4. -/\ndef cyclicFactorZero : Polynomial (ZMod 4) :=\n  X - 1`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def cyclicFactorPlus : Polynomial (ZMod 4) :=\n  X ^ 3 + 2 * X ^ 2 + X - 1`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def cyclicFactorMinus : Polynomial (ZMod 4) :=\n  X ^ 3 - X ^ 2 + 2 * X - 1`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem cyclic_factorization :\n    (X ^ 7 - 1 : Polynomial (ZMod 4)) = cyclicFactorZero * cyclicFactorPlus * cyclicFactorMinus :=\n  by\n  unfold cyclicFactorZero cyclicFactorPlus cyclicFactorMinus\n  ring_nf\n  simp only [polynomial_four, mul_zero, add_zero, sub_zero]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem cyclic_factors_zero_plus :\n    IsCoprime cyclicFactorZero cyclicFactorPlus :=\n  by\n  refine ⟨X ^ 2 + 3 * X, 3, ?_⟩\n  unfold cyclicFactorZero cyclicFactorPlus\n  ring_nf\n  simp only [polynomial_four, polynomial_eight, polynomial_neg_three, mul_zero, add_zero]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem cyclic_factors_zero_minus :\n    IsCoprime cyclicFactorZero cyclicFactorMinus :=\n  by\n  refine ⟨-(X ^ 2 + 2), 1, ?_⟩\n  unfold cyclicFactorZero cyclicFactorMinus\n  ring`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem cyclic_factors_plus_minus :\n    IsCoprime cyclicFactorPlus cyclicFactorMinus :=\n  by\n  refine ⟨2 + 3 * X, 1 + X, ?_⟩\n  unfold cyclicFactorPlus cyclicFactorMinus\n  ring_nf\n  simp only [polynomial_four, polynomial_eight, polynomial_neg_three, mul_zero, add_zero]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The cyclic coefficient ring for seven blocks. -/\nabbrev CyclicRing :=\n  Polynomial (ZMod 4) ⧸ Ideal.span {(X ^ 7 - 1 : Polynomial (ZMod 4))}`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `abbrev CyclicComponent (f : Polynomial (ZMod 4)) :=\n  Polynomial (ZMod 4) ⧸ Ideal.span { f }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `private noncomputable def coprimeQuotient (f g : Polynomial (ZMod 4))\n    (h : IsCoprime f g) : CyclicComponent (f * g) ≃+* CyclicComponent f × CyclicComponent g :=\n  (Ideal.quotEquivOfEq (Ideal.span_singleton_mul_span_singleton f g).symm).trans\n    (Ideal.quotientMulEquivQuotientProd _ _ ((Ideal.isCoprime_span_singleton_iff f g).mpr h))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Actual CRT isomorphism; no component sizes or code ranks are assumptions. -/\nnoncomputable def cyclicCRT :\n    CyclicRing ≃+*\n      CyclicComponent cyclicFactorZero × (CyclicComponent cyclicFactorPlus × CyclicComponent cyclicFactorMinus) :=\n  (Ideal.quotEquivOfEq\n        (congrArg (fun f : Polynomial (ZMod 4) => Ideal.span { f })\n          (cyclic_factorization.trans (mul_assoc _ _ _)))).trans\n    ((coprimeQuotient _ _ (cyclic_factors_zero_plus.mul_right cyclic_factors_zero_minus)).trans\n      (RingEquiv.prodCongr (RingEquiv.refl _) (coprimeQuotient _ _ cyclic_factors_plus_minus)))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.ConwayWales`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:5:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/ConwayWales/CyclicFactors.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Mathlib.Algebra.Polynomial.Basic transitive imports (legacy)",
+       "2935a959dba27a4f"],
+      ["Mathlib.Algebra.Polynomial.Basic:importAllArts", "b85de62c5f76c8cf"],
+      ["Mathlib.Data.ZMod.Basic transitive imports (legacy)",
+       "4fe50dc42e3944f9"],
+      ["Mathlib.Data.ZMod.Basic:importAllArts", "9982ee36172e39fc"],
+      ["Mathlib.RingTheory.Coprime.Basic transitive imports (legacy)",
+       "5bb4b04f4feaae04"],
+      ["Mathlib.RingTheory.Coprime.Basic:importAllArts", "4bc16f1397eee86c"],
+      ["Mathlib.RingTheory.Ideal.Quotient.Operations transitive imports (legacy)",
+       "628ffe47db41d809"],
+      ["Mathlib.RingTheory.Ideal.Quotient.Operations:importAllArts",
+       "e433cc15c2e7e721"],
+      ["Mathlib.Tactic transitive imports (legacy)", "ec156eb4c1db663c"],
+      ["Mathlib.Tactic:importAllArts", "49193de2eba247db"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Lattices/ConwayWales/CyclicFactors.lean",
+   "e57c5af3d20a3009"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Lattices.ConwayWales.CyclicFactors", "31a4816ca0cd4e38"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "de2d27703d0c1747"}

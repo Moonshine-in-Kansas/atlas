@@ -1,0 +1,139 @@
+{
+  "id": "staged-WeightedB3Sum",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.WeightedB3Sum"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.axisWordWeight",
+      "kind": "definition",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.axisPath_isReduced",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.pathRepresentative_weightedInversions",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.pathRepresentativeEquiv_weightedInversions",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.bWeightedWeylSum",
+      "kind": "definition",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.signedAxisWeightedSum",
+      "kind": "definition",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.axisWordWeight_rank1",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.axisWordWeight_rank2",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.axisWordWeight_rank3",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.signedAxisWeightedSum_rank1",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.signedAxisWeightedSum_rank2",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.signedAxisWeightedSum_rank3",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.parabolicRepresentatives_weightedSum",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.lowerRankParabolic_weightedSum",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.bWeightedWeylSum_succ",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.bWeightedWeylSum_rank1",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.bWeightedWeylSum_rank2",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedB3Sum"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedB3Sum.bWeightedWeylSum_rank3",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedB3Sum"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-WeightedB3Sum-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-WeightedB3Sum-structural-identification-before-count",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.TwistedE6.companionFixedSubgroup_card",
+        "Atlas.Chevalley.TwistedE6.companionFixedWeylCell_card",
+        "Atlas.Chevalley.F4B3.rootWeylPoincareEval_F4",
+        "Atlas.Chevalley.RootData.rootWeylPoincareEval"
+      ],
+      "forbid_modules": [
+        "FamilyWork.PositiveFixedOrder",
+        "FamilyWork.FixedTorusOrder",
+        "FamilyWork.FixedBorel",
+        "FamilyWork.FixedInversionOrder",
+        "FamilyWork.FixedCellCoordinates",
+        "FamilyWork.FixedWeylCell"
+      ]
+    }
+  ]
+}

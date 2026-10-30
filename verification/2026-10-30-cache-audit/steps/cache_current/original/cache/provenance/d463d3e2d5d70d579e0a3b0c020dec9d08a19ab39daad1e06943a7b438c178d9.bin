@@ -1,0 +1,354 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["56af2265a759a191.olean"],
+  "m": false,
+  "i": "18cbe9892c9647ed.ilean",
+  "c": "21501a1fae644284.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:9:0: Unscoped option maxHeartbeats is not allowed:\nPlease scope this to individual declarations, as in\n```\nset_option maxHeartbeats in\n-- comment explaining why this is necessary\nexample : ... := ...\n```\n\nNote: This linter can be disabled with `set_option linter.style.setOption false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:10:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:59:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:59:31: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:60:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:68:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:68:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:69:34: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:73:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:73:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:74:34: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:79:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:110:28: This simp argument is unused:\n  Fin.val_mk\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Fin.ext_iff]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:111:41: This simp argument is unused:\n  Fin.val_mk\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Fin.le_def] at *\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:113:28: This simp argument is unused:\n  hj\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [chainVector, dite_false, hjn, ite_true, map_smul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:113:32: This simp argument is unused:\n  dite_false\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [chainVector, hj, hjn, ite_true, map_smul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:113:59: This simp argument is unused:\n  map_smul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [chainVector, hj, dite_false, hjn, ite_true]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:114:37: This simp argument is unused:\n  smul_eq_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [cumulative, Pi.smul_apply, Pi.single_apply]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:115:28: This simp argument is unused:\n  Fin.val_mk\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Fin.ext_iff]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:114:4: `simp [cumulative, Pi.smul_apply, smul_eq_mul, Pi.single_apply]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:114:4: Try this:\n  [apply] simp only [lt_self_iff_false, ↓reduceDIte, zsmul_eq_mul, Pi.smul_apply, Int.zsmul_eq_mul]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:116:18: `first\n| rfl\n| (have := i.isLt; omega)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 114!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:114:4: `simp [cumulative, Pi.smul_apply, smul_eq_mul, Pi.single_apply]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:114:4: Try this:\n  [apply] simp only [lt_self_iff_false, ↓reduceDIte, zsmul_eq_mul, Pi.smul_apply, Int.zsmul_eq_mul]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:116:18: `first\n| rfl\n| (have := i.isLt; omega)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 114!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:114:4: `simp [cumulative, Pi.smul_apply, smul_eq_mul, Pi.single_apply]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:114:4: Try this:\n  [apply] simp only [lt_self_iff_false, ↓reduceDIte, zsmul_eq_mul, Pi.smul_apply, Int.zsmul_eq_mul]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:116:18: `first\n| rfl\n| (have := i.isLt; omega)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 114!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:114:4: `simp [cumulative, Pi.smul_apply, smul_eq_mul, Pi.single_apply]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:114:4: Try this:\n  [apply] simp only [lt_self_iff_false, ↓reduceDIte, zsmul_eq_mul, Pi.smul_apply, Int.zsmul_eq_mul]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:116:18: `first\n| rfl\n| (have := i.isLt; omega)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 114!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:122:10: This simp argument is unused:\n  Function.comp_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [cumulative_chain]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:10: This simp argument is unused:\n  dot_sub_left\n\nHint: Omit it from the simp argument list.\n  [apply] simp [dot_sub_right, dot_smul_left, dot_smul_right, dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:39: This simp argument is unused:\n  dot_smul_left\n\nHint: Omit it from the simp argument list.\n  [apply] simp [dot_sub_left, dot_sub_right, dot_smul_right, dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:54: This simp argument is unused:\n  dot_smul_right\n\nHint: Omit it from the simp argument list.\n  [apply] simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:146:18: This simp argument is unused:\n  dot_single_left\n\nHint: Omit it from the simp argument list.\n  [apply] simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right, dot_single, Pi.single_apply, Fin.ext_iff]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:48: This simp argument is unused:\n  Fin.val_mk\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Fin.ext_iff] at *\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [dot_sub_right, dot_single, Pi.sub_apply, mul_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [dot_sub_right, dot_single, Pi.sub_apply, mul_one, Int.reduceNeg]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [dot_sub_right, dot_single, Pi.sub_apply, mul_one, Int.reduceNeg]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [dot_sub_right, dot_single, Pi.sub_apply, mul_one, Int.reduceNeg]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [dot_sub_right, dot_single, Pi.sub_apply, mul_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [one_smul, dot_single, Pi.sub_apply, mul_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [one_smul, dot_single, Pi.sub_apply, mul_one, Int.reduceNeg]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [one_smul, dot_single, Pi.sub_apply, mul_one, Int.reduceNeg]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [one_smul, dot_single, Pi.sub_apply, mul_one, Int.reduceNeg]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [one_smul, dot_single, Pi.sub_apply, mul_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [zsmul_eq_mul, Int.cast_ofNat, dot_sub_right, dot_single, Pi.mul_apply, Pi.ofNat_apply, mul_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [zsmul_eq_mul, Int.cast_ofNat, dot_sub_right, dot_single, Pi.mul_apply, Pi.ofNat_apply, mul_one,\n    Int.reduceNeg]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [zsmul_eq_mul, Int.cast_ofNat, dot_sub_right, dot_single, Pi.mul_apply, Pi.ofNat_apply, mul_one,\n    Int.reduceNeg]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [zsmul_eq_mul, Int.cast_ofNat, dot_sub_right, dot_single, Pi.mul_apply, Pi.ofNat_apply, mul_one,\n    Int.reduceNeg]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [zsmul_eq_mul, Int.cast_ofNat, dot_sub_right, dot_single, Pi.mul_apply, Pi.ofNat_apply, mul_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [zsmul_eq_mul, Int.cast_ofNat, one_smul, dot_single, Pi.mul_apply, Pi.ofNat_apply, mul_one,\n    Int.reduceNeg]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [zsmul_eq_mul, Int.cast_ofNat, one_smul, dot_single, Pi.mul_apply, Pi.ofNat_apply, mul_one,\n    Int.reduceNeg]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: `simp [dot_sub_left, dot_sub_right, dot_smul_left, dot_smul_right,\n      dot_single, dot_single_left, Pi.single_apply, Fin.ext_iff]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:145:4: Try this:\n  [apply] simp only [zsmul_eq_mul, Int.cast_ofNat, one_smul, dot_single, Pi.mul_apply, Pi.ofNat_apply, mul_one,\n    Int.reduceNeg]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:147:4: `(try split_ifs)`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 145!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:159:49: `if_true` has been deprecated: Use `ite_true` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:180:10: This simp argument is unused:\n  Function.comp_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp [simpleB_coroot_vector]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:194:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:196:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:197:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:219:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:273:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:279:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean:280:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.RootData.Classical transitive imports (legacy)",
+       "f370a209285a5e2c"],
+      ["Atlas.LinearGroups.Chevalley.RootData.Classical:importAllArts",
+       "79bc5a870026a8b4"],
+      ["Atlas.LinearGroups.Chevalley.RootData.A transitive imports (legacy)",
+       "edb3207946a60894"],
+      ["Atlas.LinearGroups.Chevalley.RootData.A:importAllArts",
+       "16ddafd478bb52fc"],
+      ["Mathlib.LinearAlgebra.RootSystem.CartanMatrix transitive imports (legacy)",
+       "e24a8aac8de4de2f"],
+      ["Mathlib.LinearAlgebra.RootSystem.CartanMatrix:importAllArts",
+       "c9444a64584b470d"],
+      ["Mathlib.LinearAlgebra.Matrix.Cartan transitive imports (legacy)",
+       "6919935f1a138884"],
+      ["Mathlib.LinearAlgebra.Matrix.Cartan:importAllArts",
+       "1071c3bf3447e0bf"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/RootData/ClassicalBasesBC.lean",
+   "03d41e8c6454a599"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.RootData.ClassicalBasesBC",
+   "58962b3bba8d129f"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "df477861fec790c2"}

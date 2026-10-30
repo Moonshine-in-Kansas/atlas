@@ -1,0 +1,56 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["4f41ab7f4c5c50a9.olean"],
+  "m": false,
+  "i": "4b6dfc54a61c1e0e.ilean",
+  "c": "41ce2a4de09a021f.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Codes/TernaryOrientedTriads.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/TernaryOrientedTriads.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/TernaryOrientedTriads.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Codes/TernaryOrientedTriads.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Codes/TernaryOrientedTriads.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Codes/TernaryOrientedTriads.lean:43:4: `simp [ternarySupport, ternaryOrientedWord, ternaryTriadWord, hp.2]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/TernaryOrientedTriads.lean:44:4: `decide`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 43!",
+   "level": "info"},
+  {"message":
+   "Atlas/Codes/TernaryOrientedTriads.lean:50:2: `simp [ternaryWordSum, ternaryOrientedWord, ternaryTriadWord, Finset.sum_add_distrib, hp.1]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/TernaryOrientedTriads.lean:51:2: `decide`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 50!",
+   "level": "info"},
+  {"message":
+   "Atlas/Codes/TernaryOrientedTriads.lean:62:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Codes.TernaryGolayTriads transitive imports (legacy)",
+       "35bf51cbee5e3205"],
+      ["Atlas.Codes.TernaryGolayTriads:importAllArts", "21889aad562fc3ef"],
+      ["Atlas.Codes.TernarySyndromeSupports transitive imports (legacy)",
+       "887921cd8521eb21"],
+      ["Atlas.Codes.TernarySyndromeSupports:importAllArts",
+       "3a7a53376d94d78d"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Codes/TernaryOrientedTriads.lean",
+   "f21f42c3baa4ff60"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Codes.TernaryOrientedTriads", "6e250b8c211bbfdf"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "41069ac2743efae0"}

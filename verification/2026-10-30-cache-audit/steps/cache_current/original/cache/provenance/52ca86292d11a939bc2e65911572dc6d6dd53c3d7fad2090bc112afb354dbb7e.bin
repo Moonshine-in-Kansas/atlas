@@ -1,0 +1,74 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["01eab16bd474c57f.olean"],
+  "m": false,
+  "i": "9a671c149daae14e.ilean",
+  "c": "b8c751a7b7d8597a.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Unitary/BinaryThreeDenseTransport.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Unitary/BinaryThreeDenseTransport.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Unitary/BinaryThreeDenseTransport.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Unitary/BinaryThreeDenseTransport.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Unitary/BinaryThreeDenseTransport.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryThreeDenseTransport.lean:59:50: This simp argument is unused:\n  Matrix.mulVec_single_one\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.col, extendMatrix, Pi.single_apply]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryThreeDenseTransport.lean:59:102: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.mulVec_single_one, Matrix.col, extendMatrix]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryThreeDenseTransport.lean:66:14: This simp argument is unused:\n  hv\n\nHint: Omit it from the simp argument list.\n  [apply] simp\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryThreeDenseTransport.lean:67:14: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryThreeDenseTransport.lean:89:6: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [binaryFourierThree, mulVec, dotProduct, Fin.sum_univ_succ, CharTwo.add_self_eq_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryThreeDenseTransport.lean:46:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryThreeDenseTransport.lean:57:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryThreeDenseTransport.lean:59:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryThreeDenseTransport.lean:84:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Unitary.BinaryFourBridge transitive imports (legacy)",
+       "b72a3f535f78d3bc"],
+      ["Atlas.LinearGroups.Unitary.BinaryFourBridge:importAllArts",
+       "22c8147af43528c0"],
+      ["Atlas.LinearGroups.Unitary.BinaryField transitive imports (legacy)",
+       "581483399917cc94"],
+      ["Atlas.LinearGroups.Unitary.BinaryField:importAllArts",
+       "802539019d71f15e"],
+      ["Atlas.LinearGroups.Unitary.BlockEmbeddings transitive imports (legacy)",
+       "ad0b80df2836c66e"],
+      ["Atlas.LinearGroups.Unitary.BlockEmbeddings:importAllArts",
+       "6f79face9ad84f08"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Unitary/BinaryThreeDenseTransport.lean",
+   "93ef7daba4a0f1f5"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Unitary.BinaryThreeDenseTransport",
+   "09f9714cec3197b1"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "23645842cb6c4750"}

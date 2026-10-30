@@ -1,0 +1,66 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["f1891540a4d8c02c.olean"],
+  "m": false,
+  "i": "becad7b01de77561.ilean",
+  "c": "47672856c1d7312d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/G2/LongRootNormalGeneration.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/LongRootNormalGeneration.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/LongRootNormalGeneration.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/LongRootNormalGeneration.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/LongRootNormalGeneration.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/G2/LongRootNormalGeneration.lean:135:1: 'theorem long_rank_one_word (a : Fˣ) :\n    rootE (a : F) * (weylR * rootE (-(a⁻¹ : Fˣ) : F) * weylR⁻¹) * rootE (a : F) = torus (-1) a * weylR :=\n  by\n  rw [weylR_inverse]\n  apply Subtype.ext; apply LinearEquiv.ext; intro x\n  funext i;\n  fin_cases i <;>\n    simp [rootE, rootEEquiv, rootELinear, rootEApply, weylR, weylREquiv, weylRLinear, weylRApply, torus, torusEquiv,\n      torusLinear, torusWeights]\n  all_goals field_simp\n  all_goals ring' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/LongRootNormalGeneration.lean:145:1: 'theorem short_rank_one_word (a : Fˣ) :\n    rootF (a : F) * (weylS * rootF (-(a⁻¹ : Fˣ) : F) * weylS⁻¹) * rootF (a : F) = torus a (-a⁻¹) * weylS :=\n  by\n  rw [weylS_inverse]\n  apply Subtype.ext; apply LinearEquiv.ext; intro x\n  funext i;\n  fin_cases i <;>\n    simp [rootF, rootFEquiv, rootFLinear, rootFApply, weylS, weylSEquiv, weylSLinear, weylSApply, torus, torusEquiv,\n      torusLinear, torusWeights]\n  all_goals field_simp\n  all_goals ring' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/LongRootNormalGeneration.lean:160:1: 'theorem torus_product (l m a b : Fˣ) : torus l m * torus a b = torus (l * a) (m * b) :=\n  (torusHom (K := F)).map_mul (l, m)\n      (a, b) |>.symm' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/LongRootNormalGeneration.lean:162:1: 'theorem torus_inverse (l m : Fˣ) : (torus l m)⁻¹ = torus l⁻¹ m⁻¹ :=\n  (torusHom (K := F)).map_inv\n      (l, m) |>.symm' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/LongRootNormalGeneration.lean:164:1: 'theorem torus_identity : torus (1 : Fˣ) 1 = 1 :=\n  (torusHom (K := F)).map_one' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/LongRootNormalGeneration.lean:166:1: 'theorem normal_eq_top_of_unipotent (H : Subgroup (Model F)) [H.Normal] (hU : unipotent (K := F) ≤ H) : H = ⊤ :=\n  by\n  have hE (a : F) : rootE a ∈ H := hU (Subgroup.subset_closure (by simp))\n  have hF (a : F) : rootF a ∈ H := hU (Subgroup.subset_closure (by simp))\n  have hlong (a : Fˣ) : torus (-1) a * weylR ∈ H :=\n    by\n    rw [← long_rank_one_word]\n    exact H.mul_mem (H.mul_mem (hE _) ((inferInstance : H.Normal).conj_mem _ (hE _) _)) (hE _)\n  have hshort (a : Fˣ) : torus a (-a⁻¹) * weylS ∈ H :=\n    by\n    rw [← short_rank_one_word]\n    exact H.mul_mem (H.mul_mem (hF _) ((inferInstance : H.Normal).conj_mem _ (hF _) _)) (hF _)\n  have htm (a : Fˣ) : torus 1 a ∈ H :=\n    by\n    have h := H.mul_mem (hlong a) (H.inv_mem (hlong 1))\n    rw [mul_inv_rev, ← mul_assoc, mul_assoc (torus (-1) a), mul_inv_cancel, mul_one, torus_inverse, torus_product] at h\n    simpa using h\n  have htd (a : Fˣ) : torus a a⁻¹ ∈ H :=\n    by\n    have h := H.mul_mem (hshort a) (H.inv_mem (hshort 1))\n    rw [mul_inv_rev, ← mul_assoc, mul_assoc (torus a (-a⁻¹)), mul_inv_cancel, mul_one, torus_inverse,\n      torus_product] at h\n    simpa using h\n  have ht (a b : Fˣ) : torus a b ∈ H := by\n    have h := H.mul_mem (htd a) (htm (a * b))\n    rw [torus_product] at h\n    simpa using h\n  have hr : (weylR : Model F) ∈ H :=\n    by\n    have h := H.mul_mem (H.inv_mem (ht (-1) 1)) (hlong 1)\n    simpa only [inv_mul_cancel_left] using h\n  have hs : (weylS : Model F) ∈ H :=\n    by\n    have h := H.mul_mem (H.inv_mem (ht 1 (-1))) (hshort 1)\n    simpa only [inv_one, inv_mul_cancel_left] using h\n  apply top_unique\n  rw [← generated_eq_top]\n  apply sup_le\n  · apply (Subgroup.closure_le H).mpr\n    intro g hg\n    rcases hg with hg | hg\n    · exact hU hg\n    · simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at hg\n      rcases hg with rfl | rfl\n      · exact hr\n      · exact hs\n  · rintro g ⟨⟨a, b⟩, rfl⟩\n    exact ht a b' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/LongRootNormalGeneration.lean:212:1: 'theorem longRootNormalClosure_eq_top [Finite F] (hq : 2 < Nat.card F) : longRootNormalClosure (F := F) = ⊤ :=\n  normal_eq_top_of_unipotent _\n    (unipotent_le_longRootNormalClosure\n      hq)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.G2.LongRootLocal transitive imports (legacy)",
+       "393b14b559266e2e"],
+      ["Atlas.LinearGroups.G2.LongRootLocal:importAllArts", "1fcea171f51cbbf4"],
+      ["Atlas.LinearGroups.G2.Generation transitive imports (legacy)",
+       "706d9a59bb77b12d"],
+      ["Atlas.LinearGroups.G2.Generation:importAllArts", "c1db704945ce0ae0"],
+      ["Mathlib.GroupTheory.QuotientGroup.Basic transitive imports (legacy)",
+       "ff1bd88bafc84979"],
+      ["Mathlib.GroupTheory.QuotientGroup.Basic:importAllArts",
+       "40ad8c2884dfb2cb"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/G2/LongRootNormalGeneration.lean",
+   "bb8bd20762a1df6b"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.G2.LongRootNormalGeneration",
+   "a7a73c89d583a6ba"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "c8f93b4d4b7af603"}

@@ -1,0 +1,101 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["2f664003966ce30f.olean"],
+  "m": false,
+  "i": "cf84c79aeb7862f8.ilean",
+  "c": "57fa6af8bac1102c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/ProjectiveCrossAction.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ProjectiveCrossAction.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ProjectiveCrossAction.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ProjectiveCrossAction.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ProjectiveCrossAction.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem gaussianUnits_cross_fix (u : GaussianUnits) (c : MinimalCross) :\n    u.val • c = c := by\n  induction c using Quotient.inductionOn with\n  | h v => exact (minimalCross_eq_iff _ _).mpr ⟨u, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem gaussianScalarSubgroup_cross_kernel :\n    gaussianScalarSubgroup ≤ (MulAction.toPermHom gaussianLatticeGroup MinimalCross).ker :=\n  by\n  rintro g ⟨u, hu, rfl⟩\n  apply Equiv.ext\n  intro c\n  change codeGaussianHom u • c = c\n  rw [codeGaussianHom_cross]\n  exact gaussianUnits_cross_fix ⟨u, hu⟩ c`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def rudvalisCrossHom : RudvalisGroup →* Equiv.Perm MinimalCross :=\n  QuotientGroup.lift _ (MulAction.toPermHom gaussianLatticeGroup MinimalCross) gaussianScalarSubgroup_cross_kernel`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable instance rudvalisCrossAction :\n    MulAction RudvalisGroup MinimalCross :=\n  MulAction.compHom _ rudvalisCrossHom`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rudvalisCrossAction_mk (g : gaussianLatticeGroup) (c : MinimalCross) :\n    (QuotientGroup.mk g : RudvalisGroup) • c = g • c :=\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rudvalis_cross_pretransitive :\n    MulAction.IsPretransitive RudvalisGroup MinimalCross :=\n  by\n  let := full_gaussian_cross_transitive\n  constructor\n  intro a b\n  obtain ⟨g, hg⟩ := MulAction.exists_smul_eq gaussianLatticeGroup a b\n  exact ⟨QuotientGroup.mk g, hg⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rudvalis_point_stabilizer_order (x : MinimalCross) :\n    Nat.card (MulAction.stabilizer RudvalisGroup x) = 35942400 :=\n  by\n  let := rudvalis_cross_pretransitive\n  have h := Nat.card_congr (MulAction.orbitProdStabilizerEquivGroup RudvalisGroup x)\n  rw [Nat.card_prod, MulAction.orbit_eq_univ, Nat.card_univ, rudvalisLattice_minimal_cross_card,\n    rudvalisGroup_order] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossAction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.ScalarQuotient transitive imports (legacy)",
+       "43e8f219d7718818"],
+      ["Atlas.Rudvalis.ScalarQuotient:importAllArts", "b67e660f3be1a911"],
+      ["Atlas.Rudvalis.LocalStabilizerOrders transitive imports (legacy)",
+       "e7c860c6a87cbfd9"],
+      ["Atlas.Rudvalis.LocalStabilizerOrders:importAllArts",
+       "5552d3f516e385eb"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/ProjectiveCrossAction.lean",
+   "fe1f429261736551"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.ProjectiveCrossAction", "e27eac55bbb0c2d6"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "45142f0de5dd005e"}

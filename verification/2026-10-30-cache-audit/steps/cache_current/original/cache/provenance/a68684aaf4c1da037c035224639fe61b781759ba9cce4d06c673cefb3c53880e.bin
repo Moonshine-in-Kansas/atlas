@@ -1,0 +1,79 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["571783d149b47e69.olean"],
+  "m": false,
+  "i": "5ca6435e87efad46.ilean",
+  "c": "b5081d3294c1a33b.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Lattices/LeechCrossGeometry.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/LeechCrossGeometry.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/LeechCrossGeometry.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/LeechCrossGeometry.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/LeechCrossGeometry.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Lattices/LeechCrossGeometry.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechCrossGeometry.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechCrossGeometry.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechCrossGeometry.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Lattices`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechCrossGeometry.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechCrossGeometry.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechCrossGeometry.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechCrossGeometry.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `structure IntrinsicCrossConstruction : Prop where\n  quadratic_space : ModTwoQuadraticConstruction\n  class_counts : (shellClasses 4).card = 98280 ∧ (shellClasses 6).card = 8386560 ∧ (shellClasses 8).card = 8292375\n  classes_exhaustive : shortClasses = Finset.univ\n  intrinsic_class : ∀ a, MinimumEightClass a ↔ a ∈ shellClasses 8\n  crosses_count : Nat.card LeechCross = 8292375\n  vectors_count : ∀ c, (crossVectors c).card = 48\n  pairs_count : ∀ c : LeechCross, (normEightPairs c.val).card = 24\n  orthogonal :\n    ∀ c x y,\n      x ∈ crossVectors c →\n        y ∈ crossVectors c → x ≠ y → x ≠ -y → rationalForm (rationalEmbedding x.val) (rationalEmbedding y.val) = 0\n  spans : ∀ c, Submodule.span ℚ (Set.range (crossRepresentativeVector c)) = ⊤\n  transports : ∀ g c, (crossVectors c).image g.val = crossVectors (crossAction g c)\n  standard : crossIntegerVectors standardCross = axisEightVectors\n  type_quadratic : ∀ a, leechQuadratic a = (leechClassType a : Bit)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechCrossGeometry.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechCrossGeometry.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem leech_intrinsic_crosses_constructed : IntrinsicCrossConstruction\n    where\n  quadratic_space := leech_mod_two_quadratic_constructed\n  class_counts := shellClasses_counts\n  classes_exhaustive := shortClasses_eq_univ\n  intrinsic_class := minimumEightClass_iff\n  crosses_count := leechCross_card\n  vectors_count := crossVectors_card\n  pairs_count := crossPairs_card\n  orthogonal := crossVectors_orthogonal\n  spans := crossRepresentatives_span\n  transports := crossVectors_transport\n  standard := standardCross_vectors\n  type_quadratic := leechQuadratic_classType`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechCrossGeometry.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechCrossGeometry.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Lattices`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechCrossGeometry.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/LeechCrossGeometry.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Lattices.LeechClassTypes transitive imports (legacy)",
+       "99f3c7954ee8fec4"],
+      ["Atlas.Lattices.LeechClassTypes:importAllArts", "95164f73a57d672a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Lattices/LeechCrossGeometry.lean",
+   "b32b145c0b070ddd"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Lattices.LeechCrossGeometry", "66d0dc1f32ebf4a7"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "0ffb471f396f7bd7"}

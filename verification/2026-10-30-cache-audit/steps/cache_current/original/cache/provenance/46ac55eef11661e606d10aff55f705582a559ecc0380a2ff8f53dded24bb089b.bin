@@ -1,0 +1,62 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["45d93ee61ef42b48.olean"],
+  "m": false,
+  "i": "12160fe9d1f721a2.ilean",
+  "c": "a3998c9ad67dda1f.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/CubicSliceOctads.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CubicSliceOctads.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CubicSliceOctads.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CubicSliceOctads.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CubicSliceOctads.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/CubicSliceOctads.lean:38:4: This simp argument is unused:\n  add_zero\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [hpp, hwp, hpw, hww, Finset.sum_add_distrib, Finset.sum_const_zero, zero_add, Finset.sum_ite_eq,\n    Finset.sum_ite_eq', Finset.mem_univ, ite_true]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicSliceOctads.lean:38:22: This simp argument is unused:\n  Finset.sum_ite_eq\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [hpp, hwp, hpw, hww, Finset.sum_add_distrib, Finset.sum_const_zero, add_zero, zero_add,\n    Finset.sum_ite_eq', Finset.mem_univ, ite_true]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicSliceOctads.lean:39:56: This simp argument is unused:\n  Finset.sum_ite_eq\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Finset.sum_ite_irrel, Finset.sum_const_zero, Finset.mem_univ, ite_true]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicSliceOctads.lean:40:4: This simp argument is unused:\n  Finset.mem_univ\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Finset.sum_ite_irrel, Finset.sum_const_zero, Finset.sum_ite_eq, ite_true]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicSliceOctads.lean:40:20: This simp argument is unused:\n  ite_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Finset.sum_ite_irrel, Finset.sum_const_zero, Finset.sum_ite_eq, Finset.mem_univ]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicSliceOctads.lean:17:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicSliceOctads.lean:19:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicSliceOctads.lean:32:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Fischer.CubicSliceOctadIncidence transitive imports (legacy)",
+       "53fec462d46f967d"],
+      ["Atlas.Fischer.CubicSliceOctadIncidence:importAllArts",
+       "861633c01ad7b382"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/CubicSliceOctads.lean",
+   "03ad83505f24b2f5"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.CubicSliceOctads", "09d3197cbdf9c189"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "3843aa5d15ccbac0"}

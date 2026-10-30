@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/j1-bridges-20261030/environment.json",
+  "id": "release-v1-2-j1-bridges-20261030-comparison-g2-binary-derived",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.Comparisons.Exceptional.G2Binary.Derived"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.G2.BinaryException.card_commutator",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.Derived",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.commutator_eq_H",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.Derived",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.commutator_eq_lineSign_kernel",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.Derived",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.index_commutator",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.Derived",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.longRootNormalClosure_perfect",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.Derived",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independence-from-target-comparison",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Unitary.",
+        "Atlas.ReeG2.",
+        "Atlas.Comparisons.E6Lattice."
+      ]
+    }
+  ]
+}

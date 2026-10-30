@@ -1,0 +1,54 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["898f3f1a846f6dd5.olean"],
+  "m": false,
+  "i": "27c772f34a78b0aa.ilean",
+  "c": "36d941b4f0bca7c3.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/CubicQuadrilateralHistogram.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CubicQuadrilateralHistogram.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CubicQuadrilateralHistogram.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CubicQuadrilateralHistogram.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CubicQuadrilateralHistogram.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralHistogram.lean:9:1: 'theorem cubicQuadrilateral_weight_total (D : Octad) :\n    (∑ F : Octad, ∑ G : Octad, cubicQuadrilateralNormalizedWeight D F G) = 8670 :=\n  by\n  simp_rw [cubicQuadrilateralNormalizedWeight_rows]\n  rw [cubicQuadrilateralRow_weighted_count]\n  norm_num [Fin.sum_univ_succ, cubicQuadrilateralRowCard,\n    cubicQuadrilateralRowWeight]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralHistogram.lean:15:1: 'theorem cubicQuadrilateral_weight_first_moment (D : Octad) :\n    (∑ F : Octad,\n        ∑ G : Octad,\n          cubicQuadrilateralNormalizedWeight D F G * ((D.val ∩ (cubicQuadrilateralLabel F G).val).card : Scalar)) =\n      89520 :=\n  by\n  simp_rw [cubicQuadrilateralNormalizedWeight_moment_rows]\n  rw [cubicQuadrilateralRow_weighted_count]\n  norm_num [Fin.sum_univ_succ, cubicQuadrilateralRowCard, cubicQuadrilateralRowWeight,\n    cubicQuadrilateralRowIntersection]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralHistogram.lean:27:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralHistogram.lean:23:1: 'theorem cubicQuadrilateral_histogram_pointwise (D F G : Octad) (k : ℕ) :\n    cubicQuadrilateralNormalizedWeight D F G *\n        (if (D.val ∩ (cubicQuadrilateralLabel F G).val).card = k then (1 : Scalar) else 0) =\n      ∑ n,\n        if CubicQuadrilateralRow D F G n then\n          cubicQuadrilateralRowWeight n * (if cubicQuadrilateralRowIntersection n = k then 1 else 0)\n        else 0 :=\n  by\n  by_cases h : OctadPairAdmissible D F ∧ OctadPairAdmissible D G ∧ OctadPairAdmissible F G\n  · obtain ⟨n, hn⟩ := cubicQuadrilateralRow_exhaustive D F G h.1 h.2.1 h.2.2\n    rw [cubicQuadrilateralRow_sum D F G _ n hn, cubicQuadrilateralRow_weight D F G n hn,\n      cubicQuadrilateralRow_intersection D F G n hn]\n  · have hn (n : Fin 8) : ¬CubicQuadrilateralRow D F G n := fun hn => h (cubicQuadrilateralRow_admissible D F G n hn)\n    rw [cubicQuadrilateralNormalizedWeight_rows]\n    simp [hn]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralHistogram.lean:41:1: 'theorem cubicQuadrilateralSignedHistogram_eq (D : Octad) (k : ℕ) :\n    cubicQuadrilateralSignedHistogram D k =\n      ∑ n,\n        (cubicQuadrilateralRowCard n : Scalar) *\n          (cubicQuadrilateralRowWeight n * (if cubicQuadrilateralRowIntersection n = k then 1 else 0)) :=\n  by\n  unfold cubicQuadrilateralSignedHistogram\n  simp_rw [cubicQuadrilateral_histogram_pointwise]\n  rw [cubicQuadrilateralRow_weighted_count]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Fischer.CubicQuadrilateralRowCounts transitive imports (legacy)",
+       "719762395fb67f15"],
+      ["Atlas.Fischer.CubicQuadrilateralRowCounts:importAllArts",
+       "69bf391dcc4c5f70"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/CubicQuadrilateralHistogram.lean",
+   "42b396986f728ba8"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.CubicQuadrilateralHistogram",
+   "91af9078591e2c97"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "d8e61591684499d7"}

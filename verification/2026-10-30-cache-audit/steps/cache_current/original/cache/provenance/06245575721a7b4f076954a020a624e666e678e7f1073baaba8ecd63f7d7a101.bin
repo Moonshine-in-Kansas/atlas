@@ -1,0 +1,145 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["76e1c41e7f10237a.olean"],
+  "m": false,
+  "i": "14e95e83c4a48360.ilean",
+  "c": "bcb310b4dda668c5.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FrameTranslationCommutators.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FrameTranslationCommutators.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FrameTranslationCommutators.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FrameTranslationCommutators.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FrameTranslationCommutators.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped commutatorElement`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def translationPreimage (S : Subgroup codeGroup) :\n    Submodule Bit BinaryMatrix\n    where\n  carrier := {M | coordinateTranslationHom (Multiplicative.ofAdd M) ∈ S.map codePermutationHom}\n  zero_mem' := by\n    change coordinateTranslationHom 1 ∈ S.map codePermutationHom\n    rw [map_one]; exact Subgroup.one_mem _\n  add_mem' := by\n    intro a b ha hb\n    change coordinateTranslationHom (Multiplicative.ofAdd a * Multiplicative.ofAdd b) ∈ S.map codePermutationHom\n    rw [map_mul]; exact Subgroup.mul_mem _ ha hb\n  smul_mem' := by\n    intro t a ha\n    rcases Atlas.Codes.bit_cases t with rfl | rfl\n    · simp only [zero_smul]\n      change coordinateTranslationHom 1 ∈ S.map codePermutationHom\n      rw [map_one]; exact Subgroup.one_mem _\n    · simpa only [one_smul] using ha`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:14:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeI_translation_identity :\n    codePermutationHom codeI = coordinateTranslationHom (Multiplicative.ofAdd (1 : BinaryMatrix)) :=\n  by\n  have h := nineCodeGenerator_projection 0\n  change codePermutationHom codeI = coordinateTranslationHom (Multiplicative.ofAdd (nineTranslationMatrix 0)) at h\n  have he : nineTranslationMatrix 0 = (1 : BinaryMatrix) := by decide +kernel\n  rwa [he] at h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:27:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem translationPreimage_eq_top (S : Subgroup codeGroup)\n    (hc : commutator codeGroup ≤ S) (hI : codeI ∈ S) : translationPreimage S = ⊤ :=\n  by\n  apply binaryMatrix_differences_scalar_span\n  · exact ⟨codeI, hI, codeI_translation_identity⟩\n  · intro i j hij M\n    let A := binaryElementaryLinear i j hij\n    choose t ht using section_difference_origin A\n    obtain ⟨g, hg⟩ := codePermutationHom_surjective (binarySectionGroupLift A t ht)\n    obtain ⟨k, hk⟩ := codePermutationHom_surjective (coordinateTranslationHom (Multiplicative.ofAdd M))\n    have hm : ⁅g, k⁆ ∈ S := hc (Subgroup.commutator_mem_commutator (Subgroup.mem_top _) (Subgroup.mem_top _))\n    refine ⟨⁅g, k⁆, hm, ?_⟩\n    rw [map_commutatorElement, hg, hk, binarySection_translation_commutator]\n    rw [binaryMatrixConjugate_elementary]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:39:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:40:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:32:30: missing space in the source\n\nThis part of the code\n  'codeGroup≤S) (hI'\nshould be written as\n  'codeGroup ≤ S)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:32:45: missing space in the source\n\nThis part of the code\n  'codeI∈S) :'\nshould be written as\n  'codeI ∈ S)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem translations_le_commutator_scalars (S : Subgroup codeGroup)\n    (hc : commutator codeGroup ≤ S) (hI : codeI ∈ S) : binaryTranslationSubgroup ≤ S.map codePermutationHom :=\n  by\n  rintro _ ⟨M, rfl⟩\n  change M.toAdd ∈ translationPreimage S\n  rw [translationPreimage_eq_top S hc hI]\n  trivial`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:46:30: missing space in the source\n\nThis part of the code\n  'codeGroup≤S) (hI'\nshould be written as\n  'codeGroup ≤ S)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:46:45: missing space in the source\n\nThis part of the code\n  'codeI∈S) :'\nshould be written as\n  'codeI ∈ S)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe actual full signed frame group is generated by its commutators and its Gaussian scalar. -/\ntheorem codeGroup_eq_top_of_commutator_and_I (S : Subgroup codeGroup) (hc : commutator codeGroup ≤ S) (hI : codeI ∈ S) :\n    S = ⊤ := by\n  let : Group.IsPerfect (E ≃ₗ[Bit] E) := binaryLinearGroup_perfect\n  have hd : (commutator codeGroup).map codeBlockLinearHom = ⊤ :=\n    by\n    rw [commutator, Subgroup.map_commutator, Subgroup.map_top_of_surjective _ codeBlockLinearHom_surjective]\n    exact Group.IsPerfect.commutator_eq_top\n  have hb : (S.map codePermutationHom).map binaryBlockLinearHom = ⊤ :=\n    by\n    have ht : S.map codeBlockLinearHom = ⊤ := top_unique (hd ▸ Subgroup.map_mono hc)\n    change S.map (binaryBlockLinearHom.comp codePermutationHom) = ⊤ at ht\n    rwa [Subgroup.map_map]\n  have hk : binaryBlockLinearHom.ker ≤ S.map codePermutationHom :=\n    by\n    rw [binaryBlockLinearHom_kernel_translations]\n    exact translations_le_commutator_scalars S hc hI\n  have hp : S.map codePermutationHom = ⊤ :=\n    by\n    have he := Subgroup.comap_map_eq_self hk\n    rw [hb, Subgroup.comap_top] at he\n    exact he.symm\n  have he := Subgroup.comap_map_eq_self (signKernel_le_commutator_scalars S hc hI)\n  rw [hp, Subgroup.comap_top] at he\n  exact he.symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:58:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:55:30: missing space in the source\n\nThis part of the code\n  'codeGroup≤S) (hI'\nshould be written as\n  'codeGroup ≤ S)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:55:45: missing space in the source\n\nThis part of the code\n  'codeI∈S) :'\nshould be written as\n  'codeI ∈ S)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeGroup_commutator_scalars_eq_top :\n    commutator codeGroup ⊔ GaussianUnits = ⊤ :=\n  by\n  apply codeGroup_eq_top_of_commutator_and_I _ le_sup_left\n  exact (show GaussianUnits ≤ commutator codeGroup ⊔ GaussianUnits from le_sup_right) (Subgroup.mem_zpowers codeI)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:77:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveCodeGroup_perfect : Group.IsPerfect ProjectiveCodeGroup :=\n  by\n  let f : codeGroup →* ProjectiveCodeGroup := QuotientGroup.mk' GaussianUnits\n  have hs : (commutator ProjectiveCodeGroup).comap f = ⊤ :=\n    by\n    apply codeGroup_eq_top_of_commutator_and_I\n    · apply Subgroup.commutator_le.mpr\n      intro a _ b _\n      change f ⁅a, b⁆ ∈ commutator ProjectiveCodeGroup\n      rw [map_commutatorElement]\n      exact Subgroup.commutator_mem_commutator (Subgroup.mem_top _) (Subgroup.mem_top _)\n    · change f codeI ∈ commutator ProjectiveCodeGroup\n      have hi : f codeI = 1 := (QuotientGroup.eq_one_iff codeI).mpr (Subgroup.mem_zpowers codeI)\n      rw [hi]\n      exact Subgroup.one_mem _\n  constructor\n  apply top_unique\n  intro x _\n  obtain ⟨g, rfl⟩ := QuotientGroup.mk'_surjective GaussianUnits x\n  have hg : g ∈ (commutator ProjectiveCodeGroup).comap f := by rw [hs]; trivial\n  exact hg`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameTranslationCommutators.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FrameTranslationConjugation transitive imports (legacy)",
+       "2b67d0e64865ec21"],
+      ["Atlas.Rudvalis.FrameTranslationConjugation:importAllArts",
+       "99c90785cee31c78"],
+      ["Atlas.Rudvalis.FrameSignCommutators transitive imports (legacy)",
+       "2cac5793ba028a9e"],
+      ["Atlas.Rudvalis.FrameSignCommutators:importAllArts",
+       "1391b62cb8f51c28"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FrameTranslationCommutators.lean",
+   "9f2c5474418e00d7"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FrameTranslationCommutators",
+   "60ae6fe6643623bc"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "bae7933f392b2318"}

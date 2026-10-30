@@ -1,0 +1,115 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["c98893fae74246ab.olean"],
+  "m": false,
+  "i": "8176d14770f3d0ca.ilean",
+  "c": "050bf76190ae37dc.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FrameSignConjugation.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FrameSignConjugation.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FrameSignConjugation.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FrameSignConjugation.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FrameSignConjugation.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def rowSignHom :\n    Multiplicative (Point → Bit) →* SignedCoordinates Coordinate\n    where\n  toFun a := SemidirectProduct.inl (Multiplicative.ofAdd (rowSigns a.toAdd))\n  map_one' := rfl\n  map_mul' _ _ := rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rowSignHom_mem_code (a : Point → Bit) (ha : a ∈ hammingSignCode) :\n    rowSignHom (Multiplicative.ofAdd a) ∈ codeGroup :=\n  (codeGroup_sign_mem _).mpr ((rowSigns_mem_iff a).mpr ha)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:13:38: missing space in the source\n\nThis part of the code\n  'Point→Bit)'\nshould be written as\n  'Point → Bit)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:13:51: missing space in the source\n\nThis part of the code\n  'a∈hammingSignCode)'\nshould be written as\n  'a ∈ hammingSignCode)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def rowSignCode (a : hammingSignCode) : codeGroup :=\n  ⟨rowSignHom (Multiplicative.ofAdd a.val), rowSignHom_mem_code a.val a.prop⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem signedCoordinates_sign_conjugate {ι : Type*} (g : SignedCoordinates ι)\n    (s : ι → Bit) :\n    g * SemidirectProduct.inl (Multiplicative.ofAdd s) * g⁻¹ =\n      SemidirectProduct.inl (Multiplicative.ofAdd (s ∘ g.right.symm)) :=\n  by\n  apply SemidirectProduct.ext\n  · simp only [SemidirectProduct.mul_left, SemidirectProduct.mul_right, SemidirectProduct.left_inl,\n      SemidirectProduct.right_inl, SemidirectProduct.inv_left, mul_one, ← MulAut.mul_apply, map_inv, mul_inv_cancel,\n      MulAut.one_apply]\n    change g.left * (signPermutationAction g.right (Multiplicative.ofAdd s)) * g.left⁻¹ = _\n    rw [mul_comm g.left, mul_assoc, mul_inv_cancel, mul_one]\n    rfl\n  · simp`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:20:85: missing space in the source\n\nThis part of the code\n  'ι→Bit)'\nshould be written as\n  'ι → Bit)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rowSignHom_conjugate (g : codeGroup) (a : Point → Bit) :\n    g.val * rowSignHom (Multiplicative.ofAdd a) * g.val⁻¹ = rowSignHom (Multiplicative.ofAdd (a ∘ codeRowImage g⁻¹)) :=\n  by\n  change\n    g.val * SemidirectProduct.inl (Multiplicative.ofAdd (rowSigns a)) * g.val⁻¹ =\n      SemidirectProduct.inl (Multiplicative.ofAdd (rowSigns (a ∘ codeRowImage g⁻¹)))\n  rw [signedCoordinates_sign_conjugate]\n  congr 1\n  change (rowSigns a ∘ g.val.right.symm) = rowSigns (a ∘ codeRowImage g⁻¹)\n  funext z\n  change a (g.val.right.symm z).1 = a (codeRowImage g⁻¹ z.1)\n  exact congrArg a (codeRowImage_coordinates g⁻¹ z)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:32:55: missing space in the source\n\nThis part of the code\n  'Point→Bit)'\nshould be written as\n  'Point → Bit)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeRowImage_eq_linearPoint (g : codeGroup) :\n    codeRowImage g = linearPointEquiv (codeBlockLinearHom g) :=\n  by\n  funext p\n  apply Subtype.ext\n  have h := codeBlockLinear_coordinates g (p, 0)\n  rw [codeRowImage_coordinates] at h\n  exact h.symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignConjugation.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FrameSignDifferences transitive imports (legacy)",
+       "b4e793716276a3b0"],
+      ["Atlas.Rudvalis.FrameSignDifferences:importAllArts", "48db34f727ace974"],
+      ["Atlas.Rudvalis.HeavyBlockTransport transitive imports (legacy)",
+       "56445344fd5db4b5"],
+      ["Atlas.Rudvalis.HeavyBlockTransport:importAllArts", "3d5ca1bf80ca0a33"],
+      ["Atlas.Rudvalis.ScalarQuotient transitive imports (legacy)",
+       "43e8f219d7718818"],
+      ["Atlas.Rudvalis.ScalarQuotient:importAllArts", "b67e660f3be1a911"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FrameSignConjugation.lean",
+   "7c448b5e393e804a"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FrameSignConjugation", "67e741f578768a78"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "7bde5d17eaf1c35d"}

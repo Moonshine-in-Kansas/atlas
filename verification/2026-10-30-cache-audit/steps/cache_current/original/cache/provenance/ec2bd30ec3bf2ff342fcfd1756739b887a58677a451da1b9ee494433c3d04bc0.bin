@@ -1,0 +1,155 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["96065850308b7ed4.olean"],
+  "m": false,
+  "i": "3cc7c583f392051c.ilean",
+  "c": "883f614d1632028f.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/G2/BinaryIndex.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/BinaryIndex.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/BinaryIndex.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/BinaryIndex.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/BinaryIndex.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:14:1: 'theorem rootA_in_H (a : K) : rootA a ∈ H :=\n  Subgroup.subset_normalClosure\n    (rootA_mem_longRootLocal a)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:14:22: missing space in the source\n\nThis part of the code\n  '(a:K) :'\nshould be written as\n  '(a : K)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:16:1: 'theorem rootB_in_H (a : K) : rootB a ∈ H :=\n  Subgroup.subset_normalClosure\n    (rootB_mem_longRootLocal a)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:16:22: missing space in the source\n\nThis part of the code\n  '(a:K) :'\nshould be written as\n  '(a : K)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:18:1: 'theorem rootE_in_H (a : K) : rootE a ∈ H := by\n  rw [← weylS_rootB]\n  exact\n    (inferInstance : H.Normal).conj_mem _ (rootB_in_H a)\n      _' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:18:22: missing space in the source\n\nThis part of the code\n  '(a:K) :'\nshould be written as\n  '(a : K)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:22:1: 'theorem project_A (a : K) : projection (rootA a) = 1 :=\n  (QuotientGroup.eq_one_iff _).mpr\n    (rootA_in_H a)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:22:21: missing space in the source\n\nThis part of the code\n  '(a:K) :'\nshould be written as\n  '(a : K)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:24:1: 'theorem project_B (a : K) : projection (rootB a) = 1 :=\n  (QuotientGroup.eq_one_iff _).mpr\n    (rootB_in_H a)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:24:21: missing space in the source\n\nThis part of the code\n  '(a:K) :'\nshould be written as\n  '(a : K)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:26:1: 'theorem project_E (a : K) : projection (rootE a) = 1 :=\n  (QuotientGroup.eq_one_iff _).mpr\n    (rootE_in_H a)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:26:21: missing space in the source\n\nThis part of the code\n  '(a:K) :'\nshould be written as\n  '(a : K)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:29:1: 'theorem binary_unit_eq_one (a : Kˣ) : a = 1 :=\n  by\n  have h : ∀ a : ZMod 2, a = 0 ∨ a = 1 := by decide\n  apply Units.ext\n  rcases h a with h | h\n  · exact (a.ne_zero h).elim\n  · exact h' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:29:30: missing space in the source\n\nThis part of the code\n  '(a:Kˣ) :'\nshould be written as\n  '(a : Kˣ)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:36:1: 'theorem binary_torus (a b : Kˣ) : torus a b = 1 := by\n  rw [binary_unit_eq_one a, binary_unit_eq_one b,\n    torus_identity]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:36:26: missing space in the source\n\nThis part of the code\n  'b:Kˣ) :'\nshould be written as\n  'b : Kˣ)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:39:1: 'theorem weylR_in_H : (weylR : Model K) ∈ H :=\n  by\n  have h := long_rank_one_word (1 : Kˣ)\n  rw [binary_torus, one_mul] at h\n  rw [← h]\n  exact\n    H.mul_mem (H.mul_mem (rootE_in_H _) ((inferInstance : H.Normal).conj_mem _ (rootE_in_H _) _))\n      (rootE_in_H _)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:46:1: 'theorem project_R : projection weylR = 1 :=\n  (QuotientGroup.eq_one_iff _).mpr\n    weylR_in_H' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:48:1: 'theorem project_C_eq_D (a : K) : projection (rootC a) = projection (rootD a) :=\n  by\n  have hc : rootF 1 * rootE a * rootF (-1) ∈ H := by\n    rw [rootF_neg]\n    exact (inferInstance : H.Normal).conj_mem _ (rootE_in_H a) _\n  have hq : projection (rootF 1 * rootE a * rootF (-1)) = 1 := (QuotientGroup.eq_one_iff _).mpr hc\n  rw [rootF_conjugate_rootE] at hq\n  simp only [one_pow, mul_one, map_mul, project_A, project_B, project_E, one_mul, mul_one, rootD_neg, map_inv] at hq\n  exact mul_inv_eq_one.mp hq' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:48:26: missing space in the source\n\nThis part of the code\n  '(a:K) :'\nshould be written as\n  '(a : K)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:59:1: 'theorem project_D_eq_F (a : K) : projection (rootD a) = projection (rootF a) :=\n  by\n  have h := congrArg projection (weylR_rootD a)\n  simpa only [map_mul, map_inv, project_R, one_mul, inv_one, mul_one] using\n    h' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:59:26: missing space in the source\n\nThis part of the code\n  '(a:K) :'\nshould be written as\n  '(a : K)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:63:1: 'theorem F_sq : (rootF (1 : K)) ^ 2 = 1 := by\n  rw [pow_two, rootF_add, show (1 : K) + 1 = 0 by decide,\n    rootF_zero]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:66:1: 'def quotientBit : Q :=\n  projection (rootF 1)' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:67:1: 'theorem quotientBit_sq : quotientBit ^ 2 = 1 := by\n  rw [quotientBit, ← map_pow, F_sq,\n    map_one]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:70:1: 'def bitSubgroup : Subgroup Q where\n  carrier := {x | x = 1 ∨ x = quotientBit}\n  one_mem' := Or.inl rfl\n  mul_mem' := by\n    rintro a b (rfl | rfl) (rfl | rfl) <;>\n      simp [show quotientBit * quotientBit = 1 by simpa [pow_two] using quotientBit_sq]\n  inv_mem' := by\n    rintro a (rfl | rfl)\n    · exact Or.inl inv_one\n    ·\n      exact\n        Or.inr\n          (inv_eq_of_mul_eq_one_left\n            (by\n              simpa [pow_two] using\n                quotientBit_sq))' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:81:1: 'theorem project_rootF_mem (a : K) : projection (rootF a) ∈ bitSubgroup :=\n  by\n  have h : ∀ a : ZMod 2, a = 0 ∨ a = 1 := by decide\n  rcases h a with rfl | rfl\n  · exact Or.inl (by rw [rootF_zero, map_one])\n  · exact Or.inr rfl' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:81:29: missing space in the source\n\nThis part of the code\n  '(a:K) :'\nshould be written as\n  '(a : K)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:87:1: 'theorem unipotent_le_bitComap : unipotent (K := K) ≤ bitSubgroup.comap projection :=\n  by\n  apply (Subgroup.closure_le _).mpr\n  intro g hg\n  rcases hg with (((((hg | hg) | hg) | hg) | hg) | hg)\n  all_goals obtain ⟨a, rfl⟩ := hg\n  · exact Or.inl (project_A a)\n  · exact Or.inl (project_B a)\n  · change projection (rootC a) ∈ bitSubgroup\n    rw [project_C_eq_D, project_D_eq_F]\n    exact project_rootF_mem a\n  · change projection (rootD a) ∈ bitSubgroup\n    rw [project_D_eq_F]\n    exact project_rootF_mem a\n  · exact Or.inl (project_E a)\n  · exact project_rootF_mem a' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:103:1: 'theorem pointStabilizer_le_bitComap : pointStabilizer (K := K) ≤ bitSubgroup.comap projection :=\n  by\n  rw [← parabolic_eq_pointStabilizer]\n  apply sup_le\n  · apply sup_le unipotent_le_bitComap\n    rintro g ⟨⟨a, b⟩, rfl⟩\n    change projection (torus a b) ∈ bitSubgroup\n    rw [binary_torus, map_one]\n    exact bitSubgroup.one_mem\n  · apply (Subgroup.closure_le _).mpr\n    rintro g (rfl : g = weylR)\n    exact Or.inl project_R' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:116:1: 'theorem H_ne_bot : H ≠ ⊥ := by\n  intro h\n  have ha := rootA_in_H 1\n  rw [h, Subgroup.mem_bot] at ha\n  have h01 := rootA_injective (ha.trans (rootA_zero (K := K)).symm)\n  exact one_ne_zero h01' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:126:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:123:1: 'theorem quotient_eq_one_or_bit [MulAction.IsPreprimitive (Model K) (SingularPoints K)] (g : Model K) :\n    projection g = 1 ∨ projection g = quotientBit :=\n  by\n  letI := Atlas.GroupTheory.normal_pretransitive (X := SingularPoints K) H H_ne_bot\n  obtain ⟨n, hn⟩ := MulAction.exists_smul_eq H (firstPoint (K := K)) (g • firstPoint)\n  have hp : n.val⁻¹ * g ∈ pointStabilizer :=\n    by\n    change (n.val⁻¹ * g) • firstPoint = firstPoint\n    rw [SemigroupAction.mul_smul, ← hn]\n    exact inv_smul_smul n.val firstPoint\n  have hb := pointStabilizer_le_bitComap hp\n  change projection (n.val⁻¹ * g) ∈ bitSubgroup at hb\n  have hnq : projection n.val = 1 := (QuotientGroup.eq_one_iff _).mpr n.prop\n  have hb' : projection g ∈ bitSubgroup := by simpa only [map_mul, map_inv, hnq, inv_one, one_mul] using hb\n  exact hb'' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:139:1: 'theorem quotient_card_le_two [MulAction.IsPreprimitive (Model K) (SingularPoints K)] : Nat.card Q ≤ 2 :=\n  by\n  let f : Bool → Q := fun b => if b then quotientBit else 1\n  have hf : Function.Surjective f := by\n    intro x\n    obtain ⟨g, rfl⟩ := QuotientGroup.mk'_surjective H x\n    rcases quotient_eq_one_or_bit g with h | h\n    · exact ⟨false, h.symm⟩\n    · exact ⟨true, h.symm⟩\n  simpa using\n    Nat.card_le_card_of_surjective f hf' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryIndex.lean:151:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.G2.Primitivity transitive imports (legacy)",
+       "11220d87e04fb632"],
+      ["Atlas.LinearGroups.G2.Primitivity:importAllArts", "be9b6608f28767ce"],
+      ["Atlas.LinearGroups.G2.IwasawaCriterion transitive imports (legacy)",
+       "919792efd20ec102"],
+      ["Atlas.LinearGroups.G2.IwasawaCriterion:importAllArts",
+       "264d73de4df63ff9"],
+      ["Atlas.GroupTheory.PrimitiveNormal transitive imports (legacy)",
+       "2fd361443cfb934c"],
+      ["Atlas.GroupTheory.PrimitiveNormal:importAllArts", "6d3f13818182e957"],
+      ["Mathlib.Data.ZMod.Basic transitive imports (legacy)",
+       "4fe50dc42e3944f9"],
+      ["Mathlib.Data.ZMod.Basic:importAllArts", "9982ee36172e39fc"],
+      ["Mathlib.GroupTheory.Index transitive imports (legacy)",
+       "c5c0ce4f2b4b5fa0"],
+      ["Mathlib.GroupTheory.Index:importAllArts", "9dfb9bb2be7ba28c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/G2/BinaryIndex.lean",
+   "4d32c5b806e82b81"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.G2.BinaryIndex", "3fe82a1a6921d323"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "0f2ab7c6a5db46fa"}

@@ -1,0 +1,91 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["40df33b06b13c046.olean"],
+  "m": false,
+  "i": "3ec7899a9817335c.ilean",
+  "c": "627ec9afedc828d0.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/ProjectivePrimitivity.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ProjectivePrimitivity.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ProjectivePrimitivity.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ProjectivePrimitivity.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ProjectivePrimitivity.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/ProjectivePrimitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectivePrimitivity.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectivePrimitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectivePrimitivity.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe exact elementary divisor obstruction for blocks in the 4060-cross action. -/\ntheorem rudvalis_block_arithmetic (d m : ℕ) (e : Bool) (h : d = 1 + (if e then 1755 else 0) + 64 * m) (hd : d ∣ 4060) :\n    d = 1 ∨ d = 4060 :=\n  by\n  have ha : ∀ d ∈ Nat.divisors 4060, d % 64 = 1 ∨ (d % 64 = 28 ∧ 1756 ≤ d) → d = 1 ∨ d = 4060 := by decide +kernel\n  apply ha d (Nat.mem_divisors.mpr ⟨hd, by decide⟩)\n  cases e <;> simp only [Bool.false_eq_true, ↓reduceIte] at h <;> omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectivePrimitivity.lean:10:10: missing space in the source\n\nThis part of the code\n  'd=1+(if e'\nshould be written as\n  'd = 1'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectivePrimitivity.lean:10:36: missing space in the source\n\nThis part of the code\n  '0)+64*m)'\nshould be written as\n  '0) + 64'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectivePrimitivity.lean:10:39: missing space in the source\n\nThis part of the code\n  '0)+64*m) (hd'\nshould be written as\n  '64 * m)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectivePrimitivity.lean:10:50: missing space in the source\n\nThis part of the code\n  'd∣4060)'\nshould be written as\n  'd ∣ 4060)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectivePrimitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectivePrimitivity.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rudvalis_cross_primitive :\n    MulAction.IsPreprimitive RudvalisGroup MinimalCross :=\n  by\n  let := rudvalis_cross_pretransitive\n  apply\n    Atlas.GroupTheory.primitive_of_one_suborbit_divisible_rest localReferenceCross\n      (codeProjectiveHom.comp codeReferenceStabilizer.subtype) (fun k c => codeGaussianHom_cross k.val c)\n      (fun k => k.prop) {c : MinimalCross | CrossOrthogonal localReferenceCross c}\n      (crossOrthogonal_irrefl localReferenceCross) ?_ ?_ 64 codeReference_nonorthogonal_orbit_divisible ?_\n  · intro k c\n    change CrossOrthogonal localReferenceCross (k.val • c) ↔ CrossOrthogonal localReferenceCross c\n    have h := crossOrthogonal_codeGroup k.val localReferenceCross c\n    rw [show k.val • localReferenceCross = localReferenceCross from k.prop] at h\n    exact h\n  · intro a ha b hb\n    have hao : a ∈ MulAction.orbit localFusionGroup localThirdCross := by rw [localFusionGroup_orthogonal_orbit];\n      exact ha\n    have hbo : b ∈ MulAction.orbit localFusionGroup localThirdCross := by rw [localFusionGroup_orthogonal_orbit];\n      exact hb\n    obtain ⟨g, hg⟩ := MulAction.mem_orbit_iff.mp hao\n    obtain ⟨h, hh⟩ := MulAction.mem_orbit_iff.mp hbo\n    refine ⟨QuotientGroup.mk (h.val * g.val⁻¹), ?_, ?_⟩\n    · change (h * g⁻¹) • localReferenceCross = localReferenceCross\n      exact localFusionGroup_fix _\n    · change (h * g⁻¹) • a = b\n      rw [mul_smul, ← hg, inv_smul_smul, hh]\n  · intro d m e hd hdvd\n    have ho : Nat.card {c : MinimalCross | CrossOrthogonal localReferenceCross c} = 1755 := rudvalis_orthogonal_degree _\n    rw [ho] at hd\n    rw [rudvalisLattice_minimal_cross_card] at hdvd ⊢\n    exact rudvalis_block_arithmetic d m e hd hdvd`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectivePrimitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectivePrimitivity.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectivePrimitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectivePrimitivity.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.NonorthogonalSuborbits transitive imports (legacy)",
+       "e4a93bbaeb322434"],
+      ["Atlas.Rudvalis.NonorthogonalSuborbits:importAllArts",
+       "a6b5e4a314e1ebe0"],
+      ["Atlas.Rudvalis.ProjectiveFrameEmbedding transitive imports (legacy)",
+       "5dd7767d0f0c55b0"],
+      ["Atlas.Rudvalis.ProjectiveFrameEmbedding:importAllArts",
+       "ee09bf25ebd3971c"],
+      ["Atlas.GroupTheory.OneSuborbitPrimitivity transitive imports (legacy)",
+       "9a472485ff067a3a"],
+      ["Atlas.GroupTheory.OneSuborbitPrimitivity:importAllArts",
+       "dcc833baf0e4b1d5"],
+      ["Mathlib.NumberTheory.Divisors transitive imports (legacy)",
+       "4248ae9765a1a62d"],
+      ["Mathlib.NumberTheory.Divisors:importAllArts", "619c0ace8ee8c8a5"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/ProjectivePrimitivity.lean",
+   "401037cdb05a5218"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.ProjectivePrimitivity", "276f3415ff30039b"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "d0b24fa23c96b18c"}

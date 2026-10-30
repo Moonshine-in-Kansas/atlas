@@ -1,0 +1,104 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["93ff73d7ea4d4025.olean"],
+  "m": false,
+  "i": "23e81a0e29086b8f.ilean",
+  "c": "4709fca77aa5332d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/LocalFusionBridgeEnergy.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LocalFusionBridgeEnergy.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LocalFusionBridgeEnergy.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LocalFusionBridgeEnergy.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LocalFusionBridgeEnergy.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def originalRowEnergy (r : Fin 7) (v : RationalSpace) : ℚ :=\n  ∑ k : Fin 8, (seedTransportLinear.symm v (r, k)) ^ 2`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem originalRowEnergy_smul (r : Fin 7) (a : ℚ) (v : RationalSpace) :\n    originalRowEnergy r (a • v) = a ^ 2 * originalRowEnergy r v := by\n  simp only [originalRowEnergy, map_smul, Pi.smul_apply, smul_eq_mul, mul_pow, Finset.mul_sum]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem originalRowEnergy_seedInteger (r : Fin 7) (v : SeedCoordinate → ℤ) :\n    originalRowEnergy r (seedIntegerRational v) = ((∑ k : Fin 8, v (r, k) ^ 2 : ℤ) : ℚ) := by\n  simp only [originalRowEnergy, seedIntegerRational, LinearEquiv.symm_apply_apply, Int.cast_sum, Int.cast_pow]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:15:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:13:69: missing space in the source\n\nThis part of the code\n  'SeedCoordinate→ℤ) :'\nshould be written as\n  'SeedCoordinate → ℤ)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localExtraVector_final_rowEnergy (c : Fin 2) (r : Fin 7) :\n    originalRowEnergy r (localExtraVector 8 c.castSucc.castSucc) =\n      (65536 : ℚ) * (![![0, 1, 1, 1, 0, 0, 1], ![2, 2, 2, 2, 2, 4, 2]] c r) :=\n  by\n  rw [localExtraVector, originalRowEnergy_seedInteger, localExtraNumerator_energy]\n  push_cast\n  fin_cases c <;> fin_cases r <;> norm_num`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localFusionT_coordinate_bridge_energy (r : Fin 7) :\n    originalRowEnergy r (localFusionT.val (originalFrame (1, 1))) = ![0, 1, 1, 1, 0, 0, 1] r :=\n  by\n  have hi := localExtraVector_axis 0 (by decide)\n  change localExtraVector 0 0 = originalFrame (1, 1) at hi\n  rw [← hi, localFusionT_extra_vectors, originalRowEnergy_smul]\n  have he := localExtraVector_final_rowEnergy 0 r\n  change originalRowEnergy r (localExtraVector 8 0) = 65536 * (![0, 1, 1, 1, 0, 0, 1] r) at he\n  rw [he]\n  ring`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localFusionT_seed_bridge_energy (r : Fin 7) :\n    originalRowEnergy r (localFusionT.val shiftedSeedA) = ![1 / 2, 1 / 2, 1 / 2, 1 / 2, 1 / 2, 1, 1 / 2] r :=\n  by\n  rw [shiftedSeedA, ← localExtraVector_seed, map_smul, localFusionT_extra_vectors, originalRowEnergy_smul,\n    originalRowEnergy_smul]\n  have he := localExtraVector_final_rowEnergy 1 r\n  change originalRowEnergy r (localExtraVector 8 1) = 65536 * (![2, 2, 2, 2, 2, 4, 2] r) at he\n  rw [he]\n  fin_cases r <;> norm_num`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionBridgeEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.LocalFusionExtraAction transitive imports (legacy)",
+       "2db54d48e30a4840"],
+      ["Atlas.Rudvalis.LocalFusionExtraAction:importAllArts",
+       "8a7c8d31ffee4bf7"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/LocalFusionBridgeEnergy.lean",
+   "44a85fe6926e3cfc"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.LocalFusionBridgeEnergy", "6f05a1f014a0cd1a"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "5744faaf9bff93cc"}

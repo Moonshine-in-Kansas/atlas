@@ -1,0 +1,146 @@
+{
+  "id": "staged-F4RootWeights",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.rootWeight",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.rootWeight_pos",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.coefficientNorm",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.coefficientCartesian",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.coefficientCartesian_root",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.norm_coefficientCartesian",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.coefficientNorm_root",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.coefficientNorm_reflection",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.rootWeight_simple_reflection",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.rootWeight_reflection",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.rootWeight_weyl",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.rootWeight_simple",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.f4WeightedInversions",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.f4WeightedInversions_eq_sum",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.f4WeightedInversions_one",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.f4WeightedInversions_mul_simple_of_positive",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.f4WeightedInversions_mul_simple_of_negative",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.F4RootWeights.f4WeightedInversions_simple",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.F4RootWeights"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-F4RootWeights-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-F4RootWeights-structural-identification-before-count",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.TwistedE6.companionFixedSubgroup_card",
+        "Atlas.Chevalley.TwistedE6.companionFixedWeylCell_card",
+        "Atlas.Chevalley.F4B3.rootWeylPoincareEval_F4",
+        "Atlas.Chevalley.RootData.rootWeylPoincareEval"
+      ],
+      "forbid_modules": [
+        "FamilyWork.PositiveFixedOrder",
+        "FamilyWork.FixedTorusOrder",
+        "FamilyWork.FixedBorel",
+        "FamilyWork.FixedInversionOrder",
+        "FamilyWork.FixedCellCoordinates",
+        "FamilyWork.FixedWeylCell",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveFixedOrder",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedTorusOrder",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedBorel",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedInversionOrder",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedCellCoordinates",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedWeylCell"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

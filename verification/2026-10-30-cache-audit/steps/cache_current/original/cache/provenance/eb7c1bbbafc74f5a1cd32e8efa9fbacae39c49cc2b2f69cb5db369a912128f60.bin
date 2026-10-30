@@ -1,0 +1,56 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["89753ada38714a70.olean"],
+  "m": false,
+  "i": "2e21bb3dcf8f63bb.ilean",
+  "c": "07b0d4551359df68.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Lattices/EisensteinComparisonSpace.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/EisensteinComparisonSpace.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/EisensteinComparisonSpace.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/EisensteinComparisonSpace.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/EisensteinComparisonSpace.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Lattices/EisensteinComparisonSpace.lean:25:61: This simp argument is unused:\n  Finset.mul_sum\n\nHint: Omit it from the simp argument list.\n  [apply] simp [dotProduct, Matrix.mulVec, eisensteinRealGram, eisensteinRealCoordinates, Fintype.sum_prod_type,\n    Fin.sum_univ_two, eisensteinReal, mul_ite, Finset.sum_add_distrib, Finset.sum_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/EisensteinComparisonSpace.lean:26:37: This simp argument is unused:\n  Finset.sum_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [dotProduct, Matrix.mulVec, eisensteinRealGram, eisensteinRealCoordinates, Fintype.sum_prod_type,\n    Fin.sum_univ_two, eisensteinReal, Finset.mul_sum, mul_ite, Finset.sum_add_distrib]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/EisensteinComparisonSpace.lean:27:22: This simp argument is unused:\n  sub_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [add_mul, mul_add, mul_sub, neg_mul, mul_neg, Finset.sum_add_distrib, Finset.sum_sub_distrib,\n    Finset.sum_neg_distrib, ← Finset.sum_mul, ← Finset.mul_sum]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/EisensteinComparisonSpace.lean:28:28: This simp argument is unused:\n  Finset.sum_sub_distrib\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [add_mul, sub_mul, mul_add, mul_sub, neg_mul, mul_neg, Finset.sum_add_distrib,\n    Finset.sum_neg_distrib, ← Finset.sum_mul, ← Finset.mul_sum]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/EisensteinComparisonSpace.lean:29:4: This simp argument is unused:\n  ← Finset.sum_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [add_mul, sub_mul, mul_add, mul_sub, neg_mul, mul_neg, Finset.sum_add_distrib,\n    Finset.sum_sub_distrib, Finset.sum_neg_distrib, ← Finset.mul_sum]\n\nNote: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/EisensteinComparisonSpace.lean:29:22: This simp argument is unused:\n  ← Finset.mul_sum\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [add_mul, sub_mul, mul_add, mul_sub, neg_mul, mul_neg, Finset.sum_add_distrib,\n    Finset.sum_sub_distrib, Finset.sum_neg_distrib, ← Finset.sum_mul]\n\nNote: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Lattices.EisensteinComparisonMatrix transitive imports (legacy)",
+       "5251519dc338c599"],
+      ["Atlas.Lattices.EisensteinComparisonMatrix:importAllArts",
+       "f5bad9ed1f55c9a8"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Lattices/EisensteinComparisonSpace.lean",
+   "6f43c44f06d3e0ec"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Lattices.EisensteinComparisonSpace", "996ca100c0863719"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "da6858ec74e278ce"}

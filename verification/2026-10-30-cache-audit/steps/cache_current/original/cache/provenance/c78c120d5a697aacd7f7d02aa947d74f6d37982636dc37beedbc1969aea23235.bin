@@ -1,0 +1,148 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["0b8c932e594dac3a.olean"],
+  "m": false,
+  "i": "31ce8c319f558832.ilean",
+  "c": "65deaa296f449f17.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:12:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:20:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:38:31: This simp argument is unused:\n  Matrix.diagonal_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.one_apply, h]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:38:53: This simp argument is unused:\n  Matrix.one_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Matrix.diagonal_apply, h]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:31:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:15:54: missing space in the source\n\nThis part of the code\n  '4≤n+2)\n '\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:16:61: missing space in the source\n\nThis part of the code\n  '(n+2) hn)'\nshould be written as\n  '(n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:17:43: missing space in the source\n\nThis part of the code\n  '(n+2) hn)'\nshould be written as\n  '(n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:17:54: missing space in the source\n\nThis part of the code\n  'g=1) :'\nshould be written as\n  'g = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:42:65: missing space in the source\n\nThis part of the code\n  '4≤n+2)\n '\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:43:61: missing space in the source\n\nThis part of the code\n  '(n+2) hn)'\nshould be written as\n  '(n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:44:43: missing space in the source\n\nThis part of the code\n  '(n+2) hn)'\nshould be written as\n  '(n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:44:54: missing space in the source\n\nThis part of the code\n  'g=1) :'\nshould be written as\n  'g = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:61:69: missing space in the source\n\nThis part of the code\n  '4≤n+2)\n '\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:62:61: missing space in the source\n\nThis part of the code\n  '(n+2) hn)'\nshould be written as\n  '(n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:63:43: missing space in the source\n\nThis part of the code\n  '(n+2) hn)'\nshould be written as\n  '(n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:63:54: missing space in the source\n\nThis part of the code\n  'g=1) :'\nshould be written as\n  'g = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:70:62: missing space in the source\n\nThis part of the code\n  '4≤n+2)\n '\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:72:39: missing space in the source\n\nThis part of the code\n  '(n+2) hn)'\nshould be written as\n  '(n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:73:61: missing space in the source\n\nThis part of the code\n  '(n+2) hn)'\nshould be written as\n  '(n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:78:40: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:82:60: missing space in the source\n\nThis part of the code\n  '4≤n+2)\n '\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:92:45: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:99:53: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:100:39: missing space in the source\n\nThis part of the code\n  '(n+2) hn)'\nshould be written as\n  '(n + 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:113:51: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:114:15: missing space in the source\n\nThis part of the code\n  '(n+2)) (t'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:122:51: missing space in the source\n\nThis part of the code\n  '4≤n+2) (K'\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:123:15: missing space in the source\n\nThis part of the code\n  '(n+2)) (t'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:144:2: Try `simp at he` instead of `simpa using he`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean:132:62: missing space in the source\n\nThis part of the code\n  '4≤n+2)\n '\nshould be written as\n  '4 ≤ n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.Comparison.TypeDNaturalElementary transitive imports (legacy)",
+       "4f70261ba0ccf8eb"],
+      ["Atlas.LinearGroups.Chevalley.Comparison.TypeDNaturalElementary:importAllArts",
+       "be54139969bf3a38"],
+      ["Atlas.LinearGroups.Chevalley.SelectedOrbitKernelScalar transitive imports (legacy)",
+       "a84e8035e2ab98cd"],
+      ["Atlas.LinearGroups.Chevalley.SelectedOrbitKernelScalar:importAllArts",
+       "057c449bd6d79efc"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeDNaturalCoset transitive imports (legacy)",
+       "edccdccdf6a6fccf"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeDNaturalCoset:importAllArts",
+       "536cbc7c308f9b94"],
+      ["Atlas.LinearGroups.Chevalley.SelectedWeightCompanionCenterQuotient transitive imports (legacy)",
+       "8fcec3010bf7a1a9"],
+      ["Atlas.LinearGroups.Chevalley.SelectedWeightCompanionCenterQuotient:importAllArts",
+       "62be975d20604d79"],
+      ["Atlas.LinearGroups.Orthogonal.ProjectiveElementary transitive imports (legacy)",
+       "64c2c37e3b36aee1"],
+      ["Atlas.LinearGroups.Orthogonal.ProjectiveElementary:importAllArts",
+       "5e291829f52a3003"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Comparison/TypeDNaturalProjective.lean",
+   "7585fbe5649d047f"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Comparison.TypeDNaturalProjective",
+   "f085e62071408e1e"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "9e6c5fd9b7a6d4aa"}

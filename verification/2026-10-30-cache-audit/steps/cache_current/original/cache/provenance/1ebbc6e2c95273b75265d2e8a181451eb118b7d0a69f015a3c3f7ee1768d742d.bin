@@ -1,0 +1,69 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["b3fb4fee5efdecbd.olean"],
+  "m": false,
+  "i": "419bc994eb7bd22e.ilean",
+  "c": "3ce3c7aefeffb2f5.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Conway/EisensteinNineSignWitnesses.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/EisensteinNineSignWitnesses.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/EisensteinNineSignWitnesses.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Conway/EisensteinNineSignWitnesses.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Conway/EisensteinNineSignWitnesses.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Conway/EisensteinNineSignWitnesses.lean:26:70: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [eisensteinNineHexadLift, eisensteinConstantNineForm, hk, hkj, eisensteinPhase_correction]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNineSignWitnesses.lean:30:72: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [eisensteinNineHexadLift, eisensteinConstantNineForm, hj, hik]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNineSignWitnesses.lean:32:78: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [eisensteinNineHexadLift, eisensteinConstantNineForm, hi, hik, hij]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNineSignWitnesses.lean:13:24: missing space in the source\n\nThis part of the code\n  'b≠0) :'\nshould be written as\n  'b ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNineSignWitnesses.lean:35:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNineSignWitnesses.lean:34:1: 'theorem eisensteinNineHexadFamily_sign (b : ZMod 3) (hb : b ≠ 0) (F : EisensteinFrame)\n    (hF : F ∈ eisensteinNineHexadFamily b hb) : EisensteinNineSignFrame b F := by\n  classical\n  obtain ⟨p, _, hp⟩ := Finset.mem_biUnion.mp hF\n  obtain ⟨t, ht⟩ := (eisensteinNineHexadPairOrbit_mem b hb p F).mp hp\n  rw [← ht]\n  apply eisensteinNineSignFrame_phase\n  exact\n    eisensteinNineHexadFrame_sign _ (eisensteinHexadPairSupport_mem p) _ _ (eisensteinHexadPairPoint_mem p)\n      (eisensteinNineHexadPairOutside_mem p) b\n      hb' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNineSignWitnesses.lean:34:60: missing space in the source\n\nThis part of the code\n  'b≠0)\n '\nshould be written as\n  'b ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNineSignWitnesses.lean:44:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNineSignWitnesses.lean:48:69: missing space in the source\n\nThis part of the code\n  'b≠0)\n '\nshould be written as\n  'b ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Conway.EisensteinNineSignAction transitive imports (legacy)",
+       "04f7bf1d228729b0"],
+      ["Atlas.Conway.EisensteinNineSignAction:importAllArts",
+       "fce2885907980d9e"],
+      ["Atlas.Conway.EisensteinNineHexadFamily transitive imports (legacy)",
+       "e528a9d466f05a21"],
+      ["Atlas.Conway.EisensteinNineHexadFamily:importAllArts",
+       "f82d05c6a59b6749"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Conway/EisensteinNineSignWitnesses.lean",
+   "5073a6fd13b462a8"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Conway.EisensteinNineSignWitnesses", "9ddda953aeafaf31"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "35db62acf9cf572b"}

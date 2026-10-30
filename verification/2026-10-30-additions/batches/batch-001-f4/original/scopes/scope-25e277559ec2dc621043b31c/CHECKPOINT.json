@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "chevalley-conjugation-lift-subgroup",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearAlgebra.ConjugationLiftSubgroup"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.LinearAlgebra.conjugationCompatible_inv",
+      "source": "Atlas/LinearAlgebra/ConjugationLiftSubgroup.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearAlgebra.ConjugationLiftSubgroup"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.conjugationLiftSubgroup",
+      "source": "Atlas/LinearAlgebra/ConjugationLiftSubgroup.lean",
+      "kind": "definition",
+      "module": "Atlas.LinearAlgebra.ConjugationLiftSubgroup"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.conjugationLiftHom",
+      "source": "Atlas/LinearAlgebra/ConjugationLiftSubgroup.lean",
+      "kind": "definition",
+      "module": "Atlas.LinearAlgebra.ConjugationLiftSubgroup"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.conjugationLiftHom_compatible",
+      "source": "Atlas/LinearAlgebra/ConjugationLiftSubgroup.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearAlgebra.ConjugationLiftSubgroup"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.conjugationLiftHom_eq",
+      "source": "Atlas/LinearAlgebra/ConjugationLiftSubgroup.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearAlgebra.ConjugationLiftSubgroup"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.conjugationLiftHom_surjective",
+      "source": "Atlas/LinearAlgebra/ConjugationLiftSubgroup.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearAlgebra.ConjugationLiftSubgroup"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.conjugationLiftHom_surjective_of_generators",
+      "source": "Atlas/LinearAlgebra/ConjugationLiftSubgroup.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearAlgebra.ConjugationLiftSubgroup"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.conjugationLiftEquiv",
+      "source": "Atlas/LinearAlgebra/ConjugationLiftSubgroup.lean",
+      "kind": "definition",
+      "module": "Atlas.LinearAlgebra.ConjugationLiftSubgroup"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.conjugationLiftEquiv_eq",
+      "source": "Atlas/LinearAlgebra/ConjugationLiftSubgroup.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearAlgebra.ConjugationLiftSubgroup"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.conjugationLiftEquiv_compatible",
+      "source": "Atlas/LinearAlgebra/ConjugationLiftSubgroup.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearAlgebra.ConjugationLiftSubgroup"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "chevalley-conjugation-lift-subgroup-generic-only",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.",
+        "Atlas.G2.",
+        "Atlas.F4.",
+        "Atlas.Orthogonal.",
+        "Atlas.Symplectic.",
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "PresentedGroup"
+      ],
+      "module_allowlists": [
+        {
+          "prefix": "Atlas.",
+          "modules": [
+            "Atlas.LinearAlgebra.ConjugationRestriction",
+            "Atlas.GroupTheory.SubgroupSurjectionCard",
+            "Atlas.LinearAlgebra.ConjugationLiftSubgroup"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "staged-PositiveProjection",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveRho_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6OrbitLiftProduct_rho_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveAdjointImage",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveProjection",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveProjection_val",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveProjection_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveProjection_surjective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveProjectionEquiv",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveProjectionEquiv_val",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6OrbitLiftProduct_compatible_twist",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveSubgroup_twist_mem",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveSubgroup_fixed_iff_rho_fixed",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveFixedAdjointImage",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveFixedProjection",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveFixedProjection_val",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveFixedProjection_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveFixedProjection_surjective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveFixedProjectionEquiv",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveFixedProjectionEquiv_val",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveFixedProjection_image",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveFixedAdjointImage_card",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveProjection"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-PositiveProjection-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-PositiveProjection-no-inherited-positive-order",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.selectedWeightCompanionPositive_card",
+        "Atlas.Chevalley.positiveWitnessedWeightCompanionSubgroup_card"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

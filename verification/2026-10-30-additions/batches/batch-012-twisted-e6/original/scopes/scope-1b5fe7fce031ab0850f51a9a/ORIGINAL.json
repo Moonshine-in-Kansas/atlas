@@ -1,0 +1,156 @@
+{
+  "id": "staged-FixedWeylFaithfulness",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.FixedWeylFaithfulness"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.RootSpace",
+      "kind": "definition",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.rootVector",
+      "kind": "definition",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.weylLinear",
+      "kind": "definition",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.weylLinear_root",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.rootSpaceDiagram",
+      "kind": "definition",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.rootSpaceDiagram_simple",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.rootSpaceDiagram_root",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.fixedRootSpace",
+      "kind": "definition",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.mem_fixedRootSpace",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.rootSpaceDiagram_commute_weylLinear",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.weylLinear_mem_fixedRootSpace",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.fixedRootSpaceRestriction",
+      "kind": "definition",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.fixedRootSpaceRestriction_val",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.simpleOrbitSum",
+      "kind": "definition",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.simpleOrbitSum_mem",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.heightFunctional",
+      "kind": "definition",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.height_rootVector",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.height_simpleOrbitSum",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.eq_one_of_simpleOrbitSums_fixed",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.eq_one_of_fixedRootSpace_pointwise",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.weylLinear_one",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.fixedRootSpaceRestriction_eq_id_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.FixedWeylFaithfulness.eq_one_of_rationalRootWeylEquiv_fixed",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedWeylFaithfulness"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-FixedWeylFaithfulness-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-FixedWeylFaithfulness-no-generation-or-count",
+      "all_roots": true,
+      "forbid_modules": [
+        "FamilyWork.FoldedWeylGeneration",
+        "FamilyWork.PositiveFixedOrder",
+        "FamilyWork.FixedTorusOrder",
+        "FamilyWork.FixedBorel"
+      ]
+    }
+  ]
+}

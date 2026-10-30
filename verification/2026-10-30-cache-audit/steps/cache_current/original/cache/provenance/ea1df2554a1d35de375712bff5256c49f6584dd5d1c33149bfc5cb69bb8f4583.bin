@@ -1,0 +1,54 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["2eeaf75b69c6ce84.olean"],
+  "m": false,
+  "i": "737128d124e82714.ilean",
+  "c": "2fbfcbaa7b1b3335.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Conway/Co3EvenEndpoints.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/Co3EvenEndpoints.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/Co3EvenEndpoints.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Conway/Co3EvenEndpoints.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Conway/Co3EvenEndpoints.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Conway/Co3EvenEndpoints.lean:90:36: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [coordinateVector, constantSupportVector, (show b.val ≠ a from b.prop).symm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/Co3EvenEndpoints.lean:92:36: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [coordinateVector, constantSupportVector, (show b.val ≠ a from b.prop)]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/Co3EvenEndpoints.lean:90:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/Co3EvenEndpoints.lean:92:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/Co3EvenEndpoints.lean:111:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Conway.Co3DecompositionBounds transitive imports (legacy)",
+       "e8090071017a28a6"],
+      ["Atlas.Conway.Co3DecompositionBounds:importAllArts", "2a12b3281bb4828d"],
+      ["Atlas.Mathieu.Mathieu23Witt transitive imports (legacy)",
+       "7d835d9f32dbcf45"],
+      ["Atlas.Mathieu.Mathieu23Witt:importAllArts", "8510105e8cd5769f"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Conway/Co3EvenEndpoints.lean", "446340a2edf345e1"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Conway.Co3EvenEndpoints", "355c2b19815d983e"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "5296d83b052c479d"}

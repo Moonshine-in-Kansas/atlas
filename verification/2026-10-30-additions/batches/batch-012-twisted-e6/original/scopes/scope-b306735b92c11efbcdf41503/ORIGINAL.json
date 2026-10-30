@@ -1,0 +1,100 @@
+{
+  "id": "staged-InversionCoordinates",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.InversionCoordinates"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6CellInversionLabels",
+      "kind": "definition",
+      "module": "FamilyWork.InversionCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6CellInversionLabels_diagram_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.InversionCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6OrbitLiftProduct_mem_inversion_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.InversionCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6SupportedInversionCoordinates",
+      "kind": "definition",
+      "module": "FamilyWork.InversionCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6InversionProduct",
+      "kind": "definition",
+      "module": "FamilyWork.InversionCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6InversionProduct_val",
+      "kind": "theorem",
+      "module": "FamilyWork.InversionCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6InversionProduct_injective",
+      "kind": "theorem",
+      "module": "FamilyWork.InversionCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6InversionProduct_surjective",
+      "kind": "theorem",
+      "module": "FamilyWork.InversionCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6InversionProductEquiv",
+      "kind": "definition",
+      "module": "FamilyWork.InversionCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6InversionProductEquiv_apply",
+      "kind": "theorem",
+      "module": "FamilyWork.InversionCoordinates"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-InversionCoordinates-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-InversionCoordinates-no-inherited-factor-count",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.selectedWeightCompanionPositive_card",
+        "Atlas.Chevalley.positiveWitnessedWeightCompanionSubgroup_card",
+        "Atlas.Chevalley.positiveRootSubsetSubgroup_card",
+        "Atlas.Chevalley.positiveWitnessed_doubleCell_card",
+        "Atlas.Chevalley.TwistedE6.companionPositiveFixedSubgroup_card",
+        "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.fixedFunctions_card",
+        "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.card_fixedLabel",
+        "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.card_pairLabel"
+      ],
+      "forbid_modules": [
+        "FamilyWork.FixedBorel",
+        "FamilyWork.FixedTorusOrder",
+        "FamilyWork.FoldedWeylGeneration"
+      ]
+    }
+  ]
+}

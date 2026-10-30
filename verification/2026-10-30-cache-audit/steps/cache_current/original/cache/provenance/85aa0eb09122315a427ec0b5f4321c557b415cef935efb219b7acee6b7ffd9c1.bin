@@ -1,0 +1,152 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["20597f5cd1637bd0.olean"],
+  "m": false,
+  "i": "289e8ba37a6fa903.ilean",
+  "c": "329f6e28c1ebcbea.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CanonicalFrameFibres.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CanonicalFrameFibres.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CanonicalFrameFibres.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CanonicalFrameFibres.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CanonicalFrameFibres.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nQuartets determining a frame, distinguished from all quartets contained in it. -/\ndef quartetsDetermining (F : Set MinimalCross) : Set (Set MinimalCross) :=\n  {Q | IsQuartet Q ∧ canonicalBase Q = F}`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def quartetsDeterminingEquiv (g : gaussianLatticeGroup)\n    (F : Set MinimalCross) : quartetsDetermining F ≃ quartetsDetermining (gaussianImage g F)\n    where\n  toFun\n    Q :=\n    ⟨gaussianImage g Q.val, (isQuartet_gaussianImage g Q.val).mpr Q.prop.1, by\n      rw [← canonicalBase_gaussianImage, Q.prop.2]⟩\n  invFun\n    Q :=\n    ⟨gaussianImage g⁻¹ Q.val, (isQuartet_gaussianImage g⁻¹ Q.val).mpr Q.prop.1, by\n      rw [← canonicalBase_gaussianImage, Q.prop.2, gaussianImage_inv]⟩\n  left_inv Q := Subtype.ext (gaussianImage_inv g Q.val)\n  right_inv Q := Subtype.ext (gaussianImage_inv_right g Q.val)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `section Transport`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `variable\n  (htrans :\n    ∀ Q : Set MinimalCross,\n      IsQuartet Q → ∃ g : generatedGaussianGroup, gaussianImage g.val (coordinateRowFrame (rowLabel 0)) = Q)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:19:20: missing space in the source\n\nThis part of the code\n  '∀Q : Set'\nshould be written as\n  '∀ Q :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:19:41: missing space in the source\n\nThis part of the code\n  'MinimalCross,IsQuartet'\nshould be written as\n  'MinimalCross,\n   '\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:20:3: missing space in the source\n\nThis part of the code\n  '∃g : generatedGaussianGroup,gaussianImage'\nshould be written as\n  '∃ g :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:20:30: missing space in the source\n\nThis part of the code\n  'generatedGaussianGroup,gaussianImage'\nshould be written as\n  'generatedGaussianGroup, gaussianImage'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:20:83: missing space in the source\n\nThis part of the code\n  '0))=Q)\n'\nshould be written as\n  '0)) = Q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `include htrans`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem quartetsDetermining_coordinateFrame_of_transport :\n    quartetsDetermining coordinateFrame = Set.range coordinateRowFrame :=\n  by\n  ext Q\n  constructor\n  · rintro ⟨hQ, hB⟩\n    obtain ⟨g, hg⟩ := htrans Q hQ\n    have hF : gaussianImage g.val coordinateFrame = coordinateFrame :=\n      by\n      rw [← coordinateRow_canonicalBase_eq (rowLabel 0), canonicalBase_gaussianImage, hg, hB]\n      exact (coordinateRow_canonicalBase_eq _).symm\n    have hf : ∀ c, c ∈ coordinateFrame ↔ g.val • c ∈ coordinateFrame :=\n      by\n      intro c\n      simpa only [hF] using (gaussianImage_mem g.val coordinateFrame c).symm\n    obtain ⟨k, hk⟩ := (gaussian_frame_stabilizer g.val).mp hf\n    refine ⟨codeRowImage k (rowLabel 0), ?_⟩\n    rw [← coordinateRowFrame_code_image, hk, hg]\n  · rintro ⟨p, rfl⟩\n    exact ⟨coordinateRowFrame_isQuartet p, coordinateRow_canonicalBase_eq p⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem quartetsDetermining_coordinateFrame_card_of_transport :\n    Nat.card (quartetsDetermining coordinateFrame) = 7 := by\n  rw [quartetsDetermining_coordinateFrame_of_transport htrans, coordinateRowFrames_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem canonicalBase_transport_of_quartet_transport (Q : Set MinimalCross)\n    (hQ : IsQuartet Q) : ∃ g : generatedGaussianGroup, canonicalBase Q = gaussianImage g.val coordinateFrame :=\n  by\n  obtain ⟨g, hg⟩ := htrans Q hQ\n  refine ⟨g, ?_⟩\n  rw [← coordinateRow_canonicalBase_eq (rowLabel 0), canonicalBase_gaussianImage, hg]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem canonicalFrame_generated_transport_of_quartet_transport\n    (F : Set MinimalCross) (hF : F ∈ canonicalBases) :\n    ∃ g : generatedGaussianGroup, gaussianImage g.val coordinateFrame = F :=\n  by\n  obtain ⟨Q, hQ, rfl⟩ := hF\n  obtain ⟨g, hg⟩ := canonicalBase_transport_of_quartet_transport htrans Q hQ\n  exact ⟨g, hg.symm⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:52:34: missing space in the source\n\nThis part of the code\n  'F∈canonicalBases)'\nshould be written as\n  'F ∈ canonicalBases)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem canonicalFrame_isFrame_of_quartet_transport (F : Set MinimalCross)\n    (hF : F ∈ canonicalBases) : IsFrame F :=\n  by\n  obtain ⟨g, rfl⟩ := canonicalFrame_generated_transport_of_quartet_transport htrans F hF\n  exact (isFrame_gaussianImage g.val coordinateFrame).mpr coordinateFrame_isFrame`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:59:34: missing space in the source\n\nThis part of the code\n  'F∈canonicalBases)'\nshould be written as\n  'F ∈ canonicalBases)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem quartetsDetermining_card_of_quartet_transport (F : Set MinimalCross)\n    (hF : F ∈ canonicalBases) : Nat.card (quartetsDetermining F) = 7 :=\n  by\n  obtain ⟨g, rfl⟩ := canonicalFrame_generated_transport_of_quartet_transport htrans F hF\n  rw [← Nat.card_congr (quartetsDeterminingEquiv g.val coordinateFrame)]\n  exact quartetsDetermining_coordinateFrame_card_of_transport htrans`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:64:34: missing space in the source\n\nThis part of the code\n  'F∈canonicalBases)'\nshould be written as\n  'F ∈ canonicalBases)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Transport`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameFibres.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateRowOrbit transitive imports (legacy)",
+       "bb2e9752d0c67e17"],
+      ["Atlas.Rudvalis.CoordinateRowOrbit:importAllArts",
+       "63a849c21e16e32a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CanonicalFrameFibres.lean",
+   "4574ab356669dc62"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CanonicalFrameFibres", "c0a1c30988bc11ce"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "5b471371bfa68381"}

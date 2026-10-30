@@ -1,0 +1,57 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["fa2be832f3a7f111.olean"],
+  "m": false,
+  "i": "c088bd6fd66619c9.ilean",
+  "c": "39dff82493a2135c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/ParkerCoordinateAction.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/ParkerCoordinateAction.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/ParkerCoordinateAction.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/ParkerCoordinateAction.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/ParkerCoordinateAction.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/ParkerCoordinateAction.lean:28:74: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [parkerCoordinateAction, parkerSignedMonomial, coordinateVector]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/ParkerCoordinateAction.lean:33:74: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [parkerCoordinateAction, parkerSignedMonomial, coordinateVector, h, Ne.symm h, hi, Ne.symm hi]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/ParkerCoordinateAction.lean:34:9: This simp argument is unused:\n  Ne.symm h\n\nHint: Omit it from the simp argument list.\n  [apply] simp [parkerCoordinateAction, parkerSignedMonomial, coordinateVector, Pi.single_apply, h, hi, Ne.symm hi]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/ParkerCoordinateAction.lean:34:24: This simp argument is unused:\n  Ne.symm hi\n\nHint: Omit it from the simp argument list.\n  [apply] simp [parkerCoordinateAction, parkerSignedMonomial, coordinateVector, Pi.single_apply, h, Ne.symm h, hi]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/ParkerCoordinateAction.lean:23:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Fischer.ParkerOctadProductAction transitive imports (legacy)",
+       "4cf8bc09cba3147f"],
+      ["Atlas.Fischer.ParkerOctadProductAction:importAllArts",
+       "078ca5a9fbcc820a"],
+      ["Atlas.Fischer.SignedMonomialGeometry transitive imports (legacy)",
+       "c2142f1133ca7e48"],
+      ["Atlas.Fischer.SignedMonomialGeometry:importAllArts",
+       "fda7641f6d7754b7"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/ParkerCoordinateAction.lean",
+   "3cc073379b70df44"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.ParkerCoordinateAction", "f676f3f85ebb2ae9"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "924b241f49535273"}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "chevalley-generic-subgroup-surjection-card",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.GroupTheory.SubgroupSurjectionCard"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.GroupTheory.subgroup_eq_top_and_bijective_of_surjective_of_card",
+      "source": "Atlas/GroupTheory/SubgroupSurjectionCard.lean",
+      "kind": "theorem",
+      "module": "Atlas.GroupTheory.SubgroupSurjectionCard"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.subgroupSurjectionEquiv",
+      "source": "Atlas/GroupTheory/SubgroupSurjectionCard.lean",
+      "kind": "definition",
+      "module": "Atlas.GroupTheory.SubgroupSurjectionCard"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.subgroupSurjectionEquiv_apply",
+      "source": "Atlas/GroupTheory/SubgroupSurjectionCard.lean",
+      "kind": "theorem",
+      "module": "Atlas.GroupTheory.SubgroupSurjectionCard"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "chevalley-generic-subgroup-surjection-card-generic-only",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.",
+        "Atlas.G2.",
+        "Atlas.F4.",
+        "Atlas.Orthogonal.",
+        "Atlas.Symplectic.",
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "PresentedGroup"
+      ],
+      "module_allowlists": [
+        {
+          "prefix": "Atlas.",
+          "modules": [
+            "Atlas.GroupTheory.SubgroupSurjectionCard"
+          ]
+        }
+      ]
+    }
+  ]
+}

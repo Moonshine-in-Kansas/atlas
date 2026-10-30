@@ -1,0 +1,53 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["720e509524a08562.olean"],
+  "m": false,
+  "i": "bc6d8ca6e04052b4.ilean",
+  "c": "c3b9a632801a1cdf.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/CubicTriangleIncidence.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CubicTriangleIncidence.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CubicTriangleIncidence.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CubicTriangleIncidence.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CubicTriangleIncidence.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/CubicTriangleIncidence.lean:74:44: This simp argument is unused:\n  show (2 : Bit) = 0 from rfl\n\nHint: Omit it from the simp argument list.\n  [apply] simp [cubicPointOctadIncidence, hD, hE, hF] at h ⊢\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicTriangleIncidence.lean:104:44: This simp argument is unused:\n  show (2 : Bit) = 0 from rfl\n\nHint: Omit it from the simp argument list.\n  [apply] simp [cubicPointOctadIncidence, hD, hE, hF] at h hn ⊢\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicTriangleIncidence.lean:104:85: Unused tactic linter: `norm_num` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicTriangleIncidence.lean:104:85: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Fischer.CubicTriangleCounts transitive imports (legacy)",
+       "6bffbb5dc6600b9c"],
+      ["Atlas.Fischer.CubicTriangleCounts:importAllArts", "84cf13210b825222"],
+      ["Atlas.Fischer.OctadShortenedCode transitive imports (legacy)",
+       "fd304e89f256f388"],
+      ["Atlas.Fischer.OctadShortenedCode:importAllArts",
+       "d9d5c163af588087"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/CubicTriangleIncidence.lean",
+   "fe3115a17c82e99b"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.CubicTriangleIncidence", "b0d276b140605679"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "d7e10970067353a9"}

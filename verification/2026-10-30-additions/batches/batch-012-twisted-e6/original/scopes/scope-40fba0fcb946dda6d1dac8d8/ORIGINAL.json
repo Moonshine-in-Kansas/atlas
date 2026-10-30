@@ -1,0 +1,101 @@
+{
+  "id": "staged-PairParametersTwisted",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.PairParametersTwisted"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleX_pair_parameters_injective",
+      "kind": "theorem",
+      "module": "FamilyWork.PairParametersTwisted"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleY_pair_parameters_injective",
+      "kind": "theorem",
+      "module": "FamilyWork.PairParametersTwisted"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedPairXHom_injective",
+      "kind": "theorem",
+      "module": "FamilyWork.PairParametersTwisted"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedPairYHom_injective",
+      "kind": "theorem",
+      "module": "FamilyWork.PairParametersTwisted"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleX_pair_fixed_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.PairParametersTwisted"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.simpleY_pair_fixed_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.PairParametersTwisted"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.mem_fixedPairXHom_range_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.PairParametersTwisted"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.mem_fixedPairYHom_range_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.PairParametersTwisted"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedPairXEquiv",
+      "kind": "definition",
+      "module": "FamilyWork.PairParametersTwisted"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedPairYEquiv",
+      "kind": "definition",
+      "module": "FamilyWork.PairParametersTwisted"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedPairX_card",
+      "kind": "theorem",
+      "module": "FamilyWork.PairParametersTwisted"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedPairY_card",
+      "kind": "theorem",
+      "module": "FamilyWork.PairParametersTwisted"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedPairX_card_base",
+      "kind": "theorem",
+      "module": "FamilyWork.PairParametersTwisted"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedPairY_card_base",
+      "kind": "theorem",
+      "module": "FamilyWork.PairParametersTwisted"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-PairParametersTwisted-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ]
+}

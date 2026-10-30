@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "staged-ree-f4-suzuki-scalar-order",
+  "imports": [
+    "F4Work.ReeSuzukiScalarOrder"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.ReeF4.card_modelSuzukiProductSubgroup",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarOrder.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarOrder"
+    },
+    {
+      "declaration": "Atlas.ReeF4.card_modelSuzukiProductSubgroup_binary",
+      "source": "Atlas/LinearGroups/ReeF4/RootSuzukiScalarOrder.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.ReeF4.RootSuzukiScalarOrder"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independent-mathematical-scope",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.F4.",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis.",
+        "Atlas.ReeF4.simple_of_large",
+        "Atlas.ReeF4.BinaryDerived",
+        "Atlas.SuzukiFamily.simple_of_large",
+        "Atlas.SuzukiFamily.perfect_of_large",
+        "Atlas.SuzukiFamily.simple_iff",
+        "Atlas.ReeF4.card_Model"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.SuzukiFamily.Simplicity",
+        "Atlas.LinearGroups.SuzukiFamily.ExactSimplicity"
+      ]
+    }
+  ],
+  "original_manifest": {
+    "path": "verification/checkpoints/ree-f4-suzuki-scalar-order.json",
+    "sha256": "b93c380559c33facb4a122c910543f491250bb2332f731a089b734e8c473ee38"
+  }
+}

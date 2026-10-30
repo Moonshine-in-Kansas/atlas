@@ -1,0 +1,48 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["0b8cc565b9c8a832.olean"],
+  "m": false,
+  "i": "d2757faa915d261e.ilean",
+  "c": "25dc2199987a2118.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Codes/TetradCodeParity.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/TetradCodeParity.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/TetradCodeParity.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Codes/TetradCodeParity.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Codes/TetradCodeParity.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Codes/TetradCodeParity.lean:84:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/TetradCodeParity.lean:97:4: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/TetradCodeParity.lean:108:64: The following tactic starts with 2 goals and ends with 1 goal, 1 of which is not operated on.\n  exact False.elim (hw h)\nPlease focus on the current goal, for instance using `·` (typed as \"\\.\").\n\nNote: This linter can be disabled with `set_option linter.style.multiGoal false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Codes.EvenBlockGeometry transitive imports (legacy)",
+       "aa9de81b612db3cd"],
+      ["Atlas.Codes.EvenBlockGeometry:importAllArts", "e2333b1568b20f51"],
+      ["Atlas.Codes.HexacodeUniqueness transitive imports (legacy)",
+       "f1e9163e5bae3295"],
+      ["Atlas.Codes.HexacodeUniqueness:importAllArts", "6b8cea3fcc049b35"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Codes/TetradCodeParity.lean", "7c9abf171f6f19e6"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Codes.TetradCodeParity", "e8eceafaef511e20"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "03c509f3fddf1b91"}

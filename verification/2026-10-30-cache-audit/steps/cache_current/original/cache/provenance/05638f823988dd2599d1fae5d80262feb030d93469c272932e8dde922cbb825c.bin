@@ -1,0 +1,152 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["ed2c8d546d18c5ff.olean"],
+  "m": false,
+  "i": "0b92481fd5254933.ilean",
+  "c": "91c17cbcf386a179.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Conway/MonomialStabilizer.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/MonomialStabilizer.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/MonomialStabilizer.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Conway/MonomialStabilizer.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Conway/MonomialStabilizer.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Conway`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes Atlas.Lattices`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def standardCrossStabilizer : Subgroup LeechIsometryGroup :=\n  (MulAction.stabilizer (Equiv.Perm LeechCross) standardCross).comap crossRepresentation`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem standardCrossStabilizer_mem (g : LeechIsometryGroup) :\n    g ∈ standardCrossStabilizer ↔ crossAction g standardCross = standardCross :=\n  Iff.rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem standardCross_parameters (g : LeechIsometryGroup)\n    (hg : crossAction g standardCross = standardCross) :\n    standardCrossSignWord g hg ∈ golay ∧ CodePreserving (standardCrossCoordinatePermutation g hg) :=\n  by\n  apply signedPermutation_parameters\n  intro x\n  have he :\n    signChange (standardCrossSignWord g hg) (integerPermutation (standardCrossCoordinatePermutation g hg) x.val) =\n      (g.val x).val :=\n    by\n    ext i\n    exact (standardCross_signed_shape g hg x i).symm\n  rw [he]\n  exact (g.val x).prop`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:17:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def recoverMonomial (g : LeechIsometryGroup)\n    (hg : crossAction g standardCross = standardCross) : GolayMonomialGroup :=\n  ⟨Multiplicative.ofAdd ⟨standardCrossSignWord g hg, (standardCross_parameters g hg).1⟩,\n    ⟨standardCrossCoordinatePermutation g hg, (standardCross_parameters g hg).2⟩⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem recoverMonomial_spec (g : LeechIsometryGroup)\n    (hg : crossAction g standardCross = standardCross) : monomialEmbedding (recoverMonomial g hg) = g :=\n  by\n  apply Subtype.ext\n  apply LinearEquiv.ext\n  intro x\n  apply Subtype.ext\n  ext i\n  exact (standardCross_signed_shape g hg x i).symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:33:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem recoverMonomial_embedding (m : GolayMonomialGroup) :\n    recoverMonomial (monomialEmbedding m) (monomial_fixes_standardCross m) = m :=\n  by\n  apply monomialEmbedding_injective\n  exact recoverMonomial_spec _ _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem standardCrossStabilizer_eq_monomial :\n    standardCrossStabilizer = monomialSubgroup := by\n  ext g\n  constructor\n  · intro hg\n    exact ⟨recoverMonomial g hg, recoverMonomial_spec g hg⟩\n  · rintro ⟨m, rfl⟩\n    exact monomial_fixes_standardCross m`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def standardCrossStabilizerEquiv :\n    standardCrossStabilizer ≃* GolayMonomialGroup :=\n  (MulEquiv.subgroupCongr standardCrossStabilizer_eq_monomial).trans monomialSubgroupEquiv.symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem standardCrossStabilizerEquiv_compatible (g : standardCrossStabilizer) :\n    monomialEmbedding (standardCrossStabilizerEquiv g) = g.val := by\n  exact\n    congrArg Subtype.val\n      (monomialSubgroupEquiv.apply_symm_apply ((MulEquiv.subgroupCongr standardCrossStabilizer_eq_monomial) g))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem standardCrossStabilizer_order :\n    Nat.card standardCrossStabilizer = 1002795171840 :=\n  by\n  rw [Nat.card_congr (MulEquiv.subgroupCongr standardCrossStabilizer_eq_monomial).toEquiv]\n  exact monomial_order`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `structure MonomialStabilizerConstruction : Prop where\n  full_stabilizer : standardCrossStabilizer = monomialSubgroup\n  order : Nat.card standardCrossStabilizer = 1002795171840\n  recovery : ∀ g hg, monomialEmbedding (recoverMonomial g hg) = g\n  inverse_recovery : ∀ m, recoverMonomial (monomialEmbedding m) (monomial_fixes_standardCross m) = m\n  compatibility : ∀ g, monomialEmbedding (standardCrossStabilizerEquiv g) = g.val`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem monomial_stabilizer_constructed : MonomialStabilizerConstruction\n    where\n  full_stabilizer := standardCrossStabilizer_eq_monomial\n  order := standardCrossStabilizer_order\n  recovery := recoverMonomial_spec\n  inverse_recovery := recoverMonomial_embedding\n  compatibility := standardCrossStabilizerEquiv_compatible`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Conway`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/MonomialStabilizer.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Conway.CrossStabilizerShape transitive imports (legacy)",
+       "99f3c7954ee8fec4"],
+      ["Atlas.Conway.CrossStabilizerShape:importAllArts", "87de9f3b8cf81386"],
+      ["Atlas.Conway.SignedPermutationRecovery transitive imports (legacy)",
+       "8365d9dcbb2b1c6d"],
+      ["Atlas.Conway.SignedPermutationRecovery:importAllArts",
+       "c6b349da90f97cd5"],
+      ["Atlas.Conway.MonomialOrder transitive imports (legacy)",
+       "806f8f1f9fe15135"],
+      ["Atlas.Conway.MonomialOrder:importAllArts", "e942ccd28a20ec3a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Conway/MonomialStabilizer.lean",
+   "f6419d9a2b814287"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Conway.MonomialStabilizer", "b3e020b04d4a1e67"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "f03deedb9f4b1026"}

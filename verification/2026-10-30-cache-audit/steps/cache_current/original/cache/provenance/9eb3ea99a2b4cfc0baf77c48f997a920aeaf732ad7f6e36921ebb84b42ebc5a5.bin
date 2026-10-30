@@ -1,0 +1,77 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["c50c1320fbe6efdb.olean"],
+  "m": false,
+  "i": "f5b70aeca2da7103.ilean",
+  "c": "85c48910f7663e93.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/GaussianGroupOrder.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/GaussianGroupOrder.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/GaussianGroupOrder.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/GaussianGroupOrder.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/GaussianGroupOrder.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/GaussianGroupOrder.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianGroupOrder.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianGroupOrder.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianGroupOrder.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe full Gaussian isometry group order is derived from intrinsic canonical frames and their full stabilizer. -/\ntheorem full_gaussian_order : Nat.card gaussianLatticeGroup = 583704576000 := by\n  rw [full_gaussian_order_eq_frames_mul, canonicalBases_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianGroupOrder.lean:6:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianGroupOrder.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianGroupOrder.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem generatedGaussianGroup_order :\n    Nat.card generatedGaussianGroup = 583704576000 :=\n  by\n  rw [generatedGaussianGroup_eq_top]\n  rw [Nat.card_congr (Subgroup.topEquiv.toEquiv : (⊤ : Subgroup gaussianLatticeGroup) ≃ gaussianLatticeGroup)]\n  exact full_gaussian_order`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianGroupOrder.lean:12:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianGroupOrder.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianGroupOrder.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianGroupOrder.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianGroupOrder.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CanonicalFrameAction transitive imports (legacy)",
+       "4e40691571a71c12"],
+      ["Atlas.Rudvalis.CanonicalFrameAction:importAllArts", "54081a17f2a7a8d7"],
+      ["Atlas.Rudvalis.CanonicalFrameCount transitive imports (legacy)",
+       "7a91c5cf916e4a0c"],
+      ["Atlas.Rudvalis.CanonicalFrameCount:importAllArts",
+       "b76b916ac76b1a54"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/GaussianGroupOrder.lean",
+   "26afbe233ac8aeda"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.GaussianGroupOrder", "8efe91f4221a5100"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "7b457c29be86f30d"}

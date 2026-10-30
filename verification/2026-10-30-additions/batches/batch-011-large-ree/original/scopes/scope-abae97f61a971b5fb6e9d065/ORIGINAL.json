@@ -1,0 +1,117 @@
+{
+  "id": "staged-PositiveLineKernelEmbedding",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "F4Work.PositiveLineKernelEmbedding"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.ReeF4.alternatingShortRoot_mem_positiveLineKernel",
+      "module": "F4Work.PositiveLineKernelEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.alternatingLongRoot_mem_positiveLineKernel",
+      "module": "F4Work.PositiveLineKernelEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveLineKernel_isSolvable",
+      "module": "F4Work.PositiveLineKernelEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveLineKernelEmbedding",
+      "module": "F4Work.PositiveLineKernelEmbedding",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveLineKernelEmbedding_val",
+      "module": "F4Work.PositiveLineKernelEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveLineKernelEmbedding_injective",
+      "module": "F4Work.PositiveLineKernelEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.mem_positiveLineKernelEmbedding_range_iff",
+      "module": "F4Work.PositiveLineKernelEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveLineKernelEmbedding_surjective_iff",
+      "module": "F4Work.PositiveLineKernelEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveLineKernelFullParam",
+      "module": "F4Work.PositiveLineKernelEmbedding",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveLineKernelFullParam_val",
+      "module": "F4Work.PositiveLineKernelEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveLineKernelFullParam_injective",
+      "module": "F4Work.PositiveLineKernelEmbedding",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.card_markedLineRestrictionKernel_lower_bound",
+      "module": "F4Work.PositiveLineKernelEmbedding",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "draft-positive-line-kernel-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis.",
+        "Atlas.F4.",
+        "Atlas.ReeF4.card_Model",
+        "Atlas.ReeF4.card_positiveRootSubgroup",
+        "Atlas.ReeF4.card_specialPoints",
+        "Atlas.ReeF4.elementarySubgroup_eq_top",
+        "Atlas.ReeF4.model_isPerfect",
+        "Atlas.ReeF4.simple_of_large",
+        "Atlas.ReeF4.model_specialPoint_transitive"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.ReeF4.Order",
+        "Atlas.LinearGroups.ReeF4.Generation",
+        "Atlas.LinearGroups.ReeF4.SpecialPointCount",
+        "Atlas.LinearGroups.ReeF4.SpecialOppositePairCount",
+        "Atlas.LinearGroups.ReeF4.SpecialPointTransitivity",
+        "Atlas.LinearGroups.ReeF4.OppositePairRecognition",
+        "Atlas.LinearGroups.ReeF4.OppositePairStabilizer",
+        "F4Work.PointParabolicSemidirect",
+        "F4Work.PositiveRootTail",
+        "F4Work.TailLeviNormalization",
+        "F4Work.TailChartAction",
+        "F4Work.BinarySpecialPointFaithfulness",
+        "F4Work.BinaryDerivedPointFaithfulness",
+        "F4Work.BinaryDerivedAction",
+        "F4Work.ReeFullOrder",
+        "F4Work.ReeFullGeneration",
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ]
+}

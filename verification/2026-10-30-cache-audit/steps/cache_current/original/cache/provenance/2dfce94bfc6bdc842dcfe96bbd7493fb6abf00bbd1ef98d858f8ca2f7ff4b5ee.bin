@@ -1,0 +1,112 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["b166631750f8a55c.olean"],
+  "m": false,
+  "i": "e5113bd182159690.ilean",
+  "c": "b5b2554010f05cba.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateRowQuartets.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateRowQuartets.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateRowQuartets.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateRowQuartets.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateRowQuartets.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nA noncoordinate minimum cannot vanish in exactly three of a row's four Gaussian pairs. -/\ntheorem minimumWord_row_zero_pairs_ne_six (w : MinimumWords) (p : Point) :\n    Nat.card { x : E // reduce w.val.val (p, x) = 0 ∧ reduce w.val.val (p, x + p.val) = 0 } ≠ 6 := by\n  classical\n  rcases quaternary_minimum_support_cases w.val.val w.val.prop w.prop with hf | hh\n  · have he (x : E) := fourSupport_pair_zero_iff _ hf p x\n    rw [Nat.card_congr (Equiv.subtypeEquivRight he)]\n    by_cases h : ∀ y : E, reduce w.val.val (p, y) = 0\n    · simp [Nat.card_eq_fintype_card, h, E, Bit, ZMod.card]\n    · simp [h]\n  · obtain ⟨a, hc, ha⟩ := hh\n    have hw : hammingNorm (binaryNormalMap a) = 16 := by\n      rw [ha]\n      exact quaternary_minimum_residue_weight _ w.val.prop w.prop\n    have hb := (binaryNormalMap_quadratic_weight_sixteen a hc).mp hw p\n    have hp := quadratic_row_zero_pairs (a.1 p) (matrixAt a.2.1 p.val + eta p a.2.2) a.2.2 p.val hc p.prop hb\n    have he (x : E) :\n      binaryNormalMap a (p, x) = a.1 p + dot (matrixAt a.2.1 p.val + eta p a.2.2) x + quadratic a.2.2 x :=\n      by\n      change a.1 p + dot (matrixAt a.2.1 p.val) x + theta p a.2.2 x = _\n      simp only [theta, dot_add_left]\n      ring\n    rw [← ha]\n    simp_rw [he]\n    rw [Nat.card_eq_fintype_card, Fintype.card_subtype]\n    rw [hp]\n    split <;> decide`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:26:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem minimumWord_row_orthogonal_count_ne_three (w : MinimumWords)\n    (p : Point) :\n    Nat.card { c : coordinateRowFrame p // CrossOrthogonal (minimalCross (minimumWordShellLift w)) c.val } ≠ 3 :=\n  by\n  intro h3\n  have hc := coordinateRow_predicate_card p (CrossOrthogonal (minimalCross (minimumWordShellLift w)))\n  rw [h3] at hc\n  have he (x : E) :\n    CrossOrthogonal (minimalCross (minimumWordShellLift w)) (coordinateCross (p, x)) ↔\n      reduce w.val.val (p, x) = 0 ∧ reduce w.val.val (p, x + p.val) = 0 :=\n    by\n    rw [crossOrthogonal_symm, coordinateCross, crossOrthogonal_mk]\n    change HermitianOrthogonal (coordinateMinimum (p, x)) (minimumWordShellLift w).val.val ↔ _\n    rw [coordinate_hermitianOrthogonal_pair, minimumWordShellLift_zero_iff, minimumWordShellLift_zero_iff]\n  rw [Nat.card_congr (Equiv.subtypeEquivRight he)] at hc\n  exact minimumWord_row_zero_pairs_ne_six w p hc`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:37:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:39:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:41:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:45:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nEvery original coordinate row is an intrinsic quartet, with external-point exclusion. -/\ntheorem coordinateRowFrame_isQuartet (p : Point) : IsQuartet (coordinateRowFrame p) := by\n  classical\n  refine ⟨?_, ?_, ?_⟩\n  · exact coordinateRowFrame_card p\n  · intro x hx y hy hxy\n    exact (coordinateFrame_orthogonal_iff _ _ (coordinateRowFrame_subset p hx) (coordinateRowFrame_subset p hy)).mpr hxy\n  · intro x hx q hq hall\n    induction x using Quotient.inductionOn with\n    | h v =>\n      rcases rudvalisLattice_shell_cases v.val.val v.val.prop v.prop with hv | ⟨w, hw⟩\n      · have hvf : minimalCross v ∈ coordinateFrame :=\n          (minimalCross_mem_coordinateFrame v).mpr ((coordinateShellPiece_iff v).mpr hv)\n        exact\n          (coordinateFrame_orthogonal_iff _ _ hvf (coordinateRowFrame_subset p hq)).mpr\n            (by intro he; apply hx; change minimalCross v ∈ coordinateRowFrame p; rwa [he])\n      · have he : v = minimumWordShellLift w := Subtype.ext (Subtype.ext hw)\n        subst v\n        by_contra hnq\n        have heq (y : coordinateRowFrame p) :\n          CrossOrthogonal (minimalCross (minimumWordShellLift w)) y.val ↔ ¬y.val = q :=\n          by\n          constructor\n          · intro hy hyq\n            exact hnq (hyq ▸ hy)\n          · intro hy\n            exact hall y.val y.prop hy\n        let e :\n          { y : coordinateRowFrame p // CrossOrthogonal (minimalCross (minimumWordShellLift w)) y.val } ≃\n            { y : coordinateRowFrame p // ¬y = ⟨q, hq⟩ } :=\n          Equiv.subtypeEquivRight\n            (fun y =>\n              (heq y).trans\n                (not_congr\n                  (show y.val = q ↔ y = ⟨q, hq⟩ from ⟨fun h => Subtype.ext h, fun h => congrArg Subtype.val h⟩)))\n        apply minimumWord_row_orthogonal_count_ne_three w p\n        let : Fintype (coordinateRowFrame p) := Fintype.ofFinite _\n        rw [Nat.card_congr e, Nat.card_eq_fintype_card, Fintype.card_subtype_compl]\n        have h4 : Fintype.card (coordinateRowFrame p) = 4 := by\n          simpa [Nat.card_eq_fintype_card] using coordinateRowFrame_card p\n        simp [h4]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:74:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:76:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowQuartets.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateRowPairCount transitive imports (legacy)",
+       "d4a58c3b33ac8cc0"],
+      ["Atlas.Rudvalis.CoordinateRowPairCount:importAllArts",
+       "550c520b503258e8"],
+      ["Atlas.Rudvalis.IntrinsicConfigurations transitive imports (legacy)",
+       "baadce814d809638"],
+      ["Atlas.Rudvalis.IntrinsicConfigurations:importAllArts",
+       "35092b67e04ebadb"],
+      ["Atlas.Rudvalis.HeavyOrthogonalLocal transitive imports (legacy)",
+       "27744e7b02cb729c"],
+      ["Atlas.Rudvalis.HeavyOrthogonalLocal:importAllArts", "a967768cdb361fdd"],
+      ["Atlas.Rudvalis.FourOrthogonalCount transitive imports (legacy)",
+       "f1660cef4c7dd2b6"],
+      ["Atlas.Rudvalis.FourOrthogonalCount:importAllArts",
+       "5d9f23c83b59510c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateRowQuartets.lean",
+   "c4482f58ffba0595"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateRowQuartets", "b2bb344335ddd48a"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "7223ba951c82ad73"}

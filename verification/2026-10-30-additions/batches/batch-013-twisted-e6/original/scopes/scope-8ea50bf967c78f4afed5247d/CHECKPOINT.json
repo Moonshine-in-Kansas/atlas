@@ -1,0 +1,110 @@
+{
+  "id": "staged-MatrixCentralizerRecovery",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.TwistedE6.MatrixCentralizerRecovery"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.LinearAlgebra.MatrixCentralizer.scalar_coefficients_eq_zero",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.MatrixCentralizerRecovery"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.MatrixCentralizer.commute_coefficients_of_polynomial",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.MatrixCentralizerRecovery"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.MatrixCentralizer.succ_lt_square",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.MatrixCentralizerRecovery"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.MatrixCentralizer.commute_pair_of_card_square",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.MatrixCentralizerRecovery"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.MatrixCentralizer.affine_pair_expansion",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.MatrixCentralizerRecovery"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.MatrixCentralizer.frobenius_pair_expansion",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.MatrixCentralizerRecovery"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.MatrixCentralizer.commute_of_one_add",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.MatrixCentralizerRecovery"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.MatrixCentralizer.commute_affine",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.MatrixCentralizerRecovery"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.MatrixCentralizer.commute_pair_of_affine_product",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.MatrixCentralizerRecovery"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-MatrixCentralizerRecovery-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-MatrixCentralizerRecovery-no-selected-model",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.Models",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightCompanion",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightOrbits"
+      ]
+    },
+    {
+      "id": "staged-MatrixCentralizerRecovery-structural-identification-before-count",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.TwistedE6.companionFixedSubgroup_card",
+        "Atlas.Chevalley.TwistedE6.companionFixedWeylCell_card",
+        "Atlas.Chevalley.F4B3.rootWeylPoincareEval_F4",
+        "Atlas.Chevalley.RootData.rootWeylPoincareEval"
+      ],
+      "forbid_modules": [
+        "FamilyWork.PositiveFixedOrder",
+        "FamilyWork.FixedTorusOrder",
+        "FamilyWork.FixedBorel",
+        "FamilyWork.FixedInversionOrder",
+        "FamilyWork.FixedCellCoordinates",
+        "FamilyWork.FixedWeylCell",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveFixedOrder",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedTorusOrder",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedBorel",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedInversionOrder",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedCellCoordinates",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedWeylCell"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

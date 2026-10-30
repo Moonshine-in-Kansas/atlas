@@ -1,0 +1,148 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["c5b6a62d9f39b71d.olean"],
+  "m": false,
+  "i": "5064159dbf482344.ilean",
+  "c": "e9b1165ca33d861e.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateQuartetCompletion.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateQuartetCompletion.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateQuartetCompletion.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateQuartetCompletion.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateQuartetCompletion.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThree distinct coordinate members force an entire intrinsic quartet into the coordinate frame. -/\ntheorem quartet_containing_three_coordinate (Q : Set MinimalCross) (hQ : IsQuartet Q) (a b c : MinimalCross)\n    (ha : a ∈ Q) (hb : b ∈ Q) (hc : c ∈ Q) (hab : a ≠ b) (hac : a ≠ c) (hbc : b ≠ c) (haF : a ∈ coordinateFrame)\n    (hbF : b ∈ coordinateFrame) (hcF : c ∈ coordinateFrame) : Q ⊆ coordinateFrame :=\n  by\n  intro w hw\n  by_contra hwF\n  have haw : a ≠ w := fun h => hwF (h ▸ haF)\n  have hbw : b ≠ w := fun h => hwF (h ▸ hbF)\n  have hcw : c ≠ w := fun h => hwF (h ▸ hcF)\n  have hs : ({ a, b, c, w } : Set MinimalCross) ⊆ Q := by rintro z (rfl | rfl | rfl | rfl) <;> assumption\n  have hn : ({ a, b, c, w } : Set MinimalCross).ncard = 4 :=\n    Set.ncard_eq_four.mpr ⟨a, b, c, w, hab, hac, haw, hbc, hbw, hcw, rfl⟩\n  have he : ({ a, b, c, w } : Set MinimalCross) = Q := Set.eq_of_subset_of_ncard_le hs (by rw [hQ.1, hn])\n  apply hwF (quartet_three_in_coordinateFrame Q hQ w hw ?_)\n  intro z hz hzw\n  rw [← he] at hz\n  rcases hz with rfl | rfl | rfl | rfl\n  · exact haF\n  · exact hbF\n  · exact hcF\n  · exact (hzw rfl).elim`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:6:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:8:34: missing space in the source\n\nThis part of the code\n  'a∈Q) (hb'\nshould be written as\n  'a ∈ Q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:8:45: missing space in the source\n\nThis part of the code\n  'b∈Q) (hc'\nshould be written as\n  'b ∈ Q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:8:56: missing space in the source\n\nThis part of the code\n  'c∈Q)\n '\nshould be written as\n  'c ∈ Q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:9:12: missing space in the source\n\nThis part of the code\n  'a≠b) (hac'\nshould be written as\n  'a ≠ b)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:9:24: missing space in the source\n\nThis part of the code\n  'a≠c) (hbc'\nshould be written as\n  'a ≠ c)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:9:36: missing space in the source\n\nThis part of the code\n  'b≠c)\n '\nshould be written as\n  'b ≠ c)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:10:12: missing space in the source\n\nThis part of the code\n  'a∈coordinateFrame)'\nshould be written as\n  'a ∈ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:10:38: missing space in the source\n\nThis part of the code\n  'b∈coordinateFrame)'\nshould be written as\n  'b ∈ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:10:64: missing space in the source\n\nThis part of the code\n  'c∈coordinateFrame)'\nshould be written as\n  'c ∈ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_quartet_coordinate_member_in_dozen (Q : Set MinimalCross)\n    (hQ : IsQuartet Q) (hc : referenceCouple ⊆ Q) (z : MinimalCross) (hz : z ∈ Q) (hzF : z ∈ coordinateFrame) :\n    z ∈ referenceCoordinateDozen := by\n  by_cases hx : z = localReferenceCross\n  · exact hx ▸ referenceCross_mem_dozen\n  by_cases hy : z = referenceSecondCross\n  · exact hy ▸ referenceSecondCross_mem_dozen\n  have hF :=\n    quartet_containing_three_coordinate Q hQ localReferenceCross referenceSecondCross z (hc (Or.inl rfl))\n      (hc (Or.inr rfl)) hz reference_crosses_ne (Ne.symm hx) (Ne.symm hy) (coordinateCross_mem _)\n      (coordinateCross_mem _) hzF\n  rw [← referenceCoordinateQuartetUnion_eq]\n  exact ⟨Q, hQ, hF, hc, hz⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:33:25: missing space in the source\n\nThis part of the code\n  'referenceCouple⊆Q) (z'\nshould be written as\n  'referenceCouple ⊆ Q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:33:55: missing space in the source\n\nThis part of the code\n  'z∈Q) (hzF'\nshould be written as\n  'z ∈ Q)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:33:67: missing space in the source\n\nThis part of the code\n  'z∈coordinateFrame)'\nshould be written as\n  'z ∈ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_no_quartet_through_outside_coordinate (z : MinimalCross)\n    (hzF : z ∈ coordinateFrame) (hzD : z ∉ referenceCoordinateDozen) :\n    ¬∃ Q : Set MinimalCross, IsQuartet Q ∧ referenceCouple ⊆ Q ∧ z ∈ Q :=\n  by\n  rintro ⟨Q, hQ, hc, hz⟩\n  exact hzD (reference_quartet_coordinate_member_in_dozen Q hQ hc z hz hzF)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:46:12: missing space in the source\n\nThis part of the code\n  'z∈coordinateFrame)'\nshould be written as\n  'z ∈ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:46:38: missing space in the source\n\nThis part of the code\n  'z∉referenceCoordinateDozen)'\nshould be written as\n  'z ∉ referenceCoordinateDozen)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateQuartet_rows_at_most_two (Q : Set MinimalCross)\n    (hQ : IsQuartet Q) (hF : Q ⊆ coordinateFrame) :\n    ∃ s : Finset Point, s.card ≤ 2 ∧ ∀ i : Coordinate, coordinateCross i ∈ Q → i.1 ∈ s := by\n  classical\n  obtain ⟨v, rfl⟩ := coordinateQuartet_classification Q hQ hF\n  cases v with\n  | inl p =>\n    refine ⟨{ p }, by simp, ?_⟩\n    intro i hi\n    obtain ⟨x, hx⟩ := hi\n    have he := coordinateCross_row_of_eq hx\n    simpa only [Finset.mem_singleton] using he.symm\n  | inr v =>\n    refine ⟨v.1.val, by rw [v.1.prop], ?_⟩\n    intro i hi\n    exact (coordinatePlaneQuartetFromParameters_rows v i.1).mp ⟨coordinateCross i, hi, i.2, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:52:11: missing space in the source\n\nThis part of the code\n  'Q⊆coordinateFrame)'\nshould be written as\n  'Q ⊆ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem no_quartet_through_three_coordinate_rows (i j k : Coordinate)\n    (hij : i.1 ≠ j.1) (hik : i.1 ≠ k.1) (hjk : j.1 ≠ k.1) :\n    ¬∃ Q : Set MinimalCross, IsQuartet Q ∧ coordinateCross i ∈ Q ∧ coordinateCross j ∈ Q ∧ coordinateCross k ∈ Q := by\n  classical\n  rintro ⟨Q, hQ, hi, hj, hk⟩\n  have hF :=\n    quartet_containing_three_coordinate Q hQ _ _ _ hi hj hk (fun h => hij (coordinateCross_row_of_eq h))\n      (fun h => hik (coordinateCross_row_of_eq h)) (fun h => hjk (coordinateCross_row_of_eq h)) (coordinateCross_mem i)\n      (coordinateCross_mem j) (coordinateCross_mem k)\n  obtain ⟨s, hs, hm⟩ := coordinateQuartet_rows_at_most_two Q hQ hF\n  have hsub : ({ i.1, j.1, k.1 } : Finset Point) ⊆ s :=\n    by\n    intro p hp\n    simp only [Finset.mem_insert, Finset.mem_singleton] at hp\n    rcases hp with rfl | rfl | rfl\n    · exact hm i hi\n    · exact hm j hj\n    · exact hm k hk\n  have hc := Finset.card_le_card hsub\n  have hn : ({ i.1, j.1, k.1 } : Finset Point).card = 3 := by simp [hij, hik, hjk]\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:70:14: missing space in the source\n\nThis part of the code\n  'i.1≠j.1)'\nshould be written as\n  'i.1 ≠ j.1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:70:30: missing space in the source\n\nThis part of the code\n  'i.1≠k.1)'\nshould be written as\n  'i.1 ≠ k.1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:70:46: missing space in the source\n\nThis part of the code\n  'j.1≠k.1)'\nshould be written as\n  'j.1 ≠ k.1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateQuartetCompletion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateTripleFrame transitive imports (legacy)",
+       "4d5e633ff1c9613e"],
+      ["Atlas.Rudvalis.CoordinateTripleFrame:importAllArts",
+       "e4dd977c70e5de58"],
+      ["Atlas.Rudvalis.CoordinateReferenceDozen transitive imports (legacy)",
+       "ddc471861aff4984"],
+      ["Atlas.Rudvalis.CoordinateReferenceDozen:importAllArts",
+       "18c3c9e08a9ca524"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateQuartetCompletion.lean",
+   "b2ffeeb17500f10c"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateQuartetCompletion",
+   "dce24c4ead1d4872"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "b9b95d019028fdc4"}

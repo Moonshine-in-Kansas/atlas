@@ -1,0 +1,100 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["addeb7ce3dcd1325.olean"],
+  "m": false,
+  "i": "b489c97db9164f50.ilean",
+  "c": "78bcc4a0d48e8bde.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:10:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:33:24: This simp argument is unused:\n  hlast\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Strings.raising, T.inverse_weyl_one_single, Strings.step_single, hi, hj, hij, hji, T.pairing_reflection,\n    T.weylEquiv_single_neg, T.weylEquiv_single_pos, T.weylEquiv_single_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:34:6: This simp argument is unused:\n  T.weylEquiv_single_pos\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Strings.raising, T.inverse_weyl_one_single, Strings.step_single, hi, hj, hij, hji, hlast,\n    T.pairing_reflection, T.weylEquiv_single_neg, T.weylEquiv_single_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:77:4: Unused tactic linter: `change -T.pairing i (T.reflection i μ) = -(-T.pairing i μ)` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:80:4: Unused tactic linter: `change -T.pairing i μ = -1 ∨ -T.pairing i μ = 0 ∨ -T.pairing i μ = 1` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:122:0: `weightOrbit_a2_grade` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:122:0: `weightOrbit_a2_grade` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:133:0: `weightOrbit_a2_weyl_conjugate_raising` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:133:0: `weightOrbit_a2_weyl_conjugate_raising` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:143:0: `weightOrbit_a2_rootEquiv_commutator` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:143:0: `weightOrbit_a2_rootEquiv_commutator` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:154:0: `weightOrbit_a2_rootElements_commutator` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:154:0: `weightOrbit_a2_rootElements_commutator` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:169:0: `weightOrbit_a2_negative_weyl_conjugate_lowering` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:169:0: `weightOrbit_a2_negative_weyl_conjugate_lowering` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:186:0: `weightOrbit_a2_lowering_rootEquiv_commutator` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:186:0: `weightOrbit_a2_lowering_rootEquiv_commutator` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:208:0: `weightOrbit_a2_lowering_rootElements_commutator` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean:208:0: `weightOrbit_a2_lowering_rootElements_commutator` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.Integral.MinusculeA2Commutator transitive imports (legacy)",
+       "694fe71b8910db47"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeA2Commutator:importAllArts",
+       "e5e4e5771c02a8be"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeTorusConjugation transitive imports (legacy)",
+       "59f03b83438c1cb9"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeTorusConjugation:importAllArts",
+       "b1c9c7701f99b93d"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/MinusculeA2WeylPinning.lean",
+   "1e320a2306e186b8"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Integral.MinusculeA2WeylPinning",
+   "8b6c78adc006e930"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "969a70f7eea19c6c"}

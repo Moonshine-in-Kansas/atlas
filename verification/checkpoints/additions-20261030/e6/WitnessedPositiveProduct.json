@@ -1,0 +1,66 @@
+{
+  "id": "staged-WitnessedPositiveProduct",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.TwistedE6.WitnessedPositiveProduct"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.positiveRootWitnessedProduct",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.WitnessedPositiveProduct"
+    },
+    {
+      "declaration": "Atlas.Chevalley.positiveRootWitnessedProduct_val",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.WitnessedPositiveProduct"
+    },
+    {
+      "declaration": "Atlas.Chevalley.positiveRootWitnessedProduct_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.WitnessedPositiveProduct"
+    },
+    {
+      "declaration": "Atlas.Chevalley.positiveRootWitnessedProduct_surjective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.WitnessedPositiveProduct"
+    },
+    {
+      "declaration": "Atlas.Chevalley.positiveRootWitnessedProductEquiv",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.WitnessedPositiveProduct"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-WitnessedPositiveProduct-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-WitnessedPositiveProduct-no-selected-model",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.Models",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightCompanion",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightOrbits"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

@@ -1,0 +1,133 @@
+{
+  "id": "staged-TailChartAction",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "F4Work.TailChartAction"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.ReeF4.chartUnipotentWord_eq_inverse_tailWord",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.chartUnipotentWord_mem_tail",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_fixes_firstSpecialPoint",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_le_firstPointStabilizer",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_chart9_orbit",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_chart9_transitive",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTailOppositeAction_val",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_oppositePoint_transitive",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_oppositePoint_pretransitive",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_oppositeOrbit_bijective",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTailOppositeOrbitEquiv",
+      "module": "F4Work.TailChartAction",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTailOppositeOrbitEquiv_apply",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_oppositePoint_existsUnique",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_eq_one_of_fix_oppositePoint",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_oppositePoint_stabilizer_eq_bot",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_eq_one_of_fixes_oppositeSpecialPoint",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_inf_oppositePointStabilizer",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_disjoint_suzukiProduct",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_inf_suzukiProduct",
+      "module": "F4Work.TailChartAction",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-TailChartAction-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis.",
+        "Atlas.F4.",
+        "Atlas.ReeF4.simple_of_large",
+        "Atlas.ReeF4.model_isPerfect",
+        "Atlas.ReeF4.card_Model",
+        "Atlas.ReeF4.elementarySubgroup_eq_top"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ]
+}

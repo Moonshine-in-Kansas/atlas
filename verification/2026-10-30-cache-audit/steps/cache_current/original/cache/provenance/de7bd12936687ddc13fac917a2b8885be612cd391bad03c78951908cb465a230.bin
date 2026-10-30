@@ -1,0 +1,73 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["6deb9b2b0bf7e80d.olean"],
+  "m": false,
+  "i": "2292f3d3d39ca42b.ilean",
+  "c": "4d4bdfb5dc23115a.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Unitary/BinaryFourCommutator.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Unitary/BinaryFourCommutator.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Unitary/BinaryFourCommutator.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Unitary/BinaryFourCommutator.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Unitary/BinaryFourCommutator.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryFourCommutator.lean:19:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 2000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryFourCommutator.lean:21:11: missing space in the source\n\nThis part of the code\n  'c^2+c+1=0) :'\nshould be written as\n  'c ^ 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryFourCommutator.lean:56:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryFourCommutator.lean:56:11: missing space in the source\n\nThis part of the code\n  'c^2+c+1=0) (i'\nshould be written as\n  'c ^ 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryFourCommutator.lean:72:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryFourCommutator.lean:68:41: missing space in the source\n\nThis part of the code\n  'c^2+c+1=0) :'\nshould be written as\n  'c ^ 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryFourCommutator.lean:101:57: Try `simp at this` instead of `simpa using this`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/BinaryFourCommutator.lean:97:41: missing space in the source\n\nThis part of the code\n  'c^2+c+1=0)\n '\nshould be written as\n  'c ^ 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Unitary.TransvectionCommutator transitive imports (legacy)",
+       "0df9a788d6cad39a"],
+      ["Atlas.LinearGroups.Unitary.TransvectionCommutator:importAllArts",
+       "824fdd3248aa7e5e"],
+      ["Atlas.LinearGroups.Unitary.PointNormalClosure transitive imports (legacy)",
+       "3f1ec27fdf3f2547"],
+      ["Atlas.LinearGroups.Unitary.PointNormalClosure:importAllArts",
+       "0c5ed0966333364b"],
+      ["Mathlib.Algebra.CharP.Two transitive imports (legacy)",
+       "2881b7259b2bfd89"],
+      ["Mathlib.Algebra.CharP.Two:importAllArts", "87443f1d15a0a309"],
+      ["Mathlib.GroupTheory.IsPerfect transitive imports (legacy)",
+       "093ad11f09698378"],
+      ["Mathlib.GroupTheory.IsPerfect:importAllArts", "810186d88dbf5b0a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Unitary/BinaryFourCommutator.lean",
+   "6d4356225177d0d7"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Unitary.BinaryFourCommutator",
+   "a63dffcea279295e"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "ef3f0fa9aaab5085"}

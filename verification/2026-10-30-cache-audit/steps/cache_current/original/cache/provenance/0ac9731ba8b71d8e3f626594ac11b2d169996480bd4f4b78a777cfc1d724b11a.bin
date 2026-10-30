@@ -1,0 +1,47 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["7443372fcf174a8e.olean"],
+  "m": false,
+  "i": "be4cd7cf3e26b8c6.ilean",
+  "c": "197725d1c316de9e.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Conway/IcosianLocalDReductionTest.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/IcosianLocalDReductionTest.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/IcosianLocalDReductionTest.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Conway/IcosianLocalDReductionTest.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Conway/IcosianLocalDReductionTest.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Conway/IcosianLocalDReductionTest.lean:38:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/IcosianLocalDReductionTest.lean:45:0: Please, write a comment here or remove this line, but do not place empty lines within commands!\nContext:\n                                                                                  ↓\n  ⏎/-- The scalar reductions are precisely an actual Borel subgroup of SL2(F4). -/⏎⏎theorem icosianLocalDReductionParameters_card : Nat.card IcosianLocalDReductionParameters=12 := by⏎\n\nNote: This linter can be disabled with `set_option linter.style.emptyLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/IcosianLocalDReductionTest.lean:56:4: Unused tactic linter: `change\n  IcosianLocalDReductionTest (icosianNormOneReduction u) ↔\n    IcosianLocalDReductionTest (icosianNormOneReductionCoordinates u).1` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Conway.IcosianUpperUnitCount transitive imports (legacy)",
+       "2ffbfdb3b7ecbe99"],
+      ["Atlas.Conway.IcosianUpperUnitCount:importAllArts",
+       "835689dc13a5140d"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Conway/IcosianLocalDReductionTest.lean",
+   "934810df2cf4372f"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Conway.IcosianLocalDReductionTest", "2855aeefe00bff10"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "bc12d39fc0375252"}

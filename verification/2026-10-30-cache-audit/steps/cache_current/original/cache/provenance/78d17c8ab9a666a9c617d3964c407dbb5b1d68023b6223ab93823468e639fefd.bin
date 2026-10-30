@@ -1,0 +1,80 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["c107e0ae3f094921.olean"],
+  "m": false,
+  "i": "f79d628deadce98c.ilean",
+  "c": "3e6a73581b847e7b.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Conway/EisensteinNinePhaseAction.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/EisensteinNinePhaseAction.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/EisensteinNinePhaseAction.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Conway/EisensteinNinePhaseAction.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Conway/EisensteinNinePhaseAction.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseAction.lean:14:14: missing space in the source\n\nThis part of the code\n  'i,t.val'\nshould be written as\n  'i, t.val'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseAction.lean:14:21: missing space in the source\n\nThis part of the code\n  'i=b) (F'\nshould be written as\n  'i = b)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseAction.lean:45:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseAction.lean:32:47: missing space in the source\n\nThis part of the code\n  'x.val.val=eisensteinTheta'\nshould be written as\n  'x.val.val = eisensteinTheta'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseAction.lean:33:33: missing space in the source\n\nThis part of the code\n  'u=c.val.val)'\nshould be written as\n  'u = c.val.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseAction.lean:35:14: missing space in the source\n\nThis part of the code\n  'j=eisensteinTheta*(a'\nshould be written as\n  'j = eisensteinTheta'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseAction.lean:35:30: missing space in the source\n\nThis part of the code\n  'j=eisensteinTheta*(a :'\nshould be written as\n  'eisensteinTheta * (a'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseAction.lean:36:14: missing space in the source\n\nThis part of the code\n  'i,i ∉ ternarySupport'\nshould be written as\n  'i, i ∉'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseAction.lean:36:46: missing space in the source\n\nThis part of the code\n  'i≠j → u'\nshould be written as\n  'i ≠ j'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseAction.lean:36:54: missing space in the source\n\nThis part of the code\n  'i=0)\n '\nshould be written as\n  'i = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Lattices.EisensteinNinePhaseKernel transitive imports (legacy)",
+       "c0b40d3af1068940"],
+      ["Atlas.Lattices.EisensteinNinePhaseKernel:importAllArts",
+       "3239f8829421f46b"],
+      ["Atlas.Lattices.EisensteinHexadPhaseClass transitive imports (legacy)",
+       "1a77542e4805fa8c"],
+      ["Atlas.Lattices.EisensteinHexadPhaseClass:importAllArts",
+       "c60a8a3072f60578"],
+      ["Atlas.Conway.EisensteinHexadPhaseAction transitive imports (legacy)",
+       "93bff86a7c2a217a"],
+      ["Atlas.Conway.EisensteinHexadPhaseAction:importAllArts",
+       "8d21d9b3dc597cc5"],
+      ["Atlas.Conway.EisensteinProjectiveAction transitive imports (legacy)",
+       "8cfd2c852da90b5a"],
+      ["Atlas.Conway.EisensteinProjectiveAction:importAllArts",
+       "abdf3de12fd85003"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Conway/EisensteinNinePhaseAction.lean",
+   "4a5a580753bf9466"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Conway.EisensteinNinePhaseAction", "0719247bde689fdb"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "efa33aca9a6c3f01"}

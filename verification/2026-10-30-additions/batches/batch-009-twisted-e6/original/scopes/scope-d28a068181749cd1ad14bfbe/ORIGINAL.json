@@ -1,0 +1,159 @@
+{
+  "id": "staged-E6WeightedLength",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.E6WeightedLength"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.pi_sumCoords",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.rationalRoot_positive_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.f4Root_positive_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.fixedCoordinates_nonnegative_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.rootDiagram_height",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.diagramSymmetrization",
+      "kind": "definition",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.diagramSymmetrization_height",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.diagramSymmetrization_positive_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.diagramSymmetrization_weyl",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.foldedSimpleNode",
+      "kind": "definition",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.foldedSimpleRoot",
+      "kind": "definition",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.foldedSimpleScale",
+      "kind": "definition",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.foldedSimpleScale_pos",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.diagramSymmetrization_simple",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.diagramSymmetrization_weyl_simple",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.simple_image_positive_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.e6Length_mul_generator_of_negative",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.e6Length_eq_f4WeightedInversions",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.e6InversionCount_eq_f4WeightedInversions",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.e6Length_eq_long_short_inversion_sum",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.inheritedE6Length_eq_f4WeightedInversions",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.E6WeightedLength.fixedBruhatIndex_length_eq_weighted",
+      "kind": "theorem",
+      "module": "FamilyWork.E6WeightedLength"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-E6WeightedLength-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-E6WeightedLength-structural-identification-before-count",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.TwistedE6.companionFixedSubgroup_card",
+        "Atlas.Chevalley.TwistedE6.companionFixedWeylCell_card",
+        "Atlas.Chevalley.F4B3.rootWeylPoincareEval_F4",
+        "Atlas.Chevalley.RootData.rootWeylPoincareEval"
+      ],
+      "forbid_modules": [
+        "FamilyWork.PositiveFixedOrder",
+        "FamilyWork.FixedTorusOrder",
+        "FamilyWork.FixedBorel",
+        "FamilyWork.FixedInversionOrder",
+        "FamilyWork.FixedCellCoordinates",
+        "FamilyWork.FixedWeylCell"
+      ]
+    }
+  ]
+}

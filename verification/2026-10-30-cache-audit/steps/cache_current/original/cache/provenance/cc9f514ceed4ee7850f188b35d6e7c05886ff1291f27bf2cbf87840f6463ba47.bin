@@ -1,0 +1,304 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["348920a911e3cb09.olean"],
+  "m": false,
+  "i": "25aef16d2e4d95dc.ilean",
+  "c": "15dde333a229d272.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:43:24: This simp argument is unused:\n  Pi.add_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [pfaffian_apply, Matrix.vecHead, Matrix.vecTail] at h0 h5 h2' h3 h14\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:43:2: `simp [pfaffian_apply, Pi.add_apply, Matrix.vecHead, Matrix.vecTail] at h0 h5 h2' h3 h14` is a flexible tactic modifying `h14`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:44:2: `have he1 : T w 1 = w 1 := by\n  apply (mul_left_cancel₀ h2)\n  linear_combination h14 + hc`\nuses `h14`, which was modified by the flexible tactic `simp` on line 43!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:43:2: `simp [pfaffian_apply, Pi.add_apply, Matrix.vecHead, Matrix.vecTail] at h0 h5 h2' h3 h14` is a flexible tactic modifying `h0`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:48:2: `have he0 : T w 0 = w 0 := by linear_combination h0`\nuses `h0`, which was modified by the flexible tactic `simp` on line 43!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:43:2: `simp [pfaffian_apply, Pi.add_apply, Matrix.vecHead, Matrix.vecTail] at h0 h5 h2' h3 h14` is a flexible tactic modifying `h2'`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:49:2: `have he2 : T w 2 = w 2 := by linear_combination h2'`\nuses `h2'`, which was modified by the flexible tactic `simp` on line 43!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:43:2: `simp [pfaffian_apply, Pi.add_apply, Matrix.vecHead, Matrix.vecTail] at h0 h5 h2' h3 h14` is a flexible tactic modifying `h3`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:50:2: `have he3 : T w 3 = w 3 := by linear_combination h3`\nuses `h3`, which was modified by the flexible tactic `simp` on line 43!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:43:2: `simp [pfaffian_apply, Pi.add_apply, Matrix.vecHead, Matrix.vecTail] at h0 h5 h2' h3 h14` is a flexible tactic modifying `h5`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:51:2: `have he5 : T w 5 = w 5 := by linear_combination h5`\nuses `h5`, which was modified by the flexible tactic `simp` on line 43!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:15: This simp argument is unused:\n  Matrix.vecHead\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedge, Matrix.vecTail] at h0 h1 h2 h3 h4 h5\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:31: This simp argument is unused:\n  Matrix.vecTail\n\nHint: Omit it from the simp argument list.\n  [apply] simp [wedge, Matrix.vecHead] at h0 h1 h2 h3 h4 h5\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h3`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:66:2: `have hn0 : u 1 * v 0 - u 0 * v 1 = x 1 * y 0 - x 0 * y 1 := by linear_combination -h0`\nuses `h3`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h4`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:66:2: `have hn0 : u 1 * v 0 - u 0 * v 1 = x 1 * y 0 - x 0 * y 1 := by linear_combination -h0`\nuses `h4`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h5`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:66:2: `have hn0 : u 1 * v 0 - u 0 * v 1 = x 1 * y 0 - x 0 * y 1 := by linear_combination -h0`\nuses `h5`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h1`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:66:2: `have hn0 : u 1 * v 0 - u 0 * v 1 = x 1 * y 0 - x 0 * y 1 := by linear_combination -h0`\nuses `h1`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h0`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:66:2: `have hn0 : u 1 * v 0 - u 0 * v 1 = x 1 * y 0 - x 0 * y 1 := by linear_combination -h0`\nuses `h0`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:66:2: `have hn0 : u 1 * v 0 - u 0 * v 1 = x 1 * y 0 - x 0 * y 1 := by linear_combination -h0`\nuses `h2`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h1`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:68:2: `have hn1 : u 2 * v 0 - u 0 * v 2 = x 2 * y 0 - x 0 * y 2 := by linear_combination -h1`\nuses `h1`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h5`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:68:2: `have hn1 : u 2 * v 0 - u 0 * v 2 = x 2 * y 0 - x 0 * y 2 := by linear_combination -h1`\nuses `h5`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:68:2: `have hn1 : u 2 * v 0 - u 0 * v 2 = x 2 * y 0 - x 0 * y 2 := by linear_combination -h1`\nuses `h2`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h0`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:68:2: `have hn1 : u 2 * v 0 - u 0 * v 2 = x 2 * y 0 - x 0 * y 2 := by linear_combination -h1`\nuses `h0`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h4`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:68:2: `have hn1 : u 2 * v 0 - u 0 * v 2 = x 2 * y 0 - x 0 * y 2 := by linear_combination -h1`\nuses `h4`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h3`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:68:2: `have hn1 : u 2 * v 0 - u 0 * v 2 = x 2 * y 0 - x 0 * y 2 := by linear_combination -h1`\nuses `h3`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h0`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:70:2: `have hn2 : u 3 * v 0 - u 0 * v 3 = x 3 * y 0 - x 0 * y 3 := by linear_combination -h2`\nuses `h0`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h5`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:70:2: `have hn2 : u 3 * v 0 - u 0 * v 3 = x 3 * y 0 - x 0 * y 3 := by linear_combination -h2`\nuses `h5`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h4`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:70:2: `have hn2 : u 3 * v 0 - u 0 * v 3 = x 3 * y 0 - x 0 * y 3 := by linear_combination -h2`\nuses `h4`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h3`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:70:2: `have hn2 : u 3 * v 0 - u 0 * v 3 = x 3 * y 0 - x 0 * y 3 := by linear_combination -h2`\nuses `h3`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:70:2: `have hn2 : u 3 * v 0 - u 0 * v 3 = x 3 * y 0 - x 0 * y 3 := by linear_combination -h2`\nuses `h2`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h1`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:70:2: `have hn2 : u 3 * v 0 - u 0 * v 3 = x 3 * y 0 - x 0 * y 3 := by linear_combination -h2`\nuses `h1`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h5`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:72:2: `have hn3 : u 2 * v 1 - u 1 * v 2 = x 2 * y 1 - x 1 * y 2 := by linear_combination -h3`\nuses `h5`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h0`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:72:2: `have hn3 : u 2 * v 1 - u 1 * v 2 = x 2 * y 1 - x 1 * y 2 := by linear_combination -h3`\nuses `h0`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h1`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:72:2: `have hn3 : u 2 * v 1 - u 1 * v 2 = x 2 * y 1 - x 1 * y 2 := by linear_combination -h3`\nuses `h1`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h3`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:72:2: `have hn3 : u 2 * v 1 - u 1 * v 2 = x 2 * y 1 - x 1 * y 2 := by linear_combination -h3`\nuses `h3`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h4`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:72:2: `have hn3 : u 2 * v 1 - u 1 * v 2 = x 2 * y 1 - x 1 * y 2 := by linear_combination -h3`\nuses `h4`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:72:2: `have hn3 : u 2 * v 1 - u 1 * v 2 = x 2 * y 1 - x 1 * y 2 := by linear_combination -h3`\nuses `h2`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h5`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:74:2: `have hn4 : u 3 * v 1 - u 1 * v 3 = x 3 * y 1 - x 1 * y 3 := by linear_combination -h4`\nuses `h5`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h4`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:74:2: `have hn4 : u 3 * v 1 - u 1 * v 3 = x 3 * y 1 - x 1 * y 3 := by linear_combination -h4`\nuses `h4`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h0`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:74:2: `have hn4 : u 3 * v 1 - u 1 * v 3 = x 3 * y 1 - x 1 * y 3 := by linear_combination -h4`\nuses `h0`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:74:2: `have hn4 : u 3 * v 1 - u 1 * v 3 = x 3 * y 1 - x 1 * y 3 := by linear_combination -h4`\nuses `h2`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h3`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:74:2: `have hn4 : u 3 * v 1 - u 1 * v 3 = x 3 * y 1 - x 1 * y 3 := by linear_combination -h4`\nuses `h3`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h1`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:74:2: `have hn4 : u 3 * v 1 - u 1 * v 3 = x 3 * y 1 - x 1 * y 3 := by linear_combination -h4`\nuses `h1`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h4`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:76:2: `have hn5 : u 3 * v 2 - u 2 * v 3 = x 3 * y 2 - x 2 * y 3 := by linear_combination -h5`\nuses `h4`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h5`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:76:2: `have hn5 : u 3 * v 2 - u 2 * v 3 = x 3 * y 2 - x 2 * y 3 := by linear_combination -h5`\nuses `h5`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h1`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:76:2: `have hn5 : u 3 * v 2 - u 2 * v 3 = x 3 * y 2 - x 2 * y 3 := by linear_combination -h5`\nuses `h1`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h3`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:76:2: `have hn5 : u 3 * v 2 - u 2 * v 3 = x 3 * y 2 - x 2 * y 3 := by linear_combination -h5`\nuses `h3`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h2`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:76:2: `have hn5 : u 3 * v 2 - u 2 * v 3 = x 3 * y 2 - x 2 * y 3 := by linear_combination -h5`\nuses `h2`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:65:2: `simp [wedge, Matrix.vecHead, Matrix.vecTail] at h0 h1 h2 h3 h4 h5` is a flexible tactic modifying `h0`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:76:2: `have hn5 : u 3 * v 2 - u 2 * v 3 = x 3 * y 2 - x 2 * y 3 := by linear_combination -h5`\nuses `h0`, which was modified by the flexible tactic `simp` on line 65!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:95:15: This simp argument is unused:\n  hjk\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hji, hki, Ne.symm hji, Ne.symm hjk, Ne.symm hki] at h1 h2 h3\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean:95:51: This simp argument is unused:\n  Ne.symm hki\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hji, hjk, hki, Ne.symm hji, Ne.symm hjk] at h1 h2 h3\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Orthogonal.B2ExteriorSymplectic transitive imports (legacy)",
+       "5931fd8b4b4a27fa"],
+      ["Atlas.LinearGroups.Orthogonal.B2ExteriorSymplectic:importAllArts",
+       "6af95322381301cf"],
+      ["Atlas.LinearGroups.Symplectic.Center transitive imports (legacy)",
+       "a3e0c261a049c6f6"],
+      ["Atlas.LinearGroups.Symplectic.Center:importAllArts",
+       "0f9079cd158a68ba"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Orthogonal/B2ExteriorKernel.lean",
+   "30b545b98ee3beb6"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Orthogonal.B2ExteriorKernel",
+   "0e6f33fc23f2d58f"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "262b42bfa4cc346c"}

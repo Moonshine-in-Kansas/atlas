@@ -1,0 +1,78 @@
+{
+  "id": "staged-F4IntegralOperatorData",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "F4Work.F4IntegralOperatorData"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.simpleTable",
+      "module": "F4Work.F4IntegralOperatorData",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.simpleSecondTable",
+      "module": "F4Work.F4IntegralOperatorData",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.geckTable",
+      "module": "F4Work.F4IntegralOperatorData",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.geckSecondTable",
+      "module": "F4Work.F4IntegralOperatorData",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.simpleMatrix",
+      "module": "F4Work.F4IntegralOperatorData",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.simpleSecondMatrix",
+      "module": "F4Work.F4IntegralOperatorData",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.geckMatrix",
+      "module": "F4Work.F4IntegralOperatorData",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.geckSecondMatrix",
+      "module": "F4Work.F4IntegralOperatorData",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.basisCombination",
+      "module": "F4Work.F4IntegralOperatorData",
+      "kind": "definition"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-F4IntegralOperatorData-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis."
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ]
+}

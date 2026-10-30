@@ -1,0 +1,94 @@
+{
+  "id": "staged-ClassicalBWeights",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.ClassicalBWeights"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.ClassicalBWeights.rootWeight",
+      "kind": "definition",
+      "module": "FamilyWork.ClassicalBWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.ClassicalBWeights.rootWeight_eq_of_scale",
+      "kind": "theorem",
+      "module": "FamilyWork.ClassicalBWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.ClassicalBWeights.rootWeight_reflection",
+      "kind": "theorem",
+      "module": "FamilyWork.ClassicalBWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.ClassicalBWeights.rootWeight_simple",
+      "kind": "theorem",
+      "module": "FamilyWork.ClassicalBWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.ClassicalBWeights.rootWeight_tailSimple",
+      "kind": "theorem",
+      "module": "FamilyWork.ClassicalBWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.ClassicalBWeights.bWeightedInversions",
+      "kind": "definition",
+      "module": "FamilyWork.ClassicalBWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.ClassicalBWeights.bWeightedInversions_one",
+      "kind": "theorem",
+      "module": "FamilyWork.ClassicalBWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.ClassicalBWeights.tailWeylHom_weightedInversions",
+      "kind": "theorem",
+      "module": "FamilyWork.ClassicalBWeights"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.ClassicalBWeights.lowerRankParabolicEquiv_weightedInversions",
+      "kind": "theorem",
+      "module": "FamilyWork.ClassicalBWeights"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-ClassicalBWeights-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-ClassicalBWeights-structural-identification-before-count",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.TwistedE6.companionFixedSubgroup_card",
+        "Atlas.Chevalley.TwistedE6.companionFixedWeylCell_card",
+        "Atlas.Chevalley.F4B3.rootWeylPoincareEval_F4",
+        "Atlas.Chevalley.RootData.rootWeylPoincareEval"
+      ],
+      "forbid_modules": [
+        "FamilyWork.PositiveFixedOrder",
+        "FamilyWork.FixedTorusOrder",
+        "FamilyWork.FixedBorel",
+        "FamilyWork.FixedInversionOrder",
+        "FamilyWork.FixedCellCoordinates",
+        "FamilyWork.FixedWeylCell"
+      ]
+    }
+  ]
+}

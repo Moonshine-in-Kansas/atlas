@@ -1,0 +1,86 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["818ae28f9501dd42.olean"],
+  "m": false,
+  "i": "2d6d9585d99b0576.ilean",
+  "c": "768aa0efed96c24b.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Mathieu/DodecadLinearTransport.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Mathieu/DodecadLinearTransport.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Mathieu/DodecadLinearTransport.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Mathieu/DodecadLinearTransport.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Mathieu/DodecadLinearTransport.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Mathieu/DodecadLinearTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadLinearTransport.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadLinearTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadLinearTransport.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadLinearTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadLinearTransport.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem dodecad_linear_word (i : HexIndex) (h : hexZeroCoordinate i) (r : P6)\n    (b : hexPointKernel i) :\n    ∃ s : P6,\n      coordinatePermutation (tetradPointStabilizerEquiv i (SemidirectProduct.inr b)).val.val (c0Encoder (h.val, r)) =\n        c0Encoder ((hexZeroLinear i b.val h).val, s) :=\n  by\n  let x : SextetAffineGroup := tetradPointAffineInclusion i (SemidirectProduct.inr b)\n  let w : C0 := sextetC0Action (sextetAffineEquiv x) (c0Equiv (h.val, r))\n  obtain ⟨⟨k, s⟩, he⟩ := c0Equiv.surjective w\n  have hk : k = (hexZeroLinear i b.val h).val :=\n    by\n    have hr := recoverHex_equivariant (sextetAffineEquiv x) (c0Equiv (h.val, r))\n    rw [recoverHex_apply, sextetQuotient_affine] at hr\n    have he' := congrArg recoverHex he\n    rw [recoverHex_apply] at he'\n    exact he'.trans hr\n  refine ⟨s, ?_⟩\n  have hw := congrArg (fun z : C0 => z.val) he\n  rw [hk] at hw\n  exact hw.symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadLinearTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadLinearTransport.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem tetrad_fix_preserves_containment (i : HexIndex)\n    (g : TetradPointStabilizer i) (D : Finset Omega) (hD : tetrad i ⊆ D) : tetrad i ⊆ permuteBlock g.val.val D :=\n  by\n  intro p hp\n  have hg : g.val.val p = p := g.prop ⟨p, hp⟩\n  exact Finset.mem_image.mpr ⟨p, hD hp, hg⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadLinearTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadLinearTransport.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem dodecad_local_transitive (i : HexIndex)\n    (D E : DodecadsThroughTetrad i) : ∃ g : TetradPointStabilizer i, permuteBlock g.val.val D.val.val = E.val.val :=\n  by\n  obtain ⟨p, rfl⟩ := (dodecadParametersSupport_bijective i).2 D\n  obtain ⟨q, rfl⟩ := (dodecadParametersSupport_bijective i).2 E\n  obtain ⟨b, hb⟩ := hexPointKernel_nonzero_transitive i p.1.val q.1.val p.1.prop q.1.prop\n  let g := tetradPointStabilizerEquiv i (SemidirectProduct.inr b)\n  obtain ⟨r, hr⟩ := dodecad_linear_word i p.1.val p.2.val b\n  rw [hb] at hr\n  have hp := (dodecadParametersSupport i p).prop\n  have hri : r.val (hexIndexEquiv i) = 1 :=\n    by\n    have hc := tetrad_fix_preserves_containment i g _ hp\n    change tetrad i ⊆ permuteBlock g.val.val (support (c0Encoder (p.1.val.val, p.2.val))) at hc\n    rw [← coordinatePermutation_support, hr] at hc\n    exact ((c0Encoder_contains_tetrad _ _ i).mp hc).2\n  have hweight : hammingNorm (c0Encoder (q.1.val.val, r)) = 12 :=\n    by\n    rw [← hr, coordinatePermutation_weight]\n    exact dodecad_size _ (dodecadParametersSupport i p).val.prop\n  have hz (k : HexIndex) (hk : q.1.val.val.val k = 0) : r.val (hexIndexEquiv k) = q.2.val.val (hexIndexEquiv k) :=\n    by\n    by_cases hki : k = i\n    · subst k\n      exact hri.trans q.2.prop.1.symm\n    · rw [q.2.prop.2 k hki hk]\n      exact dodecad_parameters_empty _ r i k hweight q.1.val.prop hri hki hk\n  obtain ⟨t, ht⟩ := dodecad_translation_actual i q.1.val q.1.prop r q.2.val hz\n  refine ⟨t * g, ?_⟩\n  change\n    permuteBlock (t.val.val * g.val.val) (support (c0Encoder (p.1.val.val, p.2.val))) =\n      support (c0Encoder (q.1.val.val, q.2.val))\n  rw [← coordinatePermutation_support, coordinatePermutation_mul, hr, ht]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadLinearTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadLinearTransport.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadLinearTransport.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadLinearTransport.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Mathieu.DodecadTranslations transitive imports (legacy)",
+       "3bc74010e84b4cf0"],
+      ["Atlas.Mathieu.DodecadTranslations:importAllArts", "4256b7161244662b"],
+      ["Atlas.Codes.DodecadParameterCount transitive imports (legacy)",
+       "69a6f9f7d8773f20"],
+      ["Atlas.Codes.DodecadParameterCount:importAllArts", "c9dc480d6f1b82a6"],
+      ["Atlas.Codes.HexacodeKernelTransitivity transitive imports (legacy)",
+       "de80801486dd0bf1"],
+      ["Atlas.Codes.HexacodeKernelTransitivity:importAllArts",
+       "2c9c9469e4257514"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Mathieu/DodecadLinearTransport.lean",
+   "955fb72867f9844f"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Mathieu.DodecadLinearTransport", "8c4ef4baa1beabe6"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "be8e11fe97aa61a2"}

@@ -1,0 +1,1048 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["6a950979d74e41b9.olean"],
+  "m": false,
+  "i": "58136b77436e5245.ilean",
+  "c": "00bbbf9725e2c9b2.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/G2/BinaryHexagon.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/BinaryHexagon.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/BinaryHexagon.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/BinaryHexagon.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/BinaryHexagon.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:6:0: Unscoped option maxHeartbeats is not allowed:\nPlease scope this to individual declarations, as in\n```\nset_option maxHeartbeats in\n-- comment explaining why this is necessary\nexample : ... := ...\n```\n\nNote: This linter can be disabled with `set_option linter.style.setOption false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:35:1: 'theorem singular_map (g : Model K) {x : V} (hx : Singular x) : Singular (g.val x) :=\n  by\n  refine ⟨?_, ?_, ?_⟩\n  · exact fun h => hx.1 (g.val.injective (h.trans (map_zero g.val).symm))\n  · rw [automorphism_trace]; exact hx.2.1\n  · rw [automorphism_norm];\n    exact hx.2.2' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:35:38: missing space in the source\n\nThis part of the code\n  '{x:V} (hx'\nshould be written as\n  '{x : V}'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:41:1: 'def mapLine (g : Model K) (L : Line) : Line :=\n  by\n  refine ⟨L.val.map g.val.toEquiv.toEmbedding, ?_⟩\n  obtain ⟨x, y, hx, hy, hxy, hm, hm', he⟩ := L.prop\n  refine ⟨g.val x, g.val y, singular_map g hx, singular_map g hy, ?_, ?_, ?_, ?_⟩\n  · simpa only [map_add] using singular_map g hxy\n  · rw [← automorphism_mul, hm, map_zero]\n  · rw [← automorphism_mul, hm', map_zero]\n  · simp [he, map_add]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:50:1: 'instance lineAction : MulAction (Model K) Line where\n  smul := mapLine\n  one_smul\n    L := by\n    apply Subtype.ext\n    change L.val.map _ = L.val\n    exact Finset.map_refl\n  mul_smul g h\n    L := by\n    apply Subtype.ext\n    change L.val.map _ = (L.val.map _).map _\n    rw [Finset.map_map]\n    rfl' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:72:1: 'theorem square_eq_self (a : K) : a * a = a :=\n  by\n  have h : ∀ a : ZMod 2, a * a = a := by decide +kernel\n  exact h a' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:86:1: 'theorem point_coordinates {x : V} (ht : trace x = 0) (hn : norm x = 0) : point ![x 0, x 1, x 2, x 5, x 6, x 7] = x :=\n  by\n  have hn' : x 0 * x 7 + x 1 * x 6 + x 2 * x 5 + x 3 * x 4 = 0 := hn\n  have ht' : x 3 + x 4 = 0 := ht\n  have hn4 : x 4 = x 3 := by\n    have hc : ∀ a : K, -a = a := by decide +kernel\n    exact (eq_neg_of_add_eq_zero_right ht').trans (hc _)\n  rw [hn4, square_eq_self] at hn'\n  have hc : ∀ a : K, -a = a := by decide +kernel\n  have hs : x 0 * x 7 + x 1 * x 6 + x 2 * x 5 = x 3 := (eq_neg_of_add_eq_zero_left hn').trans (hc _)\n  funext i;\n  fin_cases i <;> simp [point, hs, hn4]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:86:29: missing space in the source\n\nThis part of the code\n  '{x:V} (ht'\nshould be written as\n  '{x : V}'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:127:6: Unused tactic linter: `change GoodPair (t, u)` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:114:1: 'theorem mem_lines (s : Finset V) : s ∈ lines ↔ IsLine s :=\n  by\n  constructor\n  · intro h\n    obtain ⟨p, hp, rfl⟩ := Finset.mem_image.mp h\n    have hp' : GoodPair p := (Finset.mem_filter.mp hp).2\n    exact ⟨point p.1, point p.2, hp'.1, hp'.2.1, hp'.2.2.1, hp'.2.2.2.1, hp'.2.2.2.2, rfl⟩\n  · rintro ⟨x, y, hx, hy, hxy, hm, hm', rfl⟩\n    let t : Fin 6 → K := ![x 0, x 1, x 2, x 5, x 6, x 7]\n    let u : Fin 6 → K := ![y 0, y 1, y 2, y 5, y 6, y 7]\n    have he : point t = x := point_coordinates hx.2.1 hx.2.2\n    have he' : point u = y := point_coordinates hy.2.1 hy.2.2\n    apply Finset.mem_image.mpr\n    refine ⟨(t, u), Finset.mem_filter.mpr ⟨Finset.mem_univ _, ?_⟩, ?_⟩\n    · change GoodPair (t, u)\n      simpa only [GoodPair, he, he'] using And.intro hx ⟨hy, hxy, hm, hm'⟩\n    · simp [lineOfPair, he, he']' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:131:1: 'def lineEquiv : Line ≃ { s // s ∈ lines }\n    where\n  toFun L := ⟨L.val, (mem_lines L.val).mpr L.prop⟩\n  invFun L := ⟨L.val, (mem_lines L.val).mp L.prop⟩\n  left_inv _ := rfl\n  right_inv _ := rfl' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:139:0: Unscoped option maxHeartbeats is not allowed:\nPlease scope this to individual declarations, as in\n```\nset_option maxHeartbeats in\n-- comment explaining why this is necessary\nexample : ... := ...\n```\n\nNote: This linter can be disabled with `set_option linter.style.setOption false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:206:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 10000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:409:16: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,0,0])'\nshould be written as\n  '![0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:409:18: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,0,0])'\nshould be written as\n  '0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:409:20: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,0,0])'\nshould be written as\n  '0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:409:22: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,0,0])'\nshould be written as\n  '0, 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:409:24: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:410:16: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,0,0])'\nshould be written as\n  '![1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:410:18: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,0,0])'\nshould be written as\n  '0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:410:20: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,0,0])'\nshould be written as\n  '0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:410:22: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,0,0])'\nshould be written as\n  '0, 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:410:24: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:411:16: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,0,0])'\nshould be written as\n  '![0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:411:18: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,0,0])'\nshould be written as\n  '1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:411:20: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,0,0])'\nshould be written as\n  '0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:411:22: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,0,0])'\nshould be written as\n  '0, 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:411:24: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:412:16: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,0,0])'\nshould be written as\n  '![1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:412:18: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,0,0])'\nshould be written as\n  '1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:412:20: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,0,0])'\nshould be written as\n  '0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:412:22: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,0,0])'\nshould be written as\n  '0, 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:412:24: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:413:16: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,0,0])'\nshould be written as\n  '![0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:413:18: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,0,0])'\nshould be written as\n  '0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:413:20: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,0,0])'\nshould be written as\n  '1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:413:22: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,0,0])'\nshould be written as\n  '0, 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:413:24: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:414:16: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,0,0])'\nshould be written as\n  '![1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:414:18: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,0,0])'\nshould be written as\n  '0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:414:20: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,0,0])'\nshould be written as\n  '1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:414:22: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,0,0])'\nshould be written as\n  '0, 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:414:24: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:415:16: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,0,0])'\nshould be written as\n  '![0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:415:18: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,0,0])'\nshould be written as\n  '1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:415:20: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,0,0])'\nshould be written as\n  '1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:415:22: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,0,0])'\nshould be written as\n  '0, 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:415:24: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:416:16: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,0,0])'\nshould be written as\n  '![1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:416:18: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,0,0])'\nshould be written as\n  '1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:416:20: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,0,0])'\nshould be written as\n  '1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:416:22: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,0,0])'\nshould be written as\n  '0, 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:416:24: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:417:16: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,0,0])'\nshould be written as\n  '![0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:417:18: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,0,0])'\nshould be written as\n  '0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:417:20: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,0,0])'\nshould be written as\n  '0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:417:22: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,0,0])'\nshould be written as\n  '1, 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:417:24: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:418:16: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,0,0])'\nshould be written as\n  '![1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:418:18: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,0,0])'\nshould be written as\n  '0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:418:20: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,0,0])'\nshould be written as\n  '0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:418:22: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,0,0])'\nshould be written as\n  '1, 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:418:24: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:419:17: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,0,0])'\nshould be written as\n  '![0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:419:19: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,0,0])'\nshould be written as\n  '1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:419:21: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,0,0])'\nshould be written as\n  '0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:419:23: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,0,0])'\nshould be written as\n  '1, 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:419:25: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:420:17: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,0,0])'\nshould be written as\n  '![1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:420:19: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,0,0])'\nshould be written as\n  '1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:420:21: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,0,0])'\nshould be written as\n  '0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:420:23: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,0,0])'\nshould be written as\n  '1, 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:420:25: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:421:17: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,0,0])'\nshould be written as\n  '![0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:421:19: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,0,0])'\nshould be written as\n  '0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:421:21: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,0,0])'\nshould be written as\n  '1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:421:23: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,0,0])'\nshould be written as\n  '1, 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:421:25: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:422:17: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,0,0])'\nshould be written as\n  '![1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:422:19: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,0,0])'\nshould be written as\n  '0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:422:21: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,0,0])'\nshould be written as\n  '1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:422:23: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,0,0])'\nshould be written as\n  '1, 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:422:25: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:423:17: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,0,0])'\nshould be written as\n  '![0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:423:19: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,0,0])'\nshould be written as\n  '1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:423:21: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,0,0])'\nshould be written as\n  '1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:423:23: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,0,0])'\nshould be written as\n  '1, 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:423:25: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:424:17: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,0,0])'\nshould be written as\n  '![1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:424:19: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,0,0])'\nshould be written as\n  '1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:424:21: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,0,0])'\nshould be written as\n  '1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:424:23: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,0,0])'\nshould be written as\n  '1, 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:424:25: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:425:17: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,1,0])'\nshould be written as\n  '![0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:425:19: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,1,0])'\nshould be written as\n  '0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:425:21: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,1,0])'\nshould be written as\n  '0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:425:23: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,1,0])'\nshould be written as\n  '0, 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:425:25: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,1,0])\n'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:426:17: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,1,0])'\nshould be written as\n  '![1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:426:19: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,1,0])'\nshould be written as\n  '0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:426:21: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,1,0])'\nshould be written as\n  '0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:426:23: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,1,0])'\nshould be written as\n  '0, 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:426:25: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,1,0])\n'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:427:17: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,1,0])'\nshould be written as\n  '![0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:427:19: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,1,0])'\nshould be written as\n  '1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:427:21: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,1,0])'\nshould be written as\n  '0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:427:23: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,1,0])'\nshould be written as\n  '0, 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:427:25: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,1,0])\n'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:428:17: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,1,0])'\nshould be written as\n  '![1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:428:19: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,1,0])'\nshould be written as\n  '1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:428:21: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,1,0])'\nshould be written as\n  '0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:428:23: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,1,0])'\nshould be written as\n  '0, 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:428:25: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,1,0])\n'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:429:17: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,1,0])'\nshould be written as\n  '![0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:429:19: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,1,0])'\nshould be written as\n  '0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:429:21: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,1,0])'\nshould be written as\n  '1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:429:23: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,1,0])'\nshould be written as\n  '0, 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:429:25: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,1,0])\n'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:430:17: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,1,0])'\nshould be written as\n  '![1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:430:19: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,1,0])'\nshould be written as\n  '0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:430:21: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,1,0])'\nshould be written as\n  '1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:430:23: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,1,0])'\nshould be written as\n  '0, 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:430:25: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,1,0])\n'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:431:17: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,1,0])'\nshould be written as\n  '![0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:431:19: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,1,0])'\nshould be written as\n  '1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:431:21: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,1,0])'\nshould be written as\n  '1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:431:23: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,1,0])'\nshould be written as\n  '0, 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:431:25: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,1,0])\n'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:432:17: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,1,0])'\nshould be written as\n  '![1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:432:19: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,1,0])'\nshould be written as\n  '1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:432:21: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,1,0])'\nshould be written as\n  '1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:432:23: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,1,0])'\nshould be written as\n  '0, 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:432:25: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,1,0])\n'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:433:17: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,1,0])'\nshould be written as\n  '![0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:433:19: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,1,0])'\nshould be written as\n  '0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:433:21: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,1,0])'\nshould be written as\n  '0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:433:23: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,1,0])'\nshould be written as\n  '1, 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:433:25: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,1,0])\n'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:434:17: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,1,0])'\nshould be written as\n  '![1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:434:19: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,1,0])'\nshould be written as\n  '0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:434:21: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,1,0])'\nshould be written as\n  '0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:434:23: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,1,0])'\nshould be written as\n  '1, 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:434:25: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,1,0])\n'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:435:17: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,1,0])'\nshould be written as\n  '![0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:435:19: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,1,0])'\nshould be written as\n  '1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:435:21: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,1,0])'\nshould be written as\n  '0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:435:23: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,1,0])'\nshould be written as\n  '1, 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:435:25: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,1,0])\n'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:436:17: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,1,0])'\nshould be written as\n  '![1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:436:19: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,1,0])'\nshould be written as\n  '1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:436:21: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,1,0])'\nshould be written as\n  '0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:436:23: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,1,0])'\nshould be written as\n  '1, 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:436:25: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,1,0])\n'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:437:17: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,1,0])'\nshould be written as\n  '![0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:437:19: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,1,0])'\nshould be written as\n  '0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:437:21: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,1,0])'\nshould be written as\n  '1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:437:23: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,1,0])'\nshould be written as\n  '1, 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:437:25: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,1,0])\n'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:438:17: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,1,0])'\nshould be written as\n  '![1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:438:19: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,1,0])'\nshould be written as\n  '0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:438:21: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,1,0])'\nshould be written as\n  '1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:438:23: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,1,0])'\nshould be written as\n  '1, 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:438:25: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,1,0])\n'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:439:17: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,1,0])'\nshould be written as\n  '![0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:439:19: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,1,0])'\nshould be written as\n  '1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:439:21: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,1,0])'\nshould be written as\n  '1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:439:23: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,1,0])'\nshould be written as\n  '1, 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:439:25: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,1,0])\n'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:440:17: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,1,0])'\nshould be written as\n  '![1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:440:19: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,1,0])'\nshould be written as\n  '1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:440:21: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,1,0])'\nshould be written as\n  '1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:440:23: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,1,0])'\nshould be written as\n  '1, 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:440:25: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,1,0])\n'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:441:17: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,0,1])'\nshould be written as\n  '![0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:441:19: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,0,1])'\nshould be written as\n  '0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:441:21: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,0,1])'\nshould be written as\n  '0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:441:23: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,0,1])'\nshould be written as\n  '0, 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:441:25: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:442:17: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,0,1])'\nshould be written as\n  '![1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:442:19: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,0,1])'\nshould be written as\n  '0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:442:21: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,0,1])'\nshould be written as\n  '0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:442:23: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,0,1])'\nshould be written as\n  '0, 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:442:25: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:443:17: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,0,1])'\nshould be written as\n  '![0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:443:19: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,0,1])'\nshould be written as\n  '1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:443:21: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,0,1])'\nshould be written as\n  '0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:443:23: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,0,1])'\nshould be written as\n  '0, 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:443:25: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:444:17: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,0,1])'\nshould be written as\n  '![1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:444:19: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,0,1])'\nshould be written as\n  '1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:444:21: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,0,1])'\nshould be written as\n  '0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:444:23: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,0,1])'\nshould be written as\n  '0, 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:444:25: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:445:17: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,0,1])'\nshould be written as\n  '![0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:445:19: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,0,1])'\nshould be written as\n  '0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:445:21: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,0,1])'\nshould be written as\n  '1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:445:23: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,0,1])'\nshould be written as\n  '0, 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:445:25: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:446:17: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,0,1])'\nshould be written as\n  '![1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:446:19: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,0,1])'\nshould be written as\n  '0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:446:21: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,0,1])'\nshould be written as\n  '1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:446:23: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,0,1])'\nshould be written as\n  '0, 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:446:25: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:447:17: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,0,1])'\nshould be written as\n  '![0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:447:19: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,0,1])'\nshould be written as\n  '1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:447:21: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,0,1])'\nshould be written as\n  '1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:447:23: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,0,1])'\nshould be written as\n  '0, 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:447:25: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:448:17: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,0,1])'\nshould be written as\n  '![1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:448:19: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,0,1])'\nshould be written as\n  '1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:448:21: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,0,1])'\nshould be written as\n  '1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:448:23: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,0,1])'\nshould be written as\n  '0, 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:448:25: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:449:17: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,0,1])'\nshould be written as\n  '![0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:449:19: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,0,1])'\nshould be written as\n  '0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:449:21: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,0,1])'\nshould be written as\n  '0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:449:23: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,0,1])'\nshould be written as\n  '1, 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:449:25: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:450:17: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,0,1])'\nshould be written as\n  '![1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:450:19: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,0,1])'\nshould be written as\n  '0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:450:21: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,0,1])'\nshould be written as\n  '0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:450:23: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,0,1])'\nshould be written as\n  '1, 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:450:25: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:451:17: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,0,1])'\nshould be written as\n  '![0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:451:19: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,0,1])'\nshould be written as\n  '1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:451:21: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,0,1])'\nshould be written as\n  '0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:451:23: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,0,1])'\nshould be written as\n  '1, 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:451:25: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:452:17: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,0,1])'\nshould be written as\n  '![1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:452:19: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,0,1])'\nshould be written as\n  '1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:452:21: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,0,1])'\nshould be written as\n  '0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:452:23: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,0,1])'\nshould be written as\n  '1, 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:452:25: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:453:17: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,0,1])'\nshould be written as\n  '![0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:453:19: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,0,1])'\nshould be written as\n  '0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:453:21: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,0,1])'\nshould be written as\n  '1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:453:23: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,0,1])'\nshould be written as\n  '1, 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:453:25: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:454:17: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,0,1])'\nshould be written as\n  '![1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:454:19: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,0,1])'\nshould be written as\n  '0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:454:21: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,0,1])'\nshould be written as\n  '1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:454:23: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,0,1])'\nshould be written as\n  '1, 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:454:25: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:455:17: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,0,1])'\nshould be written as\n  '![0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:455:19: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,0,1])'\nshould be written as\n  '1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:455:21: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,0,1])'\nshould be written as\n  '1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:455:23: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,0,1])'\nshould be written as\n  '1, 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:455:25: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:456:17: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,0,1])'\nshould be written as\n  '![1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:456:19: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,0,1])'\nshould be written as\n  '1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:456:21: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,0,1])'\nshould be written as\n  '1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:456:23: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,0,1])'\nshould be written as\n  '1, 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:456:25: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:457:17: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,1,1])'\nshould be written as\n  '![0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:457:19: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,1,1])'\nshould be written as\n  '0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:457:21: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,1,1])'\nshould be written as\n  '0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:457:23: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,1,1])'\nshould be written as\n  '0, 1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:457:25: missing space in the source\n\nThis part of the code\n  '![0,0,0,0,1,1])\n'\nshould be written as\n  '1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:458:17: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,1,1])'\nshould be written as\n  '![1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:458:19: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,1,1])'\nshould be written as\n  '0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:458:21: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,1,1])'\nshould be written as\n  '0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:458:23: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,1,1])'\nshould be written as\n  '0, 1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:458:25: missing space in the source\n\nThis part of the code\n  '![1,0,0,0,1,1])\n'\nshould be written as\n  '1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:459:17: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,1,1])'\nshould be written as\n  '![0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:459:19: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,1,1])'\nshould be written as\n  '1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:459:21: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,1,1])'\nshould be written as\n  '0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:459:23: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,1,1])'\nshould be written as\n  '0, 1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:459:25: missing space in the source\n\nThis part of the code\n  '![0,1,0,0,1,1])\n'\nshould be written as\n  '1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:460:17: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,1,1])'\nshould be written as\n  '![1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:460:19: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,1,1])'\nshould be written as\n  '1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:460:21: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,1,1])'\nshould be written as\n  '0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:460:23: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,1,1])'\nshould be written as\n  '0, 1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:460:25: missing space in the source\n\nThis part of the code\n  '![1,1,0,0,1,1])\n'\nshould be written as\n  '1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:461:17: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,1,1])'\nshould be written as\n  '![0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:461:19: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,1,1])'\nshould be written as\n  '0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:461:21: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,1,1])'\nshould be written as\n  '1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:461:23: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,1,1])'\nshould be written as\n  '0, 1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:461:25: missing space in the source\n\nThis part of the code\n  '![0,0,1,0,1,1])\n'\nshould be written as\n  '1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:462:17: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,1,1])'\nshould be written as\n  '![1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:462:19: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,1,1])'\nshould be written as\n  '0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:462:21: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,1,1])'\nshould be written as\n  '1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:462:23: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,1,1])'\nshould be written as\n  '0, 1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:462:25: missing space in the source\n\nThis part of the code\n  '![1,0,1,0,1,1])\n'\nshould be written as\n  '1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:463:17: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,1,1])'\nshould be written as\n  '![0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:463:19: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,1,1])'\nshould be written as\n  '1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:463:21: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,1,1])'\nshould be written as\n  '1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:463:23: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,1,1])'\nshould be written as\n  '0, 1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:463:25: missing space in the source\n\nThis part of the code\n  '![0,1,1,0,1,1])\n'\nshould be written as\n  '1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:464:17: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,1,1])'\nshould be written as\n  '![1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:464:19: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,1,1])'\nshould be written as\n  '1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:464:21: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,1,1])'\nshould be written as\n  '1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:464:23: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,1,1])'\nshould be written as\n  '0, 1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:464:25: missing space in the source\n\nThis part of the code\n  '![1,1,1,0,1,1])\n'\nshould be written as\n  '1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:465:17: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,1,1])'\nshould be written as\n  '![0, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:465:19: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,1,1])'\nshould be written as\n  '0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:465:21: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,1,1])'\nshould be written as\n  '0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:465:23: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,1,1])'\nshould be written as\n  '1, 1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:465:25: missing space in the source\n\nThis part of the code\n  '![0,0,0,1,1,1])\n'\nshould be written as\n  '1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:466:17: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,1,1])'\nshould be written as\n  '![1, 0, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:466:19: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,1,1])'\nshould be written as\n  '0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:466:21: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,1,1])'\nshould be written as\n  '0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:466:23: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,1,1])'\nshould be written as\n  '1, 1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:466:25: missing space in the source\n\nThis part of the code\n  '![1,0,0,1,1,1])\n'\nshould be written as\n  '1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:467:17: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,1,1])'\nshould be written as\n  '![0, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:467:19: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,1,1])'\nshould be written as\n  '1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:467:21: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,1,1])'\nshould be written as\n  '0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:467:23: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,1,1])'\nshould be written as\n  '1, 1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:467:25: missing space in the source\n\nThis part of the code\n  '![0,1,0,1,1,1])\n'\nshould be written as\n  '1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:468:17: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,1,1])'\nshould be written as\n  '![1, 1, 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:468:19: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,1,1])'\nshould be written as\n  '1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:468:21: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,1,1])'\nshould be written as\n  '0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:468:23: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,1,1])'\nshould be written as\n  '1, 1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:468:25: missing space in the source\n\nThis part of the code\n  '![1,1,0,1,1,1])\n'\nshould be written as\n  '1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:469:17: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,1,1])'\nshould be written as\n  '![0, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:469:19: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,1,1])'\nshould be written as\n  '0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:469:21: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,1,1])'\nshould be written as\n  '1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:469:23: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,1,1])'\nshould be written as\n  '1, 1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:469:25: missing space in the source\n\nThis part of the code\n  '![0,0,1,1,1,1])\n'\nshould be written as\n  '1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:470:17: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,1,1])'\nshould be written as\n  '![1, 0, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:470:19: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,1,1])'\nshould be written as\n  '0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:470:21: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,1,1])'\nshould be written as\n  '1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:470:23: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,1,1])'\nshould be written as\n  '1, 1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:470:25: missing space in the source\n\nThis part of the code\n  '![1,0,1,1,1,1])\n'\nshould be written as\n  '1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:471:17: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,1,1])'\nshould be written as\n  '![0, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:471:19: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,1,1])'\nshould be written as\n  '1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:471:21: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,1,1])'\nshould be written as\n  '1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:471:23: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,1,1])'\nshould be written as\n  '1, 1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:471:25: missing space in the source\n\nThis part of the code\n  '![0,1,1,1,1,1])\n'\nshould be written as\n  '1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:472:17: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,1,1])'\nshould be written as\n  '![1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:472:19: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,1,1])'\nshould be written as\n  '1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:472:21: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,1,1])'\nshould be written as\n  '1, 1, 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:472:23: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,1,1])'\nshould be written as\n  '1, 1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:472:25: missing space in the source\n\nThis part of the code\n  '![1,1,1,1,1,1])\n'\nshould be written as\n  '1, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:550:58: missing space in the source\n\nThis part of the code\n  '(t,u)) :'\nshould be written as\n  '(t, u))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/BinaryHexagon.lean:564:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.G2.RootGroups transitive imports (legacy)",
+       "66555e773829f8e8"],
+      ["Atlas.LinearGroups.G2.RootGroups:importAllArts", "e026cf1afaa88209"],
+      ["Mathlib.GroupTheory.Perm.Cycle.Type transitive imports (legacy)",
+       "ce6a34b69ccbe287"],
+      ["Mathlib.GroupTheory.Perm.Cycle.Type:importAllArts", "51fa46c0098cf746"],
+      ["Mathlib.Algebra.Field.ZMod transitive imports (legacy)",
+       "1c755a0ceebb3a81"],
+      ["Mathlib.Algebra.Field.ZMod:importAllArts", "21ee21f73407c82a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/G2/BinaryHexagon.lean",
+   "5cf42f3d9ed64912"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.G2.BinaryHexagon", "1c9440a86f3dafff"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "ab2bd3366ab784a3"}

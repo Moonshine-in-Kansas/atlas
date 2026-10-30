@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "comparison-g2-binary-quadratic-geometry",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+    "Atlas.Comparisons.Exceptional.G2Binary.QuadraticAction",
+    "Atlas.Comparisons.Exceptional.G2Binary.QuadraticFaithful"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.IsQuadraticRoot",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.automorphism_partner",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.automorphism_root",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.binary_geometry",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.card_quadraticPoint",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.card_quadraticRoot",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.normalize",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.normalize_automorphism_normalize",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.normalize_cases",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.normalize_eq_iff",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.normalize_geometry",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.normalize_partner",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.partner",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.partner_add_both",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticFaithful",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.partner_add_left",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticFaithful",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.partner_add_right",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticFaithful",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.partner_involutive",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.partner_ne",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.partner_root",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.pointKernel_root",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticFaithful",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.pointKernel_traceZero",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticFaithful",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.pointOfRoot",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.quadraticPointAction",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.quadraticPointRepresentation",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.quadraticPoint_action_eq_iff",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticAction",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.quadraticPoint_faithful",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticFaithful",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.root_quadratic_identity",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticPoints",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.traceZero_partner_norm",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticFaithful",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.Comparisons.G2Binary.traceZero_root_difference",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.QuadraticFaithful",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independence-from-target-comparison",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Unitary.",
+        "Atlas.ReeG2.",
+        "Atlas.G2.card_Model",
+        "Atlas.G2.BinaryException.card_H"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["be5283f3ede8ac96.olean"],
+  "m": false,
+  "i": "627928dff57c5615.ilean",
+  "c": "a3ff65b836f205a7.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/HeavyCrossScalarRigidity.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyCrossScalarRigidity.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyCrossScalarRigidity.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyCrossScalarRigidity.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyCrossScalarRigidity.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem code_sign_fix_full_rows (g : codeGroup) (hg : g.val.right = 1)\n    (v : MinimalShell) (hrows : ∀ p : Point, ∃ x : E, v.val.val (p, x) ≠ 0) (hv : g • v = v) : g = 1 :=\n  by\n  have hs := code_sign_patterns g hg\n  have hzero (p : Point) : g.val.left.toAdd (p, 0) = 0 :=\n    by\n    obtain ⟨x, hx⟩ := hrows p\n    have he := congrArg (fun w : MinimalShell => w.val.val (p, x)) hv\n    change liftedSign (g.val.left.toAdd (p, x)) (v.val.val (g.val.right.symm (p, x))) = v.val.val (p, x) at he\n    rw [hg] at he\n    change liftedSign (g.val.left.toAdd (p, x)) (v.val.val (p, x)) = v.val.val (p, x) at he\n    rw [signPatterns_block_constant _ hs p x] at he\n    by_contra h\n    simp only [liftedSign, h, ite_false] at he\n    exact hx (by linarith)\n  apply Subtype.ext\n  apply SemidirectProduct.ext\n  · change g.val.left.toAdd = 0\n    funext i\n    exact (signPatterns_block_constant _ hs i.1 i.2).trans (hzero i.1)\n  · exact hg`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:14:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:7:65: missing space in the source\n\nThis part of the code\n  'g.val.right=1)\n '\nshould be written as\n  'g.val.right = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:8:33: missing space in the source\n\nThis part of the code\n  '∀p : Point,∃x'\nshould be written as\n  '∀ p :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyMinimumWord_nonzero_each_row (w : HeavyMinimumWords) (p : Point) :\n    ∃ x : E, (minimumWordShellLift (heavyMinimumWord w)).val.val (p, x) ≠ 0 := by\n  classical\n  let d :=\n    (⟨⟨reduce w.val.val, (quaternaryCode_residue _).mpr ⟨w.val.val, w.val.prop, rfl⟩⟩, w.prop.2,\n        quaternary_minimum_residue_weight _ w.val.prop w.prop.1⟩ :\n      HeavyMinimumResidues)\n  let a := quadraticMinimumWordEquiv.symm d\n  have hr : fixedHeavyWord a.1 a.2 = reduce w.val.val :=\n    congrArg (fun z : HeavyMinimumResidues => z.val.val) (quadraticMinimumWordEquiv.apply_symm_apply d)\n  have hh := fixedHeavyWord_row_weight a.1 p a.2\n  have hp : 0 < hammingNorm (fun x => fixedHeavyWord a.1 a.2 (p, x)) := by rw [hh]; split_ifs <;> omega\n  obtain ⟨x, hx⟩ := Finset.card_pos.mp hp\n  have hn := (Finset.mem_filter.mp hx).2\n  refine ⟨x, ?_⟩\n  intro hz\n  have he := (minimumWordShellLift_zero_iff (heavyMinimumWord w) (p, x)).mp hz\n  change reduce w.val.val (p, x) = 0 at he\n  exact hn (by rw [hr]; exact he)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:35:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem code_sign_heavy_cross_scalar (g : codeGroup) (hg : g.val.right = 1)\n    (w : HeavyMinimumWords)\n    (hw :\n      g • minimalCross (minimumWordShellLift (heavyMinimumWord w)) =\n        minimalCross (minimumWordShellLift (heavyMinimumWord w))) :\n    g = 1 ∨ g = codeI ^ 2 := by\n  let v := minimumWordShellLift (heavyMinimumWord w)\n  have hrows := heavyMinimumWord_nonzero_each_row w\n  rcases code_sign_cross_phase g hg v hw with hv | hv\n  · exact Or.inl (code_sign_fix_full_rows g hg v hrows hv)\n  · have hp : (codeI ^ 2).val.right = 1 :=\n      by\n      change (codeI.val * codeI.val).right = 1\n      rw [codeI_squared_signed]\n      rfl\n    have hk : (codeI ^ 2 * g).val.right = 1 :=\n      by\n      change (codeI ^ 2).val.right * g.val.right = 1\n      rw [hp, hg, one_mul]\n    have hf : (codeI ^ 2 * g) • v = v := by\n      rw [mul_smul, hv, ← mul_smul, ← pow_add]\n      norm_num only [Nat.reduceAdd]\n      rw [codeI_pow_four, one_smul]\n    have he := code_sign_fix_full_rows (codeI ^ 2 * g) hk v hrows hf\n    right\n    have hi : (codeI ^ 2) * (codeI ^ 2) = 1 := by rw [← pow_add]; exact codeI_pow_four\n    calc\n      g = 1 * g := (one_mul g).symm\n      _ = (codeI ^ 2 * codeI ^ 2) * g := by rw [hi]\n      _ = codeI ^ 2 * (codeI ^ 2 * g) := (mul_assoc _ _ _)\n      _ = codeI ^ 2 := by rw [he, mul_one]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:47:70: missing space in the source\n\nThis part of the code\n  'g.val.right=1)\n '\nshould be written as\n  'g.val.right = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:49:70: missing space in the source\n\nThis part of the code\n  'w))=\n  '\nshould be written as\n  'w)) =\n '\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCrossScalarRigidity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.SignCrossPhase transitive imports (legacy)",
+       "a975ee4d070b972e"],
+      ["Atlas.Rudvalis.SignCrossPhase:importAllArts", "b0bf0c9a855d4b0b"],
+      ["Atlas.Rudvalis.HeavySelectedRowWeights transitive imports (legacy)",
+       "5e92a880b6e85e20"],
+      ["Atlas.Rudvalis.HeavySelectedRowWeights:importAllArts",
+       "dd803d15edaff089"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/HeavyCrossScalarRigidity.lean",
+   "7d805d0ecd9cc9dd"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.HeavyCrossScalarRigidity", "ec00193fcd5d43eb"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "3af6eb469158f198"}

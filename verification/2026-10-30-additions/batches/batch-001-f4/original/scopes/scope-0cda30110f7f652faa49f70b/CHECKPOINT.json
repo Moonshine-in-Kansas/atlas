@@ -1,0 +1,84 @@
+{
+  "id": "staged-F4IntegralSparseTables",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.Comparison.F4.IntegralSparseTables"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.basisEntriesTable",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.IntegralSparseTables",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.basisEntries",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.IntegralSparseTables",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.simpleEntriesTable",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.IntegralSparseTables",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.simpleEntries",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.IntegralSparseTables",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.simpleSecondEntriesTable",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.IntegralSparseTables",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.simpleSecondEntries",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.IntegralSparseTables",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.geckEntriesTable",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.IntegralSparseTables",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.geckEntries",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.IntegralSparseTables",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.geckSecondEntriesTable",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.IntegralSparseTables",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.geckSecondEntries",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.IntegralSparseTables",
+      "kind": "definition"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-F4IntegralSparseData-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis."
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

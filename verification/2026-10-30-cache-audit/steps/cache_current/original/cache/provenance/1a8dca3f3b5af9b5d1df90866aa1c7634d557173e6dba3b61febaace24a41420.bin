@@ -1,0 +1,93 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["55a2446e26cffd1e.olean"],
+  "m": false,
+  "i": "fd951921a49d82ff.ilean",
+  "c": "bff571c167c372c9.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/OctadicCalibratedProducts.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/OctadicCalibratedProducts.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/OctadicCalibratedProducts.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/OctadicCalibratedProducts.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/OctadicCalibratedProducts.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:9:1: 'theorem calibrated_octad_hyperplane_disjoint {O : Octad} (Q : OctadCalibration O) (b : OctadShortenedHyperplane O) :\n    signedOctadIntersection Q.octadLift (calibratedHyperplaneLift Q b) = 0 := by\n  classical\n  rw [signedOctadIntersection_overlap]\n  change overlap Q.octadLift.val.1.val b.val.val.val = 0\n  rw [Q.lift_code, overlap_eq_sum]\n  apply Finset.sum_eq_zero\n  intro i _\n  by_cases hi : i ∈ O.val\n  · have hz := (mem_octadShortenedCode O b.val.val).mp b.val.property i hi\n    simp [hz]\n  · simp [octadWord_apply, hi]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:25:50: missing space in the source\n\nThis part of the code\n  'c.val=octadShortenedOne'\nshould be written as\n  'c.val = octadShortenedOne'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:25:70: missing space in the source\n\nThis part of the code\n  'O+b.val)'\nshould be written as\n  'O + b.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:35:50: missing space in the source\n\nThis part of the code\n  'c.val=octadShortenedOne'\nshould be written as\n  'c.val = octadShortenedOne'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:35:70: missing space in the source\n\nThis part of the code\n  'O+b.val)'\nshould be written as\n  'O + b.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:46:50: missing space in the source\n\nThis part of the code\n  'c.val=octadShortenedOne'\nshould be written as\n  'c.val = octadShortenedOne'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:46:70: missing space in the source\n\nThis part of the code\n  'O+b.val)'\nshould be written as\n  'O + b.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:64:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:59:1: 'theorem calibrated_hyperplanes_intersection_four {O : Octad} (Q : OctadCalibration O)\n    (b c d : OctadShortenedHyperplane O) (hd : b.val + c.val = d.val) :\n    signedOctadIntersection (calibratedHyperplaneLift Q b) (calibratedHyperplaneLift Q c) = 4 :=\n  by\n  rw [signedOctadIntersection_overlap]\n  have h := binary_weight_add b.val.val.val c.val.val.val\n  have he : b.val.val.val + c.val.val.val = d.val.val.val := congrArg (fun a : octadShortenedCode O => a.val.val) hd\n  rw [he, octadShortenedHyperplane_weight O b, octadShortenedHyperplane_weight O c,\n    octadShortenedHyperplane_weight O d] at h\n  change overlap b.val.val.val c.val.val.val = 4\n  omega' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:60:52: missing space in the source\n\nThis part of the code\n  'b.val+c.val=d.val)'\nshould be written as\n  'b.val + c.val'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:60:58: missing space in the source\n\nThis part of the code\n  'b.val+c.val=d.val)'\nshould be written as\n  'c.val = d.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:71:52: missing space in the source\n\nThis part of the code\n  'b.val+c.val=d.val)'\nshould be written as\n  'b.val + c.val'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:71:58: missing space in the source\n\nThis part of the code\n  'b.val+c.val=d.val)'\nshould be written as\n  'c.val = d.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:85:50: missing space in the source\n\nThis part of the code\n  'b.val+c.val=octadShortenedOne'\nshould be written as\n  'b.val + c.val'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:85:56: missing space in the source\n\nThis part of the code\n  'b.val+c.val=octadShortenedOne'\nshould be written as\n  'c.val = octadShortenedOne'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:97:50: missing space in the source\n\nThis part of the code\n  'b.val+c.val=octadShortenedOne'\nshould be written as\n  'b.val + c.val'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadicCalibratedProducts.lean:97:56: missing space in the source\n\nThis part of the code\n  'b.val+c.val=octadShortenedOne'\nshould be written as\n  'c.val = octadShortenedOne'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Fischer.OctadicRootCoordinates transitive imports (legacy)",
+       "47ae2c44e73cda88"],
+      ["Atlas.Fischer.OctadicRootCoordinates:importAllArts",
+       "11e5f3ee05c62623"],
+      ["Atlas.Fischer.SignedOctadProductFormulas transitive imports (legacy)",
+       "c5d108f9a8970dd4"],
+      ["Atlas.Fischer.SignedOctadProductFormulas:importAllArts",
+       "7850394b9dc3420a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/OctadicCalibratedProducts.lean",
+   "22b413ecaf194a4f"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.OctadicCalibratedProducts", "691b260b7cbd2d84"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "76d4249edf62127b"}

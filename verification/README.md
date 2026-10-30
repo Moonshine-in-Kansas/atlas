@@ -4,10 +4,16 @@ Begin with [the audit summary](../AUDIT.md), [compiled principal statements](../
 [independent-checker reproduction](INDEPENDENT_CHECKERS.md) and
 [release maintenance](MAINTENANCE.md).
 
-The [26 October audit](2026-10-26-cache-audit/RESULT.json) freshly elaborated both
-root imports and inspected all 1,207 selected declarations and 99,886 complete
-type/proof dependency nodes using a source-bound, unchanged cache. It is not a
-fresh whole-project rebuild or independent replay.
+The [current compiled audit](2026-10-30-cache-audit/RESULT.json)
+freshly elaborates both root imports and inspects all 1,313 selected public
+declarations with their complete type, instance and proof dependencies. The
+[additional proof checks](2026-10-30-additions/ADDITIONS.json)
+recheck every added source and retain every required checkpoint policy.
+Previously published modules use a validated source-bound cache. This is not
+a fresh whole-project rebuild or an independent replay.
+
+The [26 October audit](2026-10-26-cache-audit/RESULT.json) remains preserved as
+dated evidence: 1,207 roots and 99,886 complete dependency nodes.
 
 The dated [24 October Nanoda](nanoda/2026-10-24-draft/README.md) and
 [25 October Comparator](existence/RESULTS.md) records retain their exact scopes.

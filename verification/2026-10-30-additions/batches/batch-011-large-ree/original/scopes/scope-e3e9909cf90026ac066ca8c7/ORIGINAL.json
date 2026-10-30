@@ -1,0 +1,123 @@
+{
+  "id": "staged-PositiveRootTail",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "F4Work.PositiveRootTail"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTailSubgroup",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRoot_head_sup_tail",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTailSubgroup_le_positiveRootSubgroup",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_hasOrderedCollection",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_orderedProduct_eq",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRoot_head_le_tail_normalizer",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootSubgroup_le_tail_normalizer",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTailSubgroup_normal_in_positiveRootSubgroup",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTailSubgroup_isSolvable",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTailWord",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTailWord_eq_alternatingRootWord",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTailWord_injective",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTailWord_range_eq_orderedProduct",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTailWord_range_eq",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTailWord_mem",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTailParameters",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.card_positiveRootTailSubgroup",
+      "module": "F4Work.PositiveRootTail",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-PositiveRootTail-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis.",
+        "Atlas.F4.",
+        "Atlas.ReeF4.simple_of_large",
+        "Atlas.ReeF4.model_isPerfect",
+        "Atlas.ReeF4.card_Model",
+        "Atlas.ReeF4.elementarySubgroup_eq_top"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ]
+}

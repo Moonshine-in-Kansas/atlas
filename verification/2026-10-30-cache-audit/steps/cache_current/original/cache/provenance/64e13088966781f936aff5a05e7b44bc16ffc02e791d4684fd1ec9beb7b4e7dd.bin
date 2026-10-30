@@ -1,0 +1,69 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["d81ff81bcf804221.olean"],
+  "m": false,
+  "i": "1652245a0d1319b9.ilean",
+  "c": "5f09eaab533f5b7a.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Triality/AbsoluteRoots.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Triality/AbsoluteRoots.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Triality/AbsoluteRoots.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Triality/AbsoluteRoots.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Triality/AbsoluteRoots.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Triality/AbsoluteRoots.lean:13:49: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [-QuadraticMap.polarBilin_apply_apply, e, h, Ne.symm h]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/AbsoluteRoots.lean:13:66: This simp argument is unused:\n  h\n\nHint: Omit it from the simp argument list.\n  [apply] simp [-QuadraticMap.polarBilin_apply_apply, e, Pi.single_apply, Ne.symm h]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/AbsoluteRoots.lean:18:11: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [e]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/AbsoluteRoots.lean:40:90: This simp argument is unused:\n  formD_e\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Atlas.Quadratic.siegel, QuadraticMap.map_smul, map_smul, polarD_e, polarD_f, formD_f, mul_zero,\n    zero_mul, zero_smul, sub_zero, smul_smul, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/AbsoluteRoots.lean:40:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/AbsoluteRoots.lean:47:80: This simp argument is unused:\n  polarD_f\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Atlas.Quadratic.siegel, QuadraticMap.map_smul, map_smul, polarD_e, formD_e, formD_f, mul_zero,\n    zero_mul, zero_smul, sub_zero, smul_smul, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/AbsoluteRoots.lean:47:99: This simp argument is unused:\n  formD_f\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Atlas.Quadratic.siegel, QuadraticMap.map_smul, map_smul, polarD_e, polarD_f, formD_e, mul_zero,\n    zero_mul, zero_smul, sub_zero, smul_smul, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/AbsoluteRoots.lean:47:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Orthogonal.Elementary transitive imports (legacy)",
+       "90dd6103a394c6c6"],
+      ["Atlas.LinearGroups.Orthogonal.Elementary:importAllArts",
+       "0ec21bb20875bfdf"],
+      ["Atlas.LinearGroups.Orthogonal.StandardComplement transitive imports (legacy)",
+       "8b4657a4e62290a6"],
+      ["Atlas.LinearGroups.Orthogonal.StandardComplement:importAllArts",
+       "358059a1cd1bbb45"],
+      ["Mathlib.Tactic transitive imports (legacy)", "ec156eb4c1db663c"],
+      ["Mathlib.Tactic:importAllArts", "49193de2eba247db"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Triality/AbsoluteRoots.lean",
+   "0f5ea257eb70401f"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Triality.AbsoluteRoots",
+   "d01b852867261d56"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "4384344fce729d8f"}

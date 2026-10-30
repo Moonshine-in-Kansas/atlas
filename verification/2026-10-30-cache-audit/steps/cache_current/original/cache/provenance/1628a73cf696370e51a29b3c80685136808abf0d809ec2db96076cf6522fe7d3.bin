@@ -1,0 +1,96 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["82799546fbdff557.olean"],
+  "m": false,
+  "i": "0edf5979a59674c4.ilean",
+  "c": "f2ecd4d73219204e.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:9:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:34:58: This simp argument is unused:\n  map_sub\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [P.root_reflectionPerm, P.reflection_apply, map_smul, P.root_coroot'_eq_pairing, P.pairing_same,\n    hpij, hpji]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:34:67: This simp argument is unused:\n  map_smul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [P.root_reflectionPerm, P.reflection_apply, map_sub, P.root_coroot'_eq_pairing, P.pairing_same,\n    hpij, hpji]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:35:33: This simp argument is unused:\n  P.pairing_same\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [P.root_reflectionPerm, P.reflection_apply, map_sub, map_smul, P.root_coroot'_eq_pairing, hpij,\n    hpji]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:35:49: This simp argument is unused:\n  hpij\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [P.root_reflectionPerm, P.reflection_apply, map_sub, map_smul, P.root_coroot'_eq_pairing,\n    P.pairing_same, hpji]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:56:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:62:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:91:58: This simp argument is unused:\n  map_sub\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [P.root_reflectionPerm, P.reflection_apply, map_smul, P.root_coroot'_eq_pairing, P.pairing_same,\n    hpij, hpji]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:91:67: This simp argument is unused:\n  map_smul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [P.root_reflectionPerm, P.reflection_apply, map_sub, P.root_coroot'_eq_pairing, P.pairing_same,\n    hpij, hpji]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:92:33: This simp argument is unused:\n  P.pairing_same\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [P.root_reflectionPerm, P.reflection_apply, map_sub, map_smul, P.root_coroot'_eq_pairing, hpij,\n    hpji]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:92:49: This simp argument is unused:\n  hpij\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [P.root_reflectionPerm, P.reflection_apply, map_sub, map_smul, P.root_coroot'_eq_pairing,\n    P.pairing_same, hpji]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:113:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:119:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:125:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:131:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:133:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:137:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:143:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean:145:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.RootData.TwoDescentSuffix transitive imports (legacy)",
+       "1551a347012190a8"],
+      ["Atlas.LinearGroups.Chevalley.RootData.TwoDescentSuffix:importAllArts",
+       "125f18444cab6fff"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffixDihedral.lean",
+   "f72d39172f8eae7b"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.RootData.TwoDescentSuffixDihedral",
+   "dedccf1ebced6b1e"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "f04b2e061c178b66"}

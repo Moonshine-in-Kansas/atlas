@@ -1,0 +1,65 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["491c333b76267177.olean"],
+  "m": false,
+  "i": "f3bc07a40c15c868.ilean",
+  "c": "dace27b3dbee2dbe.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/CountingRatioShapes.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CountingRatioShapes.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CountingRatioShapes.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CountingRatioShapes.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CountingRatioShapes.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/CountingRatioShapes.lean:21:30: missing space in the source\n\nThis part of the code\n  'k=0) (hhk'\nshould be written as\n  'k = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CountingRatioShapes.lean:21:48: missing space in the source\n\nThis part of the code\n  'k=0) :'\nshould be written as\n  'k = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CountingRatioShapes.lean:39:67: missing space in the source\n\nThis part of the code\n  'h={i,j})'\nshould be written as\n  'h = {'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CountingRatioShapes.lean:86:4: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CountingRatioShapes.lean:87:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CountingRatioShapes.lean:73:27: missing space in the source\n\nThis part of the code\n  'g.val=4) (hh'\nshould be written as\n  'g.val = 4)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CountingRatioShapes.lean:73:54: missing space in the source\n\nThis part of the code\n  'h.val=4)\n '\nshould be written as\n  'h.val = 4)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CountingRatioShapes.lean:74:60: missing space in the source\n\nThis part of the code\n  'h).card=3) :'\nshould be written as\n  'h).card = 3)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Fischer.CountingSupportFibres transitive imports (legacy)",
+       "cdddde6b356d8137"],
+      ["Atlas.Fischer.CountingSupportFibres:importAllArts", "8423b7d7321fc418"],
+      ["Atlas.Fischer.CountingHexacodeScalarFibres transitive imports (legacy)",
+       "70b0519374238d09"],
+      ["Atlas.Fischer.CountingHexacodeScalarFibres:importAllArts",
+       "50ab67d12f8f3f00"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/CountingRatioShapes.lean",
+   "50b5ba5e419a5517"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.CountingRatioShapes", "f792a1c0e2c2da92"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "1923dff240bbd80f"}

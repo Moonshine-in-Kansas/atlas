@@ -1,0 +1,96 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["fbc7f04a50715a2f.olean"],
+  "m": false,
+  "i": "ec135b6263da1719.ilean",
+  "c": "f810d0d494af743b.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Mathieu/SextetAction.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Mathieu/SextetAction.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Mathieu/SextetAction.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Mathieu/SextetAction.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Mathieu/SextetAction.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Finset`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem permuteBlock_injective (σ : Equiv.Perm Omega) :\n    Function.Injective (permuteBlock σ) := by\n  intro U V h\n  have hh := congrArg (permuteBlock σ⁻¹) h\n  simpa only [← permuteBlock_mul, inv_mul_cancel, permuteBlock_one] using hh`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem permuteBlock_card (σ : Equiv.Perm Omega) (T : Finset Omega) :\n    (permuteBlock σ T).card = T.card :=\n  card_image_of_injective T σ.injective`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def permuteSextetParts (σ : Equiv.Perm Omega)\n    (S : Finset (Finset Omega)) : Finset (Finset Omega) :=\n  S.image (permuteBlock σ)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `@[simp]\ntheorem permuteSextetParts_one (S : Finset (Finset Omega)) : permuteSextetParts 1 S = S := by\n  classical\n  change S.image (permuteBlock 1) = S\n  calc\n    _ = S.image id := Finset.image_congr (fun U _ => permuteBlock_one U)\n    _ = S := image_id`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:22:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem permuteSextetParts_mul (σ τ : Equiv.Perm Omega)\n    (S : Finset (Finset Omega)) : permuteSextetParts (σ * τ) S = permuteSextetParts σ (permuteSextetParts τ S) := by\n  classical\n  simp only [permuteSextetParts, image_image]\n  apply Finset.image_congr\n  intro U _\n  exact permuteBlock_mul σ τ U`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem permuteSextetParts_valid (g : Mathieu24CodeModel)\n    (S : UnorderedSextet) : IsUnorderedSextet (permuteSextetParts g.val S.val) := by\n  classical\n  constructor\n  · rw [permuteSextetParts, card_image_of_injective _ (permuteBlock_injective _), S.prop.six_parts]\n  · intro U hU\n    obtain ⟨T, hT, rfl⟩ := mem_image.mp hU\n    rw [permuteBlock_card]\n    exact S.prop.tetrad_size T hT\n  · intro p\n    obtain ⟨T, hT, hu⟩ := S.prop.partition (g.val⁻¹ p)\n    refine ⟨permuteBlock g.val T, ⟨mem_image.mpr ⟨T, hT.1, rfl⟩, ?_⟩, ?_⟩\n    · exact mem_image.mpr ⟨g.val⁻¹ p, hT.2, by simp⟩\n    · intro V hV\n      obtain ⟨U, hU, rfl⟩ := mem_image.mp hV.1\n      obtain ⟨q, hq, hqp⟩ := mem_image.mp hV.2\n      have hq' : q = g.val⁻¹ p := (Equiv.eq_symm_apply _).mpr hqp\n      have he := hu U ⟨hU, hq' ▸ hq⟩\n      exact congrArg (permuteBlock g.val) he\n  · intro U hU V hV hne\n    obtain ⟨T, hT, rfl⟩ := mem_image.mp hU\n    obtain ⟨R, hR, rfl⟩ := mem_image.mp hV\n    have hTR : T ≠ R := fun h => hne (congrArg (permuteBlock g.val) h)\n    have ho := (codePreserving_octadPreserving g.val g.prop (T ∪ R)).mp (S.prop.pair_octads T hT R hR hTR)\n    simpa only [permuteBlock, image_union] using ho`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:60:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def sextetAction (g : Mathieu24CodeModel) (S : UnorderedSextet) :\n    UnorderedSextet :=\n  ⟨permuteSextetParts g.val S.val, permuteSextetParts_valid g S⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `@[simp]\ntheorem sextetAction_one (S : UnorderedSextet) : sextetAction 1 S = S :=\n  by\n  apply Subtype.ext\n  exact permuteSextetParts_one S.val`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem sextetAction_mul (g h : Mathieu24CodeModel) (S : UnorderedSextet) :\n    sextetAction (g * h) S = sextetAction g (sextetAction h S) :=\n  by\n  apply Subtype.ext\n  exact permuteSextetParts_mul g.val h.val S.val`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable instance : MulAction Mathieu24CodeModel UnorderedSextet\n    where\n  smul := sextetAction\n  one_smul := sextetAction_one\n  mul_smul := sextetAction_mul`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def permuteFourSet (g : Mathieu24CodeModel) (T : FourSet) : FourSet :=\n  ⟨permuteBlock g.val T.val, (permuteBlock_card _ _).trans T.prop⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem sextetCompletion_equivariant (g : Mathieu24CodeModel) (T : FourSet) :\n    sextetCompletion (permuteFourSet g T) = sextetAction g (sextetCompletion T) :=\n  by\n  symm\n  apply sextet_eq_completion\n  exact mem_image.mpr ⟨T.val, tetrad_mem_completion T, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `structure SextetGeometryPackage : Prop where\n  unique_completion : ∀ T : FourSet, ∃! S : UnorderedSextet, T.val ∈ S.val\n  completion_fibers : ∀ S : UnorderedSextet, Nat.card { T : FourSet // sextetCompletion T = S } = 6\n  incidence : (24 : ℕ).choose 4 = 6 * Nat.card UnorderedSextet\n  count : Nat.card UnorderedSextet = 1771\n  equivariant :\n    ∀ (g : Mathieu24CodeModel) (T : FourSet),\n      sextetCompletion (permuteFourSet g T) = sextetAction g (sextetCompletion T)\n  labelled_bridge :\n    ∀ S : Finset (Finset Omega),\n      IsUnorderedSextet S ↔ ∃ T : HexIndex → Finset Omega, IsSextet T ∧ labelledSextetParts T = S`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem sextet_geometry_package : SextetGeometryPackage :=\n  ⟨unique_sextet_through_tetrad, completion_fiber_card, sextet_incidence_count, unordered_sextets_card,\n    sextetCompletion_equivariant, unordered_labelled_bridge⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/SextetAction.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Mathieu.SextetCounting transitive imports (legacy)",
+       "f31831657bb09662"],
+      ["Atlas.Mathieu.SextetCounting:importAllArts", "6af9ff8a49ecd545"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Mathieu/SextetAction.lean", "c7af5d4cb8e8f0f8"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Mathieu.SextetAction", "208cc7093f694da5"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "75542c8bf31f3dba"}

@@ -1,0 +1,165 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["2072fca0b7c8d3e0.olean"],
+  "m": false,
+  "i": "8bee7067153002d1.ilean",
+  "c": "264865efd9c4d9f5.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/LatticeShellPieces.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LatticeShellPieces.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LatticeShellPieces.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LatticeShellPieces.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LatticeShellPieces.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem integerLift_monomial (g : SignedCoordinates Coordinate)\n    (w : QuaternaryWord) (hw : ∀ i, w i ≠ 2) : integerLift (monomialHom g w) = integerMonomial g (integerLift w) :=\n  by\n  have h :\n    ∀ a : ZMod 4,\n      ∀ b : Bit, a ≠ 2 → integerRepresentative (signedScalar b a) = liftedSign b (integerRepresentative a) :=\n    by decide +kernel\n  funext i\n  exact h _ _ (hw _)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:12:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:10:11: missing space in the source\n\nThis part of the code\n  '∀i,w i≠2)'\nshould be written as\n  '∀ i, w'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:10:13: missing space in the source\n\nThis part of the code\n  '∀i,w i≠2)'\nshould be written as\n  'i, w i'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:10:16: missing space in the source\n\nThis part of the code\n  'i≠2) :'\nshould be written as\n  'i ≠ 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem minimumWordShellLift_equivariant (g : codeGroup) (w : MinimumWords) :\n    minimumWordShellLift (g • w) = g • minimumWordShellLift w :=\n  by\n  apply Subtype.ext\n  apply Subtype.ext\n  change\n    halfCoordinates (integerLift (monomialHom g.val w.val.val)) =\n      rationalMonomialHom g.val (halfCoordinates (integerLift w.val.val))\n  rw [rationalMonomial_half, integerLift_monomial _ _ (quaternary_minimum_no_twos _ w.val.prop w.prop)]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:22:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def fourMinimumWord (w : FourMinimumWords) : MinimumWords :=\n  ⟨w.val, w.prop.1⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def heavyMinimumWord (w : HeavyMinimumWords) : MinimumWords :=\n  ⟨w.val, w.prop.1⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def coordinateShellPiece : SubMulAction codeGroup MinimalShell\n    where\n  carrier := Set.range coordinateShellLift\n  smul_mem'\n    g := by\n    rintro _ ⟨a, rfl⟩\n    obtain ⟨b, hb⟩ := coordinateShell_stable g a\n    exact ⟨b, Subtype.ext (Subtype.ext hb.symm)⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def fourShellPiece : SubMulAction codeGroup MinimalShell\n    where\n  carrier := Set.range (fun w : FourMinimumWords => minimumWordShellLift (fourMinimumWord w))\n  smul_mem'\n    g := by\n    rintro _ ⟨w, rfl⟩\n    let u : MinimumWords := g • fourMinimumWord w\n    have hu : admissibleFourSupport (reduce u.val.val) :=\n      by\n      rcases quaternary_minimum_support_cases u.val.val u.val.prop u.prop with h | h\n      · exact h\n      · have hc := codeAction_activeBlocks_card g w.val.val\n        change (activeBlocks (reduce u.val.val)).card = (activeBlocks (reduce w.val.val)).card at hc\n        rw [heavy_activeBlocks_card _ h, four_minimum_activeBlocks_card _ w.val.prop w.prop.1 w.prop.2] at hc\n        omega\n    exact ⟨⟨u.val, u.prop, hu⟩, minimumWordShellLift_equivariant g (fourMinimumWord w)⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:44:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def heavyShellPiece : SubMulAction codeGroup MinimalShell\n    where\n  carrier := Set.range (fun w : HeavyMinimumWords => minimumWordShellLift (heavyMinimumWord w))\n  smul_mem'\n    g := by\n    rintro _ ⟨w, rfl⟩\n    let u : MinimumWords := g • heavyMinimumWord w\n    have hu : hasNonzeroQuadraticPart (reduce u.val.val) :=\n      by\n      rcases quaternary_minimum_support_cases u.val.val u.val.prop u.prop with h | h\n      · have hc := codeAction_activeBlocks_card g w.val.val\n        change (activeBlocks (reduce u.val.val)).card = (activeBlocks (reduce w.val.val)).card at hc\n        rw [heavy_activeBlocks_card _ w.prop.2, four_minimum_activeBlocks_card _ u.val.prop u.prop h] at hc\n        omega\n      · exact h\n    exact ⟨⟨u.val, u.prop, hu⟩, minimumWordShellLift_equivariant g (heavyMinimumWord w)⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:57:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateShellPiece_card : Nat.card coordinateShellPiece = 112 :=\n  by\n  change Nat.card (Set.range coordinateShellLift) = 112\n  rw [← Nat.card_congr (Equiv.ofInjective coordinateShellLift coordinateShellLift_injective)]\n  norm_num [Nat.card_eq_fintype_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourShellPiece_card : Nat.card fourShellPiece = 1792 :=\n  by\n  have hi : Function.Injective (fun w : FourMinimumWords => minimumWordShellLift (fourMinimumWord w)) :=\n    by\n    intro a b h\n    exact Subtype.ext (congrArg (fun u : MinimumWords => u.val) (minimumWordShellLift_injective h))\n  change Nat.card (Set.range (fun w : FourMinimumWords => minimumWordShellLift (fourMinimumWord w))) = 1792\n  rw [← Nat.card_congr (Equiv.ofInjective _ hi)]\n  exact four_minimum_words_card`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:68:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:71:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyShellPiece_card : Nat.card heavyShellPiece = 14336 :=\n  by\n  have hi : Function.Injective (fun w : HeavyMinimumWords => minimumWordShellLift (heavyMinimumWord w)) :=\n    by\n    intro a b h\n    exact Subtype.ext (congrArg (fun u : MinimumWords => u.val) (minimumWordShellLift_injective h))\n  change Nat.card (Set.range (fun w : HeavyMinimumWords => minimumWordShellLift (heavyMinimumWord w))) = 14336\n  rw [← Nat.card_congr (Equiv.ofInjective _ hi)]\n  exact heavy_minimum_words_card`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:76:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:79:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeShellPieces.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.LatticeCrossCount transitive imports (legacy)",
+       "c0a5dbb7c7ed1666"],
+      ["Atlas.Rudvalis.LatticeCrossCount:importAllArts", "7a114a218484833f"],
+      ["Atlas.Rudvalis.LatticeCoordinateOrbit transitive imports (legacy)",
+       "4ca0caa7f9dc5d0b"],
+      ["Atlas.Rudvalis.LatticeCoordinateOrbit:importAllArts",
+       "b01f7badf828334f"],
+      ["Atlas.Rudvalis.FourMinimumOrbit transitive imports (legacy)",
+       "b03b1c0b180c942e"],
+      ["Atlas.Rudvalis.FourMinimumOrbit:importAllArts", "9172552d449aef68"],
+      ["Mathlib.GroupTheory.GroupAction.SubMulAction transitive imports (legacy)",
+       "8dfffe2420aff3dd"],
+      ["Mathlib.GroupTheory.GroupAction.SubMulAction:importAllArts",
+       "7ecd54e0228eb567"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/LatticeShellPieces.lean",
+   "65a5104cd748f458"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.LatticeShellPieces", "5396b8d9fc5a129c"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "d5baa79935456f63"}

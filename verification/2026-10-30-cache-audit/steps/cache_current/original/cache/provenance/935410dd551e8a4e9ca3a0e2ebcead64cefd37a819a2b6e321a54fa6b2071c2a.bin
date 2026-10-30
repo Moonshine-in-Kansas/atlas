@@ -1,0 +1,57 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["df3c1283c35ce5e5.olean"],
+  "m": false,
+  "i": "64fa88846ab93b29.ilean",
+  "c": "8df8abe5d3124177.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Mathieu/HeptadExclusiveCounts.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Mathieu/HeptadExclusiveCounts.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Mathieu/HeptadExclusiveCounts.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Mathieu/HeptadExclusiveCounts.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Mathieu/HeptadExclusiveCounts.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Mathieu/HeptadExclusiveCounts.lean:8:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/HeptadExclusiveCounts.lean:61:41: `if_pos` has been deprecated: Use `ite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/HeptadExclusiveCounts.lean:63:42: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/HeptadExclusiveCounts.lean:66:13: This simp argument is unused:\n  hfg\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [hboth, hf1, hf2] at hh\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/HeptadExclusiveCounts.lean:33:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Mathieu.HeptadMarkedIntersectionCounts transitive imports (legacy)",
+       "186bff7673af37d1"],
+      ["Atlas.Mathieu.HeptadMarkedIntersectionCounts:importAllArts",
+       "aee77c70c3a05855"],
+      ["Atlas.Combinatorics.ColoredIncidenceCount transitive imports (legacy)",
+       "fd0e5202efebe5aa"],
+      ["Atlas.Combinatorics.ColoredIncidenceCount:importAllArts",
+       "56ef6a1274ec3c36"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Mathieu/HeptadExclusiveCounts.lean",
+   "6aa4f1d5450b44e3"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Mathieu.HeptadExclusiveCounts", "e4633989395bc69a"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "03804e462a78c774"}

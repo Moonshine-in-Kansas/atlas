@@ -1,0 +1,101 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["33fe77e75a5234a4.olean"],
+  "m": false,
+  "i": "073aa6d258a9a21e.ilean",
+  "c": "05e053b858f9e0ff.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FourActiveLabelAction.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourActiveLabelAction.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourActiveLabelAction.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourActiveLabelAction.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourActiveLabelAction.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourCrossHasLabel_unique {a b : Point} {c : MinimalCross}\n    (ha : FourCrossHasLabel a c) (hb : FourCrossHasLabel b c) : a = b :=\n  by\n  have hu : ∀ a b : Point, (∀ p : Point, dot a.val p.val = 0 ↔ dot b.val p.val = 0) ↔ a = b := by decide +kernel\n  exact (hu a b).mp (fun p => (ha p 0).symm.trans (hb p 0))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:5:1: 'theorem fourCrossHasLabel_unique {a b : Point} {c : MinimalCross} (ha : FourCrossHasLabel a c)\n    (hb : FourCrossHasLabel b c) : a = b :=\n  by\n  have hu : ∀ a b : Point, (∀ p : Point, dot a.val p.val = 0 ↔ dot b.val p.val = 0) ↔ a = b := by decide +kernel\n  exact\n    (hu a b).mp\n      (fun p =>\n        (ha p 0).symm.trans (hb p 0))' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourCrossHasLabel_transport (g : codeGroup) (a b : Point)\n    (hg : ∀ v : E, dot b.val (codeBlockLinearHom g v) = dot a.val v) (c : MinimalCross) (hc : FourCrossHasLabel a c) :\n    FourCrossHasLabel b (g • c) := by\n  intro p x\n  let z := g.val.right.symm (p, x)\n  have hz : g.val.right z = (p, x) := g.val.right.apply_symm_apply _\n  have hr : codeBlockLinearHom g z.1.val = p.val := by rw [codeBlockLinear_coordinates, hz]\n  have he := crossOrthogonal_codeGroup g (coordinateCross z) c\n  rw [coordinateCross_action, hz] at he\n  exact he.trans ((hc z.1 z.2).trans (by rw [← hg, hr]))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:11:1: 'theorem fourCrossHasLabel_transport (g : codeGroup) (a b : Point)\n    (hg : ∀ v : E, dot b.val (codeBlockLinearHom g v) = dot a.val v) (c : MinimalCross) (hc : FourCrossHasLabel a c) :\n    FourCrossHasLabel b (g • c) := by\n  intro p x\n  let z := g.val.right.symm (p, x)\n  have hz : g.val.right z = (p, x) := g.val.right.apply_symm_apply _\n  have hr : codeBlockLinearHom g z.1.val = p.val := by rw [codeBlockLinear_coordinates, hz]\n  have he := crossOrthogonal_codeGroup g (coordinateCross z) c\n  rw [coordinateCross_action, hz] at he\n  exact\n    he.trans\n      ((hc z.1 z.2).trans\n        (by rw [← hg, hr]))' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:12:11: missing space in the source\n\nThis part of the code\n  '∀v : E,dot'\nshould be written as\n  '∀ v :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourCrossHasLabel_active (a : Point) (c : MinimalCross)\n    (hc : FourCrossHasLabel a c) (hn : ¬CrossOrthogonal localReferenceCross c) : dot a.val (rowLabel 0).val = 1 :=\n  by\n  have h : dot a.val (rowLabel 0).val ≠ 0 := by\n    intro he\n    apply hn\n    rw [localReferenceCross_eq]\n    exact (hc (rowLabel 0) 0).mpr he\n  have hh : ∀ k : Bit, k ≠ 0 → k = 1 := by decide\n  exact hh _ h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:23:1: 'theorem fourCrossHasLabel_active (a : Point) (c : MinimalCross) (hc : FourCrossHasLabel a c)\n    (hn : ¬CrossOrthogonal localReferenceCross c) : dot a.val (rowLabel 0).val = 1 :=\n  by\n  have h : dot a.val (rowLabel 0).val ≠ 0 := by\n    intro he\n    apply hn\n    rw [localReferenceCross_eq]\n    exact (hc (rowLabel 0) 0).mpr he\n  have hh : ∀ k : Bit, k ≠ 0 → k = 1 := by decide\n  exact hh _ h' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeReferenceStabilizer_active_forms (a b : Point)\n    (ha : dot a.val (rowLabel 0).val = 1) (hb : dot b.val (rowLabel 0).val = 1) :\n    ∃ g : codeReferenceStabilizer, ∀ v : E, dot b.val (codeBlockLinearHom g.val v) = dot a.val v :=\n  by\n  obtain ⟨g, hg⟩ :=\n    codeReferenceStabilizer_linear_lift (activeFormTransvection (rowLabel 0) a b ha hb)\n      (activeFormTransvection_fixed (rowLabel 0) a b ha hb)\n  exact ⟨g, fun v => by rw [hg]; exact activeFormTransvection_dual _ _ _ _ _ v⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:33:1: 'theorem codeReferenceStabilizer_active_forms (a b : Point) (ha : dot a.val (rowLabel 0).val = 1)\n    (hb : dot b.val (rowLabel 0).val = 1) :\n    ∃ g : codeReferenceStabilizer, ∀ v : E, dot b.val (codeBlockLinearHom g.val v) = dot a.val v :=\n  by\n  obtain ⟨g, hg⟩ :=\n    codeReferenceStabilizer_linear_lift (activeFormTransvection (rowLabel 0) a b ha hb)\n      (activeFormTransvection_fixed (rowLabel 0) a b ha hb)\n  exact\n    ⟨g, fun v => by rw [hg];\n      exact\n        activeFormTransvection_dual _ _ _ _ _\n          v⟩' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:34:36: missing space in the source\n\nThis part of the code\n  '0).val=1) (hb'\nshould be written as\n  '0).val = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:34:72: missing space in the source\n\nThis part of the code\n  '0).val=1) :'\nshould be written as\n  '0).val = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourActiveLabelAction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.ReferenceLinearLifts transitive imports (legacy)",
+       "9836d0028657b194"],
+      ["Atlas.Rudvalis.ReferenceLinearLifts:importAllArts",
+       "7df410cdf0cda640"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FourActiveLabelAction.lean",
+   "baec1a62f7eb53b7"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FourActiveLabelAction", "c1eb5f426e50c0c9"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "e4daac07149d8397"}

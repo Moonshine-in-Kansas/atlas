@@ -1,0 +1,101 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["21620cb4349fc031.olean"],
+  "m": false,
+  "i": "ae252858d917e024.ilean",
+  "c": "53e7103077c0687a.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Mathieu/DodecadFourInterface.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Mathieu/DodecadFourInterface.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Mathieu/DodecadFourInterface.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Mathieu/DodecadFourInterface.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Mathieu/DodecadFourInterface.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `abbrev dodecadFourFixing (i : HexIndex) (p : DodecadParameters i) :=\n  fixingSubgroup (Mathieu12DodecadModel (dodecadParametersSupport i p).val)\n    {z : Mathieu12Points (dodecadParametersSupport i p).val | z.val ∈ tetrad i}`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def dodecadFourActualEquiv (i : HexIndex) (p : DodecadParameters i) :\n    (MulAction.stabilizer (TetradPointStabilizer i) (dodecadParametersSupport i p).val) ≃* dodecadFourFixing i p\n    where\n  toFun\n    x :=\n    ⟨⟨x.val.val, x.prop⟩, by\n      apply (mem_fixingSubgroup_iff _).mpr\n      intro z hz\n      apply Subtype.ext\n      exact x.val.prop ⟨z.val, hz⟩⟩\n  invFun\n    x :=\n    ⟨⟨x.val.val, by\n        apply (mem_fixingSubgroup_iff _).mpr\n        intro z hz\n        let z' : Mathieu12Points (dodecadParametersSupport i p).val := ⟨z, (dodecadParametersSupport i p).prop hz⟩\n        exact congrArg Subtype.val (((mem_fixingSubgroup_iff _).mp x.prop) z' hz)⟩,\n      x.val.prop⟩\n  left_inv _ := rfl\n  right_inv _ := rfl\n  map_mul' _ _ := rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def dodecadFourAffineEquiv (i : HexIndex) (p : DodecadParameters i) :\n    dodecadAffineStabilizer i p ≃* dodecadFourFixing i p :=\n  (dodecadAffineActualEquiv i p).trans (dodecadFourActualEquiv i p)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem dodecadFourAffineEquiv_coordinates (i : HexIndex)\n    (p : DodecadParameters i) (x : dodecadAffineStabilizer i p) (z : Omega) :\n    (dodecadFourAffineEquiv i p x).val.val.val z =\n      affinePermutation x.val.left.toAdd.val.val x.val.right.val.val.val z :=\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem dodecadFourFixing_card (i : HexIndex) (p : DodecadParameters i) :\n    Nat.card (dodecadFourFixing i p) = 8 := by\n  rw [← Nat.card_congr (dodecadFourAffineEquiv i p).toEquiv, dodecadAffineStabilizer_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem mathieu12_order_from_four_points (D : Dodecad)\n    (e : Fin 4 ↪ Mathieu12Points D) :\n    Nat.card (Mathieu12DodecadModel D) = (12 * 11 * 10 * 9) * Nat.card (dodecadOrderedStabilizer D e) := by\n  rw [mathieu12_order, mathieu12_four_point_order]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/DodecadFourInterface.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Mathieu.DodecadFourRegular transitive imports (legacy)",
+       "dbbe6bf2b9ff1507"],
+      ["Atlas.Mathieu.DodecadFourRegular:importAllArts", "8e040ed61e62800c"],
+      ["Atlas.Mathieu.DodecadPointOrders transitive imports (legacy)",
+       "c3ddb51cce2fabaf"],
+      ["Atlas.Mathieu.DodecadPointOrders:importAllArts",
+       "a8cc1de9a3172e25"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Mathieu/DodecadFourInterface.lean",
+   "008c164a0d793cd2"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Mathieu.DodecadFourInterface", "3babc51322311a44"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "c4a57406ef955554"}

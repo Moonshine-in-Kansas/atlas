@@ -1,0 +1,61 @@
+{
+  "id": "staged-LiftCellCoordinates",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.TwistedE6.LiftCellCoordinates"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.positiveWitnessedLiftCellParameterMap",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.LiftCellCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.positiveWitnessedLiftCellParameterMap_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.LiftCellCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.positiveWitnessedLiftCellParameterMap_surjective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.LiftCellCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.positiveWitnessedLiftCellParameterEquiv",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.LiftCellCoordinates"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-LiftCellCoordinates-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-LiftCellCoordinates-no-inherited-cell-order",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.positiveWitnessed_doubleCell_card",
+        "Atlas.Chevalley.selectedWeightCompanionPositive_card",
+        "Atlas.Chevalley.selectedWeightCompanionPositiveTorusJoin_card"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

@@ -1,0 +1,243 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["682c87eb6f48db9b.olean"],
+  "m": false,
+  "i": "5e4fff0e1eb10ea4.ilean",
+  "c": "3a860d6633673548.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FourCoupleProjection.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourCoupleProjection.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourCoupleProjection.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourCoupleProjection.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourCoupleProjection.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Classical`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:8:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `local instance : DecidablePred (fun p : Point => p ∈ referenceDozenRows) :=\n  fun p => inferInstanceAs (Decidable (dot (binaryLabel 1) p.val = 0))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Number of active rows inside the selected coordinate dozen. -/\ndef fourSelectedRows (a : Point) : ℕ :=\n  (Finset.univ.filter (fun p : Point => p ∈ referenceDozenRows ∧ dot a.val p.val ≠ 0)).card`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourSupport_parameter_row_weight (v : FourSupportParameters)\n    (p : Point) : hammingNorm (fun x => (fourSupportEquiv v).val (p, x)) = if dot v.1.val p.val = 0 then 0 else 4 :=\n  by\n  have he :\n    (fun x => (fourSupportEquiv v).val (p, x)) =\n      (fun x => v.2.val.val p + dot (dot v.1.val p.val • v.1.val) x + quadratic 0 x) :=\n    by\n    funext x\n    change _ + dot (matrixAt (outerMatrix v.1.val v.1.val) p.val) x + theta p 0 x = _\n    simp [matrixAt_outer, theta_zero_parameter, quadratic]\n  rw [he]\n  change blockWeight _ _ 0 = _\n  rw [blockWeight_affine]\n  by_cases h : dot v.1.val p.val = 0\n  · simp [h, v.2.val.prop p h]\n  · simp [smul_eq_zero, h, v.1.prop]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourSupport_selected_weight (v : FourSupportParameters) :\n    (∑ p : Point, if p ∈ referenceDozenRows then hammingNorm (fun x => (fourSupportEquiv v).val (p, x)) else 0) =\n      4 * fourSelectedRows v.1 :=\n  by\n  simp_rw [fourSupport_parameter_row_weight]\n  unfold fourSelectedRows\n  rw [Finset.card_filter, Finset.mul_sum]\n  apply Finset.sum_congr rfl\n  intro p _\n  by_cases hp : p ∈ referenceDozenRows <;> by_cases ha : dot v.1.val p.val = 0 <;> simp [hp, ha]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourSelectedRows_reference (a : Point)\n    (ha : dot a.val (rowLabel 0).val = 0) : fourSelectedRows a = if a.val = binaryLabel 1 then 0 else 2 :=\n  by\n  unfold fourSelectedRows referenceDozenRows\n  simp only [Set.mem_ofPred_eq]\n  revert ha\n  decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:43:79: missing space in the source\n\nThis part of the code\n  '0).val=0) :'\nshould be written as\n  '0).val = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourMinimumLift_energy (v : FourSupportParameters)\n    (w : minimumLift (fourSupportEquiv v).val) :\n    coordinateRowEnergy referenceDozenRows (halfCoordinates (integerLift w.val.val)) = fourSelectedRows v.1 :=\n  by\n  rw [coordinateRowEnergy_half]\n  have hh := fourSupport_selected_weight v\n  have hr := w.prop.2\n  have he :\n    (∑ i : Coordinate, if i.1 ∈ referenceDozenRows then (integerLift w.val.val i : ℚ) ^ 2 else 0) =\n      4 * fourSelectedRows v.1 :=\n    by\n    rw [Fintype.sum_prod_type]\n    have hi (p : Point) :\n      (∑ x : E, if p ∈ referenceDozenRows then (integerLift w.val.val (p, x) : ℚ) ^ 2 else 0) =\n        if p ∈ referenceDozenRows then (hammingNorm (fun x => (fourSupportEquiv v).val (p, x)) : ℚ) else 0 :=\n      by\n      by_cases hp : p ∈ referenceDozenRows\n      · simp only [hp, ite_true]\n        have h := minimumWord_integerLift_row_square ⟨w.val, w.prop.1⟩ p\n        change (∑ x : E, integerLift w.val.val (p, x) ^ 2) = (hammingNorm (fun x => reduce w.val.val (p, x)) : ℤ) at h\n        rw [hr] at h\n        exact_mod_cast h\n      · simp [hp]\n    simp_rw [hi]\n    exact_mod_cast hh\n  calc\n    _ = (4 * (fourSelectedRows v.1 : ℚ)) / 4 := by\n      congr 1\n      convert he using 1\n      apply Finset.sum_congr rfl\n      intro i _\n      by_cases hi : i.1 ∈ referenceDozenRows <;> simp [hi]\n    _ = _ := by ring`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def fourSupportNormal\n    (d : { d : BinaryWord // admissibleFourSupport d }) : Point :=\n  (fourSupportEquiv.symm d).1`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `abbrev FourEnergySupports (k : ℕ) :=\n  { d : { d : BinaryWord // admissibleFourSupport d } //\n    dot (fourSupportNormal d).val (rowLabel 0).val = 0 ∧ fourSelectedRows (fourSupportNormal d) = k }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def fourEnergySupportsEquiv (k : ℕ) :\n    FourEnergySupports k ≃\n      Σ a : { a : Point // dot a.val (rowLabel 0).val = 0 ∧ fourSelectedRows a = k }, OddActiveConstants a.val :=\n  (Equiv.subtypeEquiv fourSupportEquiv (fun v => by simp only [fourSupportNormal, Equiv.symm_apply_apply])).symm.trans\n    (Equiv.subtypeSigmaEquiv OddActiveConstants _)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:93:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourSelectedRows_zero_labels :\n    Nat.card { a : Point // dot a.val (rowLabel 0).val = 0 ∧ fourSelectedRows a = 0 } = 1 :=\n  by\n  rw [Nat.card_eq_fintype_card]\n  unfold fourSelectedRows referenceDozenRows\n  decide +kernel`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourSelectedRows_two_labels :\n    Nat.card { a : Point // dot a.val (rowLabel 0).val = 0 ∧ fourSelectedRows a = 2 } = 2 :=\n  by\n  rw [Nat.card_eq_fintype_card]\n  unfold fourSelectedRows referenceDozenRows\n  decide +kernel`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourEnergySupports_card (k : ℕ) :\n    Nat.card (FourEnergySupports k) =\n      Nat.card { a : Point // dot a.val (rowLabel 0).val = 0 ∧ fourSelectedRows a = k } * 8 :=\n  by\n  rw [Nat.card_congr (fourEnergySupportsEquiv k), Nat.card_sigma]\n  simp_rw [oddActiveConstants_card]\n  simp only [Finset.sum_const, Finset.card_univ, smul_eq_mul, Nat.card_eq_fintype_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `abbrev FourEnergyWords (k : ℕ) :=\n  { w : FourMinimumWords //\n    dot (fourSupportNormal ⟨reduce w.val.val, w.prop.2⟩).val (rowLabel 0).val = 0 ∧\n      fourSelectedRows (fourSupportNormal ⟨reduce w.val.val, w.prop.2⟩) = k }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def fourEnergyWordsEquiv (k : ℕ) :\n    FourEnergyWords k ≃ Σ d : FourEnergySupports k, minimumLift d.val.val :=\n  (Equiv.subtypeEquiv fourMinimumWordsEquiv (fun _ => Iff.rfl)).trans\n    (Equiv.subtypeSigmaEquiv (fun d : { d : BinaryWord // admissibleFourSupport d } => minimumLift d.val)\n      (fun d => dot (fourSupportNormal d).val (rowLabel 0).val = 0 ∧ fourSelectedRows (fourSupportNormal d) = k))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:125:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:126:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourEnergyWords_card (k : ℕ) :\n    Nat.card (FourEnergyWords k) = Nat.card (FourEnergySupports k) * 32 :=\n  by\n  rw [Nat.card_congr (fourEnergyWordsEquiv k), Nat.card_sigma]\n  simp_rw [four_minimum_fibre_card _ (Subtype.prop _)]\n  simp only [Finset.sum_const, Finset.card_univ, smul_eq_mul, Nat.card_eq_fintype_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourWord_energy (w : FourMinimumWords) :\n    coordinateRowEnergy referenceDozenRows (minimumWordShellLift (fourMinimumWord w)).val.val =\n      fourSelectedRows (fourSupportNormal ⟨reduce w.val.val, w.prop.2⟩) :=\n  by\n  let d : { d : BinaryWord // admissibleFourSupport d } := ⟨reduce w.val.val, w.prop.2⟩\n  let v := fourSupportEquiv.symm d\n  have hd : (fourSupportEquiv v).val = reduce w.val.val := congrArg Subtype.val (fourSupportEquiv.apply_symm_apply d)\n  exact fourMinimumLift_energy v ⟨w.val, w.prop.1, hd.symm⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourWord_reference_couple_normal (w : FourMinimumWords) :\n    ReferenceCoupleOrthogonal (minimalCross (minimumWordShellLift (fourMinimumWord w))) ↔\n      dot (fourSupportNormal ⟨reduce w.val.val, w.prop.2⟩).val (rowLabel 0).val = 0 :=\n  by\n  rw [ReferenceCoupleOrthogonal, localReferenceCross_eq, referenceSecondCross_eq, fourWord_coordinate_orthogonal_iff,\n    fourWord_coordinate_orthogonal_iff, and_self]\n  let d : { d : BinaryWord // admissibleFourSupport d } := ⟨reduce w.val.val, w.prop.2⟩\n  have h := fourSupport_parameter_row_zero (fourSupportEquiv.symm d) (rowLabel 0)\n  simpa only [Equiv.apply_symm_apply, d, fourSupportNormal] using h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def fourEnergyShellEquiv (k : ℕ) :\n    FourEnergyWords k ≃\n      RestrictedShellPiece fourShellPiece\n        (fun c => ReferenceCoupleOrthogonal c ∧ crossRowEnergy referenceDozenRows c = k) :=\n  Equiv.subtypeEquiv fourWordShellEquiv\n    (fun w =>\n      by\n      change\n        (_ ∧ _ = k) ↔\n          (ReferenceCoupleOrthogonal (minimalCross (minimumWordShellLift (fourMinimumWord w))) ∧\n            crossRowEnergy referenceDozenRows (minimalCross (minimumWordShellLift (fourMinimumWord w))) = (k : ℚ))\n      rw [fourWord_reference_couple_normal, crossRowEnergy_mk, fourWord_energy]\n      exact and_congr_right (fun _ => Nat.cast_inj.symm))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:156:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:157:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourCouple_energy_zero_card :\n    Nat.card\n        { c : FourBlockCrosses //\n          ReferenceCoupleOrthogonal (shellPieceCrossMap fourShellPiece c) ∧\n            crossRowEnergy referenceDozenRows (shellPieceCrossMap fourShellPiece c) = 0 } =\n      64 :=\n  by\n  have h :=\n    restricted_shell_cross_card fourShellPiece\n      (fun c => ReferenceCoupleOrthogonal c ∧ crossRowEnergy referenceDozenRows c = (0 : ℕ))\n  rw [← Nat.card_congr (fourEnergyShellEquiv 0), fourEnergyWords_card, fourEnergySupports_card,\n    fourSelectedRows_zero_labels] at h\n  norm_num at h ⊢\n  have hh :\n    256 =\n      Nat.card\n          { c : FourBlockCrosses //\n            ReferenceCoupleOrthogonal (shellPieceCrossMap fourShellPiece c) ∧\n              crossRowEnergy referenceDozenRows (shellPieceCrossMap fourShellPiece c) = 0 } *\n        4 :=\n    h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:162:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:169:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourCouple_energy_two_card :\n    Nat.card\n        { c : FourBlockCrosses //\n          ReferenceCoupleOrthogonal (shellPieceCrossMap fourShellPiece c) ∧\n            crossRowEnergy referenceDozenRows (shellPieceCrossMap fourShellPiece c) = 2 } =\n      128 :=\n  by\n  have h :=\n    restricted_shell_cross_card fourShellPiece\n      (fun c => ReferenceCoupleOrthogonal c ∧ crossRowEnergy referenceDozenRows c = (2 : ℕ))\n  rw [← Nat.card_congr (fourEnergyShellEquiv 2), fourEnergyWords_card, fourEnergySupports_card,\n    fourSelectedRows_two_labels] at h\n  norm_num at h ⊢\n  have hh :\n    512 =\n      Nat.card\n          { c : FourBlockCrosses //\n            ReferenceCoupleOrthogonal (shellPieceCrossMap fourShellPiece c) ∧\n              crossRowEnergy referenceDozenRows (shellPieceCrossMap fourShellPiece c) = 2 } *\n        4 :=\n    h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:174:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:181:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourCouple_energy_cases (c : FourBlockCrosses)\n    (hc : ReferenceCoupleOrthogonal (shellPieceCrossMap fourShellPiece c)) :\n    crossRowEnergy referenceDozenRows (shellPieceCrossMap fourShellPiece c) = 0 ∨\n      crossRowEnergy referenceDozenRows (shellPieceCrossMap fourShellPiece c) = 2 :=\n  by\n  induction c using Quotient.inductionOn with\n  | h v =>\n    obtain ⟨w, rfl⟩ := fourWordShellEquiv.surjective v\n    change ReferenceCoupleOrthogonal (minimalCross (minimumWordShellLift (fourMinimumWord w))) at hc\n    change\n      coordinateRowEnergy referenceDozenRows (minimumWordShellLift (fourMinimumWord w)).val.val = 0 ∨\n        coordinateRowEnergy referenceDozenRows (minimumWordShellLift (fourMinimumWord w)).val.val = 2\n    rw [fourWord_energy, fourSelectedRows_reference _ ((fourWord_reference_couple_normal w).mp hc)]\n    split_ifs <;> norm_num`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:195:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourCoupleProjection.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CrossRowEnergy transitive imports (legacy)",
+       "5dad7e56dbc2570a"],
+      ["Atlas.Rudvalis.CrossRowEnergy:importAllArts", "69731f4e1d47127b"],
+      ["Atlas.Rudvalis.HeavySelectedRowWeights transitive imports (legacy)",
+       "5e92a880b6e85e20"],
+      ["Atlas.Rudvalis.HeavySelectedRowWeights:importAllArts",
+       "dd803d15edaff089"],
+      ["Atlas.Rudvalis.FourCommonPerpendicular transitive imports (legacy)",
+       "6ac676cb08801728"],
+      ["Atlas.Rudvalis.FourCommonPerpendicular:importAllArts",
+       "1c5318d770ab6ea2"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FourCoupleProjection.lean",
+   "0d3dc70a2f52c8c5"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FourCoupleProjection", "17afa5c660db07b0"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "561568fd46b2599e"}

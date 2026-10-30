@@ -1,0 +1,67 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["587a9c38f823e91c.olean"],
+  "m": false,
+  "i": "e77a3ca158cac7f9.ilean",
+  "c": "23119edc5093130b.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/GaussianOrbitFrame.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/GaussianOrbitFrame.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/GaussianOrbitFrame.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/GaussianOrbitFrame.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/GaussianOrbitFrame.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/GaussianOrbitFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianOrbitFrame.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianOrbitFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianOrbitFrame.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- If a point-fixing group has precisely the remaining coordinate frame as an\norbit, then it lies in the already identified full code-frame stabilizer. -/\ntheorem gaussian_orbit_coordinate_complement (K : Subgroup gaussianLatticeGroup) (x y : MinimalCross)\n    (hx : x ∈ coordinateFrame) (hfix : ∀ g : K, g • x = x) (horbit : MulAction.orbit K y = coordinateFrame \\ { x }) :\n    K ≤ codeGaussianHom.range :=\n  by\n  have hstable (g : K) (c : MinimalCross) (hc : c ∈ coordinateFrame) : g • c ∈ coordinateFrame :=\n    by\n    by_cases he : c = x\n    · simpa [he, hfix g] using hx\n    · have ho : c ∈ MulAction.orbit K y := by rw [horbit]; exact ⟨hc, he⟩\n      have ht := MulAction.mapsTo_smul_orbit g y ho\n      rw [horbit] at ht\n      exact ht.1\n  intro g hg\n  let k : K := ⟨g, hg⟩\n  apply (gaussian_frame_stabilizer g).mp\n  intro c\n  constructor\n  · exact hstable k c\n  · intro hc\n    have h := hstable k⁻¹ (k • c) hc\n    simpa using h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianOrbitFrame.lean:8:32: missing space in the source\n\nThis part of the code\n  'x∈coordinateFrame)'\nshould be written as\n  'x ∈ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianOrbitFrame.lean:9:13: missing space in the source\n\nThis part of the code\n  '∀g : K,g'\nshould be written as\n  '∀ g :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianOrbitFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianOrbitFrame.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianOrbitFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianOrbitFrame.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.GaussianFrame transitive imports (legacy)",
+       "096470f4526da416"],
+      ["Atlas.Rudvalis.GaussianFrame:importAllArts", "173077b20fecd7f7"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/GaussianOrbitFrame.lean",
+   "c68c2b9397fd075e"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.GaussianOrbitFrame", "4a86c546a87c84f8"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "05edd3fd6ca63b5f"}

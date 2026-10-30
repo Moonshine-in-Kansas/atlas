@@ -1,0 +1,191 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["f951fe9fccebe730.olean"],
+  "m": false,
+  "i": "20f6e3c772535807.ilean",
+  "c": "db95c5a3a86348df.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Algebra/SplitOctonion/TraceKernelIsometry.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Algebra/SplitOctonion/TraceKernelIsometry.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Algebra/SplitOctonion/TraceKernelIsometry.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Algebra/SplitOctonion/TraceKernelIsometry.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:19:30: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [trace, basisVector]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:27:31: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [norm, trace, basisVector] at h3\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:31:33: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [norm, trace, basisVector] at h\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:36:33: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [norm, trace, basisVector] at h\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:41:33: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [norm, trace, basisVector] at h\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:46:33: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [norm, trace, basisVector] at h\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:51:33: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [norm, trace, basisVector] at h\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:56:33: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [norm, trace, basisVector] at h\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:60:31: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [norm, trace, basisVector, hw0, hw1, hw2, hw5, hw6, hw7] at h4\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:27:2: `simp [norm,trace,basisVector,Pi.single_apply] at h3` is a flexible tactic modifying `h3`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:28:2: `have hw0 : w 0 = 0 := by\n  have h := hn (basisVector 3 + basisVector 7)\n  rw [hshift] at h\n  simp [norm, trace, basisVector, Pi.single_apply] at h\n  linear_combination h - h3`\nuses `h3`, which was modified by the flexible tactic `simp` on line 27!",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:27:2: `simp [norm,trace,basisVector,Pi.single_apply] at h3` is a flexible tactic modifying `h3`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:33:2: `have hw1 : w 1 = 0 := by\n  have h := hn (basisVector 3 + basisVector 6)\n  rw [hshift] at h\n  simp [norm, trace, basisVector, Pi.single_apply] at h\n  linear_combination h - h3`\nuses `h3`, which was modified by the flexible tactic `simp` on line 27!",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:27:2: `simp [norm,trace,basisVector,Pi.single_apply] at h3` is a flexible tactic modifying `h3`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:38:2: `have hw2 : w 2 = 0 := by\n  have h := hn (basisVector 3 + basisVector 5)\n  rw [hshift] at h\n  simp [norm, trace, basisVector, Pi.single_apply] at h\n  linear_combination h - h3`\nuses `h3`, which was modified by the flexible tactic `simp` on line 27!",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:27:2: `simp [norm,trace,basisVector,Pi.single_apply] at h3` is a flexible tactic modifying `h3`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:43:2: `have hw5 : w 5 = 0 := by\n  have h := hn (basisVector 3 + basisVector 2)\n  rw [hshift] at h\n  simp [norm, trace, basisVector, Pi.single_apply] at h\n  linear_combination h - h3`\nuses `h3`, which was modified by the flexible tactic `simp` on line 27!",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:27:2: `simp [norm,trace,basisVector,Pi.single_apply] at h3` is a flexible tactic modifying `h3`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:48:2: `have hw6 : w 6 = 0 := by\n  have h := hn (basisVector 3 + basisVector 1)\n  rw [hshift] at h\n  simp [norm, trace, basisVector, Pi.single_apply] at h\n  linear_combination h - h3`\nuses `h3`, which was modified by the flexible tactic `simp` on line 27!",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:27:2: `simp [norm,trace,basisVector,Pi.single_apply] at h3` is a flexible tactic modifying `h3`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:53:2: `have hw7 : w 7 = 0 := by\n  have h := hn (basisVector 3 + basisVector 0)\n  rw [hshift] at h\n  simp [norm, trace, basisVector, Pi.single_apply] at h\n  linear_combination h - h3`\nuses `h3`, which was modified by the flexible tactic `simp` on line 27!",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:27:2: `simp [norm,trace,basisVector,Pi.single_apply] at h3` is a flexible tactic modifying `h3`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:62:2: `have h4eq : w 3 * (1 + w 4) = 0 := mul_eq_zero.mpr h4`\nuses `h3`, which was modified by the flexible tactic `simp` on line 27!",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:60:2: `simp [norm,trace,basisVector,Pi.single_apply,hw0,hw1,hw2,hw5,hw6,hw7] at h4` is a flexible tactic modifying `h4`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:62:2: `have h4eq : w 3 * (1 + w 4) = 0 := mul_eq_zero.mpr h4`\nuses `h4`, which was modified by the flexible tactic `simp` on line 60!",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:27:2: `simp [norm,trace,basisVector,Pi.single_apply] at h3` is a flexible tactic modifying `h3`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:63:2: `have he : w 3 = w 4 := by linear_combination h4eq - h3`\nuses `h3`, which was modified by the flexible tactic `simp` on line 27!",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:27:2: `simp [norm,trace,basisVector,Pi.single_apply] at h3` is a flexible tactic modifying `h3`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:64:2: `have hf : (w 3 + 1) * w 3 = 0 := by\n  rw [← he] at h3\n  simpa only [add_comm] using h3`\nuses `h3`, which was modified by the flexible tactic `simp` on line 27!",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:60:2: `simp [norm,trace,basisVector,Pi.single_apply,hw0,hw1,hw2,hw5,hw6,hw7] at h4` is a flexible tactic modifying `h4`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:64:2: `have hf : (w 3 + 1) * w 3 = 0 := by\n  rw [← he] at h3\n  simpa only [add_comm] using h3`\nuses `h4`, which was modified by the flexible tactic `simp` on line 60!",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:13:11: missing space in the source\n\nThis part of the code\n  '∀x,norm'\nshould be written as\n  '∀ x, norm'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:13:13: missing space in the source\n\nThis part of the code\n  '∀x,norm'\nshould be written as\n  'x, norm'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:13:23: missing space in the source\n\nThis part of the code\n  'x)=norm'\nshould be written as\n  'x) = norm'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:14:11: missing space in the source\n\nThis part of the code\n  '∀x,trace'\nshould be written as\n  '∀ x, trace'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:14:13: missing space in the source\n\nThis part of the code\n  '∀x,trace'\nshould be written as\n  'x, trace'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:14:20: missing space in the source\n\nThis part of the code\n  'x=0→g x=x)'\nshould be written as\n  'x = 0'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:14:26: missing space in the source\n\nThis part of the code\n  'x=x) :'\nshould be written as\n  'x = x)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:97:4: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:94:4: `simp [unit,conjugate,trace] at hc` is a flexible tactic modifying `hc`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:95:4: `have h2 : (2 : F) = 0 := by linear_combination hc`\nuses `hc`, which was modified by the flexible tactic `simp` on line 94!",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:85:11: missing space in the source\n\nThis part of the code\n  '∀x,norm'\nshould be written as\n  '∀ x, norm'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:85:13: missing space in the source\n\nThis part of the code\n  '∀x,norm'\nshould be written as\n  'x, norm'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:85:23: missing space in the source\n\nThis part of the code\n  'x)=norm'\nshould be written as\n  'x) = norm'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:85:44: missing space in the source\n\nThis part of the code\n  'unit=unit)'\nshould be written as\n  'unit = unit)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:86:11: missing space in the source\n\nThis part of the code\n  '∀x,trace'\nshould be written as\n  '∀ x, trace'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:86:13: missing space in the source\n\nThis part of the code\n  '∀x,trace'\nshould be written as\n  'x, trace'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:86:20: missing space in the source\n\nThis part of the code\n  'x=0→g x=x)'\nshould be written as\n  'x = 0'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean:86:26: missing space in the source\n\nThis part of the code\n  'x=x) :'\nshould be written as\n  'x = x)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Algebra.SplitOctonion.NormComposition transitive imports (legacy)",
+       "eb4da8487e780bdb"],
+      ["Atlas.Algebra.SplitOctonion.NormComposition:importAllArts",
+       "c305838616d4909f"],
+      ["Mathlib.Algebra.CharP.Two transitive imports (legacy)",
+       "2881b7259b2bfd89"],
+      ["Mathlib.Algebra.CharP.Two:importAllArts", "87443f1d15a0a309"],
+      ["Mathlib.Tactic transitive imports (legacy)", "ec156eb4c1db663c"],
+      ["Mathlib.Tactic:importAllArts", "49193de2eba247db"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Algebra/SplitOctonion/TraceKernelIsometry.lean",
+   "75a0bf6b6d63522f"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Algebra.SplitOctonion.TraceKernelIsometry",
+   "08282a2c90253465"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "85ecaf92def14292"}

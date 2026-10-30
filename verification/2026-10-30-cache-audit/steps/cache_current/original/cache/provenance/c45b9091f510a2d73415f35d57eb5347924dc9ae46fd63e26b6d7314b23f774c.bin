@@ -1,0 +1,146 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["20b9fa8ac440c99c.olean"],
+  "m": false,
+  "i": "9152a5e373c7ed46.ilean",
+  "c": "fd1a0e2104a75a0c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/HeavyCoupleComplement.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyCoupleComplement.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyCoupleComplement.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyCoupleComplement.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyCoupleComplement.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `abbrev HeavySemiCoupleWords :=\n  { w : HeavyMinimumWords //\n    (reduce w.val.val (rowLabel 0, 0) = 0 ∧ reduce w.val.val (rowLabel 0, 0 + (rowLabel 0).val) = 0) ∧\n      ¬(reduce w.val.val (rowLabel 0, binaryLabel 2) = 0 ∧\n          reduce w.val.val (rowLabel 0, binaryLabel 2 + (rowLabel 0).val) = 0) }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def ReferenceCoupleSemiOrthogonal (c : MinimalCross) : Prop :=\n  CrossOrthogonal localReferenceCross c ∧ ¬CrossOrthogonal referenceSecondCross c`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyWord_reference_semi_couple_iff (w : HeavyMinimumWords) :\n    ReferenceCoupleSemiOrthogonal (minimalCross (minimumWordShellLift (heavyMinimumWord w))) ↔\n      ((reduce w.val.val (rowLabel 0, 0) = 0 ∧ reduce w.val.val (rowLabel 0, 0 + (rowLabel 0).val) = 0) ∧\n        ¬(reduce w.val.val (rowLabel 0, binaryLabel 2) = 0 ∧\n            reduce w.val.val (rowLabel 0, binaryLabel 2 + (rowLabel 0).val) = 0)) :=\n  by\n  rw [ReferenceCoupleSemiOrthogonal, localReferenceCross_eq, referenceSecondCross_eq,\n    heavyWord_coordinate_orthogonal_iff, heavyWord_coordinate_orthogonal_iff]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavySemiCoupleWord_parameters (w : HeavySemiCoupleWords) :\n    ∃ c : Point,\n      ∃ a : HeavyAvoidingPair c (rowLabel 0) 0, ¬HeavyCoupleLabel c ∧ reduce w.val.val.val = fixedHeavyWord c a.val :=\n  by\n  obtain ⟨c, a, _, ha⟩ := heavyWord_avoiding_parameters (rowLabel 0) w.val w.prop.1\n  refine ⟨c, a, ?_, ha⟩\n  intro hc\n  have h := (heavy_couple_second_pair_iff c a).mpr hc\n  rw [← ha] at h\n  exact w.prop.2 h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeRowImage_mul (g h : codeGroup) (p : Point) :\n    codeRowImage (g * h) p = codeRowImage g (codeRowImage h p) :=\n  by\n  change\n    binaryBlockHom (codePermutationHom (g * h)) p =\n      binaryBlockHom (codePermutationHom g) (binaryBlockHom (codePermutationHom h) p)\n  rw [map_mul, map_mul]\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeRowImage_one (p : Point) : codeRowImage 1 p = p :=\n  by\n  change binaryBlockHom (codePermutationHom 1) p = p\n  rw [map_one, map_one]\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleCodeBeta_pow_rowImage (n : ℕ) (r : Fin 7) :\n    codeRowImage (coupleCodeBeta ^ n) (rowLabel r) = rowLabel ((coupleBetaRow^[n]) r) := by\n  induction n with\n  | zero => simp only [pow_zero, codeRowImage_one, Function.iterate_zero, id_eq]\n  | succ n ih => rw [pow_succ', codeRowImage_mul, ih, coupleCodeBeta_rowImage, Function.iterate_succ_apply']`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleBeta_fuses_other_heavy_labels (c d : Point)\n    (hc : ¬HeavyCoupleLabel c) (hd : ¬HeavyCoupleLabel d) (hpc : rowLabel 0 ≠ c) (hpd : rowLabel 0 ≠ d) :\n    ∃ n : ℕ, codeRowImage (coupleCodeBeta ^ n) c = d :=\n  by\n  obtain ⟨r, rfl⟩ := rowLabel_bijective.2 c\n  obtain ⟨s, rfl⟩ := rowLabel_bijective.2 d\n  have cert :\n    ∀ r s : Fin 7,\n      ¬HeavyCoupleLabel (rowLabel r) →\n        ¬HeavyCoupleLabel (rowLabel s) →\n          rowLabel 0 ≠ rowLabel r → rowLabel 0 ≠ rowLabel s → ∃ n : Fin 4, (coupleBetaRow^[n.val]) r = s :=\n    by\n    unfold HeavyCoupleLabel\n    decide +kernel\n  obtain ⟨n, hn⟩ := cert r s hc hd hpc hpd\n  exact ⟨n.val, by rw [coupleCodeBeta_pow_rowImage, hn]⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:52:48: missing space in the source\n\nThis part of the code\n  '0≠c) (hpd'\nshould be written as\n  '0 ≠ c)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:52:69: missing space in the source\n\nThis part of the code\n  '0≠d) :'\nshould be written as\n  '0 ≠ d)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavySemiCoupleWord_action (g : codeCoupleStabilizer)\n    (w : HeavySemiCoupleWords) : ∃ u : HeavySemiCoupleWords, monomialHom g.val.val w.val.val.val = u.val.val.val :=\n  by\n  obtain ⟨u, hu⟩ := heavyWord_action_exists g.val w.val\n  have he : g.val • heavyMinimumWord w.val = heavyMinimumWord u := Subtype.ext (Subtype.ext hu)\n  have hx :\n    g.val • minimalCross (minimumWordShellLift (heavyMinimumWord w.val)) =\n      minimalCross (minimumWordShellLift (heavyMinimumWord u)) :=\n    by rw [← minimalCross_smul, ← minimumWordShellLift_equivariant, he]\n  have hw := (heavyWord_reference_semi_couple_iff w.val).mpr w.prop\n  have h0 := (crossOrthogonal_codeGroup g.val localReferenceCross _).mpr hw.1\n  have h2 := (crossOrthogonal_codeGroup g.val referenceSecondCross _).not.mpr hw.2\n  rw [g.prop.1, hx] at h0\n  rw [g.prop.2, hx] at h2\n  exact ⟨⟨u, (heavyWord_reference_semi_couple_iff u).mp ⟨h0, h2⟩⟩, hu⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavySemiCouple_same_label_transitive (v w : HeavySemiCoupleWords)\n    (c : Point) (a b : HeavyAvoidingPair c (rowLabel 0) 0) (hv : reduce v.val.val.val = fixedHeavyWord c a.val)\n    (hw : reduce w.val.val.val = fixedHeavyWord c b.val) :\n    ∃ g : codeCoupleStabilizer, monomialHom g.val.val v.val.val.val = w.val.val.val :=\n  by\n  let v' : SignedLift quaternaryCode (fixedHeavyWord c a.val) :=\n    ⟨v.val.val, hv, quaternary_minimum_no_twos _ v.val.val.prop v.val.prop.1⟩\n  let w' : SignedLift quaternaryCode (fixedHeavyWord c b.val) :=\n    ⟨w.val.val, hw, quaternary_minimum_no_twos _ w.val.val.prop w.val.prop.1⟩\n  obtain ⟨g, hg, hvw⟩ :=\n    heavy_pair_signedLift_row_transitive c (rowLabel 0) (heavyAvoidingPair_label_ne c _ a) a b v' w'\n  refine ⟨⟨g, ?_, ?_⟩, hvw⟩\n  · change g • localReferenceCross = localReferenceCross\n    rw [localReferenceCross_eq]; exact hg 0\n  · change g • referenceSecondCross = referenceSecondCross\n    rw [referenceSecondCross_eq]; exact hg (binaryLabel 2)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:81:30: missing space in the source\n\nThis part of the code\n  'v.val.val.val=fixedHeavyWord'\nshould be written as\n  'v.val.val.val = fixedHeavyWord'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:82:30: missing space in the source\n\nThis part of the code\n  'w.val.val.val=fixedHeavyWord'\nshould be written as\n  'w.val.val.val = fixedHeavyWord'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavySemiCoupleWord_transitive (v w : HeavySemiCoupleWords) :\n    ∃ g : codeCoupleStabilizer, monomialHom g.val.val v.val.val.val = w.val.val.val :=\n  by\n  obtain ⟨c, a, hc, ha⟩ := heavySemiCoupleWord_parameters v\n  obtain ⟨d, b, hd, hb⟩ := heavySemiCoupleWord_parameters w\n  obtain ⟨n, hn⟩ :=\n    coupleBeta_fuses_other_heavy_labels c d hc hd (heavyAvoidingPair_label_ne c _ a) (heavyAvoidingPair_label_ne d _ b)\n  let beta : codeCoupleStabilizer := ⟨coupleCodeBeta, coupleCodeBeta_fixes_reference⟩\n  obtain ⟨u, hu⟩ := heavySemiCoupleWord_action (beta ^ n) v\n  obtain ⟨e, f, _, hf⟩ := heavySemiCoupleWord_parameters u\n  have he := heavyWord_label_transport (coupleCodeBeta ^ n) v.val u.val c e a.val f.val ha hf hu\n  rw [hn] at he\n  subst e\n  obtain ⟨g, hg⟩ := heavySemiCouple_same_label_transitive u w d f b hf hb\n  refine ⟨g * beta ^ n, ?_⟩\n  simp only [Subgroup.coe_mul, map_mul, LinearEquiv.mul_apply, hu, hg]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyCross_semi_couple_stabilizer_transitive (a b : HeavyCrosses)\n    (ha : ReferenceCoupleSemiOrthogonal (shellPieceCrossMap heavyShellPiece a))\n    (hb : ReferenceCoupleSemiOrthogonal (shellPieceCrossMap heavyShellPiece b)) :\n    ∃ g : codeCoupleStabilizer, g.val • shellPieceCrossMap heavyShellPiece a = shellPieceCrossMap heavyShellPiece b :=\n  by\n  obtain ⟨v, hv⟩ := heavyCross_rep a\n  obtain ⟨w, hw⟩ := heavyCross_rep b\n  have hv' := (heavyWord_reference_semi_couple_iff v).mp (hv ▸ ha)\n  have hw' := (heavyWord_reference_semi_couple_iff w).mp (hw ▸ hb)\n  obtain ⟨g, hg⟩ := heavySemiCoupleWord_transitive ⟨v, hv'⟩ ⟨w, hw'⟩\n  refine ⟨g, ?_⟩\n  have he : g.val • heavyMinimumWord v = heavyMinimumWord w := Subtype.ext (Subtype.ext hg)\n  rw [hv, hw, ← minimalCross_smul, ← minimumWordShellLift_equivariant, he]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleComplement.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.HeavyCoupleOrbitSet transitive imports (legacy)",
+       "8f4f91120cca5a48"],
+      ["Atlas.Rudvalis.HeavyCoupleOrbitSet:importAllArts",
+       "22b11f306cd83173"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/HeavyCoupleComplement.lean",
+   "85d952a5b28f5696"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.HeavyCoupleComplement", "6f3b813a189798a4"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "5dade63349d2b38a"}

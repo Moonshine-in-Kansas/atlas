@@ -1,0 +1,60 @@
+{
+  "status": "process-passed",
+  "command": [
+    "/usr/bin/ruby.ruby4.0",
+    "/home/gerald/atlas/claude/release-update-v1.2-20261030/current-cache-validation.rb",
+    "--contract",
+    "/home/gerald/atlas/claude/release-update-v1.2-20261030/verification-runs/20261030T090722-cache-current-current/CACHE_CONTRACT.json",
+    "--out",
+    "/home/gerald/atlas/claude/release-update-v1.2-20261030/verification-runs/20261030T090722-cache-current-current/cache"
+  ],
+  "cwd": "/home/gerald/atlas/claude/release-update-v1.2-20261030/candidate",
+  "environment": {
+    "LEAN_NUM_THREADS": "2",
+    "LEAN_PATH": "/home/gerald/atlas/claude/release-update-v1.2-20261030/candidate/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean",
+    "ATLAS_CACHE_CONTRACT_SHA256": "1f4b229e93d2e8b916fed696169177ffbb6827282c732b75ab22610d079233df",
+    "ATLAS_CACHE_LEASE_FD": "5"
+  },
+  "started_utc": "2026-10-30T09:07:23Z",
+  "exit_code": 0,
+  "signal": null,
+  "guard_stop": null,
+  "policy": "Single serial lease; Lean allocation8704MiB; owned RSS<=9GiB; combined worker RSS<two-thirds physicalRAM; actual availableRAM>=1GiB; at most4 Lean workers; bounded2GiB swap credit.",
+  "owned_rss_cap": 9663676416,
+  "peak_owned_rss": 231440384,
+  "peak_owned_rss_and_swap": 231440384,
+  "peak_combined_worker_rss": 584183808,
+  "peak_lean_workers": 0,
+  "proof_diagnostic_errors": false,
+  "combined_worker_rss_cap": 10938288810,
+  "inherited_held_lease": {
+    "descriptor": 5,
+    "device": 66307,
+    "inode": 2104648,
+    "owner_pid": 431866,
+    "parent_owned": true
+  },
+  "pid": 431959,
+  "log_plain_sha256": "da6fa8d7216bb27bb5b5ddf258497056cadd012383c1b0ed802152671c82326e",
+  "log_compressed_sha256": "e00c0406e63fb565c537b48b01b969c18c39d4d141b7a700805f3d8ffc92506e",
+  "log_recovery_verified": true,
+  "finished_utc": "2026-10-30T09:08:22Z",
+  "final_memory": {
+    "MemTotal": 16407433216,
+    "MemAvailable": 4290203648,
+    "SwapFree": 9448550400
+  },
+  "log_sha256": "da6fa8d7216bb27bb5b5ddf258497056cadd012383c1b0ed802152671c82326e",
+  "adaptation": {
+    "schema_version": 1,
+    "original_receipt": {
+      "path": "original/process.json",
+      "sha256": "c57a35325efd33be0261c20998e6e263fca85542126bb1e0281fee0f9e218a6a"
+    },
+    "alias": {
+      "log_sha256": "log_plain_sha256"
+    },
+    "decompressed_log_verified": true,
+    "original_compressed_sha256": "e00c0406e63fb565c537b48b01b969c18c39d4d141b7a700805f3d8ffc92506e"
+  }
+}

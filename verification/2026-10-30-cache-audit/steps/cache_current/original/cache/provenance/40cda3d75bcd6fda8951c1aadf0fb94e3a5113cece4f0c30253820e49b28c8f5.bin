@@ -1,0 +1,104 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["7aea14a986f8b905.olean"],
+  "m": false,
+  "i": "b56ee3c2055b4712.ilean",
+  "c": "6e815f4758a160cd.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateFourRowObstruction.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateFourRowObstruction.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateFourRowObstruction.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateFourRowObstruction.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateFourRowObstruction.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThree zero Gaussian pairs and a fourth nonzero pair can be prescribed on an affine Fano plane. -/\ntheorem heavy_four_rows_test (p : Fin 4 → Point) (x : Fin 4 → E)\n    (hdet : (pairBasisMatrix (p 0) (p 1) (p 2).val).det = 1) (hsum : (p 3).val = (p 0).val + (p 1).val + (p 2).val)\n    (c : Point) (hc : ∀ i : Fin 4, p i ≠ c) (h03 : (p 0).val ≠ (p 3).val) (h0c : (p 0).val ≠ c.val)\n    (h0c3 : (p 0).val ≠ c.val + (p 3).val) :\n    ∃ z : MinimalCross,\n      z ∉ coordinateFrame ∧\n        (∀ i : Fin 4, i ≠ 3 → CrossOrthogonal z (coordinateCross (p i, x i))) ∧\n          ¬CrossOrthogonal z (coordinateCross (p 3, x 3)) :=\n  by\n  classical\n  obtain ⟨v⟩ : Nonempty (FixedHeavyParameters c) :=\n    (Nat.card_pos_iff.mp (show 0 < Nat.card (FixedHeavyParameters c) by rw [fixedHeavyParameters_card]; decide)).1\n  obtain ⟨a, ha0, ha1⟩ := fixedHeavy_pair_avoid_translate (p 0) c (hc 0) v (x 0)\n  obtain ⟨b, hb0, hb1⟩ := fixedHeavy_pair_avoid_translate (p 1) c (hc 1) v (x 1)\n  obtain ⟨d, hd0, hd1⟩ := fixedHeavy_pair_avoid_translate (p 2) c (hc 2) v (x 2)\n  let good (y : E) : Prop := fixedHeavyWord c v (p 3, y) = 0 ∧ fixedHeavyWord c v (p 3, y + (p 3).val) = 0\n  have hcomp := fixedHeavy_pair_complement (p 3) c (hc 3) (p 0).val (p 0).prop h03 h0c h0c3 v (x 3 + (a + b + d))\n  have hchoice :\n    ∃ a' : E,\n      (fixedHeavyWord c v (p 0, x 0 + a') = 0 ∧ fixedHeavyWord c v (p 0, x 0 + (p 0).val + a') = 0) ∧\n        ¬good (x 3 + (a' + b + d)) :=\n    by\n    by_cases h : good (x 3 + (a + b + d))\n    · refine ⟨a + (p 0).val, ?_, ?_⟩\n      · constructor\n        · have he : x 0 + (a + (p 0).val) = x 0 + (p 0).val + a := by abel\n          rw [he]; exact ha1\n        · have he : x 0 + (p 0).val + (a + (p 0).val) = x 0 + a := by\n            calc\n              _ = (x 0 + a) + ((p 0).val + (p 0).val) := by abel\n              _ = x 0 + a := by rw [vector_add_self, add_zero]\n          rw [he]; exact ha0\n      · have hn := hcomp.mp h\n        have he : x 3 + (a + (p 0).val + b + d) = (x 3 + (a + b + d)) + (p 0).val := by abel\n        rw [he]\n        exact hn\n    · exact ⟨a, ⟨ha0, ha1⟩, h⟩\n  obtain ⟨a', ha', hn⟩ := hchoice\n  obtain ⟨B, hB0, hB1, hB2⟩ := matrixAt_three_points (p 0) (p 1) (p 2) hdet a' b d\n  have hB3 : matrixAt B (p 3).val = a' + b + d := by\n    rw [hsum]\n    change (binaryMatrixLinear B) ((p 0).val + (p 1).val + (p 2).val) = _\n    rw [map_add, map_add]\n    exact congrArg₂ (· + ·) (congrArg₂ (· + ·) hB0 hB1) hB2\n  let v' := fixedHeavyTranslate c B v\n  obtain ⟨z, hz, ht⟩ := fixedHeavy_test_cross c v'\n  have he (i : Fin 4) (y : E) : fixedHeavyWord c v' (p i, y) = fixedHeavyWord c v (p i, y + matrixAt B (p i).val) :=\n    congrFun (fixedHeavyTranslate_word c B v) (p i, y)\n  refine ⟨z, hz, ?_, ?_⟩\n  · intro i hi\n    rw [ht, he, he]\n    fin_cases i\n    · change\n        fixedHeavyWord c v (p 0, x 0 + matrixAt B (p 0).val) = 0 ∧\n          fixedHeavyWord c v (p 0, x 0 + (p 0).val + matrixAt B (p 0).val) = 0\n      rw [hB0]; exact ha'\n    · change\n        fixedHeavyWord c v (p 1, x 1 + matrixAt B (p 1).val) = 0 ∧\n          fixedHeavyWord c v (p 1, x 1 + (p 1).val + matrixAt B (p 1).val) = 0\n      rw [hB1]; exact ⟨hb0, hb1⟩\n    · change\n        fixedHeavyWord c v (p 2, x 2 + matrixAt B (p 2).val) = 0 ∧\n          fixedHeavyWord c v (p 2, x 2 + (p 2).val + matrixAt B (p 2).val) = 0\n      rw [hB2]; exact ⟨hd0, hd1⟩\n    · exact (hi rfl).elim\n  · rw [ht, he, he, hB3]\n    simpa only [good, add_assoc, add_comm, add_left_comm] using hn`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:4:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:5:39: missing space in the source\n\nThis part of the code\n  '4→Point)'\nshould be written as\n  '4 → Point)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:5:57: missing space in the source\n\nThis part of the code\n  '4→E)\n '\nshould be written as\n  '4 → E)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:6:55: missing space in the source\n\nThis part of the code\n  '2).val).det=1)\n '\nshould be written as\n  '2).val).det = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:7:21: missing space in the source\n\nThis part of the code\n  '3).val=(p 0).val+(p'\nshould be written as\n  '3).val = (p'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:7:31: missing space in the source\n\nThis part of the code\n  '0).val+(p 1).val+(p'\nshould be written as\n  '0).val + (p'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:7:41: missing space in the source\n\nThis part of the code\n  '1).val+(p 2).val)'\nshould be written as\n  '1).val + (p'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:8:23: missing space in the source\n\nThis part of the code\n  '∀i : Fin'\nshould be written as\n  '∀ i :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateQuartet_not_four_distinct_rows (Q : Set MinimalCross)\n    (hQ : IsQuartet Q) (p : Fin 4 → Point) (x : Fin 4 → E) (hp : Function.Injective p)\n    (hQeq : Q = Set.range (fun i => coordinateCross (p i, x i))) : False :=\n  by\n  have hmem (i : Fin 4) : coordinateCross (p i, x i) ∈ Q := by rw [hQeq]; exact ⟨i, rfl⟩\n  have hF : Q ⊆ coordinateFrame := by\n    rintro z hz\n    rw [hQeq] at hz\n    obtain ⟨i, rfl⟩ := hz\n    exact coordinateCross_mem _\n  rcases fano_four_rows_alternative p hp with ⟨a, i, hai, hrest⟩ | ⟨hd, hs, c, hc, h03, h0c, h0c3⟩\n  · apply coordinateQuartet_no_single_linear_label Q hQ hF a (p i) (x i) (hmem i) hai\n    intro z hz hne\n    rw [hQeq] at hz\n    obtain ⟨j, rfl⟩ := hz\n    exact ⟨p j, x j, rfl, hrest j (by intro h; subst j; exact hne rfl)⟩\n  · obtain ⟨z, hz, ht, hn⟩ := heavy_four_rows_test p x hd hs c hc h03 h0c h0c3\n    apply hn\n    apply hQ.2.2 z (fun h => hz (hF h)) (coordinateCross (p 3, x 3)) (hmem 3)\n    intro y hy hne\n    rw [hQeq] at hy\n    obtain ⟨i, rfl⟩ := hy\n    exact ht i (by intro h; subst i; exact hne rfl)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:73:14: missing space in the source\n\nThis part of the code\n  '4→Point)'\nshould be written as\n  '4 → Point)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:73:32: missing space in the source\n\nThis part of the code\n  '4→E) (hp'\nshould be written as\n  '4 → E)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:74:13: missing space in the source\n\nThis part of the code\n  'Q=Set.range'\nshould be written as\n  'Q = Set.range'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:74:55: missing space in the source\n\nThis part of the code\n  'i,x i)))'\nshould be written as\n  'i, x i)))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFourRowObstruction.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FanoFourRows transitive imports (legacy)",
+       "fd43c2b6768e611d"],
+      ["Atlas.Rudvalis.FanoFourRows:importAllArts", "91fc7b1836fc0347"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateFourRowObstruction.lean",
+   "71338345ed5f9779"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateFourRowObstruction",
+   "342dcae0aaf6493f"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "de5efbcac01d7f15"}

@@ -1,0 +1,82 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["202de70c7b2e39f2.olean"],
+  "m": false,
+  "i": "0bd9d8d7058ab4b7.ilean",
+  "c": "662114a7d27eba3f.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.lean:12:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.lean:18:0: `rootWeyl_not_isPos_of_combination` does not use the following hypothesis in its type:\n  • [DecidableEq ι] (#5)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.lean:18:0: `rootWeyl_not_isPos_of_combination` does not use the following hypothesis in its type:\n  • [Fintype ι] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.lean:53:58: This simp argument is unused:\n  map_sub\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [P.root_reflectionPerm, P.reflection_apply, map_smul, P.root_coroot'_eq_pairing, P.pairing_same,\n    hpij, hpji]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.lean:53:67: This simp argument is unused:\n  map_smul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [P.root_reflectionPerm, P.reflection_apply, map_sub, P.root_coroot'_eq_pairing, P.pairing_same,\n    hpij, hpji]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.lean:54:33: This simp argument is unused:\n  P.pairing_same\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [P.root_reflectionPerm, P.reflection_apply, map_sub, map_smul, P.root_coroot'_eq_pairing, hpij,\n    hpji]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.lean:54:49: This simp argument is unused:\n  hpij\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [P.root_reflectionPerm, P.reflection_apply, map_sub, map_smul, P.root_coroot'_eq_pairing,\n    P.pairing_same, hpji]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.lean:86:58: This simp argument is unused:\n  map_sub\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [P.root_reflectionPerm, P.reflection_apply, map_smul, P.root_coroot'_eq_pairing, P.pairing_same,\n    hpij, hpji]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.lean:86:67: This simp argument is unused:\n  map_smul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [P.root_reflectionPerm, P.reflection_apply, map_sub, P.root_coroot'_eq_pairing, P.pairing_same,\n    hpij, hpji]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.lean:87:33: This simp argument is unused:\n  P.pairing_same\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [P.root_reflectionPerm, P.reflection_apply, map_sub, map_smul, P.root_coroot'_eq_pairing, hpij,\n    hpji]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.lean:87:49: This simp argument is unused:\n  hpij\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [P.root_reflectionPerm, P.reflection_apply, map_sub, map_smul, P.root_coroot'_eq_pairing,\n    P.pairing_same, hpji]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Mathlib.LinearAlgebra.RootSystem.CartanMatrix transitive imports (legacy)",
+       "e24a8aac8de4de2f"],
+      ["Mathlib.LinearAlgebra.RootSystem.CartanMatrix:importAllArts",
+       "c9444a64584b470d"],
+      ["Atlas.LinearGroups.Chevalley.RootData.RootHeightCombination transitive imports (legacy)",
+       "23ad4062c9a6ade5"],
+      ["Atlas.LinearGroups.Chevalley.RootData.RootHeightCombination:importAllArts",
+       "41b90b689f9437ec"],
+      ["Atlas.LinearGroups.Chevalley.RootData.SimpleReflectionLength transitive imports (legacy)",
+       "23ad4062c9a6ade5"],
+      ["Atlas.LinearGroups.Chevalley.RootData.SimpleReflectionLength:importAllArts",
+       "607a6f42d9acf667"],
+      ["Mathlib.Tactic.Module transitive imports (legacy)", "b5f83df3ed43bfc6"],
+      ["Mathlib.Tactic.Module:importAllArts", "0733868e493644a5"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/RootData/TwoDescentSuffix.lean",
+   "b2aaadd567d3b660"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.RootData.TwoDescentSuffix",
+   "92ee01c97c1bc8f4"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "bd10b83afd26f2fb"}

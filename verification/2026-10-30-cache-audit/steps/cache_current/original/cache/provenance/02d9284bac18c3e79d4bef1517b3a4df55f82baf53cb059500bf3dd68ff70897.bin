@@ -1,0 +1,56 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["aa1590ca04ce22dd.olean"],
+  "m": false,
+  "i": "589172ad3a9f5acb.ilean",
+  "c": "27ddb855ebedd87a.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Graphs/HexadExtensionRegular.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Graphs/HexadExtensionRegular.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Graphs/HexadExtensionRegular.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Graphs/HexadExtensionRegular.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Graphs/HexadExtensionRegular.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionRegular.lean:11:0: `hexad_extension_common_card` does not use the following hypothesis in its type:\n  • [Fintype V] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionRegular.lean:28:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionRegular.lean:36:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionRegular.lean:52:67: `if_pos` has been deprecated: Use `ite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Graphs/HexadExtensionRegular.lean:56:64: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Graphs.HexadExtensionGraph transitive imports (legacy)",
+       "39b41d33a9eae67d"],
+      ["Atlas.Graphs.HexadExtensionGraph:importAllArts", "ea87daeb759202b4"],
+      ["Atlas.Graphs.TransitiveStronglyRegular transitive imports (legacy)",
+       "120e94a42a1d379c"],
+      ["Atlas.Graphs.TransitiveStronglyRegular:importAllArts",
+       "eaa044072392be1b"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Graphs/HexadExtensionRegular.lean",
+   "81a38e82e3960fef"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Graphs.HexadExtensionRegular", "e3feb01b3e25c263"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "9ecd711b4f501a82"}

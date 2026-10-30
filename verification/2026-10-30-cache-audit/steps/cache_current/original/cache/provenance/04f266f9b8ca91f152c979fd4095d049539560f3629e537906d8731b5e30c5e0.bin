@@ -1,0 +1,109 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["d757ce44e847ba59.olean"],
+  "m": false,
+  "i": "e9725e70d792d0a3.ilean",
+  "c": "decb93ff2dcc2cb3.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/StringWeyl.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/StringWeyl.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/StringWeyl.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/StringWeyl.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:16:1: 'theorem unit_scalar_pow_cancel (t : Rˣ) (p q : ℕ) : t.val ^ p * t.inv ^ q = t.val ^ (p - q) * t.inv ^ (q - p) :=\n  by\n  by_cases h : q ≤ p\n  · have hp : (p - q) + q = p := Nat.sub_add_cancel h\n    calc\n      t.val ^ p * t.inv ^ q = (t.val ^ (p - q) * t.val ^ q) * t.inv ^ q := by rw [← pow_add, hp]\n      _ = t.val ^ (p - q) * (t.val * t.inv) ^ q := by rw [mul_pow, mul_assoc]\n      _ = _ := by simp [Nat.sub_eq_zero_of_le h]\n  · have h' : p ≤ q := by omega\n    have hq : p + (q - p) = q := Nat.add_sub_of_le h'\n    calc\n      t.val ^ p * t.inv ^ q = t.val ^ p * (t.inv ^ p * t.inv ^ (q - p)) := by rw [← pow_add, hq]\n      _ = (t.val * t.inv) ^ p * t.inv ^ (q - p) := by rw [mul_pow, mul_assoc]\n      _ = _ := by\n        simp [Nat.sub_eq_zero_of_le h']' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:31:1: 'theorem unit_scalar_mul_pow_cancel (t : Rˣ) (q : ℕ) : t.val * t.inv ^ q = t.val ^ (1 - q) * t.inv ^ (q - 1) := by\n  simpa only [pow_one] using\n    unit_scalar_pow_cancel t 1 q' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:35:1: 'theorem unit_scalar_pow_mul_cancel (t : Rˣ) (p : ℕ) : t.val ^ p * t.inv = t.val ^ (p - 1) * t.inv ^ (1 - p) := by\n  simpa only [pow_one] using\n    unit_scalar_pow_cancel t p 1' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:52:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 800000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:53:1: 'theorem stringWeyl_entry_0 (t : Rˣ) (i j : Fin (0 + 1)) :\n    stringWeyl 0 t i j = if i = j.rev then (-1 : R) ^ j.val * t.val ^ (0 - j.val) * t.inv ^ j.val else 0 := by\n  fin_cases i <;> fin_cases j <;>\n    norm_num [stringWeyl, stringLowerExponential, Matrix.mul_apply, Fin.sum_univ_succ, stringExponential_entry, Fin.rev,\n      Nat.choose]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:53:50: missing space in the source\n\nThis part of the code\n  '(0+1)) :'\nshould be written as\n  '(0 + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:56:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:56:30: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:60:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 800000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:61:1: 'theorem stringWeyl_entry_1 (t : Rˣ) (i j : Fin (1 + 1)) :\n    stringWeyl 1 t i j = if i = j.rev then (-1 : R) ^ j.val * t.val ^ (1 - j.val) * t.inv ^ j.val else 0 := by\n  fin_cases i <;> fin_cases j <;>\n    norm_num [stringWeyl, stringLowerExponential, Matrix.mul_apply, Fin.sum_univ_succ, stringExponential_entry, Fin.rev,\n      Nat.choose]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:61:50: missing space in the source\n\nThis part of the code\n  '(1+1)) :'\nshould be written as\n  '(1 + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:68:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 800000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:69:1: 'theorem stringWeyl_entry_2 (t : Rˣ) (i j : Fin (2 + 1)) :\n    stringWeyl 2 t i j = if i = j.rev then (-1 : R) ^ j.val * t.val ^ (2 - j.val) * t.inv ^ j.val else 0 :=\n  by\n  have h12 := unit_coe_pow_cancel t 1 2\n  norm_num at h12\n  have h21 := unit_coe_pow_cancel t 2 1\n  norm_num at h21\n  have h22 := unit_coe_pow_cancel t 2 2\n  norm_num at h22\n  have h31 := unit_coe_pow_cancel t 3 1\n  norm_num at h31\n  have h32 := unit_coe_pow_cancel t 3 2\n  norm_num at h32\n  have h42 := unit_coe_pow_cancel t 4 2\n  norm_num at h42\n  have r12 := (mul_comm (((t⁻¹ : Rˣ) : R) ^ 2) ((t : R) ^ 1)).trans (unit_coe_pow_cancel t 1 2)\n  norm_num at r12\n  have r22 := (mul_comm (((t⁻¹ : Rˣ) : R) ^ 2) ((t : R) ^ 2)).trans (unit_coe_pow_cancel t 2 2)\n  norm_num at r22\n  fin_cases i <;> fin_cases j <;>\n            norm_num [stringWeyl, stringLowerExponential, Matrix.mul_apply, Fin.sum_univ_succ, stringExponential_entry,\n              Fin.rev, Nat.choose] <;>\n          ring_nf <;>\n        (try simp only [r12, r22, h12, h21, h22, h31, h32, h42]) <;>\n      norm_num <;>\n    first\n    | rfl\n    | ring' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:69:50: missing space in the source\n\nThis part of the code\n  '(2+1)) :'\nshould be written as\n  '(2 + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:94:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 800000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:140:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:95:1: 'theorem stringWeyl_entry_3 (t : Rˣ) (i j : Fin (3 + 1)) :\n    stringWeyl 3 t i j = if i = j.rev then (-1 : R) ^ j.val * t.val ^ (3 - j.val) * t.inv ^ j.val else 0 :=\n  by\n  have h12 := unit_coe_pow_cancel t 1 2\n  norm_num at h12\n  have h13 := unit_coe_pow_cancel t 1 3\n  norm_num at h13\n  have h21 := unit_coe_pow_cancel t 2 1\n  norm_num at h21\n  have h22 := unit_coe_pow_cancel t 2 2\n  norm_num at h22\n  have h23 := unit_coe_pow_cancel t 2 3\n  norm_num at h23\n  have h31 := unit_coe_pow_cancel t 3 1\n  norm_num at h31\n  have h32 := unit_coe_pow_cancel t 3 2\n  norm_num at h32\n  have h33 := unit_coe_pow_cancel t 3 3\n  norm_num at h33\n  have h41 := unit_coe_pow_cancel t 4 1\n  norm_num at h41\n  have h42 := unit_coe_pow_cancel t 4 2\n  norm_num at h42\n  have h43 := unit_coe_pow_cancel t 4 3\n  norm_num at h43\n  have h52 := unit_coe_pow_cancel t 5 2\n  norm_num at h52\n  have h53 := unit_coe_pow_cancel t 5 3\n  norm_num at h53\n  have h63 := unit_coe_pow_cancel t 6 3\n  norm_num at h63\n  have r12 := (mul_comm (((t⁻¹ : Rˣ) : R) ^ 2) ((t : R) ^ 1)).trans (unit_coe_pow_cancel t 1 2)\n  norm_num at r12\n  have r13 := (mul_comm (((t⁻¹ : Rˣ) : R) ^ 3) ((t : R) ^ 1)).trans (unit_coe_pow_cancel t 1 3)\n  norm_num at r13\n  have r22 := (mul_comm (((t⁻¹ : Rˣ) : R) ^ 2) ((t : R) ^ 2)).trans (unit_coe_pow_cancel t 2 2)\n  norm_num at r22\n  have r23 := (mul_comm (((t⁻¹ : Rˣ) : R) ^ 3) ((t : R) ^ 2)).trans (unit_coe_pow_cancel t 2 3)\n  norm_num at r23\n  have r33 := (mul_comm (((t⁻¹ : Rˣ) : R) ^ 3) ((t : R) ^ 3)).trans (unit_coe_pow_cancel t 3 3)\n  norm_num at r33\n  fin_cases i <;> fin_cases j <;>\n            norm_num [stringWeyl, stringLowerExponential, Matrix.mul_apply, Fin.sum_univ_succ, stringExponential_entry,\n              Fin.rev, Nat.choose] <;>\n          ring_nf <;>\n        (try\n            simp only [r12, r13, r22, r23, r33, h12, h13, h21, h22, h23, h31, h32, h33, h41, h42, h43, h52, h53,\n              h63]) <;>\n      norm_num <;>\n    first\n    | rfl\n    | ring' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:95:50: missing space in the source\n\nThis part of the code\n  '(3+1)) :'\nshould be written as\n  '(3 + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:142:1: 'theorem stringWeyl_entry (n : ℕ) (hn : n ≤ 3) (t : Rˣ) (i j : Fin (n + 1)) :\n    stringWeyl n t i j = if i = j.rev then (-1 : R) ^ j.val * t.val ^ (n - j.val) * t.inv ^ j.val else 0 :=\n  by\n  interval_cases n\n  · exact stringWeyl_entry_0 t i j\n  · exact stringWeyl_entry_1 t i j\n  · exact stringWeyl_entry_2 t i j\n  · exact stringWeyl_entry_3 t i j' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean:142:69: missing space in the source\n\nThis part of the code\n  '(n+1)) :'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.Integral.StringExponential transitive imports (legacy)",
+       "934f5b3c5b069da0"],
+      ["Atlas.LinearGroups.Chevalley.Integral.StringExponential:importAllArts",
+       "4f670b12eef2c502"],
+      ["Mathlib.Data.Fin.Rev transitive imports (legacy)", "d396b3674f3d0838"],
+      ["Mathlib.Data.Fin.Rev:importAllArts", "c5b877263ee34726"],
+      ["Mathlib.Tactic.FinCases transitive imports (legacy)",
+       "f18b1ae860a37612"],
+      ["Mathlib.Tactic.FinCases:importAllArts", "3dc63b7526333b29"],
+      ["Mathlib.Tactic.IntervalCases transitive imports (legacy)",
+       "9ca5d175b829416e"],
+      ["Mathlib.Tactic.IntervalCases:importAllArts", "1abc948b948eca4c"],
+      ["Mathlib.Tactic.Ring transitive imports (legacy)", "13811e8f7c4fbd99"],
+      ["Mathlib.Tactic.Ring:importAllArts", "b089480788eddaa1"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/StringWeyl.lean",
+   "a4786be901849801"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Integral.StringWeyl",
+   "3dc7b7af2858323b"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "99d49acf3af4ee66"}

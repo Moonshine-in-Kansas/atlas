@@ -1,0 +1,110 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["850df9cf8e16a541.olean"],
+  "m": false,
+  "i": "e146859d7d14f42f.ilean",
+  "c": "19451f3ccd880079.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoupleFusionInvariance.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleFusionInvariance.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleFusionInvariance.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleFusionInvariance.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleFusionInvariance.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusion_dozen_iff (g : coupleFusionGroup) (c : MinimalCross) :\n    g.val • c ∈ referenceCoordinateDozen ↔ c ∈ referenceCoordinateDozen :=\n  by\n  rw [← reference_intrinsicDozen_eq]\n  exact coupleFusion_intrinsicDozen_iff g c`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusion_reference_orthogonal_iff (g : coupleFusionGroup)\n    (c : MinimalCross) : ReferenceCoupleOrthogonal (g.val • c) ↔ ReferenceCoupleOrthogonal c :=\n  by\n  have hx := (coupleFusionGroup_fix g).1\n  have hy := (coupleFusionGroup_fix g).2\n  have h0 := crossOrthogonal_gaussian g.val localReferenceCross c\n  have h1 := crossOrthogonal_gaussian g.val referenceSecondCross c\n  rw [hx] at h0\n  rw [hy] at h1\n  exact and_congr h0 h1`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionTen_stable (g : coupleFusionGroup) (c : MinimalCross)\n    (hc : c ∈ coupleFusionTen) : g.val • c ∈ coupleFusionTen :=\n  by\n  refine ⟨⟨(coupleFusion_dozen_iff g c).mpr hc.1.1, ?_⟩, ?_⟩\n  · intro h\n    apply hc.1.2\n    apply MulAction.injective g.val\n    exact h.trans (coupleFusionGroup_fix g).1.symm\n  · intro h\n    apply hc.2\n    apply MulAction.injective g.val\n    exact h.trans (coupleFusionGroup_fix g).2.symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:21:11: missing space in the source\n\nThis part of the code\n  'c∈coupleFusionTen)'\nshould be written as\n  'c ∈ coupleFusionTen)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionEighty_stable (g : coupleFusionGroup) (c : MinimalCross)\n    (hc : c ∈ coupleFusionEighty) : g.val • c ∈ coupleFusionEighty :=\n  by\n  intro z hz\n  have hi : g.val⁻¹ • z ∈ referenceCoordinateDozen := (coupleFusion_dozen_iff g⁻¹ z).mpr hz\n  have h := (crossOrthogonal_gaussian g.val (g.val⁻¹ • z) c).mpr (hc _ hi)\n  simpa only [smul_inv_smul] using h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:33:11: missing space in the source\n\nThis part of the code\n  'c∈coupleFusionEighty)'\nshould be written as\n  'c ∈ coupleFusionEighty)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionEighty_iff (g : coupleFusionGroup) (c : MinimalCross) :\n    g.val • c ∈ coupleFusionEighty ↔ c ∈ coupleFusionEighty :=\n  by\n  constructor\n  · intro h\n    have hi := coupleFusionEighty_stable g⁻¹ (g.val • c) h\n    simpa only [Subgroup.coe_inv, inv_smul_smul] using hi\n  · exact coupleFusionEighty_stable g c`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionSixForty_stable (g : coupleFusionGroup) (c : MinimalCross)\n    (hc : c ∈ coupleFusionSixForty) : g.val • c ∈ coupleFusionSixForty :=\n  ⟨(coupleFusion_reference_orthogonal_iff g c).mpr hc.1, fun h => hc.2.1 ((coupleFusion_dozen_iff g c).mp h), fun h =>\n    hc.2.2 ((coupleFusionEighty_iff g c).mp h)⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:49:11: missing space in the source\n\nThis part of the code\n  'c∈coupleFusionSixForty)'\nshould be written as\n  'c ∈ coupleFusionSixForty)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFusionThousand_stable (g : coupleFusionGroup) (c : MinimalCross)\n    (hc : c ∈ coupleFusionThousand) : g.val • c ∈ coupleFusionThousand :=\n  by\n  have hx := (coupleFusionGroup_fix g).1\n  have hy := (coupleFusionGroup_fix g).2\n  have h0 := crossOrthogonal_gaussian g.val localReferenceCross c\n  have h1 := crossOrthogonal_gaussian g.val referenceSecondCross c\n  rw [hx] at h0\n  rw [hy] at h1\n  refine ⟨⟨h0.mpr hc.1.1, fun h => hc.1.2 (h1.mp h)⟩, ?_⟩\n  intro h\n  apply hc.2\n  apply MulAction.injective g.val\n  exact h.trans hy.symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:55:11: missing space in the source\n\nThis part of the code\n  'c∈coupleFusionThousand)'\nshould be written as\n  'c ∈ coupleFusionThousand)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFusionInvariance.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoupleFusionPieces transitive imports (legacy)",
+       "154b3f721fe8d0d1"],
+      ["Atlas.Rudvalis.CoupleFusionPieces:importAllArts",
+       "44312a6a099d3cac"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoupleFusionInvariance.lean",
+   "774f71f7c23a5c5f"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoupleFusionInvariance", "a667bc027b781205"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "b78eedc098f7f161"}

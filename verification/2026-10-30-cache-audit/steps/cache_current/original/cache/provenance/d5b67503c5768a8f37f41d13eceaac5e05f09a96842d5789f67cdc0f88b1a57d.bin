@@ -1,0 +1,66 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["aa27e00c613ae3bd.olean"],
+  "m": false,
+  "i": "53f0ba353959d9d3.ilean",
+  "c": "b81a8274cd5acd86.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/ParkerFactorSet.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/ParkerFactorSet.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/ParkerFactorSet.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/ParkerFactorSet.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/ParkerFactorSet.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/ParkerFactorSet.lean:44:0: automatically included section variable(s) unused in theorem `Atlas.Fischer.parkerMultiply_one_left`:\n  [Module ParkerBit V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Module ParkerBit V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/ParkerFactorSet.lean:49:0: automatically included section variable(s) unused in theorem `Atlas.Fischer.parkerMultiply_one_right`:\n  [Module ParkerBit V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Module ParkerBit V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/ParkerFactorSet.lean:54:0: automatically included section variable(s) unused in theorem `Atlas.Fischer.parkerMultiply_square`:\n  [Module ParkerBit V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Module ParkerBit V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/ParkerFactorSet.lean:58:58: This simp argument is unused:\n  add_zero\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [show (2 : ParkerBit) = 0 from rfl, mul_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/ParkerFactorSet.lean:66:0: automatically included section variable(s) unused in theorem `Atlas.Fischer.parkerMultiply_leftDivide`:\n  [Module ParkerBit V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Module ParkerBit V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/ParkerFactorSet.lean:70:0: automatically included section variable(s) unused in theorem `Atlas.Fischer.parkerLeftDivide_multiply`:\n  [Module ParkerBit V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Module ParkerBit V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/ParkerFactorSet.lean:77:0: automatically included section variable(s) unused in theorem `Atlas.Fischer.parkerMultiply_rightDivide`:\n  [Module ParkerBit V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Module ParkerBit V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/ParkerFactorSet.lean:81:0: automatically included section variable(s) unused in theorem `Atlas.Fischer.parkerRightDivide_multiply`:\n  [Module ParkerBit V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Module ParkerBit V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Mathlib.Data.ZMod.Basic transitive imports (legacy)",
+       "4fe50dc42e3944f9"],
+      ["Mathlib.Data.ZMod.Basic:importAllArts", "9982ee36172e39fc"],
+      ["Mathlib.Algebra.Module.LinearMap.Basic transitive imports (legacy)",
+       "de361b45e79c74b5"],
+      ["Mathlib.Algebra.Module.LinearMap.Basic:importAllArts",
+       "dc46dfaa85bf4b34"],
+      ["Mathlib.Tactic transitive imports (legacy)", "ec156eb4c1db663c"],
+      ["Mathlib.Tactic:importAllArts", "49193de2eba247db"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/ParkerFactorSet.lean", "35feafe519585566"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.ParkerFactorSet", "73dda1f44380fdd5"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "a53e316a2efde359"}

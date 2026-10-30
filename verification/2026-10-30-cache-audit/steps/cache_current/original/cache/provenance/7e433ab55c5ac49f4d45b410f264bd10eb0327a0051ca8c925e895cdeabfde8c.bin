@@ -1,0 +1,160 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["ff035ff9536668d8.olean"],
+  "m": false,
+  "i": "1915668432239156.ilean",
+  "c": "406558f8300f2cf2.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/LocalTripleCrossObstruction.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LocalTripleCrossObstruction.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LocalTripleCrossObstruction.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LocalTripleCrossObstruction.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LocalTripleCrossObstruction.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `set_option maxRecDepth 6000`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def localTripleSourceCoordinate (i : Fin 3) : Coordinate :=\n  let j : SeedCoordinate := ![(0, 1), (4, 4), (1, 2)] i\n  seedCoordinateEquiv (j.1, signedPositionIndex j.2)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localTripleSource_axis (i : Fin 3) :\n    originalFrame (![(0, 1), (4, 4), (1, 2)] i) = coordinateMinimum (localTripleSourceCoordinate i) :=\n  by\n  rw [originalFrame_signed_axis]\n  have hn : (![(0, 1), (4, 4), (1, 2)] i : SeedCoordinate).2 ≠ 0 := by decide +kernel +revert\n  rw [ite_eq_right hn]\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem minimalCross_I_smul (v : MinimalShell) :\n    minimalCross (codeI • v) = minimalCross v :=\n  by\n  apply (minimalCross_eq_iff _ _).mpr\n  exact ⟨⟨codeI, Subgroup.mem_zpowers codeI⟩, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem minimalCross_negI_eq (v w : MinimalShell)\n    (h : v.val.val = -rationalI w.val.val) : minimalCross v = minimalCross w :=\n  by\n  apply (minimalCross_eq_iff _ _).mpr\n  refine ⟨⟨codeI ^ 3, Subgroup.pow_mem _ (Subgroup.mem_zpowers codeI) 3⟩, ?_⟩\n  apply Subtype.ext\n  apply Subtype.ext\n  change rationalMonomialHom (codeI.val ^ 3) w.val.val = v.val.val\n  rw [h, map_pow]\n  change (rationalI ^ 3) w.val.val = -rationalI w.val.val\n  rw [show (3 : ℕ) = 2 + 1 from rfl, pow_add, pow_two, pow_one]\n  change rationalI (rationalI (rationalI w.val.val)) = -rationalI w.val.val\n  exact rationalI_square _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:23:18: missing space in the source\n\nThis part of the code\n  'v.val.val= -rationalI'\nshould be written as\n  'v.val.val = -rationalI'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem local_gaussian_shell_val (g : gaussianLatticeGroup) (v : MinimalShell) :\n    (g • v).val.val = g.val v.val.val :=\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem local_code_shell_val (g : codeGroup) (v : MinimalShell) :\n    (g • v).val.val = rationalMonomialHom g.val v.val.val :=\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem local_axis_shell_val (i : Coordinate) :\n    (coordinateShellLift (i, true)).val.val = coordinateMinimum i :=\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def shiftedSeedShell : MinimalShell :=\n  codeI • (localTripleTransport • coordinateShellLift (localTripleSourceCoordinate 2, true))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def shiftedSeedCross : MinimalCross :=\n  minimalCross shiftedSeedShell`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem shiftedSeedShell_val : shiftedSeedShell.val.val = shiftedSeedA :=\n  by\n  rw [shiftedSeedShell, local_code_shell_val, local_gaussian_shell_val, local_axis_shell_val]\n  change rationalI (localTripleTransport.val (coordinateMinimum (localTripleSourceCoordinate 2))) = _\n  rw [← localTripleSource_axis]\n  change rationalI (localTripleTransport.val (originalFrame (1, 2))) = _\n  rw [localTripleTransport_third, map_neg, rationalI_square, neg_neg]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localTripleTransport_first_cross :\n    localTripleTransport • coordinateCross (localTripleSourceCoordinate 0) = localReferenceCross :=\n  by\n  apply gaussian_coordinateCross_of_negative\n  rw [← localTripleSource_axis]\n  change localTripleTransport.val (originalFrame (0, 1)) = -coordinateMinimum (localFusionSourceCoordinate 0)\n  rw [localTripleTransport_first, ← localFusionSource_axis]\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:60:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localTripleTransport_second_cross :\n    localTripleTransport • coordinateCross (localTripleSourceCoordinate 1) = referenceSecondCross :=\n  by\n  apply minimalCross_negI_eq\n  rw [local_gaussian_shell_val, local_axis_shell_val, local_axis_shell_val]\n  change\n    localTripleTransport.val (coordinateMinimum (localTripleSourceCoordinate 1)) =\n      -rationalI (coordinateMinimum (localFusionSourceCoordinate 1))\n  rw [← localTripleSource_axis, ← localFusionSource_axis]\n  exact localTripleTransport_second`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:65:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localTripleTransport_third_cross :\n    localTripleTransport • coordinateCross (localTripleSourceCoordinate 2) = shiftedSeedCross := by\n  exact (minimalCross_I_smul _).symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem shiftedSeedCross_no_quartet :\n    ¬∃ Q : Set MinimalCross, IsQuartet Q ∧ referenceCouple ⊆ Q ∧ shiftedSeedCross ∈ Q :=\n  by\n  rintro ⟨Q, hQ, hc, hs⟩\n  apply\n    no_quartet_through_three_coordinate_rows (localTripleSourceCoordinate 0) (localTripleSourceCoordinate 1)\n      (localTripleSourceCoordinate 2) (by decide +kernel) (by decide +kernel) (by decide +kernel)\n  refine ⟨gaussianImage localTripleTransport⁻¹ Q, (isQuartet_gaussianImage _ _).mpr hQ, ?_, ?_, ?_⟩\n  · have h := Set.mem_image_of_mem (fun c : MinimalCross => localTripleTransport⁻¹ • c) (hc (Or.inl rfl))\n    change localTripleTransport⁻¹ • localReferenceCross ∈ gaussianImage localTripleTransport⁻¹ Q at h\n    rw [← localTripleTransport_first_cross, inv_smul_smul] at h\n    exact h\n  · have h := Set.mem_image_of_mem (fun c : MinimalCross => localTripleTransport⁻¹ • c) (hc (Or.inr rfl))\n    change localTripleTransport⁻¹ • referenceSecondCross ∈ gaussianImage localTripleTransport⁻¹ Q at h\n    rw [← localTripleTransport_second_cross, inv_smul_smul] at h\n    exact h\n  · have h := Set.mem_image_of_mem (fun c : MinimalCross => localTripleTransport⁻¹ • c) hs\n    change localTripleTransport⁻¹ • shiftedSeedCross ∈ gaussianImage localTripleTransport⁻¹ Q at h\n    rw [← localTripleTransport_third_cross, inv_smul_smul] at h\n    exact h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalTripleCrossObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.LocalFusionBridgeEnergy transitive imports (legacy)",
+       "58b33c3470ccaa31"],
+      ["Atlas.Rudvalis.LocalFusionBridgeEnergy:importAllArts",
+       "5b228d686f5c217c"],
+      ["Atlas.Rudvalis.CoordinateQuartetCompletion transitive imports (legacy)",
+       "da0d13dceab00b3b"],
+      ["Atlas.Rudvalis.CoordinateQuartetCompletion:importAllArts",
+       "8c97306ea82af832"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/LocalTripleCrossObstruction.lean",
+   "51fce1ce60110b81"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.LocalTripleCrossObstruction",
+   "2172047f0fa43961"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "4769b1c1a4ada962"}

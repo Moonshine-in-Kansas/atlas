@@ -1,0 +1,142 @@
+{
+  "id": "staged-J1PQComplement",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "ComparisonWork.J1PQComplement"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Janko1.pqSubgroup",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.P_mem_pqSubgroup",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.Q_mem_pqSubgroup",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.pqSubgroup_le_H",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.pqSubgroup_eq_sup_zpowers",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.Q_mem_normalizer_zpowers_P",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.zpowers_Q_le_normalizer_zpowers_P",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.zpowers_P_normal_in_pqSubgroup",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.pPowerEquiv",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.qPowerEquiv",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.pPowerEquiv_apply",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.qPowerEquiv_apply",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.card_zpowers_P",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.card_zpowers_Q",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.disjoint_zpowers_P_Q",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.pqMultiply",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.pqMultiply_bijective",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.pqProductEquiv",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.pqNormalFormEquiv",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.pqNormalFormEquiv_apply",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.pq_normal_form",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.card_pqSubgroup",
+      "module": "ComparisonWork.J1PQComplement",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-J1PQComplement-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.G2.Order",
+        "Atlas.LinearGroups.G2.Simplicity",
+        "Atlas.Sporadic.Janko1.Order",
+        "Atlas.Sporadic.Janko1.Simplicity",
+        "Atlas.Sporadic.Janko1.Perfectness"
+      ]
+    }
+  ]
+}

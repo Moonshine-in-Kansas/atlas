@@ -1,0 +1,64 @@
+{
+  "id": "staged-F4AlbertScalarIdentities",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertScalarIdentities"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimpleApply",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertScalarIdentities",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertFirstCoefficient",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertScalarIdentities",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSecondCoefficient",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertScalarIdentities",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSimple_parameter",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertScalarIdentities",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertFirstCoefficient_map",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertScalarIdentities",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Comparison.F4.albertSecondCoefficient_map",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.AlbertScalarIdentities",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-F4AlbertScalarIdentities-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis."
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

@@ -1,0 +1,155 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["6cc8a05fab19192b.olean"],
+  "m": false,
+  "i": "a8cd228dba09ae64.ilean",
+  "c": "3273252863c99423.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/LocalBridgeShellPieces.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LocalBridgeShellPieces.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LocalBridgeShellPieces.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LocalBridgeShellPieces.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LocalBridgeShellPieces.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `set_option maxRecDepth 6000`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem halfCoordinates_signedSeed (z : SeedCoordinate → ℤ) :\n    halfCoordinates (signedSeedTransport z) = (1 / 2 : ℚ) • seedIntegerRational z :=\n  by\n  funext i\n  obtain ⟨⟨r, k⟩, rfl⟩ := seedCoordinateEquiv.surjective i\n  change ((signedSeedTransport z (seedCoordinateEquiv (r, k)) : ℤ) : ℚ) / 2 = _\n  rw [signedSeedTransport_apply]\n  change _ = (1 / 2 : ℚ) * seedTransportLinear (fun i => (z i : ℚ)) (seedCoordinateEquiv (r, k))\n  rw [seedTransportLinear_apply]\n  simp only [signedPositionSign]\n  split_ifs <;> push_cast <;> ring`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:8:54: missing space in the source\n\nThis part of the code\n  'SeedCoordinate→ℤ) :'\nshould be written as\n  'SeedCoordinate → ℤ)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def localBridgeShell (c : Fin 3) : MinimalShell :=\n  ![localFusionT • coordinateShellLift (localOutsideCoordinate, true), shiftedSeedShell,\n      localFusionT • shiftedSeedShell]\n    c`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localBridgeShell_val (c : Fin 3) :\n    (localBridgeShell c).val.val = halfCoordinates (localBridgeDouble c) :=\n  by\n  rw [localBridgeDouble, halfCoordinates_signedSeed]\n  fin_cases c\n  · change (localFusionT • coordinateShellLift (localOutsideCoordinate, true)).val.val = _\n    rw [local_gaussian_shell_val, local_axis_shell_val]\n    have hi : originalFrame (1, 1) = coordinateMinimum localOutsideCoordinate := by rw [originalFrame_signed_axis]; rfl\n    rw [← hi]\n    have h := localFusionT_extra_vectors 0\n    rw [localExtraVector_axis 0 (by decide)] at h\n    change localFusionT.val (originalFrame (1, 1)) = _ at h\n    rw [h, localExtraVector, funext localBridgeDouble_first, seedIntegerRational_int_mul, smul_smul]\n    norm_num\n  · change shiftedSeedShell.val.val = _\n    rw [shiftedSeedShell_val, shiftedSeedA, funext localBridgeDouble_middle]\n    rfl\n  · change (localFusionT • shiftedSeedShell).val.val = _\n    rw [local_gaussian_shell_val, shiftedSeedShell_val, shiftedSeedA, ← localExtraVector_seed, map_smul,\n      localFusionT_extra_vectors, localExtraVector, funext localBridgeDouble_last, seedIntegerRational_int_mul,\n      smul_smul, smul_smul]\n    norm_num\n    rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localBridgeWord_mem (c : Fin 3) : localBridgeWord c ∈ quaternaryCode :=\n  by\n  obtain ⟨z, hz, he⟩ := (rudvalisLattice_mem _).mp (localBridgeShell c).val.prop\n  rw [localBridgeShell_val] at he\n  have h := halfCoordinates_injective he\n  subst z\n  exact hz`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def localBridgeMinimumWord (c : Fin 3) : MinimumWords :=\n  ⟨⟨localBridgeWord c, localBridgeWord_mem c⟩, localBridgeWord_weight c⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localBridgeMinimumWord_shell (c : Fin 3) :\n    minimumWordShellLift (localBridgeMinimumWord c) = localBridgeShell c :=\n  by\n  apply Subtype.ext\n  apply Subtype.ext\n  change halfCoordinates (integerLift (localBridgeWord c)) = _\n  rw [localBridgeWord_balanced, localBridgeShell_val]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localBridgeWord_four (c : Fin 2) :\n    admissibleFourSupport (reduce (localBridgeWord c.castSucc)) :=\n  by\n  rcases quaternary_minimum_support_cases _ (localBridgeWord_mem c.castSucc) (localBridgeWord_weight c.castSucc) with\n    h | ⟨a, ha, he⟩\n  · exact h\n  · have h := binaryNormalMap_injective (he.trans (localBridgeWord_residue c.castSucc))\n    have hz : (seedEncodedParameters (localBridgeParameterCode c.castSucc)).2.2 = 0 :=\n      by\n      have hh : ∀ c : Fin 2, ∀ i : Fin 3, (seedEncodedParameters (localBridgeParameterCode c.castSucc)).2.2 i = 0 := by\n        decide +kernel\n      exact funext (hh c)\n    exact False.elim (ha ((congrArg (fun a : BinaryParameters => a.2.2) h).trans hz))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localBridgeWord_heavy :\n    hasNonzeroQuadraticPart (reduce (localBridgeWord 2)) :=\n  by\n  refine ⟨seedEncodedParameters (localBridgeParameterCode 2), ?_, (localBridgeWord_residue 2).symm⟩\n  intro h\n  have hi := congrFun h 1\n  have hn : (seedEncodedParameters (localBridgeParameterCode 2)).2.2 (1 : Fin 3) ≠ 0 := by decide +kernel\n  exact hn hi`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:80:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localBridgeShell_four (c : Fin 2) :\n    localBridgeShell c.castSucc ∈ fourShellPiece :=\n  by\n  refine ⟨⟨⟨localBridgeWord c.castSucc, localBridgeWord_mem _⟩, localBridgeWord_weight _, localBridgeWord_four c⟩, ?_⟩\n  exact localBridgeMinimumWord_shell c.castSucc`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localBridgeShell_heavy : localBridgeShell 2 ∈ heavyShellPiece :=\n  by\n  refine ⟨⟨⟨localBridgeWord 2, localBridgeWord_mem _⟩, localBridgeWord_weight _, localBridgeWord_heavy⟩, ?_⟩\n  exact localBridgeMinimumWord_shell 2`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localFourBridgeCross_four :\n    ∃ c : FourBlockCrosses, shellPieceCrossMap fourShellPiece c = localFourBridgeCross :=\n  ⟨Quotient.mk _ ⟨localBridgeShell 0, localBridgeShell_four 0⟩, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem shiftedSeedCross_four :\n    ∃ c : FourBlockCrosses, shellPieceCrossMap fourShellPiece c = shiftedSeedCross :=\n  ⟨Quotient.mk _ ⟨localBridgeShell 1, localBridgeShell_four 1⟩, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localHeavyBridgeCross_heavy :\n    ∃ c : HeavyCrosses, shellPieceCrossMap heavyShellPiece c = localHeavyBridgeCross :=\n  ⟨Quotient.mk _ ⟨localBridgeShell 2, localBridgeShell_heavy⟩, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalBridgeShellPieces.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.LocalBridgeDoubles transitive imports (legacy)",
+       "70ef034f1828db90"],
+      ["Atlas.Rudvalis.LocalBridgeDoubles:importAllArts", "f75cb2336d4c8543"],
+      ["Atlas.Rudvalis.HeavyCommonPerpendicular transitive imports (legacy)",
+       "7abb3d4b18f6620f"],
+      ["Atlas.Rudvalis.HeavyCommonPerpendicular:importAllArts",
+       "e67591c575d8733e"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/LocalBridgeShellPieces.lean",
+   "cc34ed88bba3d686"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.LocalBridgeShellPieces", "6ab8c439560bffc1"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "0eb57add652a368e"}

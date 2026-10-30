@@ -1,0 +1,107 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["4811e11d55705632.olean"],
+  "m": false,
+  "i": "53e48e90486fc05f.ilean",
+  "c": "602294275a2fcec6.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/OrthogonalCrossCount.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/OrthogonalCrossCount.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/OrthogonalCrossCount.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/OrthogonalCrossCount.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/OrthogonalCrossCount.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `abbrev OrthogonalCrosses (x : MinimalCross) :=\n  { y : MinimalCross // CrossOrthogonal x y }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateOrthogonalCrosses_card (p : Point) (x : E) :\n    Nat.card\n        { c : CoordinateCrosses //\n          CrossOrthogonal (coordinateCross (p, x)) (shellPieceCrossMap coordinateShellPiece c) } =\n      27 :=\n  by\n  let e : CoordinateCrosses ≃ coordinateFrame := Equiv.ofInjective _ (shellPieceCrossMap_injective coordinateShellPiece)\n  have h :=\n    Nat.card_congr\n      (Equiv.subtypeEquiv e (fun _ => Iff.rfl) (p := fun c =>\n        CrossOrthogonal (coordinateCross (p, x)) (shellPieceCrossMap coordinateShellPiece c)) (q := fun c =>\n        CrossOrthogonal (coordinateCross (p, x)) c.val))\n  rw [h]\n  exact coordinateFrame_orthogonal_card ⟨coordinateCross (p, x), coordinateCross_mem _⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:14:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinate_orthogonal_crosses_card (p : Point) (x : E) :\n    Nat.card (OrthogonalCrosses (coordinateCross (p, x))) = 1755 :=\n  by\n  change Nat.card { c : MinimalCross // CrossOrthogonal (coordinateCross (p, x)) c } = 1755\n  rw [crossPiece_condition_card, coordinateOrthogonalCrosses_card, fourOrthogonalCrosses_card,\n    heavyOrthogonalCrosses_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateFrame_orthogonal_crosses_card (x : MinimalCross)\n    (hx : x ∈ coordinateFrame) : Nat.card (OrthogonalCrosses x) = 1755 :=\n  by\n  obtain ⟨⟨p, z⟩, rfl⟩ := coordinateFrame_rep x hx\n  exact coordinate_orthogonal_crosses_card p z`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:25:74: missing space in the source\n\nThis part of the code\n  'x∈coordinateFrame)'\nshould be written as\n  'x ∈ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def orthogonalCrossTransport (g : gaussianLatticeGroup)\n    (x : MinimalCross) : OrthogonalCrosses x ≃ OrthogonalCrosses (g • x) :=\n  Equiv.subtypeEquiv (MulAction.toPerm g) (fun y => (crossOrthogonal_gaussian g x y).symm)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem orthogonalCross_card_transport (g : gaussianLatticeGroup)\n    (x : MinimalCross) : Nat.card (OrthogonalCrosses (g • x)) = Nat.card (OrthogonalCrosses x) :=\n  (Nat.card_congr (orthogonalCrossTransport g x)).symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem orthogonalCross_card_coordinate_orbit (g : gaussianLatticeGroup)\n    (p : Point) (x : E) : Nat.card (OrthogonalCrosses (g • coordinateCross (p, x))) = 1755 := by\n  rw [orthogonalCross_card_transport, coordinate_orthogonal_crosses_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalCrossCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CrossPieceCount transitive imports (legacy)",
+       "46fb724b99fc7fa2"],
+      ["Atlas.Rudvalis.CrossPieceCount:importAllArts", "5e8dc32b12b07aa8"],
+      ["Atlas.Rudvalis.HeavyOrthogonalCount transitive imports (legacy)",
+       "8ed9425ce0c027b8"],
+      ["Atlas.Rudvalis.HeavyOrthogonalCount:importAllArts",
+       "12b6d1ed0fc12369"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/OrthogonalCrossCount.lean",
+   "f482b09843d1cc1a"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.OrthogonalCrossCount", "3d678098e7cea894"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "72bbe7bd1bdaf969"}

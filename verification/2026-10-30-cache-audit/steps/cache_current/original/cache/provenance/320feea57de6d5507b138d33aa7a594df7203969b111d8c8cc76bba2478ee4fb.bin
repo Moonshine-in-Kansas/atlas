@@ -1,0 +1,83 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["6c0797ebbd15ca84.olean"],
+  "m": false,
+  "i": "37d9ffeb19430527.ilean",
+  "c": "4c4d2e5ea06a88fe.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Mathieu/Mathieu24Order.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Mathieu/Mathieu24Order.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Mathieu/Mathieu24Order.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Mathieu/Mathieu24Order.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Mathieu/Mathieu24Order.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Mathieu/Mathieu24Order.lean:11:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu24Order.lean:11:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu24Order.lean:11:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem sextet_from_distinguished (S : UnorderedSextet) :\n    ∃ g : Mathieu24CodeModel, g • distinguishedUnorderedSextet = S :=\n  by\n  obtain ⟨g, hg⟩ := sextet_equivalent_distinguished S\n  exact ⟨g⁻¹, by rw [← hg, inv_smul_smul]⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu24Order.lean:11:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nTransitivity is derived from hexacode uniqueness and marked reconstruction. -/\ntheorem unorderedSextet_pretransitive : MulAction.IsPretransitive Mathieu24CodeModel UnorderedSextet :=\n  (MulAction.isPretransitive_iff_base distinguishedUnorderedSextet).mpr sextet_from_distinguished`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu24Order.lean:20:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu24Order.lean:11:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The actual orbit, identified with all unordered sextets. -/\ndef sextetOrbitEquiv : MulAction.orbit Mathieu24CodeModel distinguishedUnorderedSextet ≃ UnorderedSextet :=\n  Equiv.ofBijective Subtype.val\n    ⟨Subtype.val_injective, by\n      intro S\n      exact ⟨⟨S, (MulAction.mem_orbit_iff).mpr (sextet_from_distinguished S)⟩, rfl⟩⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu24Order.lean:11:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe orbit–stabilizer bijection for the retained full code automorphism group. -/\ndef sextetOrbitStabilizerEquiv : UnorderedSextet × SextetStabilizer ≃ Mathieu24CodeModel :=\n  (sextetOrbitEquiv.symm.prodCongr (Equiv.refl _)).trans\n    (MulAction.orbitProdStabilizerEquivGroup Mathieu24CodeModel distinguishedUnorderedSextet)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu24Order.lean:11:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem mathieu24_order : Nat.card Mathieu24CodeModel = 244823040 := by\n  rw [← Nat.card_congr sextetOrbitStabilizerEquiv, Nat.card_prod, unordered_sextets_card, sextetStabilizer_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu24Order.lean:11:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem mathieu24_order_factorization :\n    Nat.card Mathieu24CodeModel = 2 ^ 10 * 3 ^ 3 * 5 * 7 * 11 * 23 :=\n  by\n  rw [mathieu24_order]\n  norm_num`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu24Order.lean:11:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem sextetStabilizer_index : sextetStabilizer.index = 1771 :=\n  by\n  rw [Subgroup.index_eq_card]\n  change Nat.card (Mathieu24CodeModel ⧸ MulAction.stabilizer Mathieu24CodeModel distinguishedUnorderedSextet) = 1771\n  rw [← Nat.card_congr (MulAction.orbitEquivQuotientStabilizer Mathieu24CodeModel distinguishedUnorderedSextet),\n    Nat.card_congr sextetOrbitEquiv, unordered_sextets_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu24Order.lean:11:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu24Order.lean:11:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Mathieu.SextetReconstruction transitive imports (legacy)",
+       "e740cdd8914ad541"],
+      ["Atlas.Mathieu.SextetReconstruction:importAllArts", "4f737cf630b88412"],
+      ["Atlas.Mathieu.HexacodeSextetPackage transitive imports (legacy)",
+       "524afc73a3e8880e"],
+      ["Atlas.Mathieu.HexacodeSextetPackage:importAllArts", "04466c23ee876e4a"],
+      ["Mathlib.GroupTheory.GroupAction.Quotient transitive imports (legacy)",
+       "12c117c0cbb742c4"],
+      ["Mathlib.GroupTheory.GroupAction.Quotient:importAllArts",
+       "18f601f87743d6bf"],
+      ["Mathlib.GroupTheory.GroupAction.Transitive transitive imports (legacy)",
+       "33750005e22063a5"],
+      ["Mathlib.GroupTheory.GroupAction.Transitive:importAllArts",
+       "ac77b7574a2cf62c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Mathieu/Mathieu24Order.lean", "e9fc451bb9c7c86e"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Mathieu.Mathieu24Order", "2a4798b392a249c4"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "e60c2a2dee9f174e"}

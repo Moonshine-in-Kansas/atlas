@@ -1,0 +1,59 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["3b49e42f0559dd77.olean"],
+  "m": false,
+  "i": "7f95713879c1aff2.ilean",
+  "c": "1daab1c42ab1ddb2.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/ReeG2/Noncommutative.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeG2/Noncommutative.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeG2/Noncommutative.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeG2/Noncommutative.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeG2/Noncommutative.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/Noncommutative.lean:15:2: Try `simp at hc` instead of `simpa using hc`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/Noncommutative.lean:12:2: `simp at h` is a flexible tactic modifying `h`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/Noncommutative.lean:13:2: `have hp : ((1 : F), (1 : F), (0 : F)) = (1, 1, -1) := rootMatrix_injective m (congrArg Units.val h)`\nuses `h`, which was modified by the flexible tactic `simp` on line 12!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/Noncommutative.lean:7:59: missing space in the source\n\nThis part of the code\n  '3^(2*m+1))'\nshould be written as\n  '3 ^ (2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/Noncommutative.lean:7:62: missing space in the source\n\nThis part of the code\n  '3^(2*m+1)) :'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/Noncommutative.lean:17:60: missing space in the source\n\nThis part of the code\n  '3^(2*m+1))'\nshould be written as\n  '3 ^ (2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeG2/Noncommutative.lean:17:63: missing space in the source\n\nThis part of the code\n  '3^(2*m+1)) :'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.ReeG2.RootGroup transitive imports (legacy)",
+       "bc5b1a70423fa347"],
+      ["Atlas.LinearGroups.ReeG2.RootGroup:importAllArts",
+       "2124acbb3eebdde9"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/ReeG2/Noncommutative.lean",
+   "4d8eceefe477f62c"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.ReeG2.Noncommutative", "bf726b56fca68206"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "67044692dbb45cc7"}

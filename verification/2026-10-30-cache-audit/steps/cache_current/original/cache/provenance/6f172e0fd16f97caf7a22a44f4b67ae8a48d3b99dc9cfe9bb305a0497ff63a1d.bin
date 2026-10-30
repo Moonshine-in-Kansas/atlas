@@ -1,0 +1,98 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["d8f7af041b4483e4.olean"],
+  "m": false,
+  "i": "d03dd3870e7df7f9.ilean",
+  "c": "99a426716a773110.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/LocalFusionObstruction.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LocalFusionObstruction.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LocalFusionObstruction.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LocalFusionObstruction.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LocalFusionObstruction.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localFusion_third_source_row :\n    coordinateCross (localFusionSourceCoordinate 2) ∈ coordinateRowFrame (localFusionSourceCoordinate 0).1 :=\n  by\n  refine ⟨(localFusionSourceCoordinate 2).2, ?_⟩\n  exact congrArg coordinateCross (Prod.ext localFusion_source_same_row rfl)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:7:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localFusion_third_target_not_row :\n    coordinateCross (localFusionTargetCoordinate 2) ∉ coordinateRowFrame (localFusionSourceCoordinate 0).1 :=\n  by\n  rintro ⟨x, hx⟩\n  exact\n    localFusion_target_other_row\n      (coordinateCross_row_of_eq (i := ((localFusionSourceCoordinate 0).1, x)) (j := localFusionTargetCoordinate 2)\n        hx)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:12:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:14:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem localFusionT_not_codeGroup : localFusionT ∉ Set.range codeGaussianHom :=\n  by\n  rintro ⟨g, hg⟩\n  have hfix : g • coordinateCross (localFusionSourceCoordinate 0) = coordinateCross (localFusionSourceCoordinate 0) :=\n    by\n    rw [← codeGaussianHom_cross, hg]\n    exact localFusionT_fixes_first\n  let b : MulAction.stabilizer codeGroup (coordinateCross (localFusionSourceCoordinate 0)) := ⟨g, hfix⟩\n  have hh :=\n    coordinateCross_stabilizer_row_mem (localFusionSourceCoordinate 0).1 (localFusionSourceCoordinate 0).2 b\n      (coordinateCross (localFusionSourceCoordinate 2)) localFusion_third_source_row\n  change\n    g • coordinateCross (localFusionSourceCoordinate 2) ∈ coordinateRowFrame (localFusionSourceCoordinate 0).1 at hh\n  rw [← codeGaussianHom_cross, hg, localFusionT_cross_action] at hh\n  exact localFusion_third_target_not_row hh`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:22:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Every point-fixing subgroup containing the actual fusion word escapes the\n27-point coordinate-frame complement orbit. -/\ntheorem localFusion_no_coordinate_complement_orbit (K : Subgroup gaussianLatticeGroup)\n    (hfix :\n      ∀ g : K, g • coordinateCross (localFusionSourceCoordinate 0) = coordinateCross (localFusionSourceCoordinate 0))\n    (ht : localFusionT ∈ K) :\n    MulAction.orbit K (coordinateCross (localFusionSourceCoordinate 2)) ≠\n      coordinateFrame \\ {coordinateCross (localFusionSourceCoordinate 0)} :=\n  by\n  apply\n    gaussian_no_coordinate_complement_orbit K (localFusionSourceCoordinate 0).1 (localFusionSourceCoordinate 0).2\n      (coordinateCross (localFusionSourceCoordinate 2)) (coordinateCross (localFusionTargetCoordinate 2))\n      localFusion_third_source_row localFusion_third_target_not_row hfix\n  exact ⟨⟨localFusionT, ht⟩, localFusionT_cross_action 2⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:34:13: missing space in the source\n\nThis part of the code\n  '∀g : K,g'\nshould be written as\n  '∀ g :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LocalFusionObstruction.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.LocalFusionAction transitive imports (legacy)",
+       "1771d4993b395d11"],
+      ["Atlas.Rudvalis.LocalFusionAction:importAllArts", "7cc725a668825d2c"],
+      ["Atlas.Rudvalis.GaussianLocalFusionObstruction transitive imports (legacy)",
+       "e13eb3c77cd283fc"],
+      ["Atlas.Rudvalis.GaussianLocalFusionObstruction:importAllArts",
+       "b24c986927c9b331"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/LocalFusionObstruction.lean",
+   "c8268916f563ebef"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.LocalFusionObstruction", "10e24c05083533fc"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "e76db68ba46a4370"}

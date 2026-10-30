@@ -1,0 +1,165 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["b36196d3ea3716d4.olean"],
+  "m": false,
+  "i": "d1c8d8e464111381.ilean",
+  "c": "54341006c0bc95e1.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoupleFourFibre.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleFourFibre.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleFourFibre.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleFourFibre.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleFourFibre.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Fixing one coordinate cross forces preservation of its coordinate row. -/\ntheorem code_fix_coordinate_row (g : codeGroup) (p : Point) (x : E)\n    (hg : g • coordinateCross (p, x) = coordinateCross (p, x)) (y : E) :\n    ∃ z : E, g • coordinateCross (p, y) = coordinateCross (p, z) :=\n  by\n  rw [coordinateCross_action] at hg ⊢\n  have hp : (g.val.right (p, x)).1 = p :=\n    by\n    rcases (coordinateCross_eq_iff _ _).mp hg with h | h\n    · exact congrArg Prod.fst h\n    · rw [codeI_coordinate] at h\n      exact congrArg Prod.fst h\n  have hl := codeBlockLinear_coordinates g (p, x)\n  have hy := codeBlockLinear_coordinates g (p, y)\n  have he : (g.val.right (p, y)).1 = p := Subtype.ext (hy.symm.trans (hl.trans (congrArg Subtype.val hp)))\n  refine ⟨(g.val.right (p, y)).2, ?_⟩\n  congr 1\n  exact Prod.ext he rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:19:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:9:33: missing space in the source\n\nThis part of the code\n  '(p,x)=coordinateCross'\nshould be written as\n  '(p, x) ='\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:9:35: missing space in the source\n\nThis part of the code\n  '(p,x)=coordinateCross'\nshould be written as\n  'x) = coordinateCross'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:9:55: missing space in the source\n\nThis part of the code\n  '(p,x)) (y'\nshould be written as\n  '(p, x))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocal_original_fix_row (k : Fin 8) :\n    (fourLocalOriginalA.right (0, k) = (0, k) ∨ fourLocalOriginalA.right (0, k) = ((seedUnitMonomial 4).right (0, k))) ∧\n      (fourLocalOriginalB.right (0, k) = (0, k) ∨\n        fourLocalOriginalB.right (0, k) = ((seedUnitMonomial 4).right (0, k))) :=\n  by decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:24:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 2000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem original_coordinate_cross_fix_at (g : codeGroup)\n    (h : SignedCoordinates SeedCoordinate) (hg : g.val = seedConjugateHom h) (z : SeedCoordinate)\n    (hh : h.right z = z ∨ h.right z = (seedUnitMonomial 4).right z) :\n    g • coordinateCross (originalCoordinateEquiv z) = coordinateCross (originalCoordinateEquiv z) :=\n  by\n  rw [coordinateCross_action, hg]\n  change coordinateCross ((seedConjugateMonomial h).right (originalCoordinateEquiv z)) = _\n  rw [seedConjugateMonomial_right, original_congr_apply]\n  rcases hh with hh | hh\n  · rw [hh]\n  · rw [hh]\n    have hi : codeI.val.right (originalCoordinateEquiv z) = originalCoordinateEquiv ((seedUnitMonomial 4).right z) :=\n      by\n      change (seedConjugateMonomial (seedUnitMonomial 4)).right (originalCoordinateEquiv z) = _\n      rw [seedConjugateMonomial_right, original_congr_apply]\n    rw [← hi, coordinateCross_I]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:38:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:36:15: missing space in the source\n\nThis part of the code\n  'g.val=seedConjugateHom'\nshould be written as\n  'g.val = seedConjugateHom'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:37:19: missing space in the source\n\nThis part of the code\n  'z=z ∨ h.right'\nshould be written as\n  'z = z'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:37:33: missing space in the source\n\nThis part of the code\n  'z=(seedUnitMonomial'\nshould be written as\n  'z = (seedUnitMonomial'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocalCode_fix_row (x : E) :\n    fourLocalCodeA • coordinateCross (rowLabel 0, x) = coordinateCross (rowLabel 0, x) ∧\n      fourLocalCodeB • coordinateCross (rowLabel 0, x) = coordinateCross (rowLabel 0, x) :=\n  by\n  obtain ⟨k, hk⟩ := (seedInnerLabel_bijective 0).surjective x\n  let j := signedPositionIndex k\n  have hj : signedPositionIndex j = k := by\n    dsimp [j]\n    decide +kernel +revert\n  have hz : originalCoordinateEquiv (0, j) = (rowLabel 0, x) :=\n    by\n    change (rowLabel 0, seedInnerLabel 0 (signedPositionIndex j)) = _\n    rw [hj, hk]\n  rw [← hz]\n  exact\n    ⟨original_coordinate_cross_fix_at _ _ fourLocalCodeA_transport _ (fourLocal_original_fix_row j).1,\n      original_coordinate_cross_fix_at _ _ fourLocalCodeB_transport _ (fourLocal_original_fix_row j).2⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:63:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:64:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocalOrbitElement_fix_row (v : E) (b c : Bool) (x : E) :\n    fourLocalOrbitElement v b c • coordinateCross (rowLabel 0, x) = coordinateCross (rowLabel 0, x) :=\n  by\n  have hr : seedARowSign v • coordinateCross (rowLabel 0, x) = coordinateCross (rowLabel 0, x) :=\n    by\n    rw [coordinateCross_action]\n    rfl\n  rw [fourLocalOrbitElement, mul_smul]\n  have hs : fourLocalSignsCode b c • coordinateCross (rowLabel 0, x) = coordinateCross (rowLabel 0, x) := by\n    cases b <;> cases c <;>\n      simp only [fourLocalSignsCode, Bool.false_eq_true, ite_false, ite_true, mul_smul, one_smul,\n        (fourLocalCode_fix_row x).1, (fourLocalCode_fix_row x).2]\n  rw [hs, hr]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:67:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:72:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem monomial_reduce_congr (g : codeGroup) (v w : QuaternaryWord)\n    (h : reduce v = reduce w) : reduce (monomialHom g.val v) = reduce (monomialHom g.val w) :=\n  by\n  change reduce (monomialAction g.val v) = reduce (monomialAction g.val w)\n  simp only [monomialAction_reduce, h]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:80:82: missing space in the source\n\nThis part of the code\n  'v=reduce'\nshould be written as\n  'v = reduce'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nEvery signed minimum fibre is transitive under elements fixing the reference row pointwise. -/\ntheorem fourCouple_same_residue_transitive (v w : QuaternaryWord) (hv : v ∈ quaternaryCode) (hw : w ∈ quaternaryCode)\n    (hv16 : euclideanWeight v = 16) (hw16 : euclideanWeight w = 16) (hf : admissibleFourSupport (reduce v))\n    (hz : ∀ x : E, reduce v (rowLabel 0, x) = 0) (he : reduce v = reduce w) :\n    ∃ t : codeGroup,\n      (∀ x : E, t • coordinateCross (rowLabel 0, x) = coordinateCross (rowLabel 0, x)) ∧ monomialHom t.val v = w :=\n  by\n  obtain ⟨g, hg⟩ := fourLocal_minimum_word_orbit v hv hv16 hf hz\n  let u := monomialHom g.val.val⁻¹ w\n  have hu : u ∈ quaternaryCode := (g.val⁻¹).prop w |>.mp hw\n  have hu16 : euclideanWeight u = 16 := (monomial_euclideanWeight _ _).trans hw16\n  have hur : reduce u = fourPlaneSeedResidue :=\n    by\n    have h := monomial_reduce_congr g.val⁻¹ w v he.symm\n    change reduce u = reduce (monomialHom g.val.val⁻¹ v) at h\n    rw [← hg] at h\n    simpa using h.trans (by simpa using fourthSeed_residue)\n  obtain ⟨⟨a, b, c⟩, habc⟩ := fourLocalOrbitLift_surjective ⟨⟨u, hu⟩, hu16, hur⟩\n  let h := fourLocalOrbitElement a b c\n  have hh : monomialHom h.val (quaternarySeed (3, 0, 0, 0)) = u :=\n    congrArg (fun z : minimumLift fourPlaneSeedResidue => z.val.val) habc\n  refine ⟨g.val * h * g.val⁻¹, ?_, ?_⟩\n  · intro x\n    have hgfix : g.val⁻¹ • coordinateCross (rowLabel 0, 0) = coordinateCross (rowLabel 0, 0) :=\n      by\n      have hp := g⁻¹.prop\n      change g.val⁻¹ • coordinateCross (originalCoordinateEquiv (0, 1)) = _ at hp\n      rwa [(originalCoordinate_pair 0).1] at hp\n    obtain ⟨z, hz⟩ := code_fix_coordinate_row g.val⁻¹ (rowLabel 0) 0 hgfix x\n    rw [mul_smul, mul_smul, hz, fourLocalOrbitElement_fix_row, ← hz, smul_inv_smul]\n  · change monomialHom (g.val.val * h.val * g.val.val⁻¹) v = w\n    rw [map_mul, map_mul]\n    change monomialHom g.val.val (monomialHom h.val (monomialHom g.val.val⁻¹ v)) = w\n    rw [← hg]\n    have hinv :\n      monomialHom g.val.val⁻¹ (monomialHom g.val.val (quaternarySeed (3, 0, 0, 0))) = quaternarySeed (3, 0, 0, 0) := by\n      simp\n    rw [hinv]\n    rw [hh]\n    change monomialHom g.val.val (monomialHom g.val.val⁻¹ w) = w\n    simp`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:87:11: missing space in the source\n\nThis part of the code\n  'v∈quaternaryCode)'\nshould be written as\n  'v ∈ quaternaryCode)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:87:35: missing space in the source\n\nThis part of the code\n  'w∈quaternaryCode)'\nshould be written as\n  'w ∈ quaternaryCode)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:88:29: missing space in the source\n\nThis part of the code\n  'v=16) (hw16'\nshould be written as\n  'v = 16)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:88:59: missing space in the source\n\nThis part of the code\n  'w=16)\n'\nshould be written as\n  'w = 16)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:90:11: missing space in the source\n\nThis part of the code\n  '∀x : E,reduce'\nshould be written as\n  '∀ x :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleFourFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FourLocalTransitivity transitive imports (legacy)",
+       "e61945d7ea22530b"],
+      ["Atlas.Rudvalis.FourLocalTransitivity:importAllArts",
+       "e4579a8ceda6c172"],
+      ["Atlas.Rudvalis.CoupleMonomialGenerators transitive imports (legacy)",
+       "0b39bdc1b50d1395"],
+      ["Atlas.Rudvalis.CoupleMonomialGenerators:importAllArts",
+       "1255eaaa31e991ad"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoupleFourFibre.lean",
+   "868b8dd68033fbeb"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoupleFourFibre", "17bacf3ed129e4b8"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "51645a1a7568b61b"}

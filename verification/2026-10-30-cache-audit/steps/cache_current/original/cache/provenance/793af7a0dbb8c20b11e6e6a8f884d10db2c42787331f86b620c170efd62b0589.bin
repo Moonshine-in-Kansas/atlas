@@ -1,0 +1,63 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["17404bc5fc6ddcab.olean"],
+  "m": false,
+  "i": "6a319f56945c99b5.ilean",
+  "c": "6f2b5be22a1a5114.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Algebra/SymmetricMatrixMetric.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Algebra/SymmetricMatrixMetric.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Algebra/SymmetricMatrixMetric.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Algebra/SymmetricMatrixMetric.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Algebra/SymmetricMatrixMetric.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Algebra/SymmetricMatrixMetric.lean:60:8: `if_pos` has been deprecated: Use `ite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SymmetricMatrixMetric.lean:62:8: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SymmetricMatrixMetric.lean:47:0: `symmetricMatrixSquare_gram` does not use the following hypothesis in its type:\n  • [Fintype J] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SymmetricMatrixMetric.lean:50:34: missing space in the source\n\nThis part of the code\n  'i)=(a :'\nshould be written as\n  'i) = (a'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SymmetricMatrixMetric.lean:51:18: missing space in the source\n\nThis part of the code\n  'i≠j → (inner'\nshould be written as\n  'i ≠ j'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SymmetricMatrixMetric.lean:51:44: missing space in the source\n\nThis part of the code\n  'j))^2=star'\nshould be written as\n  'j)) ^ 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Algebra.SymmetricMatrixSpace transitive imports (legacy)",
+       "006e5e22c1670102"],
+      ["Atlas.Algebra.SymmetricMatrixSpace:importAllArts", "cdf4d16c715674ab"],
+      ["Mathlib.Analysis.InnerProductSpace.PiL2 transitive imports (legacy)",
+       "d7100980718ff5bf"],
+      ["Mathlib.Analysis.InnerProductSpace.PiL2:importAllArts",
+       "f90a1b234ab7b39b"],
+      ["Mathlib.Analysis.InnerProductSpace.GramMatrix transitive imports (legacy)",
+       "9d6499a648c68c2c"],
+      ["Mathlib.Analysis.InnerProductSpace.GramMatrix:importAllArts",
+       "83f97d23840364be"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Algebra/SymmetricMatrixMetric.lean",
+   "041384d76e88dff1"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Algebra.SymmetricMatrixMetric", "9e15b4e4471e8c7f"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "5ba036ea276f2183"}

@@ -1,0 +1,109 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["647e8b56e7c61b40.olean"],
+  "m": false,
+  "i": "e787862a077256f6.ilean",
+  "c": "e01479c7cb453ed6.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/HeavyLiftCount.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyLiftCount.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyLiftCount.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyLiftCount.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyLiftCount.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem minimumLift_card_binary_transport (p : binaryPermutationGroup)\n    (d : BinaryWord) (hd : hammingNorm d = 16) : Nat.card (minimumLift (d ∘ p.val.symm)) = Nat.card (minimumLift d) :=\n  by\n  have hp : hammingNorm (d ∘ p.val.symm) = 16 := (binaryWord_weight_permute d p.val.symm).trans hd\n  rw [Nat.card_congr (minimumSignedLiftEquiv _ hp), Nat.card_congr (minimumSignedLiftEquiv _ hd)]\n  obtain ⟨g, hg⟩ := codePermutationHom_surjective p\n  have he : g.val.right = p.val := congrArg Subtype.val hg\n  rw [← he]\n  exact (signedLift_card_transport g d).symm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:8:23: missing space in the source\n\nThis part of the code\n  'd=16) :'\nshould be written as\n  'd = 16)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavy_minimum_fibre_card (d : BinaryWord)\n    (hh : hasNonzeroQuadraticPart d) (hw : hammingNorm d = 16) : Nat.card (minimumLift d) = 16 :=\n  by\n  obtain ⟨a, hc, ha⟩ := hh\n  obtain ⟨p, hp⟩ := heavySupport_seed_orbit a.1 a.2.1 a.2.2 hc (ha ▸ hw)\n  have he : d = heavySeedResidue ∘ p.val := ha.symm.trans hp\n  rw [he]\n  have h := minimumLift_card_binary_transport p⁻¹ heavySeedResidue heavySeedResidue_weight\n  exact h.trans heavySeed_minimum_lifts_card`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:18:23: missing space in the source\n\nThis part of the code\n  'd=16) :'\nshould be written as\n  'd = 16)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `abbrev HeavyMinimumWords :=\n  { w : quaternaryCode // euclideanWeight w.val = 16 ∧ hasNonzeroQuadraticPart (reduce w.val) }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `abbrev HeavyMinimumResidues :=\n  { d : binaryResidue // hasNonzeroQuadraticPart d.val ∧ hammingNorm d.val = 16 }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def heavyMinimumWordsEquiv :\n    HeavyMinimumWords ≃ Σ d : HeavyMinimumResidues, minimumLift d.val.val\n    where\n  toFun\n    w :=\n    ⟨⟨⟨reduce w.val.val, (quaternaryCode_residue _).mpr ⟨_, w.val.prop, rfl⟩⟩, w.prop.2,\n        quaternary_minimum_residue_weight _ w.val.prop w.prop.1⟩,\n      ⟨w.val, w.prop.1, rfl⟩⟩\n  invFun w := ⟨w.2.val, w.2.prop.1, by rw [w.2.prop.2]; exact w.1.prop.1⟩\n  left_inv _ := Subtype.ext rfl\n  right_inv\n    w := by\n    rcases w with ⟨⟨⟨d, hd⟩, hheavy, hweight⟩, ⟨⟨v, hv⟩, hw, hr⟩⟩\n    dsimp at hr\n    subst d\n    rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavy_minimum_words_card : Nat.card HeavyMinimumWords = 14336 := by\n  classical\n  rw [Nat.card_congr heavyMinimumWordsEquiv, Nat.card_sigma]\n  have he (d : HeavyMinimumResidues) : Nat.card (minimumLift d.val.val) = 16 :=\n    heavy_minimum_fibre_card _ d.prop.1 d.prop.2\n  simp_rw [he]\n  simp only [Finset.sum_const, Finset.card_univ, smul_eq_mul]\n  rw [← Nat.card_eq_fintype_card]\n  change Nat.card { d : binaryResidue // hasNonzeroQuadraticPart d.val ∧ hammingNorm d.val = 16 } * 16 = 14336\n  rw [binaryQuadratic_weight_sixteen_count]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:51:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyLiftCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.HeavySeedLifts transitive imports (legacy)",
+       "944c79642195df7e"],
+      ["Atlas.Rudvalis.HeavySeedLifts:importAllArts", "91dc605b95f1b8a0"],
+      ["Atlas.Rudvalis.HeavySupportOrbit transitive imports (legacy)",
+       "4f5057598de3050b"],
+      ["Atlas.Rudvalis.HeavySupportOrbit:importAllArts",
+       "b45c62ff530d3a6c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/HeavyLiftCount.lean", "3e7c5d4aa0c94d25"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.HeavyLiftCount", "aa8ceec24142c505"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "b6d117be5b3b7a2a"}

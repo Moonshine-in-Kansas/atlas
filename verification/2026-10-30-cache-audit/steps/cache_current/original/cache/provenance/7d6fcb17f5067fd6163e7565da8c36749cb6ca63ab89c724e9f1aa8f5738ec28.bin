@@ -1,0 +1,116 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["962592d9884679c4.olean"],
+  "m": false,
+  "i": "969c0c7aa0d448eb.ilean",
+  "c": "575a035b9306088a.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/HeavyCoupleTransitivity.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyCoupleTransitivity.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyCoupleTransitivity.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyCoupleTransitivity.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyCoupleTransitivity.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyCoupleWord_action (g : codeCoupleStabilizer)\n    (w : HeavyCoupleWords) : ∃ u : HeavyCoupleWords, monomialHom g.val.val w.val.val.val = u.val.val.val :=\n  by\n  obtain ⟨u, hu⟩ := heavyWord_action_exists g.val w.val\n  have he : g.val • heavyMinimumWord w.val = heavyMinimumWord u := Subtype.ext (Subtype.ext hu)\n  have hx :\n    g.val • minimalCross (minimumWordShellLift (heavyMinimumWord w.val)) =\n      minimalCross (minimumWordShellLift (heavyMinimumWord u)) :=\n    by rw [← minimalCross_smul, ← minimumWordShellLift_equivariant, he]\n  have hw := (heavyWord_reference_couple_iff w.val).mpr w.prop\n  have h0 := (crossOrthogonal_codeGroup g.val localReferenceCross _).mpr hw.1\n  have h2 := (crossOrthogonal_codeGroup g.val referenceSecondCross _).mpr hw.2\n  rw [g.prop.1, hx] at h0\n  rw [g.prop.2, hx] at h2\n  exact ⟨⟨u, (heavyWord_reference_couple_iff u).mp ⟨h0, h2⟩⟩, hu⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyCoupleWord_parameters (w : HeavyCoupleWords) :\n    ∃ c : Point,\n      ∃ a : HeavyAvoidingPair c (rowLabel 0) 0, HeavyCoupleLabel c ∧ reduce w.val.val.val = fixedHeavyWord c a.val :=\n  by\n  obtain ⟨c, a, _, ha⟩ := heavyWord_avoiding_parameters (rowLabel 0) w.val w.prop.1\n  refine ⟨c, a, (heavy_couple_second_pair_iff c a).mp ?_, ha⟩\n  rw [← ha]\n  exact w.prop.2`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyCouple_same_label_transitive (v w : HeavyCoupleWords) (c : Point)\n    (a b : HeavyAvoidingPair c (rowLabel 0) 0) (hv : reduce v.val.val.val = fixedHeavyWord c a.val)\n    (hw : reduce w.val.val.val = fixedHeavyWord c b.val) :\n    ∃ g : codeCoupleStabilizer, monomialHom g.val.val v.val.val.val = w.val.val.val :=\n  by\n  let v' : SignedLift quaternaryCode (fixedHeavyWord c a.val) :=\n    ⟨v.val.val, hv, quaternary_minimum_no_twos _ v.val.val.prop v.val.prop.1⟩\n  let w' : SignedLift quaternaryCode (fixedHeavyWord c b.val) :=\n    ⟨w.val.val, hw, quaternary_minimum_no_twos _ w.val.val.prop w.val.prop.1⟩\n  obtain ⟨g, hg, hvw⟩ :=\n    heavy_pair_signedLift_row_transitive c (rowLabel 0) (heavyAvoidingPair_label_ne c _ a) a b v' w'\n  refine ⟨⟨g, ?_, ?_⟩, hvw⟩\n  · change g • localReferenceCross = localReferenceCross\n    rw [localReferenceCross_eq]; exact hg 0\n  · change g • referenceSecondCross = referenceSecondCross\n    rw [referenceSecondCross_eq]; exact hg (binaryLabel 2)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:34:30: missing space in the source\n\nThis part of the code\n  'v.val.val.val=fixedHeavyWord'\nshould be written as\n  'v.val.val.val = fixedHeavyWord'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:35:30: missing space in the source\n\nThis part of the code\n  'w.val.val.val=fixedHeavyWord'\nshould be written as\n  'w.val.val.val = fixedHeavyWord'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleBeta_fuses_heavy_labels (c d : Point) (hc : HeavyCoupleLabel c)\n    (hd : HeavyCoupleLabel d) (hcd : c ≠ d) : codeRowImage coupleCodeBeta c = d :=\n  by\n  obtain ⟨r, rfl⟩ := rowLabel_bijective.2 c\n  obtain ⟨s, rfl⟩ := rowLabel_bijective.2 d\n  rw [coupleCodeBeta_rowImage]\n  have cert :\n    ∀ r s : Fin 7,\n      HeavyCoupleLabel (rowLabel r) →\n        HeavyCoupleLabel (rowLabel s) → rowLabel r ≠ rowLabel s → rowLabel (coupleBetaRow r) = rowLabel s :=\n    by\n    unfold HeavyCoupleLabel\n    decide +kernel\n  exact cert r s hc hd hcd`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:50:38: missing space in the source\n\nThis part of the code\n  'c≠d) :'\nshould be written as\n  'c ≠ d)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nBoth heavy labels and every signed lift fuse under the actual pointwise couple stabilizer. -/\ntheorem heavyCoupleWord_transitive (v w : HeavyCoupleWords) :\n    ∃ g : codeCoupleStabilizer, monomialHom g.val.val v.val.val.val = w.val.val.val := by\n  classical\n  obtain ⟨c, a, hc, ha⟩ := heavyCoupleWord_parameters v\n  obtain ⟨d, b, hd, hb⟩ := heavyCoupleWord_parameters w\n  by_cases hcd : c = d\n  · subst d\n    exact heavyCouple_same_label_transitive v w c a b ha hb\n  · let beta : codeCoupleStabilizer := ⟨coupleCodeBeta, coupleCodeBeta_fixes_reference⟩\n    obtain ⟨u, hu⟩ := heavyCoupleWord_action beta v\n    obtain ⟨e, f, _, hf⟩ := heavyCoupleWord_parameters u\n    have he := heavyWord_label_transport coupleCodeBeta v.val u.val c e a.val f.val ha hf hu\n    rw [coupleBeta_fuses_heavy_labels c d hc hd hcd] at he\n    subst e\n    obtain ⟨g, hg⟩ := heavyCouple_same_label_transitive u w d f b hf hb\n    refine ⟨g * beta, ?_⟩\n    simp only [Subgroup.coe_mul, map_mul, LinearEquiv.mul_apply, hu, hg]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nTransitivity on the actual 512 heavy crosses perpendicular to the reference couple. -/\ntheorem heavyCross_couple_stabilizer_transitive (a b : HeavyCrosses)\n    (ha : ReferenceCoupleOrthogonal (shellPieceCrossMap heavyShellPiece a))\n    (hb : ReferenceCoupleOrthogonal (shellPieceCrossMap heavyShellPiece b)) :\n    ∃ g : codeCoupleStabilizer, g.val • shellPieceCrossMap heavyShellPiece a = shellPieceCrossMap heavyShellPiece b :=\n  by\n  obtain ⟨v, hv⟩ := heavyCross_rep a\n  obtain ⟨w, hw⟩ := heavyCross_rep b\n  have hv' := (heavyWord_reference_couple_iff v).mp (hv ▸ ha)\n  have hw' := (heavyWord_reference_couple_iff w).mp (hw ▸ hb)\n  obtain ⟨g, hg⟩ := heavyCoupleWord_transitive ⟨v, hv'⟩ ⟨w, hw'⟩\n  refine ⟨g, ?_⟩\n  have he : g.val • heavyMinimumWord v = heavyMinimumWord w := Subtype.ext (Subtype.ext hg)\n  rw [hv, hw, ← minimalCross_smul, ← minimumWordShellLift_equivariant, he]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyCoupleTransitivity.lean:6:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.HeavyCoupleFibre transitive imports (legacy)",
+       "4c9c9de2ac9a4d39"],
+      ["Atlas.Rudvalis.HeavyCoupleFibre:importAllArts", "8a5d0c0517cd0c35"],
+      ["Atlas.Rudvalis.HeavyBlockTransport transitive imports (legacy)",
+       "56445344fd5db4b5"],
+      ["Atlas.Rudvalis.HeavyBlockTransport:importAllArts", "3d5ca1bf80ca0a33"],
+      ["Atlas.Rudvalis.HeavyLocalOrbitSet transitive imports (legacy)",
+       "f0211a3005bb4c18"],
+      ["Atlas.Rudvalis.HeavyLocalOrbitSet:importAllArts", "83d4ea4ef325a5c1"],
+      ["Atlas.Rudvalis.CoupleFusionGroup transitive imports (legacy)",
+       "517aa735777e2fd5"],
+      ["Atlas.Rudvalis.CoupleFusionGroup:importAllArts",
+       "fa505d00bbd00601"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/HeavyCoupleTransitivity.lean",
+   "12c63be14a52ca48"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.HeavyCoupleTransitivity", "da22d635bbe0ef81"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "81e319b0f012d2af"}

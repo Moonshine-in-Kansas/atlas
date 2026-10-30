@@ -1,0 +1,59 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["c2c830c59a6640ac.olean"],
+  "m": false,
+  "i": "fe032ec648dcb6cd.ilean",
+  "c": "1f9a8717e14ccf9e.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/OctadQuadraticRange.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/OctadQuadraticRange.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/OctadQuadraticRange.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/OctadQuadraticRange.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/OctadQuadraticRange.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/OctadQuadraticRange.lean:6:1: 'theorem octadExteriorWord_eq_zero_iff (O : Octad) (c : golay) : octadExteriorWord O c = 0 ↔ ∀ i ∉ O.val, c.val i = 0 :=\n  by\n  constructor\n  · intro h i hi\n    have he := congrFun h (octadExteriorCoordinates O ⟨i, hi⟩)\n    simpa [octadExteriorWord] using he\n  · intro h\n    funext v\n    exact\n      h _\n        ((octadExteriorCoordinates O).symm\n            v).property' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadQuadraticRange.lean:27:4: Try `simp at hi` instead of `simpa using hi`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadQuadraticRange.lean:16:1: 'theorem octadExteriorWord_kernel_cases (O : Octad) (c : golay) (hc : octadExteriorWord O c = 0) :\n    c = 0 ∨ c = octadWord O := by\n  classical\n  by_cases hz : c = 0\n  · exact Or.inl hz\n  right\n  have hc0 : c.val ≠ 0 := fun h => hz (Subtype.ext h)\n  have hs : support c.val ⊆ O.val := by\n    intro i hi\n    by_contra hn\n    have hzi := (octadExteriorWord_eq_zero_iff O c).mp hc i hn\n    simpa [support, hzi] using hi\n  have hmin := golay_minimum c.val c.property hc0\n  have he : support c.val = O.val :=\n    Finset.eq_of_subset_of_card_le hs\n      (by\n        rw [octad_size O.val O.property]\n        exact hmin)\n  apply Subtype.ext\n  apply support_injective\n  rw [he, octadWord_support]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadQuadraticRange.lean:17:31: missing space in the source\n\nThis part of the code\n  'c=0) :'\nshould be written as\n  'c = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadQuadraticRange.lean:36:1: 'theorem octadExteriorWord_kernel (O : Octad) : (octadExteriorWord O).ker = Submodule.span Bit {octadWord O} :=\n  by\n  apply le_antisymm\n  · intro c hc\n    rcases octadExteriorWord_kernel_cases O c hc with h | h\n    · rw [h]; exact Submodule.zero_mem _\n    · rw [h]; exact Submodule.subset_span (Set.mem_singleton _)\n  · apply Submodule.span_le.mpr\n    intro c hc\n    have he : c = octadWord O := Set.mem_singleton_iff.mp hc\n    rw [he]\n    apply (octadExteriorWord_eq_zero_iff O (octadWord O)).mpr\n    intro i hi\n    simp [octadWord_apply, hi]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadQuadraticRange.lean:57:4: Try `simp at hw` instead of `simpa using hw`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/OctadQuadraticRange.lean:51:1: 'theorem octadExteriorWord_finrank (O : Octad) : Module.finrank Bit (octadExteriorWord O).range = 11 :=\n  by\n  have hn : octadWord O ≠ 0 := by\n    intro h\n    have hw := octadWord_weight O\n    rw [h] at hw\n    simpa [hammingNorm] using hw\n  have h := (octadExteriorWord O).finrank_range_add_finrank_ker\n  rw [octadExteriorWord_kernel, finrank_span_singleton hn, golay_finrank] at h\n  omega' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Fischer.OctadQuadraticRestriction transitive imports (legacy)",
+       "9c2b65bc5ae748e8"],
+      ["Atlas.Fischer.OctadQuadraticRestriction:importAllArts",
+       "68d448b9b7bf51d6"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/OctadQuadraticRange.lean",
+   "3cb2fe6b17b39e3f"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.OctadQuadraticRange", "70e81e51f5dd59f2"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "66a23f65620c402f"}

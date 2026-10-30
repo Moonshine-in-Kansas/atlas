@@ -1,0 +1,77 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["635de7d13d86acbc.olean"],
+  "m": false,
+  "i": "9e14e9cbbf2b591e.ilean",
+  "c": "1d5974b48f3c6f48.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Unitary/Eichler.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Unitary/Eichler.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Unitary/Eichler.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Unitary/Eichler.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Unitary/Eichler.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/Eichler.lean:23:15: This simp argument is unused:\n  Finset.sum_sub_distrib\n\nHint: Omit it from the simp argument list.\n  [apply] simp [eichlerColumns, eichlerRows, mulVec, dotProduct, Fin.sum_univ_succ, hermitian, Finset.mul_sum, mul_comm,\n    mul_left_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/Eichler.lean:25:13: This simp argument is unused:\n  Finset.sum_sub_distrib\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [mul_comm, mul_left_comm, ← Finset.mul_sum]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/Eichler.lean:25:37: This simp argument is unused:\n  mul_comm\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Finset.sum_sub_distrib, mul_left_comm, ← Finset.mul_sum]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/Eichler.lean:39:17: This simp argument is unused:\n  Matrix.mul_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [eichlerRows, eichlerColumns, Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one,\n    Matrix.head_cons, Matrix.head_fin_const]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/Eichler.lean:39:64: This simp argument is unused:\n  Fin.isValue\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Matrix.mul_apply, eichlerRows, eichlerColumns, Matrix.cons_val_zero, Matrix.cons_val_one,\n    Matrix.head_cons, Matrix.head_fin_const]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/Eichler.lean:40:8: This simp argument is unused:\n  Matrix.cons_val_zero\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Matrix.mul_apply, eichlerRows, eichlerColumns, Fin.isValue, Matrix.cons_val_one, Matrix.head_cons,\n    Matrix.head_fin_const]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/Eichler.lean:40:30: This simp argument is unused:\n  Matrix.cons_val_one\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Matrix.mul_apply, eichlerRows, eichlerColumns, Fin.isValue, Matrix.cons_val_zero, Matrix.head_cons,\n    Matrix.head_fin_const]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/Eichler.lean:40:51: This simp argument is unused:\n  Matrix.head_cons\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Matrix.mul_apply, eichlerRows, eichlerColumns, Fin.isValue, Matrix.cons_val_zero,\n    Matrix.cons_val_one, Matrix.head_fin_const]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/Eichler.lean:40:69: This simp argument is unused:\n  Matrix.head_fin_const\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Matrix.mul_apply, eichlerRows, eichlerColumns, Fin.isValue, Matrix.cons_val_zero,\n    Matrix.cons_val_one, Matrix.head_cons]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/Eichler.lean:41:34: This simp argument is unused:\n  sub_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hp, hpw, hwp, mul_sub, Finset.sum_sub_distrib, ← Finset.mul_sum, hermitian, mul_comm, mul_left_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/Eichler.lean:57:28: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [hermitian_add_left, hermitian_add_right, hermitian_smul_left, hermitian_smul_right, map_sub,\n    map_mul, hermitian_symmetry hdeg, hp, hpw, hwp, mul_zero, add_zero, zero_add, sub_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/Eichler.lean:57:48: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [hermitian_add_left, hermitian_add_right, hermitian_smul_left, hermitian_smul_right, map_sub,\n    map_mul, hermitian_symmetry hdeg, hp, hpw, hwp, mul_zero, zero_mul, add_zero, sub_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/Eichler.lean:57:58: This simp argument is unused:\n  sub_zero\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [hermitian_add_left, hermitian_add_right, hermitian_smul_left, hermitian_smul_right, map_sub,\n    map_mul, hermitian_symmetry hdeg, hp, hpw, hwp, mul_zero, zero_mul, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Unitary.Transvections transitive imports (legacy)",
+       "0da0b12954589eca"],
+      ["Atlas.LinearGroups.Unitary.Transvections:importAllArts",
+       "6edc3cd826bbf6f9"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Unitary/Eichler.lean",
+   "f8f6952b3447a975"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Unitary.Eichler", "ec753556534f1ab8"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "06a7294bc0661a4e"}

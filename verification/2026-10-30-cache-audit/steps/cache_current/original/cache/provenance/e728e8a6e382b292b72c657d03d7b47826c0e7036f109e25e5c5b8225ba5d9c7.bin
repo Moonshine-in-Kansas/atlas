@@ -1,0 +1,57 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["c06df711dc1aff73.olean"],
+  "m": false,
+  "i": "99a1f0e0958188a3.ilean",
+  "c": "74b28a5aca7ab602.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/CommutingExtensionModels.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CommutingExtensionModels.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CommutingExtensionModels.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CommutingExtensionModels.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CommutingExtensionModels.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/CommutingExtensionModels.lean:20:6: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CommutingExtensionModels.lean:38:55: Variable name `k` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _k\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CommutingExtensionModels.lean:38:57: Variable name `l` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _l\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CommutingExtensionModels.lean:50:50: This simp argument is unused:\n  Function.Embedding.coeFn_mk\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Finset.mem_image, Finset.mem_univ, true_and, forall_exists_index, forall_apply_eq_imp_iff,\n    basicCommutingTuple, distinguishedRoot_commute_iff]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CommutingExtensionModels.lean:51:4: This simp argument is unused:\n  distinguishedRoot_commute_iff\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Finset.mem_image, Finset.mem_univ, true_and, forall_exists_index, forall_apply_eq_imp_iff,\n    basicCommutingTuple, Function.Embedding.coeFn_mk]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Fischer.CommutingTupleHomogeneity transitive imports (legacy)",
+       "a270cb6520c76218"],
+      ["Atlas.Fischer.CommutingTupleHomogeneity:importAllArts",
+       "051ab33c4d8c1ddb"],
+      ["Atlas.Fischer.MarkedBasicExtensionRays transitive imports (legacy)",
+       "b1fa6664f97982a7"],
+      ["Atlas.Fischer.MarkedBasicExtensionRays:importAllArts",
+       "5a7a290c8da489ec"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/CommutingExtensionModels.lean",
+   "69af2936e8c579c1"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.CommutingExtensionModels", "a9c831d8fb52097b"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "06c278762d72ab15"}

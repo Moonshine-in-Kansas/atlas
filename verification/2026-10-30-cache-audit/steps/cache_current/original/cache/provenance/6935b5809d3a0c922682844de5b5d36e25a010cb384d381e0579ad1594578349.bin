@@ -1,0 +1,105 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["4beac1d185843158.olean"],
+  "m": false,
+  "i": "422e43209d30b8f9.ilean",
+  "c": "ef1bf02ba74a48d3.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/StrongCrossKernel.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/StrongCrossKernel.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/StrongCrossKernel.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/StrongCrossKernel.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/StrongCrossKernel.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem gaussianUnits_cross_trivial (u : GaussianUnits) (c : MinimalCross) :\n    u.val • c = c := by\n  induction c using Quotient.inductionOn with\n  | h v =>\n    change u.val • minimalCross v = minimalCross v\n    rw [← minimalCross_smul]\n    exact (minimalCross_eq_iff _ _).mpr ⟨u, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem code_coordinate_frame_heavy_scalar (g : codeGroup)\n    (hg : ∀ i : Coordinate, g • coordinateCross i = coordinateCross i) (w : HeavyMinimumWords)\n    (hw :\n      g • minimalCross (minimumWordShellLift (heavyMinimumWord w)) =\n        minimalCross (minimumWordShellLift (heavyMinimumWord w))) :\n    ∃ u : GaussianUnits, u.val = g := by\n  have hi := Subgroup.mem_zpowers codeI\n  rcases code_fix_coordinateCross_permutation g hg with hp | hp\n  · rcases code_sign_heavy_cross_scalar g hp w hw with he | he\n    · exact ⟨1, he.symm⟩\n    · exact ⟨⟨codeI ^ 2, Subgroup.pow_mem _ hi 2⟩, he.symm⟩\n  · let k := codeI⁻¹ * g\n    have hk : k.val.right = 1 := by\n      change codeI.val.right⁻¹ * g.val.right = 1\n      rw [hp, inv_mul_cancel]\n    have hf :\n      k • minimalCross (minimumWordShellLift (heavyMinimumWord w)) =\n        minimalCross (minimumWordShellLift (heavyMinimumWord w)) :=\n      by\n      dsimp [k]\n      rw [mul_smul, hw]\n      exact gaussianUnits_cross_trivial ⟨codeI⁻¹, Subgroup.inv_mem _ hi⟩ _\n    have hm : k ∈ GaussianUnits :=\n      by\n      rcases code_sign_heavy_cross_scalar k hk w hf with he | he\n      · rw [he]; exact Subgroup.one_mem _\n      · rw [he]; exact Subgroup.pow_mem _ hi 2\n    refine ⟨⟨codeI * k, Subgroup.mul_mem _ hi hm⟩, ?_⟩\n    dsimp [k]\n    exact mul_inv_cancel_left _ _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:14:11: missing space in the source\n\nThis part of the code\n  '∀i : Coordinate,g'\nshould be written as\n  '∀ i :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem gaussian_coordinate_frame_heavy_scalar (g : gaussianLatticeGroup)\n    (hg : ∀ i : Coordinate, g • coordinateCross i = coordinateCross i) (w : HeavyMinimumWords)\n    (hw :\n      g • minimalCross (minimumWordShellLift (heavyMinimumWord w)) =\n        minimalCross (minimumWordShellLift (heavyMinimumWord w))) :\n    ∃ u : GaussianUnits, codeGaussianHom u.val = g :=\n  by\n  have hfix : ∀ c ∈ coordinateFrame, g • c = c := by\n    intro c hc\n    obtain ⟨i, rfl⟩ := coordinateFrame_rep c hc\n    exact hg i\n  have hf : ∀ c, c ∈ coordinateFrame ↔ g • c ∈ coordinateFrame :=\n    by\n    intro c\n    constructor\n    · intro hc; rw [hfix c hc]; exact hc\n    · intro hc\n      have he := hfix (g • c) hc\n      have hh : g • c = c := (MulAction.injective g) he\n      rwa [hh] at hc\n  obtain ⟨k, rfl⟩ := (gaussian_frame_stabilizer g).mp hf\n  simp only [codeGaussianHom_cross] at hg hw\n  obtain ⟨u, hu⟩ := code_coordinate_frame_heavy_scalar k hg w hw\n  exact ⟨u, congrArg codeGaussianHom hu⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:42:11: missing space in the source\n\nThis part of the code\n  '∀i : Coordinate,g'\nshould be written as\n  '∀ i :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nFixing a cross and its entire perpendicular shell leaves only the four Gaussian scalars. -/\ntheorem gaussian_reference_perpendicular_kernel (g : gaussianLatticeGroup)\n    (hx : g • localReferenceCross = localReferenceCross)\n    (hy : ∀ c : MinimalCross, CrossOrthogonal localReferenceCross c → g • c = c) :\n    ∃ u : GaussianUnits, codeGaussianHom u.val = g :=\n  by\n  have hframe : ∀ i : Coordinate, g • coordinateCross i = coordinateCross i :=\n    by\n    intro i\n    by_cases he : localReferenceCross = coordinateCross i\n    · simpa only [← he] using hx\n    · apply hy\n      apply (coordinateFrame_orthogonal_iff _ _ _ (coordinateCross_mem _)).mpr he\n      rw [localReferenceCross_eq]\n      exact coordinateCross_mem _\n  obtain ⟨c, hc⟩ := localHeavyBridgeCross_heavy\n  obtain ⟨w, hw⟩ := heavyCross_rep c\n  apply gaussian_coordinate_frame_heavy_scalar g hframe w\n  have he := hw.symm.trans hc\n  rw [he]\n  exact hy _ localHeavyBridgeCross_common.1`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:67:33: missing space in the source\n\nThis part of the code\n  'localReferenceCross=localReferenceCross)'\nshould be written as\n  'localReferenceCross = localReferenceCross)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:68:11: missing space in the source\n\nThis part of the code\n  '∀c : MinimalCross,CrossOrthogonal'\nshould be written as\n  '∀ c :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe complete cross-action kernel consists of actual Gaussian scalar lattice isometries. -/\ntheorem gaussian_cross_kernel_scalar (g : gaussianLatticeGroup) (hg : ∀ c : MinimalCross, g • c = c) :\n    ∃ u : GaussianUnits, codeGaussianHom u.val = g :=\n  gaussian_reference_perpendicular_kernel g (hg _) (fun c _ => hg c)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:87:11: missing space in the source\n\nThis part of the code\n  '∀c : MinimalCross,g'\nshould be written as\n  '∀ c :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/StrongCrossKernel.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.HeavyCrossScalarRigidity transitive imports (legacy)",
+       "fdf8ee8523475144"],
+      ["Atlas.Rudvalis.HeavyCrossScalarRigidity:importAllArts",
+       "d92b706fab09824b"],
+      ["Atlas.Rudvalis.LocalBridgeCommonEnergy transitive imports (legacy)",
+       "28a7191c0b158730"],
+      ["Atlas.Rudvalis.LocalBridgeCommonEnergy:importAllArts",
+       "27c550000d3527d2"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/StrongCrossKernel.lean",
+   "fa74caf0b24b4e86"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.StrongCrossKernel", "06ddf9c189c709ba"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "20333b0ea86bc634"}

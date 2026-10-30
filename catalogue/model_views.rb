@@ -3,6 +3,7 @@ require 'json'
 require 'cgi'
 require 'digest'
 require 'date'
+require_relative '../verification/release_evidence'
 module AtlasModelViews
   class View
     attr_reader :registry,:overlay,:contracts,:models,:comparisons
@@ -79,8 +80,8 @@ module AtlasModelViews
     def proof_source(ref)
       name=ref.fetch('declaration').split('.').last
       lines=File.readlines(@root+'/'+ref.fetch('source'))
-      first=lines.index { |l|l.match?(/^def #{Regexp.escape(name)}\b/) } or raise 'Missing isomorphism definition'
-      last=(first+1...lines.size).find { |i|lines[i].match?(%r{^(?:/--|def |theorem |instance |end )}) } || lines.size
+      first=lines.index { |l|l.match?(/^(?:noncomputable )?(?:def|abbrev) #{Regexp.escape(name)}\b/) } or raise 'Missing isomorphism definition'
+      last=(first+1...lines.size).find { |i|lines[i].match?(%r{^(?:/--|(?:noncomputable )?(?:def|abbrev) |theorem |instance |end )}) } || lines.size
       lines[first...last].join.rstrip
     end
     def certificate(c,prefix='')="[Lean isomorphism certificate](#{prefix}catalogue/ISOMORPHISMS.md##{c.fetch('id')})"
@@ -133,14 +134,7 @@ module AtlasModelViews
       text
     end
     def comparison_status(id)
-      case id
-      when 'family.F4'
-        'The isomorphism between the Chevalley and full split-Albert models remains unfinished. No certificate identifying them is claimed.'
-      when 'family.G2'
-        'The research note records a marked Chevalley–octonion equivalence with ten passed local audit scopes, but its final preservation/registration and source export are outside this version. This version therefore supplies both model contracts, without claiming that their isomorphism certificate is included.'
-      else
-        'No registered isomorphism certificate between these models is present in this snapshot.'
-      end
+      'No registered isomorphism certificate between these models is present in this export.'
     end
     def extra_statement_names
       models.values.flatten.reject { |m|m['default'] || m['status']!='construction_complete' }
@@ -196,13 +190,14 @@ module AtlasModelViews
       end.to_h
     end
     def model_order_audit
-      directory=read_json('verification/current.json').fetch('supplemental_cache_audit').fetch('directory')
-      result=read_json(directory+'/RESULT.json')
+      current=read_json('verification/current.json')
+      pointer=current.fetch('supplemental_cache_audit');directory=pointer.fetch('directory')
+      result_path=directory+(pointer['format']==2 ? '/CACHE_AUDIT.json' : '/RESULT.json')
+      result=read_json(result_path)
       raise 'Model audit not passed' unless result['status']=='passed-source-bound-cache-audit'
-      names=File.readlines(@root+'/'+directory+'/declarations.jsonl').map { |line|JSON.parse(line).fetch('declaration') }
       orders=registry.fetch('entries').map { |e|e.dig('roles','order','declaration') }
-      raise 'Model audit omits catalogue orders' unless (orders-names).empty?
-      "[Compiled model audit (26 Oct)](../#{directory}/RESULT.json)"
+      AtlasReleaseEvidence.statements(AtlasContracts::Index.new(@root),current,orders)
+      "[Source-bound compiled model audit](../#{result_path})"
     end
     def comparison_links(ids)
       rows=ids.map { |id|comparison_rows.find { |r|r['id']==id } || (raise "Unknown comparison #{id}") }
@@ -266,23 +261,23 @@ module AtlasModelViews
         | Models and domain | Lean statement | Verification certificate |
         |---|---|---|
       MD
-      %w[family.PSL family.B family.C family.D].each do |id|
+      ids=%w[family.PSL family.B family.C family.D]+%w[family.G2 family.F4].reject { |id|edges(id).empty? }
+      ids.each do |id|
         c=edges(id).fetch(0)
         entry=registry.fetch('entries').find { |e|e['id']==id }
         label=entry.dig('presentation','label') || entry.fetch('label')
-        domain={'family.PSL'=>'n ≥ 1','family.B'=>'n ≥ 2','family.C'=>'n ≥ 2','family.D'=>'n ≥ 4'}.fetch(id)
+        domain=c.fetch('parameter_domain').fetch('description')
         names=models.fetch(id).map { |m|short_label(m) }.join(' ≃ ')
         proof="[#{c.dig('witness','declaration').split('.').last}](ISOMORPHISMS.md##{c['id']} \"#{c.dig('witness','declaration')}\")"
-        text<<"| #{label}: #{names}; #{domain}, every finite q | #{proof} | #{audit_link(c.dig('evidence','directory'),[c.dig('witness','declaration')])} |\n"
+        text<<"| #{label}: #{names}; #{domain} | #{proof} | #{audit_link(c.dig('evidence','directory'),[c.dig('witness','declaration')])} |\n"
       end
       field_name='Atlas.Comparisons.Catalogue.same_label_equiv'
       text<<"| Same family and parameters over different finite fields or extension presentations of the same sizes; within the comparison registry | #{theorem_ref(field_name,'Atlas/Comparisons/CatalogueSameLabel.lean','statement')} | #{audit_link(AGGREGATE_AUDIT,[field_name])} |\n\n"
       text<< <<~MD
         The A/B/C/D maps also cover nonsimple parameters in the stated domains.
-        **G₂:** the Chevalley–Octonion map has ten passed local audit scopes, but its
-        final preservation/registration and source export are outside this snapshot.
-        **F₄:** the Chevalley–Albert map remains unfinished. Neither is presented as
-        an included identification certificate. Each sporadic entry currently has
+        The table includes G₂/F₄ only when their actual comparison certificates
+        are registered and present in the source-bound compiled evidence.
+        Each sporadic entry currently has
         one advertised construction; the comparison registry fixes the Mathieu markings.
     
       MD
@@ -402,8 +397,8 @@ module AtlasModelViews
       text
     end
     def isomorphism_page(statements)
-      text="# Lean certificates identifying construction models\n\nThese are actual `MulEquiv` terms between the named concrete carriers. Their\nverbatim compiled types come from the source-bound 26 October audit. The linked\nLean definitions contain the proofs; the separate full audits retain type, instance\nand proof dependencies. A certificate applies on its stated domain, including\nnonsimple parameters when specified. Order equality alone is not an identification.\n\n"
-      text+="This is the technical appendix for the four included construction-identification maps. The [comparison guide](REALIZATIONS.md) also covers [exceptional isomorphisms](REALIZATIONS.md#between-families), [nonisomorphism by orders and invariants](REALIZATIONS.md#remaining-pairs), and [remaining gaps](REALIZATIONS.md#comparison-scope).\n\n"
+      text="# Lean certificates identifying construction models\n\nThese are actual `MulEquiv` terms between the named concrete carriers. Their\nverbatim compiled types come from the current source-bound audit scopes. The linked\nLean definitions contain the proofs; the separate full audits retain type, instance\nand proof dependencies. A certificate applies on its stated domain, including\nnonsimple parameters when specified. Order equality alone is not an identification.\n\n"
+      text+="This is the technical appendix for the #{comparisons.size} included construction-identification maps. The [comparison guide](REALIZATIONS.md) also covers [exceptional isomorphisms](REALIZATIONS.md#between-families), [nonisomorphism by orders and invariants](REALIZATIONS.md#remaining-pairs), and [remaining gaps](REALIZATIONS.md#comparison-scope).\n\n"
       comparisons.each do |c|
         text+="<a id=\"#{c['id']}\"></a>\n\n## #{c.dig('source','qualified_id')} ≃ #{c.dig('target','qualified_id')}\n\n"
         text+="Domain: #{c.dig('parameter_domain','description')}.\n\n"
@@ -412,7 +407,7 @@ module AtlasModelViews
           ['Target model',c.dig('target','carrier')],['Target group operations',c.dig('target','group_instance')],
           ['Parameter map',c['parameter_map']],['Isomorphism witness',c['witness']]].each { |title,ref|text+="| #{title} | #{source(ref,'../')} |\n" }
         s=statements.fetch(c.dig('witness','declaration'))
-        text+="\nProof definition (verbatim source, in namespace `Atlas.Chevalley.Catalogue`):\n\n```lean\n#{proof_source(c['witness'])}\n```\n\n"
+        text+="\nProof definition (verbatim source; see the linked file for its namespace):\n\n```lean\n#{proof_source(c['witness'])}\n```\n\n"
         text+="<details>\n<summary>Complete compiled type, including implicit instances</summary>\n\n```lean\n#{s[:text].rstrip}\n```\n\n</details>\n\n[Compiled evidence](../#{s[:path]}) · [Full dependency audit](../#{c.dig('evidence','directory')}).\n\n"
         text+="Marked-generator compatibility:\n\n"+c.fetch('compatibility').map { |r|"- #{source(r,'../')}" }.join("\n")+"\n\n"
       end

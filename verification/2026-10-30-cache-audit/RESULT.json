@@ -1,0 +1,91 @@
+{
+  "format": 1,
+  "status": "passed-source-bound-cache-audit",
+  "started_utc": "2026-10-30T07:40:13Z",
+  "finished_utc": "2026-10-30T10:43:15Z",
+  "collected_utc": "2026-10-30T10:44:50Z",
+  "fresh_project_rebuild": false,
+  "independent_replay": false,
+  "sources_unchanged": true,
+  "cache_artifacts_unchanged": true,
+  "roots": 1313,
+  "dependency_nodes": 115295,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "dependency_revisions": {
+    "mathlib": "85e3a25e006c35636f0e53b0e9296caca2685bc0",
+    "plausible": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+    "LeanSearchClient": "ba67e212be1197b84c1f1f6299488a10a3002713",
+    "importGraph": "d8823026ac7ef130c253089d95685f9877b95323",
+    "proofwidgets": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+    "aesop": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+    "Qq": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+    "batteries": "d54dddc581e08be364c278052863524bff7a99a9",
+    "Cli": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af"
+  },
+  "object_bindings": "OBJECT_BINDINGS.json",
+  "steps": [
+    {
+      "parent_result": "steps/cache_current/original/RESULT.json",
+      "parent_result_sha256": "000cd072c33c4b33c165ea194ed0486a18b2e97f6871b7d3c786d13457fb6c15",
+      "record": "steps/cache_current/PROCESS.json",
+      "log": "steps/cache_current/original/process.log.gz",
+      "name": "cache-hashes",
+      "original_mode": "cache-current",
+      "operation": "current-cache-integrity",
+      "status": "process-passed"
+    },
+    {
+      "id": "Atlas",
+      "sources": [
+        "Atlas.lean"
+      ],
+      "fresh_source_check": true,
+      "parent_result": "steps/atlas_root/original/RESULT.json",
+      "parent_result_sha256": "841dd5bfa2274d03125d6694c3b0ac96d47945e645ffe8636b4930c38e360f24",
+      "record": "steps/atlas_root/PROCESS.json",
+      "log": "steps/atlas_root/original/process.log.gz",
+      "name": "root-elaboration",
+      "status": "process-passed"
+    },
+    {
+      "id": "Atlas.Audit",
+      "sources": [
+        "Atlas/Audit.lean"
+      ],
+      "fresh_source_check": true,
+      "parent_result": "steps/audit_root/original/RESULT.json",
+      "parent_result_sha256": "87e8d59a7b42bc2222740cdddff207d5b21532be4335977af95c1e81bc2a0ff1",
+      "record": "steps/audit_root/PROCESS.json",
+      "log": "steps/audit_root/original/process.log.gz",
+      "name": "audit-root-elaboration",
+      "status": "process-passed"
+    },
+    {
+      "checkpoint": "steps/public_audit/CHECKPOINT.json",
+      "roots": "steps/public_audit/roots.json",
+      "result": "steps/public_audit/RESULT.json",
+      "declarations": "steps/public_audit/original/declarations.jsonl",
+      "dependencies": "steps/public_audit/original/dependencies.jsonl.gz",
+      "parent_result": "steps/public_audit/original/RESULT.json",
+      "parent_result_sha256": "cad6a574e6c42fac8ac696a4ca69390832a64566f3e701f9025fa4519a5c6fd6",
+      "record": "steps/public_audit/PROCESS.json",
+      "log": "steps/public_audit/original/process.log.gz",
+      "name": "full-dependency-extraction",
+      "status": "process-passed"
+    }
+  ],
+  "cache_integrity_interval": {
+    "started_utc": "2026-10-30T09:07:23Z",
+    "finished_utc": "2026-10-30T09:09:04Z",
+    "parent_result": "steps/cache_current/original/RESULT.json",
+    "parent_result_sha256": "000cd072c33c4b33c165ea194ed0486a18b2e97f6871b7d3c786d13457fb6c15",
+    "child_binding_sha256": "95bf0f109e163062cec1451a3ada366edc434aa4befc886d29f558afac33bad4"
+  },
+  "scope": "Collected genuine current cache integrity, two fresh roots and full public dependency audit. Cache before/after are the original integrity-run snapshots; no later cache snapshot is invented.",
+  "additions_policies_replaced": false,
+  "new_proof_or_audit_performed_by_collector": false
+}

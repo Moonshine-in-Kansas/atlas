@@ -1,0 +1,152 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["b6ea9af4ca022651.olean"],
+  "m": false,
+  "i": "598584158fd230d2.ilean",
+  "c": "e04f031d8f01ed76.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FourLocalSupports.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourLocalSupports.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourLocalSupports.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourLocalSupports.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourLocalSupports.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `set_option maxRecDepth 16384`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def fourLocalConstants (m : ℕ) (p : Point) : Bit :=\n  if dot (binaryLabel 1) p.val = 1 then (m / 2 ^ (rowEquiv.symm p).val : ℕ) else 0`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocalConstants_rows (m : ℕ) (r : Fin 7) :\n    fourLocalConstants m (rowLabel r) =\n      if dot (binaryLabel 1) (rowLabel r).val = 1 then ((m / 2 ^ r.val : ℕ) : Bit) else 0 :=\n  by\n  unfold fourLocalConstants\n  change\n    (if dot (binaryLabel 1) (rowLabel r).val = 1 then ((m / 2 ^ (rowEquiv.symm (rowEquiv r)).val : ℕ) : Bit) else 0) = _\n  rw [rowEquiv.symm_apply_apply]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:16:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def fourLocalBaseConstants (b : Bool) : Point → Bit :=\n  fourLocalConstants (if b then 64 else 70)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:19:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocalBaseConstants_data (b : Bool) :\n    (∀ p, dot (binaryLabel 1) p.val = 0 → fourLocalBaseConstants b p = 0) ∧\n      (∑ p, fourLocalBaseConstants b p) = 1 ∧\n        fourLocalBaseConstants b (rowLabel 1) + fourLocalBaseConstants b (rowLabel 3) = (if b then 0 else 1) :=\n  by\n  constructor\n  · intro p hp\n    simp [fourLocalBaseConstants, fourLocalConstants, hp]\n  · rw [← Equiv.sum_comp rowEquiv]\n    change (∑ i, fourLocalConstants (if b then 64 else 70) (rowLabel i)) = 1 ∧ _\n    simp only [fourLocalBaseConstants, fourLocalConstants_rows]\n    decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:24:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe point-fixing translations have two support orbits; Z joins their representatives. -/\ntheorem fourLocalConstants_translation (δ : Point → Bit) (hδ : ∀ p, dot (binaryLabel 1) p.val = 0 → δ p = 0)\n    (hs : (∑ p, δ p) = 1) :\n    ∃ b : Bool,\n      ∃ B : BinaryMatrix,\n        matrixAt B (rowLabel 0).val = 0 ∧\n          binaryNormalMap (δ, outerMatrix (binaryLabel 1) (binaryLabel 1), 0) =\n            binaryNormalMap (fourLocalBaseConstants b, outerMatrix (binaryLabel 1) (binaryLabel 1), 0) ∘\n              coordinateTranslation B :=\n  by\n  let b : Bool := decide (δ (rowLabel 1) + δ (rowLabel 3) = 0)\n  let ε := fourLocalBaseConstants b\n  have he :\n    (∀ p, dot (binaryLabel 1) p.val = 0 → ε p = 0) ∧\n      (∑ p, ε p) = 1 ∧ ε (rowLabel 1) + ε (rowLabel 3) = (if b then 0 else 1) :=\n    fourLocalBaseConstants_data b\n  have heq : δ (rowLabel 1) + δ (rowLabel 3) = ε (rowLabel 1) + ε (rowLabel 3) :=\n    by\n    rw [he.2.2]\n    have hb : ∀ a : Bit, a = (if decide (a = 0) then 0 else 1) := by decide +kernel\n    exact hb _\n  have hz : ∀ p, dot (binaryLabel 1) p.val = 0 → (δ + ε) p = 0 :=\n    by\n    intro p hp\n    simp [hδ p hp, he.1 p hp]\n  have hsum : (∑ p, (δ + ε) p) = 0 :=\n    by\n    simp only [Pi.add_apply, Finset.sum_add_distrib, hs, he.2.1]\n    decide +kernel\n  let a : Point := ⟨binaryLabel 1, by decide +kernel⟩\n  obtain ⟨u, hu⟩ := even_active_linear_restriction a (δ + ε) hz hsum\n  have h1 := hu (rowLabel 1) (by decide +kernel)\n  have h3 := hu (rowLabel 3) (by decide +kernel)\n  have hp : dot u (rowLabel 0).val = 0 :=\n    by\n    rw [show (rowLabel 0).val = (rowLabel 1).val + (rowLabel 3).val from by decide +kernel, dot_add_right, ← h1, ← h3]\n    change (δ (rowLabel 1) + ε (rowLabel 1)) + (δ (rowLabel 3) + ε (rowLabel 3)) = 0\n    calc\n      _ = (δ (rowLabel 1) + δ (rowLabel 3)) + (ε (rowLabel 1) + ε (rowLabel 3)) := by ring\n      _ = 0 := by rw [heq, CharTwo.add_self_eq_zero]\n  let B := outerMatrix (binaryLabel 1) u\n  refine ⟨b, B, ?_, ?_⟩\n  · rw [matrixAt_outer, hp, zero_smul]\n  · funext q\n    rcases q with ⟨p, x⟩\n    change\n      δ p + dot (matrixAt (outerMatrix (binaryLabel 1) (binaryLabel 1)) p.val) x + theta p 0 x =\n        ε p + dot (matrixAt (outerMatrix (binaryLabel 1) (binaryLabel 1)) p.val) (x + matrixAt B p.val) +\n          theta p 0 (x + matrixAt B p.val)\n    have haa : dot (binaryLabel 1) (binaryLabel 1) = 1 := by decide +kernel\n    simp only [B, theta_zero_parameter, add_zero, matrixAt_outer, dot_smul_left, dot_add_right, dot_smul_right, haa,\n      mul_one]\n    rcases Atlas.Codes.bit_cases (dot (binaryLabel 1) p.val) with h | h\n    · simp [h, hδ p h, he.1 p h]\n    · have hd := hu p h\n      change δ p + ε p = dot u p.val at hd\n      rw [h, one_mul, mul_one, ← hd]\n      have hh : ∀ a b c : Bit, a + c = b + (c + (a + b)) := by decide +kernel\n      exact hh _ _ _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:38:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:41:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:57:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:67:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:69:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:35:11: missing space in the source\n\nThis part of the code\n  '∀p,dot'\nshould be written as\n  '∀ p, dot'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:35:13: missing space in the source\n\nThis part of the code\n  '∀p,dot (binaryLabel'\nshould be written as\n  'p, dot'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:35:38: missing space in the source\n\nThis part of the code\n  'p.val=0 → δ'\nshould be written as\n  'p.val = 0'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:35:46: missing space in the source\n\nThis part of the code\n  'p=0) (hs'\nshould be written as\n  'p = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:35:58: missing space in the source\n\nThis part of the code\n  '(∑p,δ p)=1)'\nshould be written as\n  '(∑ p, δ'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:35:60: missing space in the source\n\nThis part of the code\n  '(∑p,δ p)=1)'\nshould be written as\n  'p, δ p)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:35:64: missing space in the source\n\nThis part of the code\n  'p)=1) :'\nshould be written as\n  'p) = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalSupports.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FourLocalFibre transitive imports (legacy)",
+       "752e26cbe1962c53"],
+      ["Atlas.Rudvalis.FourLocalFibre:importAllArts", "7d584ef1d5e45075"],
+      ["Atlas.Rudvalis.FourSupportTranslations transitive imports (legacy)",
+       "ccb12340bb0592e9"],
+      ["Atlas.Rudvalis.FourSupportTranslations:importAllArts",
+       "c9044d1bc5ff06ed"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FourLocalSupports.lean",
+   "274207b1d643bbf8"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FourLocalSupports", "c8f044460eb81771"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "21798fcea692c761"}

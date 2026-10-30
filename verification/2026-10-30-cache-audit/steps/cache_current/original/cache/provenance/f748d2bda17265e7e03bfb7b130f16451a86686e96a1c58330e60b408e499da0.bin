@@ -1,0 +1,110 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["c4e7307aaf6bc6ea.olean"],
+  "m": false,
+  "i": "879a24efe189af1f.ilean",
+  "c": "80c7710f44d74f99.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/ProjectiveFrameFiltration.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ProjectiveFrameFiltration.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ProjectiveFrameFiltration.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ProjectiveFrameFiltration.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ProjectiveFrameFiltration.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeI_blockLinear : codeBlockLinearHom codeI = 1 :=\n  by\n  change binaryBlockLinearHom (codePermutationHom codeI) = 1\n  rw [codeI_translation_identity]\n  apply show coordinateTranslationHom (Multiplicative.ofAdd (1 : BinaryMatrix)) ∈ binaryBlockLinearHom.ker from ?_\n  rw [binaryBlockLinearHom_kernel_translations]\n  exact ⟨_, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:9:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem gaussianUnits_le_codeRowKernel : GaussianUnits ≤ codeRowKernel :=\n  Subgroup.zpowers_le.mpr codeI_blockLinear`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def projectiveCodeBlockHom :\n    ProjectiveCodeGroup →* (E ≃ₗ[Bit] E) :=\n  QuotientGroup.lift GaussianUnits codeBlockLinearHom gaussianUnits_le_codeRowKernel`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveCodeBlockHom_mk (g : codeGroup) :\n    projectiveCodeBlockHom (QuotientGroup.mk' GaussianUnits g) = codeBlockLinearHom g :=\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveCodeBlockHom_surjective :\n    Function.Surjective projectiveCodeBlockHom := by\n  intro A\n  obtain ⟨g, hg⟩ := codeBlockLinearHom_surjective A\n  exact ⟨QuotientGroup.mk' GaussianUnits g, hg⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable abbrev projectiveRowKernel :=\n  projectiveCodeBlockHom.ker`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveCodeBlockHom_kernel_order :\n    Nat.card projectiveCodeBlockHom.ker = 2048 :=\n  by\n  have h := projectiveCodeBlockHom.ker.card_mul_index\n  rw [Subgroup.index_ker, MonoidHom.range_eq_top.mpr projectiveCodeBlockHom_surjective,\n    Nat.card_congr Subgroup.topEquiv.toEquiv, binaryLinearGroup_order, projectiveCodeGroup_order] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveCodeBlockHom_kernel_solvable :\n    Group.IsSolvable projectiveCodeBlockHom.ker :=\n  by\n  have : Fact (Nat.Prime 2) := ⟨by decide⟩\n  have hp : IsPGroup 2 projectiveCodeBlockHom.ker :=\n    IsPGroup.of_card (n := 11) (by rw [projectiveCodeBlockHom_kernel_order]; decide)\n  have := hp.isNilpotent\n  infer_instance`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveFrameFiltration.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FrameTranslationCommutators transitive imports (legacy)",
+       "b4a7180c46c86270"],
+      ["Atlas.Rudvalis.FrameTranslationCommutators:importAllArts",
+       "e4069907b0852cec"],
+      ["Mathlib.GroupTheory.Nilpotent transitive imports (legacy)",
+       "51a24057c187a952"],
+      ["Mathlib.GroupTheory.Nilpotent:importAllArts", "489cc6efbea81f18"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/ProjectiveFrameFiltration.lean",
+   "45901d4cbbdf2f64"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.ProjectiveFrameFiltration", "15231effa1d353ce"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "bb4faae62c772ab1"}

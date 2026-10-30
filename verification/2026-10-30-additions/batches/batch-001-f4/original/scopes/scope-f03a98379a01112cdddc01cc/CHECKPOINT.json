@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "id": "f4-catalogue-properties-candidate",
+  "environment": "verification/checkpoints/environment.json",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.Catalogue.F4Properties"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.F4FieldDomain",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.F4Construction",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.F4",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.F4Construction",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.F4Group",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.F4Construction",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.F4_finite",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.F4Properties",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.F4_order",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.F4Properties",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.F4_center",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.F4Properties",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.F4_simple",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.F4Properties",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.F4_nonabelian",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.F4Properties",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.F4_exceptions",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.F4Properties",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "property-specializations-independent-of-comparison",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.CFSG.",
+        "Atlas.CurtisTits.",
+        "Atlas.Chevalley.CurtisTits.",
+        "Atlas.Chevalley.Amalgam.",
+        "Atlas.Chevalley.Comparison.F4.",
+        "Atlas.Chevalley.Catalogue.F4_identification",
+        "Atlas.F4.Model"
+      ]
+    },
+    {
+      "id": "carrier-operations-domain-independent-of-properties",
+      "roots": [
+        "Atlas.Chevalley.Catalogue.F4FieldDomain",
+        "Atlas.Chevalley.Catalogue.F4",
+        "Atlas.Chevalley.Catalogue.F4Group"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.model_F4_card",
+        "Atlas.Chevalley.model_center_eq_bot_finiteField",
+        "Atlas.Chevalley.model_isSimpleGroup_of_good",
+        "Atlas.Chevalley.model_isSimpleGroup_iff_good",
+        "Atlas.Chevalley.Catalogue.F4_order",
+        "Atlas.Chevalley.Catalogue.F4_simple"
+      ]
+    }
+  ]
+}

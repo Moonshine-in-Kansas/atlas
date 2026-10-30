@@ -1,0 +1,175 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["78fd11c95fc8a443.olean"],
+  "m": false,
+  "i": "b28e9e9f20762988.ilean",
+  "c": "b07bb8f97d114505.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Symplectic/Checks.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Symplectic/Checks.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Symplectic/Checks.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Symplectic/Checks.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Symplectic/Checks.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Symplectic.Checks`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `variable {F : Type*} [Field F] [Finite F]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nAll numerical checks below specialize the uniform theorems; no matrix enumeration. -/\ntheorem rank_zero : Nat.card (Sp 0 F) = 1 ∧ Nat.card (PSp 0 F) = 1 ∧ ¬IsSimpleGroup (PSp 0 F) :=\n  ⟨card_rank_zero, card_projective_rank_zero, rank_zero_not_simple⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rank1_card2 (hq : Nat.card F = 2) :\n    Nat.card (Sp 1 F) = 6 ∧ Nat.card (PSp 1 F) = 6 ∧ ¬IsSimpleGroup (PSp 1 F) :=\n  by\n  rw [card_sp, card_psp (by decide), simple_iff_good, hq]\n  norm_num [orderNumerator, Finset.prod_range_succ, Good]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:11:36: missing space in the source\n\nThis part of the code\n  'F=2) :'\nshould be written as\n  'F = 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rank1_card3 (hq : Nat.card F = 3) :\n    Nat.card (Sp 1 F) = 24 ∧ Nat.card (PSp 1 F) = 12 ∧ ¬IsSimpleGroup (PSp 1 F) :=\n  by\n  rw [card_sp, card_psp (by decide), simple_iff_good, hq]\n  norm_num [orderNumerator, Finset.prod_range_succ, Good]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:17:36: missing space in the source\n\nThis part of the code\n  'F=3) :'\nshould be written as\n  'F = 3)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rank1_card4 (hq : Nat.card F = 4) :\n    Nat.card (Sp 1 F) = 60 ∧ Nat.card (PSp 1 F) = 60 ∧ IsSimpleGroup (PSp 1 F) :=\n  by\n  rw [card_sp, card_psp (by decide), simple_iff_good, hq]\n  norm_num [orderNumerator, Finset.prod_range_succ, Good]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:23:36: missing space in the source\n\nThis part of the code\n  'F=4) :'\nshould be written as\n  'F = 4)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rank2_card2 (hq : Nat.card F = 2) :\n    Nat.card (Sp 2 F) = 720 ∧ Nat.card (PSp 2 F) = 720 ∧ ¬IsSimpleGroup (PSp 2 F) :=\n  by\n  rw [card_sp, card_psp (by decide), simple_iff_good, hq]\n  norm_num [orderNumerator, Finset.prod_range_succ, Good]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:29:36: missing space in the source\n\nThis part of the code\n  'F=2) :'\nshould be written as\n  'F = 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rank2_card3 (hq : Nat.card F = 3) :\n    Nat.card (Sp 2 F) = 51840 ∧ Nat.card (PSp 2 F) = 25920 ∧ IsSimpleGroup (PSp 2 F) :=\n  by\n  rw [card_sp, card_psp (by decide), simple_iff_good, hq]\n  norm_num [orderNumerator, Finset.prod_range_succ, Good]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:35:36: missing space in the source\n\nThis part of the code\n  'F=3) :'\nshould be written as\n  'F = 3)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rank2_card4 (hq : Nat.card F = 4) :\n    Nat.card (Sp 2 F) = 979200 ∧ Nat.card (PSp 2 F) = 979200 ∧ IsSimpleGroup (PSp 2 F) :=\n  by\n  rw [card_sp, card_psp (by decide), simple_iff_good, hq]\n  norm_num [orderNumerator, Finset.prod_range_succ, Good]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:41:36: missing space in the source\n\nThis part of the code\n  'F=4) :'\nshould be written as\n  'F = 4)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rank2_card5 (hq : Nat.card F = 5) :\n    Nat.card (Sp 2 F) = 9360000 ∧ Nat.card (PSp 2 F) = 4680000 ∧ IsSimpleGroup (PSp 2 F) :=\n  by\n  rw [card_sp, card_psp (by decide), simple_iff_good, hq]\n  norm_num [orderNumerator, Finset.prod_range_succ, Good]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:47:36: missing space in the source\n\nThis part of the code\n  'F=5) :'\nshould be written as\n  'F = 5)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rank3_card2 (hq : Nat.card F = 2) :\n    Nat.card (Sp 3 F) = 1451520 ∧ Nat.card (PSp 3 F) = 1451520 ∧ IsSimpleGroup (PSp 3 F) :=\n  by\n  rw [card_sp, card_psp (by decide), simple_iff_good, hq]\n  norm_num [orderNumerator, Finset.prod_range_succ, Good]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:53:36: missing space in the source\n\nThis part of the code\n  'F=2) :'\nshould be written as\n  'F = 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rank3_card3 (hq : Nat.card F = 3) :\n    Nat.card (Sp 3 F) = 9170703360 ∧ Nat.card (PSp 3 F) = 4585351680 ∧ IsSimpleGroup (PSp 3 F) :=\n  by\n  rw [card_sp, card_psp (by decide), simple_iff_good, hq]\n  norm_num [orderNumerator, Finset.prod_range_succ, Good]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:59:36: missing space in the source\n\nThis part of the code\n  'F=3) :'\nshould be written as\n  'F = 3)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rank4_card2 (hq : Nat.card F = 2) :\n    Nat.card (Sp 4 F) = 47377612800 ∧ Nat.card (PSp 4 F) = 47377612800 ∧ IsSimpleGroup (PSp 4 F) :=\n  by\n  rw [card_sp, card_psp (by decide), simple_iff_good, hq]\n  norm_num [orderNumerator, Finset.prod_range_succ, Good]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:65:36: missing space in the source\n\nThis part of the code\n  'F=2) :'\nshould be written as\n  'F = 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Order four means the actual degree-two Galois field, never ZMod 4. -/\ntheorem galois_four :\n    Nat.card (Sp 2 (GaloisField 2 2)) = 979200 ∧\n      Nat.card (PSp 2 (GaloisField 2 2)) = 979200 ∧ IsSimpleGroup (PSp 2 (GaloisField 2 2)) :=\n  by\n  apply rank2_card4\n  simpa using GaloisField.card 2 2 (by decide)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem small_perfectness :\n    Group.IsPerfect (Sp 2 (ZMod 3)) ∧ Group.IsPerfect (Sp 3 (ZMod 2)) :=\n  by\n  constructor\n  · apply perfect_of_card_three (by decide)\n    simp [Nat.card_eq_fintype_card]\n  · apply perfect_of_card_two (by decide)\n    simp [Nat.card_eq_fintype_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe other ten refinements have ten zeros; this checks only 16 by 16 scalar data. -/\ntheorem binary_zero_counts (a : BinaryException.V) :\n    BinaryException.zeroCount (BinaryException.refinementOf a) =\n      if BinaryException.baseQuadratic a = 1 then 6 else 10 :=\n  by\n  unfold BinaryException.zeroCount\n  rw [Nat.card_eq_fintype_card]\n  exact\n    (by decide +kernel :\n        ∀ a : BinaryException.V,\n          Fintype.card { x : BinaryException.V // (BinaryException.refinementOf a).val x = 0 } =\n            if BinaryException.baseQuadratic a = 1 then 6 else 10)\n      a`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Symplectic.Checks`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/Checks.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.TypeC transitive imports (legacy)",
+       "f1c3042e20dc436b"],
+      ["Atlas.LinearGroups.TypeC:importAllArts", "aab6d49938bfef23"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Symplectic/Checks.lean",
+   "09a4f9f44a2488dd"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Symplectic.Checks", "067de94117499741"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "67ea47160acccac8"}

@@ -1,0 +1,84 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["ff8f1380ec5b433f.olean"],
+  "m": false,
+  "i": "ebe47d156b18a210.ilean",
+  "c": "7d686b7c92a56ff7.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Conway/IcosianAxisRootGeometry.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/IcosianAxisRootGeometry.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/IcosianAxisRootGeometry.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Conway/IcosianAxisRootGeometry.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Conway/IcosianAxisRootGeometry.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Conway/IcosianAxisRootGeometry.lean:23:67: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [icosianAxisRoot, icosianSingle, icosianCoordinateEmbedding, hj]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/IcosianAxisRootGeometry.lean:34:44: This simp argument is unused:\n  ← two_smul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [icosianHermitian, icosianCoordinateEmbedding, icosianAxisRoot, icosianSingle, icosianUnitIntegral,\n    Fin.sum_univ_succ, smul_smul]\n\nNote: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/IcosianAxisRootGeometry.lean:34:55: This simp argument is unused:\n  smul_smul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [icosianHermitian, icosianCoordinateEmbedding, icosianAxisRoot, icosianSingle, icosianUnitIntegral,\n    Fin.sum_univ_succ, ← two_smul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/IcosianAxisRootGeometry.lean:33:4: `simp [icosianHermitian,icosianCoordinateEmbedding,icosianAxisRoot,icosianSingle,\n      icosianUnitIntegral,Fin.sum_univ_succ,← two_smul,smul_smul]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/IcosianAxisRootGeometry.lean:33:4: Try this:\n  [apply] simp only [Fin.zero_eta, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/Conway/IcosianAxisRootGeometry.lean:35:12: `change (2 : ℚ)⁻¹ • (star (2 : IcosianQuaternion) * _) = _`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 33!",
+   "level": "info"},
+  {"message":
+   "Atlas/Conway/IcosianAxisRootGeometry.lean:33:4: `simp [icosianHermitian,icosianCoordinateEmbedding,icosianAxisRoot,icosianSingle,\n      icosianUnitIntegral,Fin.sum_univ_succ,← two_smul,smul_smul]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/IcosianAxisRootGeometry.lean:33:4: Try this:\n  [apply] simp only [Fin.mk_one, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/Conway/IcosianAxisRootGeometry.lean:35:12: `change (2 : ℚ)⁻¹ • (star (2 : IcosianQuaternion) * _) = _`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 33!",
+   "level": "info"},
+  {"message":
+   "Atlas/Conway/IcosianAxisRootGeometry.lean:33:4: `simp [icosianHermitian,icosianCoordinateEmbedding,icosianAxisRoot,icosianSingle,\n      icosianUnitIntegral,Fin.sum_univ_succ,← two_smul,smul_smul]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/IcosianAxisRootGeometry.lean:33:4: Try this:\n  [apply] simp only [Fin.reduceFinMk, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/Conway/IcosianAxisRootGeometry.lean:35:12: `change (2 : ℚ)⁻¹ • (star (2 : IcosianQuaternion) * _) = _`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 33!",
+   "level": "info"},
+  {"message":
+   "Atlas/Conway/IcosianAxisRootGeometry.lean:41:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Conway.IcosianRootPointOrthogonality transitive imports (legacy)",
+       "3c0d5e1a7506c8d1"],
+      ["Atlas.Conway.IcosianRootPointOrthogonality:importAllArts",
+       "c91b3ca1e1eaabbc"],
+      ["Atlas.Lattices.IcosianZeroRoots transitive imports (legacy)",
+       "04e05564103954a2"],
+      ["Atlas.Lattices.IcosianZeroRoots:importAllArts", "8f72ca5df827e87a"],
+      ["Atlas.Algebra.IcosianOrthogonalPair transitive imports (legacy)",
+       "105611b37eea9eb4"],
+      ["Atlas.Algebra.IcosianOrthogonalPair:importAllArts",
+       "774b42d4662e1590"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Conway/IcosianAxisRootGeometry.lean",
+   "f7ee2fe13e62f892"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Conway.IcosianAxisRootGeometry", "9680dc7d0c19eefa"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "b8e756d4b9746e2a"}

@@ -1,0 +1,249 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["4829d174a385b7b8.olean"],
+  "m": false,
+  "i": "71069219b1bfefee.ilean",
+  "c": "62bb704493ae1e02.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearAlgebra/BooleanSpinGammaConjugation.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearAlgebra/BooleanSpinGammaConjugation.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearAlgebra/BooleanSpinGammaConjugation.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearAlgebra/BooleanSpinGammaConjugation.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:7:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:32:15: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:67:8: automatically included section variable(s) unused in theorem `_private.Atlas.LinearAlgebra.BooleanSpinGammaConjugation.0.Atlas.BooleanSpin.end_mul_sub`:\n  [Fintype I]\n  [LinearOrder I]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype I] [LinearOrder I] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:67:0: `end_mul_sub` does not use the following hypothesis in its type:\n  • [Fintype I] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:71:8: automatically included section variable(s) unused in theorem `_private.Atlas.LinearAlgebra.BooleanSpinGammaConjugation.0.Atlas.BooleanSpin.end_sub_mul`:\n  [Fintype I]\n  [LinearOrder I]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype I] [LinearOrder I] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:71:0: `end_sub_mul` does not use the following hypothesis in its type:\n  • [Fintype I] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:75:8: automatically included section variable(s) unused in theorem `_private.Atlas.LinearAlgebra.BooleanSpinGammaConjugation.0.Atlas.BooleanSpin.end_mul_neg`:\n  [Fintype I]\n  [LinearOrder I]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype I] [LinearOrder I] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:75:0: `end_mul_neg` does not use the following hypothesis in its type:\n  • [Fintype I] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:84:8: automatically included section variable(s) unused in theorem `_private.Atlas.LinearAlgebra.BooleanSpinGammaConjugation.0.Atlas.BooleanSpin.end_neg_mul`:\n  [Fintype I]\n  [LinearOrder I]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype I] [LinearOrder I] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:84:0: `end_neg_mul` does not use the following hypothesis in its type:\n  • [Fintype I] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:92:8: automatically included section variable(s) unused in theorem `_private.Atlas.LinearAlgebra.BooleanSpinGammaConjugation.0.Atlas.BooleanSpin.end_neg_neg`:\n  [Fintype I]\n  [LinearOrder I]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype I] [LinearOrder I] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:92:0: `end_neg_neg` does not use the following hypothesis in its type:\n  • [Fintype I] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:96:8: automatically included section variable(s) unused in theorem `_private.Atlas.LinearAlgebra.BooleanSpinGammaConjugation.0.Atlas.BooleanSpin.end_neg_zero`:\n  [Fintype I]\n  [LinearOrder I]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype I] [LinearOrder I] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:101:13: This simp argument is unused:\n  LinearMap.neg_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [LinearMap.zero_apply, Finsupp.neg_apply, Finsupp.zero_apply, neg_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:102:4: This simp argument is unused:\n  Finsupp.neg_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.zero_apply, neg_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:96:0: `end_neg_zero` does not use the following hypothesis in its type:\n  • [Fintype I] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:104:8: automatically included section variable(s) unused in theorem `_private.Atlas.LinearAlgebra.BooleanSpinGammaConjugation.0.Atlas.BooleanSpin.end_sub_self`:\n  [Fintype I]\n  [LinearOrder I]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype I] [LinearOrder I] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:104:0: `end_sub_self` does not use the following hypothesis in its type:\n  • [Fintype I] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:107:8: automatically included section variable(s) unused in theorem `_private.Atlas.LinearAlgebra.BooleanSpinGammaConjugation.0.Atlas.BooleanSpin.end_eq_sub_of_add_eq`:\n  [Fintype I]\n  [LinearOrder I]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype I] [LinearOrder I] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:107:0: `end_eq_sub_of_add_eq` does not use the following hypothesis in its type:\n  • [Fintype I] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:108:12: missing space in the source\n\nThis part of the code\n  'f+h=g) :'\nshould be written as\n  'f + h'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:118:8: automatically included section variable(s) unused in theorem `_private.Atlas.LinearAlgebra.BooleanSpinGammaConjugation.0.Atlas.BooleanSpin.end_apply_sub`:\n  [Fintype I]\n  [LinearOrder I]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype I] [LinearOrder I] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:118:0: `end_apply_sub` does not use the following hypothesis in its type:\n  • [Fintype I] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:131:4: This simp argument is unused:\n  LinearMap.map_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, Module.End.one_apply, LinearMap.add_apply, LinearMap.sub_apply,\n    LinearMap.smul_apply, end_apply_sub (I := I) R, LinearMap.map_smul, Finsupp.add_apply, Finsupp.sub_apply,\n    Finsupp.smul_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:122:0: `conjugation_expansion` does not use the following hypothesis in its type:\n  • [Fintype I] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:144:65: This simp argument is unused:\n  end_neg_mul (I := I) R\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [creation, annihilation, end_mul_neg (I := I) R, ← mul_assoc, step_square, zero_mul,\n    end_neg_zero (I := I) R]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:144:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:171:37: This simp argument is unused:\n  LinearMap.add_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.sub_apply, LinearMap.smul_apply, LinearMap.neg_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:172:28: This simp argument is unused:\n  LinearMap.neg_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:172:49: This simp argument is unused:\n  LinearMap.zero_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:173:6: This simp argument is unused:\n  Finsupp.add_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:174:6: This simp argument is unused:\n  Finsupp.neg_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:174:25: This simp argument is unused:\n  Finsupp.zero_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply,\n    Finsupp.neg_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:194:13: This simp argument is unused:\n  Module.End.mul_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply, LinearMap.neg_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:195:26: This simp argument is unused:\n  LinearMap.neg_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:197:4: This simp argument is unused:\n  Finsupp.neg_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:208:27: This simp argument is unused:\n  annihilation\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [creation, end_mul_neg (I := I) R, end_neg_mul (I := I) R, ← mul_assoc, step_square, zero_mul,\n    end_neg_zero (I := I) R]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:208:65: This simp argument is unused:\n  end_neg_mul (I := I) R\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [creation, annihilation, end_mul_neg (I := I) R, ← mul_assoc, step_square, zero_mul,\n    end_neg_zero (I := I) R]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:208:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:222:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:249:37: This simp argument is unused:\n  LinearMap.add_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.sub_apply, LinearMap.smul_apply, LinearMap.neg_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:250:28: This simp argument is unused:\n  LinearMap.neg_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:250:49: This simp argument is unused:\n  LinearMap.zero_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:251:6: This simp argument is unused:\n  Finsupp.add_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:252:6: This simp argument is unused:\n  Finsupp.neg_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:252:25: This simp argument is unused:\n  Finsupp.zero_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply,\n    Finsupp.neg_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:270:19: This simp argument is unused:\n  Module.End.mul_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply, LinearMap.neg_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:270:41: This simp argument is unused:\n  LinearMap.add_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.sub_apply, LinearMap.smul_apply, LinearMap.neg_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:272:10: This simp argument is unused:\n  Finsupp.add_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:282:13: This simp argument is unused:\n  Module.End.mul_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply, LinearMap.neg_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:283:26: This simp argument is unused:\n  LinearMap.neg_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:283:47: This simp argument is unused:\n  LinearMap.zero_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:285:4: This simp argument is unused:\n  Finsupp.neg_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:285:23: This simp argument is unused:\n  Finsupp.zero_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply,\n    Finsupp.neg_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:316:37: This simp argument is unused:\n  LinearMap.add_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.sub_apply, LinearMap.smul_apply, LinearMap.neg_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:317:28: This simp argument is unused:\n  LinearMap.neg_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:317:49: This simp argument is unused:\n  LinearMap.zero_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:318:6: This simp argument is unused:\n  Finsupp.add_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:319:6: This simp argument is unused:\n  Finsupp.neg_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:319:25: This simp argument is unused:\n  Finsupp.zero_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply,\n    Finsupp.neg_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:337:19: This simp argument is unused:\n  Module.End.mul_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply, LinearMap.neg_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:337:41: This simp argument is unused:\n  LinearMap.add_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.sub_apply, LinearMap.smul_apply, LinearMap.neg_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:338:32: This simp argument is unused:\n  LinearMap.neg_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:339:10: This simp argument is unused:\n  Finsupp.add_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:340:10: This simp argument is unused:\n  Finsupp.neg_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:349:13: This simp argument is unused:\n  Module.End.mul_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply, LinearMap.neg_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:350:26: This simp argument is unused:\n  LinearMap.neg_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:350:47: This simp argument is unused:\n  LinearMap.zero_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply, Finsupp.neg_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:352:4: This simp argument is unused:\n  Finsupp.neg_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply,\n    Finsupp.zero_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean:352:23: This simp argument is unused:\n  Finsupp.zero_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Module.End.mul_apply, LinearMap.add_apply, LinearMap.sub_apply, LinearMap.smul_apply,\n    LinearMap.neg_apply, LinearMap.zero_apply, Finsupp.add_apply, Finsupp.sub_apply, Finsupp.smul_apply,\n    Finsupp.neg_apply, smul_eq_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearAlgebra.BooleanSpinGamma transitive imports (legacy)",
+       "823d7a390cb6583f"],
+      ["Atlas.LinearAlgebra.BooleanSpinGamma:importAllArts",
+       "4cc40cf8c46acfd8"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearAlgebra/BooleanSpinGammaConjugation.lean",
+   "5e0ba94332daec2f"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearAlgebra.BooleanSpinGammaConjugation",
+   "c3e2d1915797f5ae"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "462ee10d215701bc"}

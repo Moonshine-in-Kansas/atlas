@@ -1,0 +1,52 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["0a0f620806123043.olean"],
+  "m": false,
+  "i": "9b1ff358ebd28a17.ilean",
+  "c": "7a8f5dd6218adda1.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Lattices/SupportSignWeights.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/SupportSignWeights.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Lattices/SupportSignWeights.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/SupportSignWeights.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Lattices/SupportSignWeights.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Lattices/SupportSignWeights.lean:10:0: `binary_weight_count_fintype` does not use the following hypothesis in its type:\n  • [DecidableEq α] (#3)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/SupportSignWeights.lean:23:45: Try `simp at hi` instead of `simpa using hi`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/SupportSignWeights.lean:33:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Lattices/SupportSignWeights.lean:37:0: `binary_weight_zero_count` does not use the following hypothesis in its type:\n  • [DecidableEq α] (#3)\n\nConsider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).\n\nNote: This linter can be disabled with `set_option linter.unusedDecidableInType false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Lattices.SupportSigns transitive imports (legacy)",
+       "f159023335ff38f9"],
+      ["Atlas.Lattices.SupportSigns:importAllArts", "3099cb81e86f4263"],
+      ["Atlas.Codes.BinaryCounting transitive imports (legacy)",
+       "596d2bd18a25a1c3"],
+      ["Atlas.Codes.BinaryCounting:importAllArts", "bba0f13fcf64b649"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Lattices/SupportSignWeights.lean",
+   "1612ac38352784d2"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Lattices.SupportSignWeights", "acb09c3fc89fc819"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "2931b6d68e839d92"}

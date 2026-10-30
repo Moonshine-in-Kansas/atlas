@@ -1,0 +1,89 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["92ea1b3976921563.olean"],
+  "m": false,
+  "i": "6adfdaef07774e8f.ilean",
+  "c": "42ae436f2f03f121.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CanonicalFrameCount.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CanonicalFrameCount.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CanonicalFrameCount.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CanonicalFrameCount.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CanonicalFrameCount.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def canonicalBaseMap : IntrinsicQuartets → canonicalBases :=\n  fun Q => ⟨canonicalBase Q.val, Q.val, Q.prop, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def canonicalBaseMapFiberEquiv (F : canonicalBases) :\n    { Q : IntrinsicQuartets // canonicalBaseMap Q = F } ≃ quartetsDetermining F.val :=\n  { toFun := fun Q => ⟨Q.val.val, Q.val.prop, congrArg Subtype.val Q.prop⟩\n    invFun := fun Q => ⟨⟨Q.val, Q.prop.1⟩, Subtype.ext Q.prop.2⟩\n    left_inv := fun _ => rfl\n    right_inv := fun _ => rfl }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem canonicalBaseMap_fibre_card (F : canonicalBases) :\n    Nat.card { Q : IntrinsicQuartets // canonicalBaseMap Q = F } = 7 :=\n  by\n  rw [Nat.card_congr (canonicalBaseMapFiberEquiv F)]\n  exact quartetsDetermining_card F.val F.prop`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe actual intrinsic canonical-frame count, following the verified seven-quartet fibres. -/\ntheorem canonicalBases_card : Nat.card canonicalBases = 424125 := by\n  classical\n  let : Fintype canonicalBases := Fintype.ofFinite _\n  have h := Nat.card_congr (Equiv.sigmaFiberEquiv canonicalBaseMap)\n  rw [Nat.card_sigma, intrinsicQuartets_card] at h\n  simp_rw [canonicalBaseMap_fibre_card] at h\n  simp only [Finset.sum_const, Finset.card_univ, smul_eq_mul] at h\n  rw [← Nat.card_eq_fintype_card] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CanonicalFrameCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.IntrinsicIncidenceCounts transitive imports (legacy)",
+       "a136a461892d77c1"],
+      ["Atlas.Rudvalis.IntrinsicIncidenceCounts:importAllArts",
+       "a9618c579911a497"],
+      ["Atlas.Rudvalis.CanonicalFrames transitive imports (legacy)",
+       "c023c475d2adcecc"],
+      ["Atlas.Rudvalis.CanonicalFrames:importAllArts", "defd751b5448917c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CanonicalFrameCount.lean",
+   "cbeb2e4811caac6b"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CanonicalFrameCount", "df70a9d992fc1fe4"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "8b826bf46bad12da"}

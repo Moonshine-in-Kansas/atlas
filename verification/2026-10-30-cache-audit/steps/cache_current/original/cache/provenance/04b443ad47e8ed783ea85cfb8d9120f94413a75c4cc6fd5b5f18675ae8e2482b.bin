@@ -1,0 +1,56 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["a15eb8ff870b2dfe.olean"],
+  "m": false,
+  "i": "a1051821caf1e029.ilean",
+  "c": "1d67225cf7fe2256.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/GroupTheory/PrimitivePointChains.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/GroupTheory/PrimitivePointChains.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/GroupTheory/PrimitivePointChains.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/GroupTheory/PrimitivePointChains.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/GroupTheory/PrimitivePointChains.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/GroupTheory/PrimitivePointChains.lean:23:30: missing space in the source\n\nThis part of the code\n  'a∈B) (hb'\nshould be written as\n  'a ∈ B)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/PrimitivePointChains.lean:23:41: missing space in the source\n\nThis part of the code\n  'b∈B) (hc'\nshould be written as\n  'b ∈ B)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/PrimitivePointChains.lean:31:30: missing space in the source\n\nThis part of the code\n  'a∈B) (hb'\nshould be written as\n  'a ∈ B)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/PrimitivePointChains.lean:31:41: missing space in the source\n\nThis part of the code\n  'b∈B) :'\nshould be written as\n  'b ∈ B)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/PrimitivePointChains.lean:52:13: `Symmetric` has been deprecated: Use `Std.Symm` instead\n\nNote: The updated constant has a different type:\n  {α : Sort u} → (α → α → Prop) → Prop\ninstead of\n  {α : Sort u_1} → (α → α → Prop) → Prop",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/PrimitivePointChains.lean:62:4: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.GroupTheory.PrimitivePointMoves transitive imports (legacy)",
+       "0881db7f71289a14"],
+      ["Atlas.GroupTheory.PrimitivePointMoves:importAllArts",
+       "37ca11f4c31b9bf3"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/GroupTheory/PrimitivePointChains.lean",
+   "0a995edd7a121826"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.GroupTheory.PrimitivePointChains", "5006333cde601c4b"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "7149f66ffc27ed8a"}

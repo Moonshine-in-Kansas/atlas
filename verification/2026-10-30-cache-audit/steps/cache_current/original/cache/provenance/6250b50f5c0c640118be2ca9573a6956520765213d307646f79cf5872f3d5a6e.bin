@@ -1,0 +1,57 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["15eabe8ba1aad3c3.olean"],
+  "m": false,
+  "i": "23a9ea6e73c42c19.ilean",
+  "c": "23d753abc2e5e891.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearAlgebra/SymplecticBasis.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearAlgebra/SymplecticBasis.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearAlgebra/SymplecticBasis.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearAlgebra/SymplecticBasis.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearAlgebra/SymplecticBasis.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearAlgebra/SymplecticBasis.lean:63:59: This simp argument is unused:\n  LinearMap.add_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [planeProjection_apply, map_add, map_smul, LinearMap.smul_apply, smul_eq_mul, hef, hA.self_eq_zero,\n    reversed_pairing B hA e f hef, hw'.1, hw'.2]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/SymplecticBasis.lean:64:8: This simp argument is unused:\n  LinearMap.smul_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [planeProjection_apply, map_add, map_smul, LinearMap.add_apply, smul_eq_mul, hef, hA.self_eq_zero,\n    reversed_pairing B hA e f hef, hw'.1, hw'.2]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/SymplecticBasis.lean:64:30: This simp argument is unused:\n  smul_eq_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [planeProjection_apply, map_add, map_smul, LinearMap.add_apply, LinearMap.smul_apply, hef,\n    hA.self_eq_zero, reversed_pairing B hA e f hef, hw'.1, hw'.2]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/SymplecticBasis.lean:69:21: This simp argument is unused:\n  neg_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp [map_add, add_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/SymplecticBasis.lean:82:0: automatically included section variable(s) unused in theorem `Atlas.AlternatingForm.complement_alternating`:\n  hef\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit hef in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Mathlib.LinearAlgebra.BilinearForm.Orthogonal transitive imports (legacy)",
+       "108f9b4b152aefc4"],
+      ["Mathlib.LinearAlgebra.BilinearForm.Orthogonal:importAllArts",
+       "a019cfde5dc7050c"],
+      ["Mathlib.LinearAlgebra.Dimension.Constructions transitive imports (legacy)",
+       "275e90ea2b1fbb96"],
+      ["Mathlib.LinearAlgebra.Dimension.Constructions:importAllArts",
+       "19d0212c07b83d6b"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearAlgebra/SymplecticBasis.lean",
+   "f7606a6042250f4c"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearAlgebra.SymplecticBasis", "e0d2e3948bfe0cbd"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "cd9d171661f6e2cc"}

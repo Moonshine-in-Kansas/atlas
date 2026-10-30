@@ -1,0 +1,57 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["8c8cd7975e16b6aa.olean"],
+  "m": false,
+  "i": "545259f8c9705f6c.ilean",
+  "c": "881217206589d383.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/CubicCommonNeighborColumns.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CubicCommonNeighborColumns.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CubicCommonNeighborColumns.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CubicCommonNeighborColumns.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CubicCommonNeighborColumns.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/CubicCommonNeighborColumns.lean:57:5: Variable name `hij` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hij\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicCommonNeighborColumns.lean:57:19: Variable name `hik` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hik\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicCommonNeighborColumns.lean:80:2: Unused tactic linter: `change\n  _ ↔\n    (D.val ∩ (countingSourceOctadEquiv t).val).card = 4 ∧\n      (F.val ∩ (countingSourceOctadEquiv t).val).card = 4 ∧\n        ((D.val ∩ F.val) ∩ (countingSourceOctadEquiv t).val).card = u` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicCommonNeighborColumns.lean:74:15: missing space in the source\n\nThis part of the code\n  'D.val=tetrad'\nshould be written as\n  'D.val = tetrad'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicCommonNeighborColumns.lean:74:48: missing space in the source\n\nThis part of the code\n  'F.val=tetrad'\nshould be written as\n  'F.val = tetrad'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Fischer.CubicCommonNeighborTransport transitive imports (legacy)",
+       "6ea8c6a48f4a647d"],
+      ["Atlas.Fischer.CubicCommonNeighborTransport:importAllArts",
+       "0ed082635340e046"],
+      ["Atlas.Fischer.CountingSourceColumns transitive imports (legacy)",
+       "48a8d1ac145d4927"],
+      ["Atlas.Fischer.CountingSourceColumns:importAllArts",
+       "1a0817964ae9c1c4"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/CubicCommonNeighborColumns.lean",
+   "038da8d24d789d52"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.CubicCommonNeighborColumns", "381223039c3d4449"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "f7f8e3ef4920d371"}

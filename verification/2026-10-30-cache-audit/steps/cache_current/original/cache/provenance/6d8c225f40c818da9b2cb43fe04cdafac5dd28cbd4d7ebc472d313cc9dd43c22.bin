@@ -1,0 +1,122 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["24a6075297fdbf94.olean"],
+  "m": false,
+  "i": "c5251bd4eacd3ba0.ilean",
+  "c": "2a025057c3da4764.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/ProjectiveSimplicity.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ProjectiveSimplicity.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ProjectiveSimplicity.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ProjectiveSimplicity.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ProjectiveSimplicity.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Actual frame-group embedding transports the verified perfectness theorem. -/\ntheorem projectiveFrameGroup_perfect : Group.IsPerfect projectiveFrameGroup :=\n  by\n  let := projectiveCodeGroup_perfect\n  exact Group.IsPerfect.ofSurjective projectiveFrameEquiv.surjective`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Application of the normal-subgroup criterion with the actual quotient,\nframe subgroup, reflection and already verified orders. -/\ntheorem rudvalis_simple_of_primitive_frame_quotient (hprimitive : MulAction.IsPreprimitive RudvalisGroup MinimalCross)\n    (π : ProjectiveCodeGroup →* (E ≃ₗ[Bit] E)) (hπ : Function.Surjective π) [Group.IsSolvable π.ker] :\n    IsSimpleGroup RudvalisGroup :=\n  by\n  let : Nontrivial RudvalisGroup := Finite.one_lt_card_iff_nontrivial.mp (by rw [rudvalisGroup_order]; decide)\n  let := hprimitive\n  let := rudvalis_cross_faithful\n  let := projectiveFrameGroup_perfect\n  let := binaryLinearGroup_simple\n  let f : projectiveFrameGroup →* (E ≃ₗ[Bit] E) := π.comp projectiveFrameEquiv.symm.toMonoidHom\n  have hf : Function.Surjective f := hπ.comp projectiveFrameEquiv.symm.surjective\n  let e : f.ker →* π.ker :=\n    { toFun := fun g => ⟨projectiveFrameEquiv.symm g.val, g.prop⟩\n      map_one' := Subtype.ext (map_one projectiveFrameEquiv.symm)\n      map_mul' := fun a b => Subtype.ext (map_mul projectiveFrameEquiv.symm a.val b.val) }\n  have he : Function.Injective e := by\n    intro a b h\n    exact Subtype.ext (projectiveFrameEquiv.symm.injective (congrArg Subtype.val h))\n  let : Group.IsSolvable f.ker := Group.isSolvable_of_isSolvable_injective he\n  have hp : 7 ∣ Nat.card (E ≃ₗ[Bit] E) := by rw [binaryLinearGroup_order]; decide\n  have hx : ¬7 ∣ Nat.card (MulAction.stabilizer RudvalisGroup localReferenceCross) := by\n    rw [rudvalis_point_stabilizer_order]; decide\n  have ho : Odd projectiveFrameGroup.index :=\n    by\n    rw [projectiveFrameGroup_index]\n    exact ⟨212062, by decide⟩\n  exact\n    Atlas.GroupTheory.simple_of_primitive_perfect_frame projectiveFrameGroup f hf 7 hp localReferenceCross hx ho\n      projectiveReflection projectiveReflection_square projectiveFrameGroup_reflection_generate`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nSimplicity of the actual full Gaussian lattice group modulo its four scalar units. -/\ntheorem rudvalis_simple : IsSimpleGroup RudvalisGroup :=\n  by\n  let := projectiveCodeBlockHom_kernel_solvable\n  exact\n    rudvalis_simple_of_primitive_frame_quotient rudvalis_cross_primitive projectiveCodeBlockHom\n      projectiveCodeBlockHom_surjective`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rudvalis_nonabelian : ¬IsMulCommutative RudvalisGroup :=\n  by\n  intro h\n  let := rudvalis_simple\n  let : CommGroup RudvalisGroup := Group.commGroupOfCenterEqTop (Subgroup.center_eq_top_iff.mpr h)\n  have hp := IsSimpleGroup.prime_card (α := RudvalisGroup)\n  rw [rudvalisGroup_order] at hp\n  have hd : 2 ∣ 145926144000 := ⟨72963072000, rfl⟩\n  have he := (Nat.dvd_prime hp).mp hd\n  norm_num at he`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rudvalis_noncommutative : ∃ g h : RudvalisGroup, g * h ≠ h * g := by\n  classical simpa only [isMulCommutative_iff, not_forall] using rudvalis_nonabelian`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem full_gaussian_center_eq_scalars :\n    Subgroup.center gaussianLatticeGroup = gaussianScalarSubgroup :=\n  by\n  let := rudvalis_simple\n  exact\n    Atlas.GroupTheory.center_eq_of_simple_quotient gaussianLatticeGroup gaussianScalarSubgroup\n      gaussianScalarSubgroup_le_center rudvalis_nonabelian`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rudvalis_center_eq_bot : Subgroup.center RudvalisGroup = ⊥ :=\n  by\n  let := rudvalis_simple\n  exact Atlas.GroupTheory.center_eq_bot_of_simple_nonabelian RudvalisGroup rudvalis_nonabelian`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveSimplicity.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.ProjectiveFrameFiltration transitive imports (legacy)",
+       "d129543b9301adf5"],
+      ["Atlas.Rudvalis.ProjectiveFrameFiltration:importAllArts",
+       "44b3aa852cbd55f6"],
+      ["Atlas.Rudvalis.ProjectivePrimitivity transitive imports (legacy)",
+       "b7c092e94b79e956"],
+      ["Atlas.Rudvalis.ProjectivePrimitivity:importAllArts",
+       "46ba3f3a6ec832ea"],
+      ["Atlas.GroupTheory.CenterSimpleQuotient transitive imports (legacy)",
+       "7656285e4cbf8203"],
+      ["Atlas.GroupTheory.CenterSimpleQuotient:importAllArts",
+       "5ca2d848e92c056a"],
+      ["Atlas.Rudvalis.ProjectiveFrameEmbedding transitive imports (legacy)",
+       "5dd7767d0f0c55b0"],
+      ["Atlas.Rudvalis.ProjectiveFrameEmbedding:importAllArts",
+       "ee09bf25ebd3971c"],
+      ["Atlas.Rudvalis.FrameLinearSimplicity transitive imports (legacy)",
+       "bb9d190836b8d0f2"],
+      ["Atlas.Rudvalis.FrameLinearSimplicity:importAllArts",
+       "b96ec1d114313ff6"],
+      ["Atlas.Rudvalis.FrameTranslationCommutators transitive imports (legacy)",
+       "b4a7180c46c86270"],
+      ["Atlas.Rudvalis.FrameTranslationCommutators:importAllArts",
+       "e4069907b0852cec"],
+      ["Atlas.GroupTheory.PrimitivePerfectFrameSimplicity transitive imports (legacy)",
+       "73bbdf0b2c3950c3"],
+      ["Atlas.GroupTheory.PrimitivePerfectFrameSimplicity:importAllArts",
+       "bc0dc3df870dc501"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/ProjectiveSimplicity.lean",
+   "6cb277a8fcbe8a7a"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.ProjectiveSimplicity", "dd3e63bc2600e37b"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "f323cea7a621d32c"}

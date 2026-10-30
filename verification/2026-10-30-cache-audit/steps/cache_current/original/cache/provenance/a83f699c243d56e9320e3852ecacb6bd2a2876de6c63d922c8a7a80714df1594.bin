@@ -1,0 +1,98 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["0b6fcd517224e76f.olean"],
+  "m": false,
+  "i": "c6b172dbb8aff51a.ilean",
+  "c": "1651720f87802546.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/PointFixingTranslations.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/PointFixingTranslations.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/PointFixingTranslations.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/PointFixingTranslations.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/PointFixingTranslations.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The translations preserving a Gaussian coordinate pair in row p. -/\ndef FixesCoordinatePair (p : Point) (A : BinaryMatrix) : Prop :=\n  matrixAt A p.val = 0 ∨ matrixAt A p.val = p.val`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def contractionFibreTranspose (p : E) (b : E) :\n    { A : BinaryMatrix // matrixAt A p = b } ≃ { A : BinaryMatrix // matrixAt A.transpose p = b }\n    where\n  toFun A := ⟨A.val.transpose, by simpa using A.prop⟩\n  invFun A := ⟨A.val.transpose, A.prop⟩\n  left_inv A := Subtype.ext (Matrix.transpose_transpose _)\n  right_inv A := Subtype.ext (Matrix.transpose_transpose _)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem contraction_fibre_card (p : Point) (b : E) :\n    Nat.card { A : BinaryMatrix // matrixAt A p.val = b } = 64 :=\n  by\n  rw [Nat.card_congr (contractionFibreTranspose p.val b)]\n  exact transposeContraction_fibre_card p.val p.prop b`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def pointFixingTranslationEquiv (p : Point) :\n    { A : BinaryMatrix // FixesCoordinatePair p A } ≃\n      { A : BinaryMatrix // matrixAt A p.val = 0 } ⊕ { A : BinaryMatrix // matrixAt A p.val = p.val } :=\n  by\n  classical\n  apply Equiv.Set.union\n  exact\n    Set.disjoint_left.mpr\n      (by\n        intro A ha hb\n        exact p.prop (hb.symm.trans ha))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem pointFixingTranslations_card (p : Point) :\n    Nat.card { A : BinaryMatrix // FixesCoordinatePair p A } = 128 := by\n  rw [Nat.card_congr (pointFixingTranslationEquiv p), Nat.card_sum, contraction_fibre_card, contraction_fibre_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem translation_fixes_coordinateCross_iff (A : BinaryMatrix) (p : Point)\n    (x : E) : coordinateCross (coordinateTranslation A (p, x)) = coordinateCross (p, x) ↔ FixesCoordinatePair p A :=\n  by\n  rw [coordinateCross_eq_iff, codeI_coordinate]\n  change ((p, x + matrixAt A p.val) = (p, x) ∨ (p, x + matrixAt A p.val + p.val) = (p, x)) ↔ _\n  simp only [Prod.mk.injEq, true_and, add_assoc, add_eq_left]\n  have h : ∀ u v : E, u + v = 0 ↔ u = v := by decide +kernel\n  rw [h]\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/PointFixingTranslations.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.MatrixFibres transitive imports (legacy)",
+       "ce795da681b18f0b"],
+      ["Atlas.Rudvalis.MatrixFibres:importAllArts", "9bbd421065710922"],
+      ["Atlas.Rudvalis.BinaryTranslations transitive imports (legacy)",
+       "bf37fd8021496f91"],
+      ["Atlas.Rudvalis.BinaryTranslations:importAllArts", "d31c40b04e454bef"],
+      ["Atlas.Rudvalis.CoordinateCrossRows transitive imports (legacy)",
+       "5b907ae8c61bf8ba"],
+      ["Atlas.Rudvalis.CoordinateCrossRows:importAllArts",
+       "f9c104537d1cbc62"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/PointFixingTranslations.lean",
+   "eaef922c22ac9cac"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.PointFixingTranslations", "f1e79a4953411323"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "34ed687733123b31"}

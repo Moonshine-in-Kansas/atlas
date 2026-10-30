@@ -1,0 +1,68 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["383dc10ee2b8468b.olean"],
+  "m": false,
+  "i": "e718ad0f8626b541.ilean",
+  "c": "49d4bc8d16a6ba20.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearAlgebra/HeightUnitriangular.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearAlgebra/HeightUnitriangular.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearAlgebra/HeightUnitriangular.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearAlgebra/HeightUnitriangular.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearAlgebra/HeightUnitriangular.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearAlgebra/HeightUnitriangular.lean:19:0: automatically included section variable(s) unused in theorem `Atlas.Matrix.HeightUnitriangular.one`:\n  [Fintype ι]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype ι] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/HeightUnitriangular.lean:19:0: `one` does not use the following hypothesis in its type:\n  • [Fintype ι] (#3)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/HeightUnitriangular.lean:22:0: automatically included section variable(s) unused in theorem `Atlas.Matrix.HeightUnitriangular.diagonal`:\n  [Fintype ι]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype ι] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/HeightUnitriangular.lean:22:0: `diagonal` does not use the following hypothesis in its type:\n  • [Fintype ι] (#3)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/HeightUnitriangular.lean:64:25: This simp argument is unused:\n  Matrix.one_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hdiag i j hij, hij]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/HeightUnitriangular.lean:56:0: `eq_one_of_offDiagonal_zero` does not use the following hypothesis in its type:\n  • [Fintype ι] (#3)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/HeightUnitriangular.lean:73:12: Variable name `a` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _a\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/HeightUnitriangular.lean:73:14: Variable name `b` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _b\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearAlgebra/HeightUnitriangular.lean:74:12: Variable name `a` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _a\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Mathlib.Data.Matrix.Mul transitive imports (legacy)",
+       "43c3851444dd6c17"],
+      ["Mathlib.Data.Matrix.Mul:importAllArts", "009975bd22864bcc"],
+      ["Mathlib.Algebra.Group.Subgroup.Basic transitive imports (legacy)",
+       "f009d281e65f4a7f"],
+      ["Mathlib.Algebra.Group.Subgroup.Basic:importAllArts",
+       "a0b155b4cf3f58d3"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearAlgebra/HeightUnitriangular.lean",
+   "66bf61cfdc315e54"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearAlgebra.HeightUnitriangular", "499dab87115caa4f"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "daf629d63c5e1102"}

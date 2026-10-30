@@ -1,0 +1,91 @@
+{
+  "id": "staged-MarkedLineRestrictionPart2",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.ReeF4.MarkedLineStabilizerRestriction"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.ReeF4.markedLineLeviSection",
+      "module": "Atlas.LinearGroups.ReeF4.MarkedLineStabilizerRestriction",
+      "kind": "definition",
+      "source": "Atlas/LinearGroups/ReeF4/MarkedLineStabilizerRestriction.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.markedLineLeviSection_val",
+      "module": "Atlas.LinearGroups.ReeF4.MarkedLineStabilizerRestriction",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/MarkedLineStabilizerRestriction.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.markedLineRestrictionLinear",
+      "module": "Atlas.LinearGroups.ReeF4.MarkedLineStabilizerRestriction",
+      "kind": "definition",
+      "source": "Atlas/LinearGroups/ReeF4/MarkedLineStabilizerRestriction.lean"
+    },
+    {
+      "declaration": "Atlas.ReeF4.markedLineRestrictionLinear_apply",
+      "module": "Atlas.LinearGroups.ReeF4.MarkedLineStabilizerRestriction",
+      "kind": "theorem",
+      "source": "Atlas/LinearGroups/ReeF4/MarkedLineStabilizerRestriction.lean"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "draft-marked-line-split-restriction-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis.",
+        "Atlas.F4.",
+        "Atlas.ReeF4.card_Model",
+        "Atlas.ReeF4.card_specialPoints",
+        "Atlas.ReeF4.elementarySubgroup_eq_top",
+        "Atlas.ReeF4.model_isPerfect",
+        "Atlas.ReeF4.simple_of_large",
+        "Atlas.ReeF4.model_specialPoint_transitive"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.ReeF4.Order",
+        "Atlas.LinearGroups.ReeF4.Generation",
+        "Atlas.LinearGroups.ReeF4.SpecialPointCount",
+        "Atlas.LinearGroups.ReeF4.SpecialOppositePairCount",
+        "Atlas.LinearGroups.ReeF4.SpecialPointTransitivity",
+        "Atlas.LinearGroups.ReeF4.OppositePairRecognition",
+        "Atlas.LinearGroups.ReeF4.OppositePairStabilizer",
+        "F4Work.PointParabolicSemidirect",
+        "F4Work.PositiveRootTail",
+        "F4Work.TailLeviNormalization",
+        "F4Work.TailChartAction",
+        "F4Work.BinarySpecialPointFaithfulness",
+        "F4Work.BinaryDerivedPointFaithfulness",
+        "F4Work.BinaryDerivedAction",
+        "F4Work.ReeFullOrder",
+        "F4Work.ReeFullGeneration",
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood",
+        "Atlas.LinearGroups.ReeF4.PointParabolicSemidirect",
+        "Atlas.LinearGroups.ReeF4.PositiveRootTail",
+        "Atlas.LinearGroups.ReeF4.TailLeviNormalization",
+        "Atlas.LinearGroups.ReeF4.TailChartAction",
+        "Atlas.LinearGroups.ReeF4.BinarySpecialPointFaithfulness",
+        "Atlas.LinearGroups.ReeF4.BinaryDerivedPointFaithfulness",
+        "Atlas.LinearGroups.ReeF4.BinaryDerivedAction",
+        "Atlas.LinearGroups.ReeF4.ReeFullOrder",
+        "Atlas.LinearGroups.ReeF4.OppositePairStabilizerOrder",
+        "Atlas.LinearGroups.ReeF4.ReeFullGeneration"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

@@ -1,0 +1,101 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["5c19c509712f1ccc.olean"],
+  "m": false,
+  "i": "c057fcf0f2fa57d5.ilean",
+  "c": "e0816326654e46ce.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CrossPieceCount.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CrossPieceCount.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CrossPieceCount.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CrossPieceCount.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CrossPieceCount.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def crossPieceMap :\n    CoordinateCrosses ⊕ FourBlockCrosses ⊕ HeavyCrosses → MinimalCross :=\n  Sum.elim (shellPieceCrossMap coordinateShellPiece)\n    (Sum.elim (shellPieceCrossMap fourShellPiece) (shellPieceCrossMap heavyShellPiece))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:6:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem crossPieceMap_bijective : Function.Bijective crossPieceMap :=\n  by\n  constructor\n  · intro a b h\n    rcases a with a | a | a <;> rcases b with b | b | b\n    · exact congrArg Sum.inl (shellPieceCrossMap_injective _ h)\n    · exact (coordinate_four_cross_disjoint a b h).elim\n    · exact (coordinate_heavy_cross_disjoint a b h).elim\n    · exact (coordinate_four_cross_disjoint b a h.symm).elim\n    · exact congrArg (Sum.inr ∘ Sum.inl) (shellPieceCrossMap_injective _ h)\n    · exact (four_heavy_cross_disjoint a b h).elim\n    · exact (coordinate_heavy_cross_disjoint b a h.symm).elim\n    · exact (four_heavy_cross_disjoint b a h.symm).elim\n    · exact congrArg (Sum.inr ∘ Sum.inr) (shellPieceCrossMap_injective _ h)\n  · intro c\n    rcases minimalCross_piece_cases c with ⟨a, ha⟩ | ⟨a, ha⟩ | ⟨a, ha⟩\n    · exact ⟨Sum.inl a, ha⟩\n    · exact ⟨Sum.inr (Sum.inl a), ha⟩\n    · exact ⟨Sum.inr (Sum.inr a), ha⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def crossPieceEquiv :\n    CoordinateCrosses ⊕ FourBlockCrosses ⊕ HeavyCrosses ≃ MinimalCross :=\n  Equiv.ofBijective crossPieceMap crossPieceMap_bijective`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:29:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def crossPieceConditionEquiv (P : MinimalCross → Prop) :\n    { c : MinimalCross // P c } ≃\n      { c : CoordinateCrosses // P (shellPieceCrossMap coordinateShellPiece c) } ⊕\n        { c : FourBlockCrosses // P (shellPieceCrossMap fourShellPiece c) } ⊕\n          { c : HeavyCrosses // P (shellPieceCrossMap heavyShellPiece c) } :=\n  (Equiv.subtypeEquiv crossPieceEquiv (fun _ => Iff.rfl)).symm.trans\n    (Equiv.subtypeSum.trans (Equiv.sumCongr (Equiv.refl _) Equiv.subtypeSum))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:32:60: missing space in the source\n\nThis part of the code\n  'MinimalCross→Prop)'\nshould be written as\n  'MinimalCross → Prop)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem crossPiece_condition_card (P : MinimalCross → Prop) :\n    Nat.card { c : MinimalCross // P c } =\n      Nat.card { c : CoordinateCrosses // P (shellPieceCrossMap coordinateShellPiece c) } +\n        (Nat.card { c : FourBlockCrosses // P (shellPieceCrossMap fourShellPiece c) } +\n          Nat.card { c : HeavyCrosses // P (shellPieceCrossMap heavyShellPiece c) }) :=\n  by rw [Nat.card_congr (crossPieceConditionEquiv P), Nat.card_sum, Nat.card_sum]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:40:51: missing space in the source\n\nThis part of the code\n  'MinimalCross→Prop)'\nshould be written as\n  'MinimalCross → Prop)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossPieceCount.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.LatticeCrossPartition transitive imports (legacy)",
+       "833b9e8e7211eb1b"],
+      ["Atlas.Rudvalis.LatticeCrossPartition:importAllArts",
+       "f3386e9d66d54cd1"],
+      ["Mathlib.Logic.Equiv.Sum transitive imports (legacy)",
+       "022df13afbc9a49e"],
+      ["Mathlib.Logic.Equiv.Sum:importAllArts", "d01ea935ec228ecd"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CrossPieceCount.lean",
+   "d107467b8d806031"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CrossPieceCount", "65bb4e252b13a97d"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "1a57caec7836efba"}

@@ -1,0 +1,105 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["501e9e31e41205d5.olean"],
+  "m": false,
+  "i": "4907561e848ac386.ilean",
+  "c": "94a0d45725991b81.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean -M8704 -j1 /home/gerald/atlas/Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:48:52: This simp argument is unused:\n  CharTwo.neg_eq\n\nHint: Omit it from the simp argument list.\n  [apply] simp [suzukiLeviExteriorProject, suzukiLeviCoordinates, shortRootPairLinear, Module.End.mul_apply,\n    shortRootParameterLinear_val, shortRootCenterLinear_val, shortRootParameterFormula, shortRootCenterFormula,\n    suzukiLeviRootMatrix, suzukiLeviExteriorMatrix, suzukiLeviExteriorPair, Matrix.mulVec, dotProduct,\n    Fin.sum_univ_succ]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:36:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 2400000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:44:4: `simp [suzukiLeviExteriorProject, suzukiLeviCoordinates, shortRootPairLinear,\n      Module.End.mul_apply, shortRootParameterLinear_val, shortRootCenterLinear_val,\n      shortRootParameterFormula, shortRootCenterFormula, suzukiLeviRootMatrix,\n      suzukiLeviExteriorMatrix, suzukiLeviExteriorPair,\n      Matrix.mulVec, dotProduct, Fin.sum_univ_succ, CharTwo.neg_eq]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:44:4: Try this:\n  [apply] simp only [Fin.mk_one, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:49:4: `apply sub_eq_zero.mp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 44!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:44:4: `simp [suzukiLeviExteriorProject, suzukiLeviCoordinates, shortRootPairLinear,\n      Module.End.mul_apply, shortRootParameterLinear_val, shortRootCenterLinear_val,\n      shortRootParameterFormula, shortRootCenterFormula, suzukiLeviRootMatrix,\n      suzukiLeviExteriorMatrix, suzukiLeviExteriorPair,\n      Matrix.mulVec, dotProduct, Fin.sum_univ_succ, CharTwo.neg_eq]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:44:4: Try this:\n  [apply] simp only [Fin.reduceFinMk, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:49:4: `apply sub_eq_zero.mp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 44!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:44:4: `simp [suzukiLeviExteriorProject, suzukiLeviCoordinates, shortRootPairLinear,\n      Module.End.mul_apply, shortRootParameterLinear_val, shortRootCenterLinear_val,\n      shortRootParameterFormula, shortRootCenterFormula, suzukiLeviRootMatrix,\n      suzukiLeviExteriorMatrix, suzukiLeviExteriorPair,\n      Matrix.mulVec, dotProduct, Fin.sum_univ_succ, CharTwo.neg_eq]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:44:4: Try this:\n  [apply] simp only [Fin.reduceFinMk, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:49:4: `apply sub_eq_zero.mp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 44!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:44:4: `simp [suzukiLeviExteriorProject, suzukiLeviCoordinates, shortRootPairLinear,\n      Module.End.mul_apply, shortRootParameterLinear_val, shortRootCenterLinear_val,\n      shortRootParameterFormula, shortRootCenterFormula, suzukiLeviRootMatrix,\n      suzukiLeviExteriorMatrix, suzukiLeviExteriorPair,\n      Matrix.mulVec, dotProduct, Fin.sum_univ_succ, CharTwo.neg_eq]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:44:4: Try this:\n  [apply] simp only [Fin.reduceFinMk, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:49:4: `apply sub_eq_zero.mp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 44!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:44:4: `simp [suzukiLeviExteriorProject, suzukiLeviCoordinates, shortRootPairLinear,\n      Module.End.mul_apply, shortRootParameterLinear_val, shortRootCenterLinear_val,\n      shortRootParameterFormula, shortRootCenterFormula, suzukiLeviRootMatrix,\n      suzukiLeviExteriorMatrix, suzukiLeviExteriorPair,\n      Matrix.mulVec, dotProduct, Fin.sum_univ_succ, CharTwo.neg_eq]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:44:4: Try this:\n  [apply] simp only [Fin.reduceFinMk, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:49:4: `apply sub_eq_zero.mp`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 44!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:62:27: missing space in the source\n\nThis part of the code\n  '2^(2*m+1))'\nshould be written as\n  '2 ^ (2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:62:30: missing space in the source\n\nThis part of the code\n  '2^(2*m+1)) (a'\nshould be written as\n  '(2 * m'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:70:0: automatically included section variable(s) unused in theorem `Atlas.ReeF4.weylRho_suzukiExterior`:\n  [Finite K]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Finite K] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:69:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 1200000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean:81:0: automatically included section variable(s) unused in theorem `Atlas.ReeF4.weylRho_suzukiFixed`:\n  [Finite K]\n  [CharP K 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Finite K] [CharP K 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.ReeF4.RootSuzukiLeviRestrictions transitive imports (legacy)",
+       "90ed24050f660bc7"],
+      ["Atlas.LinearGroups.ReeF4.RootSuzukiLeviRestrictions:importAllArts",
+       "b54f5b44999ccf88"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/ReeF4/RootSuzukiLeviExterior.lean",
+   "9604e0ebbe51bb8a"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.ReeF4.RootSuzukiLeviExterior",
+   "5dfd0de6a4658b9e"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "c29a4f4cfddb0ba9"}

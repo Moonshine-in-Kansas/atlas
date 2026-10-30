@@ -1,0 +1,56 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["72bd24950eb8c9ab.olean"],
+  "m": false,
+  "i": "123380c3e89f36b6.ilean",
+  "c": "be1109efdeba6f08.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/CubicTrioNeighborCounts.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CubicTrioNeighborCounts.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CubicTrioNeighborCounts.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CubicTrioNeighborCounts.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CubicTrioNeighborCounts.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/CubicTrioNeighborCounts.lean:20:19: This simp argument is unused:\n  show (2 : Bit) = 0 from rfl\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hd, hf, ht] at h hn ⊢\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicTrioNeighborCounts.lean:8:1: 'theorem cubicTrioCompletion_complement (D F : Octad) (hDF : (D.val ∩ F.val).card = 0) :\n    (cubicTrioCompletion D F hDF).val = (D.val ∪ F.val)ᶜ :=\n  by\n  ext i\n  have h := congrArg (fun c : golay => c.val i) (cubicTrioCompletion_word D F hDF)\n  simp only [Submodule.coe_add, Pi.add_apply, octadWord_apply, golayOne, allOnes] at h\n  have hn : ¬(i ∈ D.val ∧ i ∈ F.val) := by\n    intro hi\n    have hp := Finset.card_pos.mpr ⟨i, Finset.mem_inter.mpr hi⟩\n    rw [hDF] at hp\n    omega\n  by_cases hd : i ∈ D.val <;> by_cases hf : i ∈ F.val <;> by_cases ht : i ∈ (cubicTrioCompletion D F hDF).val <;>\n    simp [hd, hf, ht,\n      show (2 : Bit) = 0 from\n          rfl] at h hn ⊢' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicTrioNeighborCounts.lean:32:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicTrioNeighborCounts.lean:33:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicTrioNeighborCounts.lean:79:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicTrioNeighborCounts.lean:78:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Fischer.CubicMixedNeighborCounts transitive imports (legacy)",
+       "9918a9bd078a72ad"],
+      ["Atlas.Fischer.CubicMixedNeighborCounts:importAllArts",
+       "dce7941d0873159c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/CubicTrioNeighborCounts.lean",
+   "dc238e533d35eac2"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.CubicTrioNeighborCounts", "efb60bdb3048881c"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "07d9dfed5d2a3b64"}

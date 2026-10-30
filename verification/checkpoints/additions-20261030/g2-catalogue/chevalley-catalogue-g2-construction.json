@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "chevalley-catalogue-g2-construction",
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.Catalogue.G2Construction"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.G2",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.G2Construction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.G2Group",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.G2Construction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.G2FieldDomain",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.G2Construction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.Catalogue.G2_construction",
+      "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.Catalogue.G2Construction"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independent-of-existing-groups",
+      "all_roots": true,
+      "module_allowlists": [
+        {
+          "prefix": "Atlas.",
+          "modules": [
+            "Atlas.Comparisons.Exceptional.E6.Lattice",
+            "Atlas.Comparisons.Exceptional.E6.RootBounds",
+            "Atlas.Comparisons.Exceptional.E6.RootReduction",
+            "Atlas.Comparisons.Exceptional.E6.RootRepresentatives",
+            "Atlas.Comparisons.Exceptional.E6.Roots",
+            "Atlas.LinearGroups.Chevalley.Adjoint",
+            "Atlas.LinearGroups.Chevalley.CartanData",
+            "Atlas.LinearGroups.Chevalley.Catalogue.ESeriesConstruction",
+            "Atlas.LinearGroups.Chevalley.Catalogue.G2Construction",
+            "Atlas.LinearGroups.Chevalley.Integral.Adjoint",
+            "Atlas.LinearGroups.Chevalley.Integral.GeckDividedPowers",
+            "Atlas.LinearGroups.Chevalley.Integral.GeckExponential",
+            "Atlas.LinearGroups.Chevalley.Models",
+            "Atlas.LinearGroups.Chevalley.Noncommutative",
+            "Atlas.LinearGroups.Chevalley.RankOne",
+            "Atlas.LinearGroups.Chevalley.RootData.A",
+            "Atlas.LinearGroups.Chevalley.RootData.Classical",
+            "Atlas.LinearGroups.Chevalley.RootData.ClassicalBasesBC",
+            "Atlas.LinearGroups.Chevalley.RootData.ClassicalBasesD",
+            "Atlas.LinearGroups.Chevalley.RootData.E6",
+            "Atlas.LinearGroups.Chevalley.RootData.E7",
+            "Atlas.LinearGroups.Chevalley.RootData.E7Table",
+            "Atlas.LinearGroups.Chevalley.RootData.E8",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.Data",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.Injectivity",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.Norm",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.ParentCoordinates",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.ParentLt",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.Signs",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.SimpleReflection",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.WordSteps",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.Words",
+            "Atlas.LinearGroups.Chevalley.RootData.ExceptionalForm",
+            "Atlas.LinearGroups.Chevalley.RootData.F4",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.CorootCoordinates",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.CorootSigns",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.Data",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.Injectivity",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.Pairing",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.Primitive",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.ReflectionCoroots",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.ReflectionInvolution",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.ReflectionRoots",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.RootSigns",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.Simple",
+            "Atlas.LinearGroups.Chevalley.RootData.FiniteRootDatum",
+            "Atlas.LinearGroups.Chevalley.RootData.FiniteSimplyLaced",
+            "Atlas.LinearGroups.Chevalley.RootData.G2",
+            "Atlas.LinearGroups.Chevalley.RootData.G2Table",
+            "Atlas.LinearGroups.Chevalley.RootData.SmallExceptional",
+            "Atlas.LinearGroups.Chevalley.RootData.SmallExceptionalForm",
+            "Atlas.LinearGroups.Chevalley.RootType",
+            "Atlas.LinearGroups.F4.RootData"
+          ]
+        },
+        {
+          "prefix": "ComparisonWork.",
+          "modules": [
+            "ComparisonWork.G2Construction"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elementary-evidence-independent-of-order-center-and-simplicity",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.RootType.Good",
+        "Atlas.Chevalley.RootType.centerFactor",
+        "Atlas.Chevalley.RootType.orderPolynomial",
+        "Atlas.Chevalley.Construction",
+        "Atlas.Chevalley.construction",
+        "Atlas.Chevalley.model_isPerfect",
+        "Atlas.Chevalley.model_isSimple",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.model_E7_card",
+        "Atlas.Chevalley.model_E8_card",
+        "Atlas.Chevalley.model_center_eq_bot",
+        "Group.IsPerfect",
+        "IsSimpleGroup"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.Construction",
+        "Atlas.LinearGroups.Chevalley.ModelFiniteCenter",
+        "Atlas.LinearGroups.Chevalley.ModelDegreeOrder",
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelE7Order",
+        "Atlas.LinearGroups.Chevalley.ModelE8Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityIffGood"
+      ]
+    },
+    {
+      "id": "carrier-instance-domain-independent-of-property-proofs",
+      "roots": [
+        "Atlas.Chevalley.Catalogue.G2",
+        "Atlas.Chevalley.Catalogue.G2Group",
+        "Atlas.Chevalley.Catalogue.G2FieldDomain"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.Catalogue.E6_construction",
+        "Atlas.Chevalley.Catalogue.E6_finite",
+        "Atlas.Chevalley.Catalogue.E6_order",
+        "Atlas.Chevalley.Catalogue.E6_center",
+        "Atlas.Chevalley.Catalogue.E6_simple",
+        "Atlas.Chevalley.Catalogue.E6_nonabelian",
+        "Atlas.Chevalley.Catalogue.E6_exceptions",
+        "Atlas.Chevalley.Catalogue.E7_construction",
+        "Atlas.Chevalley.Catalogue.E7_finite",
+        "Atlas.Chevalley.Catalogue.E7_order",
+        "Atlas.Chevalley.Catalogue.E7_center",
+        "Atlas.Chevalley.Catalogue.E7_simple",
+        "Atlas.Chevalley.Catalogue.E7_nonabelian",
+        "Atlas.Chevalley.Catalogue.E7_exceptions",
+        "Atlas.Chevalley.Catalogue.E8_construction",
+        "Atlas.Chevalley.Catalogue.E8_finite",
+        "Atlas.Chevalley.Catalogue.E8_order",
+        "Atlas.Chevalley.Catalogue.E8_center",
+        "Atlas.Chevalley.Catalogue.E8_simple",
+        "Atlas.Chevalley.Catalogue.E8_nonabelian",
+        "Atlas.Chevalley.Catalogue.E8_exceptions",
+        "Atlas.Chevalley.Construction",
+        "Atlas.Chevalley.construction",
+        "Atlas.Chevalley.RootType.Good",
+        "Atlas.Chevalley.RootType.centerFactor",
+        "Atlas.Chevalley.RootType.orderPolynomial",
+        "Group.IsPerfect",
+        "IsSimpleGroup",
+        "Atlas.Chevalley.Catalogue.G2_construction",
+        "Atlas.Chevalley.Catalogue.G2_finite",
+        "Atlas.Chevalley.Catalogue.G2_order",
+        "Atlas.Chevalley.Catalogue.G2_center",
+        "Atlas.Chevalley.Catalogue.G2_simple",
+        "Atlas.Chevalley.Catalogue.G2_nonabelian",
+        "Atlas.Chevalley.Catalogue.G2_exceptions",
+        "Atlas.Chevalley.Comparison."
+      ],
+      "module_allowlists": [
+        {
+          "prefix": "Atlas.",
+          "modules": [
+            "Atlas.Comparisons.Exceptional.E6.Lattice",
+            "Atlas.Comparisons.Exceptional.E6.RootBounds",
+            "Atlas.Comparisons.Exceptional.E6.RootReduction",
+            "Atlas.Comparisons.Exceptional.E6.RootRepresentatives",
+            "Atlas.Comparisons.Exceptional.E6.Roots",
+            "Atlas.LinearGroups.Chevalley.Adjoint",
+            "Atlas.LinearGroups.Chevalley.CartanData",
+            "Atlas.LinearGroups.Chevalley.Catalogue.ESeriesConstruction",
+            "Atlas.LinearGroups.Chevalley.Catalogue.G2Construction",
+            "Atlas.LinearGroups.Chevalley.Integral.Adjoint",
+            "Atlas.LinearGroups.Chevalley.Integral.GeckDividedPowers",
+            "Atlas.LinearGroups.Chevalley.Integral.GeckExponential",
+            "Atlas.LinearGroups.Chevalley.Models",
+            "Atlas.LinearGroups.Chevalley.Noncommutative",
+            "Atlas.LinearGroups.Chevalley.RankOne",
+            "Atlas.LinearGroups.Chevalley.RootData.A",
+            "Atlas.LinearGroups.Chevalley.RootData.Classical",
+            "Atlas.LinearGroups.Chevalley.RootData.ClassicalBasesBC",
+            "Atlas.LinearGroups.Chevalley.RootData.ClassicalBasesD",
+            "Atlas.LinearGroups.Chevalley.RootData.E6",
+            "Atlas.LinearGroups.Chevalley.RootData.E7",
+            "Atlas.LinearGroups.Chevalley.RootData.E7Table",
+            "Atlas.LinearGroups.Chevalley.RootData.E8",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.Data",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.Injectivity",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.Norm",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.ParentCoordinates",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.ParentLt",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.Signs",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.SimpleReflection",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.WordSteps",
+            "Atlas.LinearGroups.Chevalley.RootData.E8Table.Words",
+            "Atlas.LinearGroups.Chevalley.RootData.ExceptionalForm",
+            "Atlas.LinearGroups.Chevalley.RootData.F4",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.CorootCoordinates",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.CorootSigns",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.Data",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.Injectivity",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.Pairing",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.Primitive",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.ReflectionCoroots",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.ReflectionInvolution",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.ReflectionRoots",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.RootSigns",
+            "Atlas.LinearGroups.Chevalley.RootData.F4Table.Simple",
+            "Atlas.LinearGroups.Chevalley.RootData.FiniteRootDatum",
+            "Atlas.LinearGroups.Chevalley.RootData.FiniteSimplyLaced",
+            "Atlas.LinearGroups.Chevalley.RootData.G2",
+            "Atlas.LinearGroups.Chevalley.RootData.G2Table",
+            "Atlas.LinearGroups.Chevalley.RootData.SmallExceptional",
+            "Atlas.LinearGroups.Chevalley.RootData.SmallExceptionalForm",
+            "Atlas.LinearGroups.Chevalley.RootType",
+            "Atlas.LinearGroups.F4.RootData"
+          ]
+        },
+        {
+          "prefix": "ComparisonWork.",
+          "modules": [
+            "ComparisonWork.G2Construction"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "public-properties-independent-of-comparisons-and-legacy-carriers",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.Comparison.",
+        "Atlas.G2.Model",
+        "Atlas.F4.Model",
+        "Atlas.Chevalley.Catalogue.G2_identification"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.Catalogue.G2Identification",
+        "ComparisonWork.G2Identification"
+      ]
+    }
+  ]
+}

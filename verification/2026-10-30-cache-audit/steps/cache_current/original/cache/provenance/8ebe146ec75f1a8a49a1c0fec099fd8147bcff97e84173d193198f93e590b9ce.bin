@@ -1,0 +1,57 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["3a11aa69d5c90252.olean"],
+  "m": false,
+  "i": "bac6269f4599c45e.ilean",
+  "c": "2b024bd16d90daa1.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/FieldTheory/ReeScalarSquares.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/FieldTheory/ReeScalarSquares.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/FieldTheory/ReeScalarSquares.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/FieldTheory/ReeScalarSquares.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/FieldTheory/ReeScalarSquares.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/FieldTheory/ReeScalarSquares.lean:12:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/FieldTheory/ReeScalarSquares.lean:8:0: automatically included section variable(s) unused in theorem `Atlas.ReeG2.scalar_square_or_negative_square`:\n  [CharP F 3]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 3] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/FieldTheory/ReeScalarSquares.lean:31:58: Try `simp at hx` instead of `simpa using hx`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/FieldTheory/ReeScalarSquares.lean:37:35: Try `simp at hx` instead of `simpa using hx`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/FieldTheory/ReeScalarSquares.lean:40:30: This simp argument is unused:\n  Units.val_pow_eq_pow_val\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Units.val_neg, Units.val_mk0, pow_two, Units.val_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.FieldTheory.ReeTitsAutomorphism transitive imports (legacy)",
+       "b5c7629fb79a88eb"],
+      ["Atlas.FieldTheory.ReeTitsAutomorphism:importAllArts",
+       "d74034d95a0ab6ba"],
+      ["Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic transitive imports (legacy)",
+       "2a19594b1b885c91"],
+      ["Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic:importAllArts",
+       "467a5ab8eefcea95"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/FieldTheory/ReeScalarSquares.lean",
+   "888bd95c7aaa8bbf"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.FieldTheory.ReeScalarSquares", "d21187757399326c"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "4df139c08630653e"}

@@ -1,0 +1,74 @@
+{
+  "id": "staged-WeightedParabolicFactor",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.WeightedParabolicFactor"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedParabolicFactor.weightedInversions_mul_reduced_parabolic_word",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedParabolicFactor"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedParabolicFactor.weightedInversions_reduced_word",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedParabolicFactor"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedParabolicFactor.weightedInversions_mul_parabolic_of_simple_positive",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedParabolicFactor"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedParabolicFactor.rootParabolicProductEquiv_weightedInversions",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedParabolicFactor"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.WeightedParabolicFactor.weightedWeylSum_parabolic_factor",
+      "kind": "theorem",
+      "module": "FamilyWork.WeightedParabolicFactor"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-WeightedParabolicFactor-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-WeightedParabolicFactor-structural-identification-before-count",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.TwistedE6.companionFixedSubgroup_card",
+        "Atlas.Chevalley.TwistedE6.companionFixedWeylCell_card",
+        "Atlas.Chevalley.F4B3.rootWeylPoincareEval_F4",
+        "Atlas.Chevalley.RootData.rootWeylPoincareEval"
+      ],
+      "forbid_modules": [
+        "FamilyWork.PositiveFixedOrder",
+        "FamilyWork.FixedTorusOrder",
+        "FamilyWork.FixedBorel",
+        "FamilyWork.FixedInversionOrder",
+        "FamilyWork.FixedCellCoordinates",
+        "FamilyWork.FixedWeylCell"
+      ]
+    }
+  ]
+}

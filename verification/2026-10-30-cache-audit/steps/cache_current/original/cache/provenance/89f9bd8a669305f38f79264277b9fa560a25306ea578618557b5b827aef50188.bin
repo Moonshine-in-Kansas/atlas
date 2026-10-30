@@ -1,0 +1,100 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["0298630cb886b4cb.olean"],
+  "m": false,
+  "i": "6873d2ce3bf95143.ilean",
+  "c": "dc44997e32fb2764.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/GaussianFrame.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/GaussianFrame.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/GaussianFrame.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/GaussianFrame.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/GaussianFrame.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def coordinateFrame : Set MinimalCross :=\n  Set.range (shellPieceCrossMap coordinateShellPiece)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:6:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateFrame_card : Nat.card coordinateFrame = 28 :=\n  by\n  unfold coordinateFrame\n  rw [Nat.card_congr (Equiv.ofInjective _ (shellPieceCrossMap_injective coordinateShellPiece)).symm]\n  exact coordinateCrosses_card`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem minimalCross_mem_coordinateFrame (v : MinimalShell) :\n    minimalCross v ∈ coordinateFrame ↔ v ∈ coordinateShellPiece :=\n  by\n  constructor\n  · rintro ⟨c, hc⟩\n    induction c using Quotient.inductionOn with\n    | h w =>\n      change minimalCross w.val = minimalCross v at hc\n      obtain ⟨u, hu⟩ := (minimalCross_eq_iff _ _).mp hc\n      have hm := SMulMemClass.smul_mem (u.val⁻¹) w.prop\n      change u.val • v = w.val at hu\n      rw [← hu, inv_smul_smul] at hm\n      exact hm\n  · intro h\n    exact ⟨Quotient.mk _ ⟨v, h⟩, rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateShellPiece_iff (v : MinimalShell) :\n    v ∈ coordinateShellPiece ↔ coordinateShell v.val.val :=\n  by\n  constructor\n  · rintro ⟨⟨i, b⟩, rfl⟩\n    cases b <;> exact ⟨i, by simp [coordinateShellLift]⟩\n  · rintro ⟨i, hi | hi⟩\n    · exact ⟨(i, true), Subtype.ext (Subtype.ext hi.symm)⟩\n    · exact ⟨(i, false), Subtype.ext (Subtype.ext hi.symm)⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateFrame_code_stable (g : codeGroup) (c : MinimalCross)\n    (hc : c ∈ coordinateFrame) : g • c ∈ coordinateFrame := by\n  induction c using Quotient.inductionOn with\n  | h v =>\n    change minimalCross (g • v) ∈ coordinateFrame\n    exact\n      (minimalCross_mem_coordinateFrame _).mpr (SMulMemClass.smul_mem g ((minimalCross_mem_coordinateFrame v).mp hc))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:38:11: missing space in the source\n\nThis part of the code\n  'c∈coordinateFrame)'\nshould be written as\n  'c ∈ coordinateFrame)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Exact stabilizer of the 28 actual coordinate Gaussian crosses. -/\ntheorem gaussian_frame_stabilizer (f : gaussianLatticeGroup) :\n    (∀ c, c ∈ coordinateFrame ↔ f • c ∈ coordinateFrame) ↔ ∃ g : codeGroup, codeGaussianHom g = f :=\n  by\n  constructor\n  · intro h\n    apply (gaussian_coordinate_stabilizer f).mp\n    intro i\n    let v : MinimalShell := ⟨⟨coordinateMinimum i, coordinateMinimum_mem i⟩, coordinateMinimum_norm i⟩\n    have hv : v ∈ coordinateShellPiece := ⟨(i, true), rfl⟩\n    have hc := (h (minimalCross v)).mp ((minimalCross_mem_coordinateFrame v).mpr hv)\n    exact (coordinateShellPiece_iff (f • v)).mp ((minimalCross_mem_coordinateFrame _).mp hc)\n  · rintro ⟨g, rfl⟩ c\n    rw [codeGaussianHom_cross]\n    constructor\n    · exact coordinateFrame_code_stable g c\n    · intro h\n      have hi := coordinateFrame_code_stable g⁻¹ (g • c) h\n      simpa using hi`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/GaussianFrame.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.GaussianCrossAction transitive imports (legacy)",
+       "7ac1055e7289dc47"],
+      ["Atlas.Rudvalis.GaussianCrossAction:importAllArts", "36b23ad667a7f48d"],
+      ["Atlas.Rudvalis.LatticeCrossPieces transitive imports (legacy)",
+       "85991055dc560ef0"],
+      ["Atlas.Rudvalis.LatticeCrossPieces:importAllArts",
+       "f908985764693950"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/GaussianFrame.lean", "f2468ab9f757168a"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.GaussianFrame", "b6ecc8b280f4531f"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "9e482e3dea0668a8"}

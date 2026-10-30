@@ -1,0 +1,124 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["839bb37bec6222d1.olean"],
+  "m": false,
+  "i": "4b4d70d0424ef472.ilean",
+  "c": "972d598e028fb688.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CrossRowEnergy.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CrossRowEnergy.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CrossRowEnergy.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CrossRowEnergy.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CrossRowEnergy.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Classical`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:4:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateRowEnergy_I (s : Set Point) (v : RationalSpace) :\n    coordinateRowEnergy s (rationalI v) = coordinateRowEnergy s v :=\n  by\n  unfold coordinateRowEnergy\n  rw [coordinateRowProjection_gaussian, rationalI_pairing]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateRowEnergy_I_pow (s : Set Point) (n : ℕ) (v : RationalSpace) :\n    coordinateRowEnergy s (rationalMonomialHom (codeI.val ^ n) v) = coordinateRowEnergy s v := by\n  induction n with\n  | zero => simp\n  | succ n ih =>\n    rw [pow_succ', map_mul]\n    change coordinateRowEnergy s (rationalI (rationalMonomialHom (codeI.val ^ n) v)) = _\n    rw [coordinateRowEnergy_I, ih]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateRowEnergy_units (s : Set Point) (u : GaussianUnits)\n    (v : MinimalShell) : coordinateRowEnergy s (u • v).val.val = coordinateRowEnergy s v.val.val := by\n  classical\n  obtain ⟨n, hn, he⟩ := Finset.mem_image.mp ((mem_zpowers_iff_mem_range_orderOf).mp u.prop)\n  change coordinateRowEnergy s (rationalMonomialHom u.val.val v.val.val) = _\n  rw [← he]\n  exact coordinateRowEnergy_I_pow s n v.val.val`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nSquared length of the projection of a minimal cross to selected coordinate rows.\nIt is independent of its four Gaussian-unit representatives. -/\nnoncomputable def crossRowEnergy (s : Set Point) : MinimalCross → ℚ :=\n  Quotient.lift (fun v : MinimalShell => coordinateRowEnergy s v.val.val)\n    (by\n      intro v w h\n      obtain ⟨u, hu⟩ := MulAction.mem_orbit_iff.mp h\n      rw [← hu]\n      exact coordinateRowEnergy_units s u w)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem crossRowEnergy_mk (s : Set Point) (v : MinimalShell) :\n    crossRowEnergy s (minimalCross v) = coordinateRowEnergy s v.val.val :=\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem crossRowEnergy_complement (s : Set Point) (c : MinimalCross) :\n    crossRowEnergy s c + crossRowEnergy sᶜ c = 4 := by\n  induction c using Quotient.inductionOn with\n  | h v =>\n    change coordinateRowEnergy s v.val.val + coordinateRowEnergy sᶜ v.val.val = 4\n    rw [coordinateRowEnergy_complement]\n    exact v.prop`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateRowProjection_coordinateMinimum (s : Set Point)\n    (i : Coordinate) : coordinateRowProjection s (coordinateMinimum i) = if i.1 ∈ s then coordinateMinimum i else 0 :=\n  by\n  classical\n  ext j\n  by_cases hji : j = i\n  · subst j\n    simp only [coordinateRowProjection_apply]\n    split_ifs <;> rfl\n  · by_cases hi : i.1 ∈ s <;> simp [coordinateRowProjection_apply, coordinateMinimum, hi, hji]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem crossRowEnergy_coordinateCross (s : Set Point) (i : Coordinate) :\n    crossRowEnergy s (coordinateCross i) = if i.1 ∈ s then 4 else 0 := by\n  classical\n  change coordinateRowEnergy s (coordinateMinimum i) = _\n  unfold coordinateRowEnergy\n  rw [coordinateRowProjection_coordinateMinimum]\n  split_ifs\n  · exact coordinateMinimum_norm i\n  · simp [rationalDot]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem crossRowEnergy_nonneg (s : Set Point) (c : MinimalCross) :\n    0 ≤ crossRowEnergy s c := by\n  induction c using Quotient.inductionOn with\n  | h v => exact rationalDot_self_nonneg _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem crossRowEnergy_le_four (s : Set Point) (c : MinimalCross) :\n    crossRowEnergy s c ≤ 4 := by\n  have h := crossRowEnergy_complement s c\n  have hn := crossRowEnergy_nonneg sᶜ c\n  linarith`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CrossRowEnergy.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateRowProjection transitive imports (legacy)",
+       "e6039de7f32163d9"],
+      ["Atlas.Rudvalis.CoordinateRowProjection:importAllArts",
+       "c3801aad3d07af74"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CrossRowEnergy.lean", "29abd9cff4e4c566"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CrossRowEnergy", "0d380fcdc83b3e89"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "2dabab9c1824faa0"}

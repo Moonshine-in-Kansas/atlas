@@ -1,0 +1,99 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["a99b37b2211d0cf4.olean"],
+  "m": false,
+  "i": "74318cd0dbf9cbd9.ilean",
+  "c": "723988e2d3eff686.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Codes/GolayBasis.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/GolayBasis.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/GolayBasis.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Codes/GolayBasis.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Codes/GolayBasis.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def golayFlatParameters :\n    (Fin 12 → Bit) ≃ₗ[Bit] ((Fin 6 → Bit) × (Fin 5 → Bit) × Bit)\n    where\n  toFun t := (![t 0, t 1, t 2, t 3, t 4, t 5], ![t 6, t 7, t 8, t 9, t 10], t 11)\n  invFun t := ![t.1 0, t.1 1, t.1 2, t.1 3, t.1 4, t.1 5, t.2.1 0, t.2.1 1, t.2.1 2, t.2.1 3, t.2.1 4, t.2.2]\n  left_inv := by intro t; funext i; fin_cases i <;> rfl\n  right_inv := by\n    rintro ⟨h, r, ε⟩\n    apply Prod.ext\n    · funext i; fin_cases i <;> rfl\n    · apply Prod.ext\n      · funext i; fin_cases i <;> rfl\n      · rfl\n  map_add' := by intros; ext i <;> (try fin_cases i) <;> rfl\n  map_smul' := by intros; ext i <;> (try fin_cases i) <;> rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def golayBasis : Module.Basis (Fin 12) Bit golay :=\n  (Pi.basisFun Bit (Fin 12)).map\n    ((golayFlatParameters.trans\n          ((hexFlatParameters.trans hexEquiv).prodCongr ((parityEquiv 5).prodCongr (LinearEquiv.refl Bit Bit)))).trans\n      golayEquiv)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def golayGenerators : Fin 12 → BinaryWord :=\n  ![jWord (hexGenerators 0), jWord (hexGenerators 1), jWord (hexGenerators 2), jWord (hexGenerators 3),\n    jWord (hexGenerators 4), jWord (hexGenerators 5), rho (Pi.single 0 1 + Pi.single 1 1),\n    rho (Pi.single 0 1 + Pi.single 2 1), rho (Pi.single 0 1 + Pi.single 3 1), rho (Pi.single 0 1 + Pi.single 4 1),\n    rho (Pi.single 0 1 + Pi.single 5 1), eta]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem golayBasis_coe (i : Fin 12) :\n    (golayBasis i : BinaryWord) = golayGenerators i :=\n  by\n  change\n    golayEncoder\n        (((hexFlatParameters.trans hexEquiv).prodCongr ((parityEquiv 5).prodCongr (LinearEquiv.refl Bit Bit)))\n          (golayFlatParameters ((Pi.basisFun Bit (Fin 12)) i))) =\n      _\n  rw [Pi.basisFun_apply]\n  revert i\n  decide`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:55:40: This simp argument is unused:\n  Matrix.cons_val_zero\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [golayGenerators, Matrix.cons_val_one, Matrix.cons_val_succ, Matrix.head_cons, jWord_weight,\n    hexGenerators_weight, rho_weight, eta_weight]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:55:62: This simp argument is unused:\n  Matrix.cons_val_one\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [golayGenerators, Matrix.cons_val_zero, Matrix.cons_val_succ, Matrix.head_cons, jWord_weight,\n    hexGenerators_weight, rho_weight, eta_weight]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:56:4: This simp argument is unused:\n  Matrix.cons_val_succ\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [golayGenerators, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, jWord_weight,\n    hexGenerators_weight, rho_weight, eta_weight]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:56:26: This simp argument is unused:\n  Matrix.head_cons\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [golayGenerators, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_succ, jWord_weight,\n    hexGenerators_weight, rho_weight, eta_weight]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:56:44: This simp argument is unused:\n  jWord_weight\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [golayGenerators, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_succ, Matrix.head_cons,\n    hexGenerators_weight, rho_weight, eta_weight]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:56:58: This simp argument is unused:\n  hexGenerators_weight\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [golayGenerators, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_succ, Matrix.head_cons,\n    jWord_weight, rho_weight, eta_weight]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:56:80: This simp argument is unused:\n  rho_weight\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [golayGenerators, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_succ, Matrix.head_cons,\n    jWord_weight, hexGenerators_weight, eta_weight]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:56:92: This simp argument is unused:\n  eta_weight\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [golayGenerators, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_succ, Matrix.head_cons,\n    jWord_weight, hexGenerators_weight, rho_weight]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem golayGenerators_weight (i : Fin 12) :\n    hammingNorm (golayGenerators i) = 8 := by\n  fin_cases i\n  all_goals\n    simp only [golayGenerators, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_succ, Matrix.head_cons,\n      jWord_weight, hexGenerators_weight, rho_weight, eta_weight]\n  all_goals decide`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:56:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem golay_octad_basis :\n    (∀ i, (golayBasis i : BinaryWord) = golayGenerators i) ∧ (∀ i, hammingNorm (golayBasis i : BinaryWord) = 8) :=\n  by\n  refine ⟨golayBasis_coe, ?_⟩\n  intro i\n  rw [golayBasis_coe, golayGenerators_weight]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def octadWords : Set BinaryWord :=\n  {w | w ∈ golay ∧ hammingNorm w = 8}`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem octads_span : Submodule.span Bit octadWords = golay :=\n  by\n  apply le_antisymm\n  · exact Submodule.span_le.mpr (fun _ h => h.1)\n  · intro w hw\n    have he := golayBasis.sum_repr (⟨w, hw⟩ : golay)\n    have hv := congrArg Subtype.val he\n    change (∑ i, (golayBasis.repr ⟨w, hw⟩) i • (golayBasis i : BinaryWord)) = w at hv\n    rw [← hv]\n    apply Submodule.sum_mem\n    intro i _\n    apply Submodule.smul_mem\n    apply Submodule.subset_span\n    exact ⟨(golayBasis i).prop, (golay_octad_basis.2 i)⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayBasis.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Codes.GolayMinimum transitive imports (legacy)",
+       "d5cffe64f1ae392d"],
+      ["Atlas.Codes.GolayMinimum:importAllArts", "394f42a5b1b6521a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Codes/GolayBasis.lean", "575144138168510b"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Codes.GolayBasis", "f40e754f00997672"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "687232f4037e1216"}

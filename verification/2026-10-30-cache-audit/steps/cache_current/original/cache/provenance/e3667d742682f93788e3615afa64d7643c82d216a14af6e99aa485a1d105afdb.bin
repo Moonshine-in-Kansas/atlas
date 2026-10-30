@@ -1,0 +1,67 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["6ed96f68f4c57958.olean"],
+  "m": false,
+  "i": "2085f8f9aba37b47.ilean",
+  "c": "359b011c8251a651.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/CubicPointRows.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CubicPointRows.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CubicPointRows.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CubicPointRows.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CubicPointRows.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/CubicPointRows.lean:29:12: This simp argument is unused:\n  ite_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [cubicPointPattern_normalForm, Finset.sum_add_distrib, Finset.sum_sub_distrib, mul_ite, mul_zero,\n    zero_mul, mul_one, one_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicPointRows.lean:29:29: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [cubicPointPattern_normalForm, Finset.sum_add_distrib, Finset.sum_sub_distrib, mul_ite, ite_mul,\n    mul_zero, mul_one, one_mul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicPointRows.lean:29:46: This simp argument is unused:\n  one_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [cubicPointPattern_normalForm, Finset.sum_add_distrib, Finset.sum_sub_distrib, mul_ite, ite_mul,\n    mul_zero, zero_mul, mul_one]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicPointRows.lean:32:27: This simp argument is unused:\n  Finset.sum_ite_irrel\n\nHint: Omit it from the simp argument list.\n  [apply] simp [cubicPointRowSum, hc]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicPointRows.lean:34:30: This simp argument is unused:\n  Ne.symm hi\n\nHint: Omit it from the simp argument list.\n  [apply] simp [cubicPointRowSum, hi, Finset.sum_ite_irrel, hc]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicPointRows.lean:34:41: This simp argument is unused:\n  Finset.sum_ite_irrel\n\nHint: Omit it from the simp argument list.\n  [apply] simp [cubicPointRowSum, hi, Ne.symm hi, hc]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicPointRows.lean:45:48: This simp argument is unused:\n  Finset.sum_ite_irrel\n\nHint: Omit it from the simp argument list.\n  [apply] simp [cubicPointRowSum, Finset.sum_add_distrib, hc]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicPointRows.lean:58:46: This simp argument is unused:\n  one_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [cubicPointRowSum, mul_add, add_mul, Finset.sum_add_distrib, mul_ite, ite_mul, mul_zero, zero_mul,\n    mul_one]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicPointRows.lean:61:10: This simp argument is unused:\n  Finset.sum_ite_irrel\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hc]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicPointRows.lean:63:22: This simp argument is unused:\n  Finset.sum_ite_irrel\n\nHint: Omit it from the simp argument list.\n  [apply] simp [h, Ne.symm h, hc]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Fischer.CubicSlicePointPattern transitive imports (legacy)",
+       "f3913924c78232cf"],
+      ["Atlas.Fischer.CubicSlicePointPattern:importAllArts",
+       "04dbc6947d5ef8f8"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/CubicPointRows.lean", "7c5eeaf81fa25add"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.CubicPointRows", "75d40fcda7e4d327"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "b9b265fd0620ed8b"}

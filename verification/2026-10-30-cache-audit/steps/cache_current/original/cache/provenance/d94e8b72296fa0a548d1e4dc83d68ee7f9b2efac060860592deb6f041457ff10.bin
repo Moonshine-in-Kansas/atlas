@@ -1,0 +1,120 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["53288c25e1115844.olean"],
+  "m": false,
+  "i": "3c5dd8a43d749e82.ilean",
+  "c": "803fd28e38eee285.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Codes/HexacodeCounting.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/HexacodeCounting.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/HexacodeCounting.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Codes/HexacodeCounting.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Codes/HexacodeCounting.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:9:0: linter.style.header:20:7: error: unexpected token '#'; expected term\n\nlinter.style.header:68:52: error: unexpected token '#'; expected term\n\nlinter.style.header:81:47: error: unexpected token '#'; expected term\n\nlinter.style.header:117:10: error: unexpected token '#'; expected term",
+   "level": "info"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:10:0: linter.style.header:20:7: error: unexpected token '#'; expected term\n\nlinter.style.header:68:52: error: unexpected token '#'; expected term\n\nlinter.style.header:81:47: error: unexpected token '#'; expected term\n\nlinter.style.header:117:10: error: unexpected token '#'; expected term",
+   "level": "info"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Finset`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable instance : Fintype hexacode :=\n  Fintype.ofFinite hexacode`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem weight_le_of_zero_on_embedding {ι κ A : Type*} [Fintype ι] [Fintype κ]\n    [Zero A] [DecidableEq A] (e : κ ↪ ι) (w : ι → A) (hw : ∀ j, w (e j) = 0) :\n    hammingNorm w ≤ Fintype.card ι - Fintype.card κ := by\n  classical\n  unfold hammingNorm\n  calc\n    _ ≤ #(univ \\ univ.image e) := by\n      apply card_le_card\n      intro i hi\n      simp only [mem_filter, mem_univ, true_and] at hi\n      simp only [mem_sdiff, mem_univ, mem_image, not_exists, true_and]\n      rintro j rfl\n      exact hi (hw j)\n    _ = _ := by simp [card_sdiff, card_image_of_injective _ e.injective]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def hexProjection (e : Fin 3 ↪ HexIndex) : hexacode →ₗ[Bit] (Fin 3 → K)\n    where\n  toFun w j := w.val (e j)\n  map_add' := by intros; rfl\n  map_smul' := by intros; rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem hexProjection_injective (e : Fin 3 ↪ HexIndex) :\n    Function.Injective (hexProjection e) := by\n  intro u v h\n  have hz : ∀ j, (u.val - v.val) (e j) = 0 := by\n    intro j\n    exact sub_eq_zero.mpr (congrFun h j)\n  have hb := weight_le_of_zero_on_embedding e (u.val - v.val) hz\n  have hd := hexacode_minimum (u.val - v.val) (hexacode.sub_mem u.prop v.prop)\n  have hzero : u.val - v.val = 0 := by\n    by_contra hn\n    have hm := hd hn\n    norm_num [HexIndex] at hb\n    omega\n  exact Subtype.ext (sub_eq_zero.mp hzero)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem hexProjection_bijective (e : Fin 3 ↪ HexIndex) :\n    Function.Bijective (hexProjection e) :=\n  by\n  apply (Nat.bijective_iff_injective_and_card _).mpr\n  refine ⟨hexProjection_injective e, ?_⟩\n  rw [hexacode_card]\n  norm_num [Nat.card_eq_fintype_card, Fintype.card_fun, K, Letter, ZMod.card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def hexCoordinate (i : HexIndex) : hexacode →ₗ[Bit] K\n    where\n  toFun w := w.val i\n  map_add' := by intros; rfl\n  map_smul' := by intros; rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem hexCoordinate_surjective (i : HexIndex) :\n    Function.Surjective (hexCoordinate i) :=\n  by\n  have hh : ∀ i : HexIndex, ∃ j k : Fin 6, hexGenerators j i = a ∧ hexGenerators k i = b := by decide\n  obtain ⟨j, k, hj, hk⟩ := hh i\n  intro u\n  refine ⟨u.1 • hexBasis j + u.2 • hexBasis k, ?_⟩\n  change u.1 • (hexBasis j : HexWord) i + u.2 • (hexBasis k : HexWord) i = u\n  rw [hexBasis_coe, hexBasis_coe, hj, hk]\n  ext <;> simp [a, b]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:60:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem hexCoordinate_fiber (i : HexIndex) (v : K) :\n    #{w : hexacode | hexCoordinate i w = v} = 16 := by\n  classical\n  have he (u : K) : #{w : hexacode | hexCoordinate i w = u} = #{w : hexacode | hexCoordinate i w = v} :=\n    AddMonoidHom.card_fiber_eq_of_mem_range (hexCoordinate i) (hexCoordinate_surjective i u)\n      (hexCoordinate_surjective i v)\n  have h := sum_card_fiberwise_eq_card_filter (univ : Finset hexacode) (univ : Finset K) (hexCoordinate i)\n  simp only [he, sum_const, card_univ, smul_eq_mul, mem_univ, filter_true] at h\n  have hc : Fintype.card hexacode = 64 := by simpa [Nat.card_eq_fintype_card] using hexacode_card\n  norm_num [K, Letter, ZMod.card, hc] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:75:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def hexWeightCount (k : ℕ) : ℕ :=\n  #{w : hexacode | hammingNorm w.val = k}`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem hex_weights (w : hexacode) :\n    hammingNorm w.val = 0 ∨ hammingNorm w.val = 4 ∨ hammingNorm w.val = 6 :=\n  by\n  have hmax := hammingNorm_le_card_fintype (x := w.val)\n  have hmin := hexacode_minimum w.val w.prop\n  have heven := hexacode_even w.val w.prop\n  have hz := hammingNorm_eq_zero (x := w.val)\n  norm_num [HexIndex] at hmax\n  obtain ⟨k, hk⟩ := heven\n  by_cases h : w.val = 0\n  · left; exact hz.mpr h\n  · have := hmin h\n    omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:83:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem hexWeightCount_zero : hexWeightCount 0 = 1 := by\n  classical\n  have h : ∀ w : hexacode, hammingNorm w.val = 0 ↔ w = 0 :=\n    by\n    intro w\n    rw [hammingNorm_eq_zero]\n    exact ⟨fun h => Subtype.ext h, fun h => congrArg Subtype.val h⟩\n  have he : (univ.filter (fun w : hexacode => hammingNorm w.val = 0)) = ({0} : Finset hexacode) :=\n    by\n    ext w\n    simp [h]\n  change _ = 1\n  unfold hexWeightCount\n  rw [he]\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:101:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem hex_weight_total : ∑ w : hexacode, hammingNorm w.val = 288 := by\n  classical\n  simp only [hammingNorm, card_filter]\n  rw [sum_comm]\n  have hf (i : HexIndex) : (∑ w : hexacode, if w.val i ≠ 0 then 1 else 0) = 48 :=\n    by\n    rw [← card_filter]\n    have h0 := hexCoordinate_fiber i 0\n    have hc : Fintype.card hexacode = 64 := by simpa [Nat.card_eq_fintype_card] using hexacode_card\n    change #{w : hexacode | ¬hexCoordinate i w = 0} = _\n    have h := card_filter_add_card_filter_not (s := univ) (fun w : hexacode => hexCoordinate i w = 0)\n    rw [card_univ, hc, h0] at h\n    omega\n  simp only [ite_not] at hf\n  simp [hf, HexIndex]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:118:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:9:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem hexacode_weight_distribution (k : ℕ) :\n    hexWeightCount k = if k = 0 then 1 else if k = 4 then 45 else if k = 6 then 18 else 0 := by\n  classical\n  have ht : hexWeightCount 0 + hexWeightCount 4 + hexWeightCount 6 = 64 :=\n    by\n    have he (w : hexacode) :\n      (if hammingNorm w.val = 0 then 1 else 0) + (if hammingNorm w.val = 4 then 1 else 0) +\n          (if hammingNorm w.val = 6 then 1 else 0) =\n        1 :=\n      by rcases hex_weights w with h | h | h <;> simp [h]\n    have hs := congrArg (fun f : hexacode → ℕ => ∑ w, f w) (funext he)\n    simp only [sum_add_distrib, ← card_filter, sum_const, card_univ, smul_eq_mul, mul_one] at hs\n    change hexWeightCount 0 + hexWeightCount 4 + hexWeightCount 6 = Fintype.card hexacode at hs\n    simpa only [← Nat.card_eq_fintype_card, hexacode_card] using hs\n  have hm : 4 * hexWeightCount 4 + 6 * hexWeightCount 6 = 288 :=\n    by\n    have he (w : hexacode) :\n      4 * (if hammingNorm w.val = 4 then 1 else 0) + 6 * (if hammingNorm w.val = 6 then 1 else 0) = hammingNorm w.val :=\n      by rcases hex_weights w with h | h | h <;> simp [h]\n    have hs := congrArg (fun f : hexacode → ℕ => ∑ w, f w) (funext he)\n    simp only [sum_add_distrib, ← mul_sum, ← card_filter] at hs\n    change 4 * hexWeightCount 4 + 6 * hexWeightCount 6 = ∑ w : hexacode, hammingNorm w.val at hs\n    rw [hex_weight_total] at hs\n    exact hs\n  rw [hexWeightCount_zero] at ht\n  have h4 : hexWeightCount 4 = 45 := by omega\n  have h6 : hexWeightCount 6 = 18 := by omega\n  by_cases h0 : k = 0\n  · subst k; simpa using hexWeightCount_zero\n  by_cases hk4 : k = 4\n  · subst k; simpa using h4\n  by_cases hk6 : k = 6\n  · subst k; simpa using h6\n  have he : hexWeightCount k = 0 := by\n    apply card_eq_zero.mpr\n    apply filter_eq_empty_iff.mpr\n    intro w _ hw\n    rcases hex_weights w with h | h | h <;> omega\n  simp [h0, hk4, hk6, he]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:161:0: linter.style.header:20:7: error: unexpected token '#'; expected term\n\nlinter.style.header:68:52: error: unexpected token '#'; expected term\n\nlinter.style.header:81:47: error: unexpected token '#'; expected term\n\nlinter.style.header:117:10: error: unexpected token '#'; expected term",
+   "level": "info"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeCounting.lean:162:0: linter.style.header:20:7: error: unexpected token '#'; expected term\n\nlinter.style.header:68:52: error: unexpected token '#'; expected term\n\nlinter.style.header:81:47: error: unexpected token '#'; expected term\n\nlinter.style.header:117:10: error: unexpected token '#'; expected term",
+   "level": "info"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Codes.HexacodeMinimum transitive imports (legacy)",
+       "358a19d8f5207059"],
+      ["Atlas.Codes.HexacodeMinimum:importAllArts", "3c4f66e174be304d"],
+      ["Mathlib.GroupTheory.Index transitive imports (legacy)",
+       "c5c0ce4f2b4b5fa0"],
+      ["Mathlib.GroupTheory.Index:importAllArts", "9dfb9bb2be7ba28c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Codes/HexacodeCounting.lean", "cccf7517c7eb2fd5"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Codes.HexacodeCounting", "43a749439d299d6b"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "352cdc1c8fded664"}

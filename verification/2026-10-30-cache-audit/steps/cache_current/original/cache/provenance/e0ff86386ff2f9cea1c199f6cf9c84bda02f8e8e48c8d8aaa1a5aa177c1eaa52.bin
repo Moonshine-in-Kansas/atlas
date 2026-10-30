@@ -1,0 +1,62 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["c74caf69eb547797.olean"],
+  "m": false,
+  "i": "e0e98e677b456c79.ilean",
+  "c": "2509f649573a7e2e.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FullCoupleStabilizer.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FullCoupleStabilizer.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FullCoupleStabilizer.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FullCoupleStabilizer.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FullCoupleStabilizer.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FullCoupleStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FullCoupleStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FullCoupleStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FullCoupleStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe explicitly generated couple group is the full pointwise Gaussian couple stabilizer. -/\ntheorem coupleFusionGroup_eq_pair_stabilizer :\n    coupleFusionGroup =\n      MulAction.stabilizer gaussianLatticeGroup localReferenceCross ⊓\n        MulAction.stabilizer gaussianLatticeGroup referenceSecondCross :=\n  by\n  apply le_antisymm coupleFusionGroup_le_pair_stabilizer\n  intro g hg\n  change (g • localReferenceCross = localReferenceCross) ∧ (g • referenceSecondCross = referenceSecondCross) at hg\n  let Q := gaussianImage g (coordinateRowFrame (rowLabel 0))\n  have hQ : IsQuartet Q := (isQuartet_gaussianImage g _).mpr (coordinateRowFrame_isQuartet _)\n  have hc : referenceCouple ⊆ Q :=\n    by\n    have hrow := (referenceCouple_subset_row_iff (rowLabel 0)).mpr rfl\n    rintro z (rfl | rfl)\n    · exact ⟨localReferenceCross, hrow (Or.inl rfl), hg.1⟩\n    · exact ⟨referenceSecondCross, hrow (Or.inr rfl), hg.2⟩\n  obtain ⟨a, ha⟩ := coupleFusion_reference_quartet_transport Q hQ hc\n  have hrow : gaussianImage (a.val⁻¹ * g) (coordinateRowFrame (rowLabel 0)) = coordinateRowFrame (rowLabel 0) :=\n    by\n    rw [gaussianImage_mul]\n    change gaussianImage a.val⁻¹ Q = _\n    rw [← ha, gaussianImage_inv]\n  obtain ⟨h, hh⟩ := gaussian_coordinateRow_stabilizer_le_code (a.val⁻¹ * g) (rowLabel 0) hrow\n  have hfix := coupleFusionGroup_fix a\n  have hhfix : h ∈ codeCoupleStabilizer := by\n    constructor\n    · change h • localReferenceCross = localReferenceCross\n      rw [← codeGaussianHom_cross, hh, mul_smul, hg.1, ← hfix.1, inv_smul_smul]\n      exact hfix.1.symm\n    · change h • referenceSecondCross = referenceSecondCross\n      rw [← codeGaussianHom_cross, hh, mul_smul, hg.2, ← hfix.2, inv_smul_smul]\n      exact hfix.2.symm\n  have hm := coupleGaussianHom_mem ⟨h, hhfix⟩\n  change codeGaussianHom h ∈ coupleFusionGroup at hm\n  rw [hh] at hm\n  have hm' := coupleFusionGroup.mul_mem a.prop hm\n  simpa only [mul_inv_cancel_left] using hm'`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FullCoupleStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FullCoupleStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FullCoupleStabilizer.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FullCoupleStabilizer.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.QuartetLocalTransitivity transitive imports (legacy)",
+       "b8e2161ea4dbd046"],
+      ["Atlas.Rudvalis.QuartetLocalTransitivity:importAllArts",
+       "67780211c25cf402"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FullCoupleStabilizer.lean",
+   "364ef775d14082e3"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FullCoupleStabilizer", "bde4d91fe8417b4c"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "bf9c0d984d7c7053"}

@@ -1,0 +1,125 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["c46172123300250e.olean"],
+  "m": false,
+  "i": "81dcb5b03e697e30.ilean",
+  "c": "4ca97c28cd830ada.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FrameSignCommutators.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FrameSignCommutators.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FrameSignCommutators.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FrameSignCommutators.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FrameSignCommutators.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped commutatorElement`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rowSignHom_commutator (g : codeGroup) (a : Point → Bit) :\n    ⁅g.val, rowSignHom (Multiplicative.ofAdd a)⁆ = rowSignHom (Multiplicative.ofAdd ((a ∘ codeRowImage g⁻¹) - a)) :=\n  by\n  rw [commutatorElement_def, rowSignHom_conjugate, ← map_inv, ← map_mul, sub_eq_add_neg]\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:7:56: missing space in the source\n\nThis part of the code\n  'Point→Bit)'\nshould be written as\n  'Point → Bit)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeI_square_rowSign :\n    (codeI.val) ^ 2 = rowSignHom (Multiplicative.ofAdd (fun _ => 1)) :=\n  by\n  apply monomialHom_injective\n  rw [map_pow, pow_two]\n  apply LinearEquiv.ext\n  intro w\n  change monomialHom codeI.val (monomialHom codeI.val w) = _\n  rw [codeI_square_action]\n  funext z\n  change -w z = signedScalar 1 (w z)\n  simp [signedScalar]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def rowSignPreimage (S : Subgroup codeGroup) :\n    Submodule Bit (Point → Bit)\n    where\n  carrier := {a | rowSignHom (Multiplicative.ofAdd a) ∈ S.map codeGroup.subtype}\n  zero_mem' := by\n    change rowSignHom 1 ∈ S.map codeGroup.subtype\n    rw [map_one]\n    exact Subgroup.one_mem _\n  add_mem' := by\n    intro a b ha hb\n    change rowSignHom (Multiplicative.ofAdd a * Multiplicative.ofAdd b) ∈ S.map codeGroup.subtype\n    rw [map_mul]\n    exact Subgroup.mul_mem _ ha hb\n  smul_mem' := by\n    intro t a ha\n    rcases Atlas.Codes.bit_cases t with rfl | rfl\n    · simp only [zero_smul]\n      change rowSignHom 1 ∈ S.map codeGroup.subtype\n      rw [map_one]\n      exact Subgroup.one_mem _\n    · simpa only [one_smul] using ha`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem hammingSigns_mem_commutator_scalars (S : Subgroup codeGroup)\n    (hc : commutator codeGroup ≤ S) (hI : codeI ∈ S) : hammingSignCode ≤ rowSignPreimage S :=\n  by\n  apply hammingSign_differences_scalar_span\n  · change rowSignHom (Multiplicative.ofAdd (fun _ => 1)) ∈ S.map codeGroup.subtype\n    exact ⟨codeI ^ 2, S.pow_mem hI 2, codeI_square_rowSign⟩\n  · intro A v\n    obtain ⟨g, hg⟩ := codeBlockLinearHom_surjective A⁻¹\n    have hr : codeRowImage g⁻¹ = linearPointEquiv A := by rw [codeRowImage_eq_linearPoint, map_inv, hg, inv_inv]\n    let a : hammingSignCode := ⟨affineRowSign 0 v, affineRowSign_mem 0 v⟩\n    have hm : ⁅g, rowSignCode a⁆ ∈ S :=\n      hc (Subgroup.commutator_mem_commutator (Subgroup.mem_top _) (Subgroup.mem_top _))\n    change\n      rowSignHom (Multiplicative.ofAdd ((affineRowSign 0 v ∘ linearPointEquiv A) - affineRowSign 0 v)) ∈\n        S.map codeGroup.subtype\n    rw [← hr, ← rowSignHom_commutator]\n    exact ⟨⁅g, rowSignCode a⁆, hm, map_commutatorElement codeGroup.subtype _ _⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:56:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:45:30: missing space in the source\n\nThis part of the code\n  'codeGroup≤S) (hI'\nshould be written as\n  'codeGroup ≤ S)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:45:45: missing space in the source\n\nThis part of the code\n  'codeI∈S) :'\nshould be written as\n  'codeI ∈ S)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rowSignCode_mem_of_hammingSigns (S : Subgroup codeGroup)\n    (hS : hammingSignCode ≤ rowSignPreimage S) (a : hammingSignCode) : rowSignCode a ∈ S :=\n  by\n  obtain ⟨g, hg, he⟩ := hS a.prop\n  have hh : g = rowSignCode a := Subtype.ext he\n  exact hh ▸ hg`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:61:25: missing space in the source\n\nThis part of the code\n  'hammingSignCode≤rowSignPreimage'\nshould be written as\n  'hammingSignCode ≤ rowSignPreimage'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem signKernel_le_commutator_scalars (S : Subgroup codeGroup)\n    (hc : commutator codeGroup ≤ S) (hI : codeI ∈ S) : codePermutationHom.ker ≤ S :=\n  by\n  intro g hg\n  let s : signPatterns := (codeSignKernelEquiv ⟨g, hg⟩).toAdd\n  let a := hammingSignEquiv.symm s\n  have ha := rowSignCode_mem_of_hammingSigns S (hammingSigns_mem_commutator_scalars S hc hI) a\n  have he : rowSignCode a = g := by\n    apply Subtype.ext\n    apply SemidirectProduct.ext\n    · have hh := congrArg Subtype.val (hammingSignEquiv.apply_symm_apply s)\n      exact hh\n    · exact ((codePermutationHom_kernel g).mp hg).symm\n  exact he ▸ ha`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:67:30: missing space in the source\n\nThis part of the code\n  'codeGroup≤S) (hI'\nshould be written as\n  'codeGroup ≤ S)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:67:45: missing space in the source\n\nThis part of the code\n  'codeI∈S) :'\nshould be written as\n  'codeI ∈ S)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FrameSignCommutators.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FrameSignConjugation transitive imports (legacy)",
+       "e604bd5610dd4da4"],
+      ["Atlas.Rudvalis.FrameSignConjugation:importAllArts",
+       "a2101603d59a0930"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FrameSignCommutators.lean",
+   "8d59dbcbfdbb42f0"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FrameSignCommutators", "e044b830bf8be5d5"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "00adf8a90635843e"}

@@ -1,0 +1,108 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["55dbfe441ea433f7.olean"],
+  "m": false,
+  "i": "e2706d4c3d2f0c33.ilean",
+  "c": "caba4a068319d457.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/HeavySelectedRowWeights.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavySelectedRowWeights.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavySelectedRowWeights.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavySelectedRowWeights.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavySelectedRowWeights.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `local instance : DecidablePred HeavyCoupleLabel := fun c =>\n  inferInstanceAs (Decidable (c.val = binaryLabel 2 ∨ c.val = binaryLabel 4))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `local instance : DecidablePred (fun p : Point => p ∈ referenceDozenRows) :=\n  fun p => inferInstanceAs (Decidable (dot (binaryLabel 1) p.val = 0))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fixedHeavyWord_row_weight (c p : Point) (v : FixedHeavyParameters c) :\n    hammingNorm (fun x => fixedHeavyWord c v (p, x)) = if p = c then 4 else 2 :=\n  by\n  have h := (binaryNormalMap_quadratic_weight_sixteen (v.2.val, v.1.val, c.val) c.prop).mp v.2.prop p\n  have he :\n    (fun x => fixedHeavyWord c v (p, x)) =\n      (fun x => v.2.val p + dot (matrixAt v.1.val p.val + eta p c.val) x + quadratic c.val x) :=\n    by\n    funext x\n    exact fixedHeavyWord_row_quadratic c v p x\n  rw [he]\n  simpa only [blockWeight, Subtype.val_inj] using h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyCouple_selected_row_weight (c : Point) (hc : HeavyCoupleLabel c)\n    (v : FixedHeavyParameters c) :\n    (∑ p ∈ Finset.univ.filter (fun p : Point => p ∈ referenceDozenRows),\n        hammingNorm (fun x => fixedHeavyWord c v (p, x))) =\n      8 :=\n  by\n  simp_rw [fixedHeavyWord_row_weight]\n  have h :\n    ∀ c : Point,\n      HeavyCoupleLabel c →\n        (∑ p ∈ Finset.univ.filter (fun p : Point => p ∈ referenceDozenRows), if p = c then (4 : ℕ) else 2) = 8 :=\n    by decide +kernel\n  exact h c hc`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem minimumWord_integerLift_row_square (w : MinimumWords) (p : Point) :\n    (∑ x : E, integerLift w.val.val (p, x) ^ 2) = (hammingNorm (fun x => reduce w.val.val (p, x)) : ℤ) :=\n  by\n  have hs : ∀ a : Quat, a ≠ 2 → integerRepresentative a ^ 2 = if reduceScalar a = 0 then (0 : ℤ) else 1 := by\n    decide +kernel\n  have ht := quaternary_minimum_no_twos w.val.val w.val.prop w.prop\n  simp only [integerLift, hs _ (ht _), hammingNorm, Finset.card_filter, Nat.cast_sum]\n  apply Finset.sum_congr rfl\n  intro x _\n  simp only [reduce, AddMonoidHom.coe_mk, ZeroHom.coe_mk]\n  split_ifs <;> simp_all`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyCouple_integerLift_selected_square (w : HeavyCoupleWords) :\n    (∑ p ∈ Finset.univ.filter (fun p : Point => p ∈ referenceDozenRows),\n        ∑ x : E, integerLift w.val.val.val (p, x) ^ 2) =\n      8 :=\n  by\n  let z :=\n    heavyCoupleResidueEquiv.symm\n      ⟨⟨⟨reduce w.val.val.val, (quaternaryCode_residue _).mpr ⟨w.val.val.val, w.val.val.prop, rfl⟩⟩, w.val.prop.2,\n          quaternary_minimum_residue_weight _ w.val.val.prop w.val.prop.1⟩,\n        w.prop⟩\n  have hr : fixedHeavyWord z.1 z.2.val.val = reduce w.val.val.val :=\n    congrArg (fun a : HeavyCoupleResidues => a.val.val.val) (heavyCoupleResidueEquiv.apply_symm_apply _)\n  have hc := (heavy_couple_second_pair_iff z.1 z.2.val).mp z.2.prop\n  have hh := heavyCouple_selected_row_weight z.1 hc z.2.val.val\n  rw [hr] at hh\n  have he :\n    (∑ p ∈ Finset.univ.filter (fun p : Point => p ∈ referenceDozenRows),\n        ∑ x : E, integerLift w.val.val.val (p, x) ^ 2) =\n      ∑ p ∈ Finset.univ.filter (fun p : Point => p ∈ referenceDozenRows),\n        (hammingNorm (fun x => reduce w.val.val.val (p, x)) : ℤ) :=\n    by\n    apply Finset.sum_congr rfl\n    intro p _\n    exact minimumWord_integerLift_row_square (heavyMinimumWord w.val) p\n  rw [he]\n  exact_mod_cast hh`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySelectedRowWeights.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.HeavyCommonPerpendicular transitive imports (legacy)",
+       "7abb3d4b18f6620f"],
+      ["Atlas.Rudvalis.HeavyCommonPerpendicular:importAllArts",
+       "e67591c575d8733e"],
+      ["Atlas.Rudvalis.SelectedCoordinateRows transitive imports (legacy)",
+       "6ac676cb08801728"],
+      ["Atlas.Rudvalis.SelectedCoordinateRows:importAllArts",
+       "6d4c075dadaa737f"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/HeavySelectedRowWeights.lean",
+   "f69e47e11e7b9297"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.HeavySelectedRowWeights", "e5af8e2970fbb247"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "55fd1b217ec779d0"}

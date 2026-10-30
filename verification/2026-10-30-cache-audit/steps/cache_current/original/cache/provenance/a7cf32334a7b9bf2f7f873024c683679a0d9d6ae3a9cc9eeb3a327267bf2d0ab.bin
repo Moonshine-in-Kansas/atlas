@@ -1,0 +1,53 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["c0811a538722a4ef.olean"],
+  "m": false,
+  "i": "e54be2afc5aab38c.ilean",
+  "c": "6ea07240aa86274f.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Codes/TernaryOrientedSyndromes.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/TernaryOrientedSyndromes.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/TernaryOrientedSyndromes.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Codes/TernaryOrientedSyndromes.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Codes/TernaryOrientedSyndromes.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Codes/TernaryOrientedSyndromes.lean:7:0: Unscoped option maxHeartbeats is not allowed:\nPlease scope this to individual declarations, as in\n```\nset_option maxHeartbeats in\n-- comment explaining why this is necessary\nexample : ... := ...\n```\n\nNote: This linter can be disabled with `set_option linter.style.setOption false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/TernaryOrientedSyndromes.lean:23:49: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [ternaryOrientedWord, ternaryTriadWord, hp, hq, hn] at hh\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/TernaryOrientedSyndromes.lean:67:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/TernaryOrientedSyndromes.lean:81:2: Try `simp at hh` instead of `simpa using hh`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Codes.TernaryOrientedAction transitive imports (legacy)",
+       "f4e812c9fc1fa512"],
+      ["Atlas.Codes.TernaryOrientedAction:importAllArts", "a7dbb19b01d2fa79"],
+      ["Atlas.Combinatorics.FiniteImageCapacity transitive imports (legacy)",
+       "b804d499a6e2aabe"],
+      ["Atlas.Combinatorics.FiniteImageCapacity:importAllArts",
+       "36b03cefa2879fc9"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Codes/TernaryOrientedSyndromes.lean",
+   "6e1a2a443c7238e6"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Codes.TernaryOrientedSyndromes", "34cc1f58180aa3d6"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "c27db51434594e76"}

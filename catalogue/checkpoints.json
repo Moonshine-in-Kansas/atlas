@@ -1,0 +1,2794 @@
+{
+  "schema_version": 1,
+  "kind": "supplementary-mathematical-results",
+  "as_of": "2026-10-30",
+  "entries": [
+    {
+      "id": "twisted-e6-order-and-fixed-projection",
+      "title": "Simply connected twisted E₆ order and fixed projection",
+      "classification": "supplementary-mathematical-checkpoint",
+      "status": "verified-checkpoint",
+      "parameter_domain": "For the group order and fixed projection: finite fields F and K, [Field F], [Field K], [Finite F], [Finite K], [Algebra F K], Module.finrank F K = 2, and q=|F|>=2. The separate weighted Weyl-sum identity holds for every natural number q, without field hypotheses.",
+      "proved_scope": [
+        "The actual simply connected graph–Frobenius fixed subgroup H has order q^36(q^12−1)(q^9+1)(q^8−1)(q^6−1)(q^5+1)(q^2−1), including q=2. The actual weighted Bruhat Weyl sum is evaluated.",
+        "The actual fixed projection onto the adjoint fixed subgroup is surjective. Quotienting H by that projection kernel gives the adjoint fixed subgroup."
+      ],
+      "unproved_conclusions": [
+        "The kernel is not asserted to be the entire center. Full center, order of the quotient by the full center, and simplicity remain open; no completed twisted-E₆ simple-family entry follows."
+      ],
+      "selected_refs": [
+        {
+          "label": "Closed order of H",
+          "declaration": "Atlas.Chevalley.TwistedE6.ClosedOrder.companionFixedSubgroup_card",
+          "source": "Atlas/LinearGroups/Chevalley/TwistedE6/E6ClosedOrder.lean",
+          "module": "Atlas.LinearGroups.Chevalley.TwistedE6.E6ClosedOrder",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-E6ClosedOrder",
+          "mathematical_details": [
+            {
+              "parameters": "Finite fields F and K, an F-algebra structure on K and [K:F]=2; q=|F|>=2.",
+              "selected_claim": "Closed order of H"
+            },
+            {
+              "parameters": "Finite fields F and K, [Field F], [Field K], [Finite F], [Finite K], [Algebra F K], and Module.finrank F K = 2; q=|F|>=2."
+            }
+          ]
+        },
+        {
+          "label": "Exact weighted Weyl sum",
+          "declaration": "Atlas.Chevalley.TwistedE6.ClosedOrder.diagramFixedWeylSum",
+          "source": "Atlas/LinearGroups/Chevalley/TwistedE6/E6ClosedOrder.lean",
+          "module": "Atlas.LinearGroups.Chevalley.TwistedE6.E6ClosedOrder",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-E6ClosedOrder",
+          "mathematical_details": [
+            {
+              "parameters": "q : Nat, arbitrary; no field or positivity hypothesis.",
+              "statement": "The weighted sum over the actual E6 diagram-fixed Weyl group is weightedWeylPolynomial q."
+            }
+          ]
+        },
+        {
+          "label": "companionFixedProjection surjective",
+          "declaration": "Atlas.Chevalley.TwistedE6.companionFixedProjection_surjective",
+          "source": "Atlas/LinearGroups/Chevalley/TwistedE6/FixedProjection.lean",
+          "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedProjection",
+          "kind": "theorem",
+          "evidence": "checkpoint-chevalley-twisted-e6-fixed-projection",
+          "mathematical_details": [
+            {
+              "parameters": "Finite fields F and K, [Field F], [Field K], [Finite F], [Finite K], [Algebra F K], and Module.finrank F K = 2; q=|F|>=2."
+            }
+          ]
+        },
+        {
+          "label": "companionFixedQuotientEquiv",
+          "declaration": "Atlas.Chevalley.TwistedE6.companionFixedQuotientEquiv",
+          "source": "Atlas/LinearGroups/Chevalley/TwistedE6/FixedProjection.lean",
+          "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedProjection",
+          "kind": "definition",
+          "evidence": "checkpoint-chevalley-twisted-e6-fixed-projection",
+          "mathematical_details": [
+            {
+              "parameters": "Finite fields F and K, [Field F], [Field K], [Finite F], [Finite K], [Algebra F K], and Module.finrank F K = 2; q=|F|>=2."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "twisted-e6-centralizer-recovery",
+      "title": "Quadratic-field matrix and minuscule centralizer recovery",
+      "classification": "supplementary-mathematical-checkpoint",
+      "status": "verified-checkpoint",
+      "parameter_domain": "Finite fields F,K with [Field F], [Field K], [Finite F], [Finite K], [Algebra F K] and Module.finrank F K = 2, including |F|=2. Matrix recovery allows every finite decidable index type n and arbitrary matrices g,A,B; its hypothesis quantifies over every u in K. Minuscule recovery uses any Strings I Ω with finite decidable Ω, any i,j:I, nonzero integers ε,δ, any matrix g, and commutation with every ordered quadratic-conjugate root product. No invertibility of g or commutation of the two steps is assumed.",
+      "proved_scope": [
+        "For arbitrary finite matrices, commutation with every quadratic-conjugate affine pair recovers commutation with both component matrices.",
+        "For the existing marked minuscule root matrices, commutation with every twisted paired root product recovers commutation with both individual root families."
+      ],
+      "unproved_conclusions": [
+        "These are matrix/blockwise conclusions, not a full fixed-group center theorem. Faithfulness of a minuscule projection and an affine formula for the quadratic adjoint block are not claimed."
+      ],
+      "selected_refs": [
+        {
+          "label": "Separate root commutation",
+          "declaration": "Atlas.Chevalley.Integral.Minuscule.Strings.commute_roots_of_quadratic_pair",
+          "source": "Atlas/LinearGroups/Chevalley/TwistedE6/MinusculeCentralizerRecovery.lean",
+          "module": "Atlas.LinearGroups.Chevalley.TwistedE6.MinusculeCentralizerRecovery",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-MinusculeCentralizerRecovery",
+          "mathematical_details": [
+            {
+              "parameters": "Finite quadratic K/F, including |F|=2; the existing marked minuscule root matrices, nonzero integral signs and the stated commutation hypothesis.",
+              "selected_claim": "Separate root commutation"
+            },
+            {
+              "parameters": "The same finite quadratic K/F, including |F|=2; the selected matrices and all commutation hypotheses in the exact statements."
+            }
+          ]
+        },
+        {
+          "label": "commute pair of quadratic extension",
+          "declaration": "Atlas.LinearAlgebra.MatrixCentralizer.commute_pair_of_quadratic_extension",
+          "source": "Atlas/LinearGroups/Chevalley/TwistedE6/MinusculeCentralizerRecovery.lean",
+          "module": "Atlas.LinearGroups.Chevalley.TwistedE6.MinusculeCentralizerRecovery",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-MinusculeCentralizerRecovery",
+          "mathematical_details": [
+            {
+              "parameters": "The same finite quadratic K/F, including |F|=2; the selected matrices and all commutation hypotheses in the exact statements."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ree-f4-order-generation",
+      "title": "Large Ree ²F₄ full order and generation",
+      "classification": "supplementary-mathematical-checkpoint",
+      "status": "verified-checkpoint",
+      "parameter_domain": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed. Perfectness alone additionally requires 1 ≤ m. The named binary order theorem fixes m = 0 and assumes |F| = 2.",
+      "proved_scope": [
+        "For q = 2^(2m+1), the actual intrinsic large Ree model has order q^12(q^6+1)(q^4−1)(q^3+1)(q−1) and is generated by the specified actual root, torus and Weyl operators. These conclusions include q = 2, whose full group order is 35,942,400. The full model is perfect for m ≥ 1 (q ≥ 8)."
+      ],
+      "unproved_conclusions": [
+        "Simplicity, field transport and the remaining incidence geometry are open.",
+        "Perfectness requires m>=1; no perfectness of the full binary group is claimed. No binary-derived index, order, simplicity or identification with the retained Tits model follows."
+      ],
+      "selected_refs": [
+        {
+          "label": "full group order",
+          "declaration": "Atlas.ReeF4.card_Model",
+          "source": "Atlas/LinearGroups/ReeF4/Order.lean",
+          "module": "Atlas.LinearGroups.ReeF4.Order",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-ree-f4-full-model-order",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed.",
+              "statement": "|G| = q^12(q^6+1)(q^4−1)(q^3+1)(q−1). This is the order of the actual full intrinsic model.",
+              "binary_specialization": {
+                "m": 0,
+                "q": 2,
+                "order": 35942400,
+                "named_binary_endpoint": "Atlas.ReeF4.card_Model_binary"
+              }
+            },
+            {
+              "parameters": "F a finite field of characteristic 2, m>=0, q=|F|=2^(2m+1). Perfectness additionally assumes m>=1 (q>=8).",
+              "selected_claim": "Full intrinsic order"
+            }
+          ]
+        },
+        {
+          "label": "binary full group order",
+          "declaration": "Atlas.ReeF4.card_Model_binary",
+          "source": "Atlas/LinearGroups/ReeF4/Order.lean",
+          "module": "Atlas.LinearGroups.ReeF4.Order",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-ree-f4-full-model-order",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2 with hcard: |F| = 2^(2·0+1) = 2. The model parameter is fixed at m = 0; F need not be definitionally ZMod 2.",
+              "statement": "|Atlas.ReeF4.Model F 0| = 35,942,400.",
+              "exact_value": 35942400
+            },
+            {
+              "parameters": "F a finite field of characteristic 2, m>=0, q=|F|=2^(2m+1). Perfectness additionally assumes m>=1 (q>=8).",
+              "selected_claim": "Binary full-group order"
+            }
+          ]
+        },
+        {
+          "label": "full group generation",
+          "declaration": "Atlas.ReeF4.elementarySubgroup_eq_top",
+          "source": "Atlas/LinearGroups/ReeF4/Generation.lean",
+          "module": "Atlas.LinearGroups.ReeF4.Generation",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-ree-f4-full-model-generation",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed.",
+              "statement": "Atlas.ReeF4.elementarySubgroup hcard = ⊤ in Subgroup G. The subgroup is generated by the actual short-root embedding, long-root embedding, torus embedding and the specified Weyl elements rho and sigma. Thus these specified operators generate the full intrinsic model, including q = 2.",
+              "binary_specialization": {
+                "m": 0,
+                "q": 2,
+                "claim": "The same elementary subgroup equals the full binary model.",
+                "basis": "specialization of this family theorem; no separate binary generation declaration is asserted"
+              }
+            },
+            {
+              "parameters": "F a finite field of characteristic 2, m>=0, q=|F|=2^(2m+1). Perfectness additionally assumes m>=1 (q>=8).",
+              "selected_claim": "Actual full generation"
+            }
+          ]
+        },
+        {
+          "label": "full group perfectness",
+          "declaration": "Atlas.ReeF4.model_isPerfect",
+          "source": "Atlas/LinearGroups/ReeF4/Generation.lean",
+          "module": "Atlas.LinearGroups.ReeF4.Generation",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-ree-f4-full-model-generation",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed. Additionally assume hm: 1 ≤ m; equivalently, within this parameter family q ≥ 8.",
+              "statement": "Group.IsPerfect G: the full model equals its commutator subgroup.",
+              "binary_specialization": {
+                "applies": false,
+                "reason": "m = 0 fails the explicit hypothesis 1 ≤ m; this theorem makes no binary perfectness assertion"
+              }
+            },
+            {
+              "parameters": "F a finite field of characteristic 2, m>=0, q=|F|=2^(2m+1). Perfectness additionally assumes m>=1 (q>=8).",
+              "selected_claim": "Perfectness for q>=8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ree-f4-parabolics-and-binary-action",
+      "title": "Large Ree ²F₄ parabolics and binary action",
+      "classification": "supplementary-mathematical-checkpoint",
+      "status": "verified-checkpoint",
+      "parameter_domain": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed. All parabolic, tail and full line-kernel statements include m = 0. The faithfulness and permutation-kernel endpoints fix F = ZMod 2, m = 0; the separate cardinality endpoints at q = 2 allow any finite field of order two.",
+      "proved_scope": [
+        "The full first-point stabilizer is explicitly the image of R ⋊ (Sz(q) × Fˣ), with |R| = q^10 and |P| = q^12(q²+1)(q−1)². The full marked-line stabilizer is explicitly the image of K ⋊ GL₂(F), where the full pointwise kernel K lies in U, has eleven-field-parameter coordinates, is solvable, and has order q^11; |Q| = q^12(q−1)²(q+1). Both equivalences multiply the normal factor first and include q = 2. Over ZMod 2, the full model and its literal commutator subgroup act faithfully on the actual 1,755-point set."
+      ],
+      "unproved_conclusions": [
+        "The eleven-parameter kernel coordinate equivalence is a bijection of types, not an assertion that the kernel is an additive vector group.",
+        "Explicit radical filtrations, maximal normal 2-subgroup recognition, Borel/intersection and residue identifications, and full generalized-octagon geometry remain open.",
+        "Faithfulness endpoints use the literal field ZMod 2; separate transport of this action to every two-element presentation is not asserted. Faithfulness does not establish derived index/order, transitivity, perfectness, simplicity or a Tits identification."
+      ],
+      "selected_refs": [
+        {
+          "label": "binary literal derived faithful action",
+          "declaration": "Atlas.ReeF4.binaryDerived_specialPoints_faithful",
+          "source": "Atlas/LinearGroups/ReeF4/BinaryDerivedPointFaithfulness.lean",
+          "module": "Atlas.LinearGroups.ReeF4.BinaryDerivedPointFaithfulness",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-BinarySpecialPointFaithfulness",
+          "mathematical_details": [
+            {
+              "parameters": "The field is exactly F = ZMod 2 and m = 0. Put G₂ = Atlas.ReeF4.Model (ZMod 2) 0 and X₂ = Atlas.ReeF4.SpecialPoints (F := ZMod 2) 0. This is the existing action on the intrinsic special projective points. There are no additional hypotheses. Put D = ↥(commutator G₂), the literal commutator subgroup of this independent binary model.",
+              "statement": "The inherited action D ↷ X₂ is faithful: FaithfulSMul D X₂. This does not assert the order, index, transitivity, perfectness or simplicity of D."
+            },
+            {
+              "parameters": "The intrinsic binary Ree model over ZMod 2 at m=0, and its literal commutator subgroup.",
+              "selected_claim": "Faithful literal derived action"
+            }
+          ]
+        },
+        {
+          "label": "binary literal derived restriction identity",
+          "declaration": "Atlas.ReeF4.binaryDerived_specialPoints_toPermHom_eq_restrict",
+          "source": "Atlas/LinearGroups/ReeF4/BinaryDerivedPointFaithfulness.lean",
+          "module": "Atlas.LinearGroups.ReeF4.BinaryDerivedPointFaithfulness",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-BinarySpecialPointFaithfulness",
+          "mathematical_details": [
+            {
+              "parameters": "The field is exactly F = ZMod 2 and m = 0. Put G₂ = Atlas.ReeF4.Model (ZMod 2) 0 and X₂ = Atlas.ReeF4.SpecialPoints (F := ZMod 2) 0. This is the existing action on the intrinsic special projective points. There are no additional hypotheses. Put D = ↥(commutator G₂) and let i : D →* G₂ be the actual subgroup inclusion.",
+              "statement": "MulAction.toPermHom D X₂ = (MulAction.toPermHom G₂ X₂).comp i. The derived action is exactly restriction of the full model action."
+            },
+            {
+              "parameters": "The intrinsic binary Ree model over ZMod 2 at m=0, and its literal commutator subgroup.",
+              "selected_claim": "Actual restriction equation"
+            }
+          ]
+        },
+        {
+          "label": "binary literal derived permutation kernel",
+          "declaration": "Atlas.ReeF4.binaryDerived_specialPoints_toPermHom_ker_eq_bot",
+          "source": "Atlas/LinearGroups/ReeF4/BinaryDerivedPointFaithfulness.lean",
+          "module": "Atlas.LinearGroups.ReeF4.BinaryDerivedPointFaithfulness",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-BinarySpecialPointFaithfulness",
+          "mathematical_details": [
+            {
+              "parameters": "The field is exactly F = ZMod 2 and m = 0. Put G₂ = Atlas.ReeF4.Model (ZMod 2) 0 and X₂ = Atlas.ReeF4.SpecialPoints (F := ZMod 2) 0. This is the existing action on the intrinsic special projective points. There are no additional hypotheses. Put D = ↥(commutator G₂).",
+              "statement": "The canonical permutation homomorphism MulAction.toPermHom D X₂ has kernel ⊥, the trivial subgroup."
+            }
+          ]
+        },
+        {
+          "label": "binary full group faithful action",
+          "declaration": "Atlas.ReeF4.binarySpecialPoints_faithfulSMul",
+          "source": "Atlas/LinearGroups/ReeF4/BinarySpecialPointFaithfulness.lean",
+          "module": "Atlas.LinearGroups.ReeF4.BinarySpecialPointFaithfulness",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-BinarySpecialPointFaithfulness",
+          "mathematical_details": [
+            {
+              "parameters": "The field is exactly F = ZMod 2 and m = 0. Put G₂ = Atlas.ReeF4.Model (ZMod 2) 0 and X₂ = Atlas.ReeF4.SpecialPoints (F := ZMod 2) 0. This is the existing action on the intrinsic special projective points. There are no additional hypotheses.",
+              "statement": "The existing action G₂ ↷ X₂ is faithful: FaithfulSMul G₂ X₂. Together with the separate point-count theorem, this is a faithful action on 1,755 points."
+            }
+          ]
+        },
+        {
+          "label": "Faithful full binary action",
+          "declaration": "Atlas.ReeF4.binarySpecialPoints_toPermHom_injective",
+          "source": "Atlas/LinearGroups/ReeF4/BinarySpecialPointFaithfulness.lean",
+          "module": "Atlas.LinearGroups.ReeF4.BinarySpecialPointFaithfulness",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-BinarySpecialPointFaithfulness",
+          "mathematical_details": [
+            {
+              "parameters": "The intrinsic binary Ree model over ZMod 2 at m=0, and its literal commutator subgroup.",
+              "selected_claim": "Faithful full binary action"
+            }
+          ]
+        },
+        {
+          "label": "binary full group permutation kernel",
+          "declaration": "Atlas.ReeF4.binarySpecialPoints_toPermHom_ker_eq_bot",
+          "source": "Atlas/LinearGroups/ReeF4/BinarySpecialPointFaithfulness.lean",
+          "module": "Atlas.LinearGroups.ReeF4.BinarySpecialPointFaithfulness",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-BinarySpecialPointFaithfulness",
+          "mathematical_details": [
+            {
+              "parameters": "The field is exactly F = ZMod 2 and m = 0. Put G₂ = Atlas.ReeF4.Model (ZMod 2) 0 and X₂ = Atlas.ReeF4.SpecialPoints (F := ZMod 2) 0. This is the existing action on the intrinsic special projective points. There are no additional hypotheses.",
+              "statement": "The canonical permutation homomorphism MulAction.toPermHom G₂ X₂ has kernel ⊥, the trivial subgroup."
+            }
+          ]
+        },
+        {
+          "label": "point parabolic order",
+          "declaration": "Atlas.ReeF4.card_firstPointParabolic",
+          "source": "Atlas/LinearGroups/ReeF4/PointParabolicSemidirect.lean",
+          "module": "Atlas.LinearGroups.ReeF4.PointParabolicSemidirect",
+          "kind": "theorem",
+          "evidence": "checkpoint-draft-ree-point-parabolic-semidirect",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed.",
+              "statement": "The full first-point stabilizer P has order q^12(q²+1)(q−1)².",
+              "binary_specialization": {
+                "m": 0,
+                "q": 2,
+                "order": 20480,
+                "named_binary_endpoint": "Atlas.ReeF4.card_firstPointParabolic_binary"
+              }
+            },
+            {
+              "parameters": "F a finite field of characteristic 2, m>=0, q=|F|=2^(2m+1), including q=2; the actual marked point and marked two-space.",
+              "selected_claim": "Point stabilizer order"
+            }
+          ]
+        },
+        {
+          "label": "binary point parabolic order",
+          "declaration": "Atlas.ReeF4.card_firstPointParabolic_binary",
+          "source": "Atlas/LinearGroups/ReeF4/PointParabolicSemidirect.lean",
+          "module": "Atlas.LinearGroups.ReeF4.PointParabolicSemidirect",
+          "kind": "theorem",
+          "evidence": "checkpoint-draft-ree-point-parabolic-semidirect",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2 with hcard: |F| = 2^(2·0+1) = 2. The model parameter is fixed at m = 0; F need not be definitionally ZMod 2.",
+              "statement": "|Atlas.ReeF4.firstPointParabolic (F := F) 0| = 20,480.",
+              "exact_value": 20480
+            }
+          ]
+        },
+        {
+          "label": "full line kernel order",
+          "declaration": "Atlas.ReeF4.card_markedLineRestrictionKernel",
+          "source": "Atlas/LinearGroups/ReeF4/MarkedLineKernelRecognition.lean",
+          "module": "Atlas.LinearGroups.ReeF4.MarkedLineKernelRecognition",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-MarkedLineKernelRecognition",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed.",
+              "statement": "The actual full line restriction kernel K has order q^11.",
+              "binary_specialization": {
+                "m": 0,
+                "q": 2,
+                "order": 2048,
+                "basis": "arithmetic specialization of this audited family theorem; no additional named binary theorem"
+              }
+            },
+            {
+              "parameters": "F a finite field of characteristic 2, m>=0, q=|F|=2^(2m+1), including q=2; the actual marked point and marked two-space.",
+              "selected_claim": "Full line-kernel order"
+            }
+          ]
+        },
+        {
+          "label": "binary line parabolic order",
+          "declaration": "Atlas.ReeF4.card_markedLineStabilizer_binary",
+          "source": "Atlas/LinearGroups/ReeF4/LineParabolicOrder.lean",
+          "module": "Atlas.LinearGroups.ReeF4.LineParabolicOrder",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-LineParabolicOrder",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2 with hcard: |F| = 2^(2·0+1) = 2. The model parameter is fixed at m = 0; F need not be definitionally ZMod 2.",
+              "statement": "|Atlas.ReeF4.markedLineStabilizer (F := F) 0| = 12,288.",
+              "exact_value": 12288
+            }
+          ]
+        },
+        {
+          "label": "line parabolic order",
+          "declaration": "Atlas.ReeF4.card_markedLineStabilizer_project_form",
+          "source": "Atlas/LinearGroups/ReeF4/LineParabolicOrder.lean",
+          "module": "Atlas.LinearGroups.ReeF4.LineParabolicOrder",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-LineParabolicOrder",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed.",
+              "statement": "The full marked-line stabilizer Q has order q^12(q−1)²(q+1).",
+              "binary_specialization": {
+                "m": 0,
+                "q": 2,
+                "order": 12288,
+                "named_binary_endpoint": "Atlas.ReeF4.card_markedLineStabilizer_binary"
+              }
+            },
+            {
+              "parameters": "F a finite field of characteristic 2, m>=0, q=|F|=2^(2m+1), including q=2; the actual marked point and marked two-space.",
+              "selected_claim": "Line stabilizer order"
+            }
+          ]
+        },
+        {
+          "label": "point tail order",
+          "declaration": "Atlas.ReeF4.card_positiveRootTailSubgroup",
+          "source": "Atlas/LinearGroups/ReeF4/PositiveRootTail.lean",
+          "module": "Atlas.LinearGroups.ReeF4.PositiveRootTail",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-PositiveRootTail",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed.",
+              "statement": "The actual seven-factor positive tail R = Atlas.ReeF4.positiveRootTailSubgroup hcard has order q^10.",
+              "binary_specialization": {
+                "m": 0,
+                "q": 2,
+                "order": 1024,
+                "basis": "arithmetic specialization of this audited family theorem; no additional named binary theorem"
+              }
+            }
+          ]
+        },
+        {
+          "label": "binary action degree",
+          "declaration": "Atlas.ReeF4.card_specialPoints_binary",
+          "source": "Atlas/LinearGroups/ReeF4/SpecialPointCount.lean",
+          "module": "Atlas.LinearGroups.ReeF4.SpecialPointCount",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-summary-ree-f4-binary-point-count-20261030",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2 and assume hcard: |F| = 2. The special-point parameter is fixed at m = 0. In particular the theorem specializes to F = ZMod 2.",
+              "statement": "|Atlas.ReeF4.SpecialPoints (F := F) 0| = 1,755. This counts the actual intrinsic special projective points; it is an earlier independent point-count checkpoint and is not a premise of binary faithfulness.",
+              "exact_value": 1755,
+              "existing_published_prerequisite": true
+            }
+          ]
+        },
+        {
+          "label": "line parabolic semidirect equivalence",
+          "declaration": "Atlas.ReeF4.lineParabolicSemidirectEquiv",
+          "source": "Atlas/LinearGroups/ReeF4/LineParabolicSemidirect.lean",
+          "module": "Atlas.LinearGroups.ReeF4.LineParabolicSemidirect",
+          "kind": "definition",
+          "evidence": "checkpoint-staged-LineParabolicSemidirect",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed.",
+              "statement": "An actual multiplicative equivalence K ⋊[markedLineKernelGL2Action hcard] GL₂(F) ≃* Q, where Q is the full setwise stabilizer of the marked two-dimensional subspace and K is its pointwise kernel. The semidirect product is the domain, and Q is the codomain. This includes q = 2.",
+              "orientation": {
+                "domain": "K ⋊[markedLineKernelGL2Action hcard] GL₂(F)",
+                "codomain": "Q",
+                "equivalence_kind": "multiplicative equivalence",
+                "lean_type": "markedLineRestrictionKernel (F := F) m ⋊[markedLineKernelGL2Action hcard] Matrix.GeneralLinearGroup (Fin 2) F ≃* markedLineStabilizer (F := F) m",
+                "forward_map": "(k,B) ↦ k.val · markedLineLeviSection hcard B in Q; its underlying G-operator is k.val.val · modelLongGL2Hom hcard B",
+                "acting_factor": "GL₂(F) acts on K by conjugation through the specified markedLineLeviSection",
+                "action_declaration": "Atlas.ReeF4.markedLineKernelGL2Action"
+              }
+            },
+            {
+              "parameters": "F a finite field of characteristic 2, m>=0, q=|F|=2^(2m+1), including q=2; the actual marked point and marked two-space.",
+              "selected_claim": "Line stabilizer decomposition"
+            }
+          ]
+        },
+        {
+          "label": "line parabolic actual operator map",
+          "declaration": "Atlas.ReeF4.lineParabolicSemidirectEquiv_val",
+          "source": "Atlas/LinearGroups/ReeF4/LineParabolicSemidirect.lean",
+          "module": "Atlas.LinearGroups.ReeF4.LineParabolicSemidirect",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-LineParabolicSemidirect",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed. Let x be any element of K ⋊[markedLineKernelGL2Action hcard] GL₂(F).",
+              "statement": "The underlying G-element of lineParabolicSemidirectEquiv hcard x equals x.left.val.val · modelLongGL2Hom hcard x.right. The kernel factor is multiplied first."
+            }
+          ]
+        },
+        {
+          "label": "full line kernel coordinates",
+          "declaration": "Atlas.ReeF4.markedLineKernelParameters",
+          "source": "Atlas/LinearGroups/ReeF4/MarkedLineKernelRecognition.lean",
+          "module": "Atlas.LinearGroups.ReeF4.MarkedLineKernelRecognition",
+          "kind": "definition",
+          "evidence": "checkpoint-staged-MarkedLineKernelRecognition",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed.",
+              "statement": "An actual coordinate bijection ((Fin 3 → F) × (Fin 4 → F × F)) ≃ K. The three long-root parameters and four short-root pairs give the specified seven-factor, eleven-field-parameter normal form of the full line kernel, including q = 2.",
+              "orientation": {
+                "domain": "F³ × (F²)⁴",
+                "codomain": "K",
+                "equivalence_kind": "bijection of underlying types (Equiv), not a multiplicative or additive equivalence",
+                "lean_type": "((Fin 3 → F) × (Fin 4 → F × F)) ≃ markedLineRestrictionKernel (F := F) m"
+              }
+            }
+          ]
+        },
+        {
+          "label": "full line kernel solvability",
+          "declaration": "Atlas.ReeF4.markedLineRestrictionKernel_isSolvable",
+          "source": "Atlas/LinearGroups/ReeF4/MarkedLineKernelRecognition.lean",
+          "module": "Atlas.LinearGroups.ReeF4.MarkedLineKernelRecognition",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-MarkedLineKernelRecognition",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed.",
+              "statement": "The actual full line restriction kernel K is solvable, including q = 2."
+            },
+            {
+              "parameters": "F a finite field of characteristic 2, m>=0, q=|F|=2^(2m+1), including q=2; the actual marked point and marked two-space.",
+              "selected_claim": "Full line-kernel solvability"
+            }
+          ]
+        },
+        {
+          "label": "full line kernel recognition",
+          "declaration": "Atlas.ReeF4.markedLineRestrictionKernel_mem_positiveRootSubgroup",
+          "source": "Atlas/LinearGroups/ReeF4/MarkedLineKernelRecognition.lean",
+          "module": "Atlas.LinearGroups.ReeF4.MarkedLineKernelRecognition",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-MarkedLineKernelRecognition",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed. Let g be any element of K = Atlas.ReeF4.markedLineRestrictionKernel m, the full kernel of the marked-line restriction Q → GL₂(F).",
+              "statement": "The underlying element g.val.val of G lies in U = Atlas.ReeF4.positiveRootSubgroup hcard. Thus every element of the full line kernel lies in U; this is not merely an assertion about K ∩ U."
+            }
+          ]
+        },
+        {
+          "label": "point parabolic semidirect equivalence",
+          "declaration": "Atlas.ReeF4.pointParabolicSemidirectEquiv",
+          "source": "Atlas/LinearGroups/ReeF4/PointParabolicSemidirect.lean",
+          "module": "Atlas.LinearGroups.ReeF4.PointParabolicSemidirect",
+          "kind": "definition",
+          "evidence": "checkpoint-draft-ree-point-parabolic-semidirect",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed.",
+              "statement": "An actual multiplicative equivalence R ⋊[suzukiScalarTailAction hcard] (Atlas.SuzukiFamily.Group F m × Fˣ) ≃* P, where P is the full first-point stabilizer. The displayed semidirect product is the domain, and P is the codomain. This includes q = 2.",
+              "orientation": {
+                "domain": "R ⋊[suzukiScalarTailAction hcard] (Sz(F,m) × Fˣ)",
+                "codomain": "P",
+                "equivalence_kind": "multiplicative equivalence",
+                "lean_type": "positiveRootTailSubgroup hcard ⋊[suzukiScalarTailAction hcard] (SuzukiFamily.Group F m × Fˣ) ≃* firstPointParabolic (F := F) m",
+                "forward_map": "(r,l) ↦ r · modelSuzukiProductHom hcard l, as the underlying operator in G",
+                "acting_factor": "Sz(F,m) × Fˣ acts on R by conjugation through modelSuzukiProductHom hcard",
+                "action_declaration": "Atlas.ReeF4.suzukiScalarTailAction"
+              }
+            },
+            {
+              "parameters": "F a finite field of characteristic 2, m>=0, q=|F|=2^(2m+1), including q=2; the actual marked point and marked two-space.",
+              "selected_claim": "Point stabilizer decomposition"
+            }
+          ]
+        },
+        {
+          "label": "point parabolic actual operator map",
+          "declaration": "Atlas.ReeF4.pointParabolicSemidirectEquiv_apply",
+          "source": "Atlas/LinearGroups/ReeF4/PointParabolicSemidirect.lean",
+          "module": "Atlas.LinearGroups.ReeF4.PointParabolicSemidirect",
+          "kind": "theorem",
+          "evidence": "checkpoint-draft-ree-point-parabolic-semidirect",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed. Let x be any element of R ⋊[suzukiScalarTailAction hcard] (Atlas.SuzukiFamily.Group F m × Fˣ).",
+              "statement": "The underlying G-element of pointParabolicSemidirectEquiv hcard x equals x.left.val · modelSuzukiProductHom hcard x.right. The R factor is multiplied first."
+            }
+          ]
+        },
+        {
+          "label": "point tail solvability",
+          "declaration": "Atlas.ReeF4.positiveRootTailSubgroup_isSolvable",
+          "source": "Atlas/LinearGroups/ReeF4/PositiveRootTail.lean",
+          "module": "Atlas.LinearGroups.ReeF4.PositiveRootTail",
+          "kind": "theorem",
+          "evidence": "checkpoint-staged-PositiveRootTail",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed.",
+              "statement": "The actual group R = Atlas.ReeF4.positiveRootTailSubgroup hcard is solvable, including q = 2."
+            }
+          ]
+        },
+        {
+          "label": "point tail normality",
+          "declaration": "Atlas.ReeF4.positiveRootTail_normal_in_firstPointParabolic",
+          "source": "Atlas/LinearGroups/ReeF4/PointParabolicSemidirect.lean",
+          "module": "Atlas.LinearGroups.ReeF4.PointParabolicSemidirect",
+          "kind": "theorem",
+          "evidence": "checkpoint-draft-ree-point-parabolic-semidirect",
+          "mathematical_details": [
+            {
+              "parameters": "Let F be any finite field of characteristic 2, let m be a natural number (m ≥ 0), and assume hcard: |F| = 2^(2m+1). Write q = |F| and G = Atlas.ReeF4.Model F m. No positivity assumption on m is imposed.",
+              "statement": "The subgroup R, viewed by subgroupOf inside P = Atlas.ReeF4.firstPointParabolic m, is normal in P, including q = 2. Here P is the full stabilizer in G of the first marked special projective point."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j1-local-subgroup-and-whitelaw-orbit",
+      "title": "J₁ local subgroup and the 1,596-point orbit",
+      "classification": "supplementary-mathematical-checkpoint",
+      "status": "verified-checkpoint",
+      "parameter_domain": "The fixed original octonion construction over ZMod 11 with its retained generators P,Q,R,S, subgroup H=<P,Q,R>, seven-dimensional trace-zero projective space and ten specified seed points.",
+      "proved_scope": [
+        "The actual sign subgroup has order 8 and the P,Q subgroup has order 21. The unique sign–P–Q normal form gives |H|=168.",
+        "The ten disjoint H-orbits have sizes 84,168,...,168. Their 1,596-point union is invariant under the actual generated group, equals its orbit of the marked point, and carries a transitive action."
+      ],
+      "unproved_conclusions": [
+        "The full point stabilizer, full-action faithfulness/primitivity, sextic geometry, full J₁ order and simplicity remain open. The number 1,596 is an orbit cardinality, not the group order."
+      ],
+      "selected_refs": [
+        {
+          "label": "H normal form",
+          "declaration": "Atlas.Janko1.H_normal_form",
+          "source": "Atlas/Sporadic/Janko1/Local168.lean",
+          "module": "Atlas.Sporadic.Janko1.Local168",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-j1local168",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed construction; no field parameter.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.Janko1.Field = ZMod 11",
+                  "ambient_group": "Atlas.G2.Model (ZMod 11), the full split-octonion automorphism group",
+                  "candidate": "Atlas.Janko1.Model, the carrier of Subgroup.closure {P,Q,R,S}",
+                  "local_subgroup": "Atlas.Janko1.H = Subgroup.closure {P,Q,R}",
+                  "sign_subgroup": "Atlas.Janko1.signSubgroup, the image of the actual sign homomorphism",
+                  "sign_parameters": "Atlas.Janko1.SignParameters = Fin 3 → ZMod 2",
+                  "pq_subgroup": "Atlas.Janko1.pqSubgroup = Subgroup.closure {P,Q}",
+                  "projective_space": "Atlas.Janko1.ProjV = Projectivization Field Imaginary; Imaginary is the seven-dimensional trace-zero octonion subspace",
+                  "whitelaw_set": "Atlas.Janko1.whitelawSet, the union of H-orbits of the ten specified whitelawSeedPoint r, r : Fin 10",
+                  "whitelaw_carrier": "Atlas.Janko1.WhitelawPoints = {p : ProjV // p ∈ whitelawSet}",
+                  "orbit_basepoint": "Atlas.Janko1.whitelawPoint, represented in the retained Wilson coordinates by (1,0,-1,1,2,1,5)"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [
+                "g : Atlas.Janko1.H"
+              ],
+              "statement": "There is a unique t ∈ SignParameters × (Fin 7 × Fin 3) with signElement(t.1)·P^(t.2.1.val)·Q^(t.2.2.val) = g in the ambient octonion group."
+            }
+          ]
+        },
+        {
+          "label": "card H",
+          "declaration": "Atlas.Janko1.card_H",
+          "source": "Atlas/Sporadic/Janko1/Local168.lean",
+          "module": "Atlas.Sporadic.Janko1.Local168",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-j1local168",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed construction; no field parameter.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.Janko1.Field = ZMod 11",
+                  "ambient_group": "Atlas.G2.Model (ZMod 11), the full split-octonion automorphism group",
+                  "candidate": "Atlas.Janko1.Model, the carrier of Subgroup.closure {P,Q,R,S}",
+                  "local_subgroup": "Atlas.Janko1.H = Subgroup.closure {P,Q,R}",
+                  "sign_subgroup": "Atlas.Janko1.signSubgroup, the image of the actual sign homomorphism",
+                  "sign_parameters": "Atlas.Janko1.SignParameters = Fin 3 → ZMod 2",
+                  "pq_subgroup": "Atlas.Janko1.pqSubgroup = Subgroup.closure {P,Q}",
+                  "projective_space": "Atlas.Janko1.ProjV = Projectivization Field Imaginary; Imaginary is the seven-dimensional trace-zero octonion subspace",
+                  "whitelaw_set": "Atlas.Janko1.whitelawSet, the union of H-orbits of the ten specified whitelawSeedPoint r, r : Fin 10",
+                  "whitelaw_carrier": "Atlas.Janko1.WhitelawPoints = {p : ProjV // p ∈ whitelawSet}",
+                  "orbit_basepoint": "Atlas.Janko1.whitelawPoint, represented in the retained Wilson coordinates by (1,0,-1,1,2,1,5)"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [],
+              "statement": "Nat.card H = 168."
+            },
+            {
+              "parameters": "The existing generated octonion model and its specified local subgroup H and Whitelaw point set.",
+              "selected_claim": "Local subgroup order"
+            }
+          ]
+        },
+        {
+          "label": "card generatedWhitelawOrbit",
+          "declaration": "Atlas.Janko1.card_generatedWhitelawOrbit",
+          "source": "Atlas/Sporadic/Janko1/WhitelawSInvariant.lean",
+          "module": "Atlas.Sporadic.Janko1.WhitelawSInvariant",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-j1whitelawsinvariant",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed construction; no field parameter.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.Janko1.Field = ZMod 11",
+                  "ambient_group": "Atlas.G2.Model (ZMod 11), the full split-octonion automorphism group",
+                  "candidate": "Atlas.Janko1.Model, the carrier of Subgroup.closure {P,Q,R,S}",
+                  "local_subgroup": "Atlas.Janko1.H = Subgroup.closure {P,Q,R}",
+                  "sign_subgroup": "Atlas.Janko1.signSubgroup, the image of the actual sign homomorphism",
+                  "sign_parameters": "Atlas.Janko1.SignParameters = Fin 3 → ZMod 2",
+                  "pq_subgroup": "Atlas.Janko1.pqSubgroup = Subgroup.closure {P,Q}",
+                  "projective_space": "Atlas.Janko1.ProjV = Projectivization Field Imaginary; Imaginary is the seven-dimensional trace-zero octonion subspace",
+                  "whitelaw_set": "Atlas.Janko1.whitelawSet, the union of H-orbits of the ten specified whitelawSeedPoint r, r : Fin 10",
+                  "whitelaw_carrier": "Atlas.Janko1.WhitelawPoints = {p : ProjV // p ∈ whitelawSet}",
+                  "orbit_basepoint": "Atlas.Janko1.whitelawPoint, represented in the retained Wilson coordinates by (1,0,-1,1,2,1,5)"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [],
+              "statement": "Nat.card (MulAction.orbit Model whitelawPoint) = 1596."
+            }
+          ]
+        },
+        {
+          "label": "card pqSubgroup",
+          "declaration": "Atlas.Janko1.card_pqSubgroup",
+          "source": "Atlas/Sporadic/Janko1/PQComplement.lean",
+          "module": "Atlas.Sporadic.Janko1.PQComplement",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-j1pqcomplement",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed construction; no field parameter.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.Janko1.Field = ZMod 11",
+                  "ambient_group": "Atlas.G2.Model (ZMod 11), the full split-octonion automorphism group",
+                  "candidate": "Atlas.Janko1.Model, the carrier of Subgroup.closure {P,Q,R,S}",
+                  "local_subgroup": "Atlas.Janko1.H = Subgroup.closure {P,Q,R}",
+                  "sign_subgroup": "Atlas.Janko1.signSubgroup, the image of the actual sign homomorphism",
+                  "sign_parameters": "Atlas.Janko1.SignParameters = Fin 3 → ZMod 2",
+                  "pq_subgroup": "Atlas.Janko1.pqSubgroup = Subgroup.closure {P,Q}",
+                  "projective_space": "Atlas.Janko1.ProjV = Projectivization Field Imaginary; Imaginary is the seven-dimensional trace-zero octonion subspace",
+                  "whitelaw_set": "Atlas.Janko1.whitelawSet, the union of H-orbits of the ten specified whitelawSeedPoint r, r : Fin 10",
+                  "whitelaw_carrier": "Atlas.Janko1.WhitelawPoints = {p : ProjV // p ∈ whitelawSet}",
+                  "orbit_basepoint": "Atlas.Janko1.whitelawPoint, represented in the retained Wilson coordinates by (1,0,-1,1,2,1,5)"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [],
+              "statement": "Nat.card pqSubgroup = 21."
+            }
+          ]
+        },
+        {
+          "label": "card signSubgroup",
+          "declaration": "Atlas.Janko1.card_signSubgroup",
+          "source": "Atlas/Sporadic/Janko1/SignGroup.lean",
+          "module": "Atlas.Sporadic.Janko1.SignGroup",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-j1signgroup",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed construction; no field parameter.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.Janko1.Field = ZMod 11",
+                  "ambient_group": "Atlas.G2.Model (ZMod 11), the full split-octonion automorphism group",
+                  "candidate": "Atlas.Janko1.Model, the carrier of Subgroup.closure {P,Q,R,S}",
+                  "local_subgroup": "Atlas.Janko1.H = Subgroup.closure {P,Q,R}",
+                  "sign_subgroup": "Atlas.Janko1.signSubgroup, the image of the actual sign homomorphism",
+                  "sign_parameters": "Atlas.Janko1.SignParameters = Fin 3 → ZMod 2",
+                  "pq_subgroup": "Atlas.Janko1.pqSubgroup = Subgroup.closure {P,Q}",
+                  "projective_space": "Atlas.Janko1.ProjV = Projectivization Field Imaginary; Imaginary is the seven-dimensional trace-zero octonion subspace",
+                  "whitelaw_set": "Atlas.Janko1.whitelawSet, the union of H-orbits of the ten specified whitelawSeedPoint r, r : Fin 10",
+                  "whitelaw_carrier": "Atlas.Janko1.WhitelawPoints = {p : ProjV // p ∈ whitelawSet}",
+                  "orbit_basepoint": "Atlas.Janko1.whitelawPoint, represented in the retained Wilson coordinates by (1,0,-1,1,2,1,5)"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [],
+              "statement": "Nat.card signSubgroup = 8."
+            }
+          ]
+        },
+        {
+          "label": "card whitelawOrbit",
+          "declaration": "Atlas.Janko1.card_whitelawOrbit",
+          "source": "Atlas/Sporadic/Janko1/WhitelawExactCount.lean",
+          "module": "Atlas.Sporadic.Janko1.WhitelawExactCount",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-j1whitelawexactcount",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed construction; no field parameter.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.Janko1.Field = ZMod 11",
+                  "ambient_group": "Atlas.G2.Model (ZMod 11), the full split-octonion automorphism group",
+                  "candidate": "Atlas.Janko1.Model, the carrier of Subgroup.closure {P,Q,R,S}",
+                  "local_subgroup": "Atlas.Janko1.H = Subgroup.closure {P,Q,R}",
+                  "sign_subgroup": "Atlas.Janko1.signSubgroup, the image of the actual sign homomorphism",
+                  "sign_parameters": "Atlas.Janko1.SignParameters = Fin 3 → ZMod 2",
+                  "pq_subgroup": "Atlas.Janko1.pqSubgroup = Subgroup.closure {P,Q}",
+                  "projective_space": "Atlas.Janko1.ProjV = Projectivization Field Imaginary; Imaginary is the seven-dimensional trace-zero octonion subspace",
+                  "whitelaw_set": "Atlas.Janko1.whitelawSet, the union of H-orbits of the ten specified whitelawSeedPoint r, r : Fin 10",
+                  "whitelaw_carrier": "Atlas.Janko1.WhitelawPoints = {p : ProjV // p ∈ whitelawSet}",
+                  "orbit_basepoint": "Atlas.Janko1.whitelawPoint, represented in the retained Wilson coordinates by (1,0,-1,1,2,1,5)"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [
+                "r : Fin 10"
+              ],
+              "statement": "Nat.card (whitelawOrbit r) = if r = 0 then 84 else 168."
+            }
+          ]
+        },
+        {
+          "label": "Exact Whitelaw point count",
+          "declaration": "Atlas.Janko1.card_whitelawPoints",
+          "source": "Atlas/Sporadic/Janko1/WhitelawExactCount.lean",
+          "module": "Atlas.Sporadic.Janko1.WhitelawExactCount",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-j1whitelawexactcount",
+          "mathematical_details": [
+            {
+              "parameters": "The existing generated octonion model and its specified local subgroup H and Whitelaw point set.",
+              "selected_claim": "Exact Whitelaw point count"
+            }
+          ]
+        },
+        {
+          "label": "generated smul mem whitelawSet iff",
+          "declaration": "Atlas.Janko1.generated_smul_mem_whitelawSet_iff",
+          "source": "Atlas/Sporadic/Janko1/WhitelawSInvariant.lean",
+          "module": "Atlas.Sporadic.Janko1.WhitelawSInvariant",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-j1whitelawsinvariant",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed construction; no field parameter.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.Janko1.Field = ZMod 11",
+                  "ambient_group": "Atlas.G2.Model (ZMod 11), the full split-octonion automorphism group",
+                  "candidate": "Atlas.Janko1.Model, the carrier of Subgroup.closure {P,Q,R,S}",
+                  "local_subgroup": "Atlas.Janko1.H = Subgroup.closure {P,Q,R}",
+                  "sign_subgroup": "Atlas.Janko1.signSubgroup, the image of the actual sign homomorphism",
+                  "sign_parameters": "Atlas.Janko1.SignParameters = Fin 3 → ZMod 2",
+                  "pq_subgroup": "Atlas.Janko1.pqSubgroup = Subgroup.closure {P,Q}",
+                  "projective_space": "Atlas.Janko1.ProjV = Projectivization Field Imaginary; Imaginary is the seven-dimensional trace-zero octonion subspace",
+                  "whitelaw_set": "Atlas.Janko1.whitelawSet, the union of H-orbits of the ten specified whitelawSeedPoint r, r : Fin 10",
+                  "whitelaw_carrier": "Atlas.Janko1.WhitelawPoints = {p : ProjV // p ∈ whitelawSet}",
+                  "orbit_basepoint": "Atlas.Janko1.whitelawPoint, represented in the retained Wilson coordinates by (1,0,-1,1,2,1,5)"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [
+                "g : Atlas.Janko1.Model",
+                "p : Atlas.Janko1.ProjV"
+              ],
+              "statement": "g • p ∈ whitelawSet ↔ p ∈ whitelawSet."
+            }
+          ]
+        },
+        {
+          "label": "whitelawOrbitDecomposition",
+          "declaration": "Atlas.Janko1.whitelawOrbitDecomposition",
+          "source": "Atlas/Sporadic/Janko1/WhitelawExactCount.lean",
+          "module": "Atlas.Sporadic.Janko1.WhitelawExactCount",
+          "kind": "definition",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-j1whitelawexactcount",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed construction; no field parameter.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.Janko1.Field = ZMod 11",
+                  "ambient_group": "Atlas.G2.Model (ZMod 11), the full split-octonion automorphism group",
+                  "candidate": "Atlas.Janko1.Model, the carrier of Subgroup.closure {P,Q,R,S}",
+                  "local_subgroup": "Atlas.Janko1.H = Subgroup.closure {P,Q,R}",
+                  "sign_subgroup": "Atlas.Janko1.signSubgroup, the image of the actual sign homomorphism",
+                  "sign_parameters": "Atlas.Janko1.SignParameters = Fin 3 → ZMod 2",
+                  "pq_subgroup": "Atlas.Janko1.pqSubgroup = Subgroup.closure {P,Q}",
+                  "projective_space": "Atlas.Janko1.ProjV = Projectivization Field Imaginary; Imaginary is the seven-dimensional trace-zero octonion subspace",
+                  "whitelaw_set": "Atlas.Janko1.whitelawSet, the union of H-orbits of the ten specified whitelawSeedPoint r, r : Fin 10",
+                  "whitelaw_carrier": "Atlas.Janko1.WhitelawPoints = {p : ProjV // p ∈ whitelawSet}",
+                  "orbit_basepoint": "Atlas.Janko1.whitelawPoint, represented in the retained Wilson coordinates by (1,0,-1,1,2,1,5)"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [],
+              "statement": "An actual equivalence (Σ r : Fin 10, whitelawOrbit r) ≃ WhitelawPoints."
+            }
+          ]
+        },
+        {
+          "label": "whitelawPoints transitive",
+          "declaration": "Atlas.Janko1.whitelawPoints_transitive",
+          "source": "Atlas/Sporadic/Janko1/WhitelawSInvariant.lean",
+          "module": "Atlas.Sporadic.Janko1.WhitelawSInvariant",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-j1whitelawsinvariant",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed construction; no field parameter.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.Janko1.Field = ZMod 11",
+                  "ambient_group": "Atlas.G2.Model (ZMod 11), the full split-octonion automorphism group",
+                  "candidate": "Atlas.Janko1.Model, the carrier of Subgroup.closure {P,Q,R,S}",
+                  "local_subgroup": "Atlas.Janko1.H = Subgroup.closure {P,Q,R}",
+                  "sign_subgroup": "Atlas.Janko1.signSubgroup, the image of the actual sign homomorphism",
+                  "sign_parameters": "Atlas.Janko1.SignParameters = Fin 3 → ZMod 2",
+                  "pq_subgroup": "Atlas.Janko1.pqSubgroup = Subgroup.closure {P,Q}",
+                  "projective_space": "Atlas.Janko1.ProjV = Projectivization Field Imaginary; Imaginary is the seven-dimensional trace-zero octonion subspace",
+                  "whitelaw_set": "Atlas.Janko1.whitelawSet, the union of H-orbits of the ten specified whitelawSeedPoint r, r : Fin 10",
+                  "whitelaw_carrier": "Atlas.Janko1.WhitelawPoints = {p : ProjV // p ∈ whitelawSet}",
+                  "orbit_basepoint": "Atlas.Janko1.whitelawPoint, represented in the retained Wilson coordinates by (1,0,-1,1,2,1,5)"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [],
+              "statement": "MulAction.IsPretransitive Model WhitelawPoints for the retained whitelawModelAction."
+            },
+            {
+              "parameters": "The existing generated octonion model and its specified local subgroup H and Whitelaw point set.",
+              "selected_claim": "Transitive action"
+            }
+          ]
+        },
+        {
+          "label": "whitelawSet eq generatedOrbit",
+          "declaration": "Atlas.Janko1.whitelawSet_eq_generatedOrbit",
+          "source": "Atlas/Sporadic/Janko1/WhitelawSInvariant.lean",
+          "module": "Atlas.Sporadic.Janko1.WhitelawSInvariant",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-j1whitelawsinvariant",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed construction; no field parameter.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.Janko1.Field = ZMod 11",
+                  "ambient_group": "Atlas.G2.Model (ZMod 11), the full split-octonion automorphism group",
+                  "candidate": "Atlas.Janko1.Model, the carrier of Subgroup.closure {P,Q,R,S}",
+                  "local_subgroup": "Atlas.Janko1.H = Subgroup.closure {P,Q,R}",
+                  "sign_subgroup": "Atlas.Janko1.signSubgroup, the image of the actual sign homomorphism",
+                  "sign_parameters": "Atlas.Janko1.SignParameters = Fin 3 → ZMod 2",
+                  "pq_subgroup": "Atlas.Janko1.pqSubgroup = Subgroup.closure {P,Q}",
+                  "projective_space": "Atlas.Janko1.ProjV = Projectivization Field Imaginary; Imaginary is the seven-dimensional trace-zero octonion subspace",
+                  "whitelaw_set": "Atlas.Janko1.whitelawSet, the union of H-orbits of the ten specified whitelawSeedPoint r, r : Fin 10",
+                  "whitelaw_carrier": "Atlas.Janko1.WhitelawPoints = {p : ProjV // p ∈ whitelawSet}",
+                  "orbit_basepoint": "Atlas.Janko1.whitelawPoint, represented in the retained Wilson coordinates by (1,0,-1,1,2,1,5)"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [],
+              "statement": "whitelawSet = MulAction.orbit Model whitelawPoint."
+            },
+            {
+              "parameters": "The existing generated octonion model and its specified local subgroup H and Whitelaw point set.",
+              "selected_claim": "Actual orbit equality"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g2-binary-derived-and-split-extension",
+      "title": "Binary G₂ derived subgroup and split extension",
+      "classification": "supplementary-mathematical-checkpoint",
+      "status": "verified-checkpoint",
+      "parameter_domain": "Derived-subgroup statements: arbitrary F with [Field F], [Finite F] and |F|=2. The sign-kernel and split-extension statements fix F=ZMod 2; they are not asserted for every presentation by a new transport theorem.",
+      "proved_scope": [
+        "The literal binary derived subgroup is the long-root normal closure, has order 6,048 and index 2, and is perfect and nonabelian simple. In the fixed binary presentation it is the kernel of the actual line-sign map.",
+        "The short-root involution supplies the actual complement C={1,rootF(1)}. Its sign map identifies C with the sign group; multiplication gives the internal semidirect equivalence H ⋊ C ≃ G with the inherited conjugation action."
+      ],
+      "unproved_conclusions": [
+        "No equivalence to PSU₃(3), matching of the outside action with the F₉/F₃ involution, or full-group extension comparison is supplied."
+      ],
+      "selected_refs": [
+        {
+          "label": "binarySplitExtension",
+          "declaration": "Atlas.G2.BinaryException.binarySplitExtension",
+          "source": "Atlas/Comparisons/Exceptional/G2Binary/SplitExtension.lean",
+          "module": "Atlas.Comparisons.Exceptional.G2Binary.SplitExtension",
+          "kind": "definition",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-g2-binary-split-extension",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed binary presentation; no variable field.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.G2.BinaryException.K = ZMod 2",
+                  "ambient_group": "G = Atlas.G2.Model (ZMod 2), the full split-octonion automorphism group",
+                  "long_root_subgroup": "H = Atlas.G2.BinaryException.H = Atlas.G2.longRootNormalClosure",
+                  "sign_map": "Atlas.G2.Binary.lineSign : G →* ℤˣ",
+                  "short_root_complement": "C = Atlas.G2.BinaryException.shortRootComplement = {1, Atlas.G2.Explicit.rootF 1}",
+                  "conjugation_action": "(H.normalizerMonoidHom).comp (Subgroup.inclusion (H.normalizer_eq_top ▸ le_top))",
+                  "octonion_coordinates": "V is the eight-dimensional split-octonion coordinate space over ZMod 2",
+                  "numbered_action": "Atlas.Comparisons.G2Binary.Source6048.binaryRepresentation : H →* Equiv.Perm (Fin 28), obtained from the actual quadratic-point action",
+                  "word_alphabet": "Atlas.Comparisons.G2Binary.Matching6048.element4: rootA(1), weylR, weylS*weylR*weylS⁻¹, rootF(1)*rootE(1)*rootF(1)⁻¹"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [],
+              "statement": "H ⋊[(H.normalizerMonoidHom).comp (Subgroup.inclusion (H.normalizer_eq_top ▸ le_top))] shortRootComplement ≃* Model K."
+            }
+          ]
+        },
+        {
+          "label": "commutator eq lineSign kernel",
+          "declaration": "Atlas.G2.BinaryException.commutator_eq_lineSign_kernel",
+          "source": "Atlas/Comparisons/Exceptional/G2Binary/Derived.lean",
+          "module": "Atlas.Comparisons.Exceptional.G2Binary.Derived",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-g2-binary-derived",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed binary presentation; no variable field.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.G2.BinaryException.K = ZMod 2",
+                  "ambient_group": "G = Atlas.G2.Model (ZMod 2), the full split-octonion automorphism group",
+                  "long_root_subgroup": "H = Atlas.G2.BinaryException.H = Atlas.G2.longRootNormalClosure",
+                  "sign_map": "Atlas.G2.Binary.lineSign : G →* ℤˣ",
+                  "short_root_complement": "C = Atlas.G2.BinaryException.shortRootComplement = {1, Atlas.G2.Explicit.rootF 1}",
+                  "conjugation_action": "(H.normalizerMonoidHom).comp (Subgroup.inclusion (H.normalizer_eq_top ▸ le_top))",
+                  "octonion_coordinates": "V is the eight-dimensional split-octonion coordinate space over ZMod 2",
+                  "numbered_action": "Atlas.Comparisons.G2Binary.Source6048.binaryRepresentation : H →* Equiv.Perm (Fin 28), obtained from the actual quadratic-point action",
+                  "word_alphabet": "Atlas.Comparisons.G2Binary.Matching6048.element4: rootA(1), weylR, weylS*weylR*weylS⁻¹, rootF(1)*rootE(1)*rootF(1)⁻¹"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [],
+              "statement": "commutator (Model K) = Binary.lineSign.ker."
+            }
+          ]
+        },
+        {
+          "label": "shortRootComplement",
+          "declaration": "Atlas.G2.BinaryException.shortRootComplement",
+          "source": "Atlas/Comparisons/Exceptional/G2Binary/SplitExtension.lean",
+          "module": "Atlas.Comparisons.Exceptional.G2Binary.SplitExtension",
+          "kind": "definition",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-g2-binary-split-extension",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed binary presentation; no variable field.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.G2.BinaryException.K = ZMod 2",
+                  "ambient_group": "G = Atlas.G2.Model (ZMod 2), the full split-octonion automorphism group",
+                  "long_root_subgroup": "H = Atlas.G2.BinaryException.H = Atlas.G2.longRootNormalClosure",
+                  "sign_map": "Atlas.G2.Binary.lineSign : G →* ℤˣ",
+                  "short_root_complement": "C = Atlas.G2.BinaryException.shortRootComplement = {1, Atlas.G2.Explicit.rootF 1}",
+                  "conjugation_action": "(H.normalizerMonoidHom).comp (Subgroup.inclusion (H.normalizer_eq_top ▸ le_top))",
+                  "octonion_coordinates": "V is the eight-dimensional split-octonion coordinate space over ZMod 2",
+                  "numbered_action": "Atlas.Comparisons.G2Binary.Source6048.binaryRepresentation : H →* Equiv.Perm (Fin 28), obtained from the actual quadratic-point action",
+                  "word_alphabet": "Atlas.Comparisons.G2Binary.Matching6048.element4: rootA(1), weylR, weylS*weylR*weylS⁻¹, rootF(1)*rootE(1)*rootF(1)⁻¹"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [],
+              "statement": "The subgroup C of G with carrier {g | g = 1 ∨ g = rootF 1}."
+            }
+          ]
+        },
+        {
+          "label": "shortRootComplementEquivSigns",
+          "declaration": "Atlas.G2.BinaryException.shortRootComplementEquivSigns",
+          "source": "Atlas/Comparisons/Exceptional/G2Binary/SplitExtension.lean",
+          "module": "Atlas.Comparisons.Exceptional.G2Binary.SplitExtension",
+          "kind": "definition",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-g2-binary-split-extension",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed binary presentation; no variable field.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.G2.BinaryException.K = ZMod 2",
+                  "ambient_group": "G = Atlas.G2.Model (ZMod 2), the full split-octonion automorphism group",
+                  "long_root_subgroup": "H = Atlas.G2.BinaryException.H = Atlas.G2.longRootNormalClosure",
+                  "sign_map": "Atlas.G2.Binary.lineSign : G →* ℤˣ",
+                  "short_root_complement": "C = Atlas.G2.BinaryException.shortRootComplement = {1, Atlas.G2.Explicit.rootF 1}",
+                  "conjugation_action": "(H.normalizerMonoidHom).comp (Subgroup.inclusion (H.normalizer_eq_top ▸ le_top))",
+                  "octonion_coordinates": "V is the eight-dimensional split-octonion coordinate space over ZMod 2",
+                  "numbered_action": "Atlas.Comparisons.G2Binary.Source6048.binaryRepresentation : H →* Equiv.Perm (Fin 28), obtained from the actual quadratic-point action",
+                  "word_alphabet": "Atlas.Comparisons.G2Binary.Matching6048.element4: rootA(1), weylR, weylS*weylR*weylS⁻¹, rootF(1)*rootE(1)*rootF(1)⁻¹"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [],
+              "statement": "shortRootComplement ≃* ℤˣ, induced by the actual line-sign map."
+            }
+          ]
+        },
+        {
+          "label": "commutator card binary",
+          "declaration": "Atlas.G2.commutator_card_binary",
+          "source": "Atlas/Comparisons/Exceptional/G2Binary/FieldTransport.lean",
+          "module": "Atlas.Comparisons.Exceptional.G2Binary.FieldTransport",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-g2-binary-field-transport",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "For every finite field presentation F of cardinality two.",
+                "ambient_hypotheses": [
+                  "{F : Type*}",
+                  "[Field F]",
+                  "[Finite F]"
+                ],
+                "fixed_data": {
+                  "ambient_group": "G = Atlas.G2.Model F = Atlas.SplitOctonion.Automorphism F",
+                  "derived_subgroup": "D = commutator (Atlas.G2.Model F), the literal derived subgroup",
+                  "long_root_subgroup": "Atlas.G2.longRootNormalClosure (F := F), inside the same G"
+                }
+              },
+              "ambient_hypotheses": [
+                "{F : Type*}",
+                "[Field F]",
+                "[Finite F]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 2"
+              ],
+              "quantified_variables": [],
+              "statement": "Nat.card (commutator (Model F)) = 6048."
+            }
+          ]
+        },
+        {
+          "label": "commutator eq longRootNormalClosure binary",
+          "declaration": "Atlas.G2.commutator_eq_longRootNormalClosure_binary",
+          "source": "Atlas/Comparisons/Exceptional/G2Binary/FieldTransport.lean",
+          "module": "Atlas.Comparisons.Exceptional.G2Binary.FieldTransport",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-g2-binary-field-transport",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "For every finite field presentation F of cardinality two.",
+                "ambient_hypotheses": [
+                  "{F : Type*}",
+                  "[Field F]",
+                  "[Finite F]"
+                ],
+                "fixed_data": {
+                  "ambient_group": "G = Atlas.G2.Model F = Atlas.SplitOctonion.Automorphism F",
+                  "derived_subgroup": "D = commutator (Atlas.G2.Model F), the literal derived subgroup",
+                  "long_root_subgroup": "Atlas.G2.longRootNormalClosure (F := F), inside the same G"
+                }
+              },
+              "ambient_hypotheses": [
+                "{F : Type*}",
+                "[Field F]",
+                "[Finite F]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 2"
+              ],
+              "quantified_variables": [],
+              "statement": "commutator (Model F) = longRootNormalClosure (F := F)."
+            }
+          ]
+        },
+        {
+          "label": "commutator index binary",
+          "declaration": "Atlas.G2.commutator_index_binary",
+          "source": "Atlas/Comparisons/Exceptional/G2Binary/FieldTransport.lean",
+          "module": "Atlas.Comparisons.Exceptional.G2Binary.FieldTransport",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-g2-binary-field-transport",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "For every finite field presentation F of cardinality two.",
+                "ambient_hypotheses": [
+                  "{F : Type*}",
+                  "[Field F]",
+                  "[Finite F]"
+                ],
+                "fixed_data": {
+                  "ambient_group": "G = Atlas.G2.Model F = Atlas.SplitOctonion.Automorphism F",
+                  "derived_subgroup": "D = commutator (Atlas.G2.Model F), the literal derived subgroup",
+                  "long_root_subgroup": "Atlas.G2.longRootNormalClosure (F := F), inside the same G"
+                }
+              },
+              "ambient_hypotheses": [
+                "{F : Type*}",
+                "[Field F]",
+                "[Finite F]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 2"
+              ],
+              "quantified_variables": [],
+              "statement": "(commutator (Model F)).index = 2."
+            }
+          ]
+        },
+        {
+          "label": "commutator perfect binary",
+          "declaration": "Atlas.G2.commutator_perfect_binary",
+          "source": "Atlas/Comparisons/Exceptional/G2Binary/FieldTransport.lean",
+          "module": "Atlas.Comparisons.Exceptional.G2Binary.FieldTransport",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-g2-binary-field-transport",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "For every finite field presentation F of cardinality two.",
+                "ambient_hypotheses": [
+                  "{F : Type*}",
+                  "[Field F]",
+                  "[Finite F]"
+                ],
+                "fixed_data": {
+                  "ambient_group": "G = Atlas.G2.Model F = Atlas.SplitOctonion.Automorphism F",
+                  "derived_subgroup": "D = commutator (Atlas.G2.Model F), the literal derived subgroup",
+                  "long_root_subgroup": "Atlas.G2.longRootNormalClosure (F := F), inside the same G"
+                }
+              },
+              "ambient_hypotheses": [
+                "{F : Type*}",
+                "[Field F]",
+                "[Finite F]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 2"
+              ],
+              "quantified_variables": [],
+              "statement": "Group.IsPerfect (commutator (Model F))."
+            }
+          ]
+        },
+        {
+          "label": "commutator simple binary",
+          "declaration": "Atlas.G2.commutator_simple_binary",
+          "source": "Atlas/Comparisons/Exceptional/G2Binary/FieldTransport.lean",
+          "module": "Atlas.Comparisons.Exceptional.G2Binary.FieldTransport",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-g2-binary-field-transport",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "For every finite field presentation F of cardinality two.",
+                "ambient_hypotheses": [
+                  "{F : Type*}",
+                  "[Field F]",
+                  "[Finite F]"
+                ],
+                "fixed_data": {
+                  "ambient_group": "G = Atlas.G2.Model F = Atlas.SplitOctonion.Automorphism F",
+                  "derived_subgroup": "D = commutator (Atlas.G2.Model F), the literal derived subgroup",
+                  "long_root_subgroup": "Atlas.G2.longRootNormalClosure (F := F), inside the same G"
+                }
+              },
+              "ambient_hypotheses": [
+                "{F : Type*}",
+                "[Field F]",
+                "[Finite F]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 2"
+              ],
+              "quantified_variables": [],
+              "statement": "IsSimpleGroup (commutator (Model F))."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparison-6048-marked-inputs",
+      "title": "Order-6,048 marked unitary and octonion inputs",
+      "classification": "supplementary-mathematical-checkpoint",
+      "status": "verified-checkpoint",
+      "parameter_domain": "Unitary side: BaseThree=ZMod 3, FieldNine=QuadraticAlgebra BaseThree (-1) 0, extension degree 2, dimension 3 and conjugation x↦x³. Binary side: K=ZMod 2 and the actual long-root subgroup.",
+      "proved_scope": [
+        "The 28 marked line transvections generate the actual special unitary group and their images generate the full-center projective quotient.",
+        "The projective unitary group and binary long-root subgroup have separately faithful numbered 28-point actions. The actual octonion words and the independent PSU order 6,048 specialization are retained."
+      ],
+      "unproved_conclusions": [
+        "The two numberings and equal orders do not identify or conjugate the two permutation images. Actual generator matching, an isomorphism and the full outside-action comparison remain open. The Final6048 namespace on the order lemma does not make it a final bridge."
+      ],
+      "selected_refs": [
+        {
+          "label": "card fieldNine psu",
+          "declaration": "Atlas.Comparisons.G2Binary.Final6048.card_fieldNine_psu",
+          "source": "Atlas/Comparisons/Exceptional/G2Binary/FieldNineOrder.lean",
+          "module": "Atlas.Comparisons.Exceptional.G2Binary.FieldNineOrder",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-fieldnineorder",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed quadratic extension and dimension three; no arbitrary field or rank parameter.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "base_field": "Atlas.Comparisons.G2Binary.BaseThree = ZMod 3",
+                  "extension_field": "Atlas.Comparisons.G2Binary.FieldNine = QuadraticAlgebra BaseThree (-1) 0, of cardinality nine",
+                  "degree": "fieldNine_degree : Module.finrank BaseThree FieldNine = 2",
+                  "conjugation": "x ↦ x³; the coordinate imaginary unit satisfies i² = -1",
+                  "dimension": 3,
+                  "hermitian_form": "The retained Atlas.Unitary.hermitian BaseThree FieldNine on three coordinates",
+                  "special_group": "Atlas.Comparisons.G2Binary.Source6048.Special = Atlas.Unitary.SU BaseThree FieldNine 3 fieldNine_degree",
+                  "projective_group": "Atlas.Comparisons.G2Binary.Source6048.Projective = Atlas.Unitary.PSU BaseThree FieldNine 3 fieldNine_degree, quotient by the actual full center",
+                  "marking": "Fin 28 ≃ Atlas.Unitary.IsotropicPoints BaseThree FieldNine 3",
+                  "generators": "specialRoot i, i : Fin 28, are actual line transvections; projectiveRoot i are their images under the retained central projection"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [],
+              "statement": "Nat.card (Atlas.Unitary.PSU BaseThree FieldNine 3 fieldNine_degree) = 6048."
+            },
+            {
+              "parameters": "The retained binary octonion subgroup, the specified Hermitian model over the field of nine elements, its full-center projective quotient and their marked actions.",
+              "selected_claim": "Independent PSU order"
+            }
+          ]
+        },
+        {
+          "label": "word4 apply",
+          "declaration": "Atlas.Comparisons.G2Binary.Matching6048.word4_apply",
+          "source": "Atlas/Comparisons/Exceptional/G2Binary/OctonionWords.lean",
+          "module": "Atlas.Comparisons.Exceptional.G2Binary.OctonionWords",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-octonionwords",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed binary presentation; no variable field.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.G2.BinaryException.K = ZMod 2",
+                  "ambient_group": "G = Atlas.G2.Model (ZMod 2), the full split-octonion automorphism group",
+                  "long_root_subgroup": "H = Atlas.G2.BinaryException.H = Atlas.G2.longRootNormalClosure",
+                  "sign_map": "Atlas.G2.Binary.lineSign : G →* ℤˣ",
+                  "short_root_complement": "C = Atlas.G2.BinaryException.shortRootComplement = {1, Atlas.G2.Explicit.rootF 1}",
+                  "conjugation_action": "(H.normalizerMonoidHom).comp (Subgroup.inclusion (H.normalizer_eq_top ▸ le_top))",
+                  "octonion_coordinates": "V is the eight-dimensional split-octonion coordinate space over ZMod 2",
+                  "numbered_action": "Atlas.Comparisons.G2Binary.Source6048.binaryRepresentation : H →* Equiv.Perm (Fin 28), obtained from the actual quadratic-point action",
+                  "word_alphabet": "Atlas.Comparisons.G2Binary.Matching6048.element4: rootA(1), weylR, weylS*weylR*weylS⁻¹, rootF(1)*rootE(1)*rootF(1)⁻¹"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [
+                "w : List (Fin 4)",
+                "x : Atlas.Comparisons.G2Binary.V"
+              ],
+              "statement": "(word4 w).val x = act4 w x."
+            }
+          ]
+        },
+        {
+          "label": "word4 mem",
+          "declaration": "Atlas.Comparisons.G2Binary.Matching6048.word4_mem",
+          "source": "Atlas/Comparisons/Exceptional/G2Binary/OctonionWords.lean",
+          "module": "Atlas.Comparisons.Exceptional.G2Binary.OctonionWords",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-octonionwords",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed binary presentation; no variable field.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.G2.BinaryException.K = ZMod 2",
+                  "ambient_group": "G = Atlas.G2.Model (ZMod 2), the full split-octonion automorphism group",
+                  "long_root_subgroup": "H = Atlas.G2.BinaryException.H = Atlas.G2.longRootNormalClosure",
+                  "sign_map": "Atlas.G2.Binary.lineSign : G →* ℤˣ",
+                  "short_root_complement": "C = Atlas.G2.BinaryException.shortRootComplement = {1, Atlas.G2.Explicit.rootF 1}",
+                  "conjugation_action": "(H.normalizerMonoidHom).comp (Subgroup.inclusion (H.normalizer_eq_top ▸ le_top))",
+                  "octonion_coordinates": "V is the eight-dimensional split-octonion coordinate space over ZMod 2",
+                  "numbered_action": "Atlas.Comparisons.G2Binary.Source6048.binaryRepresentation : H →* Equiv.Perm (Fin 28), obtained from the actual quadratic-point action",
+                  "word_alphabet": "Atlas.Comparisons.G2Binary.Matching6048.element4: rootA(1), weylR, weylS*weylR*weylS⁻¹, rootF(1)*rootE(1)*rootF(1)⁻¹"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [
+                "w : List (Fin 4)"
+              ],
+              "statement": "word4 w ∈ Atlas.G2.BinaryException.H."
+            },
+            {
+              "parameters": "The retained binary octonion subgroup, the specified Hermitian model over the field of nine elements, its full-center projective quotient and their marked actions.",
+              "selected_claim": "Actual octonion word membership"
+            }
+          ]
+        },
+        {
+          "label": "binaryRepresentation injective",
+          "declaration": "Atlas.Comparisons.G2Binary.Source6048.binaryRepresentation_injective",
+          "source": "Atlas/Comparisons/Exceptional/G2Binary/MarkedUnitaryGeneration.lean",
+          "module": "Atlas.Comparisons.Exceptional.G2Binary.MarkedUnitaryGeneration",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-markedunitarygeneration",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed binary presentation; no variable field.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "field": "Atlas.G2.BinaryException.K = ZMod 2",
+                  "ambient_group": "G = Atlas.G2.Model (ZMod 2), the full split-octonion automorphism group",
+                  "long_root_subgroup": "H = Atlas.G2.BinaryException.H = Atlas.G2.longRootNormalClosure",
+                  "sign_map": "Atlas.G2.Binary.lineSign : G →* ℤˣ",
+                  "short_root_complement": "C = Atlas.G2.BinaryException.shortRootComplement = {1, Atlas.G2.Explicit.rootF 1}",
+                  "conjugation_action": "(H.normalizerMonoidHom).comp (Subgroup.inclusion (H.normalizer_eq_top ▸ le_top))",
+                  "octonion_coordinates": "V is the eight-dimensional split-octonion coordinate space over ZMod 2",
+                  "numbered_action": "Atlas.Comparisons.G2Binary.Source6048.binaryRepresentation : H →* Equiv.Perm (Fin 28), obtained from the actual quadratic-point action",
+                  "word_alphabet": "Atlas.Comparisons.G2Binary.Matching6048.element4: rootA(1), weylR, weylS*weylR*weylS⁻¹, rootF(1)*rootE(1)*rootF(1)⁻¹"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [],
+              "statement": "Function.Injective binaryRepresentation : the actual H acts faithfully on Fin 28."
+            }
+          ]
+        },
+        {
+          "label": "projectiveRoots generate",
+          "declaration": "Atlas.Comparisons.G2Binary.Source6048.projectiveRoots_generate",
+          "source": "Atlas/Comparisons/Exceptional/G2Binary/MarkedUnitaryGeneration.lean",
+          "module": "Atlas.Comparisons.Exceptional.G2Binary.MarkedUnitaryGeneration",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-markedunitarygeneration",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed quadratic extension and dimension three; no arbitrary field or rank parameter.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "base_field": "Atlas.Comparisons.G2Binary.BaseThree = ZMod 3",
+                  "extension_field": "Atlas.Comparisons.G2Binary.FieldNine = QuadraticAlgebra BaseThree (-1) 0, of cardinality nine",
+                  "degree": "fieldNine_degree : Module.finrank BaseThree FieldNine = 2",
+                  "conjugation": "x ↦ x³; the coordinate imaginary unit satisfies i² = -1",
+                  "dimension": 3,
+                  "hermitian_form": "The retained Atlas.Unitary.hermitian BaseThree FieldNine on three coordinates",
+                  "special_group": "Atlas.Comparisons.G2Binary.Source6048.Special = Atlas.Unitary.SU BaseThree FieldNine 3 fieldNine_degree",
+                  "projective_group": "Atlas.Comparisons.G2Binary.Source6048.Projective = Atlas.Unitary.PSU BaseThree FieldNine 3 fieldNine_degree, quotient by the actual full center",
+                  "marking": "Fin 28 ≃ Atlas.Unitary.IsotropicPoints BaseThree FieldNine 3",
+                  "generators": "specialRoot i, i : Fin 28, are actual line transvections; projectiveRoot i are their images under the retained central projection"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [],
+              "statement": "Subgroup.closure (Set.range projectiveRoot) = ⊤ in Projective."
+            },
+            {
+              "parameters": "The retained binary octonion subgroup, the specified Hermitian model over the field of nine elements, its full-center projective quotient and their marked actions.",
+              "selected_claim": "Marked projective generation"
+            }
+          ]
+        },
+        {
+          "label": "specialRoots generate",
+          "declaration": "Atlas.Comparisons.G2Binary.Source6048.specialRoots_generate",
+          "source": "Atlas/Comparisons/Exceptional/G2Binary/MarkedUnitaryGeneration.lean",
+          "module": "Atlas.Comparisons.Exceptional.G2Binary.MarkedUnitaryGeneration",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-markedunitarygeneration",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed quadratic extension and dimension three; no arbitrary field or rank parameter.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "base_field": "Atlas.Comparisons.G2Binary.BaseThree = ZMod 3",
+                  "extension_field": "Atlas.Comparisons.G2Binary.FieldNine = QuadraticAlgebra BaseThree (-1) 0, of cardinality nine",
+                  "degree": "fieldNine_degree : Module.finrank BaseThree FieldNine = 2",
+                  "conjugation": "x ↦ x³; the coordinate imaginary unit satisfies i² = -1",
+                  "dimension": 3,
+                  "hermitian_form": "The retained Atlas.Unitary.hermitian BaseThree FieldNine on three coordinates",
+                  "special_group": "Atlas.Comparisons.G2Binary.Source6048.Special = Atlas.Unitary.SU BaseThree FieldNine 3 fieldNine_degree",
+                  "projective_group": "Atlas.Comparisons.G2Binary.Source6048.Projective = Atlas.Unitary.PSU BaseThree FieldNine 3 fieldNine_degree, quotient by the actual full center",
+                  "marking": "Fin 28 ≃ Atlas.Unitary.IsotropicPoints BaseThree FieldNine 3",
+                  "generators": "specialRoot i, i : Fin 28, are actual line transvections; projectiveRoot i are their images under the retained central projection"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [],
+              "statement": "Subgroup.closure (Set.range specialRoot) = ⊤ in Special."
+            }
+          ]
+        },
+        {
+          "label": "unitaryRepresentation injective",
+          "declaration": "Atlas.Comparisons.G2Binary.Source6048.unitaryRepresentation_injective",
+          "source": "Atlas/Comparisons/Exceptional/G2Binary/MarkedUnitaryGeneration.lean",
+          "module": "Atlas.Comparisons.Exceptional.G2Binary.MarkedUnitaryGeneration",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-markedunitarygeneration",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Fixed quadratic extension and dimension three; no arbitrary field or rank parameter.",
+                "ambient_hypotheses": [],
+                "fixed_data": {
+                  "base_field": "Atlas.Comparisons.G2Binary.BaseThree = ZMod 3",
+                  "extension_field": "Atlas.Comparisons.G2Binary.FieldNine = QuadraticAlgebra BaseThree (-1) 0, of cardinality nine",
+                  "degree": "fieldNine_degree : Module.finrank BaseThree FieldNine = 2",
+                  "conjugation": "x ↦ x³; the coordinate imaginary unit satisfies i² = -1",
+                  "dimension": 3,
+                  "hermitian_form": "The retained Atlas.Unitary.hermitian BaseThree FieldNine on three coordinates",
+                  "special_group": "Atlas.Comparisons.G2Binary.Source6048.Special = Atlas.Unitary.SU BaseThree FieldNine 3 fieldNine_degree",
+                  "projective_group": "Atlas.Comparisons.G2Binary.Source6048.Projective = Atlas.Unitary.PSU BaseThree FieldNine 3 fieldNine_degree, quotient by the actual full center",
+                  "marking": "Fin 28 ≃ Atlas.Unitary.IsotropicPoints BaseThree FieldNine 3",
+                  "generators": "specialRoot i, i : Fin 28, are actual line transvections; projectiveRoot i are their images under the retained central projection"
+                }
+              },
+              "ambient_hypotheses": [],
+              "hypotheses": [],
+              "quantified_variables": [],
+              "statement": "Function.Injective unitaryRepresentation : the actual PSU quotient acts faithfully on Fin 28."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ree-three-source-and-coordinate-action",
+      "title": "Small Ree parameter 3: source structure and coordinate action",
+      "classification": "supplementary-mathematical-checkpoint",
+      "status": "verified-checkpoint",
+      "parameter_domain": "F : Type*, [Field F], [Finite F], [CharP F 3], hF : Nat.card F = 3; m=0. The coordinate set is Option (F × F × F).",
+      "proved_scope": [
+        "The original seven-dimensional Ree source has order 1,512, Borel order 54, and a faithful preprimitive action on 28 points.",
+        "Four actual source elements generate the model. Its explicit coordinate action is faithful and agrees with the retained inverse-matrix action convention."
+      ],
+      "unproved_conclusions": [
+        "The characteristic-three source and characteristic-two semilinear target are distinct constructions. No source-to-target homomorphism/isomorphism or source-derived order 504, simplicity or PSL₂(8) identification is supplied."
+      ],
+      "selected_refs": [
+        {
+          "label": "coordinateAction",
+          "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinateAction",
+          "source": "Atlas/Comparisons/Exceptional/ReeThree/BoundaryAction.lean",
+          "module": "Atlas.Comparisons.Exceptional.ReeThree.BoundaryAction",
+          "kind": "definition",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-reethreeboundaryaction",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "For every finite field F of characteristic three and cardinality three, at m = 0.",
+                "ambient_hypotheses": [
+                  "{F : Type*}",
+                  "[Field F]",
+                  "[Finite F]",
+                  "[CharP F 3]"
+                ],
+                "fixed_data": {
+                  "parameter": "m = 0, hence q = 3^(2m+1) = 3",
+                  "source_group": "Atlas.ReeG2.Model F 0, the original generated seven-dimensional matrix group",
+                  "point_carrier": "Atlas.ReeG2.pointSet (F := F) 0",
+                  "point_action": "Atlas.ReeG2.pointAction 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "borel": "Atlas.ReeG2.borel 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "coordinates": "Atlas.Comparisons.ReeThree.Boundary.Coordinates F = Option (F × F × F)",
+                  "coordinate_action": "Transport of the original point action; coordinateAction uses inverse matrices for the left action",
+                  "four_generators": "uModel hF = rootModel hF 1 1 0; vModel hF = rootModel hF 0 1 0; tModel is the retained torus element at -1; wModel is the retained upsilon element"
+                }
+              },
+              "ambient_hypotheses": [
+                "{F : Type*}",
+                "[Field F]",
+                "[Finite F]",
+                "[CharP F 3]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 3"
+              ],
+              "quantified_variables": [],
+              "statement": "coordinateAction hF : Model F 0 →* Equiv.Perm (Coordinates F), transporting the actual point action."
+            }
+          ]
+        },
+        {
+          "label": "coordinateAction coherence",
+          "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinateAction_coherence",
+          "source": "Atlas/Comparisons/Exceptional/ReeThree/BoundaryAction.lean",
+          "module": "Atlas.Comparisons.Exceptional.ReeThree.BoundaryAction",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-reethreeboundaryaction",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "For every finite field F of characteristic three and cardinality three, at m = 0.",
+                "ambient_hypotheses": [
+                  "{F : Type*}",
+                  "[Field F]",
+                  "[Finite F]",
+                  "[CharP F 3]"
+                ],
+                "fixed_data": {
+                  "parameter": "m = 0, hence q = 3^(2m+1) = 3",
+                  "source_group": "Atlas.ReeG2.Model F 0, the original generated seven-dimensional matrix group",
+                  "point_carrier": "Atlas.ReeG2.pointSet (F := F) 0",
+                  "point_action": "Atlas.ReeG2.pointAction 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "borel": "Atlas.ReeG2.borel 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "coordinates": "Atlas.Comparisons.ReeThree.Boundary.Coordinates F = Option (F × F × F)",
+                  "coordinate_action": "Transport of the original point action; coordinateAction uses inverse matrices for the left action",
+                  "four_generators": "uModel hF = rootModel hF 1 1 0; vModel hF = rootModel hF 0 1 0; tModel is the retained torus element at -1; wModel is the retained upsilon element"
+                }
+              },
+              "ambient_hypotheses": [
+                "{F : Type*}",
+                "[Field F]",
+                "[Finite F]",
+                "[CharP F 3]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 3"
+              ],
+              "quantified_variables": [
+                "g : Atlas.ReeG2.Model F 0",
+                "p : Atlas.Comparisons.ReeThree.Boundary.Coordinates F"
+              ],
+              "statement": "pointParam 0 (coordinateAction hF g p) = pointRight g.val⁻¹ (pointParam 0 p)."
+            }
+          ]
+        },
+        {
+          "label": "coordinateAction injective",
+          "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinateAction_injective",
+          "source": "Atlas/Comparisons/Exceptional/ReeThree/BoundaryAction.lean",
+          "module": "Atlas.Comparisons.Exceptional.ReeThree.BoundaryAction",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-reethreeboundaryaction",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "For every finite field F of characteristic three and cardinality three, at m = 0.",
+                "ambient_hypotheses": [
+                  "{F : Type*}",
+                  "[Field F]",
+                  "[Finite F]",
+                  "[CharP F 3]"
+                ],
+                "fixed_data": {
+                  "parameter": "m = 0, hence q = 3^(2m+1) = 3",
+                  "source_group": "Atlas.ReeG2.Model F 0, the original generated seven-dimensional matrix group",
+                  "point_carrier": "Atlas.ReeG2.pointSet (F := F) 0",
+                  "point_action": "Atlas.ReeG2.pointAction 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "borel": "Atlas.ReeG2.borel 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "coordinates": "Atlas.Comparisons.ReeThree.Boundary.Coordinates F = Option (F × F × F)",
+                  "coordinate_action": "Transport of the original point action; coordinateAction uses inverse matrices for the left action",
+                  "four_generators": "uModel hF = rootModel hF 1 1 0; vModel hF = rootModel hF 0 1 0; tModel is the retained torus element at -1; wModel is the retained upsilon element"
+                }
+              },
+              "ambient_hypotheses": [
+                "{F : Type*}",
+                "[Field F]",
+                "[Finite F]",
+                "[CharP F 3]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 3"
+              ],
+              "quantified_variables": [],
+              "statement": "Function.Injective (coordinateAction hF)."
+            },
+            {
+              "parameters": "The existing small-Ree model at q=3 and its explicit 28-point coordinate action.",
+              "selected_claim": "Faithful coordinate action"
+            }
+          ]
+        },
+        {
+          "label": "coordinates card",
+          "declaration": "Atlas.Comparisons.ReeThree.Boundary.coordinates_card",
+          "source": "Atlas/Comparisons/Exceptional/ReeThree/BoundaryAction.lean",
+          "module": "Atlas.Comparisons.Exceptional.ReeThree.BoundaryAction",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-reethreeboundaryaction",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "For every finite field F of characteristic three and cardinality three, at m = 0.",
+                "ambient_hypotheses": [
+                  "{F : Type*}",
+                  "[Field F]",
+                  "[Finite F]",
+                  "[CharP F 3]"
+                ],
+                "fixed_data": {
+                  "parameter": "m = 0, hence q = 3^(2m+1) = 3",
+                  "source_group": "Atlas.ReeG2.Model F 0, the original generated seven-dimensional matrix group",
+                  "point_carrier": "Atlas.ReeG2.pointSet (F := F) 0",
+                  "point_action": "Atlas.ReeG2.pointAction 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "borel": "Atlas.ReeG2.borel 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "coordinates": "Atlas.Comparisons.ReeThree.Boundary.Coordinates F = Option (F × F × F)",
+                  "coordinate_action": "Transport of the original point action; coordinateAction uses inverse matrices for the left action",
+                  "four_generators": "uModel hF = rootModel hF 1 1 0; vModel hF = rootModel hF 0 1 0; tModel is the retained torus element at -1; wModel is the retained upsilon element"
+                }
+              },
+              "ambient_hypotheses": [
+                "{F : Type*}",
+                "[Field F]",
+                "[Finite F]",
+                "[CharP F 3]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 3"
+              ],
+              "quantified_variables": [],
+              "statement": "Nat.card (Coordinates F) = 28."
+            },
+            {
+              "parameters": "The existing small-Ree model at q=3 and its explicit 28-point coordinate action.",
+              "selected_claim": "Coordinate-set cardinality"
+            }
+          ]
+        },
+        {
+          "label": "model generated by four",
+          "declaration": "Atlas.Comparisons.ReeThree.Boundary.model_generated_by_four",
+          "source": "Atlas/Comparisons/Exceptional/ReeThree/BoundaryAction.lean",
+          "module": "Atlas.Comparisons.Exceptional.ReeThree.BoundaryAction",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-reethreeboundaryaction",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "For every finite field F of characteristic three and cardinality three, at m = 0.",
+                "ambient_hypotheses": [
+                  "{F : Type*}",
+                  "[Field F]",
+                  "[Finite F]",
+                  "[CharP F 3]"
+                ],
+                "fixed_data": {
+                  "parameter": "m = 0, hence q = 3^(2m+1) = 3",
+                  "source_group": "Atlas.ReeG2.Model F 0, the original generated seven-dimensional matrix group",
+                  "point_carrier": "Atlas.ReeG2.pointSet (F := F) 0",
+                  "point_action": "Atlas.ReeG2.pointAction 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "borel": "Atlas.ReeG2.borel 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "coordinates": "Atlas.Comparisons.ReeThree.Boundary.Coordinates F = Option (F × F × F)",
+                  "coordinate_action": "Transport of the original point action; coordinateAction uses inverse matrices for the left action",
+                  "four_generators": "uModel hF = rootModel hF 1 1 0; vModel hF = rootModel hF 0 1 0; tModel is the retained torus element at -1; wModel is the retained upsilon element"
+                }
+              },
+              "ambient_hypotheses": [
+                "{F : Type*}",
+                "[Field F]",
+                "[Finite F]",
+                "[CharP F 3]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 3"
+              ],
+              "quantified_variables": [],
+              "statement": "Subgroup.closure ({uModel hF, vModel hF, tModel, wModel} : Set (Model F 0)) = ⊤."
+            },
+            {
+              "parameters": "The existing small-Ree model at q=3 and its explicit 28-point coordinate action.",
+              "selected_claim": "Four actual generators"
+            }
+          ]
+        },
+        {
+          "label": "smallParameter borel order",
+          "declaration": "Atlas.ReeG2.smallParameter_borel_order",
+          "source": "Atlas/LinearGroups/ReeG2/SmallParameter.lean",
+          "module": "Atlas.LinearGroups.ReeG2.SmallParameter",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-ree-three-structure-successor",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "For every finite field F of characteristic three and cardinality three, at m = 0.",
+                "ambient_hypotheses": [
+                  "{F : Type*}",
+                  "[Field F]",
+                  "[Finite F]",
+                  "[CharP F 3]"
+                ],
+                "fixed_data": {
+                  "parameter": "m = 0, hence q = 3^(2m+1) = 3",
+                  "source_group": "Atlas.ReeG2.Model F 0, the original generated seven-dimensional matrix group",
+                  "point_carrier": "Atlas.ReeG2.pointSet (F := F) 0",
+                  "point_action": "Atlas.ReeG2.pointAction 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "borel": "Atlas.ReeG2.borel 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "coordinates": "Atlas.Comparisons.ReeThree.Boundary.Coordinates F = Option (F × F × F)",
+                  "coordinate_action": "Transport of the original point action; coordinateAction uses inverse matrices for the left action",
+                  "four_generators": "uModel hF = rootModel hF 1 1 0; vModel hF = rootModel hF 0 1 0; tModel is the retained torus element at -1; wModel is the retained upsilon element"
+                }
+              },
+              "ambient_hypotheses": [
+                "{F : Type*}",
+                "[Field F]",
+                "[Finite F]",
+                "[CharP F 3]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 3"
+              ],
+              "quantified_variables": [],
+              "statement": "Nat.card (borel 0 (smallParameter_card_condition hF)) = 54."
+            }
+          ]
+        },
+        {
+          "label": "smallParameter faithful",
+          "declaration": "Atlas.ReeG2.smallParameter_faithful",
+          "source": "Atlas/LinearGroups/ReeG2/SmallParameter.lean",
+          "module": "Atlas.LinearGroups.ReeG2.SmallParameter",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-ree-three-structure-successor",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "For every finite field F of characteristic three and cardinality three, at m = 0.",
+                "ambient_hypotheses": [
+                  "{F : Type*}",
+                  "[Field F]",
+                  "[Finite F]",
+                  "[CharP F 3]"
+                ],
+                "fixed_data": {
+                  "parameter": "m = 0, hence q = 3^(2m+1) = 3",
+                  "source_group": "Atlas.ReeG2.Model F 0, the original generated seven-dimensional matrix group",
+                  "point_carrier": "Atlas.ReeG2.pointSet (F := F) 0",
+                  "point_action": "Atlas.ReeG2.pointAction 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "borel": "Atlas.ReeG2.borel 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "coordinates": "Atlas.Comparisons.ReeThree.Boundary.Coordinates F = Option (F × F × F)",
+                  "coordinate_action": "Transport of the original point action; coordinateAction uses inverse matrices for the left action",
+                  "four_generators": "uModel hF = rootModel hF 1 1 0; vModel hF = rootModel hF 0 1 0; tModel is the retained torus element at -1; wModel is the retained upsilon element"
+                }
+              },
+              "ambient_hypotheses": [
+                "{F : Type*}",
+                "[Field F]",
+                "[Finite F]",
+                "[CharP F 3]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 3"
+              ],
+              "quantified_variables": [],
+              "statement": "With pointAction 0 (smallParameter_card_condition hF), FaithfulSMul (Model F 0) (pointSet (F := F) 0)."
+            }
+          ]
+        },
+        {
+          "label": "smallParameter order",
+          "declaration": "Atlas.ReeG2.smallParameter_order",
+          "source": "Atlas/LinearGroups/ReeG2/SmallParameter.lean",
+          "module": "Atlas.LinearGroups.ReeG2.SmallParameter",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-ree-three-structure-successor",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "For every finite field F of characteristic three and cardinality three, at m = 0.",
+                "ambient_hypotheses": [
+                  "{F : Type*}",
+                  "[Field F]",
+                  "[Finite F]",
+                  "[CharP F 3]"
+                ],
+                "fixed_data": {
+                  "parameter": "m = 0, hence q = 3^(2m+1) = 3",
+                  "source_group": "Atlas.ReeG2.Model F 0, the original generated seven-dimensional matrix group",
+                  "point_carrier": "Atlas.ReeG2.pointSet (F := F) 0",
+                  "point_action": "Atlas.ReeG2.pointAction 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "borel": "Atlas.ReeG2.borel 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "coordinates": "Atlas.Comparisons.ReeThree.Boundary.Coordinates F = Option (F × F × F)",
+                  "coordinate_action": "Transport of the original point action; coordinateAction uses inverse matrices for the left action",
+                  "four_generators": "uModel hF = rootModel hF 1 1 0; vModel hF = rootModel hF 0 1 0; tModel is the retained torus element at -1; wModel is the retained upsilon element"
+                }
+              },
+              "ambient_hypotheses": [
+                "{F : Type*}",
+                "[Field F]",
+                "[Finite F]",
+                "[CharP F 3]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 3"
+              ],
+              "quantified_variables": [],
+              "statement": "Nat.card (Model F 0) = 1512."
+            }
+          ]
+        },
+        {
+          "label": "smallParameter point count",
+          "declaration": "Atlas.ReeG2.smallParameter_point_count",
+          "source": "Atlas/LinearGroups/ReeG2/SmallParameter.lean",
+          "module": "Atlas.LinearGroups.ReeG2.SmallParameter",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-ree-three-structure-successor",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "For every finite field F of characteristic three and cardinality three, at m = 0.",
+                "ambient_hypotheses": [
+                  "{F : Type*}",
+                  "[Field F]",
+                  "[Finite F]",
+                  "[CharP F 3]"
+                ],
+                "fixed_data": {
+                  "parameter": "m = 0, hence q = 3^(2m+1) = 3",
+                  "source_group": "Atlas.ReeG2.Model F 0, the original generated seven-dimensional matrix group",
+                  "point_carrier": "Atlas.ReeG2.pointSet (F := F) 0",
+                  "point_action": "Atlas.ReeG2.pointAction 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "borel": "Atlas.ReeG2.borel 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "coordinates": "Atlas.Comparisons.ReeThree.Boundary.Coordinates F = Option (F × F × F)",
+                  "coordinate_action": "Transport of the original point action; coordinateAction uses inverse matrices for the left action",
+                  "four_generators": "uModel hF = rootModel hF 1 1 0; vModel hF = rootModel hF 0 1 0; tModel is the retained torus element at -1; wModel is the retained upsilon element"
+                }
+              },
+              "ambient_hypotheses": [
+                "{F : Type*}",
+                "[Field F]",
+                "[Finite F]",
+                "[CharP F 3]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 3"
+              ],
+              "quantified_variables": [],
+              "statement": "Nat.card (pointSet (F := F) 0) = 28."
+            }
+          ]
+        },
+        {
+          "label": "smallParameter primitive",
+          "declaration": "Atlas.ReeG2.smallParameter_primitive",
+          "source": "Atlas/LinearGroups/ReeG2/SmallParameter.lean",
+          "module": "Atlas.LinearGroups.ReeG2.SmallParameter",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-ree-three-structure-successor",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "For every finite field F of characteristic three and cardinality three, at m = 0.",
+                "ambient_hypotheses": [
+                  "{F : Type*}",
+                  "[Field F]",
+                  "[Finite F]",
+                  "[CharP F 3]"
+                ],
+                "fixed_data": {
+                  "parameter": "m = 0, hence q = 3^(2m+1) = 3",
+                  "source_group": "Atlas.ReeG2.Model F 0, the original generated seven-dimensional matrix group",
+                  "point_carrier": "Atlas.ReeG2.pointSet (F := F) 0",
+                  "point_action": "Atlas.ReeG2.pointAction 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "borel": "Atlas.ReeG2.borel 0 (Atlas.ReeG2.smallParameter_card_condition hF)",
+                  "coordinates": "Atlas.Comparisons.ReeThree.Boundary.Coordinates F = Option (F × F × F)",
+                  "coordinate_action": "Transport of the original point action; coordinateAction uses inverse matrices for the left action",
+                  "four_generators": "uModel hF = rootModel hF 1 1 0; vModel hF = rootModel hF 0 1 0; tModel is the retained torus element at -1; wModel is the retained upsilon element"
+                }
+              },
+              "ambient_hypotheses": [
+                "{F : Type*}",
+                "[Field F]",
+                "[Finite F]",
+                "[CharP F 3]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 3"
+              ],
+              "quantified_variables": [],
+              "statement": "With the same pointAction, MulAction.IsPreprimitive (Model F 0) (pointSet (F := F) 0)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ree-three-independent-semilinear-target",
+      "title": "Order-504 comparison: independent semilinear target",
+      "classification": "supplementary-mathematical-checkpoint",
+      "status": "verified-checkpoint",
+      "parameter_domain": "Finite fields F,K with [Algebra F K], |F|=2 and Module.finrank F K=3, so |K|=8.",
+      "proved_scope": [
+        "The independent target PSL₂(K) ⋊ Gal(K/F) has order 1,512. Its literal derived subgroup is the included PSL₂(K) factor, of order 504 and simple. Coefficient-field automorphisms act faithfully on that factor."
+      ],
+      "unproved_conclusions": [
+        "The internal equivalence from PSL₂(K) to the target derived subgroup does not compare this target to the characteristic-three Ree source. The source-to-target and source-derived identifications remain open."
+      ],
+      "selected_refs": [
+        {
+          "label": "fieldAction injective",
+          "declaration": "Atlas.Comparisons.ReeThree.fieldAction_injective",
+          "source": "Atlas/Comparisons/Exceptional/ReeThree/FieldActionFaithful.lean",
+          "module": "Atlas.Comparisons.Exceptional.ReeThree.FieldActionFaithful",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-ree-three-semilinear-target",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Finite fields F,K with an F-algebra structure on K; the checkpoint uses |F| = 2 and [K:F] = 3, hence |K| = 8.",
+                "ambient_hypotheses": [
+                  "(F K : Type*)",
+                  "[Field F]",
+                  "[Field K]",
+                  "[Finite F]",
+                  "[Finite K]",
+                  "[Algebra F K]"
+                ],
+                "fixed_data": {
+                  "linear_factor": "PSL(2,K), the retained quotient of SL(2,K) by its full center",
+                  "field_automorphisms": "K ≃ₐ[F] K",
+                  "action": "Atlas.Comparisons.ReeThree.fieldAction F K, induced by coefficient-field automorphisms",
+                  "independent_target": "T = Atlas.Comparisons.ReeThree.Semilinear F K = PSL(2,K) ⋊[fieldAction F K] (K ≃ₐ[F] K)",
+                  "factor_inclusion": "SemidirectProduct.inl : PSL(2,K) →* T",
+                  "derived_subgroup": "commutator T, belonging to this independent target, not to Atlas.ReeG2.Model Fsource 0"
+                }
+              },
+              "ambient_hypotheses": [
+                "(F K : Type*)",
+                "[Field F]",
+                "[Field K]",
+                "[Finite F]",
+                "[Finite K]",
+                "[Algebra F K]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 2",
+                "hdeg : Module.finrank F K = 3"
+              ],
+              "quantified_variables": [],
+              "statement": "Function.Injective (fieldAction F K)."
+            }
+          ]
+        },
+        {
+          "label": "linearFactorEquivDerived",
+          "declaration": "Atlas.Comparisons.ReeThree.linearFactorEquivDerived",
+          "source": "Atlas/Comparisons/Exceptional/ReeThree/SemilinearTarget.lean",
+          "module": "Atlas.Comparisons.Exceptional.ReeThree.SemilinearTarget",
+          "kind": "definition",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-ree-three-semilinear-target",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Finite fields F,K with an F-algebra structure on K; the checkpoint uses |F| = 2 and [K:F] = 3, hence |K| = 8.",
+                "ambient_hypotheses": [
+                  "(F K : Type*)",
+                  "[Field F]",
+                  "[Field K]",
+                  "[Finite F]",
+                  "[Finite K]",
+                  "[Algebra F K]"
+                ],
+                "fixed_data": {
+                  "linear_factor": "PSL(2,K), the retained quotient of SL(2,K) by its full center",
+                  "field_automorphisms": "K ≃ₐ[F] K",
+                  "action": "Atlas.Comparisons.ReeThree.fieldAction F K, induced by coefficient-field automorphisms",
+                  "independent_target": "T = Atlas.Comparisons.ReeThree.Semilinear F K = PSL(2,K) ⋊[fieldAction F K] (K ≃ₐ[F] K)",
+                  "factor_inclusion": "SemidirectProduct.inl : PSL(2,K) →* T",
+                  "derived_subgroup": "commutator T, belonging to this independent target, not to Atlas.ReeG2.Model Fsource 0"
+                }
+              },
+              "ambient_hypotheses": [
+                "(F K : Type*)",
+                "[Field F]",
+                "[Field K]",
+                "[Finite F]",
+                "[Finite K]",
+                "[Algebra F K]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 2",
+                "hdeg : Module.finrank F K = 3"
+              ],
+              "quantified_variables": [],
+              "statement": "PSL(2,K) ≃* commutator (Semilinear F K), induced by the actual factor inclusion."
+            }
+          ]
+        },
+        {
+          "label": "semilinear card",
+          "declaration": "Atlas.Comparisons.ReeThree.semilinear_card",
+          "source": "Atlas/Comparisons/Exceptional/ReeThree/SemilinearTarget.lean",
+          "module": "Atlas.Comparisons.Exceptional.ReeThree.SemilinearTarget",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-ree-three-semilinear-target",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Finite fields F,K with an F-algebra structure on K; the checkpoint uses |F| = 2 and [K:F] = 3, hence |K| = 8.",
+                "ambient_hypotheses": [
+                  "(F K : Type*)",
+                  "[Field F]",
+                  "[Field K]",
+                  "[Finite F]",
+                  "[Finite K]",
+                  "[Algebra F K]"
+                ],
+                "fixed_data": {
+                  "linear_factor": "PSL(2,K), the retained quotient of SL(2,K) by its full center",
+                  "field_automorphisms": "K ≃ₐ[F] K",
+                  "action": "Atlas.Comparisons.ReeThree.fieldAction F K, induced by coefficient-field automorphisms",
+                  "independent_target": "T = Atlas.Comparisons.ReeThree.Semilinear F K = PSL(2,K) ⋊[fieldAction F K] (K ≃ₐ[F] K)",
+                  "factor_inclusion": "SemidirectProduct.inl : PSL(2,K) →* T",
+                  "derived_subgroup": "commutator T, belonging to this independent target, not to Atlas.ReeG2.Model Fsource 0"
+                }
+              },
+              "ambient_hypotheses": [
+                "(F K : Type*)",
+                "[Field F]",
+                "[Field K]",
+                "[Finite F]",
+                "[Finite K]",
+                "[Algebra F K]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 2",
+                "hdeg : Module.finrank F K = 3"
+              ],
+              "quantified_variables": [],
+              "statement": "Nat.card (Semilinear F K) = 1512."
+            }
+          ]
+        },
+        {
+          "label": "semilinear commutator",
+          "declaration": "Atlas.Comparisons.ReeThree.semilinear_commutator",
+          "source": "Atlas/Comparisons/Exceptional/ReeThree/SemilinearTarget.lean",
+          "module": "Atlas.Comparisons.Exceptional.ReeThree.SemilinearTarget",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-ree-three-semilinear-target",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Finite fields F,K with an F-algebra structure on K; the checkpoint uses |F| = 2 and [K:F] = 3, hence |K| = 8.",
+                "ambient_hypotheses": [
+                  "(F K : Type*)",
+                  "[Field F]",
+                  "[Field K]",
+                  "[Finite F]",
+                  "[Finite K]",
+                  "[Algebra F K]"
+                ],
+                "fixed_data": {
+                  "linear_factor": "PSL(2,K), the retained quotient of SL(2,K) by its full center",
+                  "field_automorphisms": "K ≃ₐ[F] K",
+                  "action": "Atlas.Comparisons.ReeThree.fieldAction F K, induced by coefficient-field automorphisms",
+                  "independent_target": "T = Atlas.Comparisons.ReeThree.Semilinear F K = PSL(2,K) ⋊[fieldAction F K] (K ≃ₐ[F] K)",
+                  "factor_inclusion": "SemidirectProduct.inl : PSL(2,K) →* T",
+                  "derived_subgroup": "commutator T, belonging to this independent target, not to Atlas.ReeG2.Model Fsource 0"
+                }
+              },
+              "ambient_hypotheses": [
+                "(F K : Type*)",
+                "[Field F]",
+                "[Field K]",
+                "[Finite F]",
+                "[Finite K]",
+                "[Algebra F K]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 2",
+                "hdeg : Module.finrank F K = 3"
+              ],
+              "quantified_variables": [],
+              "statement": "commutator (Semilinear F K) = (SemidirectProduct.inl : PSL(2,K) →* Semilinear F K).range."
+            }
+          ]
+        },
+        {
+          "label": "semilinear derived card",
+          "declaration": "Atlas.Comparisons.ReeThree.semilinear_derived_card",
+          "source": "Atlas/Comparisons/Exceptional/ReeThree/SemilinearTarget.lean",
+          "module": "Atlas.Comparisons.Exceptional.ReeThree.SemilinearTarget",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-ree-three-semilinear-target",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Finite fields F,K with an F-algebra structure on K; the checkpoint uses |F| = 2 and [K:F] = 3, hence |K| = 8.",
+                "ambient_hypotheses": [
+                  "(F K : Type*)",
+                  "[Field F]",
+                  "[Field K]",
+                  "[Finite F]",
+                  "[Finite K]",
+                  "[Algebra F K]"
+                ],
+                "fixed_data": {
+                  "linear_factor": "PSL(2,K), the retained quotient of SL(2,K) by its full center",
+                  "field_automorphisms": "K ≃ₐ[F] K",
+                  "action": "Atlas.Comparisons.ReeThree.fieldAction F K, induced by coefficient-field automorphisms",
+                  "independent_target": "T = Atlas.Comparisons.ReeThree.Semilinear F K = PSL(2,K) ⋊[fieldAction F K] (K ≃ₐ[F] K)",
+                  "factor_inclusion": "SemidirectProduct.inl : PSL(2,K) →* T",
+                  "derived_subgroup": "commutator T, belonging to this independent target, not to Atlas.ReeG2.Model Fsource 0"
+                }
+              },
+              "ambient_hypotheses": [
+                "(F K : Type*)",
+                "[Field F]",
+                "[Field K]",
+                "[Finite F]",
+                "[Finite K]",
+                "[Algebra F K]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 2",
+                "hdeg : Module.finrank F K = 3"
+              ],
+              "quantified_variables": [],
+              "statement": "Nat.card (commutator (Semilinear F K)) = 504."
+            }
+          ]
+        },
+        {
+          "label": "semilinear derived simple",
+          "declaration": "Atlas.Comparisons.ReeThree.semilinear_derived_simple",
+          "source": "Atlas/Comparisons/Exceptional/ReeThree/SemilinearTarget.lean",
+          "module": "Atlas.Comparisons.Exceptional.ReeThree.SemilinearTarget",
+          "kind": "theorem",
+          "evidence": "checkpoint-release-v1-2-j1-bridges-20261030-comparison-ree-three-semilinear-target",
+          "mathematical_details": [
+            {
+              "parameter_context": {
+                "quantification": "Finite fields F,K with an F-algebra structure on K; the checkpoint uses |F| = 2 and [K:F] = 3, hence |K| = 8.",
+                "ambient_hypotheses": [
+                  "(F K : Type*)",
+                  "[Field F]",
+                  "[Field K]",
+                  "[Finite F]",
+                  "[Finite K]",
+                  "[Algebra F K]"
+                ],
+                "fixed_data": {
+                  "linear_factor": "PSL(2,K), the retained quotient of SL(2,K) by its full center",
+                  "field_automorphisms": "K ≃ₐ[F] K",
+                  "action": "Atlas.Comparisons.ReeThree.fieldAction F K, induced by coefficient-field automorphisms",
+                  "independent_target": "T = Atlas.Comparisons.ReeThree.Semilinear F K = PSL(2,K) ⋊[fieldAction F K] (K ≃ₐ[F] K)",
+                  "factor_inclusion": "SemidirectProduct.inl : PSL(2,K) →* T",
+                  "derived_subgroup": "commutator T, belonging to this independent target, not to Atlas.ReeG2.Model Fsource 0"
+                }
+              },
+              "ambient_hypotheses": [
+                "(F K : Type*)",
+                "[Field F]",
+                "[Field K]",
+                "[Finite F]",
+                "[Finite K]",
+                "[Algebra F K]"
+              ],
+              "hypotheses": [
+                "hF : Nat.card F = 2",
+                "hdeg : Module.finrank F K = 3"
+              ],
+              "quantified_variables": [],
+              "statement": "IsSimpleGroup (commutator (Semilinear F K))."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": {
+    "checkpoint-chevalley-twisted-e6-fixed-projection": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-012-twisted-e6/original/scopes/scope-8f532b62e7f84236d0886312/RESULT.json",
+      "full_audit_sha256": "751cbdb0d5cbb7e83368ce4aa3178b17be425534be20706735349bfbee82946d",
+      "manifest": "verification/2026-10-30-additions/batches/batch-012-twisted-e6/original/scopes/scope-8f532b62e7f84236d0886312/CHECKPOINT.json",
+      "manifest_sha256": "729c8828bb128f74083c218dcba083dda5504aa19a88f03cda6e2a231daa31b4",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-012-twisted-e6/original/process.log.gz",
+        "sha256": "022334a9d29f58297bcaebf8c006cd66b97d872d2a2a37bac86a2250581f2e8e"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-draft-ree-point-parabolic-semidirect": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-defd132c6d1a6708bd4253f7/RESULT.json",
+      "full_audit_sha256": "6974182d87e489db8274dace32186415d5837176c7998ec0e9df4473ebc87a58",
+      "manifest": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-defd132c6d1a6708bd4253f7/CHECKPOINT.json",
+      "manifest_sha256": "c6d5049f9b78fb0645ab9e002283283c353cf4c796d8df4d7b0b235ba85dc48b",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/process.log.gz",
+        "sha256": "af6c80845c16d7f4a762a359f1a7e76728f2384437f58489b1c1dba31ded131f"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-release-v1-2-j1-bridges-20261030-comparison-g2-binary-derived": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/scopes/scope-2bb4de5f0e13ec57c3faaf5d/RESULT.json",
+      "full_audit_sha256": "138c02140dec38d65774cf6aba0accc9572f420cacc4cc03565d737acb27a5b7",
+      "manifest": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/scopes/scope-2bb4de5f0e13ec57c3faaf5d/CHECKPOINT.json",
+      "manifest_sha256": "f579e32084279dab20fd7664217e4d511a5c5608509493db647e489db8df0e4f",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/process.log.gz",
+        "sha256": "3b1b027e5f6dc46472d50d02ff4849a064cb4eea54a6c0821bb6160454f1c78c"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-release-v1-2-j1-bridges-20261030-comparison-g2-binary-field-transport": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/scopes/scope-6c31e1bd137ea8572f9f5132/RESULT.json",
+      "full_audit_sha256": "7687612cde4d43d68390b7a0c986dcdbdc567d027c662d8258c73bcee930d495",
+      "manifest": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/scopes/scope-6c31e1bd137ea8572f9f5132/CHECKPOINT.json",
+      "manifest_sha256": "f5d77dd2979370c42bc0950328d9e2c85569f4e053b0c0d2c541e4cc1b57bd4b",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/process.log.gz",
+        "sha256": "3b1b027e5f6dc46472d50d02ff4849a064cb4eea54a6c0821bb6160454f1c78c"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-release-v1-2-j1-bridges-20261030-comparison-g2-binary-split-extension": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/scopes/scope-6b0c3825afe391643204b792/RESULT.json",
+      "full_audit_sha256": "17d901fc6a22d6cbc581a7a97501cd3b9b6e38a305f24691bc0ef5114fa9b436",
+      "manifest": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/scopes/scope-6b0c3825afe391643204b792/CHECKPOINT.json",
+      "manifest_sha256": "76c9ce441b7830229818f59f8f1fe9f7f6268fa91ea9078567092696d432900b",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/process.log.gz",
+        "sha256": "3b1b027e5f6dc46472d50d02ff4849a064cb4eea54a6c0821bb6160454f1c78c"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-release-v1-2-j1-bridges-20261030-comparison-ree-three-semilinear-target": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-007-ree-three/original/scopes/scope-1f4861a11ad406dd965fc9c8/RESULT.json",
+      "full_audit_sha256": "ea6c84e397fed394736f50f8e7a157c4b8da83669be64d0df02d171e15f19b2b",
+      "manifest": "verification/2026-10-30-additions/batches/batch-007-ree-three/original/scopes/scope-1f4861a11ad406dd965fc9c8/CHECKPOINT.json",
+      "manifest_sha256": "687b452f409ee7dbd05f0cabdabddd90050adecdc669651ce95858806b67975a",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-007-ree-three/original/process.log.gz",
+        "sha256": "d322d90e573ef1b20b7ccd26a6e1fc25282703d74ccf547fef48d84f2f4a52bc"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-release-v1-2-j1-bridges-20261030-comparison-ree-three-structure-successor": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-007-ree-three/original/scopes/scope-799a6919488aa095af5982c6/RESULT.json",
+      "full_audit_sha256": "0ce7fe6a0d2fb97144eb5cee3da7e31e3b6f77a84f068f0f3f4c9e63b7b0a0ee",
+      "manifest": "verification/2026-10-30-additions/batches/batch-007-ree-three/original/scopes/scope-799a6919488aa095af5982c6/CHECKPOINT.json",
+      "manifest_sha256": "2a73a1d6001c934cbd5de1ffb6f3736744089de476d2bd8b8388ed08d663a64a",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-007-ree-three/original/process.log.gz",
+        "sha256": "d322d90e573ef1b20b7ccd26a6e1fc25282703d74ccf547fef48d84f2f4a52bc"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-release-v1-2-j1-bridges-20261030-fieldnineorder": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/scopes/scope-5362251ca60ccecd7792528b/RESULT.json",
+      "full_audit_sha256": "cd6206bf10d78d4577beccc7fce547fdcc0960a56b19fdee44fe7f5ea5be5937",
+      "manifest": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/scopes/scope-5362251ca60ccecd7792528b/CHECKPOINT.json",
+      "manifest_sha256": "1ccb4cb0c85865b44ff006baf7501f164f99eeebda24bd546b544d22a0ec45f4",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/process.log.gz",
+        "sha256": "3b1b027e5f6dc46472d50d02ff4849a064cb4eea54a6c0821bb6160454f1c78c"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-release-v1-2-j1-bridges-20261030-j1local168": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-010-j1/original/scopes/scope-3d4b3e40b5459f501f4877c8/RESULT.json",
+      "full_audit_sha256": "4a0f90adddf29eb73bdfc89764bd9d437a5c61b9909475ae9f30a82e2dbbc306",
+      "manifest": "verification/2026-10-30-additions/batches/batch-010-j1/original/scopes/scope-3d4b3e40b5459f501f4877c8/CHECKPOINT.json",
+      "manifest_sha256": "c0f88ed0777105e74e41bc79632c7eeecc6e048ad5537927937d68239a25ef39",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-010-j1/original/process.log.gz",
+        "sha256": "e27429259584687dc073800e6b5d5dd852ce924b199bfac0307fe41df5a75e40"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-release-v1-2-j1-bridges-20261030-j1pqcomplement": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-005-j1/original/scopes/scope-bf5283c6176b8b06a33ac0e6/RESULT.json",
+      "full_audit_sha256": "ce663f318a14195e060bc3f1c62a1abb965728c0942af1bb8f5a8e42a89215c8",
+      "manifest": "verification/2026-10-30-additions/batches/batch-005-j1/original/scopes/scope-bf5283c6176b8b06a33ac0e6/CHECKPOINT.json",
+      "manifest_sha256": "835afba4187071a7702e6c137496d8bc57a0667cd9b13fcc46c5a52a764d9165",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-005-j1/original/process.log.gz",
+        "sha256": "35e9512eada33f3712e2b1f8e0da649db3e203062322074ef374138cdd8f79f2"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-release-v1-2-j1-bridges-20261030-j1signgroup": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-010-j1/original/scopes/scope-d88a43afbebd69bce66857d0/RESULT.json",
+      "full_audit_sha256": "c31b5ac80ebb3375acda855e97300a98dba365321180df733ff188ed8e9f1ba8",
+      "manifest": "verification/2026-10-30-additions/batches/batch-010-j1/original/scopes/scope-d88a43afbebd69bce66857d0/CHECKPOINT.json",
+      "manifest_sha256": "26488851c9a0abe3c60374a61e47b3f93113b390889f78d9f3140c3ee30a6d6c",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-010-j1/original/process.log.gz",
+        "sha256": "e27429259584687dc073800e6b5d5dd852ce924b199bfac0307fe41df5a75e40"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-release-v1-2-j1-bridges-20261030-j1whitelawexactcount": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-005-j1/original/scopes/scope-2c7c26b2d26e2a6b28f87ec1/RESULT.json",
+      "full_audit_sha256": "09b805c2b5495af59f139e10763e053a48692ad04d01ea0e8e41fc8858d7d034",
+      "manifest": "verification/2026-10-30-additions/batches/batch-005-j1/original/scopes/scope-2c7c26b2d26e2a6b28f87ec1/CHECKPOINT.json",
+      "manifest_sha256": "5b5023fea7bad5be95532d2345ca992d16247019dd4072aa766a7a2676129c83",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-005-j1/original/process.log.gz",
+        "sha256": "35e9512eada33f3712e2b1f8e0da649db3e203062322074ef374138cdd8f79f2"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-release-v1-2-j1-bridges-20261030-j1whitelawsinvariant": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-005-j1/original/scopes/scope-7abe0a428bc97224d785350a/RESULT.json",
+      "full_audit_sha256": "83a1e1bab5eb1aaeb577dc945e858e02db7c4f0cce5b03e5c81143136c0ceef6",
+      "manifest": "verification/2026-10-30-additions/batches/batch-005-j1/original/scopes/scope-7abe0a428bc97224d785350a/CHECKPOINT.json",
+      "manifest_sha256": "83cf5396065e82665fc1af8a9bcddb87f61ceed1a05250bcf4201cb32c8fae07",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-005-j1/original/process.log.gz",
+        "sha256": "35e9512eada33f3712e2b1f8e0da649db3e203062322074ef374138cdd8f79f2"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-release-v1-2-j1-bridges-20261030-markedunitarygeneration": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/scopes/scope-ca64423e2cdc9cece585edee/RESULT.json",
+      "full_audit_sha256": "da3a8d6feeadc0cc1af5ebc3c5d80cf173c3c4952cdc4c0f7ed9caf60807bc30",
+      "manifest": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/scopes/scope-ca64423e2cdc9cece585edee/CHECKPOINT.json",
+      "manifest_sha256": "23debb986a668ff6e49e9ff1680904e913f43b944a99f48fd520269b22032485",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/process.log.gz",
+        "sha256": "3b1b027e5f6dc46472d50d02ff4849a064cb4eea54a6c0821bb6160454f1c78c"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-release-v1-2-j1-bridges-20261030-octonionwords": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/scopes/scope-1346c0116b1e8889be8fdec3/RESULT.json",
+      "full_audit_sha256": "c14caf35e3a1ad355623e811b496e9d309bc0153c87ec22f18a87245c4117b53",
+      "manifest": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/scopes/scope-1346c0116b1e8889be8fdec3/CHECKPOINT.json",
+      "manifest_sha256": "f95e80e8fd46753a76818c7e5a9dbc1321eb7ac3d096ea7d9c95b9c9d49545b3",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-006-g2-binary/original/process.log.gz",
+        "sha256": "3b1b027e5f6dc46472d50d02ff4849a064cb4eea54a6c0821bb6160454f1c78c"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-release-v1-2-j1-bridges-20261030-reethreeboundaryaction": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-007-ree-three/original/scopes/scope-af2f68290d13070581390cc2/RESULT.json",
+      "full_audit_sha256": "6b4bf516098a91e1ca49eca5901f4139ddee28d66f1b3ad102227da112f9385f",
+      "manifest": "verification/2026-10-30-additions/batches/batch-007-ree-three/original/scopes/scope-af2f68290d13070581390cc2/CHECKPOINT.json",
+      "manifest_sha256": "79f64a43de56a4ebdd773a159ce119bfbd32a5d2d9fa0a42c7ea4f357f4a5b2b",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-007-ree-three/original/process.log.gz",
+        "sha256": "d322d90e573ef1b20b7ccd26a6e1fc25282703d74ccf547fef48d84f2f4a52bc"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-release-v1-2-summary-ree-f4-binary-point-count-20261030": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-caa8c58f4d2b1ffa878cff4f/RESULT.json",
+      "full_audit_sha256": "68f246f4b0848e21351cd75d28a87c055bd43744f957e846398ff1104d952e4f",
+      "manifest": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-caa8c58f4d2b1ffa878cff4f/CHECKPOINT.json",
+      "manifest_sha256": "8b5020cec3a2ccac3c1b6e0e7cb1c95f2736d5f506d10e9dcf540bdf00babb54",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/process.log.gz",
+        "sha256": "af6c80845c16d7f4a762a359f1a7e76728f2384437f58489b1c1dba31ded131f"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-staged-BinarySpecialPointFaithfulness": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-0c3bca893e766f15b73f63e7/RESULT.json",
+      "full_audit_sha256": "2689a1d9f2780688caaec8d1c0740dab98408a9f80f063346ef288eaa80f62bd",
+      "manifest": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-0c3bca893e766f15b73f63e7/CHECKPOINT.json",
+      "manifest_sha256": "6a79cebd015d00704558f3a9129770a33d0b42eea9397dc853af88aace318562",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/process.log.gz",
+        "sha256": "af6c80845c16d7f4a762a359f1a7e76728f2384437f58489b1c1dba31ded131f"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-staged-E6ClosedOrder": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-009-twisted-e6/original/scopes/scope-b8afd86081637eefd6f355e0/RESULT.json",
+      "full_audit_sha256": "12cd92928cda1928288f98da6f794636c13377b566591e13b3604bf0a1aacb47",
+      "manifest": "verification/2026-10-30-additions/batches/batch-009-twisted-e6/original/scopes/scope-b8afd86081637eefd6f355e0/CHECKPOINT.json",
+      "manifest_sha256": "eb432bace8f2617b85fb1f9a7940f19cbda204368f6a45b8100c5fe89855a041",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-009-twisted-e6/original/process.log.gz",
+        "sha256": "e2bce5aa896e723dc211d0ecccd2a634d67a2e296e2041f63aa91aa7e60ee5f0"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-staged-LineParabolicOrder": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-9f4dcc761bf209768b3b3400/RESULT.json",
+      "full_audit_sha256": "bcb5b8561d77086b217c2aec4de811da05a34ff00d5add09a89360d6f01e9a54",
+      "manifest": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-9f4dcc761bf209768b3b3400/CHECKPOINT.json",
+      "manifest_sha256": "ce469615cf09320b2d7917e1e391b6f89b81cb683af567ceaf8558935573f7d3",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/process.log.gz",
+        "sha256": "af6c80845c16d7f4a762a359f1a7e76728f2384437f58489b1c1dba31ded131f"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-staged-LineParabolicSemidirect": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-8ca87fa5bf6a99563b6e491d/RESULT.json",
+      "full_audit_sha256": "1d1b44c0f700d87bdbb6d1f8db0923c055f8f53088f73d50cc67cc57691b08eb",
+      "manifest": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-8ca87fa5bf6a99563b6e491d/CHECKPOINT.json",
+      "manifest_sha256": "a1060735a8879e0e10a38ee7cc8bead83adbb8698754f9a4e8d70ebee33ed023",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/process.log.gz",
+        "sha256": "af6c80845c16d7f4a762a359f1a7e76728f2384437f58489b1c1dba31ded131f"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-staged-MarkedLineKernelRecognition": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-2a5d6783c2e0c9222216e742/RESULT.json",
+      "full_audit_sha256": "878c5a40c82f48d14d8e53a5d1f87e30ab205e97c13573c2e68207106c299d7f",
+      "manifest": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-2a5d6783c2e0c9222216e742/CHECKPOINT.json",
+      "manifest_sha256": "fc9179dcc41767825977cb7787b3965fb6661b9ff1c44b1955d632406980f930",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/process.log.gz",
+        "sha256": "af6c80845c16d7f4a762a359f1a7e76728f2384437f58489b1c1dba31ded131f"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-staged-MinusculeCentralizerRecovery": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-013-twisted-e6/original/scopes/scope-365919178c959cefab852a56/RESULT.json",
+      "full_audit_sha256": "3f40192750683d29eef2bcb7e3fc4fa3186c432e6dd790840544bd2a71841761",
+      "manifest": "verification/2026-10-30-additions/batches/batch-013-twisted-e6/original/scopes/scope-365919178c959cefab852a56/CHECKPOINT.json",
+      "manifest_sha256": "fa6e8179368dc7f6bcf9c3fba1369fe782166d4f659c2787e3e6477016330b3d",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-013-twisted-e6/original/process.log.gz",
+        "sha256": "f131e9101ce9853bf34e96e4e3521ca161b2e55fa2312a1498ee7cfa026822b4"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-staged-PositiveRootTail": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-e3e9909cf90026ac066ca8c7/RESULT.json",
+      "full_audit_sha256": "d43818adb6dee3aabf1a19b15827f5a9b271321a9163e5282680d56ac4d7070b",
+      "manifest": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-e3e9909cf90026ac066ca8c7/CHECKPOINT.json",
+      "manifest_sha256": "711b3e786128dfa03e1d72308860b0eebbb4df2ea3d6d93f841edf2b48713e17",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/process.log.gz",
+        "sha256": "af6c80845c16d7f4a762a359f1a7e76728f2384437f58489b1c1dba31ded131f"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-staged-ree-f4-full-model-generation": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-cc703c5e023a900c672927f0/RESULT.json",
+      "full_audit_sha256": "0954fbaad8dfb4c048f9135a9f700fdc682d8663b4d78a9db24bbe7bbb705553",
+      "manifest": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-cc703c5e023a900c672927f0/CHECKPOINT.json",
+      "manifest_sha256": "e21fe0d29ad44f62d0c416c4bc7e0b0cdd37d14d477676ec765e5370d6a53a3d",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/process.log.gz",
+        "sha256": "af6c80845c16d7f4a762a359f1a7e76728f2384437f58489b1c1dba31ded131f"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    },
+    "checkpoint-staged-ree-f4-full-model-order": {
+      "full_audit": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-6289916cfe7df6b9b1a7d0cd/RESULT.json",
+      "full_audit_sha256": "7fd16ce5e9d794c694ed05160b0b7d7073851641c44dc2088d4423e74e5bcb93",
+      "manifest": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/scopes/scope-6289916cfe7df6b9b1a7d0cd/CHECKPOINT.json",
+      "manifest_sha256": "485d8bbe794d7dc0518457a1bc70c97ee04744586dc5af85e6f5ea56c9e02b73",
+      "source_binding": {
+        "path": "verification/2026-10-30-additions/SOURCE_HASHES.json",
+        "sha256": "879f10c361dd117557804f3c349ab4fe8c1d41552fa04c3d1f409403a2c104a6"
+      },
+      "compiled_statements": {
+        "path": "verification/2026-10-30-additions/batches/batch-011-large-ree/original/process.log.gz",
+        "sha256": "af6c80845c16d7f4a762a359f1a7e76728f2384437f58489b1c1dba31ded131f"
+      },
+      "independent_replay": {
+        "status": "not-claimed-for-current-export",
+        "evidence": []
+      }
+    }
+  }
+}

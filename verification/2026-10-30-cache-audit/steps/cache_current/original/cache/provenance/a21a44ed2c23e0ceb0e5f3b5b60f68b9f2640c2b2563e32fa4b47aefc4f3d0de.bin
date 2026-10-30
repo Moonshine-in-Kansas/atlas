@@ -1,0 +1,153 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["2d7dd52e5b1318bc.olean"],
+  "m": false,
+  "i": "513592abb18d7ca2.ilean",
+  "c": "0a21aea1070b6231.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoupleSupportTranslations.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleSupportTranslations.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoupleSupportTranslations.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleSupportTranslations.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoupleSupportTranslations.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nEqual affine-plane parity permits a translation fixing the entire reference row. -/\ntheorem four_support_pair_fixed_translation (a p₀ r s : Point) (hr : dot a.val r.val = 1) (hs : dot a.val s.val = 1)\n    (hrs : r.val + s.val = p₀.val) (ε δ : Point → Bit) (hε : ∀ p, dot a.val p.val = 0 → ε p = 0)\n    (hδ : ∀ p, dot a.val p.val = 0 → δ p = 0) (hpar : (∑ p, ε p) = (∑ p, δ p)) (hpair : ε r + ε s = δ r + δ s) :\n    ∃ B : BinaryMatrix,\n      matrixAt B p₀.val = 0 ∧\n        binaryNormalMap (δ, outerMatrix a.val a.val, 0) =\n          binaryNormalMap (ε, outerMatrix a.val a.val, 0) ∘ coordinateTranslation B :=\n  by\n  have hz : ∀ p, dot a.val p.val = 0 → (δ + ε) p = 0 := by intro p hp; simp [hε p hp, hδ p hp]\n  have he : (∑ p, (δ + ε) p) = 0 := by simp only [Pi.add_apply, Finset.sum_add_distrib, hpar, CharTwo.add_self_eq_zero]\n  obtain ⟨u, hu⟩ := even_active_linear_restriction a (δ + ε) hz he\n  have hp : dot u p₀.val = 0 := by\n    rw [← hrs, dot_add_right, ← hu r hr, ← hu s hs]\n    change (δ r + ε r) + (δ s + ε s) = 0\n    calc\n      _ = (δ r + δ s) + (ε r + ε s) := by ring\n      _ = 0 := by rw [hpair, CharTwo.add_self_eq_zero]\n  obtain ⟨i, hi⟩ := point_has_one a\n  let z := (basisPoint i).val\n  have haz : dot a.val z = 1 := by rw [dot_comm, dot_basisPoint]; exact hi\n  refine ⟨outerMatrix z u, ?_, ?_⟩\n  · rw [matrixAt_outer, hp, zero_smul]\n  · funext q\n    rcases q with ⟨p, x⟩\n    change\n      δ p + dot (matrixAt (outerMatrix a.val a.val) p.val) x + theta p 0 x =\n        ε p + dot (matrixAt (outerMatrix a.val a.val) p.val) (x + matrixAt (outerMatrix z u) p.val) +\n          theta p 0 (x + matrixAt (outerMatrix z u) p.val)\n    simp only [theta_zero_parameter, add_zero, matrixAt_outer, dot_smul_left, dot_add_right, dot_smul_right, haz,\n      mul_one]\n    rcases Atlas.Codes.bit_cases (dot a.val p.val) with hp | hp\n    · simp [hp, hε p hp, hδ p hp]\n    · have hd := hu p hp\n      change δ p + ε p = dot u p.val at hd\n      rw [hp, one_mul, mul_one, ← hd]\n      have hh : ∀ a b c : Bit, a + c = b + (c + (a + b)) := by decide +kernel\n      exact hh _ _ _`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:38:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:10:25: missing space in the source\n\nThis part of the code\n  'r.val=1) (hs'\nshould be written as\n  'r.val = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:10:50: missing space in the source\n\nThis part of the code\n  's.val=1)\n '\nshould be written as\n  's.val = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:11:16: missing space in the source\n\nThis part of the code\n  'r.val+s.val=p₀.val)'\nshould be written as\n  'r.val + s.val'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:11:22: missing space in the source\n\nThis part of the code\n  'r.val+s.val=p₀.val)'\nshould be written as\n  's.val = p₀.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:11:43: missing space in the source\n\nThis part of the code\n  'Point→Bit)'\nshould be written as\n  'Point → Bit)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:12:11: missing space in the source\n\nThis part of the code\n  '∀p,dot'\nshould be written as\n  '∀ p, dot'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:12:13: missing space in the source\n\nThis part of the code\n  '∀p,dot a.val'\nshould be written as\n  'p, dot'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:12:28: missing space in the source\n\nThis part of the code\n  'p.val=0 → ε'\nshould be written as\n  'p.val = 0'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:12:36: missing space in the source\n\nThis part of the code\n  'p=0)\n '\nshould be written as\n  'p = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:13:11: missing space in the source\n\nThis part of the code\n  '∀p,dot'\nshould be written as\n  '∀ p, dot'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:13:13: missing space in the source\n\nThis part of the code\n  '∀p,dot a.val'\nshould be written as\n  'p, dot'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:13:28: missing space in the source\n\nThis part of the code\n  'p.val=0 → δ'\nshould be written as\n  'p.val = 0'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:13:36: missing space in the source\n\nThis part of the code\n  'p=0)\n '\nshould be written as\n  'p = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:14:14: missing space in the source\n\nThis part of the code\n  '(∑p,ε p)=(∑p,δ'\nshould be written as\n  '(∑ p, ε'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:14:16: missing space in the source\n\nThis part of the code\n  '(∑p,ε p)=(∑p,δ'\nshould be written as\n  'p, ε p)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:14:20: missing space in the source\n\nThis part of the code\n  'p)=(∑p,δ'\nshould be written as\n  'p) = (∑'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:14:23: missing space in the source\n\nThis part of the code\n  'p)=(∑p,δ p))'\nshould be written as\n  '(∑ p, δ'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:14:25: missing space in the source\n\nThis part of the code\n  'p)=(∑p,δ p))'\nshould be written as\n  'p, δ p))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:14:43: missing space in the source\n\nThis part of the code\n  'r+ε s=δ'\nshould be written as\n  'r + ε'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:14:47: missing space in the source\n\nThis part of the code\n  's=δ r+δ'\nshould be written as\n  's = δ'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:14:51: missing space in the source\n\nThis part of the code\n  'r+δ s)'\nshould be written as\n  'r + δ'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coupleFour_equal_parity_translation (a : Fin 3) (m n : E)\n    (he : coupleFourParity a m = coupleFourParity a n) :\n    ∃ B : BinaryMatrix,\n      matrixAt B (rowLabel 0).val = 0 ∧ coupleFourSupport a n = coupleFourSupport a m ∘ coordinateTranslation B :=\n  by\n  let aa : Point := ⟨coupleFourForm a, coupleFourForm_ne_zero a⟩\n  let r := rowLabel (![1, 5, 1] a)\n  let s := rowLabel (![3, 4, 3] a)\n  have hd : dot (coupleFourForm a) r.val = 1 ∧ dot (coupleFourForm a) s.val = 1 ∧ r.val + s.val = (rowLabel 0).val :=\n    by\n    dsimp [r, s]\n    decide +kernel +revert\n  have hm := coupleFourConstants_valid a m\n  have hn := coupleFourConstants_valid a n\n  apply\n    four_support_pair_fixed_translation aa (rowLabel 0) r s hd.1 hd.2.1 hd.2.2 (coupleFourConstants a m)\n      (coupleFourConstants a n) hm.1 hn.1 (hm.2.trans hn.2.symm)\n  simpa only [r, s, coupleFourConstants_rows, coupleFourParity] using he`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:48:30: missing space in the source\n\nThis part of the code\n  'm=coupleFourParity'\nshould be written as\n  'm = coupleFourParity'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoupleSupportTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoupleFourStateAction transitive imports (legacy)",
+       "865e0f337408bca2"],
+      ["Atlas.Rudvalis.CoupleFourStateAction:importAllArts",
+       "4074eb5bd4248071"],
+      ["Atlas.Rudvalis.FourLocalSupports transitive imports (legacy)",
+       "122b3c531ea7e991"],
+      ["Atlas.Rudvalis.FourLocalSupports:importAllArts",
+       "3d207cfd6c70546c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoupleSupportTranslations.lean",
+   "10f2a83ebe4d3d94"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoupleSupportTranslations", "df013854cf485c52"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "40e0054c0e843ae4"}

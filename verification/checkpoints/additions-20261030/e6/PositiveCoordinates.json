@@ -1,0 +1,111 @@
+{
+  "id": "staged-PositiveCoordinates",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveCoordinates"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6_height_eq_coordinate_sum",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6_isPos_of_coordinates_nonnegative",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6_representative_isPos",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6_positive_root_exhaustion",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6_isPos_iff_coordinates_nonnegative",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6_isPos_iff_representative",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6_rootRepresentative_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveRootEnumeration",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveRootEnumeration_coordinates",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveRootEnumeration_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveRootEnumeration_surjective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveRootEnumeration_bijective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveRootEquiv",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PositiveRootEquiv_coordinates",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveCoordinates"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-PositiveCoordinates-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-PositiveCoordinates-no-selected-model",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.Models",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightCompanion",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightOrbits"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

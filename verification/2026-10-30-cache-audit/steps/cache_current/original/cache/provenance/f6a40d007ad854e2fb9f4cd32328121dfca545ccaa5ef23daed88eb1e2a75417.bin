@@ -1,0 +1,128 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["1790e3ebba27b83f.olean"],
+  "m": false,
+  "i": "21334a657a0730e6.ilean",
+  "c": "1012ceb61d8d517d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FourLocalWordOrbit.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourLocalWordOrbit.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourLocalWordOrbit.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourLocalWordOrbit.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourLocalWordOrbit.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable abbrev FourLocalStabilizer :=\n  MulAction.stabilizer codeGroup (coordinateCross (originalCoordinateEquiv (0, 1)))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:6:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocal_signed_fibre_orbit\n    (w : SignedLift quaternaryCode fourPlaneSeedResidue) :\n    ∃ g : FourLocalStabilizer, monomialHom g.val.val (quaternarySeed (3, 0, 0, 0)) = w.val.val :=\n  fourLocal_fibre_transitive ((minimumSignedLiftEquiv fourPlaneSeedResidue fourPlaneSeedResidue_weight).symm w)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:10:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocal_transported_word_orbit (g : FourLocalStabilizer)\n    (w : SignedLift quaternaryCode (fourPlaneSeedResidue ∘ g.val.val.right.symm)) :\n    ∃ h : FourLocalStabilizer, monomialHom h.val.val (quaternarySeed (3, 0, 0, 0)) = w.val.val :=\n  by\n  let e := signedLiftActionEquiv g.val fourPlaneSeedResidue\n  obtain ⟨h, hh⟩ := fourLocal_signed_fibre_orbit (e.symm w)\n  refine ⟨g * h, ?_⟩\n  change monomialHom (g.val.val * h.val.val) _ = w.val.val\n  rw [map_mul]\n  change monomialHom g.val.val (monomialHom h.val.val _) = w.val.val\n  rw [hh]\n  exact congrArg (fun u => u.val.val) (e.apply_symm_apply w)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocal_fixed_label_word_orbit (w : QuaternaryWord)\n    (hw : w ∈ quaternaryCode) (h16 : euclideanWeight w = 16) (δ : Point → Bit)\n    (hδ : ∀ p, dot (binaryLabel 1) p.val = 0 → δ p = 0) (hs : (∑ p, δ p) = 1)\n    (hr : reduce w = binaryNormalMap (δ, outerMatrix (binaryLabel 1) (binaryLabel 1), 0)) :\n    ∃ g : FourLocalStabilizer, monomialHom g.val.val (quaternarySeed (3, 0, 0, 0)) = w :=\n  by\n  obtain ⟨g, hg⟩ := fourLocal_fixed_label_support_orbit δ hδ hs\n  change reduce (monomialAction g.val.val (quaternarySeed (3, 0, 0, 0))) = _ at hg\n  rw [monomialAction_reduce, fourthSeed_residue] at hg\n  exact fourLocal_transported_word_orbit g ⟨⟨w, hw⟩, hr.trans hg.symm, quaternary_minimum_no_twos w hw h16⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:24:69: missing space in the source\n\nThis part of the code\n  'w∈quaternaryCode)'\nshould be written as\n  'w ∈ quaternaryCode)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:25:28: missing space in the source\n\nThis part of the code\n  'w=16) (δ'\nshould be written as\n  'w = 16)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:26:11: missing space in the source\n\nThis part of the code\n  '∀p,dot'\nshould be written as\n  '∀ p, dot'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:26:13: missing space in the source\n\nThis part of the code\n  '∀p,dot (binaryLabel'\nshould be written as\n  'p, dot'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:26:38: missing space in the source\n\nThis part of the code\n  'p.val=0 → δ'\nshould be written as\n  'p.val = 0'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:26:46: missing space in the source\n\nThis part of the code\n  'p=0) (hs'\nshould be written as\n  'p = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:26:58: missing space in the source\n\nThis part of the code\n  '(∑p,δ p)=1)'\nshould be written as\n  '(∑ p, δ'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:26:60: missing space in the source\n\nThis part of the code\n  '(∑p,δ p)=1)'\nshould be written as\n  'p, δ p)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:26:64: missing space in the source\n\nThis part of the code\n  'p)=1)\n '\nshould be written as\n  'p) = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:27:18: missing space in the source\n\nThis part of the code\n  'w=binaryNormalMap'\nshould be written as\n  'w = binaryNormalMap'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:27:38: missing space in the source\n\nThis part of the code\n  '(δ,outerMatrix'\nshould be written as\n  '(δ, outerMatrix'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:27:82: missing space in the source\n\nThis part of the code\n  '1),0)) :'\nshould be written as\n  '1), 0))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourLocalWordOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FourLocalSupportOrbit transitive imports (legacy)",
+       "58eb3a5ae7919225"],
+      ["Atlas.Rudvalis.FourLocalSupportOrbit:importAllArts",
+       "17fff30d1c5b31d6"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FourLocalWordOrbit.lean",
+   "dd736101f3e0d9a7"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FourLocalWordOrbit", "5e6eaebe214ad0a1"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "5342600d7cdeb70c"}

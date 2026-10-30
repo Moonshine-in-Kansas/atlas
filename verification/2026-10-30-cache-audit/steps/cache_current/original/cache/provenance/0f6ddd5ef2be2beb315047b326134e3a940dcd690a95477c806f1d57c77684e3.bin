@@ -1,0 +1,109 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["5024b704737ea064.olean"],
+  "m": false,
+  "i": "2ea7d763370b6dc5.ilean",
+  "c": "9773bddb16549a75.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Triality/StructuralTransport.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Triality/StructuralTransport.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Triality/StructuralTransport.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Triality/StructuralTransport.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Triality/StructuralTransport.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:11:39: missing space in the source\n\nThis part of the code\n  't)=algebraMap'\nshould be written as\n  't) = algebraMap'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:15:0: automatically included section variable(s) unused in theorem `Atlas.Triality.fieldEquiv_nextShortRoot`:\n  hcompat\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit hcompat in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:18:52: This simp argument is unused:\n  hcompat\n\nHint: Omit it from the simp argument list.\n  [apply] simp [nextShortRoot, map_mul, fieldEquiv_differenceRoot, fieldEquiv_sumRoot,\n    fieldEquiv_sigma eK (Nat.card_congr eF.toEquiv)]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:20:0: automatically included section variable(s) unused in theorem `Atlas.Triality.fieldEquiv_middleRoot`:\n  hcompat\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit hcompat in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:23:52: This simp argument is unused:\n  hcompat\n\nHint: Omit it from the simp argument list.\n  [apply] simp [middleRoot, map_mul, fieldEquiv_differenceRoot, fieldEquiv_sumRoot,\n    fieldEquiv_sigma eK (Nat.card_congr eF.toEquiv)]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:25:0: automatically included section variable(s) unused in theorem `Atlas.Triality.fieldEquiv_highLongRoot`:\n  [Finite F]\n  [Finite E]\n  [Finite K]\n  [Finite L]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Finite F] [Finite E] [Finite K] [Finite L] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:27:21: This simp argument is unused:\n  map_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [highLongRoot, fieldEquiv_differenceRoot, fieldEquiv_sumRoot,\n    fieldEquiv_sigma eK (Nat.card_congr eF.toEquiv), hcompat]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:27:29: This simp argument is unused:\n  fieldEquiv_differenceRoot\n\nHint: Omit it from the simp argument list.\n  [apply] simp [highLongRoot, map_mul, fieldEquiv_sumRoot, fieldEquiv_sigma eK (Nat.card_congr eF.toEquiv), hcompat]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:28:4: This simp argument is unused:\n  fieldEquiv_sigma eK (Nat.card_congr eF.toEquiv)\n\nHint: Omit it from the simp argument list.\n  [apply] simp [highLongRoot, map_mul, fieldEquiv_differenceRoot, fieldEquiv_sumRoot, hcompat]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:30:0: automatically included section variable(s) unused in theorem `Atlas.Triality.fieldEquiv_highestRoot`:\n  [Finite F]\n  [Finite E]\n  [Finite K]\n  [Finite L]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Finite F] [Finite E] [Finite K] [Finite L] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:32:20: This simp argument is unused:\n  map_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [highestRoot, fieldEquiv_differenceRoot, fieldEquiv_sumRoot,\n    fieldEquiv_sigma eK (Nat.card_congr eF.toEquiv), hcompat]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:32:28: This simp argument is unused:\n  fieldEquiv_differenceRoot\n\nHint: Omit it from the simp argument list.\n  [apply] simp [highestRoot, map_mul, fieldEquiv_sumRoot, fieldEquiv_sigma eK (Nat.card_congr eF.toEquiv), hcompat]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:33:4: This simp argument is unused:\n  fieldEquiv_sigma eK (Nat.card_congr eF.toEquiv)\n\nHint: Omit it from the simp argument list.\n  [apply] simp [highestRoot, map_mul, fieldEquiv_differenceRoot, fieldEquiv_sumRoot, hcompat]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:40:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:63:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:65:49: missing space in the source\n\nThis part of the code\n  'K=3) (hL'\nshould be written as\n  'K = 3)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:65:77: missing space in the source\n\nThis part of the code\n  'L=3) :'\nshould be written as\n  'L = 3)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:83:0: automatically included section variable(s) unused in theorem `Atlas.Triality.fieldEquiv_shortWeyl`:\n  hcompat\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit hcompat in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:90:58: missing space in the source\n\nThis part of the code\n  'K=3) (hL'\nshould be written as\n  'K = 3)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:90:86: missing space in the source\n\nThis part of the code\n  'L=3) :'\nshould be written as\n  'L = 3)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:97:57: missing space in the source\n\nThis part of the code\n  'K=3) (hL'\nshould be written as\n  'K = 3)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/StructuralTransport.lean:97:85: missing space in the source\n\nThis part of the code\n  'L=3) :'\nshould be written as\n  'L = 3)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Triality.CubicFieldTransport transitive imports (legacy)",
+       "6cbdcf935b4f8193"],
+      ["Atlas.LinearGroups.Triality.CubicFieldTransport:importAllArts",
+       "7414823c1942b26c"],
+      ["Atlas.LinearGroups.Triality.ParabolicAction transitive imports (legacy)",
+       "87f29a6d3dd27213"],
+      ["Atlas.LinearGroups.Triality.ParabolicAction:importAllArts",
+       "92abcba16ae0aee8"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Triality/StructuralTransport.lean",
+   "3c25bd56616e0e9e"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Triality.StructuralTransport",
+   "95e7f4eb7d0eecb0"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "1cdc2b51bc7ddbed"}

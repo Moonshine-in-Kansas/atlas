@@ -1,0 +1,48 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["a1a5347fc32f8f1a.olean"],
+  "m": false,
+  "i": "af792d7a74cf86d5.ilean",
+  "c": "72b497cb94a7dc3e.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Unitary/ThreePointParameters.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Unitary/ThreePointParameters.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Unitary/ThreePointParameters.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Unitary/ThreePointParameters.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Unitary/ThreePointParameters.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreePointParameters.lean:22:24: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hmid, hlast]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreePointParameters.lean:25:36: Variable name `hdeg` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hdeg\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Unitary/ThreePointParameters.lean:44:74: This simp argument is unused:\n  add_assoc\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hyperbolicThreeForm, rootThreeCondition, add_comm, add_left_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Unitary.GenerationThree transitive imports (legacy)",
+       "c727df4aeeb7a15f"],
+      ["Atlas.LinearGroups.Unitary.GenerationThree:importAllArts",
+       "47b43d99a120d2e9"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Unitary/ThreePointParameters.lean",
+   "cc6b346b24284ce8"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Unitary.ThreePointParameters",
+   "f9b1382385e173ed"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "4cf2a4178ac9216a"}

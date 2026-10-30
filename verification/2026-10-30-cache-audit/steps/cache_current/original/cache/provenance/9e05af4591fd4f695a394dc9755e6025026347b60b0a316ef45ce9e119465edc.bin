@@ -1,0 +1,72 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["fea67dd469b1b589.olean"],
+  "m": false,
+  "i": "b23e369c4a678dd4.ilean",
+  "c": "c2c360a527adc711.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Algebra/SolvableNormalPSubgroup.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Algebra/SolvableNormalPSubgroup.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Algebra/SolvableNormalPSubgroup.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Algebra/SolvableNormalPSubgroup.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Algebra/SolvableNormalPSubgroup.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Algebra/SolvableNormalPSubgroup.lean:16:2: Try this: \n  haveI̵\n\nThe goal is a proposition, so `have` is preferred over `haveI`.\nThe difference between `have` and `haveI` is that `haveI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SolvableNormalPSubgroup.lean:18:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SolvableNormalPSubgroup.lean:20:2: Try this: \n  haveI̵\n\nThe goal is a proposition, so `have` is preferred over `haveI`.\nThe difference between `have` and `haveI` is that `haveI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SolvableNormalPSubgroup.lean:11:1: 'theorem abelian_normal_eq_bot_of_no_normal_pgroup\n    (h : ∀ (p : ℕ) [Fact p.Prime] (P : Subgroup G) [P.Normal], IsPGroup p P → P = ⊥) (A : Subgroup G) [A.Normal]\n    [IsMulCommutative A] : A = ⊥ := by\n  classical\n  by_contra hA\n  haveI : Nontrivial A := (Subgroup.nontrivial_iff_ne_bot A).mpr hA\n  obtain ⟨p, hp, hd⟩ := Nat.exists_prime_and_dvd (ne_of_gt (Finite.one_lt_card (α := A)))\n  letI : Fact p.Prime := ⟨hp⟩\n  let P : Sylow p A := Classical.choice inferInstance\n  haveI : P.Characteristic := P.characteristic_of_normal inferInstance\n  have hb := h p ((P : Subgroup A).map A.subtype) (P.isPGroup'.map A.subtype)\n  have he : (P : Subgroup A) = ⊥ :=\n    by\n    apply (Subgroup.map_injective A.subtype_injective)\n    simpa using hb\n  exact P.ne_bot_of_dvd_card hd he' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SolvableNormalPSubgroup.lean:41:6: Try this: \n  haveI̵\n\nThe goal is a proposition, so `have` is preferred over `haveI`.\nThe difference between `have` and `haveI` is that `haveI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SolvableNormalPSubgroup.lean:43:6: Try this: \n  haveI̵\n\nThe goal is a proposition, so `have` is preferred over `haveI`.\nThe difference between `have` and `haveI` is that `haveI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SolvableNormalPSubgroup.lean:44:6: Try this: \n  haveI̵\n\nThe goal is a proposition, so `have` is preferred over `haveI`.\nThe difference between `have` and `haveI` is that `haveI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/SolvableNormalPSubgroup.lean:27:1: 'theorem solvable_normal_eq_bot_of_no_normal_pgroup\n    (h : ∀ (p : ℕ) [Fact p.Prime] (P : Subgroup G) [P.Normal], IsPGroup p P → P = ⊥) (N : Subgroup G) [N.Normal]\n    [Group.IsSolvable N] : N = ⊥ :=\n  by\n  obtain ⟨n, hn⟩ := Group.IsSolvable.solvable (G := N)\n  have descend : ∀ k, derivedSeries N k = ⊥ → N = ⊥ := by\n    intro k\n    induction k with\n    | zero =>\n      intro hk\n      have hh := congrArg (Subgroup.map N.subtype) hk\n      simpa [← MonoidHom.range_eq_map] using hh\n    | succ k ih =>\n      intro hk\n      let A := derivedSeries N k\n      haveI : IsMulCommutative A := Subgroup.commutator_self_eq_bot_iff.mp hk\n      let B := A.map N.subtype\n      haveI : B.Normal := inferInstance\n      haveI : IsMulCommutative B :=\n        by\n        let e := A.equivMapOfInjective N.subtype N.subtype_injective\n        apply isMulCommutative_iff.mpr\n        intro x y\n        obtain ⟨a, rfl⟩ := e.surjective x\n        obtain ⟨b, rfl⟩ := e.surjective y\n        rw [← map_mul, ← map_mul, isMulCommutative_iff.mp inferInstance a b]\n      have hb : B = ⊥ := abelian_normal_eq_bot_of_no_normal_pgroup h B\n      apply ih\n      apply Subgroup.map_injective N.subtype_injective\n      simpa [B, A] using hb\n  exact descend n hn' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Mathlib.GroupTheory.Solvable transitive imports (legacy)",
+       "fedffa4e64eecd7b"],
+      ["Mathlib.GroupTheory.Solvable:importAllArts", "696adb8df36ba36b"],
+      ["Mathlib.GroupTheory.Sylow transitive imports (legacy)",
+       "ce37072e883352af"],
+      ["Mathlib.GroupTheory.Sylow:importAllArts", "912a6efb92c18549"],
+      ["Mathlib.GroupTheory.GroupAction.ConjAct transitive imports (legacy)",
+       "15c1b53d35afd7a0"],
+      ["Mathlib.GroupTheory.GroupAction.ConjAct:importAllArts",
+       "2ed8e8c3c6372683"],
+      ["Mathlib.SetTheory.Cardinal.NatCard transitive imports (legacy)",
+       "2c28cc96afc9d019"],
+      ["Mathlib.SetTheory.Cardinal.NatCard:importAllArts",
+       "53bae6c5eb87894a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Algebra/SolvableNormalPSubgroup.lean",
+   "9a55b9fb884127b4"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Algebra.SolvableNormalPSubgroup", "9c31b59ac0d9342b"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "53ec57caf08b855e"}

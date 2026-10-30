@@ -1,0 +1,75 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["45f268c979f648ff.olean"],
+  "m": false,
+  "i": "13dc5271f45f121e.ilean",
+  "c": "c4805cce83bbd4df.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Algebra/Albert/OppositeChart.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Algebra/Albert/OppositeChart.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Algebra/Albert/OppositeChart.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Algebra/Albert/OppositeChart.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Algebra/Albert/OppositeChart.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Algebra/Albert/OppositeChart.lean:80:44: This simp argument is unused:\n  Matrix.vecHead\n\nHint: Omit it from the simp argument list.\n  [apply] simp [adjoint, SplitOctonion.norm, h7, Matrix.vecTail] at h\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/Albert/OppositeChart.lean:80:59: This simp argument is unused:\n  Matrix.vecTail\n\nHint: Omit it from the simp argument list.\n  [apply] simp [adjoint, SplitOctonion.norm, h7, Matrix.vecHead] at h\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/Albert/OppositeChart.lean:80:8: `simp [adjoint,SplitOctonion.norm,h7,Matrix.vecHead,Matrix.vecTail] at h` is a flexible tactic modifying `h`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/Albert/OppositeChart.lean:80:8: Try this:\n  [apply] simp only [Fin.reduceFinMk, Fin.zero_eta, Fin.isValue] at h",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/Albert/OppositeChart.lean:81:8: `change x.2 2 0 = x.1 0 * x.1 1 - x.2 2 1 * x.2 2 6 - x.2 2 2 * x.2 2 5 - x.2 2 3 * x.2 2 4`\nuses `h`, which was modified by the flexible tactic `simp` on line 80!",
+   "level": "info"},
+  {"message":
+   "Atlas/Algebra/Albert/OppositeChart.lean:14:56: missing space in the source\n\nThis part of the code\n  'x=0) (h7'\nshould be written as\n  'x = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/Albert/OppositeChart.lean:14:73: missing space in the source\n\nThis part of the code\n  '7=1) :'\nshould be written as\n  '7 = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/Albert/OppositeChart.lean:91:60: missing space in the source\n\nThis part of the code\n  'x=0)\n '\nshould be written as\n  'x = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/Albert/OppositeChart.lean:92:17: missing space in the source\n\nThis part of the code\n  'x=0) (h7'\nshould be written as\n  'x = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/Albert/OppositeChart.lean:92:34: missing space in the source\n\nThis part of the code\n  '7=1) :'\nshould be written as\n  '7 = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Algebra.Albert.OppositeChartFormula transitive imports (legacy)",
+       "2f5fb5a30e4466c9"],
+      ["Atlas.Algebra.Albert.OppositeChartFormula:importAllArts",
+       "5a40f7d8aea6397c"],
+      ["Mathlib.Tactic.LinearCombination transitive imports (legacy)",
+       "9b6033054b06bcd9"],
+      ["Mathlib.Tactic.LinearCombination:importAllArts", "0836636e0f6f1010"],
+      ["Mathlib.SetTheory.Cardinal.Finite transitive imports (legacy)",
+       "0f22d33fdd3e21f3"],
+      ["Mathlib.SetTheory.Cardinal.Finite:importAllArts",
+       "6f293d32afda3c7c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Algebra/Albert/OppositeChart.lean",
+   "b508b15dd9ec8be0"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Algebra.Albert.OppositeChart", "5940241adfbd445a"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "d8a7a37fae8177d6"}

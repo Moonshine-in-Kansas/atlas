@@ -1,0 +1,200 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["580c7670235bf3ae.olean"],
+  "m": false,
+  "i": "1b6fbd955e483a52.ilean",
+  "c": "9cbc552f791c30c9.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/G2/RootGroups.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/RootGroups.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/G2/RootGroups.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/RootGroups.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/G2/RootGroups.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.G2`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.SplitOctonion`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Explicit`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `variable {K : Type*} [Field K]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe explicit root family as actual multiplication-preserving automorphisms. -/\ndef rootA (a : K) : Model K :=\n  ⟨rootAEquiv a, rootA_mul a⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rootA_add (a b : K) : rootA a * rootA b = rootA (a + b) :=\n  by\n  apply Subtype.ext\n  apply LinearEquiv.ext\n  intro x\n  exact Explicit.rootA_add a b x`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rootA_injective : Function.Injective (rootA (K := K)) :=\n  by\n  intro a b h\n  have hh := congrArg (fun g : Model K => g.val (basisVector 6) 0) h\n  simpa [rootA, rootAEquiv, rootALinear, rootAApply, basisVector, Pi.single_apply] using hh`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe explicit root family as actual multiplication-preserving automorphisms. -/\ndef rootB (a : K) : Model K :=\n  ⟨rootBEquiv a, rootB_mul a⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rootB_add (a b : K) : rootB a * rootB b = rootB (a + b) :=\n  by\n  apply Subtype.ext\n  apply LinearEquiv.ext\n  intro x\n  exact Explicit.rootB_add a b x`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rootB_injective : Function.Injective (rootB (K := K)) :=\n  by\n  intro a b h\n  have hh := congrArg (fun g : Model K => g.val (basisVector 5) 0) h\n  simpa [rootB, rootBEquiv, rootBLinear, rootBApply, basisVector, Pi.single_apply] using hh`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe explicit root family as actual multiplication-preserving automorphisms. -/\ndef rootC (a : K) : Model K :=\n  ⟨rootCEquiv a, rootC_mul a⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rootC_add (a b : K) : rootC a * rootC b = rootC (a + b) :=\n  by\n  apply Subtype.ext\n  apply LinearEquiv.ext\n  intro x\n  exact Explicit.rootC_add a b x`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rootC_injective : Function.Injective (rootC (K := K)) :=\n  by\n  intro a b h\n  have hh := congrArg (fun g : Model K => g.val (basisVector 3) 0) h\n  simpa [rootC, rootCEquiv, rootCLinear, rootCApply, basisVector, Pi.single_apply] using hh`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe explicit root family as actual multiplication-preserving automorphisms. -/\ndef rootD (a : K) : Model K :=\n  ⟨rootDEquiv a, rootD_mul a⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rootD_add (a b : K) : rootD a * rootD b = rootD (a + b) :=\n  by\n  apply Subtype.ext\n  apply LinearEquiv.ext\n  intro x\n  exact Explicit.rootD_add a b x`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rootD_injective : Function.Injective (rootD (K := K)) :=\n  by\n  intro a b h\n  have hh := congrArg (fun g : Model K => g.val (basisVector 2) 0) h\n  simpa [rootD, rootDEquiv, rootDLinear, rootDApply, basisVector, Pi.single_apply] using hh`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe explicit root family as actual multiplication-preserving automorphisms. -/\ndef rootE (a : K) : Model K :=\n  ⟨rootEEquiv a, rootE_mul a⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rootE_add (a b : K) : rootE a * rootE b = rootE (a + b) :=\n  by\n  apply Subtype.ext\n  apply LinearEquiv.ext\n  intro x\n  exact Explicit.rootE_add a b x`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rootE_injective : Function.Injective (rootE (K := K)) :=\n  by\n  intro a b h\n  have hh := congrArg (fun g : Model K => g.val (basisVector 2) 1) h\n  simpa [rootE, rootEEquiv, rootELinear, rootEApply, basisVector, Pi.single_apply] using hh`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe explicit root family as actual multiplication-preserving automorphisms. -/\ndef rootF (a : K) : Model K :=\n  ⟨rootFEquiv a, rootF_mul a⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rootF_add (a b : K) : rootF a * rootF b = rootF (a + b) :=\n  by\n  apply Subtype.ext\n  apply LinearEquiv.ext\n  intro x\n  exact Explicit.rootF_add a b x`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rootF_injective : Function.Injective (rootF (K := K)) :=\n  by\n  intro a b h\n  have hh := congrArg (fun g : Model K => g.val (basisVector 1) 0) h\n  simpa [rootF, rootFEquiv, rootFLinear, rootFApply, basisVector, Pi.single_apply] using hh`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:98:4: Try `simp at hh` instead of `simpa using hh`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- A concrete noncommuting pair, including characteristics two and three. -/\ntheorem rootE_rootF_ne : rootE (1 : K) * rootF 1 ≠ rootF 1 * rootE 1 :=\n  by\n  intro h\n  have hh := congrArg (fun g : Model K => g.val (basisVector 2) 0) h\n  have he : (0 : K) = 1 := by\n    simpa [rootE, rootF, rootEEquiv, rootFEquiv, rootELinear, rootFLinear, rootEApply, rootFApply, basisVector,\n      Pi.single_apply] using hh\n  exact zero_ne_one he`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem exists_mul_ne_mul : ∃ g h : Model K, g * h ≠ h * g :=\n  ⟨rootE 1, rootF 1, rootE_rootF_ne⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.G2`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/G2/RootGroups.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.G2.RootLinearMaps transitive imports (legacy)",
+       "e05c3df0880efe9a"],
+      ["Atlas.LinearGroups.G2.RootLinearMaps:importAllArts",
+       "f7a6d55383d47ea4"],
+      ["Atlas.LinearGroups.G2.Basic transitive imports (legacy)",
+       "db73fe590486cdd5"],
+      ["Atlas.LinearGroups.G2.Basic:importAllArts", "8b0a82c3b514bd7a"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/G2/RootGroups.lean",
+   "f0b1e22fd912fe00"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.G2.RootGroups", "24352b128aa0faf9"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "ae5079c8f3b07334"}

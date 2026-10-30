@@ -1,0 +1,96 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["f1a34633f0aa420e.olean"],
+  "m": false,
+  "i": "5485e66827007776.ilean",
+  "c": "524da6bbd21864b4.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/NonorthogonalSuborbits.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/NonorthogonalSuborbits.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/NonorthogonalSuborbits.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/NonorthogonalSuborbits.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/NonorthogonalSuborbits.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyCross_rowReference_orbit_divisible (v : HeavyCrosses) :\n    128 ∣ Nat.card (MulAction.orbit codeRowReferenceStabilizer (shellPieceCrossMap heavyShellPiece v)) :=\n  by\n  apply Atlas.suborbit_card_divisible codeRowReferenceStabilizer _ 128\n  rw [codeRowReferenceStabilizer_order, heavyCross_rowKernel_stabilizer_order]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:7:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:6:1: 'theorem heavyCross_rowReference_orbit_divisible (v : HeavyCrosses) :\n    128 ∣ Nat.card (MulAction.orbit codeRowReferenceStabilizer (shellPieceCrossMap heavyShellPiece v)) :=\n  by\n  apply Atlas.suborbit_card_divisible codeRowReferenceStabilizer _ 128\n  rw [codeRowReferenceStabilizer_order,\n    heavyCross_rowKernel_stabilizer_order]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavy_reference_orbit_divisible (v : HeavyCrosses) :\n    128 ∣ Nat.card (MulAction.orbit codeReferenceStabilizer (shellPieceCrossMap heavyShellPiece v)) :=\n  by\n  refine Atlas.GroupTheory.invariant_card_dvd_of_orbits (G := codeRowReferenceStabilizer) _ (Set.toFinite _) ?_ 128 ?_\n  · intro g d hd\n    exact MulAction.mapsTo_smul_orbit (rowReferenceToCodeReference g) _ hd\n  · intro d hd\n    obtain ⟨g, rfl⟩ := MulAction.mem_orbit_iff.mp hd\n    obtain ⟨w, hw⟩ := shellPieceCross_range_stable heavyShellPiece g.val _ ⟨v, rfl⟩\n    change 128 ∣ Nat.card (MulAction.orbit codeRowReferenceStabilizer (g.val • shellPieceCrossMap heavyShellPiece v))\n    rw [← hw]\n    exact heavyCross_rowReference_orbit_divisible w`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:12:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:20:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:11:1: 'theorem heavy_reference_orbit_divisible (v : HeavyCrosses) :\n    128 ∣ Nat.card (MulAction.orbit codeReferenceStabilizer (shellPieceCrossMap heavyShellPiece v)) :=\n  by\n  refine Atlas.GroupTheory.invariant_card_dvd_of_orbits (G := codeRowReferenceStabilizer) _ (Set.toFinite _) ?_ 128 ?_\n  · intro g d hd\n    exact MulAction.mapsTo_smul_orbit (rowReferenceToCodeReference g) _ hd\n  · intro d hd\n    obtain ⟨g, rfl⟩ := MulAction.mem_orbit_iff.mp hd\n    obtain ⟨w, hw⟩ := shellPieceCross_range_stable heavyShellPiece g.val _ ⟨v, rfl⟩\n    change 128 ∣ Nat.card (MulAction.orbit codeRowReferenceStabilizer (g.val • shellPieceCrossMap heavyShellPiece v))\n    rw [← hw]\n    exact\n      heavyCross_rowReference_orbit_divisible\n        w' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nEvery actual nonorthogonal suborbit, other than the base cross, has size divisible by 64. -/\ntheorem codeReference_nonorthogonal_orbit_divisible (c : MinimalCross) (hne : c ≠ localReferenceCross)\n    (hn : ¬CrossOrthogonal localReferenceCross c) : 64 ∣ Nat.card (MulAction.orbit codeReferenceStabilizer c) :=\n  by\n  rcases minimalCross_piece_cases c with ⟨v, rfl⟩ | ⟨v, rfl⟩ | ⟨v, rfl⟩\n  ·\n    exact\n      (hn\n          ((coordinateFrame_orthogonal_iff _ _ (localReferenceCross_eq ▸ coordinateCross_mem _) ⟨v, rfl⟩).mpr\n            hne.symm)).elim\n  · exact four_reference_orbit_divisible v hn\n  · exact dvd_trans (by decide : 64 ∣ 128) (heavy_reference_orbit_divisible v)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:26:12: missing space in the source\n\nThis part of the code\n  'c≠localReferenceCross)'\nshould be written as\n  'c ≠ localReferenceCross)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/NonorthogonalSuborbits.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FourSuborbitDivisibility transitive imports (legacy)",
+       "12cb36021971be08"],
+      ["Atlas.Rudvalis.FourSuborbitDivisibility:importAllArts",
+       "6a25d9c2509287b9"],
+      ["Atlas.Rudvalis.HeavyRowKernelOrbit transitive imports (legacy)",
+       "0d30c73027cc963b"],
+      ["Atlas.Rudvalis.HeavyRowKernelOrbit:importAllArts",
+       "b20223ba692045ca"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/NonorthogonalSuborbits.lean",
+   "3ba5677d726ef018"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.NonorthogonalSuborbits", "7abf65f3f4ef804d"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "d72d3328db8417c3"}

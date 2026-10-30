@@ -1,0 +1,79 @@
+{
+  "id": "staged-WitnessedSubsetCoordinates",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.WitnessedSubsetCoordinates"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.positiveRootWitnessedSubset_exists_parameters",
+      "kind": "theorem",
+      "module": "FamilyWork.WitnessedSubsetCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.positiveRootWitnessedSubset_exists_supported_parameters",
+      "kind": "theorem",
+      "module": "FamilyWork.WitnessedSubsetCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.positiveRootWitnessedProduct_mem_subset_of_supported",
+      "kind": "theorem",
+      "module": "FamilyWork.WitnessedSubsetCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.positiveRootWitnessedProduct_mem_subset_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.WitnessedSubsetCoordinates"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-WitnessedSubsetCoordinates-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-WitnessedSubsetCoordinates-no-inherited-factor-count",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.selectedWeightCompanionPositive_card",
+        "Atlas.Chevalley.positiveWitnessedWeightCompanionSubgroup_card",
+        "Atlas.Chevalley.positiveRootSubsetSubgroup_card",
+        "Atlas.Chevalley.positiveWitnessed_doubleCell_card",
+        "Atlas.Chevalley.TwistedE6.companionPositiveFixedSubgroup_card",
+        "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.fixedFunctions_card",
+        "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.card_fixedLabel",
+        "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.card_pairLabel"
+      ],
+      "forbid_modules": [
+        "FamilyWork.FixedBorel",
+        "FamilyWork.FixedTorusOrder",
+        "FamilyWork.FoldedWeylGeneration"
+      ]
+    },
+    {
+      "id": "staged-WitnessedSubsetCoordinates-no-selected-model",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.Models",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightCompanion",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightOrbits"
+      ]
+    }
+  ]
+}

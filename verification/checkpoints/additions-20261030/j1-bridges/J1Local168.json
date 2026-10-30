@@ -1,0 +1,84 @@
+{
+  "id": "release-v1-2-j1-bridges-20261030-j1local168",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.Sporadic.Janko1.Local168"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Janko1.sign_pq_disjoint",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.H_eq_signSubgroup_sup_pqSubgroup",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.pqSubgroup_le_sign_normalizer",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.hMultiply",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.hMultiply_bijective",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.hProductEquiv",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.hNormalFormEquiv",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Janko1.hNormalFormEquiv_apply",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.H_normal_form",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Janko1.card_H",
+      "module": "Atlas.Sporadic.Janko1.Local168",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-J1Local168-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.G2.Order",
+        "Atlas.LinearGroups.G2.Simplicity",
+        "Atlas.Sporadic.Janko1.Order",
+        "Atlas.Sporadic.Janko1.Simplicity",
+        "Atlas.Sporadic.Janko1.Perfectness"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "environment": "verification/checkpoints/j1-bridges-20261030/environment.json"
+}

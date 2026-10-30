@@ -1,0 +1,102 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["0bb46003cba2162b.olean"],
+  "m": false,
+  "i": "0f5949c474a49b65.ilean",
+  "c": "12ff44d5a3b717d0.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/ProjectiveCrossFaithful.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ProjectiveCrossFaithful.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ProjectiveCrossFaithful.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ProjectiveCrossFaithful.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ProjectiveCrossFaithful.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem gaussian_cross_kernel_eq_scalars :\n    (MulAction.toPermHom gaussianLatticeGroup MinimalCross).ker = gaussianScalarSubgroup :=\n  by\n  apply le_antisymm\n  · intro g hg\n    have hf : ∀ c : MinimalCross, g • c = c := fun c => congrArg (fun e : Equiv.Perm MinimalCross => e c) hg\n    obtain ⟨u, hu⟩ := gaussian_cross_kernel_scalar g hf\n    exact ⟨u.val, u.prop, hu⟩\n  · exact gaussianScalarSubgroup_cross_kernel`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:10:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rudvalis_cross_faithful : FaithfulSMul RudvalisGroup MinimalCross :=\n  by\n  apply faithfulSMul_iff.mpr\n  intro g\n  induction g using QuotientGroup.induction_on with\n  | H g =>\n    intro hg\n    obtain ⟨u, hu⟩ := gaussian_cross_kernel_scalar g hg\n    exact (QuotientGroup.eq_one_iff g).mpr ⟨u.val, u.prop, hu⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Strong scalar rigidity holds at every actual lattice cross. -/\ntheorem gaussian_perpendicular_kernel (x : MinimalCross) (g : gaussianLatticeGroup) (hx : g • x = x)\n    (hy : ∀ c : MinimalCross, CrossOrthogonal x c → g • c = c) : ∃ u : GaussianUnits, codeGaussianHom u.val = g :=\n  by\n  let := full_gaussian_cross_transitive\n  obtain ⟨a, ha⟩ := MulAction.exists_smul_eq gaussianLatticeGroup localReferenceCross x\n  have hf : (a⁻¹ * g * a) • localReferenceCross = localReferenceCross := by\n    rw [mul_smul, mul_smul, ha, hx, ← ha, inv_smul_smul]\n  have hh (c : MinimalCross) (hc : CrossOrthogonal localReferenceCross c) : (a⁻¹ * g * a) • c = c :=\n    by\n    rw [mul_smul, mul_smul, hy]\n    · exact inv_smul_smul a c\n    · rw [← ha]\n      exact (crossOrthogonal_gaussian a _ _).mpr hc\n  obtain ⟨u, hu⟩ := gaussian_reference_perpendicular_kernel (a⁻¹ * g * a) hf hh\n  have hs : codeGaussianHom u.val ∈ gaussianScalarSubgroup := ⟨u.val, u.prop, rfl⟩\n  have hc := Subgroup.mem_center_iff.mp (gaussianScalarSubgroup_le_center hs) a\n  refine ⟨u, ?_⟩\n  have he := congrArg (fun k : gaussianLatticeGroup => a * k * a⁻¹) hu\n  simpa only [← mul_assoc, mul_inv_cancel, one_mul, mul_assoc, inv_mul_cancel, mul_one, hc, mul_inv_cancel_left] using\n    he`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:44:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:26:15: missing space in the source\n\nThis part of the code\n  'x=x)\n '\nshould be written as\n  'x = x)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:27:11: missing space in the source\n\nThis part of the code\n  '∀c : MinimalCross,CrossOrthogonal'\nshould be written as\n  '∀ c :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rudvalis_perpendicular_kernel (x : MinimalCross) (g : RudvalisGroup)\n    (hx : g • x = x) (hy : ∀ c : MinimalCross, CrossOrthogonal x c → g • c = c) : g = 1 := by\n  induction g using QuotientGroup.induction_on with\n  | H g =>\n    obtain ⟨u, hu⟩ := gaussian_perpendicular_kernel x g hx hy\n    exact (QuotientGroup.eq_one_iff g).mpr ⟨u.val, u.prop, hu⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:47:15: missing space in the source\n\nThis part of the code\n  'x=x)\n '\nshould be written as\n  'x = x)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:48:11: missing space in the source\n\nThis part of the code\n  '∀c : MinimalCross,CrossOrthogonal'\nshould be written as\n  '∀ c :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ProjectiveCrossFaithful.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.ProjectiveCrossAction transitive imports (legacy)",
+       "2ff96b1bf7078278"],
+      ["Atlas.Rudvalis.ProjectiveCrossAction:importAllArts",
+       "66435047b0d9607d"],
+      ["Atlas.Rudvalis.StrongCrossKernel transitive imports (legacy)",
+       "4349c16961daf626"],
+      ["Atlas.Rudvalis.StrongCrossKernel:importAllArts",
+       "1aeb7ea2832228f8"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/ProjectiveCrossFaithful.lean",
+   "92af2ab4ca53a00f"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.ProjectiveCrossFaithful", "f8efcc2b69f1af3a"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "720d0eb526c1b3fa"}

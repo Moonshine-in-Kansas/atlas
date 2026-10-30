@@ -1,0 +1,95 @@
+{
+  "id": "staged-FixedCellCoordinates",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.FixedCellCoordinates"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6LiftCellParameterMap",
+      "kind": "definition",
+      "module": "FamilyWork.FixedCellCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6LiftCellParameterMap_injective",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedCellCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6LiftCellParameterMap_surjective",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedCellCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6LiftCellProduct_fixed_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedCellCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedLiftCell",
+      "kind": "definition",
+      "module": "FamilyWork.FixedCellCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedLiftCellParameterMap",
+      "kind": "definition",
+      "module": "FamilyWork.FixedCellCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedLiftCellParameterMap_injective",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedCellCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedLiftCellParameterMap_surjective",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedCellCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedLiftCellParameterEquiv",
+      "kind": "definition",
+      "module": "FamilyWork.FixedCellCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedLiftCellParameterEquiv_val",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedCellCoordinates"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6FixedLiftCell_card",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedCellCoordinates"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-FixedCellCoordinates-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-FixedCellCoordinates-no-inherited-cell-order",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.positiveWitnessed_doubleCell_card",
+        "Atlas.Chevalley.selectedWeightCompanionPositive_card",
+        "Atlas.Chevalley.selectedWeightCompanionPositiveTorusJoin_card"
+      ]
+    }
+  ]
+}

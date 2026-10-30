@@ -1,0 +1,88 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["b7ff9876acef6e84.olean"],
+  "m": false,
+  "i": "b0ab2a0c7a06cb07.ilean",
+  "c": "98b71dab7fec123b.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Comparisons.Exceptional.DeletedEight`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes Atlas.Orthogonal`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem split_polar (x y : D) :\n    quotientQuadratic.polarBilin (splitIsometry x) (splitIsometry y) = (formD 3 Bit).polarBilin x y :=\n  by\n  simp only [QuadraticMap.polarBilin_apply_apply, QuadraticMap.polar]\n  rw [← map_add splitIsometry, splitIsometry.map_app, splitIsometry.map_app, splitIsometry.map_app]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem quotient_polar_separating (x : W)\n    (hx : ∀ y, quotientQuadratic.polarBilin x y = 0) : x = 0 :=\n  by\n  obtain ⟨v, rfl⟩ := splitIsometry.surjective x\n  have hv : v = 0 :=\n    polarD_separating v\n      (fun w => by\n        rw [← split_polar]\n        exact hx (splitIsometry w))\n  simp [hv]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean:13:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem quotient_polar_nondegenerate :\n    quotientQuadratic.polarBilin.Nondegenerate := by\n  constructor\n  · exact quotient_polar_separating\n  · intro x hx\n    apply quotient_polar_separating x\n    intro y\n    simpa only [QuadraticMap.polarBilin_apply_apply, QuadraticMap.polar_comm] using hx y`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Comparisons.Exceptional.DeletedEight`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Comparisons.Exceptional.DeletedEightSplit transitive imports (legacy)",
+       "de28f0177b8f7c60"],
+      ["Atlas.Comparisons.Exceptional.DeletedEightSplit:importAllArts",
+       "8adaf8f8da010fea"],
+      ["Atlas.LinearGroups.Orthogonal.Radical transitive imports (legacy)",
+       "9c7ed7d84d251cf5"],
+      ["Atlas.LinearGroups.Orthogonal.Radical:importAllArts",
+       "98aee150974673aa"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Comparisons/Exceptional/DeletedEightNondegenerate.lean",
+   "e805b305e433ebd4"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Comparisons.Exceptional.DeletedEightNondegenerate",
+   "75bbefaee99e0126"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "b4b61152ef8563d6"}

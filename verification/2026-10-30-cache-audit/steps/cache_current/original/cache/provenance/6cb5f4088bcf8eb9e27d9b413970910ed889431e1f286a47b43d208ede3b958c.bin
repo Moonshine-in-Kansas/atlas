@@ -1,0 +1,77 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["d9852401e736cc4b.olean"],
+  "m": false,
+  "i": "d3975c3c1eb9017f.ilean",
+  "c": "db8899c4c291c8eb.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/TorusKernelCounts.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/TorusKernelCounts.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/TorusKernelCounts.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/TorusKernelCounts.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/TorusKernelCounts.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/TorusKernelCounts.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/TorusKernelCounts.lean:9:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/TorusKernelCounts.lean:31:62: missing space in the source\n\nThis part of the code\n  '(n+2)) :'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/TorusKernelCounts.lean:37:64: missing space in the source\n\nThis part of the code\n  '(n+2)) :'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/TorusKernelCounts.lean:55:0: automatically included section variable(s) unused in theorem `Atlas.Chevalley.E8_adjointTorusKernel_card`:\n  [Fintype K]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype K] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/TorusKernelCounts.lean:55:0: `E8_adjointTorusKernel_card` does not use the following hypothesis in its type:\n  • [Fintype K] (#3)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/TorusKernelCounts.lean:60:0: automatically included section variable(s) unused in theorem `Atlas.Chevalley.F4_adjointTorusKernel_card`:\n  [Fintype K]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype K] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/TorusKernelCounts.lean:60:0: `F4_adjointTorusKernel_card` does not use the following hypothesis in its type:\n  • [Fintype K] (#3)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/TorusKernelCounts.lean:65:0: automatically included section variable(s) unused in theorem `Atlas.Chevalley.G2_adjointTorusKernel_card`:\n  [Fintype K]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype K] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/TorusKernelCounts.lean:65:0: `G2_adjointTorusKernel_card` does not use the following hypothesis in its type:\n  • [Fintype K] (#3)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.WeightRootCharacterDescent transitive imports (legacy)",
+       "d3580dc6e1752561"],
+      ["Atlas.LinearGroups.Chevalley.WeightRootCharacterDescent:importAllArts",
+       "0770213ca353e7d3"],
+      ["Atlas.LinearGroups.Chevalley.LatticeCharacterCounts transitive imports (legacy)",
+       "0f1c1e80aebf8491"],
+      ["Atlas.LinearGroups.Chevalley.LatticeCharacterCounts:importAllArts",
+       "0c9f5fb38a917400"],
+      ["Atlas.LinearGroups.Chevalley.UnimodularCharacterCounts transitive imports (legacy)",
+       "a21d93aec22251b8"],
+      ["Atlas.LinearGroups.Chevalley.UnimodularCharacterCounts:importAllArts",
+       "1e188adb2fbe1a79"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/TorusKernelCounts.lean",
+   "81ad03a2fbe3e18e"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.TorusKernelCounts",
+   "8b021b9c938efdef"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "bdfd64ca08316bde"}

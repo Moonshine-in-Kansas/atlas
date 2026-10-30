@@ -1,0 +1,92 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["2111cbf21d974881.olean"],
+  "m": false,
+  "i": "f3260b0652df74d7.ilean",
+  "c": "35f2df9130229d38.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Triality/LongRankOne.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Triality/LongRankOne.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Triality/LongRankOne.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Triality/LongRankOne.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Triality/LongRankOne.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:35:0: automatically included section variable(s) unused in theorem `Atlas.Triality.rankOneLongOrthogonal_upper`:\n  [Finite F]\n  [Finite K]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Finite F] [Finite K] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:49:6: This simp argument is unused:\n  SpecialLinearGroup.transvection_inv\n\nHint: Omit it from the simp argument list.\n  [apply] simp [coordinateCycle, coordinateCycleLinear, blockEmbedding, blockLinear, splitBlocks, D2Matrix.toOrthogonal,\n    D2Matrix.onD, D2Matrix.coordinates, D2Matrix.matrixAction, SpecialLinearGroup.transvection_coe, Matrix.transvection,\n    Matrix.mul_apply, Fin.sum_univ_two, Matrix.adjugate_fin_two, longRoot, pinnedRoot, pinnedNegativeRoot,\n    differenceRoot_apply, Subgroup.coe_mul, LinearEquiv.mul_apply, e, f, Algebra.smul_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:50:6: This simp argument is unused:\n  Matrix.transvection\n\nHint: Omit it from the simp argument list.\n  [apply] simp [coordinateCycle, coordinateCycleLinear, blockEmbedding, blockLinear, splitBlocks, D2Matrix.toOrthogonal,\n    D2Matrix.onD, D2Matrix.coordinates, D2Matrix.matrixAction, SpecialLinearGroup.transvection_inv,\n    SpecialLinearGroup.transvection_coe, Matrix.mul_apply, Fin.sum_univ_two, Matrix.adjugate_fin_two, longRoot,\n    pinnedRoot, pinnedNegativeRoot, differenceRoot_apply, Subgroup.coe_mul, LinearEquiv.mul_apply, e, f,\n    Algebra.smul_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:50:27: This simp argument is unused:\n  Matrix.mul_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [coordinateCycle, coordinateCycleLinear, blockEmbedding, blockLinear, splitBlocks, D2Matrix.toOrthogonal,\n    D2Matrix.onD, D2Matrix.coordinates, D2Matrix.matrixAction, SpecialLinearGroup.transvection_inv,\n    SpecialLinearGroup.transvection_coe, Matrix.transvection, Fin.sum_univ_two, Matrix.adjugate_fin_two, longRoot,\n    pinnedRoot, pinnedNegativeRoot, differenceRoot_apply, Subgroup.coe_mul, LinearEquiv.mul_apply, e, f,\n    Algebra.smul_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:50:45: This simp argument is unused:\n  Fin.sum_univ_two\n\nHint: Omit it from the simp argument list.\n  [apply] simp [coordinateCycle, coordinateCycleLinear, blockEmbedding, blockLinear, splitBlocks, D2Matrix.toOrthogonal,\n    D2Matrix.onD, D2Matrix.coordinates, D2Matrix.matrixAction, SpecialLinearGroup.transvection_inv,\n    SpecialLinearGroup.transvection_coe, Matrix.transvection, Matrix.mul_apply, Matrix.adjugate_fin_two, longRoot,\n    pinnedRoot, pinnedNegativeRoot, differenceRoot_apply, Subgroup.coe_mul, LinearEquiv.mul_apply, e, f,\n    Algebra.smul_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:51:28: This simp argument is unused:\n  pinnedNegativeRoot\n\nHint: Omit it from the simp argument list.\n  [apply] simp [coordinateCycle, coordinateCycleLinear, blockEmbedding, blockLinear, splitBlocks, D2Matrix.toOrthogonal,\n    D2Matrix.onD, D2Matrix.coordinates, D2Matrix.matrixAction, SpecialLinearGroup.transvection_inv,\n    SpecialLinearGroup.transvection_coe, Matrix.transvection, Matrix.mul_apply, Fin.sum_univ_two,\n    Matrix.adjugate_fin_two, longRoot, pinnedRoot, differenceRoot_apply, Subgroup.coe_mul, LinearEquiv.mul_apply, e, f,\n    Algebra.smul_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:34:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 3000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:40:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:55:0: automatically included section variable(s) unused in theorem `Atlas.Triality.rankOneLongOrthogonal_lower`:\n  [Finite F]\n  [Finite K]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Finite F] [Finite K] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:69:6: This simp argument is unused:\n  SpecialLinearGroup.transvection_inv\n\nHint: Omit it from the simp argument list.\n  [apply] simp [coordinateCycle, coordinateCycleLinear, blockEmbedding, blockLinear, splitBlocks, D2Matrix.toOrthogonal,\n    D2Matrix.onD, D2Matrix.coordinates, D2Matrix.matrixAction, SpecialLinearGroup.transvection_coe, Matrix.transvection,\n    Matrix.mul_apply, Fin.sum_univ_two, Matrix.adjugate_fin_two, longNegativeRoot, pinnedRoot, pinnedNegativeRoot,\n    differenceRoot_apply, Subgroup.coe_mul, LinearEquiv.mul_apply, e, f, Algebra.smul_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:70:6: This simp argument is unused:\n  Matrix.transvection\n\nHint: Omit it from the simp argument list.\n  [apply] simp [coordinateCycle, coordinateCycleLinear, blockEmbedding, blockLinear, splitBlocks, D2Matrix.toOrthogonal,\n    D2Matrix.onD, D2Matrix.coordinates, D2Matrix.matrixAction, SpecialLinearGroup.transvection_inv,\n    SpecialLinearGroup.transvection_coe, Matrix.mul_apply, Fin.sum_univ_two, Matrix.adjugate_fin_two, longNegativeRoot,\n    pinnedRoot, pinnedNegativeRoot, differenceRoot_apply, Subgroup.coe_mul, LinearEquiv.mul_apply, e, f,\n    Algebra.smul_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:70:27: This simp argument is unused:\n  Matrix.mul_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [coordinateCycle, coordinateCycleLinear, blockEmbedding, blockLinear, splitBlocks, D2Matrix.toOrthogonal,\n    D2Matrix.onD, D2Matrix.coordinates, D2Matrix.matrixAction, SpecialLinearGroup.transvection_inv,\n    SpecialLinearGroup.transvection_coe, Matrix.transvection, Fin.sum_univ_two, Matrix.adjugate_fin_two,\n    longNegativeRoot, pinnedRoot, pinnedNegativeRoot, differenceRoot_apply, Subgroup.coe_mul, LinearEquiv.mul_apply, e,\n    f, Algebra.smul_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:70:45: This simp argument is unused:\n  Fin.sum_univ_two\n\nHint: Omit it from the simp argument list.\n  [apply] simp [coordinateCycle, coordinateCycleLinear, blockEmbedding, blockLinear, splitBlocks, D2Matrix.toOrthogonal,\n    D2Matrix.onD, D2Matrix.coordinates, D2Matrix.matrixAction, SpecialLinearGroup.transvection_inv,\n    SpecialLinearGroup.transvection_coe, Matrix.transvection, Matrix.mul_apply, Matrix.adjugate_fin_two,\n    longNegativeRoot, pinnedRoot, pinnedNegativeRoot, differenceRoot_apply, Subgroup.coe_mul, LinearEquiv.mul_apply, e,\n    f, Algebra.smul_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:71:24: This simp argument is unused:\n  pinnedRoot\n\nHint: Omit it from the simp argument list.\n  [apply] simp [coordinateCycle, coordinateCycleLinear, blockEmbedding, blockLinear, splitBlocks, D2Matrix.toOrthogonal,\n    D2Matrix.onD, D2Matrix.coordinates, D2Matrix.matrixAction, SpecialLinearGroup.transvection_inv,\n    SpecialLinearGroup.transvection_coe, Matrix.transvection, Matrix.mul_apply, Fin.sum_univ_two,\n    Matrix.adjugate_fin_two, longNegativeRoot, pinnedNegativeRoot, differenceRoot_apply, Subgroup.coe_mul,\n    LinearEquiv.mul_apply, e, f, Algebra.smul_def]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:54:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 3000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/LongRankOne.lean:60:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Triality.RankOneGenerators transitive imports (legacy)",
+       "b496325371aa946f"],
+      ["Atlas.LinearGroups.Triality.RankOneGenerators:importAllArts",
+       "fca3035ba3c503d2"],
+      ["Atlas.LinearGroups.Elementary transitive imports (legacy)",
+       "2f5b60c8cf3302fd"],
+      ["Atlas.LinearGroups.Elementary:importAllArts", "56d9a4c0dd6a60bb"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Triality/LongRankOne.lean",
+   "9df33562f5801784"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Triality.LongRankOne", "aee439142f4cbf96"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "30f6ff2e4133041c"}

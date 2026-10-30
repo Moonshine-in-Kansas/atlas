@@ -1,0 +1,80 @@
+{
+  "id": "staged-WeylCellTwist",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.WeylCellTwist"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6RootWeylWord_diagram",
+      "kind": "theorem",
+      "module": "FamilyWork.WeylCellTwist"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6WeylDiagram",
+      "kind": "definition",
+      "module": "FamilyWork.WeylCellTwist"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6WeylDiagram_val",
+      "kind": "theorem",
+      "module": "FamilyWork.WeylCellTwist"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6WeylDiagram_eq_self_iff",
+      "kind": "theorem",
+      "module": "FamilyWork.WeylCellTwist"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6SimpleNormalizerWord",
+      "kind": "definition",
+      "module": "FamilyWork.WeylCellTwist"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6SimpleNormalizerWord_rootAction",
+      "kind": "theorem",
+      "module": "FamilyWork.WeylCellTwist"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionTwist_e6SimpleNormalizerWord",
+      "kind": "theorem",
+      "module": "FamilyWork.WeylCellTwist"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6WeylCell_twist_mem",
+      "kind": "theorem",
+      "module": "FamilyWork.WeylCellTwist"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-WeylCellTwist-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-WeylCellTwist-no-inherited-cell-order",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.positiveWitnessed_doubleCell_card",
+        "Atlas.Chevalley.selectedWeightCompanionPositive_card",
+        "Atlas.Chevalley.selectedWeightCompanionPositiveTorusJoin_card"
+      ]
+    }
+  ]
+}

@@ -1376,28 +1376,319 @@
       "realization": "chevalley",
       "label": "F4 Chevalley root operators",
       "role": "simple-model candidate",
-      "proof_status": "planned",
+      "proof_status": "construction_complete",
       "parameter_domain": "K an arbitrary finite field; q = Nat.card K; rank = 4; every finite characteristic",
       "parameter_interpretation": "root rank = 4",
-      "construction_meaning": "Root-generated adjoint operator group; same carrier at nonsimple parameters. The simply connected group is a separate related cover, not this realization.",
-      "carrier": null,
-      "construction_evidence": [],
-      "property_evidence": {},
-      "identification_evidence": null
+      "construction_meaning": "The existing root-generated adjoint operator group, with inherited operations and faithful adjoint action. The simply connected companion remains a separate cover.",
+      "carrier": {
+        "declaration": "Atlas.Chevalley.Catalogue.F4",
+        "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean",
+        "group_instance": {
+          "declaration": "Atlas.Chevalley.Catalogue.F4Group",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean"
+        }
+      },
+      "construction_evidence": [
+        {
+          "binding": {
+            "profile": "f4-catalogue-construction-candidate",
+            "directory": "verification/2026-10-30-additions/batches/batch-001-f4/original/scopes/scope-80ca547a4f893a7f629e1531",
+            "manifest_sha256": "1fab47160363036a567680e44a28cfd670289acf81a159b5951bd53c556c904f"
+          },
+          "domain": {
+            "id": "allFiniteField",
+            "description": "K an arbitrary finite field; q=Nat.card K; fixed rank 4; every characteristic, including q=2 and q=3.",
+            "predicate": {
+              "declaration": "Atlas.Chevalley.Catalogue.F4FieldDomain",
+              "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean"
+            }
+          },
+          "theorem": {
+            "declaration": "Atlas.Chevalley.Catalogue.F4_construction",
+            "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean"
+          },
+          "provenance": "independent"
+        }
+      ],
+      "property_evidence": {
+        "finite": {
+          "binding": {
+            "profile": "f4-catalogue-properties-candidate",
+            "directory": "verification/2026-10-30-additions/batches/batch-001-f4/original/scopes/scope-f03a98379a01112cdddc01cc",
+            "manifest_sha256": "d9635f876551d5d6ffc212598221db0addfee6fe8477fbbb5f15e76c5905c439"
+          },
+          "domain": {
+            "id": "allFiniteField",
+            "description": "K an arbitrary finite field; q=Nat.card K; fixed rank 4; every characteristic, including q=2 and q=3.",
+            "predicate": {
+              "declaration": "Atlas.Chevalley.Catalogue.F4FieldDomain",
+              "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean"
+            }
+          },
+          "theorem": {
+            "declaration": "Atlas.Chevalley.Catalogue.F4_finite",
+            "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean"
+          },
+          "provenance": "independent"
+        },
+        "order": {
+          "binding": {
+            "profile": "f4-catalogue-properties-candidate",
+            "directory": "verification/2026-10-30-additions/batches/batch-001-f4/original/scopes/scope-f03a98379a01112cdddc01cc",
+            "manifest_sha256": "d9635f876551d5d6ffc212598221db0addfee6fe8477fbbb5f15e76c5905c439"
+          },
+          "domain": {
+            "id": "allFiniteField",
+            "description": "K an arbitrary finite field; q=Nat.card K; fixed rank 4; every characteristic, including q=2 and q=3.",
+            "predicate": {
+              "declaration": "Atlas.Chevalley.Catalogue.F4FieldDomain",
+              "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean"
+            }
+          },
+          "theorem": {
+            "declaration": "Atlas.Chevalley.Catalogue.F4_order",
+            "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean"
+          },
+          "provenance": "independent"
+        },
+        "center": {
+          "binding": {
+            "profile": "f4-catalogue-properties-candidate",
+            "directory": "verification/2026-10-30-additions/batches/batch-001-f4/original/scopes/scope-f03a98379a01112cdddc01cc",
+            "manifest_sha256": "d9635f876551d5d6ffc212598221db0addfee6fe8477fbbb5f15e76c5905c439"
+          },
+          "domain": {
+            "id": "allFiniteField",
+            "description": "K an arbitrary finite field; q=Nat.card K; fixed rank 4; every characteristic, including q=2 and q=3.",
+            "predicate": {
+              "declaration": "Atlas.Chevalley.Catalogue.F4FieldDomain",
+              "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean"
+            }
+          },
+          "theorem": {
+            "declaration": "Atlas.Chevalley.Catalogue.F4_center",
+            "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean"
+          },
+          "provenance": "independent"
+        },
+        "simple": {
+          "binding": {
+            "profile": "f4-catalogue-properties-candidate",
+            "directory": "verification/2026-10-30-additions/batches/batch-001-f4/original/scopes/scope-f03a98379a01112cdddc01cc",
+            "manifest_sha256": "d9635f876551d5d6ffc212598221db0addfee6fe8477fbbb5f15e76c5905c439"
+          },
+          "domain": {
+            "id": "allFiniteField",
+            "description": "K an arbitrary finite field; q=Nat.card K; fixed rank 4; every characteristic, including q=2 and q=3.",
+            "predicate": {
+              "declaration": "Atlas.Chevalley.Catalogue.F4FieldDomain",
+              "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean"
+            }
+          },
+          "theorem": {
+            "declaration": "Atlas.Chevalley.Catalogue.F4_simple",
+            "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean"
+          },
+          "provenance": "independent"
+        },
+        "nonabelian": {
+          "binding": {
+            "profile": "f4-catalogue-properties-candidate",
+            "directory": "verification/2026-10-30-additions/batches/batch-001-f4/original/scopes/scope-f03a98379a01112cdddc01cc",
+            "manifest_sha256": "d9635f876551d5d6ffc212598221db0addfee6fe8477fbbb5f15e76c5905c439"
+          },
+          "domain": {
+            "id": "allFiniteField",
+            "description": "K an arbitrary finite field; q=Nat.card K; fixed rank 4; every characteristic, including q=2 and q=3.",
+            "predicate": {
+              "declaration": "Atlas.Chevalley.Catalogue.F4FieldDomain",
+              "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean"
+            }
+          },
+          "theorem": {
+            "declaration": "Atlas.Chevalley.Catalogue.F4_nonabelian",
+            "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean"
+          },
+          "provenance": "independent"
+        },
+        "exceptions": {
+          "binding": {
+            "profile": "f4-catalogue-properties-candidate",
+            "directory": "verification/2026-10-30-additions/batches/batch-001-f4/original/scopes/scope-f03a98379a01112cdddc01cc",
+            "manifest_sha256": "d9635f876551d5d6ffc212598221db0addfee6fe8477fbbb5f15e76c5905c439"
+          },
+          "domain": {
+            "id": "allFiniteField",
+            "description": "K an arbitrary finite field; q=Nat.card K; fixed rank 4; every characteristic, including q=2 and q=3.",
+            "predicate": {
+              "declaration": "Atlas.Chevalley.Catalogue.F4FieldDomain",
+              "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean"
+            }
+          },
+          "theorem": {
+            "declaration": "Atlas.Chevalley.Catalogue.F4_exceptions",
+            "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Properties.lean"
+          },
+          "provenance": "independent"
+        }
+      },
+      "identification_evidence": "chevalley-f4-to-albert-v1"
     },
     {
       "entry": "family.G2",
       "realization": "chevalley",
       "label": "G2 Chevalley root operators",
       "role": "simple-model candidate",
-      "proof_status": "planned",
+      "proof_status": "construction_complete",
       "parameter_domain": "K an arbitrary finite field; q = Nat.card K; rank = 2; every finite characteristic",
-      "parameter_interpretation": "root rank = 2",
-      "construction_meaning": "Root-generated adjoint operator group; same carrier at nonsimple parameters. The simply connected group is a separate related cover, not this realization.",
-      "carrier": null,
-      "construction_evidence": [],
-      "property_evidence": {},
-      "identification_evidence": null
+      "parameter_interpretation": "Fixed Lie rank 2; the field K and q=Nat.card K are unchanged; the legacy octonion space has dimension 8.",
+      "construction_meaning": "The literal root-generated adjoint elementary group, with inherited operations and faithful adjoint action. The full carrier is unchanged at q=2; the simply connected companion remains a separate cover.",
+      "carrier": {
+        "declaration": "Atlas.Chevalley.Catalogue.G2",
+        "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean",
+        "group_instance": {
+          "declaration": "Atlas.Chevalley.Catalogue.G2Group",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean"
+        }
+      },
+      "construction_evidence": [
+        {
+          "binding": {
+            "profile": "chevalley-catalogue-g2-construction",
+            "directory": "verification/2026-10-30-additions/batches/batch-004-g2-comparison/original/scopes/scope-aded32af27d3968dc988666f",
+            "manifest_sha256": "c8eeed4595c8e231af66411ec74d674831afbed4c5e25508a9486b6d28cef668"
+          },
+          "domain": {
+            "description": "K an arbitrary finite field; q = Nat.card K; fixed rank 2; every finite characteristic, including q=2 and q=3",
+            "predicate": {
+              "declaration": "Atlas.Chevalley.Catalogue.G2FieldDomain",
+              "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean"
+            }
+          },
+          "theorem": {
+            "declaration": "Atlas.Chevalley.Catalogue.G2_construction",
+            "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean"
+          },
+          "provenance": "independent"
+        }
+      ],
+      "property_evidence": {
+        "finite": {
+          "binding": {
+            "profile": "chevalley-catalogue-g2-finite",
+            "directory": "verification/2026-10-30-additions/batches/batch-004-g2-comparison/original/scopes/scope-f087f3c2cbbbaa49adbb3220",
+            "manifest_sha256": "01445ceedf59546eb1c4330a5c028b67a16ad9bdf35c82cac384ab4df7d60ae6"
+          },
+          "domain": {
+            "description": "K an arbitrary finite field; q = Nat.card K; fixed rank 2; every finite characteristic, including q=2 and q=3",
+            "predicate": {
+              "declaration": "Atlas.Chevalley.Catalogue.G2FieldDomain",
+              "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean"
+            }
+          },
+          "theorem": {
+            "declaration": "Atlas.Chevalley.Catalogue.G2_finite",
+            "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Finite.lean"
+          },
+          "provenance": "independent"
+        },
+        "order": {
+          "binding": {
+            "profile": "chevalley-catalogue-g2-order",
+            "directory": "verification/2026-10-30-additions/batches/batch-004-g2-comparison/original/scopes/scope-36e6c2fefec25b788b36623f",
+            "manifest_sha256": "3f0c65afbe15607f1bba0672a84d45c85f5ede0676feab6102698428da646ff0"
+          },
+          "domain": {
+            "description": "K an arbitrary finite field; q = Nat.card K; fixed rank 2; every finite characteristic, including q=2 and q=3",
+            "predicate": {
+              "declaration": "Atlas.Chevalley.Catalogue.G2FieldDomain",
+              "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean"
+            }
+          },
+          "theorem": {
+            "declaration": "Atlas.Chevalley.Catalogue.G2_order",
+            "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Order.lean"
+          },
+          "provenance": "independent"
+        },
+        "center": {
+          "binding": {
+            "profile": "chevalley-catalogue-g2-center",
+            "directory": "verification/2026-10-30-additions/batches/batch-004-g2-comparison/original/scopes/scope-32bdc1cd50b7c641aa62bffc",
+            "manifest_sha256": "a0e5c7be71e58a670614a8eb451e8e7d525b973d5f8bfaac1a0cc737ddd55a53"
+          },
+          "domain": {
+            "description": "K an arbitrary finite field; q = Nat.card K; fixed rank 2; every finite characteristic, including q=2 and q=3",
+            "predicate": {
+              "declaration": "Atlas.Chevalley.Catalogue.G2FieldDomain",
+              "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean"
+            }
+          },
+          "theorem": {
+            "declaration": "Atlas.Chevalley.Catalogue.G2_center",
+            "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Center.lean"
+          },
+          "provenance": "independent"
+        },
+        "simple": {
+          "binding": {
+            "profile": "chevalley-catalogue-g2-simple",
+            "directory": "verification/2026-10-30-additions/batches/batch-004-g2-comparison/original/scopes/scope-23443ac745c2725a968fa69a",
+            "manifest_sha256": "e78881711280b846706a8b548fbabc8aa428f57ef38e13e79b41dd1ea94f412d"
+          },
+          "domain": {
+            "description": "K an arbitrary finite field of cardinality q>2; fixed rank 2; every characteristic; q=2 is excluded only from the positive simplicity domain",
+            "predicate": {
+              "declaration": "Atlas.Chevalley.Catalogue.G2GoodDomain",
+              "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Simple.lean"
+            }
+          },
+          "theorem": {
+            "declaration": "Atlas.Chevalley.Catalogue.G2_simple",
+            "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Simple.lean"
+          },
+          "provenance": "independent"
+        },
+        "nonabelian": {
+          "binding": {
+            "profile": "chevalley-catalogue-g2-nonabelian",
+            "directory": "verification/2026-10-30-additions/batches/batch-004-g2-comparison/original/scopes/scope-90d21571b95532fc7a1cf1f5",
+            "manifest_sha256": "7eef608dc847576f2eddeaefae8de011aa86ea530f10e188b5daa64618489110"
+          },
+          "domain": {
+            "description": "K an arbitrary finite field; q = Nat.card K; fixed rank 2; every finite characteristic, including q=2 and q=3",
+            "predicate": {
+              "declaration": "Atlas.Chevalley.Catalogue.G2FieldDomain",
+              "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean"
+            }
+          },
+          "theorem": {
+            "declaration": "Atlas.Chevalley.Catalogue.G2_nonabelian",
+            "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Nonabelian.lean"
+          },
+          "provenance": "independent"
+        },
+        "exceptions": {
+          "binding": {
+            "profile": "chevalley-catalogue-g2-exceptions",
+            "directory": "verification/2026-10-30-additions/batches/batch-004-g2-comparison/original/scopes/scope-a6a2e66157adfc8b6888db25",
+            "manifest_sha256": "247aa7d3651f09e56e2bd721e454ec3b5af9b6a72c2f4d56e21841e4c855e8f6"
+          },
+          "domain": {
+            "description": "K an arbitrary finite field; q = Nat.card K; fixed rank 2; every finite characteristic, including q=2 and q=3",
+            "predicate": {
+              "declaration": "Atlas.Chevalley.Catalogue.G2FieldDomain",
+              "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean"
+            }
+          },
+          "theorem": {
+            "declaration": "Atlas.Chevalley.Catalogue.G2_exceptions",
+            "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Exceptions.lean"
+          },
+          "provenance": "independent"
+        }
+      },
+      "identification_evidence": "chevalley-g2-to-legacy-v1"
     }
   ],
   "comparisons": [
@@ -1663,6 +1954,122 @@
         "profile": "chevalley-b-to-legacy-v1",
         "directory": "verification/runs/chevalley-b-to-legacy-v1/20261018T165216-105",
         "manifest_sha256": "5cccf42abb298ff88746b959bc4cd9e984c2b7500bdbee35be5e496cc6433c26"
+      }
+    },
+    {
+      "id": "chevalley-g2-to-legacy-v1",
+      "proof_status": "construction_complete",
+      "source": {
+        "qualified_id": "family.G2/chevalley",
+        "carrier": {
+          "declaration": "Atlas.Chevalley.Catalogue.G2",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean"
+        },
+        "group_instance": {
+          "declaration": "Atlas.Chevalley.Catalogue.G2Group",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean"
+        }
+      },
+      "target": {
+        "qualified_id": "family.G2/octonion",
+        "carrier": {
+          "declaration": "Atlas.G2.Model",
+          "source": "Atlas/LinearGroups/G2/Basic.lean"
+        },
+        "group_instance": {
+          "declaration": "Atlas.Chevalley.Catalogue.G2OctonionGroup",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Identification.lean"
+        }
+      },
+      "parameter_domain": {
+        "description": "K an arbitrary finite field; q = Nat.card K; fixed rank 2; every finite characteristic, including q=2 and q=3",
+        "predicate": {
+          "declaration": "Atlas.Chevalley.Catalogue.G2FieldDomain",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Construction.lean"
+        },
+        "id": "allFiniteField"
+      },
+      "parameter_map": {
+        "declaration": "Atlas.Chevalley.Catalogue.G2_octonionField",
+        "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Identification.lean"
+      },
+      "witness": {
+        "declaration": "Atlas.Chevalley.Catalogue.G2_identification",
+        "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Identification.lean"
+      },
+      "provenance": "direct",
+      "compatibility": [
+        {
+          "declaration": "Atlas.Chevalley.Catalogue.G2_identification_X",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Identification.lean"
+        },
+        {
+          "declaration": "Atlas.Chevalley.Catalogue.G2_identification_Y",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/G2Identification.lean"
+        }
+      ],
+      "evidence": {
+        "profile": "chevalley-g2-to-legacy-v1",
+        "directory": "verification/2026-10-30-additions/batches/batch-004-g2-comparison/original/scopes/scope-27d24b073003646aad6901a1",
+        "manifest_sha256": "53086ea2113607ce1c2552dffd2c44c79b9ccbeb3a83dc239a82abc78d45cf15"
+      }
+    },
+    {
+      "id": "chevalley-f4-to-albert-v1",
+      "proof_status": "construction_complete",
+      "source": {
+        "qualified_id": "family.F4/chevalley",
+        "carrier": {
+          "declaration": "Atlas.Chevalley.Catalogue.F4",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean"
+        },
+        "group_instance": {
+          "declaration": "Atlas.Chevalley.Catalogue.F4Group",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean"
+        }
+      },
+      "target": {
+        "qualified_id": "family.F4/albert",
+        "carrier": {
+          "declaration": "Atlas.F4.Model",
+          "source": "Atlas/LinearGroups/F4/Basic.lean"
+        },
+        "group_instance": {
+          "declaration": "Atlas.Chevalley.Catalogue.F4AlbertGroup",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Identification.lean"
+        }
+      },
+      "parameter_domain": {
+        "id": "allFiniteField",
+        "description": "K an arbitrary finite field; q=Nat.card K; fixed rank 4; every characteristic, including q=2 and q=3.",
+        "predicate": {
+          "declaration": "Atlas.Chevalley.Catalogue.F4FieldDomain",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Construction.lean"
+        }
+      },
+      "parameter_map": {
+        "declaration": "Atlas.Chevalley.Catalogue.F4_albertField",
+        "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Identification.lean"
+      },
+      "witness": {
+        "declaration": "Atlas.Chevalley.Catalogue.F4_identification",
+        "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Identification.lean"
+      },
+      "provenance": "direct",
+      "compatibility": [
+        {
+          "declaration": "Atlas.Chevalley.Catalogue.F4_identification_X",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Identification.lean"
+        },
+        {
+          "declaration": "Atlas.Chevalley.Catalogue.F4_identification_Y",
+          "source": "Atlas/LinearGroups/Chevalley/Catalogue/F4Identification.lean"
+        }
+      ],
+      "evidence": {
+        "profile": "f4-catalogue-identification-candidate",
+        "directory": "verification/2026-10-30-additions/batches/batch-001-f4/original/scopes/scope-554991387ce2dbcd74585255",
+        "manifest_sha256": "d974e678e363e5ee275499406eb828e99cc9e31440e18c2674e42648f398e0f6"
       }
     }
   ],

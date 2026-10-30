@@ -1,0 +1,89 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["3ab8c209658cd8da.olean"],
+  "m": false,
+  "i": "9b03bdb254b3ef82.ilean",
+  "c": "99623e4fd54cb5d7.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateRowOrbit.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateRowOrbit.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateRowOrbit.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateRowOrbit.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateRowOrbit.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateRowFrame_code_image (g : codeGroup) (p : Point) :\n    gaussianImage (codeGaussianHom g) (coordinateRowFrame p) = coordinateRowFrame (codeRowImage g p) :=\n  by\n  ext c\n  constructor\n  · rintro ⟨_, ⟨x, rfl⟩, rfl⟩\n    change codeGaussianHom g • coordinateCross (p, x) ∈ coordinateRowFrame (codeRowImage g p)\n    rw [codeGaussianHom_cross, coordinateCross_action, codeInnerEquiv_coordinates]\n    exact ⟨codeInnerEquiv g p x, rfl⟩\n  · rintro ⟨x, rfl⟩\n    refine ⟨coordinateCross (p, (codeInnerEquiv g p).symm x), ⟨_, rfl⟩, ?_⟩\n    change codeGaussianHom g • coordinateCross (p, (codeInnerEquiv g p).symm x) = _\n    rw [codeGaussianHom_cross, coordinateCross_action, codeInnerEquiv_coordinates, Equiv.apply_symm_apply]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:6:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:16:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateRowFrame_code_transitive (p q : Point) :\n    ∃ g : codeGroup, gaussianImage (codeGaussianHom g) (coordinateRowFrame p) = coordinateRowFrame q :=\n  by\n  have ho : coordinateCross (q, 0) ∈ MulAction.orbit codeGroup (coordinateCross (p, 0)) :=\n    by\n    rw [coordinateCross_orbit _ (coordinateCross_mem _)]\n    exact coordinateCross_mem _\n  obtain ⟨g, hg⟩ := MulAction.mem_orbit_iff.mp ho\n  rw [coordinateCross_action] at hg\n  have hr := coordinateCross_row_of_eq hg\n  rw [codeRowImage_coordinates] at hr\n  exact ⟨g, by rw [coordinateRowFrame_code_image, hr]⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:19:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateRowFrame_code_images (p : Point) :\n    {Q | ∃ g : codeGroup, gaussianImage (codeGaussianHom g) (coordinateRowFrame p) = Q} =\n      Set.range coordinateRowFrame :=\n  by\n  ext Q\n  constructor\n  · rintro ⟨g, rfl⟩\n    exact ⟨codeRowImage g p, (coordinateRowFrame_code_image g p).symm⟩\n  · rintro ⟨q, rfl⟩\n    exact coordinateRowFrame_code_transitive p q`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinateRowFrames_card :\n    Nat.card (Set.range coordinateRowFrame) = 7 :=\n  by\n  rw [← Nat.card_congr (Equiv.ofInjective coordinateRowFrame coordinateRowFrame_injective)]\n  simpa only [Nat.card_eq_fintype_card] using card_Point`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateRowOrbit.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoordinateCanonicalFrames transitive imports (legacy)",
+       "f784dcbfda3d5ac5"],
+      ["Atlas.Rudvalis.CoordinateCanonicalFrames:importAllArts",
+       "989b0a10df8fef95"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateRowOrbit.lean",
+   "3654428001e3c6fd"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateRowOrbit", "93dec3219d4cdd2f"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "02415609eec4830a"}

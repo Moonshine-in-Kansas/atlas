@@ -1,0 +1,83 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["d44ac07fd9c19f8f.olean"],
+  "m": false,
+  "i": "afbc6270aebab111.ilean",
+  "c": "3aa56ed45f1a582f.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/HeavySignTransitivity.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavySignTransitivity.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavySignTransitivity.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavySignTransitivity.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavySignTransitivity.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/HeavySignTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySignTransitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySignTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySignTransitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySignTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySignTransitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavy_signedLift_sign_transitive (d : BinaryWord)\n    (hd : hasNonzeroQuadraticPart d) (hd16 : hammingNorm d = 16) (v w : SignedLift quaternaryCode d) :\n    ∃ k : codeGroup, k.val.right = 1 ∧ monomialHom k.val v.val.val = w.val.val :=\n  by\n  obtain ⟨a, hc, ha⟩ := hd\n  obtain ⟨p, hp⟩ := heavySupport_seed_orbit a.1 a.2.1 a.2.2 hc (ha ▸ hd16)\n  have hr : d = heavySeedResidue ∘ p.val := ha.symm.trans hp\n  obtain ⟨g, hg⟩ := codePermutationHom_surjective p⁻¹\n  have he : g.val.right = p.val⁻¹ := congrArg Subtype.val hg\n  have hr2 : d = heavySeedResidue ∘ g.val.right.symm := by rw [he]; exact hr\n  clear ha hr\n  subst d\n  let e := signedLiftActionEquiv g heavySeedResidue\n  obtain ⟨s, hs⟩ := heavySeed_signedLift_sign_transitive (e.symm v) (e.symm w)\n  let h : codeGroup := ⟨SemidirectProduct.inl (Multiplicative.ofAdd s.val), (codeGroup_sign_mem s.val).mpr s.prop⟩\n  have hh : monomialHom h.val (e.symm v).val.val = (e.symm w).val.val := hs\n  refine ⟨g * h * g⁻¹, ?_, ?_⟩\n  · change g.val.right * 1 * g.val.right⁻¹ = 1\n    simp\n  · have hv : monomialHom g.val (e.symm v).val.val = v.val.val := congrArg (fun u => u.val.val) (e.apply_symm_apply v)\n    have hw : monomialHom g.val (e.symm w).val.val = w.val.val := congrArg (fun u => u.val.val) (e.apply_symm_apply w)\n    change monomialHom (g.val * h.val * g.val⁻¹) v.val.val = w.val.val\n    rw [map_mul, map_mul]\n    change monomialHom g.val (monomialHom h.val (monomialHom g.val⁻¹ v.val.val)) = w.val.val\n    rw [← hv]\n    simp only [map_inv]\n    change\n      monomialHom g.val (monomialHom h.val ((monomialHom g.val).symm (monomialHom g.val (e.symm v).val.val))) =\n        w.val.val\n    rw [LinearEquiv.symm_apply_apply]\n    rw [hh, hw]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySignTransitivity.lean:8:58: missing space in the source\n\nThis part of the code\n  'd=16)\n'\nshould be written as\n  'd = 16)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySignTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySignTransitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeGroup_sign_fixes_coordinateCross (g : codeGroup)\n    (hg : g.val.right = 1) (i : Coordinate) : g • coordinateCross i = coordinateCross i :=\n  by\n  rw [coordinateCross_action, hg]\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySignTransitivity.lean:41:78: missing space in the source\n\nThis part of the code\n  'g.val.right=1)\n '\nshould be written as\n  'g.val.right = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySignTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySignTransitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySignTransitivity.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavySignTransitivity.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.HeavyMinimumOrbit transitive imports (legacy)",
+       "64bcbffafd227e57"],
+      ["Atlas.Rudvalis.HeavyMinimumOrbit:importAllArts", "f23df949f08f6b13"],
+      ["Atlas.Rudvalis.CoordinateCrossAction transitive imports (legacy)",
+       "d4a58c3b33ac8cc0"],
+      ["Atlas.Rudvalis.CoordinateCrossAction:importAllArts",
+       "8f5b7a82d887e404"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/HeavySignTransitivity.lean",
+   "b09a70ec394ecc77"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.HeavySignTransitivity", "879941ec480f2af7"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "33df2e3eccf203ea"}

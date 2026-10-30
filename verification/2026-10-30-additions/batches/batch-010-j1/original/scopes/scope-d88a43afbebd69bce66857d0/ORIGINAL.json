@@ -1,0 +1,82 @@
+{
+  "id": "staged-J1SignGroup",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "ComparisonWork.J1SignGroup"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Janko1.signLinear_mul",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignGroup"
+    },
+    {
+      "declaration": "Atlas.Janko1.signEquiv",
+      "kind": "definition",
+      "module": "ComparisonWork.J1SignGroup"
+    },
+    {
+      "declaration": "Atlas.Janko1.signElement",
+      "kind": "definition",
+      "module": "ComparisonWork.J1SignGroup"
+    },
+    {
+      "declaration": "Atlas.Janko1.signHom",
+      "kind": "definition",
+      "module": "ComparisonWork.J1SignGroup"
+    },
+    {
+      "declaration": "Atlas.Janko1.signHom_injective",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignGroup"
+    },
+    {
+      "declaration": "Atlas.Janko1.signSubgroup",
+      "kind": "definition",
+      "module": "ComparisonWork.J1SignGroup"
+    },
+    {
+      "declaration": "Atlas.Janko1.signSubgroupEquiv",
+      "kind": "definition",
+      "module": "ComparisonWork.J1SignGroup"
+    },
+    {
+      "declaration": "Atlas.Janko1.card_signSubgroup",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignGroup"
+    },
+    {
+      "declaration": "Atlas.Janko1.signSubgroup_comm",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignGroup"
+    },
+    {
+      "declaration": "Atlas.Janko1.signSubgroup_square",
+      "kind": "theorem",
+      "module": "ComparisonWork.J1SignGroup"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-J1SignGroup-structural-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.G2.Order",
+        "Atlas.LinearGroups.G2.Simplicity",
+        "Atlas.Sporadic.Janko1.Order",
+        "Atlas.Sporadic.Janko1.Simplicity",
+        "Atlas.Sporadic.Janko1.Perfectness"
+      ]
+    }
+  ]
+}

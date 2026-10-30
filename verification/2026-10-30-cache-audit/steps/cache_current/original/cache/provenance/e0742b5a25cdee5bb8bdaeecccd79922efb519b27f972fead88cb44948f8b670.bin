@@ -1,0 +1,165 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["f2c8c63e842dc38a.olean"],
+  "m": false,
+  "i": "4f7cfaa0c53d218f.ilean",
+  "c": "2d078b94a9a0dcd5.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Conway/EisensteinNinePhaseOrbit.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/EisensteinNinePhaseOrbit.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/EisensteinNinePhaseOrbit.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Conway/EisensteinNinePhaseOrbit.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Conway/EisensteinNinePhaseOrbit.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `set_option backward.isDefEq.respectTransparency false`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Conway`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Algebra Atlas.Codes Atlas.Lattices`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `local instance eisensteinNinePhaseFrameAction :\n    MulAction (Multiplicative ternaryGolay) EisensteinFrame :=\n  MulAction.compHom EisensteinFrame eisensteinPhaseIsometries`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:9:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe actual scalar-phase stabilizer has order three for the entire norm-nine/hexad pattern. -/\ntheorem eisensteinNine_phase_stabilizer_card (x : EisensteinShell 6) (c : TernarySixWords) (u : EisensteinCoordinates)\n    (hu : x.val.val = eisensteinTheta • u) (hc : eisensteinWordResidue u = c.val.val) (j : Fin 12)\n    (hj : j ∉ ternarySupport c.val.val) (a : Eisensteinˣ) (huj : u j = eisensteinTheta * (a : Eisenstein))\n    (hz : ∀ i, i ∉ ternarySupport c.val.val → i ≠ j → u i = 0) :\n    Nat.card (MulAction.stabilizer (Multiplicative ternaryGolay) (eisensteinFrameOfVector x)) = 3 :=\n  by\n  have hiff (t : Multiplicative ternaryGolay) :\n    t ∈ MulAction.stabilizer (Multiplicative ternaryGolay) (eisensteinFrameOfVector x) ↔ t.toAdd ∈ ternaryConstants :=\n    by\n    change eisensteinPhaseIsometries (Multiplicative.ofAdd t.toAdd) • eisensteinFrameOfVector x = _ ↔ _\n    rw [eisensteinNine_frame_phase_kernel x c u hu hc j hj a huj hz t.toAdd, ternaryConstants_mem_iff]\n  let e : MulAction.stabilizer (Multiplicative ternaryGolay) (eisensteinFrameOfVector x) ≃ ternaryConstants :=\n    { toFun := fun t => ⟨t.val.toAdd, (hiff t.val).mp t.property⟩\n      invFun := fun t => ⟨Multiplicative.ofAdd t.val, (hiff _).mpr t.property⟩\n      left_inv := fun _ => rfl\n      right_inv := fun _ => rfl }\n  rw [Nat.card_congr e, ternaryConstants_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:19:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:23:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:24:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:14:47: missing space in the source\n\nThis part of the code\n  'x.val.val=eisensteinTheta'\nshould be written as\n  'x.val.val = eisensteinTheta'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:15:33: missing space in the source\n\nThis part of the code\n  'u=c.val.val)'\nshould be written as\n  'u = c.val.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:17:14: missing space in the source\n\nThis part of the code\n  'j=eisensteinTheta*(a'\nshould be written as\n  'j = eisensteinTheta'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:17:30: missing space in the source\n\nThis part of the code\n  'j=eisensteinTheta*(a :'\nshould be written as\n  'eisensteinTheta * (a'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:18:14: missing space in the source\n\nThis part of the code\n  'i,i ∉ ternarySupport'\nshould be written as\n  'i, i ∉'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:18:46: missing space in the source\n\nThis part of the code\n  'i≠j → u'\nshould be written as\n  'i ≠ j'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:18:54: missing space in the source\n\nThis part of the code\n  'i=0) :'\nshould be written as\n  'i = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:42:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:43:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:44:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Every actual norm-nine/hexad frame has a code-phase orbit of243 frames. -/\ntheorem eisensteinNine_phase_orbit_card (x : EisensteinShell 6) (c : TernarySixWords) (u : EisensteinCoordinates)\n    (hu : x.val.val = eisensteinTheta • u) (hc : eisensteinWordResidue u = c.val.val) (j : Fin 12)\n    (hj : j ∉ ternarySupport c.val.val) (a : Eisensteinˣ) (huj : u j = eisensteinTheta * (a : Eisenstein))\n    (hz : ∀ i, i ∉ ternarySupport c.val.val → i ≠ j → u i = 0) :\n    Nat.card (MulAction.orbit (Multiplicative ternaryGolay) (eisensteinFrameOfVector x)) = 243 := by\n  classical\n  letI : Fintype (Multiplicative ternaryGolay) := Fintype.ofFinite _\n  letI : Fintype (MulAction.orbit (Multiplicative ternaryGolay) (eisensteinFrameOfVector x)) := Fintype.ofFinite _\n  letI : Fintype (MulAction.stabilizer (Multiplicative ternaryGolay) (eisensteinFrameOfVector x)) := Fintype.ofFinite _\n  have he :=\n    MulAction.card_orbit_mul_card_stabilizer_eq_card_group (Multiplicative ternaryGolay) (eisensteinFrameOfVector x)\n  simp only [← Nat.card_eq_fintype_card] at he\n  rw [eisensteinNine_phase_stabilizer_card x c u hu hc j hj a huj hz] at he\n  have hcard : Nat.card (Multiplicative ternaryGolay) = 729 :=\n    by\n    rw [Nat.card_congr Multiplicative.toAdd]\n    exact ternaryGolay_card\n  rw [hcard] at he\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:43:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:44:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:35:47: missing space in the source\n\nThis part of the code\n  'x.val.val=eisensteinTheta'\nshould be written as\n  'x.val.val = eisensteinTheta'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:36:33: missing space in the source\n\nThis part of the code\n  'u=c.val.val)'\nshould be written as\n  'u = c.val.val)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:38:14: missing space in the source\n\nThis part of the code\n  'j=eisensteinTheta*(a'\nshould be written as\n  'j = eisensteinTheta'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:38:30: missing space in the source\n\nThis part of the code\n  'j=eisensteinTheta*(a :'\nshould be written as\n  'eisensteinTheta * (a'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:39:14: missing space in the source\n\nThis part of the code\n  'i,i ∉ ternarySupport'\nshould be written as\n  'i, i ∉'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:39:46: missing space in the source\n\nThis part of the code\n  'i≠j → u'\nshould be written as\n  'i ≠ j'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:39:54: missing space in the source\n\nThis part of the code\n  'i=0) :'\nshould be written as\n  'i = 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Conway`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinNinePhaseOrbit.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Conway.EisensteinNinePhaseAction transitive imports (legacy)",
+       "15eff94cc84238fc"],
+      ["Atlas.Conway.EisensteinNinePhaseAction:importAllArts",
+       "7fa135f2ff63e7bc"],
+      ["Atlas.Codes.TernaryGlobalConstants transitive imports (legacy)",
+       "69076822754974e1"],
+      ["Atlas.Codes.TernaryGlobalConstants:importAllArts",
+       "e5f70fc2a905b789"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Conway/EisensteinNinePhaseOrbit.lean",
+   "346157d472d66b3c"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Conway.EisensteinNinePhaseOrbit", "46a36f41881e4c74"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "63182b4dea0a1395"}

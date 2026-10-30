@@ -1,0 +1,63 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["891b6531ff9cee37.olean"],
+  "m": false,
+  "i": "39efabeb87d40f0d.ilean",
+  "c": "d835f891f58123de.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Conway/EisensteinConstantNineMembership.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/EisensteinConstantNineMembership.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Conway/EisensteinConstantNineMembership.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Conway/EisensteinConstantNineMembership.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Conway/EisensteinConstantNineMembership.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Conway/EisensteinConstantNineMembership.lean:12:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinConstantNineMembership.lean:9:1: 'theorem eisensteinConstantNinePhaseWord_sum (p : TernaryConstantHexadPair) (r : Bool) (b : ZMod 3)\n    (a : TernaryHexadAffinePhase (eisensteinNinePartitionCode p r) b) :\n    ∑ i ∈ eisensteinNinePartitionSide p r, eisensteinConstantNinePhaseWord p r b a i = b :=\n  by\n  have hs : ternarySupport (eisensteinNinePartitionCode p r).val.val = eisensteinNinePartitionSide p r :=\n    ternaryConstantHexadCodeword_support _ _\n  have he :\n    (∑ i : ternarySupport (eisensteinNinePartitionCode p r).val.val,\n        (eisensteinNinePartitionCode p r).val.val i.val * a.val i) =\n      b :=\n    a.property\n  have hc (i : ternarySupport (eisensteinNinePartitionCode p r).val.val) :\n    (eisensteinNinePartitionCode p r).val.val i.val = 1 :=\n    by\n    have hi : i.val ∈ eisensteinNinePartitionSide p r := hs ▸ i.property\n    simp [eisensteinNinePartitionCode, ternaryConstantHexadCodeword, ternaryTriadWord, hi]\n  simp_rw [hc, one_mul] at he\n  rw [← hs, ← Finset.sum_coe_sort]\n  convert he using 1\n  apply Finset.sum_congr rfl\n  intro i hi\n  simp [eisensteinConstantNinePhaseWord,\n    i.property]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinConstantNineMembership.lean:42:74: This simp argument is unused:\n  ite_self\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [hi, hij, ite_true, ite_false, map_mul, map_sub, map_zero, eisensteinPhase_residue,\n    show eisensteinResidue eisensteinTheta = 0 by decide +kernel, zero_mul, sub_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinConstantNineMembership.lean:56:57: This simp argument is unused:\n  Finset.sum_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Finset.sum_add_distrib, Finset.sum_const, ← Finset.mul_sum, nsmul_eq_mul, mul_one]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinConstantNineMembership.lean:38:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinConstantNineMembership.lean:52:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinConstantNineMembership.lean:58:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Conway/EisensteinConstantNineMembership.lean:27:1: 'theorem eisensteinConstantNineParameterVector_mem (p : TernaryConstantHexadPair) (b : ZMod 3)\n    (a : EisensteinConstantNineParameters p b) : eisensteinConstantNineParameterVector p b a ∈ eisensteinLeechModule :=\n  by\n  rw [eisensteinConstantNineParameterVector, eisensteinLeechModule_theta_iff]\n  let d : Eisenstein := if a.2.1 then -1 else 1\n  let S := eisensteinNinePartitionSide p a.1\n  let A := eisensteinConstantNinePhaseWord p a.1 b a.2.2.2.1\n  have hr :\n    eisensteinWordResidue (eisensteinConstantNineParameterLift p b a) = eisensteinResidue d • ternaryTriadWord S :=\n    by\n    funext i\n    change\n      eisensteinResidue\n          (d *\n            ((if i ∈ S then eisensteinPhase (A i) else 0) -\n              if i = a.2.2.1.val then eisensteinTheta * eisensteinPhaseCorrection b * eisensteinPhase a.2.2.2.2\n              else 0)) =\n        eisensteinResidue d * (if i ∈ S then 1 else 0)\n    by_cases hi : i ∈ S <;> by_cases hij : i = a.2.2.1.val <;>\n      simp only [hi, hij, ite_true, ite_false, map_mul, map_sub, map_zero, eisensteinPhase_residue,\n        show eisensteinResidue eisensteinTheta = 0 by decide +kernel, zero_mul, ite_self, sub_zero]\n    all_goals split_ifs <;> simp only [eisensteinPhase_residue, map_zero]\n  refine ⟨?_, ?_⟩\n  · rw [hr]\n    exact ternaryGolay.smul_mem _ ((mem_ternaryConstantHexads _).mp (eisensteinNinePartitionSide_mem p a.1)).2\n  · let Z : Eisenstein :=\n      (∑ i ∈ S, eisensteinPhaseCorrection (A i)) - eisensteinPhaseCorrection b * eisensteinPhase a.2.2.2.2\n    have hs : ∑ i, eisensteinConstantNineParameterLift p b a i = d * (6 + eisensteinTheta * Z) :=\n      by\n      change\n        (∑ i,\n            d *\n              ((if i ∈ S then eisensteinPhase (A i) else 0) -\n                if i = a.2.2.1.val then eisensteinTheta * eisensteinPhaseCorrection b * eisensteinPhase a.2.2.2.2\n                else 0)) =\n          _\n      rw [← Finset.mul_sum, Finset.sum_sub_distrib]\n      simp only [Finset.sum_ite_mem, Finset.univ_inter, Finset.sum_ite_eq', Finset.mem_univ, ite_true]\n      simp_rw [eisensteinPhase_correction]\n      simp only [Finset.sum_add_distrib, Finset.sum_const, Finset.sum_mul, ← Finset.mul_sum, nsmul_eq_mul, mul_one]\n      rw [show S.card = 6 from ((mem_ternaryConstantHexads _).mp (eisensteinNinePartitionSide_mem p a.1)).1]\n      dsimp [Z]\n      rw [eisensteinPhase_correction]\n      ring\n    have hz : eisensteinResidue Z = 0 :=\n      by\n      simp only [Z, map_sub, map_sum, map_mul, eisensteinPhaseCorrection_residue, eisensteinPhase_residue, mul_one,\n        Finset.sum_neg_distrib]\n      rw [eisensteinConstantNinePhaseWord_sum]\n      ring\n    have hz3 : (3 : Eisenstein) ∣ eisensteinTheta * Z :=\n      (eisenstein_three_dvd_theta_iff Z).mpr ((eisensteinResidue_eq_zero Z).mp hz)\n    rw [hs]\n    exact\n      (dvd_add (show (3 : Eisenstein) ∣ 6 from ⟨2, by norm_num⟩) hz3).mul_left\n        d' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Conway.EisensteinConstantNineParameters transitive imports (legacy)",
+       "e08d1817b7608c57"],
+      ["Atlas.Conway.EisensteinConstantNineParameters:importAllArts",
+       "e902a88f49f0b2f5"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Conway/EisensteinConstantNineMembership.lean",
+   "152fbefaa846754e"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Conway.EisensteinConstantNineMembership",
+   "e0d42b96a675df08"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "73a043cb279244ef"}

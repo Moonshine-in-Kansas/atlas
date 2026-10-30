@@ -1,0 +1,54 @@
+{
+  "status": "process-passed",
+  "command": [
+    "/home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean",
+    "-j1",
+    "-M8704",
+    "-Dpp.unicode.fun=true",
+    "-DrelaxedAutoImplicit=false",
+    "-Dweak.linter.mathlibStandardSet=true",
+    "-DmaxSynthPendingDepth=3",
+    "--root=/home/gerald/atlas/claude/release-update-v1.2-20261030",
+    "/home/gerald/atlas/claude/release-update-v1.2-20261030/verification-runs/20261030T094721-audit-batch-batch-012-twisted-e6/Extract.lean"
+  ],
+  "cwd": "/home/gerald/atlas/claude/release-update-v1.2-20261030/candidate",
+  "environment": {
+    "LEAN_NUM_THREADS": "2",
+    "LEAN_PATH": "/home/gerald/atlas/claude/release-update-v1.2-20261030/candidate/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean"
+  },
+  "started_utc": "2026-10-30T09:47:23Z",
+  "exit_code": 0,
+  "signal": null,
+  "guard_stop": null,
+  "policy": "Single serial lease; Lean allocation8704MiB; owned RSS<=9GiB; combined worker RSS<two-thirds physicalRAM; actual availableRAM>=1GiB; at most4 Lean workers; bounded2GiB swap credit.",
+  "owned_rss_cap": 9663676416,
+  "peak_owned_rss": 4250636288,
+  "peak_owned_rss_and_swap": 4250636288,
+  "peak_combined_worker_rss": 4553641984,
+  "peak_lean_workers": 1,
+  "proof_diagnostic_errors": false,
+  "combined_worker_rss_cap": 10938288810,
+  "pid": 438317,
+  "log_plain_sha256": "96053bdb65944315dc4ab0c1c61bf01bd6bac3b3ac4c4e681d9e445e1cc7367f",
+  "log_compressed_sha256": "022334a9d29f58297bcaebf8c006cd66b97d872d2a2a37bac86a2250581f2e8e",
+  "log_recovery_verified": true,
+  "finished_utc": "2026-10-30T09:52:12Z",
+  "final_memory": {
+    "MemTotal": 16407433216,
+    "MemAvailable": 6736281600,
+    "SwapFree": 8199102464
+  },
+  "log_sha256": "96053bdb65944315dc4ab0c1c61bf01bd6bac3b3ac4c4e681d9e445e1cc7367f",
+  "adaptation": {
+    "schema_version": 1,
+    "original_receipt": {
+      "path": "original/process.json",
+      "sha256": "67deb16eff59dd0aecba7d902fc9e4c1f9d525d7b062c570bad5b909fae9ac39"
+    },
+    "alias": {
+      "log_sha256": "log_plain_sha256"
+    },
+    "decompressed_log_verified": true,
+    "original_compressed_sha256": "022334a9d29f58297bcaebf8c006cd66b97d872d2a2a37bac86a2250581f2e8e"
+  }
+}

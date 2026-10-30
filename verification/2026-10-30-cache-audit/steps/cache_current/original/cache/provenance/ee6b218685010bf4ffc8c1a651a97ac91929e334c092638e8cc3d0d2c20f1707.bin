@@ -1,0 +1,84 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["4a2b56768ce968da.olean"],
+  "m": false,
+  "i": "bf07124dbe3b07ba.ilean",
+  "c": "545b3ce29a800799.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/CubicQuadrilateralRowValues.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CubicQuadrilateralRowValues.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CubicQuadrilateralRowValues.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CubicQuadrilateralRowValues.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CubicQuadrilateralRowValues.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralRowValues.lean:15:41: `dif_pos` has been deprecated: Use `dite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralRowValues.lean:15:54: `dif_pos` has been deprecated: Use `dite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralRowValues.lean:15:69: `dif_pos` has been deprecated: Use `dite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralRowValues.lean:19:64: Unused tactic linter: `decide` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralRowValues.lean:11:1: 'theorem cubicQuadrilateralRow_weight (D F G : Octad) (n : Fin 8) (h : CubicQuadrilateralRow D F G n) :\n    cubicQuadrilateralNormalizedWeight D F G = cubicQuadrilateralRowWeight n :=\n  by\n  have ha := cubicQuadrilateralRow_admissible D F G n h\n  rw [cubicQuadrilateralNormalizedWeight, dif_pos ha.1, dif_pos ha.2.1, dif_pos ha.2.2]\n  fin_cases n\n  all_goals dsimp [CubicQuadrilateralRow] at h\n  · rw [cubicQuadrilateral_weight_four D F G h.1 h.2.1 h.2.2.1, h.2.2.2]\n    norm_num [cubicQuadrilateralRowWeight, parkerScalarSign] <;> decide\n  · rw [cubicQuadrilateral_weight_four D F G h.1 h.2.1 h.2.2.1, h.2.2.2]\n    norm_num [cubicQuadrilateralRowWeight, parkerScalarSign] <;> decide\n  · rw [cubicQuadrilateral_weight_four D F G h.1 h.2.1 h.2.2.1, h.2.2.2]\n    norm_num [cubicQuadrilateralRowWeight, parkerScalarSign] <;> decide\n  · rw [cubicQuadrilateral_weight_four D F G h.1 h.2.1 h.2.2.1, h.2.2.2]\n    norm_num [cubicQuadrilateralRowWeight, parkerScalarSign] <;> decide\n  · exact cubicQuadrilateral_weight_four_four_zero D F G h.1 h.2.1 h.2.2\n  · exact cubicQuadrilateral_weight_one_empty D F G ha.1 ha.2.1 ha.2.2 h.1\n  · exact cubicQuadrilateral_weight_zero_zero_four D F G h.1 h.2.1 h.2.2\n  ·\n    exact\n      cubicQuadrilateral_weight_zero_zero_zero D F G h.1 h.2.1\n        h.2.2' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralRowValues.lean:19:64: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralRowValues.lean:21:60: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralRowValues.lean:23:60: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralRowValues.lean:25:60: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralRowValues.lean:35:30: `dif_pos` has been deprecated: Use `dite_eq_left` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralRowValues.lean:50:21: This simp argument is unused:\n  hz\n\nHint: Omit it from the simp argument list.\n  [apply] simp [hf, hg, hk, cubicQuadrilateralRowIntersection]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralRowValues.lean:31:1: 'theorem cubicQuadrilateralRow_intersection (D F G : Octad) (n : Fin 8) (h : CubicQuadrilateralRow D F G n) :\n    (D.val ∩ (cubicQuadrilateralLabel F G).val).card = cubicQuadrilateralRowIntersection n :=\n  by\n  have ha := cubicQuadrilateralRow_admissible D F G n h\n  rw [cubicQuadrilateralLabel, dif_pos ha.2.2, cubicOctadDiamond_intersection]\n  fin_cases n\n  all_goals dsimp [CubicQuadrilateralRow] at h\n  · rw [h.1, h.2.1, h.2.2.1, h.2.2.2]\n    norm_num [cubicQuadrilateralRowIntersection]\n  · rw [h.1, h.2.1, h.2.2.1, h.2.2.2]\n    norm_num [cubicQuadrilateralRowIntersection]\n  · rw [h.1, h.2.1, h.2.2.1, h.2.2.2]\n    norm_num [cubicQuadrilateralRowIntersection]\n  · rw [h.1, h.2.1, h.2.2.1, h.2.2.2]\n    norm_num [cubicQuadrilateralRowIntersection]\n  · simp [h.1, h.2.1, h.2.2, cubicQuadrilateralRowIntersection]\n  · have hz := cubicTripleIntersection_zero_of_pair D F G (by omega)\n    rw [hz]\n    rcases h.1 with ⟨hf, hg⟩ | ⟨hf, hg⟩ <;> rcases h.2 with hk | hk <;>\n      simp [hf, hg, hk, hz, cubicQuadrilateralRowIntersection]\n  · have hz := cubicTripleIntersection_zero_of_pair D F G (Or.inl h.1)\n    rw [hz]\n    simp [h.1, h.2.1, h.2.2, cubicQuadrilateralRowIntersection]\n  ·\n    simp [h.1, h.2.1, h.2.2,\n      cubicQuadrilateralRowIntersection]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralRowValues.lean:56:1: 'theorem cubicQuadrilateralRow_sum (D F G : Octad) (v : Fin 8 → Scalar) (n : Fin 8)\n    (hn : CubicQuadrilateralRow D F G n) : (∑ m, if CubicQuadrilateralRow D F G m then v m else 0) = v n :=\n  by\n  rw [Finset.sum_eq_single n]\n  · simp [hn]\n  · intro m _ hmn\n    have hm : ¬CubicQuadrilateralRow D F G m := fun h => hmn (cubicQuadrilateralRow_unique D F G m n h hn)\n    simp [hm]\n  · simp' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralRowValues.lean:67:1: 'theorem cubicQuadrilateralNormalizedWeight_rows (D F G : Octad) :\n    cubicQuadrilateralNormalizedWeight D F G =\n      ∑ n, if CubicQuadrilateralRow D F G n then cubicQuadrilateralRowWeight n else 0 :=\n  by\n  by_cases h : OctadPairAdmissible D F ∧ OctadPairAdmissible D G ∧ OctadPairAdmissible F G\n  · obtain ⟨n, hn⟩ := cubicQuadrilateralRow_exhaustive D F G h.1 h.2.1 h.2.2\n    rw [cubicQuadrilateralRow_sum D F G _ n hn, cubicQuadrilateralRow_weight D F G n hn]\n  · have hn (n : Fin 8) : ¬CubicQuadrilateralRow D F G n := fun hn => h (cubicQuadrilateralRow_admissible D F G n hn)\n    simp only [hn, ite_false, Finset.sum_const_zero]\n    unfold cubicQuadrilateralNormalizedWeight\n    split_ifs <;> tauto' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicQuadrilateralRowValues.lean:79:1: 'theorem cubicQuadrilateralNormalizedWeight_moment_rows (D F G : Octad) :\n    cubicQuadrilateralNormalizedWeight D F G * ((D.val ∩ (cubicQuadrilateralLabel F G).val).card : Scalar) =\n      ∑ n,\n        if CubicQuadrilateralRow D F G n then\n          cubicQuadrilateralRowWeight n * (cubicQuadrilateralRowIntersection n : Scalar)\n        else 0 :=\n  by\n  by_cases h : OctadPairAdmissible D F ∧ OctadPairAdmissible D G ∧ OctadPairAdmissible F G\n  · obtain ⟨n, hn⟩ := cubicQuadrilateralRow_exhaustive D F G h.1 h.2.1 h.2.2\n    rw [cubicQuadrilateralRow_sum D F G _ n hn, cubicQuadrilateralRow_weight D F G n hn,\n      cubicQuadrilateralRow_intersection D F G n hn]\n  · have hn (n : Fin 8) : ¬CubicQuadrilateralRow D F G n := fun hn => h (cubicQuadrilateralRow_admissible D F G n hn)\n    rw [cubicQuadrilateralNormalizedWeight_rows]\n    simp [hn]' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Fischer.CubicQuadrilateralRowConditions transitive imports (legacy)",
+       "6f77cacc65e2a5c0"],
+      ["Atlas.Fischer.CubicQuadrilateralRowConditions:importAllArts",
+       "07fef53d88c80311"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/CubicQuadrilateralRowValues.lean",
+   "cae4a0faba593b6c"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.CubicQuadrilateralRowValues",
+   "e1a030248de3af4a"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "f7492908b9b60788"}

@@ -1,0 +1,89 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["e58af0bd9bf6cf4c.olean"],
+  "m": false,
+  "i": "effc42c684ea10b5.ilean",
+  "c": "c786363e985a46a9.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/OrthogonalPairs.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/OrthogonalPairs.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/OrthogonalPairs.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/OrthogonalPairs.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/OrthogonalPairs.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def orthogonalPairSpace :\n    SubMulAction gaussianLatticeGroup (MinimalCross × MinimalCross)\n    where\n  carrier := {z | CrossOrthogonal z.1 z.2}\n  smul_mem' g z hz := (crossOrthogonal_gaussian g z.1 z.2).mpr hz`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:5:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable abbrev OrthogonalPairs :=\n  orthogonalPairSpace`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def orthogonalPairsEquiv :\n    OrthogonalPairs ≃ Σ x : MinimalCross, OrthogonalCrosses x\n    where\n  toFun z := ⟨z.val.1, z.val.2, z.prop⟩\n  invFun z := ⟨(z.1, z.2.val), z.2.prop⟩\n  left_inv _ := rfl\n  right_inv _ := rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:11:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem orthogonalPairs_card_of_uniform\n    (h : ∀ x : MinimalCross, Nat.card (OrthogonalCrosses x) = 1755) : Nat.card OrthogonalPairs = 7125300 := by\n  classical\n  let : Fintype MinimalCross := Fintype.ofFinite _\n  rw [Nat.card_congr orthogonalPairsEquiv, Nat.card_sigma]\n  simp_rw [h]\n  simp only [Finset.sum_const, Finset.card_univ, smul_eq_mul]\n  rw [← Nat.card_eq_fintype_card, rudvalisLattice_minimal_cross_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:18:10: missing space in the source\n\nThis part of the code\n  '∀x : MinimalCross,Nat.card'\nshould be written as\n  '∀ x :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/OrthogonalPairs.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.OrthogonalCrossCount transitive imports (legacy)",
+       "d9c6b0df61e4f8f5"],
+      ["Atlas.Rudvalis.OrthogonalCrossCount:importAllArts",
+       "45678d9cf3de2cc3"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/OrthogonalPairs.lean",
+   "c0074131b33bb615"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.OrthogonalPairs", "74601e353e5b32ae"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "0e8b091b62b4e53b"}

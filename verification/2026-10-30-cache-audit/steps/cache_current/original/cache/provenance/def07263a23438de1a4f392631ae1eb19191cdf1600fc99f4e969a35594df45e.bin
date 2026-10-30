@@ -1,0 +1,59 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["9db3af2fe9fb469f.olean"],
+  "m": false,
+  "i": "83e6e4065bc4d35c.ilean",
+  "c": "03ed876a10013555.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/CubicPointRowMoments.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CubicPointRowMoments.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/CubicPointRowMoments.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CubicPointRowMoments.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/CubicPointRowMoments.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/CubicPointRowMoments.lean:21:46: This simp argument is unused:\n  one_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [cubicPointRowSum, mul_add, add_mul, Finset.sum_add_distrib, mul_ite, ite_mul, mul_zero, zero_mul,\n    mul_one]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicPointRowMoments.lean:26:50: This simp argument is unused:\n  Finset.sum_ite_irrel\n\nHint: Omit it from the simp argument list.\n  [apply] simp [cubicPointDeltaSum, cubicPointDeltaAll, hc]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicPointRowMoments.lean:28:66: This simp argument is unused:\n  Finset.sum_ite_irrel\n\nHint: Omit it from the simp argument list.\n  [apply] simp [cubicPointDeltaSum, cubicPointDeltaAll, hpr, Ne.symm hpr, hc]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicPointRowMoments.lean:32:66: This simp argument is unused:\n  Finset.sum_ite_irrel\n\nHint: Omit it from the simp argument list.\n  [apply] simp [cubicPointDeltaSum, cubicPointDeltaAll, hpq, Ne.symm hpq, hc]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicPointRowMoments.lean:36:68: This simp argument is unused:\n  Finset.sum_ite_irrel\n\nHint: Omit it from the simp argument list.\n  [apply] simp [cubicPointDeltaSum, cubicPointDeltaAll, hpq, Ne.symm hpq, hc]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/CubicPointRowMoments.lean:39:34: This simp argument is unused:\n  Finset.sum_ite_irrel\n\nHint: Omit it from the simp argument list.\n  [apply] simp [cubicPointDeltaSum, cubicPointDeltaAll, hpq, hpr, hqr, Ne.symm hpq, Ne.symm hpr, Ne.symm hqr, hc]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Fischer.CubicPointHadamard transitive imports (legacy)",
+       "15b0e1fd730abce1"],
+      ["Atlas.Fischer.CubicPointHadamard:importAllArts", "d7a20662d80afe83"],
+      ["Atlas.Fischer.CubicPointNetworkReduction transitive imports (legacy)",
+       "2293fc232af4fe95"],
+      ["Atlas.Fischer.CubicPointNetworkReduction:importAllArts",
+       "5c4e2a08453147a1"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/CubicPointRowMoments.lean",
+   "c0defa7f35625189"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.CubicPointRowMoments", "894cb05a40e54a71"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "ac2cc46ff2194a80"}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "id": "release-v1-2-summary-ree-f4-binary-point-count-20261030",
+  "imports": [
+    "Atlas.LinearGroups.ReeF4.SpecialPointCount"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.ReeF4.card_specialPoints_binary",
+      "module": "Atlas.LinearGroups.ReeF4.SpecialPointCount",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "algebra-independent-of-group-endpoints",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.F4.",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis.",
+        "Atlas.ReeF4.card_Model",
+        "Atlas.ReeF4.simple_of_large",
+        "Atlas.ReeF4.BinaryDerived",
+        "Atlas.SuzukiFamily.card_group",
+        "Atlas.SuzukiFamily.simple_of_large",
+        "Atlas.SuzukiFamily.perfect_of_large",
+        "Atlas.SuzukiFamily.simple_iff",
+        "Atlas.ReeF4.card_positiveRootSubgroup",
+        "Atlas.ReeF4.elementary_specialPoint_transitive",
+        "Atlas.ReeF4.model_specialPoint_transitive"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.SuzukiFamily.Order",
+        "Atlas.LinearGroups.SuzukiFamily.Simplicity",
+        "Atlas.LinearGroups.SuzukiFamily.ExactSimplicity"
+      ]
+    }
+  ]
+}

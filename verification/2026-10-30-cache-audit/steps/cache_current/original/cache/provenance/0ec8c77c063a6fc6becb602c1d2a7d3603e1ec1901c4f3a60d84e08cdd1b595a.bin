@@ -1,0 +1,63 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["80ae44c5e21ae05d.olean"],
+  "m": false,
+  "i": "cd6f3382717292ed.ilean",
+  "c": "b1bd8575670a0175.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Codes/GolayPackage.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/GolayPackage.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/GolayPackage.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Codes/GolayPackage.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Codes/GolayPackage.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Codes/GolayPackage.lean:10:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayPackage.lean:10:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open scoped BigOperators Polynomial`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayPackage.lean:10:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe package is about the concrete two-twist code on the retained coordinates. -/\nstructure GolayFromTrio : Prop where\n  coordinates : Nat.card Omega = 24\n  seed_dimension : Module.finrank Bit trio = 3\n  seed_cardinality : Nat.card trio = 8\n  seed_duality : trio = dual trio\n  first_gluing : Nonempty ((trio × E0) ≃ₗ[Bit] H0)\n  first_twist : Nonempty ((trio × E0 × Bit) ≃ₗ[Bit] hexacode)\n  first_encoding : ∀ x e ε, (firstTwist (x, e, ε) : HexWord) = phiWord x + e + ε • tau\n  hex_dimension : Module.finrank Bit hexacode = 6\n  hex_cardinality : Nat.card hexacode = 64\n  hex_duality : hexacode = dual hexacode\n  hex_minimum : ∀ w ∈ hexacode, w ≠ 0 → 4 ≤ hammingNorm w\n  hex_distribution : ∀ k, hexWeightCount k = if k = 0 then 1 else if k = 4 then 45 else if k = 6 then 18 else 0\n  second_twist : Nonempty ((hexacode × P6 × Bit) ≃ₗ[Bit] golay)\n  second_encoding : ∀ h r ε, (golayEquiv (h, r, ε) : BinaryWord) = jWord h.val + rho r.val + ε • eta\n  decoding : ∀ h r ε, golayRawDecoder (golayEncoder (h, r, ε)) = (h.val, r.val, ε)\n  dimension : Module.finrank Bit golay = 12\n  cardinality : Nat.card golay = 4096\n  self_dual : golay = binaryDot.orthogonal golay\n  doubly_even : ∀ w ∈ golay, 4 ∣ hammingNorm w\n  minimum : ∀ w ∈ golay, w ≠ 0 → 8 ≤ hammingNorm w\n  minimum_witness : eta ∈ golay ∧ hammingNorm eta = 8\n  distance : ∀ u v : golay, u ≠ v → 8 ≤ hammingDist u.val v.val\n  distribution :\n    ∀ k,\n      golayWeightCount k =\n        if k = 0 then 1\n        else if k = 8 then 759 else if k = 12 then 2576 else if k = 16 then 759 else if k = 24 then 1 else 0\n  enumerator :\n    golayEnumerator =\n      1 + 759 * Polynomial.X ^ 8 + 2576 * Polynomial.X ^ 12 + 759 * Polynomial.X ^ 16 + Polynomial.X ^ 24\n  octad_basis :\n    (∀ i, (golayBasis i : BinaryWord) = golayGenerators i) ∧ (∀ i, hammingNorm (golayBasis i : BinaryWord) = 8)\n  octads_generate : Submodule.span Bit octadWords = golay\n  octad_count : octads.card = 759\n  octad_sizes : ∀ O ∈ octads, O.card = 8\n  steiner : ∀ T : Finset Omega, T.card = 5 → ∃! O : Finset Omega, O ∈ octads ∧ T ⊆ O\n  sextet : IsSextet tetrad\n  trio_octads : ∀ i, distinguishedTrio i ∈ octads\n  trio_partition : ∀ p, ∃! i, p ∈ distinguishedTrio i\n  marking_sizes : ∀ (m : KleinianMarking) t, (markedPair m t).card = 2\n  marking_partition : ∀ (m : KleinianMarking) p, ∃! t, p ∈ markedPair m t\n  marking_tetrads : ∀ (m : KleinianMarking) t, markedPair m t ⊆ tetrad t.1\n  even_block_recovery : ∀ w, w ∈ C0 ↔ w ∈ golay ∧ ∀ i, Even (hammingNorm (fun k => w (i, k)))\n  recover_hex_surjective : Function.Surjective recoverHex\n  recover_hex_kernel : ∀ w : C0, recoverHex w = 0 ↔ w.val ∈ R0\n  recover_hex_values : ∀ (w : C0) i, (recoverHex w).val i = blockDecode (fun k => w.val (i, k))\n  recover_trio_surjective : Function.Surjective recoverTrio\n  recover_trio_kernel : ∀ w : H0, recoverTrio w = 0 ↔ w.val ∈ E0\n  automorphisms : codeAutomorphisms = octadAutomorphisms\n  automorphisms_finite : Finite Mathieu24CodeModel\n  automorphisms_faithful : FaithfulSMul Mathieu24CodeModel Omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayPackage.lean:10:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem golay_from_trio : GolayFromTrio\n    where\n  coordinates := by norm_num [Omega, HexIndex, Nat.card_eq_fintype_card]\n  seed_dimension := trio_finrank\n  seed_cardinality := trio_card\n  seed_duality := trio_selfDual\n  first_gluing := ⟨firstGluing⟩\n  first_twist := ⟨firstTwist⟩\n  first_encoding := firstTwist_apply\n  hex_dimension := hexacode_finrank\n  hex_cardinality := hexacode_card\n  hex_duality := hexacode_selfDual\n  hex_minimum := hexacode_minimum\n  hex_distribution := hexacode_weight_distribution\n  second_twist := ⟨golayEquiv⟩\n  second_encoding := golayEquiv_apply\n  decoding := golay_decode_encode\n  dimension := golay_finrank\n  cardinality := golay_card\n  self_dual := golay_selfDual\n  doubly_even := golay_doublyEven\n  minimum := golay_minimum\n  minimum_witness := ⟨eta_mem_golay, eta_weight⟩\n  distance := golay_distance\n  distribution := golay_weight_distribution\n  enumerator := golayEnumerator_eq\n  octad_basis := golay_octad_basis\n  octads_generate := octads_span\n  octad_count := octads_card\n  octad_sizes := octad_size\n  steiner := octad_steiner\n  sextet := distinguished_sextet\n  trio_octads := distinguishedTrio_octads\n  trio_partition := distinguishedTrio_partition\n  marking_sizes := markedPair_card\n  marking_partition := markedPairs_partition\n  marking_tetrads := markedPair_subset_tetrad\n  even_block_recovery := C0_even_blocks\n  recover_hex_surjective := recoverHex_surjective\n  recover_hex_kernel := recoverHex_kernel\n  recover_hex_values := recoverHex_blocks\n  recover_trio_surjective := recoverTrio_surjective\n  recover_trio_kernel := recoverTrio_kernel\n  automorphisms := codeAutomorphisms_eq_octadAutomorphisms\n  automorphisms_finite := codeAutomorphisms_finite\n  automorphisms_faithful := codeAutomorphisms_faithful`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayPackage.lean:10:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem exists_golay_from_trio :\n    ∃ C : Submodule Bit BinaryWord, C = golay ∧ GolayFromTrio :=\n  ⟨golay, rfl, golay_from_trio⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayPackage.lean:10:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayPackage.lean:10:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Mathieu.GolayAutomorphisms transitive imports (legacy)",
+       "3259278111df09ed"],
+      ["Atlas.Mathieu.GolayAutomorphisms:importAllArts", "777d39e85244e066"],
+      ["Atlas.Codes.GolayRecovery transitive imports (legacy)",
+       "82dd56ae1292bb67"],
+      ["Atlas.Codes.GolayRecovery:importAllArts", "3b0156a86275c854"],
+      ["Atlas.Codes.WeightEnumerators transitive imports (legacy)",
+       "7700831ecdbb68f8"],
+      ["Atlas.Codes.WeightEnumerators:importAllArts", "2c9da180baa59fb5"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Codes/GolayPackage.lean", "4a80c66f5189a3f2"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Codes.GolayPackage", "af48c83927452856"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "8d21751d465f1377"}

@@ -1,0 +1,56 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["5502d722713535a2.olean"],
+  "m": false,
+  "i": "94254373c687adf2.ilean",
+  "c": "943b7e5bdce68261.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean -M8704 -j1 /home/gerald/atlas/Atlas/Algebra/Albert/TraceZeroForms.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Algebra/Albert/TraceZeroForms.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Algebra/Albert/TraceZeroForms.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Algebra/Albert/TraceZeroForms.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Algebra/Albert/TraceZeroForms.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Algebra/Albert/TraceZeroForms.lean:14:0: automatically included section variable(s) unused in theorem `Atlas.Albert.traceZeroCubicDecomposition`:\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/Albert/TraceZeroForms.lean:32:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/Albert/TraceZeroForms.lean:35:0: automatically included section variable(s) unused in theorem `Atlas.Albert.traceZeroPolar_comm`:\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/Albert/TraceZeroForms.lean:38:0: automatically included section variable(s) unused in theorem `Atlas.Albert.traceZeroPolar_add_left`:\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Algebra/Albert/TraceZeroForms.lean:42:0: automatically included section variable(s) unused in theorem `Atlas.Albert.traceZeroPolar_smul_left`:\n  [CharP F 2]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 2] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Algebra.Albert.TraceZero transitive imports (legacy)",
+       "6c7bc4fe6f832963"],
+      ["Atlas.Algebra.Albert.TraceZero:importAllArts", "3dc59707003b0bb0"],
+      ["Atlas.Algebra.Albert.CrossProduct transitive imports (legacy)",
+       "0e77998e387070da"],
+      ["Atlas.Algebra.Albert.CrossProduct:importAllArts",
+       "8359e777b32b6293"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Algebra/Albert/TraceZeroForms.lean",
+   "767384fa0cdd1b43"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Algebra.Albert.TraceZeroForms", "60d8ff3abc63cbdc"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "1edef08f91a95f53"}

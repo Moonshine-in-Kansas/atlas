@@ -1,0 +1,170 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["a89b9098fa0a79f3.olean"],
+  "m": false,
+  "i": "508395e3ccb39bde.ilean",
+  "c": "db25371d18493359.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:24:2: `simp [Matrix.mul_apply,Fin.sum_univ_two,kernelDagger] at haa hcc hbb had` is a flexible tactic modifying `hcc`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:24:2: Try this:\n  [apply] simp only [sq_eq_one_iff, scalar_apply, exists_eq_or_imp, diagonal_one, ↓existsAndEq,\n    true_and] at haa hcc hbb had",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:25:2: `have hc : A 1 0 = 0 := hcc`\nuses `hcc`, which was modified by the flexible tactic `simp` on line 24!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:24:2: `simp [Matrix.mul_apply,Fin.sum_univ_two,kernelDagger] at haa hcc hbb had` is a flexible tactic modifying `hbb`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:24:2: Try this:\n  [apply] simp only [sq_eq_one_iff, scalar_apply, exists_eq_or_imp, diagonal_one, ↓existsAndEq,\n    true_and] at haa hcc hbb had",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:26:2: `have hb : A 0 1 = 0 := hbb`\nuses `hbb`, which was modified by the flexible tactic `simp` on line 24!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:24:2: `simp [Matrix.mul_apply,Fin.sum_univ_two,kernelDagger] at haa hcc hbb had` is a flexible tactic modifying `haa`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:24:2: Try this:\n  [apply] simp only [sq_eq_one_iff, scalar_apply, exists_eq_or_imp, diagonal_one, ↓existsAndEq,\n    true_and] at haa hcc hbb had",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:27:2: `have ha : A 0 0 ≠ 0 := by intro h; simp [h] at haa`\nuses `haa`, which was modified by the flexible tactic `simp` on line 24!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:24:2: `simp [Matrix.mul_apply,Fin.sum_univ_two,kernelDagger] at haa hcc hbb had` is a flexible tactic modifying `hcc`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:24:2: Try this:\n  [apply] simp only [sq_eq_one_iff, scalar_apply, exists_eq_or_imp, diagonal_one, ↓existsAndEq,\n    true_and] at haa hcc hbb had",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:28:2: `have had' : A 0 0 * σ (A 1 1) = 1 := by simpa [hb, hc] using had`\nuses `hcc`, which was modified by the flexible tactic `simp` on line 24!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:24:2: `simp [Matrix.mul_apply,Fin.sum_univ_two,kernelDagger] at haa hcc hbb had` is a flexible tactic modifying `haa`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:24:2: Try this:\n  [apply] simp only [sq_eq_one_iff, scalar_apply, exists_eq_or_imp, diagonal_one, ↓existsAndEq,\n    true_and] at haa hcc hbb had",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:28:2: `have had' : A 0 0 * σ (A 1 1) = 1 := by simpa [hb, hc] using had`\nuses `haa`, which was modified by the flexible tactic `simp` on line 24!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:24:2: `simp [Matrix.mul_apply,Fin.sum_univ_two,kernelDagger] at haa hcc hbb had` is a flexible tactic modifying `had`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:24:2: Try this:\n  [apply] simp only [sq_eq_one_iff, scalar_apply, exists_eq_or_imp, diagonal_one, ↓existsAndEq,\n    true_and] at haa hcc hbb had",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:28:2: `have had' : A 0 0 * σ (A 1 1) = 1 := by simpa [hb, hc] using had`\nuses `had`, which was modified by the flexible tactic `simp` on line 24!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:24:2: `simp [Matrix.mul_apply,Fin.sum_univ_two,kernelDagger] at haa hcc hbb had` is a flexible tactic modifying `hbb`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:24:2: Try this:\n  [apply] simp only [sq_eq_one_iff, scalar_apply, exists_eq_or_imp, diagonal_one, ↓existsAndEq,\n    true_and] at haa hcc hbb had",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:28:2: `have had' : A 0 0 * σ (A 1 1) = 1 := by simpa [hb, hc] using had`\nuses `hbb`, which was modified by the flexible tactic `simp` on line 24!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:15:48: missing space in the source\n\nThis part of the code\n  'A.det=1)\n '\nshould be written as\n  'A.det = 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:16:23: missing space in the source\n\nThis part of the code\n  '!![1,0;0,0]'\nshould be written as\n  '!![1, 0; 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:16:25: missing space in the source\n\nThis part of the code\n  '!![1,0;0,0]'\nshould be written as\n  '0; 0, 0]'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:16:27: missing space in the source\n\nThis part of the code\n  '!![1,0;0,0] *'\nshould be written as\n  '0, 0] *'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:16:56: missing space in the source\n\nThis part of the code\n  '!![1,0;0,0])'\nshould be written as\n  '!![1, 0; 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:16:58: missing space in the source\n\nThis part of the code\n  '!![1,0;0,0])'\nshould be written as\n  '0; 0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:16:60: missing space in the source\n\nThis part of the code\n  '!![1,0;0,0])\n'\nshould be written as\n  '0, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:17:22: missing space in the source\n\nThis part of the code\n  '!![0,0;0,1]'\nshould be written as\n  '!![0, 0; 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:17:24: missing space in the source\n\nThis part of the code\n  '!![0,0;0,1]'\nshould be written as\n  '0; 0, 1]'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:17:26: missing space in the source\n\nThis part of the code\n  '!![0,0;0,1] *'\nshould be written as\n  '0, 1] *'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:17:55: missing space in the source\n\nThis part of the code\n  '!![0,0;0,1])'\nshould be written as\n  '!![0, 0; 0,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:17:57: missing space in the source\n\nThis part of the code\n  '!![0,0;0,1])'\nshould be written as\n  '0; 0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:17:59: missing space in the source\n\nThis part of the code\n  '!![0,0;0,1])\n'\nshould be written as\n  '0, 1])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:18:23: missing space in the source\n\nThis part of the code\n  '!![0,1;1,0]'\nshould be written as\n  '!![0, 1; 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:18:25: missing space in the source\n\nThis part of the code\n  '!![0,1;1,0]'\nshould be written as\n  '1; 1, 0]'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:18:27: missing space in the source\n\nThis part of the code\n  '!![0,1;1,0] *'\nshould be written as\n  '1, 0] *'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:18:56: missing space in the source\n\nThis part of the code\n  '!![0,1;1,0])'\nshould be written as\n  '!![0, 1; 1,'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:18:58: missing space in the source\n\nThis part of the code\n  '!![0,1;1,0])'\nshould be written as\n  '1; 1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:18:60: missing space in the source\n\nThis part of the code\n  '!![0,1;1,0]) :'\nshould be written as\n  '1, 0])'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean:36:65: missing space in the source\n\nThis part of the code\n  'a^2=1)\n '\nshould be written as\n  'a ^ 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Orthogonal.Minus.RankTwoHermitian transitive imports (legacy)",
+       "ac8e83c69c7e81b3"],
+      ["Atlas.LinearGroups.Orthogonal.Minus.RankTwoHermitian:importAllArts",
+       "bb6f156554e11203"],
+      ["Atlas.LinearGroups.ProjectiveSpecialLinear transitive imports (legacy)",
+       "f8405b79ad204a85"],
+      ["Atlas.LinearGroups.ProjectiveSpecialLinear:importAllArts",
+       "6b2bf5511967b88f"],
+      ["Mathlib.LinearAlgebra.Matrix.Notation transitive imports (legacy)",
+       "e358b8a1121922ba"],
+      ["Mathlib.LinearAlgebra.Matrix.Notation:importAllArts",
+       "2b21d92f3dc87bf7"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Orthogonal/Minus/RankTwoHermitianKernel.lean",
+   "b76d0cdd0986ca64"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Orthogonal.Minus.RankTwoHermitianKernel",
+   "3419a8970bee9f8a"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "8a28ac90cc0f9e89"}

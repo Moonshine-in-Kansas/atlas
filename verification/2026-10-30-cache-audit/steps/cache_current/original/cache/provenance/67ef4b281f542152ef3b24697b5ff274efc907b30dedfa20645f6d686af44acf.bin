@@ -1,0 +1,103 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["0f89e1968be4c2b9.olean"],
+  "m": false,
+  "i": "cec811415021d374.ilean",
+  "c": "7633b29ffbccc49f.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/ReferenceQuartetExhaustion.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ReferenceQuartetExhaustion.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ReferenceQuartetExhaustion.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ReferenceQuartetExhaustion.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ReferenceQuartetExhaustion.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_four_not_intrinsicDozen (v : FourBlockCrosses)\n    (hv : ReferenceCoupleOrthogonal (shellPieceCrossMap fourShellPiece v)) :\n    shellPieceCrossMap fourShellPiece v ∉ intrinsicDozen referenceCouple :=\n  by\n  rcases fourCouple_energy_cases v hv with he | he\n  · obtain ⟨w, hw⟩ := localFourBridgeCross_four\n    have hwc : ReferenceCoupleOrthogonal (shellPieceCrossMap fourShellPiece w) := hw ▸ localFourBridgeCross_common\n    have hwe : crossRowEnergy referenceDozenRows (shellPieceCrossMap fourShellPiece w) = 0 := by\n      rw [hw, localFourBridgeCross_energy]\n    intro h\n    have hh := (fourCouple_intrinsicDozen_iff v w hv hwc (he.trans hwe.symm)).mp h\n    rw [hw] at hh\n    exact localFourBridgeCross_no_quartet hh\n  · obtain ⟨w, hw⟩ := shiftedSeedCross_four\n    have hwc : ReferenceCoupleOrthogonal (shellPieceCrossMap fourShellPiece w) := hw ▸ shiftedSeedCross_common\n    have hwe : crossRowEnergy referenceDozenRows (shellPieceCrossMap fourShellPiece w) = 2 := by\n      rw [hw, shiftedSeedCross_energy]\n    intro h\n    have hh := (fourCouple_intrinsicDozen_iff v w hv hwc (he.trans hwe.symm)).mp h\n    rw [hw] at hh\n    exact shiftedSeedCross_no_quartet hh`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_heavy_not_intrinsicDozen (v : HeavyCrosses)\n    (hv : ReferenceCoupleOrthogonal (shellPieceCrossMap heavyShellPiece v)) :\n    shellPieceCrossMap heavyShellPiece v ∉ intrinsicDozen referenceCouple :=\n  by\n  obtain ⟨w, hw⟩ := localHeavyBridgeCross_heavy\n  have hwc : ReferenceCoupleOrthogonal (shellPieceCrossMap heavyShellPiece w) := hw ▸ localHeavyBridgeCross_common\n  intro h\n  have hh := (heavyCouple_intrinsicDozen_iff v w hv hwc).mp h\n  rw [hw] at hh\n  exact localHeavyBridgeCross_no_quartet hh`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Full intrinsic exhaustion: no noncoordinate quartet completion occurs. -/\ntheorem reference_intrinsicDozen_eq : intrinsicDozen referenceCouple = referenceCoordinateDozen :=\n  reference_intrinsicDozen_eq_of_piece_exclusion reference_four_not_intrinsicDozen reference_heavy_not_intrinsicDozen`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem reference_quartets_card :\n    Nat.card (QuartetsThrough referenceCouple) = 5 :=\n  reference_quartets_card_of_dozen_equality reference_intrinsicDozen_eq`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Every actual orthogonal couple lies in exactly five intrinsic quartets. -/\ntheorem quartetsThrough_couple_card (c : Set MinimalCross) (hc : IsCouple c) : Nat.card (QuartetsThrough c) = 5 := by\n  rw [quartetsThrough_card_transport c hc, reference_quartets_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- Every intrinsic dozen has twelve actual Gaussian crosses. -/\ntheorem intrinsicDozen_couple_card (c : Set MinimalCross) (hc : IsCouple c) : Nat.card (intrinsicDozen c) = 12 := by\n  rw [intrinsicDozen_card_transport c hc, reference_intrinsicDozen_eq, referenceCoordinateDozen_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem intrinsicDozen_couple_pairwise (c : Set MinimalCross)\n    (hc : IsCouple c) : (intrinsicDozen c).Pairwise CrossOrthogonal :=\n  by\n  obtain ⟨g, hg⟩ := generated_couple_transport c hc\n  rw [← hg, ← intrinsicDozen_gaussianImage, reference_intrinsicDozen_eq, gaussianImage_pairwise]\n  exact referenceCoordinateDozen_pairwise`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ReferenceQuartetExhaustion.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CoupleConfigurationTransport transitive imports (legacy)",
+       "c8cac0fe0b3db3a6"],
+      ["Atlas.Rudvalis.CoupleConfigurationTransport:importAllArts",
+       "89a65db3ef39ccde"],
+      ["Atlas.Rudvalis.LocalBridgeCommonEnergy transitive imports (legacy)",
+       "28a7191c0b158730"],
+      ["Atlas.Rudvalis.LocalBridgeCommonEnergy:importAllArts",
+       "27c550000d3527d2"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/ReferenceQuartetExhaustion.lean",
+   "84931d26cf7f642f"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.ReferenceQuartetExhaustion",
+   "7a9f08211657ec72"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "3d8b71f63d51bc79"}

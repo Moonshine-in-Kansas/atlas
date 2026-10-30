@@ -1,0 +1,57 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["2be1b7fc948407f9.olean"],
+  "m": false,
+  "i": "088347d17bf7269b.ilean",
+  "c": "8afa42171c78181e.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Symplectic/OrthogonalFrame.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Symplectic/OrthogonalFrame.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Symplectic/OrthogonalFrame.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Symplectic/OrthogonalFrame.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Symplectic/OrthogonalFrame.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/OrthogonalFrame.lean:10:2: `simp [headTail,e,Pi.single_apply]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/OrthogonalFrame.lean:11:2: `funext j`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 10!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/OrthogonalFrame.lean:63:21: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [headTail, e]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/OrthogonalFrame.lean:17:72: missing space in the source\n\nThis part of the code\n  '2*(n+2))'\nshould be written as\n  '2 * (n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Symplectic/OrthogonalFrame.lean:17:75: missing space in the source\n\nThis part of the code\n  '2*(n+2))\n'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Symplectic.Basis transitive imports (legacy)",
+       "5c13a5dbe67b7d59"],
+      ["Atlas.LinearGroups.Symplectic.Basis:importAllArts", "79264a7f185490b1"],
+      ["Atlas.LinearAlgebra.AlternatingFrame transitive imports (legacy)",
+       "9c3d627f7c7725a2"],
+      ["Atlas.LinearAlgebra.AlternatingFrame:importAllArts",
+       "013898532722da27"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Symplectic/OrthogonalFrame.lean",
+   "6fe056255f2938ef"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Symplectic.OrthogonalFrame",
+   "8e4babc3f0ce705e"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "adf0cee19e0b3ebd"}

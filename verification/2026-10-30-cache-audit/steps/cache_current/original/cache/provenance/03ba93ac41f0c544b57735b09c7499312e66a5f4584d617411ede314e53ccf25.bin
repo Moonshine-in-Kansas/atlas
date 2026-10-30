@@ -1,0 +1,62 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["8f9918d49fd7dee0.olean"],
+  "m": false,
+  "i": "62641fed8bc8e971.ilean",
+  "c": "4419b35d49cb91be.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Mathieu/HexacodeSextetPackage.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Mathieu/HexacodeSextetPackage.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Mathieu/HexacodeSextetPackage.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Mathieu/HexacodeSextetPackage.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Mathieu/HexacodeSextetPackage.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Mathieu/HexacodeSextetPackage.lean:10:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/HexacodeSextetPackage.lean:10:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/HexacodeSextetPackage.lean:10:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe complete concrete Job 5 construction, with no assumed group orders or fullness. -/\nstructure HexacodeSextetPackage : Prop where\n  hexacode_group : HexacodeAutomorphismPackage\n  sextet_geometry : SextetGeometryPackage\n  full_stabilizer : ∀ g : Mathieu24CodeModel, g ∈ sextetStabilizer ↔ PreservesTetradPartition g.val\n  affine_criterion :\n    ∀ (t : HexWord) (g : Monomial HexIndex),\n      CodePreserving (affinePermutation t g) ↔ t ∈ hexacode ∧ g ∈ Monomial.stabilizer hexacode\n  affine_isomorphism : Function.Bijective sextetAffineHom\n  coordinates :\n    ∀ (x : SextetAffineGroup) (i : HexIndex) (k : Fin 4),\n      (sextetAffineEquiv x).val.val (i, k) =\n        (x.right.val.perm i,\n          rowLabel.symm\n            (x.right.val.localMap (x.right.val.perm i) (rowLabel k) + x.left.toAdd.val (x.right.val.perm i)))\n  inverse_parameters :\n    ∀ s : SextetStabilizer,\n      ((sextetAffineEquiv.symm s).left.toAdd.val, (sextetAffineEquiv.symm s).right.val) =\n        (partitionTranslation s.val.val ((sextetStabilizer_mem_iff s.val).mp s.prop),\n          partitionMonomial s.val.val ((sextetStabilizer_mem_iff s.val).mp s.prop))\n  order : Nat.card SextetStabilizer = 138240\n  translation_injective : Function.Injective sextetTranslation\n  quotient_surjective : Function.Surjective sextetQuotient\n  split : sextetQuotient.comp sextetSection = MonoidHom.id _\n  translation_kernel : sextetQuotient.ker = sextetTranslation.range\n  translation_kernel_order : Nat.card sextetQuotient.ker = 64\n  column_kernel_isomorphism : Nonempty (SextetColumnKernelAffine ≃* sextetCoordinateHom.ker)\n  column_kernel_order : Nat.card sextetCoordinateHom.ker = 192\n  conjugation :\n    ∀ (g : HexAutomorphisms) (t : Multiplicative hexacode),\n      sextetSection g * sextetTranslation t * (sextetSection g)⁻¹ = sextetTranslation (hexAffineAction g t)\n  preserves_C0 : ∀ (s : SextetStabilizer) (w : C0), coordinatePermutation s.val.val w.val ∈ C0\n  recovery_equivariant :\n    ∀ (s : SextetStabilizer) (w : C0), recoverHex (sextetC0Action s w) = hexAction (sextetQuotient s) (recoverHex w)\n  preserves_R0 : ∀ (s : SextetStabilizer) (w : C0), (sextetC0Action s w).val ∈ R0 ↔ w.val ∈ R0\n  translations_trivial_quotient :\n    ∀ (t : Multiplicative hexacode) (w : C0), recoverHex (sextetC0Action (sextetTranslation t) w) = recoverHex w\n  markings :\n    ∀ (x : SextetAffineGroup) (m : KleinianMarking) (i : HexIndex),\n      ∃ e : Equiv.Perm (Fin 2),\n        ∀ s,\n          permuteBlock (sextetAffineEquiv x).val.val (markedPair m (i, s)) =\n            markedPair (transformedMarking x.right.val m) (x.right.val.perm i, e s)\n  trio :\n    ∀ s : SextetStabilizer,\n      distinguishedUnorderedTrio.image (permuteBlock s.val.val) = distinguishedUnorderedTrio ↔\n        columnPairing.image (fun U => U.image (hexCoordinateHom (sextetQuotient s))) = columnPairing\n  stabilizer_transitive : ∀ x y : Omega, ∃ s : SextetStabilizer, s.val.val x = y\n  code_group_transitive : ∀ x y : Omega, ∃ g : Mathieu24CodeModel, g.val x = y`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/HexacodeSextetPackage.lean:10:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem hexacode_sextet_package : HexacodeSextetPackage\n    where\n  hexacode_group := hexacode_automorphism_package\n  sextet_geometry := sextet_geometry_package\n  full_stabilizer := sextetStabilizer_mem_iff\n  affine_criterion := affine_code_preservation_iff\n  affine_isomorphism := sextetAffineHom_bijective\n  coordinates := sextetAffineEquiv_coordinates\n  inverse_parameters := sextetAffineEquiv_inverse_parameters\n  order := sextetStabilizer_card\n  translation_injective := sextetTranslation_injective\n  quotient_surjective := sextetQuotient_surjective\n  split := sextet_section_splits\n  translation_kernel := sextetQuotient_kernel\n  translation_kernel_order := sextetQuotient_kernel_card\n  column_kernel_isomorphism := ⟨sextetColumnKernelEquiv⟩\n  column_kernel_order := sextetCoordinate_kernel_card\n  conjugation := sextet_translation_conjugation\n  preserves_C0 := sextet_preserves_C0\n  recovery_equivariant := recoverHex_equivariant\n  preserves_R0 := sextet_preserves_R0\n  translations_trivial_quotient := sextet_translation_trivial_recovery\n  markings := sextet_marking_compatibility\n  trio := sextet_trio_iff_pairing\n  stabilizer_transitive := sextet_coordinate_transitive\n  code_group_transitive := golay_coordinate_transitive`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/HexacodeSextetPackage.lean:10:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/HexacodeSextetPackage.lean:10:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Mathieu.SextetMarkings transitive imports (legacy)",
+       "2cc6b327e4ba6399"],
+      ["Atlas.Mathieu.SextetMarkings:importAllArts", "fb73c9f7a6eb29a3"],
+      ["Atlas.Mathieu.SextetTrio transitive imports (legacy)",
+       "2cc6b327e4ba6399"],
+      ["Atlas.Mathieu.SextetTrio:importAllArts", "f1483ab60bb1129b"],
+      ["Atlas.Mathieu.SextetTransitivity transitive imports (legacy)",
+       "2cc6b327e4ba6399"],
+      ["Atlas.Mathieu.SextetTransitivity:importAllArts",
+       "7eaf6284c68a9fb5"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Mathieu/HexacodeSextetPackage.lean",
+   "18bae36f34920fd8"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Mathieu.HexacodeSextetPackage", "5c89fa7359c02c4e"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "2147152cfee07c49"}

@@ -1,0 +1,51 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["2950f3a0dde4f5d0.olean"],
+  "m": false,
+  "i": "85bf5d2a8cb836ed.ilean",
+  "c": "bf27575c744c5748.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylSameRoot.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylSameRoot.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylSameRoot.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylSameRoot.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylSameRoot.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylSameRoot.lean:18:66: This simp argument is unused:\n  map_smul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rootEquiv, transvection_apply, step_single, h, map_add, S.weylEquiv_single_neg, S.weylEquiv_single_pos,\n    S.weylEquiv_single_zero, S.pairing_reflection, S.involutive, Finsupp.smul_single, smul_eq_mul, mul_assoc,\n    mul_left_comm, mul_comm, add_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylSameRoot.lean:20:28: This simp argument is unused:\n  S.involutive\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rootEquiv, transvection_apply, step_single, h, map_add, map_smul, S.weylEquiv_single_neg,\n    S.weylEquiv_single_pos, S.weylEquiv_single_zero, S.pairing_reflection, Finsupp.smul_single, smul_eq_mul, mul_assoc,\n    mul_left_comm, mul_comm, add_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylSameRoot.lean:21:19: This simp argument is unused:\n  mul_assoc\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rootEquiv, transvection_apply, step_single, h, map_add, map_smul, S.weylEquiv_single_neg,\n    S.weylEquiv_single_pos, S.weylEquiv_single_zero, S.pairing_reflection, S.involutive, Finsupp.smul_single,\n    smul_eq_mul, mul_left_comm, mul_comm, add_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylSameRoot.lean:21:30: This simp argument is unused:\n  mul_left_comm\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rootEquiv, transvection_apply, step_single, h, map_add, map_smul, S.weylEquiv_single_neg,\n    S.weylEquiv_single_pos, S.weylEquiv_single_zero, S.pairing_reflection, S.involutive, Finsupp.smul_single,\n    smul_eq_mul, mul_assoc, mul_comm, add_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.Integral.MinusculeTorusConjugation transitive imports (legacy)",
+       "59f03b83438c1cb9"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeTorusConjugation:importAllArts",
+       "b1c9c7701f99b93d"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/MinusculeWeylSameRoot.lean",
+   "c0a2a04c6ba159e2"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Integral.MinusculeWeylSameRoot",
+   "9cca580967aec486"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "4cee787e175b5b66"}

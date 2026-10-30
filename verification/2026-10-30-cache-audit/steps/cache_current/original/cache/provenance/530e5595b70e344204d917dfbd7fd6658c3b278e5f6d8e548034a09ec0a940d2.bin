@@ -1,0 +1,70 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["8e2580765852d441.olean"],
+  "m": false,
+  "i": "6a2ad58167db78ec.ilean",
+  "c": "2c482247f75e517e.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Codes/HexacodeUniqueness.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/HexacodeUniqueness.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/HexacodeUniqueness.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Codes/HexacodeUniqueness.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Codes/HexacodeUniqueness.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Codes/HexacodeUniqueness.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeUniqueness.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeUniqueness.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nAmbient monomial equivalence, not merely an abstract code-space isomorphism. -/\ndef MonomiallyEquivalent (D E : Submodule Bit HexWord) : Prop :=\n  ∃ g : Monomial HexIndex, ∀ w : HexWord, w ∈ D ↔ Monomial.act g w ∈ E`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeUniqueness.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem mds_mem_graph (D : Submodule Bit HexWord) (hD : IsHexMDS D)\n    (w : HexWord) : w ∈ D ↔ w ∈ Set.range (kleinGraphWord (mdsCoefficientEquiv D hD)) :=\n  by\n  constructor\n  · intro hw\n    refine ⟨mdsInputEquiv D hD ⟨w, hw⟩, ?_⟩\n    rw [← mdsEncoder_graph]\n    change ((mdsInputEquiv D hD).symm (mdsInputEquiv D hD ⟨w, hw⟩)).val = w\n    rw [LinearEquiv.symm_apply_apply]\n  · rintro ⟨x, rfl⟩\n    rw [← mdsEncoder_graph]\n    exact ((mdsInputEquiv D hD).symm x).prop`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeUniqueness.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem hex_mds_normal_form (D : Submodule Bit HexWord) (hD : IsHexMDS D) :\n    ∃ g : Monomial HexIndex, ∀ w : HexWord, w ∈ D ↔ Monomial.act g w ∈ KleinNormalWords :=\n  by\n  obtain ⟨g, hg⟩ := mds_graph_normal_form (mdsCoefficientEquiv D hD) (mdsMatrix_valid D hD)\n  exact ⟨g, fun w => (mds_mem_graph D hD w).trans (hg w)⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeUniqueness.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem hexacode_isHexMDS : IsHexMDS hexacode :=\n  ⟨hexacode_finrank, hexacode_minimum⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeUniqueness.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nDimension six and minimum weight four already force the actual additive hexacode. -/\ntheorem hexacode_unique_of_dimension_minimum (D : Submodule Bit HexWord) (hd : Module.finrank Bit D = 6)\n    (hm : ∀ w ∈ D, w ≠ 0 → 4 ≤ hammingNorm w) : MonomiallyEquivalent D hexacode :=\n  by\n  obtain ⟨g, hg⟩ := hex_mds_normal_form D ⟨hd, hm⟩\n  obtain ⟨h, hh⟩ := hex_mds_normal_form hexacode hexacode_isHexMDS\n  refine ⟨h⁻¹ * g, ?_⟩\n  intro w\n  rw [hh, ← Monomial.act_mul]\n  simpa only [mul_inv_cancel_left] using hg w`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeUniqueness.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem selfDual_hex_finrank (D : Submodule Bit HexWord) (hD : D = dual D) :\n    Module.finrank Bit D = 6 :=\n  by\n  have hd := wordPolar.finrank_orthogonal wordPolar_nondegenerate D\n  change Module.finrank Bit (dual D) = Module.finrank Bit HexWord - Module.finrank Bit D at hd\n  have ha : Module.finrank Bit HexWord = 12 :=\n    by\n    change Module.finrank Bit (HexIndex → Bit × Bit) = 12\n    rw [Module.finrank_pi_fintype]\n    simp [Module.finrank_prod, HexIndex]\n  rw [← hD, ha] at hd\n  have hd' : Module.finrank Bit D = 12 - Module.finrank Bit D := hd\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeUniqueness.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nThe even self-dual formulation; evenness is unnecessary for the stronger theorem. -/\ntheorem hexacode_unique_even_selfDual (D : Submodule Bit HexWord) (_he : ∀ w ∈ D, Even (hammingNorm w))\n    (hs : D = dual D) (hm : ∀ w ∈ D, w ≠ 0 → 4 ≤ hammingNorm w) : MonomiallyEquivalent D hexacode :=\n  hexacode_unique_of_dimension_minimum D (selfDual_hex_finrank D hs) hm`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeUniqueness.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/HexacodeUniqueness.lean:8:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Codes.HexacodeNormalForm transitive imports (legacy)",
+       "64961f09d65cf62e"],
+      ["Atlas.Codes.HexacodeNormalForm:importAllArts", "676edb74f67a2df4"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Codes/HexacodeUniqueness.lean",
+   "05b616e925f7811f"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Codes.HexacodeUniqueness", "5087c2dcca4baf7d"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "a2a875cef71c5414"}

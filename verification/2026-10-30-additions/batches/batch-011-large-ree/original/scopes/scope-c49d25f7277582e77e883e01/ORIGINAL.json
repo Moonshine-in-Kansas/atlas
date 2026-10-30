@@ -1,0 +1,152 @@
+{
+  "id": "staged-TailLeviNormalization-repair20",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "F4Work.TailLeviNormalization"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.GroupTheory.TailLeviNormalizer.conjugate_mul_of_commute",
+      "module": "F4Work.TailLeviNormalizerLemmas",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.TailLeviNormalizer.normalizes_conjugated_range",
+      "module": "F4Work.TailLeviNormalizerLemmas",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.TailLeviNormalizer.le_normalizer_sup",
+      "module": "F4Work.TailLeviNormalizerLemmas",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.TailLeviNormalizer.le_normalizer_subgroupListJoin_seven",
+      "module": "F4Work.TailLeviNormalizerLemmas",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.torusModel_range_le_shortRoot_normalizer",
+      "module": "F4Work.TailLeviNormalization",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.torusModel_range_le_longRoot_normalizer",
+      "module": "F4Work.TailLeviNormalization",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.weylRhoModel_mem_modelTorus_normalizer",
+      "module": "F4Work.TailLeviNormalization",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.weylSigmaModel_mem_modelTorus_normalizer",
+      "module": "F4Work.TailLeviNormalization",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.alternatingWeylHom_mem_modelTorus_normalizer",
+      "module": "F4Work.TailLeviNormalization",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.torusModel_range_le_alternatingShort_normalizer",
+      "module": "F4Work.TailLeviNormalization",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.torusModel_range_le_alternatingLong_normalizer",
+      "module": "F4Work.TailLeviNormalization",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.torusModel_range_le_tail_normalizer",
+      "module": "F4Work.TailLeviNormalization",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.alternatingShortRootHom_zero_eq",
+      "module": "F4Work.TailLeviNormalization",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.shortRootModelEmbedding_mem_tail_normalizer",
+      "module": "F4Work.TailLeviNormalization",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiEmbedding_mem_tail_normalizer",
+      "module": "F4Work.TailLeviNormalization",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.modelSuzukiProduct_le_tail_normalizer",
+      "module": "F4Work.TailLeviNormalization",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.oppositePairStabilizer_le_tail_normalizer",
+      "module": "F4Work.TailLeviNormalization",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.positiveRootTail_normal_in_join_levi",
+      "module": "F4Work.TailLeviNormalization",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiProductTailAction",
+      "module": "F4Work.TailLeviNormalization",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.ReeF4.suzukiProductTailAction_apply",
+      "module": "F4Work.TailLeviNormalization",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-TailLeviNormalization-repair20-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis.",
+        "Atlas.F4.",
+        "Atlas.ReeF4.simple_of_large",
+        "Atlas.ReeF4.model_isPerfect",
+        "Atlas.ReeF4.card_Model",
+        "Atlas.ReeF4.elementarySubgroup_eq_top"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "generic-helpers-independent-of-Ree-and-Albert",
+      "roots": [
+        "Atlas.GroupTheory.TailLeviNormalizer.conjugate_mul_of_commute",
+        "Atlas.GroupTheory.TailLeviNormalizer.normalizes_conjugated_range",
+        "Atlas.GroupTheory.TailLeviNormalizer.le_normalizer_sup",
+        "Atlas.GroupTheory.TailLeviNormalizer.le_normalizer_subgroupListJoin_seven"
+      ],
+      "forbid_name_prefixes": [
+        "Atlas.ReeF4.",
+        "Atlas.Albert.",
+        "Atlas.F4."
+      ]
+    }
+  ]
+}

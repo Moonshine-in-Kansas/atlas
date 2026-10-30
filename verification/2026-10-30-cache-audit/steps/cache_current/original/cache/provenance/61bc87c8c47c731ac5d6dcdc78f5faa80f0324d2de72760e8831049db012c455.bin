@@ -1,0 +1,1773 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["c0a7d5e469afd19a.olean"],
+  "m": false,
+  "i": "f8abe444590dd5f6.ilean",
+  "c": "5633d1944e7b97ee.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/F4/OppositeCellSpanning.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/F4/OppositeCellSpanning.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/F4/OppositeCellSpanning.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/F4/OppositeCellSpanning.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/F4/OppositeCellSpanning.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:38:6: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [cellOrigin, cellU, cellV, cellZ, cellUZ, cellVZ, cellZZ, oppositeZeroChart, oppositeChart,\n    oppositeDiagonalC, oppositeA, oppositeB, oppositeC, Matrix.vecHead, Matrix.vecTail]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.zero_eta, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.mk_one, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val,\n    Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one, Matrix.cons_val, Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one, Matrix.cons_val, Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one, Matrix.cons_val, Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one, Matrix.cons_val, Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one, Matrix.cons_val, Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one, Matrix.cons_val, Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one, Matrix.cons_val, Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Fin.zero_eta, Matrix.cons_val', Matrix.cons_val_zero,\n    Matrix.cons_val_fin_one, Matrix.cons_val, Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one,\n    Matrix.cons_val_zero, Matrix.cons_val_fin_one, Matrix.cons_val]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one,\n    Matrix.cons_val_zero, Matrix.cons_val_fin_one, Matrix.cons_val]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one,\n    Matrix.cons_val_zero, Matrix.cons_val_fin_one, Matrix.cons_val]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one,\n    Matrix.cons_val_zero, Matrix.cons_val_fin_one, Matrix.cons_val]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one,\n    Matrix.cons_val_zero, Matrix.cons_val_fin_one, Matrix.cons_val]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one,\n    Matrix.cons_val_zero, Matrix.cons_val_fin_one, Matrix.cons_val]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one,\n    Matrix.cons_val_zero, Matrix.cons_val_fin_one, Matrix.cons_val]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Fin.mk_one, Matrix.cons_val', Matrix.cons_val_one,\n    Matrix.cons_val_zero, Matrix.cons_val_fin_one, Matrix.cons_val]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:40:4: `apply Prod.ext`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:6: `ext k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:41:13: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:6: `ext k l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:15: `fin_cases k`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: `simp [cellOrigin,cellU,cellV,cellZ,cellUZ,cellVZ,cellZZ,\n      oppositeZeroChart,oppositeChart,oppositeDiagonalC,oppositeA,oppositeB,oppositeC,\n      Pi.single_apply,Matrix.vecHead,Matrix.vecTail]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:36:4: Try this:\n  [apply] simp only [Fin.isValue, Fin.reduceFinMk, Matrix.cons_val', Matrix.cons_val, Matrix.cons_val_fin_one,\n    Matrix.cons_val_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/F4/OppositeCellSpanning.lean:42:31: `fin_cases l`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 36!",
+   "level": "info"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Algebra.Albert.OppositeChart transitive imports (legacy)",
+       "8b88cffec0617ce3"],
+      ["Atlas.Algebra.Albert.OppositeChart:importAllArts", "195f994e0b4810ca"],
+      ["Atlas.Algebra.Albert.UniversalCriterion transitive imports (legacy)",
+       "e4083c70ef83e354"],
+      ["Atlas.Algebra.Albert.UniversalCriterion:importAllArts",
+       "5c734fb1816d1ae5"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/F4/OppositeCellSpanning.lean",
+   "e68e38fb11585c26"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.F4.OppositeCellSpanning",
+   "78f8e004f7a77dc3"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "99bd6068f6683527"}

@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "chevalley-twisted-e6-companion-diagram",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.TwistedE6.DualCompanionDiagram",
+    "Atlas.LinearGroups.Chevalley.TwistedE6.CompanionDiagram"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.DualCompanion",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualCompanionDiagram.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualAmbientDiagram",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualCompanionDiagram.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualAmbientDiagram_involutive",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualCompanionDiagram.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualAmbientDiagram_X",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualCompanionDiagram.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualAmbientDiagram_Y",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualCompanionDiagram.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualAmbientDiagram_mem",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualCompanionDiagram.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualCompanionDiagram",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualCompanionDiagram.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualCompanionDiagram_involutive",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualCompanionDiagram.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualCompanionDiagram_X",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualCompanionDiagram.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualCompanionDiagram_Y",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualCompanionDiagram.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualCompanionDiagram_rho",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/DualCompanionDiagram.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualCompanionEquiv",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/CompanionDiagram.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualCompanionEquiv_X",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/CompanionDiagram.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualCompanionEquiv_Y",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/CompanionDiagram.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.dualCompanionEquiv_rho",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/CompanionDiagram.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionDiagram",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/CompanionDiagram.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionDiagram_involutive",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/CompanionDiagram.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionDiagram_X",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/CompanionDiagram.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionDiagram_Y",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/CompanionDiagram.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionDiagram_rho",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/CompanionDiagram.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionDiagram_map",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/CompanionDiagram.lean",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "chevalley-twisted-e6-companion-diagram-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ]
+}

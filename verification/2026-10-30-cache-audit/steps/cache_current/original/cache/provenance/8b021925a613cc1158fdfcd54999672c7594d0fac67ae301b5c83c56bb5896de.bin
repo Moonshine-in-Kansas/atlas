@@ -1,0 +1,99 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["42c40a8754d70692.olean"],
+  "m": false,
+  "i": "2cb99299b605ba81.ilean",
+  "c": "11ffd0472458699c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateFramePointwiseKernel.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/CoordinateFramePointwiseKernel.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateFramePointwiseKernel.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/CoordinateFramePointwiseKernel.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `local instance : DecidableEq E :=\n  Fintype.decidablePiFintype`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nA binary three-dimensional linear map preserving every one-dimensional subspace is scalar. -/\ntheorem binaryMatrix_fix_lines_scalar (A : BinaryMatrix)\n    (h : ∀ p : Point, matrixAt A p.val = 0 ∨ matrixAt A p.val = p.val) : A = 0 ∨ A = 1 := by decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:8:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 2000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:11:10: missing space in the source\n\nThis part of the code\n  '∀p : Point,matrixAt'\nshould be written as\n  '∀ p :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem code_fix_coordinateCross_block (g : codeGroup)\n    (hg : ∀ i : Coordinate, g • coordinateCross i = coordinateCross i) : codeBlockLinearHom g = 1 :=\n  by\n  have hp (i : Coordinate) : (g.val.right i).1 = i.1 :=\n    by\n    apply coordinateCross_row_of_eq\n    rw [← coordinateCross_action]\n    exact hg i\n  apply LinearEquiv.ext\n  intro x\n  by_cases hx : x = 0\n  · subst x; exact map_zero _\n  · exact (codeBlockLinear_coordinates g (⟨x, hx⟩, 0)).trans (congrArg Subtype.val (hp (⟨x, hx⟩, 0)))`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:15:11: missing space in the source\n\nThis part of the code\n  '∀i : Coordinate,g'\nshould be written as\n  '∀ i :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nPointwise fixation of the Gaussian coordinate frame leaves only the identity or I permutation. -/\ntheorem code_fix_coordinateCross_permutation (g : codeGroup)\n    (hg : ∀ i : Coordinate, g • coordinateCross i = coordinateCross i) :\n    g.val.right = 1 ∨ g.val.right = codeI.val.right :=\n  by\n  have hb : codePermutationHom g ∈ binaryBlockLinearHom.ker := code_fix_coordinateCross_block g hg\n  rw [binaryBlockLinearHom_kernel_translations] at hb\n  obtain ⟨A, hA⟩ := hb\n  have he : coordinateTranslation A.toAdd = g.val.right := congrArg Subtype.val hA\n  have hp (p : Point) : matrixAt A.toAdd p.val = 0 ∨ matrixAt A.toAdd p.val = p.val :=\n    by\n    have hx := hg (p, 0)\n    rw [coordinateCross_action, ← he] at hx\n    rcases (coordinateCross_eq_iff _ _).mp hx.symm with h | h\n    · left\n      have hh := congrArg Prod.snd h\n      change 0 = 0 + matrixAt A.toAdd p.val at hh\n      simpa only [zero_add] using hh.symm\n    · right\n      rw [codeI_coordinate] at h\n      have hh := congrArg Prod.snd h\n      change 0 + p.val = 0 + matrixAt A.toAdd p.val at hh\n      simpa only [zero_add] using hh.symm\n  rcases binaryMatrix_fix_lines_scalar A.toAdd hp with hA | hA\n  · left\n    rw [← he, hA]\n    apply Equiv.ext\n    intro z\n    change (z.1, z.2 + matrixAt 0 z.1.val) = z\n    have hz : matrixAt (0 : BinaryMatrix) z.1.val = 0 := Matrix.zero_mulVec _\n    rw [hz, add_zero]\n  · right\n    rw [← he, hA]\n    apply Equiv.ext\n    intro z\n    rw [codeI_coordinate]\n    change (z.1, z.2 + matrixAt 1 z.1.val) = (z.1, z.2 + z.1.val)\n    have hz : matrixAt (1 : BinaryMatrix) z.1.val = z.1.val := Matrix.one_mulVec _\n    rw [hz]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:27:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:29:11: missing space in the source\n\nThis part of the code\n  '∀i : Coordinate,g'\nshould be written as\n  '∀ i :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FullPointStabilizer transitive imports (legacy)",
+       "702b78b7ee455941"],
+      ["Atlas.Rudvalis.FullPointStabilizer:importAllArts", "1f8d18c38aeb1c36"],
+      ["Atlas.Rudvalis.PointFixingTranslations transitive imports (legacy)",
+       "c0c56656ef4953fc"],
+      ["Atlas.Rudvalis.PointFixingTranslations:importAllArts",
+       "0780691dcb2e1eb3"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/CoordinateFramePointwiseKernel.lean",
+   "2625e978dd04fc8e"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.CoordinateFramePointwiseKernel",
+   "1b90c01299a42f62"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "eeb00596d982a0b0"}

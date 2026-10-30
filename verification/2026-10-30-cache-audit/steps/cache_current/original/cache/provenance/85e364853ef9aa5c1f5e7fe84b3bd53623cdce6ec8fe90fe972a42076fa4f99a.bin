@@ -1,0 +1,180 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["db2ad8c72ded409a.olean"],
+  "m": false,
+  "i": "b92753af9f6b8d69.ilean",
+  "c": "b65f95f0caed3f18.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Triality/TorusAction.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Triality/TorusAction.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Triality/TorusAction.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Triality/TorusAction.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Triality/TorusAction.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:20:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:27:36: Variable name `hdeg` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hdeg\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:43:49: This simp argument is unused:\n  FiniteCubic.norm_formula hdeg\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.sigma_cube hdeg, Algebra.smul_def, shortRoot, pinnedRoot, Subgroup.coe_mul, LinearEquiv.mul_apply,\n    differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:44:6: This simp argument is unused:\n  FiniteCubic.sigma_cube hdeg\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, Algebra.smul_def, shortRoot, pinnedRoot, Subgroup.coe_mul, LinearEquiv.mul_apply,\n    differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:46:19: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:39:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:46:19: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:67:6: This simp argument is unused:\n  FiniteCubic.sigma_cube hdeg\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, Algebra.smul_def, longRoot, pinnedRoot, Subgroup.coe_mul, LinearEquiv.mul_apply,\n    differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:68:6: This simp argument is unused:\n  Subgroup.coe_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, FiniteCubic.sigma_cube hdeg, Algebra.smul_def, longRoot, pinnedRoot,\n    LinearEquiv.mul_apply, differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:68:24: This simp argument is unused:\n  LinearEquiv.mul_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, FiniteCubic.sigma_cube hdeg, Algebra.smul_def, longRoot, pinnedRoot,\n    Subgroup.coe_mul, differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:68:69: This simp argument is unused:\n  sumRoot_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, FiniteCubic.sigma_cube hdeg, Algebra.smul_def, longRoot, pinnedRoot,\n    Subgroup.coe_mul, LinearEquiv.mul_apply, differenceRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:69:19: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:62:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:69:19: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:89:49: This simp argument is unused:\n  FiniteCubic.norm_formula hdeg\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.sigma_cube hdeg, Algebra.smul_def, nextShortRoot, pinnedRoot, Subgroup.coe_mul, LinearEquiv.mul_apply,\n    differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:90:68: This simp argument is unused:\n  pinnedRoot\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, FiniteCubic.sigma_cube hdeg, Algebra.smul_def, nextShortRoot, Subgroup.coe_mul,\n    LinearEquiv.mul_apply, differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:92:19: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:85:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:92:19: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:112:49: This simp argument is unused:\n  FiniteCubic.norm_formula hdeg\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.sigma_cube hdeg, Algebra.smul_def, middleRoot, pinnedRoot, Subgroup.coe_mul, LinearEquiv.mul_apply,\n    differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:113:65: This simp argument is unused:\n  pinnedRoot\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, FiniteCubic.sigma_cube hdeg, Algebra.smul_def, middleRoot, Subgroup.coe_mul,\n    LinearEquiv.mul_apply, differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:115:19: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:108:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:115:19: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:136:6: This simp argument is unused:\n  FiniteCubic.sigma_cube hdeg\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, Algebra.smul_def, highLongRoot, pinnedRoot, Subgroup.coe_mul, LinearEquiv.mul_apply,\n    differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:136:67: This simp argument is unused:\n  pinnedRoot\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, FiniteCubic.sigma_cube hdeg, Algebra.smul_def, highLongRoot, Subgroup.coe_mul,\n    LinearEquiv.mul_apply, differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:137:6: This simp argument is unused:\n  Subgroup.coe_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, FiniteCubic.sigma_cube hdeg, Algebra.smul_def, highLongRoot, pinnedRoot,\n    LinearEquiv.mul_apply, differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:137:24: This simp argument is unused:\n  LinearEquiv.mul_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, FiniteCubic.sigma_cube hdeg, Algebra.smul_def, highLongRoot, pinnedRoot,\n    Subgroup.coe_mul, differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:137:47: This simp argument is unused:\n  differenceRoot_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, FiniteCubic.sigma_cube hdeg, Algebra.smul_def, highLongRoot, pinnedRoot,\n    Subgroup.coe_mul, LinearEquiv.mul_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:137:87: This simp argument is unused:\n  f\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, FiniteCubic.sigma_cube hdeg, Algebra.smul_def, highLongRoot, pinnedRoot,\n    Subgroup.coe_mul, LinearEquiv.mul_apply, differenceRoot_apply, sumRoot_apply, e]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:138:19: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:131:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:138:19: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:142:38: Variable name `hdeg` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hdeg\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:158:49: This simp argument is unused:\n  FiniteCubic.norm_formula hdeg\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.sigma_cube hdeg, Algebra.smul_def, highestRoot, pinnedRoot, Subgroup.coe_mul, LinearEquiv.mul_apply,\n    differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:159:6: This simp argument is unused:\n  FiniteCubic.sigma_cube hdeg\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, Algebra.smul_def, highestRoot, pinnedRoot, Subgroup.coe_mul, LinearEquiv.mul_apply,\n    differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:159:66: This simp argument is unused:\n  pinnedRoot\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, FiniteCubic.sigma_cube hdeg, Algebra.smul_def, highestRoot, Subgroup.coe_mul,\n    LinearEquiv.mul_apply, differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:160:6: This simp argument is unused:\n  Subgroup.coe_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, FiniteCubic.sigma_cube hdeg, Algebra.smul_def, highestRoot, pinnedRoot,\n    LinearEquiv.mul_apply, differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:160:24: This simp argument is unused:\n  LinearEquiv.mul_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, FiniteCubic.sigma_cube hdeg, Algebra.smul_def, highestRoot, pinnedRoot,\n    Subgroup.coe_mul, differenceRoot_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:160:47: This simp argument is unused:\n  differenceRoot_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, FiniteCubic.sigma_cube hdeg, Algebra.smul_def, highestRoot, pinnedRoot,\n    Subgroup.coe_mul, LinearEquiv.mul_apply, sumRoot_apply, e, f]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:160:87: This simp argument is unused:\n  f\n\nHint: Omit it from the simp argument list.\n  [apply] simp [torusMap, torusWeights, diagonalEmbedding, diagonalLinear, torusScale, sigmaUnit, baseUnit, normUnit,\n    FiniteCubic.norm_formula hdeg, FiniteCubic.sigma_cube hdeg, Algebra.smul_def, highestRoot, pinnedRoot,\n    Subgroup.coe_mul, LinearEquiv.mul_apply, differenceRoot_apply, sumRoot_apply, e]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:161:19: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:154:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:161:19: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:164:11: missing space in the source\n\nThis part of the code\n  'h*a=c*h) (hb'\nshould be written as\n  'h * a'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Triality/TorusAction.lean:164:26: missing space in the source\n\nThis part of the code\n  'h*b=d*h) :'\nshould be written as\n  'h * b'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Triality.TorusRankOne transitive imports (legacy)",
+       "ea2852010d587bd2"],
+      ["Atlas.LinearGroups.Triality.TorusRankOne:importAllArts",
+       "82170cb610b8c459"],
+      ["Atlas.LinearGroups.Triality.Unipotent transitive imports (legacy)",
+       "9731883c720f0989"],
+      ["Atlas.LinearGroups.Triality.Unipotent:importAllArts",
+       "6520d3050b806348"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Triality/TorusAction.lean",
+   "3a3cd78a03481b91"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Triality.TorusAction", "329a527a0529cfd1"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "616bc595dbd7c534"}

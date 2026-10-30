@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/j1-bridges-20261030/environment.json",
+  "id": "release-v1-2-j1-bridges-20261030-comparison-ree-three-structure-successor",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.ReeG2.SmallParameter"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.ReeG2.smallParameter_borel_order",
+      "module": "Atlas.LinearGroups.ReeG2.SmallParameter",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.smallParameter_card_condition",
+      "module": "Atlas.LinearGroups.ReeG2.SmallParameter",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.smallParameter_faithful",
+      "module": "Atlas.LinearGroups.ReeG2.SmallParameter",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.smallParameter_order",
+      "module": "Atlas.LinearGroups.ReeG2.SmallParameter",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.smallParameter_point_count",
+      "module": "Atlas.LinearGroups.ReeG2.SmallParameter",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.ReeG2.smallParameter_primitive",
+      "module": "Atlas.LinearGroups.ReeG2.SmallParameter",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independence-from-target-comparison",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.ReeG2.simple",
+        "Atlas.ReeG2.isPerfect",
+        "Atlas.Comparisons.Exceptional.ReeThree",
+        "Atlas.Comparisons.ReeThree."
+      ],
+      "forbid_modules": [
+        "Atlas.Comparisons.Exceptional.ReeThree.SemilinearTarget",
+        "Atlas.Comparisons.Exceptional.ReeThree.FieldActionFaithful"
+      ]
+    }
+  ]
+}

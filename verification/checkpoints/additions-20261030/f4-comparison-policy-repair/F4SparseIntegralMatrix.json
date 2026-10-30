@@ -1,0 +1,83 @@
+{
+  "id": "staged-F4SparseIntegralMatrix",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.Comparison.F4.SparseIntegralMatrix"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.LinearAlgebra.SparseIntegralMatrix.Entry",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.SparseIntegralMatrix",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.SparseIntegralMatrix.denote",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.SparseIntegralMatrix",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.SparseIntegralMatrix.denote_nil",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.SparseIntegralMatrix",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.SparseIntegralMatrix.denote_cons",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.SparseIntegralMatrix",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.SparseIntegralMatrix.denote_append",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.SparseIntegralMatrix",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.SparseIntegralMatrix.pairProduct",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.SparseIntegralMatrix",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.SparseIntegralMatrix.product",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.SparseIntegralMatrix",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.SparseIntegralMatrix.denote_pairProduct",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.SparseIntegralMatrix",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.LinearAlgebra.SparseIntegralMatrix.denote_product",
+      "module": "Atlas.LinearGroups.Chevalley.Comparison.F4.SparseIntegralMatrix",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-F4SparseIntegralMatrix-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Tits.",
+        "Atlas.Rudvalis.",
+        "Atlas.Chevalley.",
+        "Atlas.ReeF4.",
+        "Atlas.Albert.",
+        "Atlas.F4."
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.F4.Order",
+        "Atlas.LinearGroups.F4.Simplicity",
+        "Atlas.LinearGroups.Chevalley.ModelF4Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

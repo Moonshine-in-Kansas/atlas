@@ -1,0 +1,165 @@
+{
+  "id": "staged-FixedParameters",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "FamilyWork.FixedParameters"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.FixedLabel",
+      "kind": "definition",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.PairLabel",
+      "kind": "definition",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.Parameters",
+      "kind": "definition",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.card_fixedLabel",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.card_pairLabel",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.FixedFunctions",
+      "kind": "definition",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.expand",
+      "kind": "definition",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.expand_fixed",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.expand_pair",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.expand_partner",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.expand_compatible",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.assemble",
+      "kind": "definition",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.assemble_val",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.fixedValue_exists",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.extract",
+      "kind": "definition",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.extract_fixed_val",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.extract_pair_val",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.assemble_extract",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.extract_assemble",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.fixedFunctionsEquiv",
+      "kind": "definition",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.fixedFunctionsEquiv_apply_pair",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.fixedFunctionsEquiv_apply_fixed",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.fixedFunctionsEquiv_symm_val",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.parameters_card",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.PositiveDiagramParameters.fixedFunctions_card",
+      "kind": "theorem",
+      "module": "FamilyWork.FixedParameters"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-FixedParameters-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-FixedParameters-no-selected-model",
+      "all_roots": true,
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.Models",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightCompanion",
+        "Atlas.LinearGroups.Chevalley.SelectedWeightOrbits"
+      ]
+    }
+  ]
+}

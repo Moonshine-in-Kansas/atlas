@@ -1,0 +1,83 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["d4a2955a7b3c26d6.olean"],
+  "m": false,
+  "i": "e7edee87795b1f9a.ilean",
+  "c": "74c1b2f6595e862f.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/F4/LeviSpecialImage.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/F4/LeviSpecialImage.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/F4/LeviSpecialImage.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/F4/LeviSpecialImage.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/F4/LeviSpecialImage.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviSpecialImage.lean:15:33: This simp argument is unused:\n  Fin.sum_univ_succ\n\nHint: Omit it from the simp argument list.\n  [apply] simp [leviSingularDirection, leviShortDirection, QuadraticMap.polar, Atlas.Orthogonal.formD_apply,\n    Pi.single_apply]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviSpecialImage.lean:13:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviSpecialImage.lean:23:56: missing space in the source\n\nThis part of the code\n  'c≠0)\n '\nshould be written as\n  'c ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviSpecialImage.lean:62:45: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviSpecialImage.lean:62:60: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviSpecialImage.lean:66:45: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviSpecialImage.lean:66:60: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviSpecialImage.lean:42:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 2000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviSpecialImage.lean:75:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviSpecialImage.lean:73:48: missing space in the source\n\nThis part of the code\n  'F)≠0) (a'\nshould be written as\n  'F) ≠ 0)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/LeviSpecialImage.lean:92:4: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.F4.LeviElementaryImage transitive imports (legacy)",
+       "d49ca8ccab75190a"],
+      ["Atlas.LinearGroups.F4.LeviElementaryImage:importAllArts",
+       "ac64f0a5e12a97e1"],
+      ["Atlas.LinearGroups.F4.LeviTorusImage transitive imports (legacy)",
+       "737f2e0d0ea1eaa2"],
+      ["Atlas.LinearGroups.F4.LeviTorusImage:importAllArts",
+       "de37362c8c88aa77"],
+      ["Atlas.LinearGroups.Orthogonal.IntrinsicStandard transitive imports (legacy)",
+       "32c77f9d6c09d0d9"],
+      ["Atlas.LinearGroups.Orthogonal.IntrinsicStandard:importAllArts",
+       "3771a2986e711c01"],
+      ["Atlas.LinearGroups.Orthogonal.CompensatedTorus transitive imports (legacy)",
+       "73930129cd7ac94e"],
+      ["Atlas.LinearGroups.Orthogonal.CompensatedTorus:importAllArts",
+       "3315e7188145e070"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/F4/LeviSpecialImage.lean",
+   "a0272d44536558d0"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.F4.LeviSpecialImage", "c4e5d3c9d1f59cef"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "5d6cda36371d2902"}

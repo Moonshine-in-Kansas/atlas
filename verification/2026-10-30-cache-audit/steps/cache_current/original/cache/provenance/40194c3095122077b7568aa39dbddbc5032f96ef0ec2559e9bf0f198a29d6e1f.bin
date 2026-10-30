@@ -1,0 +1,55 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["5d26bf635e8ba13e.olean"],
+  "m": false,
+  "i": "bfb3fe7c6e095b34.ilean",
+  "c": "1f728db2bb1c775d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Fischer/BinaryFourAffineCharacters.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/BinaryFourAffineCharacters.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Fischer/BinaryFourAffineCharacters.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/BinaryFourAffineCharacters.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Fischer/BinaryFourAffineCharacters.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Fischer/BinaryFourAffineCharacters.lean:22:31: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [binaryFourBasis, hij, Ne.symm hij, add_smul, add_assoc, CharTwo.add_self_eq_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/BinaryFourAffineCharacters.lean:22:48: This simp argument is unused:\n  hij\n\nHint: Omit it from the simp argument list.\n  [apply] simp [binaryFourBasis, Pi.single_apply, Ne.symm hij, add_smul, add_assoc, CharTwo.add_self_eq_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/BinaryFourAffineCharacters.lean:22:66: This simp argument is unused:\n  add_smul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [binaryFourBasis, Pi.single_apply, hij, Ne.symm hij, add_assoc, CharTwo.add_self_eq_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/BinaryFourAffineCharacters.lean:23:52: This simp argument is unused:\n  Ne.symm hk\n\nHint: Omit it from the simp argument list.\n  [apply] simp [binaryFourBasis, Pi.single_apply, hk]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Fischer/BinaryFourAffineCharacters.lean:22:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Fischer.BinaryFourAffineOrder transitive imports (legacy)",
+       "a9592ce00b7a9c39"],
+      ["Atlas.Fischer.BinaryFourAffineOrder:importAllArts", "b679bb743ad5409d"],
+      ["Mathlib.LinearAlgebra.Pi transitive imports (legacy)",
+       "7b2b48fd01f5ac95"],
+      ["Mathlib.LinearAlgebra.Pi:importAllArts", "649696b04b257df5"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Fischer/BinaryFourAffineCharacters.lean",
+   "322bdf5a4c5c2819"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Fischer.BinaryFourAffineCharacters", "3a0985b9058ff282"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "289b9e907992ad26"}

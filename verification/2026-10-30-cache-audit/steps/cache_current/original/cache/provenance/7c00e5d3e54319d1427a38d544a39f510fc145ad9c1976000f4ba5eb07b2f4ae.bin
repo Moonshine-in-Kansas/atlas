@@ -1,0 +1,125 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["47f9e0d9b4cd4fd9.olean"],
+  "m": false,
+  "i": "f41e36e6a823373e.ilean",
+  "c": "14b59ac82dc39084.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/LatticeCrossPartition.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LatticeCrossPartition.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/LatticeCrossPartition.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LatticeCrossPartition.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/LatticeCrossPartition.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinate_four_shell_disjoint (v : MinimalShell) :\n    v ∈ coordinateShellPiece → v ∈ fourShellPiece → False :=\n  by\n  rintro ⟨a, ha⟩ ⟨b, hb⟩\n  exact coordinateShellLift_ne_minimumWordShellLift a (fourMinimumWord b) (ha.trans hb.symm)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinate_heavy_shell_disjoint (v : MinimalShell) :\n    v ∈ coordinateShellPiece → v ∈ heavyShellPiece → False :=\n  by\n  rintro ⟨a, ha⟩ ⟨b, hb⟩\n  exact coordinateShellLift_ne_minimumWordShellLift a (heavyMinimumWord b) (ha.trans hb.symm)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem four_heavy_shell_disjoint (v : MinimalShell) :\n    v ∈ fourShellPiece → v ∈ heavyShellPiece → False :=\n  by\n  rintro ⟨a, ha⟩ ⟨b, hb⟩\n  have he := minimumWordShellLift_injective (ha.trans hb.symm)\n  have hw := congrArg (fun w : MinimumWords => w.val.val) he\n  exact four_heavy_disjoint _ a.prop.2 (hw ▸ b.prop.2)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem shellPieceCrossMap_disjoint (s t : SubMulAction codeGroup MinimalShell)\n    (hd : ∀ v : MinimalShell, v ∈ s → v ∈ t → False) (v : ShellPieceCross s) (w : ShellPieceCross t) :\n    shellPieceCrossMap s v ≠ shellPieceCrossMap t w :=\n  by\n  induction v using Quotient.inductionOn\n  induction w using Quotient.inductionOn\n  rename_i v w\n  intro h\n  obtain ⟨g, hg⟩ := MulAction.mem_orbit_iff.mp (Quotient.exact h)\n  change g.val • w.val = v.val at hg\n  apply hd v.val v.prop\n  rw [← hg]\n  exact t.smul_mem' g.val w.prop`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:24:11: missing space in the source\n\nThis part of the code\n  '∀v : MinimalShell,v∈s'\nshould be written as\n  '∀ v :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinate_four_cross_disjoint (v : CoordinateCrosses)\n    (w : FourBlockCrosses) : shellPieceCrossMap coordinateShellPiece v ≠ shellPieceCrossMap fourShellPiece w :=\n  shellPieceCrossMap_disjoint _ _ coordinate_four_shell_disjoint v w`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem coordinate_heavy_cross_disjoint (v : CoordinateCrosses)\n    (w : HeavyCrosses) : shellPieceCrossMap coordinateShellPiece v ≠ shellPieceCrossMap heavyShellPiece w :=\n  shellPieceCrossMap_disjoint _ _ coordinate_heavy_shell_disjoint v w`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem four_heavy_cross_disjoint (v : FourBlockCrosses) (w : HeavyCrosses) :\n    shellPieceCrossMap fourShellPiece v ≠ shellPieceCrossMap heavyShellPiece w :=\n  shellPieceCrossMap_disjoint _ _ four_heavy_shell_disjoint v w`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem minimalShell_piece_cases (v : MinimalShell) :\n    v ∈ coordinateShellPiece ∨ v ∈ fourShellPiece ∨ v ∈ heavyShellPiece :=\n  by\n  rcases rudvalisLattice_shell_cases v.val.val v.val.prop v.prop with h | ⟨w, hw⟩\n  · left\n    obtain ⟨i, hi | hi⟩ := h\n    · exact ⟨(i, true), Subtype.ext (Subtype.ext hi.symm)⟩\n    · exact ⟨(i, false), Subtype.ext (Subtype.ext hi.symm)⟩\n  · right\n    rcases quaternary_minimum_support_cases w.val.val w.val.prop w.prop with hf | hh\n    · left\n      exact ⟨⟨w.val, w.prop, hf⟩, Subtype.ext (Subtype.ext hw.symm)⟩\n    · right\n      exact ⟨⟨w.val, w.prop, hh⟩, Subtype.ext (Subtype.ext hw.symm)⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem minimalCross_piece_cases (v : MinimalCross) :\n    (∃ a : CoordinateCrosses, shellPieceCrossMap coordinateShellPiece a = v) ∨\n      (∃ a : FourBlockCrosses, shellPieceCrossMap fourShellPiece a = v) ∨\n        (∃ a : HeavyCrosses, shellPieceCrossMap heavyShellPiece a = v) :=\n  by\n  induction v using Quotient.inductionOn\n  rename_i v\n  rcases minimalShell_piece_cases v with hc | hf | hh\n  · exact Or.inl ⟨Quotient.mk _ ⟨v, hc⟩, rfl⟩\n  · exact Or.inr (Or.inl ⟨Quotient.mk _ ⟨v, hf⟩, rfl⟩)\n  · exact Or.inr (Or.inr ⟨Quotient.mk _ ⟨v, hh⟩, rfl⟩)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem shellPieceCrossMap_image_stable\n    (s : SubMulAction codeGroup MinimalShell) (g : codeGroup) (v : ShellPieceCross s) :\n    ∃ w : ShellPieceCross s, shellPieceCrossMap s w = g • shellPieceCrossMap s v :=\n  by\n  induction v using Quotient.inductionOn\n  rename_i v\n  refine ⟨Quotient.mk _ (g • v), ?_⟩\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/LatticeCrossPartition.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.LatticeCrossOrbits transitive imports (legacy)",
+       "4df7083a0871a58f"],
+      ["Atlas.Rudvalis.LatticeCrossOrbits:importAllArts",
+       "398c8d0e859e5bfb"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/LatticeCrossPartition.lean",
+   "77ba196c9d66c775"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.LatticeCrossPartition", "91008a516bc81afb"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "3185beb1c8ffec57"}

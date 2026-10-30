@@ -1,0 +1,172 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["5483474d294f6a2a.olean"],
+  "m": false,
+  "i": "8275a841ebe9f6c4.ilean",
+  "c": "0351207144aed65d.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/HeavyRowKernelOrbit.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyRowKernelOrbit.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyRowKernelOrbit.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyRowKernelOrbit.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyRowKernelOrbit.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavy_fixedLabel_rowKernel_transitive (c : Point)\n    (v w : FixedHeavyParameters c) (a : SignedLift quaternaryCode (fixedHeavyWord c v))\n    (b : SignedLift quaternaryCode (fixedHeavyWord c w)) :\n    ∃ g : codeRowKernel, monomialHom g.val.val a.val.val = b.val.val :=\n  by\n  obtain ⟨A, hA⟩ :=\n    quadratic_minimum_fixed_radical_translation v.2.val w.2.val v.1.val w.1.val c.val c.prop v.2.prop w.2.prop\n  obtain ⟨g, hgr⟩ := codeRowKernel_translation_lift A\n  have hgs : g.val.val.right.symm = coordinateTranslation A := by rw [hgr]; rfl\n  let a' : SignedLift quaternaryCode (fixedHeavyWord c w) :=\n    ⟨⟨monomialHom g.val.val a.val.val, (g.val.prop _).mp a.val.prop⟩,\n      by\n      change reduce (monomialAction g.val.val a.val.val) = fixedHeavyWord c w\n      rw [monomialAction_reduce, a.prop.1, hgs]\n      exact hA.symm, monomial_no_twos g.val.val a.val.val a.prop.2⟩\n  have hd : hasNonzeroQuadraticPart (fixedHeavyWord c w) := ⟨(w.2.val, w.1.val, c.val), c.prop, rfl⟩\n  obtain ⟨k, hkr, hk⟩ := heavy_signedLift_sign_transitive (fixedHeavyWord c w) hd w.2.prop a' b\n  have hkP : k ∈ codeRowKernel := codeRowKernel_mem_of_rows k (by intro z; rw [hkr]; rfl)\n  refine ⟨⟨k, hkP⟩ * g, ?_⟩\n  change monomialHom (k.val * g.val.val) a.val.val = b.val.val\n  rw [map_mul]\n  exact hk`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavy_rowKernel_fixed_label_words (p : Point) (v w : HeavyMinimumWords)\n    (hv : heavyWordLabel v = p) (hw : heavyWordLabel w = p) :\n    ∃ g : codeRowKernel, monomialHom g.val.val v.val.val = w.val.val :=\n  by\n  have hpa : ∃ a : FixedHeavyParameters p, reduce v.val.val = fixedHeavyWord p a := by exact hv ▸ heavyWord_parameters v\n  have hpb : ∃ b : FixedHeavyParameters p, reduce w.val.val = fixedHeavyWord p b := by exact hw ▸ heavyWord_parameters w\n  obtain ⟨a, ha⟩ := hpa\n  obtain ⟨b, hb⟩ := hpb\n  exact\n    heavy_fixedLabel_rowKernel_transitive p a b ⟨v.val, ha, quaternary_minimum_no_twos _ v.val.prop v.prop.1⟩\n      ⟨w.val, hb, quaternary_minimum_no_twos _ w.val.prop w.prop.1⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:34:26: missing space in the source\n\nThis part of the code\n  'v=p) (hw'\nshould be written as\n  'v = p)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:34:52: missing space in the source\n\nThis part of the code\n  'w=p) :'\nshould be written as\n  'w = p)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyCrossHasLabel_rowKernel (g : codeRowKernel) (p : Point)\n    (c : MinimalCross) (hc : HeavyCrossHasLabel p c) : HeavyCrossHasLabel p (g.val • c) :=\n  by\n  obtain ⟨B, hB⟩ := codeRowKernel_coordinate_translation g⁻¹\n  intro x\n  have h := crossOrthogonal_codeGroup g.val (g.val⁻¹ • coordinateCross (p, x)) c\n  rw [smul_inv_smul] at h\n  rw [h, coordinateCross_action]\n  change ¬CrossOrthogonal (coordinateCross ((g⁻¹).val.val.right (p, x))) c\n  rw [hB]\n  exact hc (x + matrixAt B p.val)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavy_rowKernel_fixed_label_shell (p : Point) (v w : heavyShellPiece)\n    (hv : HeavyCrossHasLabel p (minimalCross v.val)) (hw : HeavyCrossHasLabel p (minimalCross w.val)) :\n    ∃ g : codeRowKernel, g.val • v.val = w.val :=\n  by\n  obtain ⟨v', hv'⟩ := v.prop\n  obtain ⟨w', hw'⟩ := w.prop\n  rw [← hv'] at hv\n  rw [← hw'] at hw\n  obtain ⟨g, hg⟩ :=\n    heavy_rowKernel_fixed_label_words p v' w' ((heavyWord_label_iff p v').mp hv) ((heavyWord_label_iff p w').mp hw)\n  refine ⟨g, ?_⟩\n  rw [← hv', ← hw', ← minimumWordShellLift_equivariant]\n  apply congrArg minimumWordShellLift\n  exact Subtype.ext (Subtype.ext hg)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavy_rowKernel_fixed_label_crosses (p : Point) (v w : HeavyCrosses)\n    (hv : HeavyCrossHasLabel p (shellPieceCrossMap heavyShellPiece v))\n    (hw : HeavyCrossHasLabel p (shellPieceCrossMap heavyShellPiece w)) :\n    ∃ g : codeRowKernel, g.val • shellPieceCrossMap heavyShellPiece v = shellPieceCrossMap heavyShellPiece w := by\n  induction v using Quotient.inductionOn with\n  | h v =>\n    induction w using Quotient.inductionOn with\n    | h w =>\n      obtain ⟨g, hg⟩ := heavy_rowKernel_fixed_label_shell p v w hv hw\n      refine ⟨g, ?_⟩\n      change g.val • minimalCross v.val = minimalCross w.val\n      rw [← minimalCross_smul, hg]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:75:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `def heavyLabelCrossPiece (p : Point) : Set MinimalCross :=\n  {c | HeavyCrossHasLabel p c ∧ ∃ v : HeavyCrosses, shellPieceCrossMap heavyShellPiece v = c}`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def heavyLabelCrossPieceEquiv (p : Point) :\n    { v : HeavyCrosses // HeavyCrossHasLabel p (shellPieceCrossMap heavyShellPiece v) } ≃ heavyLabelCrossPiece p :=\n  Equiv.ofBijective (fun v => ⟨shellPieceCrossMap heavyShellPiece v.val, v.prop, v.val, rfl⟩)\n    (by\n      constructor\n      · intro u v h; exact Subtype.ext (shellPieceCrossMap_injective _ (congrArg Subtype.val h))\n      · rintro ⟨c, hc, v, rfl⟩; exact ⟨⟨v, hc⟩, rfl⟩)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:87:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyLabelCrossPiece_card (p : Point) :\n    Nat.card (heavyLabelCrossPiece p) = 512 := by\n  rw [← Nat.card_congr (heavyLabelCrossPieceEquiv p), heavyLabelCrosses_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyCross_rowKernel_orbit (p : Point) (v : HeavyCrosses)\n    (hv : HeavyCrossHasLabel p (shellPieceCrossMap heavyShellPiece v)) :\n    MulAction.orbit codeRowKernel (shellPieceCrossMap heavyShellPiece v) = heavyLabelCrossPiece p :=\n  by\n  ext c\n  constructor\n  · intro hc\n    obtain ⟨g, rfl⟩ := MulAction.mem_orbit_iff.mp hc\n    exact ⟨heavyCrossHasLabel_rowKernel g p _ hv, shellPieceCross_range_stable heavyShellPiece g.val _ ⟨v, rfl⟩⟩\n  · rintro ⟨hc, w, rfl⟩\n    obtain ⟨g, hg⟩ := heavy_rowKernel_fixed_label_crosses p v w hv hc\n    exact MulAction.mem_orbit_iff.mpr ⟨g, hg⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:98:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:103:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyCross_label_exists (v : HeavyCrosses) :\n    ∃ p : Point, HeavyCrossHasLabel p (shellPieceCrossMap heavyShellPiece v) := by\n  induction v using Quotient.inductionOn with\n  | h v =>\n    obtain ⟨w, hw⟩ := v.prop\n    change ∃ p, HeavyCrossHasLabel p (minimalCross v.val)\n    rw [← hw]\n    exact ⟨heavyWordLabel w, (heavyWord_label_iff _ w).mpr rfl⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:108:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyCross_rowKernel_orbit_card (v : HeavyCrosses) :\n    Nat.card (MulAction.orbit codeRowKernel (shellPieceCrossMap heavyShellPiece v)) = 512 :=\n  by\n  obtain ⟨p, hp⟩ := heavyCross_label_exists v\n  rw [heavyCross_rowKernel_orbit p v hp, heavyLabelCrossPiece_card]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem heavyCross_rowKernel_stabilizer_order (v : HeavyCrosses) :\n    Nat.card (MulAction.stabilizer codeRowKernel (shellPieceCrossMap heavyShellPiece v)) = 16 :=\n  by\n  have h :=\n    Nat.card_congr (MulAction.orbitProdStabilizerEquivGroup codeRowKernel (shellPieceCrossMap heavyShellPiece v))\n  rw [Nat.card_prod, heavyCross_rowKernel_orbit_card, codeRowKernel_order] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:123:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyRowKernelOrbit.lean:7:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.FourRowKernelFibre transitive imports (legacy)",
+       "9deb6051bae042f3"],
+      ["Atlas.Rudvalis.FourRowKernelFibre:importAllArts", "fc692f10b355b18d"],
+      ["Atlas.Rudvalis.HeavyFixedTranslation transitive imports (legacy)",
+       "3a5359dbbbe24a04"],
+      ["Atlas.Rudvalis.HeavyFixedTranslation:importAllArts",
+       "9a450f91ebfa96ea"],
+      ["Atlas.Rudvalis.HeavySignTransitivity transitive imports (legacy)",
+       "ce6e20d9f8d8b4d0"],
+      ["Atlas.Rudvalis.HeavySignTransitivity:importAllArts",
+       "46cdd04d5f742af2"],
+      ["Atlas.Rudvalis.HeavyCrossLabels transitive imports (legacy)",
+       "46366aa3496039ac"],
+      ["Atlas.Rudvalis.HeavyCrossLabels:importAllArts", "74ff40eae88be84d"],
+      ["Atlas.Rudvalis.HeavyLocalOrbitSet transitive imports (legacy)",
+       "f0211a3005bb4c18"],
+      ["Atlas.Rudvalis.HeavyLocalOrbitSet:importAllArts",
+       "83d4ea4ef325a5c1"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/HeavyRowKernelOrbit.lean",
+   "cb79ceeaa8aa69fe"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.HeavyRowKernelOrbit", "6e3e622beaa3d57a"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "95e468aa63b8afc1"}

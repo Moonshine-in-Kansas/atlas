@@ -1,0 +1,134 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["b6a5b83a59077e10.olean"],
+  "m": false,
+  "i": "9bd84c6cb08b97ba.ilean",
+  "c": "a32a509ea686a62b.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/FourRowKernelFibre.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourRowKernelFibre.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/FourRowKernelFibre.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourRowKernelFibre.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/FourRowKernelFibre.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `open Atlas.Codes.Quaternary`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem codeRowKernel_mem_of_rows (g : codeGroup)\n    (hg : ∀ z : Coordinate, (g.val.right z).1 = z.1) : g ∈ codeRowKernel :=\n  by\n  change codeBlockLinearHom g = 1\n  apply LinearEquiv.ext\n  intro x\n  by_cases hx : x = 0\n  · subst x; simp\n  · let p : Point := ⟨x, hx⟩\n    have h := codeBlockLinear_coordinates g (p, 0)\n    rw [hg] at h\n    exact h`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:7:1: 'theorem codeRowKernel_mem_of_rows (g : codeGroup) (hg : ∀ z : Coordinate, (g.val.right z).1 = z.1) :\n    g ∈ codeRowKernel := by\n  change codeBlockLinearHom g = 1\n  apply LinearEquiv.ext\n  intro x\n  by_cases hx : x = 0\n  · subst x; simp\n  · let p : Point := ⟨x, hx⟩\n    have h := codeBlockLinear_coordinates g (p, 0)\n    rw [hg] at h\n    exact h' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:8:11: missing space in the source\n\nThis part of the code\n  '∀z : Coordinate,(g.val.right'\nshould be written as\n  '∀ z :'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocalOriginal_rows (z : SeedCoordinate) :\n    (fourLocalOriginalA.right z).1 = z.1 ∧ (fourLocalOriginalB.right z).1 = z.1 := by decide +kernel +revert`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:20:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 2000000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocalCode_mem_rowKernel :\n    fourLocalCodeA ∈ codeRowKernel ∧ fourLocalCodeB ∈ codeRowKernel :=\n  by\n  have hgen (g : codeGroup) (h : SignedCoordinates SeedCoordinate) (hg : g.val = seedConjugateHom h)\n    (hh : ∀ z, (h.right z).1 = z.1) : g ∈ codeRowKernel :=\n    by\n    apply codeRowKernel_mem_of_rows\n    intro z\n    obtain ⟨z, rfl⟩ := originalCoordinateEquiv.surjective z\n    rw [hg]\n    change ((seedConjugateMonomial h).right (originalCoordinateEquiv z)).1 = _\n    rw [seedConjugateMonomial_right, original_congr_apply, originalCoordinateEquiv_row, hh]\n    rfl\n  exact\n    ⟨hgen _ _ fourLocalCodeA_transport (fun z => (fourLocalOriginal_rows z).1),\n      hgen _ _ fourLocalCodeB_transport (fun z => (fourLocalOriginal_rows z).2)⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:25:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fourLocalOrbitElement_mem_rowKernel (a : E) (b c : Bool) :\n    fourLocalOrbitElement a b c ∈ codeRowKernel :=\n  by\n  apply codeRowKernel.mul_mem\n  · apply codeRowKernel_mem_of_rows\n    intro z; rfl\n  · change (if b then fourLocalCodeA else 1) * (if c then fourLocalCodeB else 1) ∈ codeRowKernel\n    apply codeRowKernel.mul_mem\n    · split_ifs; exact fourLocalCode_mem_rowKernel.1; exact codeRowKernel.one_mem\n    · split_ifs; exact fourLocalCode_mem_rowKernel.2; exact codeRowKernel.one_mem`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:45:17: The following tactic starts with 2 goals and ends with 1 goal, 1 of which is not operated on.\n  exact fourLocalCode_mem_rowKernel.1\nPlease focus on the current goal, for instance using `·` (typed as \"\\.\").\n\nNote: This linter can be disabled with `set_option linter.style.multiGoal false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:46:17: The following tactic starts with 2 goals and ends with 1 goal, 1 of which is not operated on.\n  exact fourLocalCode_mem_rowKernel.2\nPlease focus on the current goal, for instance using `·` (typed as \"\\.\").\n\nNote: This linter can be disabled with `set_option linter.style.multiGoal false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem four_rowKernel_same_residue_transitive (v w : QuaternaryWord)\n    (hv : v ∈ quaternaryCode) (hw : w ∈ quaternaryCode) (hv16 : euclideanWeight v = 16) (hw16 : euclideanWeight w = 16)\n    (hf : admissibleFourSupport (reduce v)) (he : reduce v = reduce w) :\n    ∃ t : codeRowKernel, monomialHom t.val.val v = w :=\n  by\n  have hs : admissibleFourSupport (reduce (quaternarySeed (3, 0, 0, 0))) :=\n    by\n    have hb :\n      reduce (quaternarySeed (3, 0, 0, 0)) =\n        binaryNormalMap (fourLocalBaseConstants false, outerMatrix (binaryLabel 1) (binaryLabel 1), 0) :=\n      by simpa using fourLocal_base_support false\n    exact\n      ⟨⟨binaryLabel 1, by decide⟩, fourLocalBaseConstants false, hb, by intro p hp;\n        exact (fourLocalBaseConstants_data false).1 p hp, by exact (fourLocalBaseConstants_data false).2.1⟩\n  obtain ⟨g, hg⟩ :=\n    four_minimum_transitive (quaternarySeed (3, 0, 0, 0)) v (quaternaryCode_seed _) hv fourthSeed_weight hv16 hs hf\n  let u := monomialHom g.val⁻¹ w\n  have hu : u ∈ quaternaryCode := (g⁻¹).prop w |>.mp hw\n  have hu16 : euclideanWeight u = 16 := (monomial_euclideanWeight _ _).trans hw16\n  have hur : reduce u = fourPlaneSeedResidue :=\n    by\n    have h := monomial_reduce_congr g⁻¹ w v he.symm\n    change reduce u = reduce (monomialHom g.val⁻¹ v) at h\n    rw [← hg] at h\n    simpa using h.trans (by simpa using fourthSeed_residue)\n  obtain ⟨⟨a, b, c⟩, habc⟩ := fourLocalOrbitLift_surjective ⟨⟨u, hu⟩, hu16, hur⟩\n  let h := fourLocalOrbitElement a b c\n  have hh : monomialHom h.val (quaternarySeed (3, 0, 0, 0)) = u :=\n    congrArg (fun z : minimumLift fourPlaneSeedResidue => z.val.val) habc\n  have hmem : g * h * g⁻¹ ∈ codeRowKernel :=\n    by\n    change codeBlockLinearHom (g * h * g⁻¹) = 1\n    have he : codeBlockLinearHom h = 1 := fourLocalOrbitElement_mem_rowKernel a b c\n    rw [map_mul, map_mul, map_inv, he, mul_one, mul_inv_cancel]\n  refine ⟨⟨g * h * g⁻¹, hmem⟩, ?_⟩\n  change monomialHom (g.val * h.val * g.val⁻¹) v = w\n  rw [map_mul, map_mul]\n  change monomialHom g.val (monomialHom h.val (monomialHom g.val⁻¹ v)) = w\n  rw [← hg]\n  have hinv : monomialHom g.val⁻¹ (monomialHom g.val (quaternarySeed (3, 0, 0, 0))) = quaternarySeed (3, 0, 0, 0) := by\n    simp\n  rw [hinv, hh]\n  change monomialHom g.val (monomialHom g.val⁻¹ w) = w\n  simp`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:55:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:48:1: 'theorem four_rowKernel_same_residue_transitive (v w : QuaternaryWord) (hv : v ∈ quaternaryCode)\n    (hw : w ∈ quaternaryCode) (hv16 : euclideanWeight v = 16) (hw16 : euclideanWeight w = 16)\n    (hf : admissibleFourSupport (reduce v)) (he : reduce v = reduce w) :\n    ∃ t : codeRowKernel, monomialHom t.val.val v = w :=\n  by\n  have hs : admissibleFourSupport (reduce (quaternarySeed (3, 0, 0, 0))) :=\n    by\n    have hb :\n      reduce (quaternarySeed (3, 0, 0, 0)) =\n        binaryNormalMap (fourLocalBaseConstants false, outerMatrix (binaryLabel 1) (binaryLabel 1), 0) :=\n      by simpa using fourLocal_base_support false\n    exact\n      ⟨⟨binaryLabel 1, by decide⟩, fourLocalBaseConstants false, hb, by intro p hp;\n        exact (fourLocalBaseConstants_data false).1 p hp, by exact (fourLocalBaseConstants_data false).2.1⟩\n  obtain ⟨g, hg⟩ :=\n    four_minimum_transitive (quaternarySeed (3, 0, 0, 0)) v (quaternaryCode_seed _) hv fourthSeed_weight hv16 hs hf\n  let u := monomialHom g.val⁻¹ w\n  have hu : u ∈ quaternaryCode := (g⁻¹).prop w |>.mp hw\n  have hu16 : euclideanWeight u = 16 := (monomial_euclideanWeight _ _).trans hw16\n  have hur : reduce u = fourPlaneSeedResidue :=\n    by\n    have h := monomial_reduce_congr g⁻¹ w v he.symm\n    change reduce u = reduce (monomialHom g.val⁻¹ v) at h\n    rw [← hg] at h\n    simpa using h.trans (by simpa using fourthSeed_residue)\n  obtain ⟨⟨a, b, c⟩, habc⟩ := fourLocalOrbitLift_surjective ⟨⟨u, hu⟩, hu16, hur⟩\n  let h := fourLocalOrbitElement a b c\n  have hh : monomialHom h.val (quaternarySeed (3, 0, 0, 0)) = u :=\n    congrArg (fun z : minimumLift fourPlaneSeedResidue => z.val.val) habc\n  have hmem : g * h * g⁻¹ ∈ codeRowKernel :=\n    by\n    change codeBlockLinearHom (g * h * g⁻¹) = 1\n    have he : codeBlockLinearHom h = 1 := fourLocalOrbitElement_mem_rowKernel a b c\n    rw [map_mul, map_mul, map_inv, he, mul_one, mul_inv_cancel]\n  refine ⟨⟨g * h * g⁻¹, hmem⟩, ?_⟩\n  change monomialHom (g.val * h.val * g.val⁻¹) v = w\n  rw [map_mul, map_mul]\n  change monomialHom g.val (monomialHom h.val (monomialHom g.val⁻¹ v)) = w\n  rw [← hg]\n  have hinv : monomialHom g.val⁻¹ (monomialHom g.val (quaternarySeed (3, 0, 0, 0))) = quaternarySeed (3, 0, 0, 0) := by\n    simp\n  rw [hinv, hh]\n  change monomialHom g.val (monomialHom g.val⁻¹ w) = w\n  simp' starts on column 1, but all commands should start at the beginning of the line.\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:49:11: missing space in the source\n\nThis part of the code\n  'v∈quaternaryCode)'\nshould be written as\n  'v ∈ quaternaryCode)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:49:35: missing space in the source\n\nThis part of the code\n  'w∈quaternaryCode)'\nshould be written as\n  'w ∈ quaternaryCode)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:50:29: missing space in the source\n\nThis part of the code\n  'v=16) (hw16'\nshould be written as\n  'v = 16)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:50:59: missing space in the source\n\nThis part of the code\n  'w=16)\n'\nshould be written as\n  'w = 16)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:51:58: missing space in the source\n\nThis part of the code\n  'v=reduce'\nshould be written as\n  'v = reduce'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/FourRowKernelFibre.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.CodeRowCrossStabilizer transitive imports (legacy)",
+       "a28ed3a5578a0ac4"],
+      ["Atlas.Rudvalis.CodeRowCrossStabilizer:importAllArts",
+       "b323fa74228703f4"],
+      ["Atlas.Rudvalis.CoupleFourFibre transitive imports (legacy)",
+       "daaab69dfd6cc7fb"],
+      ["Atlas.Rudvalis.CoupleFourFibre:importAllArts", "cede8736e68dade5"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/FourRowKernelFibre.lean",
+   "4d8a5c457fda7b72"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.FourRowKernelFibre", "38f758bb9895c02c"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "2a4650a345da07db"}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "comparison-g2-binary-split-extension",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.Comparisons.Exceptional.G2Binary.SplitExtension"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.G2.BinaryException.H_complement",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.SplitExtension",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.binarySplitExtension",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.SplitExtension",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.shortRootComplement",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.SplitExtension",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.shortRootComplementEquivSigns",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.SplitExtension",
+      "kind": "any"
+    },
+    {
+      "declaration": "Atlas.G2.BinaryException.shortRootComplement_sign_bijective",
+      "module": "Atlas.Comparisons.Exceptional.G2Binary.SplitExtension",
+      "kind": "any"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "independence-from-target-comparison",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Unitary.",
+        "Atlas.ReeG2."
+      ]
+    }
+  ]
+}

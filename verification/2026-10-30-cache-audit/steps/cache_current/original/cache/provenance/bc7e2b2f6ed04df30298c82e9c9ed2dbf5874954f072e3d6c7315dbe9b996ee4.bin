@@ -1,0 +1,47 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["da2f095bff4946a5.olean"],
+  "m": false,
+  "i": "7e32479e526759cd.ilean",
+  "c": "b251c270091de1ab.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/F4/CentralSevenRoots.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/F4/CentralSevenRoots.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/F4/CentralSevenRoots.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/F4/CentralSevenRoots.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/F4/CentralSevenRoots.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/F4/CentralSevenRoots.lean:73:26: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Atlas.Albert.shortRootLinear, Atlas.Albert.shortRootFormula, Atlas.SplitOctonion.basisVector,\n    Atlas.SplitOctonion.conjugate, Atlas.SplitOctonion.trace, Atlas.SplitOctonion.mul, Atlas.SplitOctonion.unit,\n    centralSevenApply, Matrix.vecHead, Matrix.vecTail]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/CentralSevenRoots.lean:78:26: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Atlas.Albert.shortRootLinear, Atlas.Albert.shortRootFormula, Atlas.SplitOctonion.basisVector,\n    Atlas.SplitOctonion.conjugate, Atlas.SplitOctonion.trace, Atlas.SplitOctonion.mul, Atlas.SplitOctonion.unit,\n    centralSevenApply, Matrix.vecHead, Matrix.vecTail]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/F4/CentralSevenRoots.lean:62:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 1600000 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.F4.CentralSevenCoefficients transitive imports (legacy)",
+       "4f0ffdf6d9b56b33"],
+      ["Atlas.LinearGroups.F4.CentralSevenCoefficients:importAllArts",
+       "9b089de44ba963b7"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/F4/CentralSevenRoots.lean",
+   "72536edfb0ec905b"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.F4.CentralSevenRoots", "c40812aa37449716"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "a55c40460c4a2f09"}

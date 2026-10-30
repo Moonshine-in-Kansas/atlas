@@ -1,0 +1,87 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["fbef9305e969c8cd.olean"],
+  "m": false,
+  "i": "f2f5ceb12ed4c3c1.ilean",
+  "c": "11c4088f690f0474.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/GroupTheory/ThreeTranspositionFrames.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/GroupTheory/ThreeTranspositionFrames.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/GroupTheory/ThreeTranspositionFrames.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/GroupTheory/ThreeTranspositionFrames.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/GroupTheory/ThreeTranspositionFrames.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/GroupTheory/ThreeTranspositionFrames.lean:15:10: `Subgroup.closureCommGroupOfComm` has been deprecated: Use `Subgroup.isMulCommutative_closure` instead\n\nNote: The updated constant has a different type:\n  ∀ {G : Type u_1} [inst : Group G] {k : Set G},\n    (∀ x ∈ k, ∀ y ∈ k, x * y = y * x) → IsMulCommutative ↥(Subgroup.closure k)\ninstead of\n  {G : Type u_1} → [inst : Group G] → {k : Set G} → (∀ x ∈ k, ∀ y ∈ k, x * y = y * x) → CommGroup ↥(Subgroup.closure k)",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/ThreeTranspositionFrames.lean:15:2: Try this: \n  letI̵\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/ThreeTranspositionFrames.lean:35:33: missing space in the source\n\nThis part of the code\n  '(x*y)^2=1'\nshould be written as\n  '(x * y)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/ThreeTranspositionFrames.lean:35:36: missing space in the source\n\nThis part of the code\n  '(x*y)^2=1 ∨ orderOf'\nshould be written as\n  'y) ^ 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/ThreeTranspositionFrames.lean:35:53: missing space in the source\n\nThis part of the code\n  '(x*y)=3)'\nshould be written as\n  '(x * y)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/ThreeTranspositionFrames.lean:35:56: missing space in the source\n\nThis part of the code\n  '(x*y)=3)\n '\nshould be written as\n  'y) = 3)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/ThreeTranspositionFrames.lean:53:33: missing space in the source\n\nThis part of the code\n  '(x*y)^2=1'\nshould be written as\n  '(x * y)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/ThreeTranspositionFrames.lean:53:36: missing space in the source\n\nThis part of the code\n  '(x*y)^2=1 ∨ orderOf'\nshould be written as\n  'y) ^ 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/ThreeTranspositionFrames.lean:53:53: missing space in the source\n\nThis part of the code\n  '(x*y)=3)'\nshould be written as\n  '(x * y)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/ThreeTranspositionFrames.lean:53:56: missing space in the source\n\nThis part of the code\n  '(x*y)=3)\n '\nshould be written as\n  'y) = 3)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/ThreeTranspositionFrames.lean:71:2: Try this: \n  haveI̵\n\nThe goal is a proposition, so `have` is preferred over `haveI`.\nThe difference between `have` and `haveI` is that `haveI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/ThreeTranspositionFrames.lean:67:33: missing space in the source\n\nThis part of the code\n  '(x*y)^2=1'\nshould be written as\n  '(x * y)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/ThreeTranspositionFrames.lean:67:36: missing space in the source\n\nThis part of the code\n  '(x*y)^2=1 ∨ orderOf'\nshould be written as\n  'y) ^ 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/ThreeTranspositionFrames.lean:67:53: missing space in the source\n\nThis part of the code\n  '(x*y)=3)'\nshould be written as\n  '(x * y)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/GroupTheory/ThreeTranspositionFrames.lean:67:56: missing space in the source\n\nThis part of the code\n  '(x*y)=3)\n '\nshould be written as\n  'y) = 3)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Mathlib.GroupTheory.Sylow transitive imports (legacy)",
+       "ce37072e883352af"],
+      ["Mathlib.GroupTheory.Sylow:importAllArts", "912a6efb92c18549"],
+      ["Mathlib.GroupTheory.Subgroup.Centralizer transitive imports (legacy)",
+       "f7f5e2d0390863e5"],
+      ["Mathlib.GroupTheory.Subgroup.Centralizer:importAllArts",
+       "22ebd14ba4705d3c"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/GroupTheory/ThreeTranspositionFrames.lean",
+   "68c6e968ba3c089d"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.GroupTheory.ThreeTranspositionFrames",
+   "eb38b14277091858"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "43fe9aefb9540168"}

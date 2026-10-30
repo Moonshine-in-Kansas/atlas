@@ -1,0 +1,120 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["ecdf246b030deaaf.olean"],
+  "m": false,
+  "i": "d49e1ad141ced283.ilean",
+  "c": "353dd1769e0dcf2c.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Mathieu/Mathieu23Order.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Mathieu/Mathieu23Order.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Mathieu/Mathieu23Order.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Mathieu/Mathieu23Order.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Mathieu/Mathieu23Order.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable section`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The actual orbit/coset identification, before taking cardinalities. -/\ndef mathieu23_orbitEquiv (a : Omega) :\n    MulAction.orbit Mathieu24CodeModel a ≃ Mathieu24CodeModel ⧸ Mathieu23PointModel a :=\n  MulAction.orbitEquivQuotientStabilizer Mathieu24CodeModel a`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem mathieu23_index_product (a : Omega) :\n    24 * Nat.card (Mathieu23PointModel a) = Nat.card Mathieu24CodeModel := by rw [mathieu23_order, mathieu24_order]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem mathieu23_order_factorization (a : Omega) :\n    Nat.card (Mathieu23PointModel a) = 2 ^ 7 * 3 ^ 2 * 5 * 7 * 11 * 23 :=\n  by\n  rw [mathieu23_order]\n  norm_num`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem mathieu23_not_five_transitive (a : Omega) :\n    ¬MulAction.IsMultiplyPretransitive (Mathieu23PointModel a) (Mathieu23Points a) 5 :=\n  by\n  intro h\n  have : MulAction.IsPretransitive Mathieu24CodeModel Omega := ⟨golay_coordinate_transitive⟩\n  exact mathieu24_not_six_transitive ((SubMulAction.ofStabilizer.isMultiplyPretransitive (a := a)).mpr h)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/--\nAdditional fixed tuples use the actual restricted action, not ambient setwise stabilizers. -/\ndef mathieu23TupleStabilizer (a : Omega) {k : ℕ} (e : Fin k ↪ Mathieu23Points a) : Subgroup (Mathieu23PointModel a) :=\n  fixingSubgroup _ (Set.range e)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem mathieu23TupleStabilizer_order_product (a : Omega) {k : ℕ}\n    (e : Fin k ↪ Mathieu23Points a) (hk : k ≤ 4) :\n    Nat.card (mathieu23TupleStabilizer a e) * ((23).choose k * k.factorial) = 10200960 :=\n  by\n  have := mathieu23_four_transitive a\n  have hn : (Set.range e).ncard = k :=\n    by\n    rw [Set.ncard_range_of_injective e.injective]\n    simp\n  have ht : MulAction.IsMultiplyPretransitive (Mathieu23PointModel a) (Mathieu23Points a) (Set.range e).ncard :=\n    by\n    rw [hn]\n    apply MulAction.isMultiplyPretransitive_of_le hk\n    rw [mathieu23_degree]\n    omega\n  have hi := MulAction.IsMultiplyPretransitive.index_of_fixingSubgroup_eq (Set.range e) ht\n  rw [hn, mathieu23_degree] at hi\n  have he := (mathieu23TupleStabilizer a e).card_mul_index\n  change (mathieu23TupleStabilizer a e).index = (23).choose k * k.factorial at hi\n  rw [hi, mathieu23_order] at he\n  exact he`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem mathieu23_1_point_order (a : Omega) (e : Fin 1 ↪ Mathieu23Points a) :\n    Nat.card (mathieu23TupleStabilizer a e) = 443520 :=\n  by\n  have h := mathieu23TupleStabilizer_order_product a e (by decide)\n  norm_num [Nat.choose, Nat.factorial] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem mathieu23_2_point_order (a : Omega) (e : Fin 2 ↪ Mathieu23Points a) :\n    Nat.card (mathieu23TupleStabilizer a e) = 20160 :=\n  by\n  have h := mathieu23TupleStabilizer_order_product a e (by decide)\n  norm_num [Nat.choose, Nat.factorial] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem mathieu23_3_point_order (a : Omega) (e : Fin 3 ↪ Mathieu23Points a) :\n    Nat.card (mathieu23TupleStabilizer a e) = 960 :=\n  by\n  have h := mathieu23TupleStabilizer_order_product a e (by decide)\n  norm_num [Nat.choose, Nat.factorial] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem mathieu23_4_point_order (a : Omega) (e : Fin 4 ↪ Mathieu23Points a) :\n    Nat.card (mathieu23TupleStabilizer a e) = 48 :=\n  by\n  have h := mathieu23TupleStabilizer_order_product a e (by decide)\n  norm_num [Nat.choose, Nat.factorial] at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Codes`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Mathieu/Mathieu23Order.lean:3:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Sporadic.Mathieu23 transitive imports (legacy)",
+       "92e7b1302dd8676e"],
+      ["Atlas.Sporadic.Mathieu23:importAllArts", "7e05c5547c03846d"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Mathieu/Mathieu23Order.lean", "46057385652c331d"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Mathieu.Mathieu23Order", "41805eb02402772b"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "06138eedc7973394"}

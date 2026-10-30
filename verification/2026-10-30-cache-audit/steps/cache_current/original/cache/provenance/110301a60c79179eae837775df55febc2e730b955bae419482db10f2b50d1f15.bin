@@ -1,0 +1,140 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["a3e11a2458555f08.olean"],
+  "m": false,
+  "i": "958119c57b85371d.ilean",
+  "c": "aaf3013311bda039.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/ScalarQuotient.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ScalarQuotient.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/ScalarQuotient.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ScalarQuotient.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/ScalarQuotient.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def gaussianScalarSubgroup : Subgroup gaussianLatticeGroup :=\n  GaussianUnits.map codeGaussianHom`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem gaussian_commute_I (g : gaussianLatticeGroup) :\n    Commute g (codeGaussianHom codeI) :=\n  by\n  change g * codeGaussianHom codeI = codeGaussianHom codeI * g\n  apply Subtype.ext\n  apply LinearEquiv.ext\n  intro v\n  exact g.prop.2.2 v`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem gaussianScalarSubgroup_le_center :\n    gaussianScalarSubgroup ≤ Subgroup.center gaussianLatticeGroup :=\n  by\n  rintro a ⟨u, hu, rfl⟩\n  obtain ⟨k, hk⟩ := Subgroup.mem_zpowers_iff.mp hu\n  rw [← hk, map_zpow]\n  apply Subgroup.mem_center_iff.mpr\n  intro g\n  exact (gaussian_commute_I g).zpow_right k`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:17:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `instance gaussianScalarSubgroup_normal : gaussianScalarSubgroup.Normal :=\n  ⟨fun a ha b => by\n    have h := Subgroup.mem_center_iff.mp (gaussianScalarSubgroup_le_center ha) b\n    have he : b * a * b⁻¹ = a := by rw [h, mul_assoc, mul_inv_cancel, mul_one]\n    simpa only [he] using ha⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem gaussianScalarSubgroup_card : Nat.card gaussianScalarSubgroup = 4 :=\n  by\n  change Nat.card (GaussianUnits.map codeGaussianHom) = 4\n  rw [← Nat.card_congr (GaussianUnits.equivMapOfInjective codeGaussianHom codeGaussianHom_injective).toEquiv]\n  exact gaussianUnits_card`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:33:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem gaussianScalarSubgroup_eq_zpowers :\n    gaussianScalarSubgroup = Subgroup.zpowers (codeGaussianHom codeI) :=\n  codeGaussianHom.map_zpowers codeI`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem gaussianUnits_le_center : GaussianUnits ≤ Subgroup.center codeGroup :=\n  by\n  intro u hu\n  apply Subgroup.mem_center_iff.mpr\n  intro g\n  exact codeGroup_commute_gaussianUnits g ⟨u, hu⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `instance gaussianUnits_normal : GaussianUnits.Normal :=\n  ⟨fun a ha b => by\n    have h := Subgroup.mem_center_iff.mp (gaussianUnits_le_center ha) b\n    have he : b * a * b⁻¹ = a := by rw [h, mul_assoc, mul_inv_cancel, mul_one]\n    simpa only [he] using ha⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The actual full Gaussian lattice group modulo its four scalar units. -/\nnoncomputable abbrev RudvalisGroup :=\n  gaussianLatticeGroup ⧸ gaussianScalarSubgroup`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `/-- The actual monomial frame group modulo those same scalar units. -/\nnoncomputable abbrev ProjectiveCodeGroup :=\n  codeGroup ⧸ GaussianUnits`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rudvalisGroup_order : Nat.card RudvalisGroup = 145926144000 :=\n  by\n  have h := gaussianScalarSubgroup.card_eq_card_quotient_mul_card_subgroup\n  rw [full_gaussian_order, gaussianScalarSubgroup_card] at h\n  change 583704576000 = Nat.card RudvalisGroup * 4 at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem projectiveCodeGroup_order : Nat.card ProjectiveCodeGroup = 344064 :=\n  by\n  have h := GaussianUnits.card_eq_card_quotient_mul_card_subgroup\n  rw [codeGroup_order, gaussianUnits_card] at h\n  change 1376256 = Nat.card ProjectiveCodeGroup * 4 at h\n  omega`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/ScalarQuotient.lean:5:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.GaussianGroupOrder transitive imports (legacy)",
+       "1cf83b49acd7e6a9"],
+      ["Atlas.Rudvalis.GaussianGroupOrder:importAllArts", "a9c9d18eca5c29fd"],
+      ["Mathlib.GroupTheory.QuotientGroup.Basic transitive imports (legacy)",
+       "ff1bd88bafc84979"],
+      ["Mathlib.GroupTheory.QuotientGroup.Basic:importAllArts",
+       "40ad8c2884dfb2cb"],
+      ["Mathlib.GroupTheory.Subgroup.Center transitive imports (legacy)",
+       "13c7771d3b94cb12"],
+      ["Mathlib.GroupTheory.Subgroup.Center:importAllArts",
+       "4c1fc1541628bcf0"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/ScalarQuotient.lean", "a66521642b686cb4"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.ScalarQuotient", "8b3284c176dc749d"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "2ad9cda8e32b079d"}

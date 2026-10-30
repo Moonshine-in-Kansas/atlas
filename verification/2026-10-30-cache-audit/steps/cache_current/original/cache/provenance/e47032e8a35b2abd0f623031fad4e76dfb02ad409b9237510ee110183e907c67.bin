@@ -1,0 +1,122 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["4b7934c1f14c771c.olean"],
+  "m": false,
+  "i": "d722418068be8921.ilean",
+  "c": "9c15d894f023690b.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Rudvalis/HeavyOrthogonalTranslations.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyOrthogonalTranslations.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Rudvalis/HeavyOrthogonalTranslations.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyOrthogonalTranslations.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Rudvalis/HeavyOrthogonalTranslations.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `namespace Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def fixedHeavyTranslate (c : Point) (A : BinaryMatrix)\n    (v : FixedHeavyParameters c) : FixedHeavyParameters c :=\n  by\n  let a := translatedParameters A (v.2.val, v.1.val, c.val)\n  have hw : hammingNorm (binaryNormalMap a) = 16 :=\n    by\n    rw [binaryNormalMap_translation, binaryWord_weight_permute]\n    exact v.2.prop\n  exact ⟨⟨a.2.1, binaryNormalMap_quadratic_minimum_contraction a c.prop hw⟩, ⟨a.1, hw⟩⟩`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fixedHeavyTranslate_word (c : Point) (A : BinaryMatrix)\n    (v : FixedHeavyParameters c) :\n    fixedHeavyWord c (fixedHeavyTranslate c A v) = fixedHeavyWord c v ∘ coordinateTranslation A :=\n  binaryNormalMap_translation A (v.2.val, v.1.val, c.val)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fixedHeavyWord_injective (c : Point) :\n    Function.Injective (fixedHeavyWord c) :=\n  by\n  rintro ⟨⟨M, hM⟩, ⟨ε, hε⟩⟩ ⟨⟨N, hN⟩, ⟨δ, hδ⟩⟩ h\n  have he := binaryNormalMap_injective h\n  have hε := congrArg Prod.fst he\n  have hM := congrArg (fun a : BinaryParameters => a.2.1) he\n  dsimp at hε hM\n  cases hM\n  cases hε\n  rfl`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fixedHeavyTranslate_involutive (c : Point) (A : BinaryMatrix) :\n    Function.Involutive (fixedHeavyTranslate c A) := by\n  intro v\n  apply fixedHeavyWord_injective c\n  rw [fixedHeavyTranslate_word, fixedHeavyTranslate_word]\n  funext z\n  change fixedHeavyWord c v (z.1, (z.2 + matrixAt A z.1.val) + matrixAt A z.1.val) = _\n  rw [add_assoc, vector_add_self, add_zero]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def fixedHeavyTranslation (c : Point) (A : BinaryMatrix) :\n    FixedHeavyParameters c ≃ FixedHeavyParameters c :=\n  { toFun := fixedHeavyTranslate c A\n    invFun := fixedHeavyTranslate c A\n    left_inv := fixedHeavyTranslate_involutive c A\n    right_inv := fixedHeavyTranslate_involutive c A }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def rowTranslationMatrix (p : Point) (x : E) : BinaryMatrix :=\n  outerMatrix x (basisPoint (point_has_one p).choose).val`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem rowTranslationMatrix_at (p : Point) (x : E) :\n    matrixAt (rowTranslationMatrix p x) p.val = x := by\n  rw [rowTranslationMatrix, matrixAt_outer, dot_basisPoint, (point_has_one p).choose_spec, one_smul]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:47:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `abbrev HeavyAvoidingPair (c p : Point) (x : E) :=\n  { v : FixedHeavyParameters c // fixedHeavyWord c v (p, x) = 0 ∧ fixedHeavyWord c v (p, x + p.val) = 0 }`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `theorem fixedHeavyTranslate_row (c p : Point) (x y : E)\n    (v : FixedHeavyParameters c) :\n    fixedHeavyWord c (fixedHeavyTranslate c (rowTranslationMatrix p x) v) (p, y) = fixedHeavyWord c v (p, y + x) :=\n  by\n  rw [fixedHeavyTranslate_word]\n  change fixedHeavyWord c v (p, y + matrixAt (rowTranslationMatrix p x) p.val) = _\n  rw [rowTranslationMatrix_at]`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `noncomputable def heavyAvoidingPairEquiv (c p : Point) (x : E) :\n    HeavyAvoidingPair c p 0 ≃ HeavyAvoidingPair c p x\n    where\n  toFun\n    v :=\n    ⟨fixedHeavyTranslate c (rowTranslationMatrix p x) v.val,\n      by\n      constructor\n      · rw [fixedHeavyTranslate_row, vector_add_self]\n        exact v.prop.1\n      · rw [fixedHeavyTranslate_row, add_right_comm, vector_add_self]\n        exact v.prop.2⟩\n  invFun\n    v :=\n    ⟨fixedHeavyTranslate c (rowTranslationMatrix p x) v.val,\n      by\n      constructor\n      · rw [fixedHeavyTranslate_row, zero_add]\n        exact v.prop.1\n      · rw [fixedHeavyTranslate_row]\n        simpa only [zero_add, add_zero, add_comm] using v.prop.2⟩\n  left_inv v := Subtype.ext (fixedHeavyTranslate_involutive c (rowTranslationMatrix p x) v.val)\n  right_inv v := Subtype.ext (fixedHeavyTranslate_involutive c (rowTranslationMatrix p x) v.val)`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before `end Atlas.Rudvalis`.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:1:1: * '-/':\nCopyright too short!\n\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Rudvalis/HeavyOrthogonalTranslations.lean:4:0: The module doc-string for a file should be the first command after the imports.\nPlease, add a module doc-string before ``.\n\nNote: This linter can be disabled with `set_option linter.style.header false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Rudvalis.HeavyOrthogonalLocal transitive imports (legacy)",
+       "27744e7b02cb729c"],
+      ["Atlas.Rudvalis.HeavyOrthogonalLocal:importAllArts", "a967768cdb361fdd"],
+      ["Atlas.Rudvalis.FanoLinear transitive imports (legacy)",
+       "a7c372663a313155"],
+      ["Atlas.Rudvalis.FanoLinear:importAllArts", "1392d48bce23c985"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Rudvalis/HeavyOrthogonalTranslations.lean",
+   "d7c5ba0883bc6898"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Rudvalis.HeavyOrthogonalTranslations",
+   "dc82905f16f9ad67"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "c0f855869d84aae9"}

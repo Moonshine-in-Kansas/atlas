@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "environment": "verification/checkpoints/environment.json",
+  "id": "chevalley-twisted-e6-fixed-projection",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.GroupTheory.GraphFieldCubicKernel",
+    "Atlas.LinearGroups.Chevalley.TwistedE6.CubicKernel",
+    "Atlas.LinearGroups.Chevalley.TwistedE6.FixedProjection"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.GroupTheory.involution_cubic_correction",
+      "source": "Atlas/GroupTheory/GraphFieldCubicKernel.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.GroupTheory.fixedSubgroupMap_surjective_of_cubic_kernel",
+      "source": "Atlas/GroupTheory/GraphFieldCubicKernel.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companion_rhoKernel_cube",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/CubicKernel.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedProjection_surjective",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/FixedProjection.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedProjection_kernel_central",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/FixedProjection.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedProjection_kernel_cube",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/FixedProjection.lean",
+      "kind": "theorem"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedQuotientEquiv",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/FixedProjection.lean",
+      "kind": "definition"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedQuotientEquiv_mk",
+      "source": "Atlas/LinearGroups/Chevalley/TwistedE6/FixedProjection.lean",
+      "kind": "theorem"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "chevalley-twisted-e6-fixed-projection-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    }
+  ]
+}

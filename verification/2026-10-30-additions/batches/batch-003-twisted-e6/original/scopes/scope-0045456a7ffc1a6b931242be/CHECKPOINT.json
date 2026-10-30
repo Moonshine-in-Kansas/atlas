@@ -1,0 +1,387 @@
+{
+  "id": "staged-FixedTorus",
+  "mode": "full",
+  "definitions": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "imports": [
+    "Atlas.LinearGroups.Chevalley.TwistedE6.TorusAnchors",
+    "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction",
+    "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters",
+    "Atlas.LinearGroups.Chevalley.TwistedE6.FixedTorusOrder"
+  ],
+  "targets": [
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6TorusParametersEquiv",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusAnchors"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6TorusSubgroup_eq_range",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusAnchors"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6SimpleWeylUnit",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusAnchors"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6SimpleTorus",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusAnchors"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6SimpleTorus_eq_inherited",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusAnchors"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6TorusParameters_single",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusAnchors"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionDiagram_e6SimpleWeylUnit",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusAnchors"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionDiagram_e6SimpleTorus",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusAnchors"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.conjugationUnits",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusAnchors"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFrobenius_e6SimpleWeylUnit",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusAnchors"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFrobenius_e6SimpleTorus",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusAnchors"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionTwist_e6SimpleTorus",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusAnchors"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedTorus",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusAnchors"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.mem_companionFixedTorus_iff",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusAnchors"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PublicTorusReindex",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PublicTorusReindex_apply",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PublicTorusReindex_mulSingle",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PublicTorusParameters",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PublicTorusParameters_apply",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PublicTorusParametersEquiv",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PublicTorusParametersEquiv_val",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PublicTorusParameters_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PublicTorusParameters_mem",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PublicTorusParameters_mulSingle",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6TorusTupleDiagram",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6TorusTupleDiagram_apply",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6TorusTupleDiagram_mulSingle",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionDiagram_e6PublicTorusParameters",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6TorusTupleFrobenius",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6TorusTupleFrobenius_apply",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6TorusTupleFrobenius_mulSingle",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFrobenius_e6PublicTorusParameters",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionTwist_e6PublicTorusParameters",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PublicTorusParameters_mem_companionFixedSubgroup_iff",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PublicTorusParameters_mem_companionFixedTorus_iff",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.e6PublicTorusParametersEquiv_mem_companionFixedSubgroup_iff",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusTupleAction"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.embedUnits",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.embedUnits_val",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.embedUnits_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.conjugationUnits_val",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.conjugationUnits_embedUnits",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.conjugationUnits_involutive",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.conjugationUnits_conjugationUnits",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.conjugationUnits_fixed_iff",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.fixedUnitTuples",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.mem_fixedUnitTuples",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.Parameters",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.expand",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.expand_mem",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.parameterHom",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.parameterHom_val",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.parameterHom_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.parameterHom_surjective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.parametersEquiv",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.parametersEquiv_val",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.parametersEquiv_symm_extension",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.parametersEquiv_symm_base",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.parameters_card",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.TorusUnitParameters.fixedUnitTuples_card",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.TorusUnitParameters"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedTorusTupleHom",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedTorusOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedTorusTupleHom_val",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedTorusOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedTorusTupleHom_injective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedTorusOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedTorusTupleHom_surjective",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedTorusOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.fixedTorusTupleEquiv",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedTorusOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedTorusParametersEquiv",
+      "kind": "definition",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedTorusOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedTorusParametersEquiv_val",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedTorusOrder"
+    },
+    {
+      "declaration": "Atlas.Chevalley.TwistedE6.companionFixedTorus_card",
+      "kind": "theorem",
+      "module": "Atlas.LinearGroups.Chevalley.TwistedE6.FixedTorusOrder"
+    }
+  ],
+  "boundaries": [
+    {
+      "id": "staged-FixedTorus-independence",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "IsSimpleGroup",
+        "Group.IsPerfect",
+        "Atlas.Chevalley.model_E6_card",
+        "Atlas.Chevalley.selectedWeightCompanion_E6_card"
+      ],
+      "forbid_modules": [
+        "Atlas.LinearGroups.Chevalley.ModelE6Order",
+        "Atlas.LinearGroups.Chevalley.ModelSimplicityGood"
+      ]
+    },
+    {
+      "id": "staged-FixedTorus-no-inherited-count",
+      "all_roots": true,
+      "forbid_name_prefixes": [
+        "Atlas.Chevalley.selectedWeightCompanionTorus_card",
+        "Atlas.Chevalley.weightCompanionTorus_card",
+        "Atlas.Chevalley.selectedWeightCompanionPositiveTorusJoin_card",
+        "Atlas.Chevalley.positiveWitnessedTorusJoin_card",
+        "Atlas.Chevalley.TwistedE6.companionFixedProjection_surjective"
+      ],
+      "forbid_modules": [
+        "FamilyWork.PositiveFixedOrder",
+        "FamilyWork.FixedOrbitNormalForm",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.PositiveFixedOrder",
+        "Atlas.LinearGroups.Chevalley.TwistedE6.FixedOrbitNormalForm"
+      ]
+    }
+  ],
+  "environment": "verification/checkpoints/environment.json"
+}

@@ -1,0 +1,66 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["5263f8b12692b35d.olean"],
+  "m": false,
+  "i": "712baf8a1af098d6.ilean",
+  "c": "b6cfd7214c74080e.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Codes/GolayCounts.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/GolayCounts.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Codes/GolayCounts.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Codes/GolayCounts.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Codes/GolayCounts.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Codes/GolayCounts.lean:20:0: `card_subtype_prod_sum` does not use the following hypothesis in its type:\n  • [Fintype B] (#4)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayCounts.lean:110:4: This simp argument is unused:\n  golayEncoder\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Nat.card_eq_fintype_card, Fintype.card_subtype, card_filter, hu, sum_insert, mem_singleton,\n    zero_ne_one, not_false_eq_true, sum_singleton, LinearMap.coe_mk, AddHom.coe_mk, zero_smul, one_smul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayCounts.lean:110:18: This simp argument is unused:\n  LinearMap.coe_mk\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Nat.card_eq_fintype_card, Fintype.card_subtype, card_filter, hu, sum_insert, mem_singleton,\n    zero_ne_one, not_false_eq_true, sum_singleton, golayEncoder, AddHom.coe_mk, zero_smul, one_smul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayCounts.lean:110:36: This simp argument is unused:\n  AddHom.coe_mk\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Nat.card_eq_fintype_card, Fintype.card_subtype, card_filter, hu, sum_insert, mem_singleton,\n    zero_ne_one, not_false_eq_true, sum_singleton, golayEncoder, LinearMap.coe_mk, zero_smul, one_smul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayCounts.lean:110:51: This simp argument is unused:\n  zero_smul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Nat.card_eq_fintype_card, Fintype.card_subtype, card_filter, hu, sum_insert, mem_singleton,\n    zero_ne_one, not_false_eq_true, sum_singleton, golayEncoder, LinearMap.coe_mk, AddHom.coe_mk, one_smul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayCounts.lean:110:62: This simp argument is unused:\n  one_smul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Nat.card_eq_fintype_card, Fintype.card_subtype, card_filter, hu, sum_insert, mem_singleton,\n    zero_ne_one, not_false_eq_true, sum_singleton, golayEncoder, LinearMap.coe_mk, AddHom.coe_mk, zero_smul, add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayCounts.lean:110:72: This simp argument is unused:\n  add_zero\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Nat.card_eq_fintype_card, Fintype.card_subtype, card_filter, hu, sum_insert, mem_singleton,\n    zero_ne_one, not_false_eq_true, sum_singleton, golayEncoder, LinearMap.coe_mk, AddHom.coe_mk, zero_smul, one_smul]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayCounts.lean:101:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Codes/GolayCounts.lean:126:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.Codes.GolayEvenCounting transitive imports (legacy)",
+       "d0b13570bfa5fa3a"],
+      ["Atlas.Codes.GolayEvenCounting:importAllArts", "38e903d85ad6768a"],
+      ["Atlas.Codes.GolayOddCounting transitive imports (legacy)",
+       "2b9f299f00c05a3e"],
+      ["Atlas.Codes.GolayOddCounting:importAllArts", "9530f2abe28283d7"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Codes/GolayCounts.lean", "bc2fa02f4ccba0cc"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Codes.GolayCounts", "ce656040bda7f8d9"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "8440df6a6a3fa660"}

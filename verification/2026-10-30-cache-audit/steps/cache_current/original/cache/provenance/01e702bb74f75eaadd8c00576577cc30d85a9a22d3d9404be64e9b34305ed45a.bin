@@ -1,0 +1,74 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["28dab07a7c027051.olean"],
+  "m": false,
+  "i": "ee243589c04745b8.ilean",
+  "c": "6f8ff41fc8090597.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/Combinatorics/HexadIntersectionCounts.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/Combinatorics/HexadIntersectionCounts.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/Combinatorics/HexadIntersectionCounts.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/Combinatorics/HexadIntersectionCounts.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/Combinatorics/HexadIntersectionCounts.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/Combinatorics/HexadIntersectionCounts.lean:20:0: automatically included section variable(s) unused in theorem `Atlas.Combinatorics.hexad_intersection_sum`:\n  [Fintype V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/HexadIntersectionCounts.lean:20:0: `hexad_intersection_sum` does not use the following hypothesis in its type:\n  • [Fintype V] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/HexadIntersectionCounts.lean:24:0: `hexad_disjoint_card` does not use the following hypothesis in its type:\n  • [Fintype V] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/HexadIntersectionCounts.lean:85:25: `if_neg` has been deprecated: Use `ite_eq_right` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/HexadIntersectionCounts.lean:61:0: automatically included section variable(s) unused in theorem `Atlas.Combinatorics.hexad_pair_incidence_sum`:\n  [Fintype V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/HexadIntersectionCounts.lean:93:13: This simp argument is unused:\n  Finset.sum_const\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [nsmul_eq_mul, h.size B hB]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/HexadIntersectionCounts.lean:93:30: This simp argument is unused:\n  nsmul_eq_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Finset.sum_const, h.size B hB]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/HexadIntersectionCounts.lean:61:0: `hexad_pair_incidence_sum` does not use the following hypothesis in its type:\n  • [Fintype V] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/HexadIntersectionCounts.lean:99:0: `hexad_common_disjoint_card` does not use the following hypothesis in its type:\n  • [Fintype V] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/HexadIntersectionCounts.lean:138:0: automatically included section variable(s) unused in theorem `Atlas.Combinatorics.hexad_point_disjoint_card`:\n  [Fintype V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/Combinatorics/HexadIntersectionCounts.lean:138:0: `hexad_point_disjoint_card` does not use the following hypothesis in its type:\n  • [Fintype V] (#2)\n\nConsider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.\n\nNote: This linter can be disabled with `set_option linter.unusedFintypeInType false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Mathlib.Algebra.Order.BigOperators.Group.Finset transitive imports (legacy)",
+       "e8f462797cd6247c"],
+      ["Mathlib.Algebra.Order.BigOperators.Group.Finset:importAllArts",
+       "3b716a57e08de7d0"],
+      ["Mathlib.Tactic transitive imports (legacy)", "ec156eb4c1db663c"],
+      ["Mathlib.Tactic:importAllArts", "49193de2eba247db"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/Combinatorics/HexadIntersectionCounts.lean",
+   "26a07e085ae04ebb"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.Combinatorics.HexadIntersectionCounts",
+   "eede63873361387d"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "817dea8f34f99351"}

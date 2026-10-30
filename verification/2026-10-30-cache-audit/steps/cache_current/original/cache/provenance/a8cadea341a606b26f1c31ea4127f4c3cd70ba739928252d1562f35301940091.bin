@@ -1,0 +1,177 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["b570c8b26ad8c588.olean"],
+  "m": false,
+  "i": "4c204e9bcbc60ace.ilean",
+  "c": "6dbde7bf24ae3407.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/home/gerald/atlas/.lake/packages/Cli/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/batteries/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/Qq/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/aesop/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/importGraph/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/plausible/.lake/build/lib/lean:/home/gerald/atlas/.lake/packages/mathlib/.lake/build/lib/lean:/home/gerald/atlas/.lake/build/lib/lean /home/gerald/.elan/toolchains/leanprover--lean4---v4.34.0-rc2/bin/lean /home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean -o /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.olean -i /home/gerald/atlas/.lake/build/lib/lean/Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.ilean -c /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.c --setup /home/gerald/atlas/.lake/build/ir/Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:6:5: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:22:20: `dif_neg` has been deprecated: Use `dite_eq_right` instead",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:22:20: This simp argument is unused:\n  dif_neg\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [hi]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:13:64: missing space in the source\n\nThis part of the code\n  '(n+2)) :'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:50:6: This simp argument is unused:\n  Finset.sum_ite_eq\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Pi.add_apply, Pi.single_apply, Finset.sum_add_distrib, Finset.mem_univ, ite_true]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:50:24: This simp argument is unused:\n  Finset.mem_univ\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Pi.add_apply, Pi.single_apply, Finset.sum_add_distrib, Finset.sum_ite_eq, ite_true]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:50:40: This simp argument is unused:\n  ite_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Pi.add_apply, Pi.single_apply, Finset.sum_add_distrib, Finset.sum_ite_eq, Finset.mem_univ]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:45:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:34:52: missing space in the source\n\nThis part of the code\n  '(n+2)) (a'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:34:70: missing space in the source\n\nThis part of the code\n  '(n+2)) :'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:53:42: missing space in the source\n\nThis part of the code\n  '(n+2)) :'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:59:55: missing space in the source\n\nThis part of the code\n  '(n+2)) :'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:77:24: This simp argument is unused:\n  hl\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Pi.single_apply, Ne.symm hl]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:68:53: missing space in the source\n\nThis part of the code\n  '(n+2)) :'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:80:48: missing space in the source\n\nThis part of the code\n  '(n+2)) :'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:101:48: This simp argument is unused:\n  map_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp [evenQuotientCharacters, normalForm, quotientSpinParity_positive, quotientSpinParity_vector,\n    quotientBalanced_positive, quotientBalanced_vector]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:101:57: This simp argument is unused:\n  quotientSpinParity_positive\n\nHint: Omit it from the simp argument list.\n  [apply] simp [evenQuotientCharacters, normalForm, map_add, quotientSpinParity_vector, quotientBalanced_positive,\n    quotientBalanced_vector]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:102:8: This simp argument is unused:\n  quotientSpinParity_vector\n\nHint: Omit it from the simp argument list.\n  [apply] simp [evenQuotientCharacters, normalForm, map_add, quotientSpinParity_positive, quotientBalanced_positive,\n    quotientBalanced_vector]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:102:35: This simp argument is unused:\n  quotientBalanced_positive\n\nHint: Omit it from the simp argument list.\n  [apply] simp [evenQuotientCharacters, normalForm, map_add, quotientSpinParity_positive, quotientSpinParity_vector,\n    quotientBalanced_vector]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:102:62: This simp argument is unused:\n  quotientBalanced_vector\n\nHint: Omit it from the simp argument list.\n  [apply] simp [evenQuotientCharacters, normalForm, map_add, quotientSpinParity_positive, quotientSpinParity_vector,\n    quotientBalanced_positive]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:104:48: This simp argument is unused:\n  map_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp [evenQuotientCharacters, normalForm, quotientSpinParity_positive, quotientSpinParity_vector,\n    quotientBalanced_positive, quotientBalanced_vector]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:104:57: This simp argument is unused:\n  quotientSpinParity_positive\n\nHint: Omit it from the simp argument list.\n  [apply] simp [evenQuotientCharacters, normalForm, map_add, quotientSpinParity_vector, quotientBalanced_positive,\n    quotientBalanced_vector]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:105:35: This simp argument is unused:\n  quotientBalanced_positive\n\nHint: Omit it from the simp argument list.\n  [apply] simp [evenQuotientCharacters, normalForm, map_add, quotientSpinParity_positive, quotientSpinParity_vector,\n    quotientBalanced_vector]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:107:48: This simp argument is unused:\n  map_add\n\nHint: Omit it from the simp argument list.\n  [apply] simp [evenQuotientCharacters, normalForm, quotientSpinParity_positive, quotientSpinParity_vector,\n    quotientBalanced_positive, quotientBalanced_vector]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:108:8: This simp argument is unused:\n  quotientSpinParity_vector\n\nHint: Omit it from the simp argument list.\n  [apply] simp [evenQuotientCharacters, normalForm, map_add, quotientSpinParity_positive, quotientBalanced_positive,\n    quotientBalanced_vector]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:108:62: This simp argument is unused:\n  quotientBalanced_vector\n\nHint: Omit it from the simp argument list.\n  [apply] simp [evenQuotientCharacters, normalForm, map_add, quotientSpinParity_positive, quotientSpinParity_vector,\n    quotientBalanced_positive]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:102:87: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:105:87: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:108:87: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:111:87: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:101:6: `simp [evenQuotientCharacters, normalForm, map_add, quotientSpinParity_positive,\n        quotientSpinParity_vector, quotientBalanced_positive, quotientBalanced_vector]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:101:6: Try this:\n  [apply] simp only [Nat.reduceAdd, Fin.zero_eta, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:102:91: `decide`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 101!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:104:6: `simp [evenQuotientCharacters, normalForm, map_add, quotientSpinParity_positive,\n        quotientSpinParity_vector, quotientBalanced_positive, quotientBalanced_vector]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:104:6: Try this:\n  [apply] simp only [Nat.reduceAdd, Fin.zero_eta, Fin.isValue, Fin.mk_one]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:105:91: `decide`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 104!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:107:6: `simp [evenQuotientCharacters, normalForm, map_add, quotientSpinParity_positive,\n        quotientSpinParity_vector, quotientBalanced_positive, quotientBalanced_vector]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:107:6: Try this:\n  [apply] simp only [Nat.reduceAdd, Fin.mk_one, Fin.isValue, Fin.zero_eta]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:108:91: `decide`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 107!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:110:6: `simp [evenQuotientCharacters, normalForm, map_add, quotientSpinParity_positive,\n        quotientSpinParity_vector, quotientBalanced_positive, quotientBalanced_vector]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.\n\nNote: This linter can be disabled with `set_option linter.flexible false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:110:6: Try this:\n  [apply] simp only [Nat.reduceAdd, Fin.mk_one, Fin.isValue]",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:111:91: `decide`\nmodifies the current goal, which was modified by the flexible tactic `simp` on line 110!",
+   "level": "info"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:94:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:96:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:84:62: missing space in the source\n\nThis part of the code\n  '(n+2)) :'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"},
+  {"message":
+   "Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean:114:45: missing space in the source\n\nThis part of the code\n  '(n+2)) :'\nshould be written as\n  '(n + 2))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+   "level": "warning"}],
+ "inputs":
+ [["deps",
+   [["Atlas/Atlas:extraDep", [["@Atlas:extraDep", "00000000000006bb"]]],
+    ["imports",
+     [["Atlas.LinearGroups.Chevalley.Integral.MinusculeDNormalForms transitive imports (legacy)",
+       "310950f9fe591b7c"],
+      ["Atlas.LinearGroups.Chevalley.Integral.MinusculeDNormalForms:importAllArts",
+       "0164146ede4c8778"]]]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.34.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d",
+   "365244c167ac8c1d"],
+  ["/home/gerald/atlas/Atlas/LinearGroups/Chevalley/Integral/MinusculeDEvenCharacter.lean",
+   "255b0aa0c8d753d7"],
+  ["options",
+   [["-DmaxSynthPendingDepth=3", "c78e353d34de85d4"],
+    ["-Dweak.linter.mathlibStandardSet=true", "8a155799906f2b42"],
+    ["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
+    ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Atlas.LinearGroups.Chevalley.Integral.MinusculeDEvenCharacter",
+   "df25f1ee34003de0"],
+  ["Package.id?: (some Atlas)", "706b6d06af59dbc6"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "cf52b8671d64a198"}
